@@ -1,0 +1,471 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1123860176220558206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1123860176220558207}
+  - component: {fileID: 1123860176220558204}
+  m_Layer: 0
+  m_Name: interaction E
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1123860176220558207
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123860176220558206}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.471, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1123860177028353509}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1123860176220558204
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123860176220558206}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 7580b9a4e8e5826458a86c4c41f93320, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.43, y: 0.25}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1123860177028353508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1123860177028353509}
+  - component: {fileID: 1123860177028353528}
+  - component: {fileID: 1123860177028353531}
+  - component: {fileID: 1123860177028353530}
+  m_Layer: 0
+  m_Name: william_white
+  m_TagString: PNJinteractable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1123860177028353509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123860177028353508}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -430.9, y: -34.9, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 1}
+  m_Children:
+  - {fileID: 1123860176220558207}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1123860177028353528
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123860177028353508}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 7476fc372dc4f984795847ea6e132ce3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.19, y: 0.59}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &1123860177028353531
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123860177028353508}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.6}
+    newSize: {x: 0.19, y: 0.59}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 0.59}
+  m_EdgeRadius: 0
+--- !u!114 &1123860177028353530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123860177028353508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: W. White
+  dialogIndex: 0
+  transitionQuote: 5
+  haveEvent: 0
+  stickerRedirection:
+    stickerGivenList: 01000000040000000e000000
+    redirectionList: 020000000300000004000000
+  eventRedirection:
+    eventGivenList: 
+    redirectionEventList: 
+  allDialogs:
+    listOfDialogs:
+    - dialog:
+      - quote: "Pourquoi j\u2019entends des cris qui sortent de ton bureau a chaque
+          fois que je viens te voir ?"
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Oh m\u2019en parle pas, j\u2019ai l\u2019impression de g\xE9rer une
+          garderie"
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 05000000
+        eventTrigger: 
+      - quote: "\xC7a doit te rappeler le r\xE9giment."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "C\u2019est vrai. Sauf qu\u2019au moins ici on ne s\u2019endort pas
+          au son des bombes."
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Je ne peux pas dire que cette \xE9poque me manque."
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "\xC0 moi non plus mon vieux."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Bon. Et si tu me disais plut\xF4t ce qui t\u2019am\xE8ne ?"
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Je suis sur une nouvelle affaire, et j\u2019ai besoin de ton autorisation
+          pour inspecter un corps."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: Celui de Loraine Grey.
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "J\u2019y crois pas. M\xEAme toi tu viens me casser les oreilles avec
+          cette histoire."
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Ecoute Kenneth, la petite Grey s\u2019est suicid\xE9e. J\u2019ai d\xE9j\xE0
+          \xE9tudi\xE9 la sc\xE8ne de crime, on a interrog\xE9 les t\xE9moins. Affaire
+          class\xE9e !"
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Clara Grey n\u2019est pas de cet avis."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "C\u2019est une hyst\xE9rique. C\u2019est toujours comme \xE7a les
+          c\xE9l\xE9brit\xE9s."
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Elles passent leur vie sur un pi\xE9destal et le jour o\xF9 elles
+          doivent en descendre elles se cassent la gueule."
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: Ne me dis pas que tu travailles pour elle.
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "\xC7a m\u2019est \xE9gal que l\u2019affaire soit class\xE9e. On me
+          paye pour enqu\xEAter, j\u2019enqu\xEAte."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "L\u2019avenir me dira bien si elle a eu raison de m\u2019engager."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Et puis je serai pay\xE9 de toute fa\xE7on."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "\u2026"
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: Pourquoi tu perds ton temps avec ce genre de boulot ?
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Avec le talent que tu as, je t\u2019ai d\xE9j\xE0 dit que tu avais
+          ta place chez nous."
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "\xC7a, \xE7a n\u2019arrivera jamais."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: Pourquoi ?
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Parce que \xE7a impliquerait que je sois \xE0 tes ordres."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Et \xE7a, c\u2019est hors de question."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Ben voyons\u2026"
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "\u2026"
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: " T\u2019en fais pas, je vais te le donner, ton laissez-passer."
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 00000000
+      - quote: Tant mieux.
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      canAskQuestions: 0
+      endDialog: 1
+    - dialog:
+      - quote: "Tu devrais abandonner cette affaire, \xE7a ne te mennera \xE0 rien."
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      canAskQuestions: 1
+      endDialog: 1
+    - dialog:
+      - quote: "Tu peux me parler de la victime ? C\u2019\xE9tait comment quand tu
+          l\u2019as trouv\xE9e ?"
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "On est arriv\xE9s vers 7h du mat\u2019, c\u2019est son copain qui
+          nous a appel\xE9."
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Il avait l\u2019air de d\xE9cuver d\u2019une sacr\xE9e cuite. Elle
+          \xE9tait pendue \xE0 une poutre apparente."
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Rien de particulier, le l\xE9giste a fait son rapport, et on a r\xE9dig\xE9
+          la paperasse."
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: Je vois.
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      canAskQuestions: 1
+      endDialog: 0
+    - dialog:
+      - quote: "Qu\u2019est ce que tu peux me dire sur Kurt Becker ?"
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "C\u2019est un pauvre type. Le genre qu\u2019a pas eu de chance dans
+          la vie."
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "On l\u2019a interrog\xE9 mais il ne nous a rien appris de particulier."
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Tu penses qu\u2019il pourrait avoir un lien avec la mort de Loraine
+          ?"
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Si tu insinues qu\u2019il aurait pu l\u2019assassiner, la r\xE9ponse
+          est non."
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Esp\xE9rons que tu ais raison."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      canAskQuestions: 1
+      endDialog: 0
+    - dialog:
+      - quote: "Tiens regarde \xE7a. C\u2019est le journal qui parle de l\u2019affaire
+          Loraine Grey."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Oh piti\xE9, je l\u2019ai assez vu. Va en parler \xE0 Scott si tu
+          veux mais fous moi la paix avec \xE7a."
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      canAskQuestions: 1
+      endDialog: 0
+    - dialog:
+      - quote: Je peux faire autre chose pour toi ?
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      canAskQuestions: 1
+      endDialog: 0

@@ -1,0 +1,1051 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &547858896879180951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 547858896879180950}
+  - component: {fileID: 547858896879180945}
+  m_Layer: 0
+  m_Name: interaction E
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &547858896879180950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858896879180951}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.471, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 547858896963516295}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &547858896879180945
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858896879180951}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 7580b9a4e8e5826458a86c4c41f93320, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.43, y: 0.25}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &547858896963516292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 547858896963516295}
+  - component: {fileID: 547858896963516288}
+  - component: {fileID: 547858896963516289}
+  - component: {fileID: 547858896963516294}
+  m_Layer: 0
+  m_Name: blocked_pibphone
+  m_TagString: PNJinteractable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &547858896963516295
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858896963516292}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 547858896879180950}
+  m_Father: {fileID: 547858897018733358}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &547858896963516288
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858896963516292}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: d32b38448ae9b764eb90053d37e1d202, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.19, y: 0.59}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &547858896963516289
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858896963516292}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.11, y: 0.08}
+    newSize: {x: 0.19, y: 0.59}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 0.59}
+  m_EdgeRadius: 0
+--- !u!114 &547858896963516294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858896963516292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: "T\xE9l\xE9phone"
+  dialogIndex: 0
+  transitionQuote: 0
+  haveEvent: 0
+  stickerRedirection:
+    stickerGivenList: 
+    redirectionList: 
+  eventRedirection:
+    eventGivenList: 
+    redirectionEventList: 
+  allDialogs:
+    listOfDialogs:
+    - dialog:
+      - quote: "Veuillez composer un num\xE9ro."
+        characterName: "T\xE9l\xE9phone"
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      canAskQuestions: 1
+      endDialog: 1
+    - dialog:
+      - quote: "Veuillez composer un num\xE9ro."
+        characterName: "T\xE9l\xE9phone"
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      canAskQuestions: 0
+      endDialog: 1
+--- !u!1 &547858897018733359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 547858897018733358}
+  m_Layer: 0
+  m_Name: pib_phone
+  m_TagString: PNJinteractable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &547858897018733358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858897018733359}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -225.5, y: -29.7, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 1}
+  m_Children:
+  - {fileID: 547858896963516295}
+  - {fileID: 547858897205137918}
+  - {fileID: 547858897815374304}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &547858897205137919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 547858897205137918}
+  - component: {fileID: 547858897205137915}
+  - component: {fileID: 547858897205137912}
+  - component: {fileID: 547858897205137913}
+  m_Layer: 0
+  m_Name: empty_pibphone
+  m_TagString: PNJinteractable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &547858897205137918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858897205137919}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 547858897806317097}
+  m_Father: {fileID: 547858897018733358}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &547858897205137915
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858897205137919}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: d32b38448ae9b764eb90053d37e1d202, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.19, y: 0.59}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &547858897205137912
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858897205137919}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.11, y: 0.08}
+    newSize: {x: 0.19, y: 0.59}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 0.59}
+  m_EdgeRadius: 0
+--- !u!114 &547858897205137913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858897205137919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: "T\xE9l\xE9phone"
+  dialogIndex: 0
+  transitionQuote: 0
+  haveEvent: 0
+  stickerRedirection:
+    stickerGivenList: 09000000
+    redirectionList: 02000000
+  eventRedirection:
+    eventGivenList: 
+    redirectionEventList: 
+  allDialogs:
+    listOfDialogs:
+    - dialog:
+      - quote: "Veuillez composer un num\xE9ro."
+        characterName: "T\xE9l\xE9phone"
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      canAskQuestions: 1
+      endDialog: 1
+    - dialog:
+      - quote: "Veuillez composer un num\xE9ro."
+        characterName: "T\xE9l\xE9phone"
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      canAskQuestions: 0
+      endDialog: 1
+    - dialog:
+      - quote: '*Sonne*'
+        characterName: "T\xE9l\xE9phone"
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: '*Sonne...*'
+        characterName: "T\xE9l\xE9phone"
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 04000000
+      canAskQuestions: 0
+      endDialog: 1
+--- !u!1 &547858897806317102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 547858897806317097}
+  - component: {fileID: 547858897806317096}
+  m_Layer: 0
+  m_Name: interaction E
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &547858897806317097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858897806317102}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.471, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 547858897205137918}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &547858897806317096
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858897806317102}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 7580b9a4e8e5826458a86c4c41f93320, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.43, y: 0.25}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &547858897815374305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 547858897815374304}
+  - component: {fileID: 547858897815374317}
+  - component: {fileID: 547858897815374306}
+  - component: {fileID: 547858897815374307}
+  m_Layer: 0
+  m_Name: marvin_meyer_phone
+  m_TagString: PNJinteractable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &547858897815374304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858897815374305}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 547858898453919648}
+  m_Father: {fileID: 547858897018733358}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &547858897815374317
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858897815374305}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: d32b38448ae9b764eb90053d37e1d202, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.19, y: 0.59}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &547858897815374306
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858897815374305}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.11, y: 0.08}
+    newSize: {x: 0.19, y: 0.59}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 0.59}
+  m_EdgeRadius: 0
+--- !u!114 &547858897815374307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858897815374305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: Marvin Meyer
+  dialogIndex: 0
+  transitionQuote: 6
+  haveEvent: 0
+  stickerRedirection:
+    stickerGivenList: 01000000330000000700000004000000
+    redirectionList: 02000000030000000400000005000000
+  eventRedirection:
+    eventGivenList: 
+    redirectionEventList: 
+  allDialogs:
+    listOfDialogs:
+    - dialog:
+      - quote: "All\xF4."
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: Marvin Meyer ?
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Qui est \xE0 l\u2019appareil ?"
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Je m\u2019appelle Kenneth, je suis un ami de Scott Nelson."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "J\u2019ai des questions \xE0 vous poser."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Je vous \xE9coute. Mais si la conversation devient trop indiscr\xE8te,
+          je raccroche."
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Tr\xE8s bien."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      canAskQuestions: 0
+      endDialog: 0
+    - dialog:
+      - quote: "All\xF4 ?"
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      canAskQuestions: 1
+      endDialog: 0
+    - dialog:
+      - quote: "J\u2019enqu\xEAte sur l\u2019affaire Loraine Grey. Vous en avez parl\xE9
+          dans Sassy New York."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: Laissez tomber, vous ne savez pas dans quoi vous mettez les pieds.
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Dites m\u2019en plus."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "J\u2019imagine que si vous menez l\u2019enqu\xEAte, c\u2019est que
+          vous avez compris que ce n\u2019\xE9tait pas un simple suicide. "
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Quand mon contact m\u2019a appel\xE9 pour m\u2019annoncer la nouvelle
+          je me suis tout de suite rendu sur place. "
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Le suicide d\u2019un proche de Clara Grey, \xE7a allait forc\xE9ment
+          faire les gros titres."
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Et vous ne vous \xEAtes pas g\xEAn\xE9 pour faire de l\u2019argent
+          sur la mort de cette jeune femme."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "\xC7a mon gars, c\u2019est mon m\xE9tier."
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Bref, une fois l\xE0-bas j\u2019interviewe le bonhomme de Loraine,"
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "je fais quelques photos, et je rentre chez moi r\xE9diger mon article."
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: Et sur le chemin, deux types me tombent dessus, genre gros bras.
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Ils \xE9clatent mon appareil sur le sol - quatre cents dollars foutus
+          en l\u2019air -,"
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "et me balancent comme \xE7a : \xAB Tu ne parles pas de Kurt Becker
+          dans ton papier ou on t\u2019arrache les couilles \xBB,"
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "ou un truc comme \xE7a. "
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Qu\u2019est ce que vous dites de \xE7a ?"
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 3300000031000000
+        eventTrigger: 
+      - quote: "C\u2019est tout ce qu\u2019ils voulaient ? Pourquoi ne pas vous dire
+          de ne pas publier l\u2019article ?"
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Je crois qu\u2019ils s'int\xE9ressent seulement \xE0 Kurt, et l\u2019affaire
+          aurait fini dans les journaux de toute fa\xE7on. "
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "En tout cas, moi je tiens \xE0 mes couilles alors j\u2019ai fait ce
+          qu\u2019ils ont dit."
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      canAskQuestions: 1
+      endDialog: 0
+    - dialog:
+      - quote: "Vous avez une id\xE9e de qui a pu envoyer ces hommes ?"
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "C\u2019est plus qu\u2019une id\xE9e, je le sais. "
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "C\u2019est un type qui se fait appeler L\u2019Allemand."
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 07000000
+        eventTrigger: 
+      - quote: Jamais entendu parler.
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "\xC7a ne m\u2019\xE9tonne pas. "
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: 'Il est connu seulement par la police et quelques fouilles-merdes comme
+          moi. '
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "C\u2019est le plus gros baron de la p\xE8gre du quartier. "
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Mais personne ne l\u2019a jamais vu."
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      canAskQuestions: 1
+      endDialog: 0
+    - dialog:
+      - quote: "Je veux en savoir plus sur l\u2019Allemand."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: 'Je ne peux pas vous en dire beaucoup. '
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Il s\u2019est impos\xE9 depuis quelque temps comme le ma\xEEtre du
+          quartier, apr\xE8s la mort de DiMarco, l\u2019ancien parrain de Midtown. "
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "J\u2019avais couvert cette affaire a l\u2019\xE9poque. "
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Un myst\xE9rieux type arrive et s\u2019approprie une \xE0 une les
+          affaires de DiMarco."
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "La police ne s\u2019en occupe pas trop. "
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Elle se contente de ramasser les cadavres, mieux vaut laisser les
+          truands s\u2019entretuer."
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Et l\xE0 une guerre \xE9clate je suppose."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Tout juste. DiMarco est compl\xE8tement d\xE9bord\xE9."
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "\xC7a a dur\xE9 quelques mois, jusqu\u2019\xE0 ce qu\u2019on retrouve
+          son corps avec une balle dans le cr\xE2ne. "
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Depuis ce jour, l\u2019Allemand r\xE8gne sur Midtown."
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Alors personne ne le conna\xEEt ? Ni son nom, ni son visage ?"
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: 'Apparemment pas. '
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "La police a bien essay\xE9 de le coincer, mais sans preuves, c\u2019est
+          une perte de temps. "
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Tout ce qu\u2019on a retrouv\xE9 c\u2019est des cadavres horriblement
+          tortur\xE9s."
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: Vraiment ?
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Je vous ai pas dit, c\u2019est la sp\xE9cialit\xE9 de l\u2019Allemand
+          c\u2019est la torture."
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Je vous raconte pas l\u2019\xE9tat des cadavres qu\u2019on a retrouv\xE9s.
+          Mais \xE7a, \xE7a fait les gros titres !"
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Mouais\u2026"
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      canAskQuestions: 1
+      endDialog: 0
+    - dialog:
+      - quote: Vous pouvez me parler de votre discussion avec Kurt Becker ?
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Discussion, c\u2019est un bien grand mot, ce type \xE9tait incapable
+          d'aligner deux mots quand on s\u2019est parl\xE9."
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: Il avait sans doute bu.
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: 
+      - quote: "Non je sais reconna\xEEtre un Junkie quand j\u2019en vois un, ce type
+          \xE9tait compl\xE8tement cram\xE9. "
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 30000000
+        eventTrigger: 
+      - quote: "\xC7a explique beaucoup de choses."
+        characterName: Kenneth
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      canAskQuestions: 1
+      endDialog: 0
+    - dialog:
+      - quote: Que voulez-vous savoir ?
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: 
+      canAskQuestions: 1
+      endDialog: 0
+--- !u!1 &547858898453919649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 547858898453919648}
+  - component: {fileID: 547858898453919651}
+  m_Layer: 0
+  m_Name: interaction E
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &547858898453919648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858898453919649}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.471, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 547858897815374304}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &547858898453919651
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547858898453919649}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 7580b9a4e8e5826458a86c4c41f93320, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.43, y: 0.25}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
