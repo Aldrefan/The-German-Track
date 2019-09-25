@@ -12,6 +12,7 @@ public class CameraFollow : MonoBehaviour
     public string barrier;
     public float smoothSpeed = 0.125f;
     public bool isFollowing;
+    Vector3 plToBorder;
 
      void OnTriggerEnter2D(Collider2D col)
     {
@@ -46,6 +47,8 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        plToBorder = Camera.main.ViewportToWorldPoint(new Vector3(1, 0.5f, -Camera.main.transform.position.z));
+        Debug.Log(plToBorder);
         if (collision)
         {
             if (barrier=="left" && player.transform.position.x > transform.position.x)
@@ -60,6 +63,12 @@ public class CameraFollow : MonoBehaviour
                 barrier = "none";
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawCube(plToBorder, Vector3.one);
+
     }
 
     // LateUpdate is called after all Update functions have been called.
