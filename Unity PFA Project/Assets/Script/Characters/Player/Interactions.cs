@@ -307,18 +307,16 @@ public class Interactions : MonoBehaviour
         }
         else 
         {
-            EnableMovements();
             PNJContact = null;
             GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", false);
-            state = State.Normal;
+            ChangeState(State.Normal);
         }
     }
 
     public void EnterDialogMode()
     {
         state = State.InDialog;
-        
-            GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", true);
+        GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", true);
     }
     public void StartDialog()
     {
@@ -395,9 +393,9 @@ public class Interactions : MonoBehaviour
             PNJContact.SetActive(false);
             PNJContact = null;
         }
-        isInDialog = false;
         carnet.GetComponent<Animator>().SetBool("InDialog", false);
         carnet.GetComponent<Animator>().SetBool("ClickOn", false);
+        ChangeState(State.Normal);
         //PNJContact = null;
         //canOpenCarnet = true;
         //state = State.Normal;
