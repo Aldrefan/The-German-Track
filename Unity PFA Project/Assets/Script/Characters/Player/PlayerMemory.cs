@@ -7,7 +7,7 @@ public class PlayerMemory : MonoBehaviour
     public List<int> stickerIndexCarnetList;
     public List<int> stickerIndexBoardList;
     public List<int> allStickers;
-    Transform carnet;
+    //Transform carnet;
     public List<GameObject> stickerList;
     public Transform boardCanvas;
     public Vector2Int charactersRange;
@@ -15,11 +15,12 @@ public class PlayerMemory : MonoBehaviour
     public Vector2Int hypothesesRange;
     public Vector2Int faitsRange;
     public GameObject newSticker;
+    public Transform carnet;
 
     void Awake()
     {
-        carnet = GameObject.Find("FlottingCanvas").transform.GetChild(3).GetChild(0).transform;
-        newSticker = GameObject.Find("FlottingCanvas").transform.GetChild(GameObject.Find("FlottingCanvas").transform.childCount - 5).gameObject;
+        //carnet = GameObject.Find("FlottingCanvas").transform.GetChild(3).GetChild(0).transform;// Initial
+        //newSticker = GameObject.Find("FlottingCanvas").transform.GetChild(GameObject.Find("FlottingCanvas").transform.childCount - 5).gameObject;// Initial
         JsonSave save = SaveGameManager.GetCurrentSave();
         for(int i = 0; i < save.memoryStickers.Count; i++)
         {

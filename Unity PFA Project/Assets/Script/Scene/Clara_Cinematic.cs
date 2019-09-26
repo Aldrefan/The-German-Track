@@ -42,7 +42,7 @@ public class Clara_Cinematic : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(movements)
         {
@@ -77,12 +77,12 @@ public class Clara_Cinematic : MonoBehaviour
         {
             action++;
             ExecuteCommand();
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().EnterCinematicMode();
         }
         else 
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().QuitCinematicMode();
             GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInCinematic = false;
+            GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", false);
         }
     }
 
@@ -96,7 +96,8 @@ public class Clara_Cinematic : MonoBehaviour
 
     public void ExecuteCommand()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInCinematic = true;
+        GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", true);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().ChangeState(Interactions.State.InCinematic);
         if(commandList[action] == Command.Movement)
         {
             IEnumerator newCoroutine = MovementTimer(annexInformation[action].time);

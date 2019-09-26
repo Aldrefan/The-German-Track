@@ -12,7 +12,7 @@ public class CanvasManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if(Input.GetButtonDown("Cancel"))
         {
@@ -25,5 +25,5 @@ public class CanvasManager : MonoBehaviour
                 transform.GetChild(3).gameObject.SetActive(false);
             }
         }
-    }
+    }*/
 }

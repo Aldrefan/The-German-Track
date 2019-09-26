@@ -21,7 +21,7 @@ public class Shortcut : MonoBehaviour
 
     void Awake()
     {
-        fadePanel =  GameObject.Find("FadePanel");
+        fadePanel =  GameObject.Find("Necessary_Floating_Canvas").transform.GetChild(0).gameObject;
         player = GameObject.FindGameObjectWithTag("Player");
         directionalLight = GameObject.Find("Directional Light");
     }

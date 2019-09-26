@@ -64,7 +64,6 @@ public class EventsCheck : MonoBehaviour
         {
             GetComponent<Interactions>().PNJContact = GameObject.Find("police_receptionist");
             //collision.transform.GetChild(0).gameObject.SetActive(true);
-            GetComponent<Interactions>().isInContact = true;
             //GameObject.Find("trigger_PoliceReceptionist").SetActive(false);
             GetComponent<Interactions>().StartDialog();
         }
@@ -73,7 +72,6 @@ public class EventsCheck : MonoBehaviour
         {
             GetComponent<Interactions>().PNJContact = col.gameObject;
             col.transform.GetChild(0).gameObject.SetActive(true);
-            GetComponent<Interactions>().isInContact = true;
             GetComponent<Interactions>().StartDialog();
         }
         if(col.name == "KD_InvisibleWall")

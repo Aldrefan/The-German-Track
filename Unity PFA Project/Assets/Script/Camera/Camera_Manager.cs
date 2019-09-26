@@ -17,9 +17,9 @@ public class Camera_Manager : MonoBehaviour
     {
         cameraBoard = GetComponent<Camera_BoardMovements>();
         cameraFollow = GetComponent<CameraFollow>();
-        responseButton = GameObject.Find("FlottingCanvas").transform.GetChild(0).gameObject;
+        //responseButton = GameObject.Find("FlottingCanvas").transform.GetChild(0).gameObject;
         player = GameObject.FindGameObjectWithTag("Player");
-        floatingCanvas = GameObject.Find("FlottingCanvas");
+        //floatingCanvas = GameObject.Find("FlottingCanvas");
     }
 
     // Update is called once per frame
@@ -50,7 +50,7 @@ public class Camera_Manager : MonoBehaviour
         cameraBoard.enabled = true;
         cameraBoard.GetPosition();
         cameraFollow.enabled = false;
-        responseButton.SetActive(true);
+        //responseButton.SetActive(true);// Initial
     }
 
     public void NotOnBoard()
@@ -74,20 +74,24 @@ public class Camera_Manager : MonoBehaviour
         boardCanvas.SetActive(false);
         cameraBoard.enabled = false;
         cameraFollow.enabled = true;
-        responseButton.SetActive(false);
+        //responseButton.SetActive(false);
     }
 
     public void OnCarnet()
     {
-        GetComponent<CameraFollow>().enabled = false;
-        floatingCanvas.transform.GetChild(3).gameObject.SetActive(true);
-        floatingCanvas.transform.GetChild(floatingCanvas.transform.childCount - 1).GetComponent<Animator>().SetBool("ClickOn", true);
+        //GetComponent<CameraFollow>().enabled = false;
+        player.GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).gameObject.SetActive(true);
+        //floatingCanvas.transform.GetChild(3).gameObject.SetActive(true);// Inital
+        player.GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(2).GetComponent<Animator>().SetBool("ClickOn", true);
+        //floatingCanvas.transform.GetChild(floatingCanvas.transform.childCount - 1).GetComponent<Animator>().SetBool("ClickOn", true);// Initial
     }
 
     public void NotOnCarnet()
     {
-        GetComponent<CameraFollow>().enabled = true;
-        floatingCanvas.transform.GetChild(3).gameObject.SetActive(false);
-        floatingCanvas.transform.GetChild(floatingCanvas.transform.childCount - 1).GetComponent<Animator>().SetBool("ClickOn", false);
+        //GetComponent<CameraFollow>().enabled = true;
+        player.GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).gameObject.SetActive(false);
+        //floatingCanvas.transform.GetChild(3).gameObject.SetActive(false);// Initial
+        player.GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(2).GetComponent<Animator>().SetBool("ClickOn", false);
+        //floatingCanvas.transform.GetChild(floatingCanvas.transform.childCount - 1).GetComponent<Animator>().SetBool("ClickOn", false);// Initial
     }
 }

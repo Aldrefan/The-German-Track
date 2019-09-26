@@ -208,15 +208,15 @@ public class HypotheseListT
 
     IEnumerator ActivateTime()
     {
-        GameObject.Find("FlottingCanvas").transform.GetChild(GameObject.Find("FlottingCanvas").transform.childCount - 4).gameObject.SetActive(true);
+        GameObject.Find("Kenneth").GetComponent<Interactions>().boardCanvas.transform.GetChild(0).gameObject.SetActive(true);
         //Debug.Log(GameObject.Find("FlottingCanvas").transform.GetChild(GameObject.Find("FlottingCanvas").transform.childCount - 4).transform.GetChild(0).GetComponent<Text>().text = quoteList[quoteList.Count - 1]);
-        GameObject.Find("FlottingCanvas").transform.GetChild(GameObject.Find("FlottingCanvas").transform.childCount - 4).transform.GetChild(0).GetComponent<Text>().text = quoteList[quoteList.Count - 1];
+        GameObject.Find("Kenneth").GetComponent<Interactions>().boardCanvas.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = quoteList[quoteList.Count - 1];
         yield return new WaitForSeconds(1);
         for(int i = 0; i > 0; i--)
         {
-            GameObject.Find("FlottingCanvas").transform.GetChild(GameObject.Find("FlottingCanvas").transform.childCount - 4).GetComponent<Image>().color = new Vector4(0, 0, 0, i);
+            GameObject.Find("Kenneth").GetComponent<Interactions>().boardCanvas.transform.GetChild(0).GetComponent<Image>().color = new Vector4(0, 0, 0, i);
         }
-        GameObject.Find("FlottingCanvas").transform.GetChild(GameObject.Find("FlottingCanvas").transform.childCount - 4).gameObject.SetActive(false);
+        GameObject.Find("Kenneth").GetComponent<Interactions>().boardCanvas.transform.GetChild(0).gameObject.SetActive(false);
         quoteList.Clear();
     }
 }

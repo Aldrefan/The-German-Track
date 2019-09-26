@@ -20,7 +20,7 @@ public class CarnetUI : MonoBehaviour
 
     void OnMouseDown()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().OpenBookExe();
+        GameObject.Find("Kenneth").GetComponent<Interactions>().OpenBookExe();
     }
 
     void OnMouseOver()

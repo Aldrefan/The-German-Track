@@ -91,30 +91,34 @@ public class PNJ : MonoBehaviour
         
     }
 
+    void Awake()
+    {
+        carnet = GameObject.Find("CarnetUI").transform;
+        DialogCanvas = GameObject.Find("Ken_Dial_Book_FlCanvas");
+        leftPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().leftPanel;
+        rightPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().rightPanel;
+    }
+
     public void ChangeDialog(int newDialog)
     {
         player.GetComponent<Interactions>().isInDialog = true;
+        if(newDialog == transitionQuote)
+        {
+            player.GetComponent<Interactions>().QuitCinematicMode();
+        }
         if(allDialogs.listOfDialogs[dialogIndex].canAskQuestions)
         {
             carnet.GetComponent<Animator>().SetBool("InDialog", true);
-            player.GetComponent<Interactions>().canOpenCarnet = true;
+            //player.GetComponent<Interactions>().canOpenCarnet = true;// Initial
         }
         else 
         {
             carnet.GetComponent<Animator>().SetBool("ClickOn", true);
-            player.GetComponent<Interactions>().canOpenCarnet = false;
+            //player.GetComponent<Interactions>().canOpenCarnet = false;// Initial
         }
         dialogLine = 0;
         dialogIndex = newDialog;
         Startdialogue();
-    }
-
-    void Awake()
-    {
-        carnet = GameObject.Find("CarnetUI").transform;
-        DialogCanvas = GameObject.Find("FlottingCanvas");
-        leftPanel = DialogCanvas.transform.GetChild(DialogCanvas.transform.childCount - 3).gameObject;
-        rightPanel = DialogCanvas.transform.GetChild(DialogCanvas.transform.childCount - 2).gameObject;
     }
 
     public void ResponseEvent()
@@ -140,12 +144,12 @@ public class PNJ : MonoBehaviour
         if(allDialogs.listOfDialogs[dialogIndex].canAskQuestions)
         {
             carnet.GetComponent<Animator>().SetBool("InDialog", true);
-            player.GetComponent<Interactions>().canOpenCarnet = true;
+            //player.GetComponent<Interactions>().canOpenCarnet = true;// Initial
         }
         else 
         {
             carnet.GetComponent<Animator>().SetBool("ClickOn", true);
-            player.GetComponent<Interactions>().canOpenCarnet = false;
+            //player.GetComponent<Interactions>().canOpenCarnet = false;// Initial
         }
         if(GameObject.Find("BlackBands").GetComponent<Animator>().GetBool("Cinematic"))
         {
@@ -159,36 +163,36 @@ public class PNJ : MonoBehaviour
             {
                 leftPanel.SetActive(true);
                 rightPanel.SetActive(false);
-                leftPanel.transform.GetChild(1).GetComponent<Text>().text = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName;
+                leftPanel.transform.GetChild(2).GetComponent<Text>().text = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName;
                 show = ShowText(leftPanel);
                 StartCoroutine(show);
                 //leftPanel.transform.GetChild(0).GetComponent<Text>().text = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote;
                 if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName == PNJName)
                 {
-                    leftPanel.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = characterSprite;
+                    leftPanel.transform.GetChild(4).GetComponent<Image>().sprite = characterSprite;
                 }
-                else leftPanel.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].spriteCharacter;
+                else leftPanel.transform.GetChild(4).GetComponent<Image>().sprite = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].spriteCharacter;
                 if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName == "Kenneth")
                 {
-                    leftPanel.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = kennethSprite;
+                    leftPanel.transform.GetChild(4).GetComponent<Image>().sprite = kennethSprite;
                 }
             }
             else 
             {
                 rightPanel.SetActive(true);
                 leftPanel.SetActive(false);
-                rightPanel.transform.GetChild(1).GetComponent<Text>().text = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName;
+                rightPanel.transform.GetChild(2).GetComponent<Text>().text = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName;
                 show = ShowText(rightPanel);
                 StartCoroutine(show);
                 //rightPanel.transform.GetChild(0).GetComponent<Text>().text = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote;
                 if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName == PNJName)
                 {
-                    rightPanel.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = characterSprite;
+                    rightPanel.transform.GetChild(4).GetComponent<Image>().sprite = characterSprite;
                 }
-                else rightPanel.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].spriteCharacter;
+                else rightPanel.transform.GetChild(4).GetComponent<Image>().sprite = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].spriteCharacter;
                 if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName == "Kenneth")
                 {
-                    rightPanel.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = kennethSprite;
+                    rightPanel.transform.GetChild(4).GetComponent<Image>().sprite = kennethSprite;
                 }
             }
         }
@@ -204,7 +208,6 @@ public class PNJ : MonoBehaviour
 
     public void EndDialog()
     {
-        GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", false);
         if(GetComponent<Animator>())
         {
             GetComponent<Animator>().SetBool("Talk", false);
@@ -240,7 +243,7 @@ public class PNJ : MonoBehaviour
         for(int i = 0; i < allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote.Length; i++)
         {
             currentLine = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote.Substring(0,i);
-            panel.transform.GetChild(0).GetComponent<Text>().text = currentLine;
+            panel.transform.GetChild(1).GetComponent<Text>().text = currentLine;
             yield return new WaitForSeconds(dialogDelay);
         }
         quoteFinished = true;
@@ -251,7 +254,7 @@ public class PNJ : MonoBehaviour
     {
         StopCoroutine(show);
         quoteFinished = true;
-        panel.transform.GetChild(0).GetComponent<Text>().text = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote;
+        panel.transform.GetChild(1).GetComponent<Text>().text = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote;
         DialogSecondPhase();
     }
 
