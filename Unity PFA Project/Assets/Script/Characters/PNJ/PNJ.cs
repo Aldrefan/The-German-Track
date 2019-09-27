@@ -158,7 +158,6 @@ public class PNJ : MonoBehaviour
 
         if(dialogLine < allDialogs.listOfDialogs[dialogIndex].dialog.Count)
         {
-
             if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].isInLeftSide)
             {
                 leftPanel.SetActive(true);
@@ -210,12 +209,12 @@ public class PNJ : MonoBehaviour
     {
         if(GetComponent<Animator>())
         {
-            GetComponent<Animator>().SetBool("Talk", false);
+            GetComponent<Animator>().SetBool("Talk", false); // Temporaire (A changer le plus vite possible)
         }
-        if(!allDialogs.listOfDialogs[dialogIndex].canAskQuestions)
+        /*if(!allDialogs.listOfDialogs[dialogIndex].canAskQuestions)
         {
             allDialogs.listOfDialogs[dialogIndex].canAskQuestions = true;
-        }
+        }*/
         player.GetComponent<Interactions>().EndDialog();
         rightPanel.SetActive(false);
         leftPanel.SetActive(false);

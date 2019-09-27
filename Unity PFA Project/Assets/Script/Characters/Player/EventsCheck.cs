@@ -23,6 +23,8 @@ public class EventsCheck : MonoBehaviour
         {
             GetComponent<Interactions>().PNJContact = gameObject;
             GetComponent<PNJ>().ChangeDialog(4);
+            GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
+            fauteuil = false;
         }
 
         /*if(lamp && Input.GetButtonDown("Interaction"))// Initial
@@ -73,6 +75,7 @@ public class EventsCheck : MonoBehaviour
             GetComponent<Interactions>().PNJContact = col.gameObject;
             col.transform.GetChild(0).gameObject.SetActive(true);
             GetComponent<Interactions>().StartDialog();
+            GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
         }
         if(col.name == "KD_InvisibleWall")
         {
@@ -92,6 +95,7 @@ public class EventsCheck : MonoBehaviour
         {
             GetComponent<Interactions>().PNJContact = gameObject;
             GetComponent<PNJ>().ChangeDialog(1);
+            GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
         }
 
         if(col.name == "Fauteuil")

@@ -61,7 +61,8 @@ public class CarnetIndex : MonoBehaviour
         newChild.transform.SetParent(PageSelected.transform);
         newChild.transform.localPosition = new Vector3(0,0,0);
         GameObject newSymbol = Instantiate(newFeedback, newChild.transform);
-        newFeedback.transform.localScale = newFeedbackSize;
+        newSymbol.transform.localScale = newFeedbackSize;
         newSymbol.transform.localPosition = Vector3.zero;
+
     }
 }
