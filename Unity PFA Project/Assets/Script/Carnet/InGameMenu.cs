@@ -26,6 +26,10 @@ public class InGameMenu : MonoBehaviour
     {
         musicMixer.SetFloat("musicVolume", musicSlider.value);
         fxMixer.SetFloat("fxVolume", fxSlider.value);
+        if(Input.GetButtonDown("Escape"))
+        {
+            ResumeGame();
+        }
     }
 
     void Start()
@@ -111,7 +115,7 @@ public class InGameMenu : MonoBehaviour
     public void QuitGameWithoutSave()
     {
         Debug.Log("QuitGame");
-        GameObject.Find("Saver").GetComponent<Saver>().ClearSave();
+        //GameObject.Find("Saver").GetComponent<Saver>().ClearSave();
         Application.Quit();
     }
 
@@ -145,7 +149,6 @@ public class InGameMenu : MonoBehaviour
         englishArrow.SetActive(true);
         frenchArrow.SetActive(false);
         FrenchSelection();
-        Debug.Log(isFrench);
     }
 
         public void FrenchSelection()
@@ -153,7 +156,6 @@ public class InGameMenu : MonoBehaviour
         isFrench = true;
         frenchArrow.SetActive(true);
         englishArrow.SetActive(false);
-        Debug.Log(isFrench);
     }
 
     public void MouseEnter(Transform button)
@@ -164,5 +166,23 @@ public class InGameMenu : MonoBehaviour
     public void MouseExit(Transform button)
     {
         button.GetComponent<Text>().color = Color.black;
+    }
+
+    public void ButtonChangeOver(Transform button)
+    {
+        button.GetComponent<RectTransform>().sizeDelta = new Vector2(205f, 92.5f);
+        button.GetChild(0).GetComponent<Text>().color = Color.black;
+    }
+
+
+    public void OpenOptions()
+    {
+
+    }
+
+    public void ResumeGame()
+    {
+        gameObject.SetActive(false);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().ChangeState(Interactions.State.Normal);
     }
 }

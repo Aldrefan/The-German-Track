@@ -44,11 +44,18 @@ public class HypotheseListT
 {
     public List<HypothesesT> list;
 }
+
+GameObject player;
     
     // Start is called before the first frame update
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
+    }
+
+    void Awake()
+    {
+        player = GameObject.Find("Kenneth");
     }
 
     // Update is called once per frame
@@ -57,13 +64,6 @@ public class HypotheseListT
         if(pinList.Count > 0)
         {
             lineRenderer.enabled = true;
-            /*
-            if(!checking)
-            {
-                //CheckComponent();
-                checking = true;
-            } 
-            */
             for(int i = 0; i < pinList.Count; ++i)
             {
                 lineRenderer.positionCount = pinList.Count;
@@ -100,6 +100,11 @@ public class HypotheseListT
     {
         pinList.Remove(pin);
     }
+
+    void OnEnable()
+    {
+        
+    }
     
     public void CheckComponent()
     {
@@ -123,8 +128,8 @@ public class HypotheseListT
             {
                 if(notValidateStickersList.Count == 0)
                 {
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMemory>().stickerIndexCarnetList.Add(hypotheseresponses[i].GetComponent<Pin_System>().stickerIndex);
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMemory>().allStickers.Add(hypotheseresponses[i].GetComponent<Pin_System>().stickerIndex);
+                    player.GetComponent<PlayerMemory>().stickerIndexCarnetList.Add(hypotheseresponses[i].GetComponent<Pin_System>().stickerIndex);
+                    player.GetComponent<PlayerMemory>().allStickers.Add(hypotheseresponses[i].GetComponent<Pin_System>().stickerIndex);
                     Transform boardCanvas = GameObject.Find("BoardCanvas").transform;
                     Camera camera = Camera.main;
                     GameObject newSticker = Instantiate(hypotheseresponses[i], new Vector3(camera.transform.position.x, camera.transform.position.y, boardCanvas.position.z), boardCanvas.rotation, boardCanvas); // Fait apparaitre l'hypothèse crée
@@ -162,9 +167,9 @@ public class HypotheseListT
             }
         }
         if(!createASticker && quoteList.Count > 0)
-            {
-                StartCoroutine("ActivateTime");
-            }
+        {
+            StartCoroutine("ActivateTime");
+        }
         createASticker = false;
     }
     
@@ -208,15 +213,15 @@ public class HypotheseListT
 
     IEnumerator ActivateTime()
     {
-        GameObject.Find("Kenneth").GetComponent<Interactions>().boardCanvas.transform.GetChild(0).gameObject.SetActive(true);
+        GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).gameObject.SetActive(true);
         //Debug.Log(GameObject.Find("FlottingCanvas").transform.GetChild(GameObject.Find("FlottingCanvas").transform.childCount - 4).transform.GetChild(0).GetComponent<Text>().text = quoteList[quoteList.Count - 1]);
-        GameObject.Find("Kenneth").GetComponent<Interactions>().boardCanvas.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = quoteList[quoteList.Count - 1];
+        GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).GetChild(0).GetComponent<Text>().text = quoteList[quoteList.Count - 1];
         yield return new WaitForSeconds(1);
         for(int i = 0; i > 0; i--)
         {
-            GameObject.Find("Kenneth").GetComponent<Interactions>().boardCanvas.transform.GetChild(0).GetComponent<Image>().color = new Vector4(0, 0, 0, i);
+            GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).GetComponent<Image>().color = new Vector4(0, 0, 0, i);
         }
-        GameObject.Find("Kenneth").GetComponent<Interactions>().boardCanvas.transform.GetChild(0).gameObject.SetActive(false);
+        GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).gameObject.SetActive(false);
         quoteList.Clear();
     }
 }

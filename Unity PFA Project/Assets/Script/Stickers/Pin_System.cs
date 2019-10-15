@@ -9,15 +9,13 @@ public class Pin_System : MonoBehaviour
     public GameObject pin;
     public bool click;
     public int stickerIndex;
-    Vector2 colliderSize;
-    float PositionZ;
 
     // Start is called before the first frame update
     void Start()
     {
+        Vector2 colliderSize;
         colliderSize = GetComponent<RectTransform>().sizeDelta;
         GetComponent<BoxCollider2D>().size = colliderSize;
-        PositionZ = transform.parent.position.z;
     }
 
     // Update is called once per frame
@@ -28,7 +26,7 @@ public class Pin_System : MonoBehaviour
 
     public void RemoveFromList()
     {
-        Destroy(transform.GetChild(0));
+        Destroy(transform.GetChild(2));
     }
 
     public void PointerEnter()
@@ -42,14 +40,41 @@ public class Pin_System : MonoBehaviour
 
     public void PointerDown()
     {
-        if(Input.GetKey(KeyCode.Mouse0) && transform.childCount == 0)
+        if(Input.GetKey(KeyCode.Mouse0))
         {
-            click = true;
+            int i = 0;
+            foreach(RectTransform child in transform)
+            {
+                i++;
+                if(child.name == "Pin 1(Clone)")
+                {
+                    break;
+                }
+                else 
+                {
+                    Debug.Log("1");
+                    if(i == transform.childCount || transform.childCount == 0)
+                    {
+                        Debug.Log("2");
+                        click = true;
+                    }
+                }
+            }
+            if(transform.childCount == 0)
+            {
+                click = true;
+            }
         }
-        else if(Input.GetKey(KeyCode.Mouse1) && transform.childCount > 0)
+        if(Input.GetKey(KeyCode.Mouse1))
         {
-            GameObject.FindObjectOfType<String_Manager>().DeletePin(gameObject);
-            Destroy(transform.GetChild(0).gameObject);
+            foreach(RectTransform child in transform)
+            {
+                if(child.name == "Pin 1(Clone)")
+                {
+                    GameObject.FindObjectOfType<String_Manager>().DeletePin(gameObject);
+                    Destroy(child.gameObject);
+                }
+            }
         }
     }
 

@@ -21,10 +21,14 @@ public class Camera_BoardMovements : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         saver = GameObject.FindObjectOfType<Saver>().gameObject;
+    }
+
+    void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public void GetPosition()
@@ -32,76 +36,6 @@ public class Camera_BoardMovements : MonoBehaviour
         boardCanvas.transform.position = new Vector3(transform.position.x, boardCanvas.transform.position.y, boardCanvas.transform.position.z);
         startPosition = transform.position;
     }
-
-    // Update is called once per frame
-    /*void Update()
-    {
-        if(Input.GetButtonDown("Interaction"))
-        {
-            if(!zoom)
-            {
-                animator.SetTrigger("Zoom");
-                zoom = true;
-            }
-            else 
-            {
-                animator.SetTrigger("UnZoom");
-                zoom = false;
-                rb2d.velocity = new Vector3(0, 0, 0);
-                transform.position = new Vector3(startPosition.x, startPosition.y, startPosition.z);
-            }
-        }
-
-        if(Input.GetButtonDown("Cancel"))
-        {
-            if(zoom)
-            {
-                Debug.Log("Rien");
-                animator.SetTrigger("UnZoom");
-                zoom = false;
-                rb2d.velocity = new Vector3(0, 0, 0);
-                transform.position = new Vector3(startPosition.x, startPosition.y, startPosition.z);
-            }
-            else
-            {
-                //JsonSave save = SaveGameManager.GetCurrentSave();
-                if(boardCanvas.transform.childCount > 1)
-                {
-                    for(int i = 1; i < boardCanvas.transform.childCount; i++)
-                    {
-                        if(saver.GetComponent<Saver>().stickersIndexOnBoardFM.Contains(boardCanvas.transform.GetChild(i).GetComponent<Pin_System>().stickerIndex))
-                        {
-                            for(int x = 0; x < saver.GetComponent<Saver>().stickersIndexOnBoardFM.Count; x++)
-                            {
-                                if(saver.GetComponent<Saver>().stickersIndexOnBoardFM[x] == boardCanvas.transform.GetChild(i).GetComponent<Pin_System>().stickerIndex)
-                                {
-                                    saver.GetComponent<Saver>().stickersPositionOnBoardFM[x] = boardCanvas.transform.GetChild(i).localPosition;
-                                    break;
-                                }
-                            }
-                        }
-                        else 
-                        {
-                            saver.GetComponent<Saver>().stickersIndexOnBoardFM.Add(boardCanvas.transform.GetChild(i).GetComponent<Pin_System>().stickerIndex);
-                            saver.GetComponent<Saver>().stickersPositionOnBoardFM.Add(boardCanvas.transform.GetChild(i).localPosition);
-                        }
-                    }
-                }
-            }
-            player.GetComponent<Interactions>().onBoard = false;
-            Camera.main.GetComponent<Camera_Manager>().NotOnBoard();
-            //SaveGameManager.Save();
-        }
-
-        if(zoom)
-        {
-            float axisY = Input.GetAxis("Vertical");
-            float axisX = Input.GetAxis("Horizontal");
-            rb2d.velocity = new Vector2(axisX * speed, axisY * speed);
-        }
-
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, startPosition.x - Limits.x, startPosition.x + Limits.x), Mathf.Clamp(transform.position.y, startPosition.y - Limits.y, startPosition.y + Limits.y), startPosition.z);
-    }*/
 
     void FixedUpdate()
     {
@@ -137,30 +71,32 @@ public class Camera_BoardMovements : MonoBehaviour
 
     void QuitBoardExe()
     {
-    if(boardCanvas.transform.childCount > 1)
-    {
-        for(int i = 1; i < boardCanvas.transform.childCount; i++)
+        if(boardCanvas.transform.childCount > 1)
         {
-            if(saver.GetComponent<Saver>().stickersIndexOnBoardFM.Contains(boardCanvas.transform.GetChild(i).GetComponent<Pin_System>().stickerIndex))
+            for(int i = 1; i < boardCanvas.transform.childCount; i++)
             {
-                for(int x = 0; x < saver.GetComponent<Saver>().stickersIndexOnBoardFM.Count; x++)
+                if(saver.GetComponent<Saver>().stickersIndexOnBoardFM.Contains(boardCanvas.transform.GetChild(i).GetComponent<Pin_System>().stickerIndex))
                 {
-                    if(saver.GetComponent<Saver>().stickersIndexOnBoardFM[x] == boardCanvas.transform.GetChild(i).GetComponent<Pin_System>().stickerIndex)
+                    for(int x = 0; x < saver.GetComponent<Saver>().stickersIndexOnBoardFM.Count; x++)
                     {
-                        saver.GetComponent<Saver>().stickersPositionOnBoardFM[x] = boardCanvas.transform.GetChild(i).localPosition;
-                        break;
+                        if(saver.GetComponent<Saver>().stickersIndexOnBoardFM[x] == boardCanvas.transform.GetChild(i).GetComponent<Pin_System>().stickerIndex)
+                        {
+                            saver.GetComponent<Saver>().stickersPositionOnBoardFM[x] = boardCanvas.transform.GetChild(i).localPosition;
+                            break;
+                        }
                     }
                 }
-            }
-            else 
-            {
-                saver.GetComponent<Saver>().stickersIndexOnBoardFM.Add(boardCanvas.transform.GetChild(i).GetComponent<Pin_System>().stickerIndex);
-                saver.GetComponent<Saver>().stickersPositionOnBoardFM.Add(boardCanvas.transform.GetChild(i).localPosition);
+                else 
+                {
+                    saver.GetComponent<Saver>().stickersIndexOnBoardFM.Add(boardCanvas.transform.GetChild(i).GetComponent<Pin_System>().stickerIndex);
+                    saver.GetComponent<Saver>().stickersPositionOnBoardFM.Add(boardCanvas.transform.GetChild(i).localPosition);
+                }
             }
         }
-    }
-    player.GetComponent<Interactions>().CloseBoard();
-    Camera.main.GetComponent<Camera_Manager>().NotOnBoard();
+        GetComponent<CameraFollow>().actualRoom.SetActive(true);
+        player.SetActive(true);
+        player.GetComponent<Interactions>().CloseBoard();
+        Camera.main.GetComponent<Camera_Manager>().NotOnBoard();
     }
 
     void ZoomExe()

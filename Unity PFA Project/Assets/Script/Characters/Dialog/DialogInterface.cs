@@ -25,13 +25,16 @@ public class DialogInterface : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().quoteFinished)
+        if(!transform.parent.GetChild(transform.parent.childCount - 1).gameObject.activeInHierarchy)
         {
-            player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().Startdialogue();
-        }
-        else 
-        {
-            player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().FullQuote(gameObject);
+            if(player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().quoteFinished)
+            {
+                player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().Startdialogue();
+            }
+            else 
+            {
+                player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().FullQuote(gameObject);
+            }
         }
     }
 }

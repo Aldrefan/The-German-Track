@@ -49,8 +49,11 @@ public class Shortcut : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        canMove = true;
-        transform.GetChild(0).gameObject.SetActive(true);
+        if(col.gameObject.tag == "Player")
+        {
+            canMove = true;
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
 
     void OnTriggerExit2D(Collider2D col)
@@ -65,7 +68,7 @@ public class Shortcut : MonoBehaviour
         Camera.main.GetComponent<BoxCollider2D>().enabled = false;
         yield return new WaitForSeconds(0.4f);
         if(linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme != null && linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme != GameObject.Find("AudioManager").GetComponent<AudioSource>().clip)
-        { 
+        {
             GameObject.Find("AudioManager").GetComponent<AudioSource>().clip = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme;
             GameObject.Find("AudioManager").GetComponent<AudioSource>().Play();
         }

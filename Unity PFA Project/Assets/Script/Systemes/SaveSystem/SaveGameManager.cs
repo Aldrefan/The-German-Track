@@ -30,6 +30,7 @@ public class JsonSave
     public List<int> memoryStickers;
     public List<string> meetingList;
     public string language = "french";
+    public List<string> eventList;
 }
 
 public static class SaveGameManager

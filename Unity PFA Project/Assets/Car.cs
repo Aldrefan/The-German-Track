@@ -6,21 +6,30 @@ public class Car : MonoBehaviour
 {
     public float time;
     public float direction;
+
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("LifeTime");
+
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.position = new Vector2(transform.position.x - direction, transform.position.y);
+        transform.position = new Vector3(transform.position.x - direction, transform.position.y, transform.position.z);
+        //Mathf.Log(direction);
     }
 
-    IEnumerator LifeTime()
+    void OnTriggerEnter2D(Collider2D coll)
     {
-        yield return new WaitForSeconds(time);
-        Destroy(gameObject);
+        if(coll.gameObject.name == "CarDespawn")
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void OnTriggerExit2D()
+    {
+        //direction = directionDefault;
     }
 }

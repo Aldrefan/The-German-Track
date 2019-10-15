@@ -9,6 +9,7 @@ public class Sticker_Display : MonoBehaviour
     public Text text;
     public Image backgroundSticker;
     public Color backgroundColor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +27,6 @@ public class Sticker_Display : MonoBehaviour
         backgroundSticker.sprite = sticker.stickerBackground;
         backgroundSticker.color = sticker.color;
         backgroundSticker.rectTransform.sizeDelta = new Vector2(sticker.backgoundSize.x, sticker.backgoundSize.y);
+        text.rectTransform.sizeDelta = new Vector2(GetComponent<BoxCollider2D>().size.x -50, GetComponent<BoxCollider2D>().size.y -20);
     }
 }

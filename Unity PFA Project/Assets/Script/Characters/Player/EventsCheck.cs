@@ -19,12 +19,15 @@ public class EventsCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(fauteuil && Input.GetButtonDown("Interaction"))
+        /*if(GetComponent<Interactions>().PNJContact && GetComponent<Interactions>().PNJContact.name == "Fauteuil" && Input.GetButtonDown("Interaction"))
         {
             GetComponent<Interactions>().PNJContact = gameObject;
             GetComponent<PNJ>().ChangeDialog(4);
             GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
-            fauteuil = false;
+        }*/
+        if(GetComponent<Interactions>().PNJContact && GetComponent<Interactions>().PNJContact.tag == "Interaction" && Input.GetButtonDown("Interaction") && !GetComponent<Interactions>().isInDialog)
+        {
+            CheckInteraction();
         }
 
         /*if(lamp && Input.GetButtonDown("Interaction"))// Initial
@@ -70,24 +73,26 @@ public class EventsCheck : MonoBehaviour
             GetComponent<Interactions>().StartDialog();
         }
         
-        if (col.name == "dialog_williamscott")
+        /*if (col.name == "dialog_williamscott")
         {
             GetComponent<Interactions>().PNJContact = col.gameObject;
             col.transform.GetChild(0).gameObject.SetActive(true);
             GetComponent<Interactions>().StartDialog();
             GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
-        }
+        }*/
         if(col.name == "KD_InvisibleWall")
         {
             //JsonSave save = SaveGameManager.GetCurrentSave();
             if(GetComponent<PlayerMemory>().allStickers.Contains(1) && GetComponent<PlayerMemory>().allStickers.Contains(2) && GetComponent<PlayerMemory>().allStickers.Contains(8) && GetComponent<PlayerMemory>().allStickers.Contains(4))
             {
-                GameObject.Find("KD_InvisibleWall").SetActive(false);
+                //GameObject.Find("KD_InvisibleWall").SetActive(false);
+                col.GetComponent<Clara_Cinematic>().ExecuteCommand();
             }
             else
             {
                 GetComponent<Interactions>().PNJContact = gameObject;
                 GetComponent<PNJ>().ChangeDialog(0);
+                GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
             }
         }
 
@@ -98,16 +103,74 @@ public class EventsCheck : MonoBehaviour
             GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
         }
 
-        if(col.name == "Fauteuil")
+        if(col.name == "doorHopital")
         {
-            col.transform.GetChild(0).gameObject.SetActive(true);
-            fauteuil = true;
+            GetComponent<Interactions>().PNJContact = GameObject.Find("hospital_receptionist");
+            GetComponent<Interactions>().StartDialog();
         }
 
-        if(col.name == "Lamp")
+        /*if(col.name == "Lamp")
         {
             col.transform.GetChild(0).gameObject.SetActive(true);
-            lamp = true;
+            //lamp = true;
+        }*/
+    }
+
+    public void CheckInteraction()
+    {
+        switch(GetComponent<Interactions>().PNJContact.name)
+        {
+            case "doorKurt":
+            GetComponent<Interactions>().PNJContact.GetComponent<Clara_Cinematic>().ExecuteCommand();
+            break;
+
+            case "Fauteuil" :
+            GetComponent<Interactions>().PNJContact.GetComponent<Clara_Cinematic>().ExecuteCommand();
+            break;
+
+            case "Lamp" :
+            LampEvent();
+            break;
+        }
+    }
+
+    void LampEvent()
+    {
+        if(GetComponent<Interactions>().PNJContact.transform.GetChild(1).gameObject.activeInHierarchy)
+        {
+            GetComponent<Interactions>().PNJContact.transform.GetChild(1).gameObject.SetActive(false);
+        }
+        else 
+        {
+            GetComponent<Interactions>().PNJContact.transform.GetChild(1).gameObject.SetActive(true);
+        }
+        
+        if(GetComponent<PlayerMemory>().allStickers.Contains(15))
+        {
+            if(/*eventsList.Contains("LettreDécodée")*/GetComponent<PlayerMemory>().allStickers.Contains(10) && GetComponent<PlayerMemory>().allStickers.Contains(45))
+            {
+                //GetComponent<Interactions>().PNJContact = gameObject;
+                //GameObject.FindGameObjectWithTag("Player").GetComponent<PNJ>().ChangeDialog(0);
+                GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().ChangeDialog(0);
+                GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
+            }
+            else
+            {
+                GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().ChangeDialog(1);
+                GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
+                //eventsList.Add("LettreDécodée");
+                //GetComponent<Interactions>().PNJContact = gameObject;
+                //GameObject.FindGameObjectWithTag("Player").GetComponent<PNJ>().ChangeDialog(1);
+                //GameObject.Find("Lamp").SetActive(false);
+                //lamp = false;
+            }
+        }
+        else 
+        {
+            GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().ChangeDialog(0);
+            GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
+            //GetComponent<Interactions>().PNJContact = gameObject;
+            //GameObject.FindGameObjectWithTag("Player").GetComponent<PNJ>().ChangeDialog(0);
         }
     }
 
@@ -120,7 +183,8 @@ public class EventsCheck : MonoBehaviour
         }
         if(col.name == "Lamp")
         {
-            lamp = false;
+            col.transform.GetChild(0).gameObject.SetActive(false);
+            //lamp = false;
         }
     }
 
@@ -137,14 +201,14 @@ public class EventsCheck : MonoBehaviour
 
             case "policeOpen":
                 GameObject.Find("doorPolice").SetActive(false);
-                GameObject.Find("trigger_PoliceReceptionist").SetActive(false);
+                //GameObject.Find("trigger_PoliceReceptionist").SetActive(false);
                 break;
 
-            case "endDialogWilliamScott":
+            /*case "endDialogWilliamScott":
                 GameObject.Find("dialog_williamscott").SetActive(false);
                 //animation du faux scott qui sort
                 //tp du vrai scott au bon endroit
-                break;
+                break;*/
 
             case "pibPhoneUnlocked":
                 GameObject pibPhone = GameObject.Find("pib_phone");
@@ -156,6 +220,7 @@ public class EventsCheck : MonoBehaviour
             case "numberMarvinMeyer":
                 GetComponent<Interactions>().PNJContact = GameObject.Find("marvin_meyer_phone");
                 GetComponent<Interactions>().StartDialog();
+                GetComponent<Interactions>().carnet.GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Contactez Marvin Myer");
                 break;
 
             case "numberClaraGrey":
@@ -164,6 +229,8 @@ public class EventsCheck : MonoBehaviour
                 break;
 
             case "doorKurtOpen":
+                GetComponent<Interactions>().PNJContact.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/Door/KEY_In_Wood_Door_01_mono");
+                GetComponent<Interactions>().PNJContact.GetComponent<AudioSource>().Play();
                 GameObject.Find("doorKurt").SetActive(false);
                 break;
 
@@ -171,5 +238,4 @@ public class EventsCheck : MonoBehaviour
                 break;
         }
     }
-
 }

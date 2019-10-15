@@ -1,12 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CarnetControls : MonoBehaviour
 {
     public GameObject player;
     public GameObject nextPageButton;
     public GameObject previousPageButton;
+
+    public Text hyp_Text;
+    public Text facts_Text;
+    public Text clues_Text;
+    public Text profils_Text;
+    public Text inv_Text;
+
 
     // Start is called before the first frame update
     void Start()
@@ -122,6 +130,7 @@ public class CarnetControls : MonoBehaviour
         transform.GetChild(1).gameObject.SetActive(false); //clues
         transform.GetChild(2).gameObject.SetActive(false); //facts
         transform.GetChild(3).gameObject.SetActive(false); //hypotheses
+        transform.GetChild(4).gameObject.SetActive(false); //Goal
         //transform.GetChild(4).gameObject.SetActive(false); //saves
         //transform.GetChild(5).gameObject.SetActive(false);  //options
         if(transform.GetChild(0).childCount > 2)
@@ -147,6 +156,7 @@ public class CarnetControls : MonoBehaviour
         transform.GetChild(1).gameObject.SetActive(true); //clues
         transform.GetChild(2).gameObject.SetActive(false); //facts
         transform.GetChild(3).gameObject.SetActive(false); //hypotheses
+        transform.GetChild(4).gameObject.SetActive(false); //Goal
         //transform.GetChild(4).gameObject.SetActive(false); //saves
         //transform.GetChild(5).gameObject.SetActive(false);  //options
         if(transform.GetChild(1).childCount > 2)
@@ -172,6 +182,7 @@ public class CarnetControls : MonoBehaviour
         transform.GetChild(1).gameObject.SetActive(false); //clues
         transform.GetChild(2).gameObject.SetActive(true); //facts
         transform.GetChild(3).gameObject.SetActive(false); //hypotheses
+        transform.GetChild(4).gameObject.SetActive(false); //Goal
         //transform.GetChild(4).gameObject.SetActive(false); //saves
         //transform.GetChild(5).gameObject.SetActive(false);  //options
         if(transform.GetChild(2).childCount > 2)
@@ -197,6 +208,7 @@ public class CarnetControls : MonoBehaviour
         transform.GetChild(1).gameObject.SetActive(false); //clues
         transform.GetChild(2).gameObject.SetActive(false); //facts
         transform.GetChild(3).gameObject.SetActive(true); //hypotheses
+        transform.GetChild(4).gameObject.SetActive(false); //Goal
         //transform.GetChild(4).gameObject.SetActive(false); //saves
         //transform.GetChild(5).gameObject.SetActive(false);  //options
         if(transform.GetChild(3).childCount > 2)
@@ -222,8 +234,18 @@ public class CarnetControls : MonoBehaviour
         transform.GetChild(1).gameObject.SetActive(false); //clues
         transform.GetChild(2).gameObject.SetActive(false); //facts
         transform.GetChild(3).gameObject.SetActive(false); //hypotheses
+        transform.GetChild(4).gameObject.SetActive(false); //Goal
         //transform.GetChild(4).gameObject.SetActive(false); //saves
         //transform.GetChild(5).gameObject.SetActive(false);  //options
+    }
+
+    public void OpenGoals()
+    {
+        transform.GetChild(0).gameObject.SetActive(false); //characters
+        transform.GetChild(1).gameObject.SetActive(false); //clues
+        transform.GetChild(2).gameObject.SetActive(false); //facts
+        transform.GetChild(3).gameObject.SetActive(false); //hypotheses
+        transform.GetChild(4).gameObject.SetActive(true); //Goal
     }
 
     public void OpenSaves()

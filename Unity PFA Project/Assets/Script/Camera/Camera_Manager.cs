@@ -11,14 +11,15 @@ public class Camera_Manager : MonoBehaviour
     GameObject player;
     GameObject floatingCanvas;
     public List<GameObject> objectsToDisactive;
+    //SpriteRenderer[] spriteRenderers;
 
     // Start is called before the first frame update
     void Start()
     {
         cameraBoard = GetComponent<Camera_BoardMovements>();
         cameraFollow = GetComponent<CameraFollow>();
-        //responseButton = GameObject.Find("FlottingCanvas").transform.GetChild(0).gameObject;
         player = GameObject.FindGameObjectWithTag("Player");
+        //responseButton = GameObject.Find("FlottingCanvas").transform.GetChild(0).gameObject;
         //floatingCanvas = GameObject.Find("FlottingCanvas");
     }
 
@@ -30,7 +31,12 @@ public class Camera_Manager : MonoBehaviour
 
     public void OnBoard()
     {
-        for(int i = 0; i < objectsToDisactive.Count; i++)
+        /*spriteRenderers = FindObjectsOfType<SpriteRenderer>();
+        foreach (SpriteRenderer renderer in spriteRenderers)
+        {
+            
+        }*/
+        /*for(int i = 0; i < objectsToDisactive.Count; i++)
         {
             if(objectsToDisactive[i].GetComponent<SpriteRenderer>())
             {
@@ -44,7 +50,7 @@ public class Camera_Manager : MonoBehaviour
             {
                 objectsToDisactive[i].SetActive(false);
             }
-        }
+        }*/
         //player.GetComponent<MovementsPlayer>().enabled = false;// Initial
         boardCanvas.SetActive(true);
         cameraBoard.enabled = true;
@@ -55,7 +61,7 @@ public class Camera_Manager : MonoBehaviour
 
     public void NotOnBoard()
     {
-        for(int i = 0; i < objectsToDisactive.Count; i++)
+        /*for(int i = 0; i < objectsToDisactive.Count; i++)
         {
             if(objectsToDisactive[i].GetComponent<SpriteRenderer>())
             {
@@ -69,8 +75,10 @@ public class Camera_Manager : MonoBehaviour
             {
                 objectsToDisactive[i].SetActive(true);
             }
-        }
+        }*/
         //player.GetComponent<MovementsPlayer>().enabled = true;// Initial
+        cameraFollow.actualRoom.SetActive(true);
+        player.SetActive(true);
         boardCanvas.SetActive(false);
         cameraBoard.enabled = false;
         cameraFollow.enabled = true;

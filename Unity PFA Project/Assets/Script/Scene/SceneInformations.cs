@@ -26,12 +26,13 @@ public class SceneInformations : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*if(fixedCamera)
+        if(fixedCamera)
         {
             Camera.main.transform.position = CameraSpot.position;
             Camera.main.GetComponent<CameraFollow>().isFollowing = false;
-        }   
-        Camera.main.GetComponent<CameraFollow>().YOffset = YOffset; */
+        }
+        else Camera.main.GetComponent<CameraFollow>().isFollowing = true;
+        //Camera.main.GetComponent<CameraFollow>().YOffset = YOffset;
         //player.GetComponent<MovementsPlayer>().canRun = canRun;
     }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Clara_Cinematic : MonoBehaviour
 {
     bool movements;
-    enum Command {Movement, StartDialog, Wait, ActiveDialogComponent, ChangeParent};
+    enum Command {Movement, StartDialog, Wait, ActiveDialogComponent, ChangeParent, PlaySound, DeactivateSelf, DeactivateOther, ActivateObject, FadePanel, SetDay};
 
     [SerializeField]
     List<Command> commandList;
@@ -17,24 +17,30 @@ public class Clara_Cinematic : MonoBehaviour
     [System.Serializable]
     public class TimeAndDirection
     {
+        public GameObject objectToMove;
         public float direction;
         public float time;
         public Transform newParent;
         public Transform newPosition;
+        public AudioClip clip;
+        public AudioSource Origin;
     }
+
+    public bool triggerByContact;
+
     Rigidbody2D rb2D;
     Animator animator;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
     
     void Awake()
     {
-        rb2D = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        //rb2D = GetComponent<Rigidbody2D>();
+        //animator = GetComponent<Animator>();
         if(fromStart)
         {
             ExecuteCommand();
@@ -46,7 +52,16 @@ public class Clara_Cinematic : MonoBehaviour
     {
         if(movements)
         {
-            transform.position = new Vector2(transform.position.x + annexInformation[action].direction, transform.position.y);
+            annexInformation[action].objectToMove.transform.position = new Vector2(annexInformation[action].objectToMove.transform.position.x + annexInformation[action].direction, annexInformation[action].objectToMove.transform.position.y);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.tag == "Player" && triggerByContact)
+        {
+            GetComponent<Collider2D>().enabled = false;
+            ExecuteCommand();
         }
     }
 
@@ -55,12 +70,13 @@ public class Clara_Cinematic : MonoBehaviour
         movements = true;
         if(annexInformation[action].direction < 0)
         {
-            GetComponent<SpriteRenderer>().flipX = true;
+            annexInformation[action].objectToMove.GetComponent<SpriteRenderer>().flipX = true;
         }
-        else GetComponent<SpriteRenderer>().flipX = false;
-        animator.SetBool("Walk", true);
+        else annexInformation[action].objectToMove.GetComponent<SpriteRenderer>().flipX = false;
+        annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Talk", false);
+        annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Walk", true);
         yield return new WaitForSecondsRealtime(time);
-        animator.SetBool("Walk", false);
+        annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Walk", false);
         movements = false;
         CheckIndex();
     }
@@ -80,8 +96,9 @@ public class Clara_Cinematic : MonoBehaviour
         }
         else 
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().QuitCinematicMode();
             GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInCinematic = false;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInDialog = false;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().QuitCinematicMode();
             GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", false);
         }
     }
@@ -89,8 +106,15 @@ public class Clara_Cinematic : MonoBehaviour
     void Fonction_StartDialog()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        animator.SetBool("Talk", true);
-        player.GetComponent<Interactions>().PNJContact = gameObject;
+        if(annexInformation[action].objectToMove == null)
+        {
+            player.GetComponent<Interactions>().PNJContact = gameObject;
+        }
+        else player.GetComponent<Interactions>().PNJContact = annexInformation[action].objectToMove;
+        
+        player.GetComponent<Interactions>().isInCinematic = true;
+        player.GetComponent<Interactions>().isInDialog = true;
+        //annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Talk", true);
         player.GetComponent<Interactions>().StartDialog();
     }
 
@@ -98,45 +122,119 @@ public class Clara_Cinematic : MonoBehaviour
     {
         GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", true);
         GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().ChangeState(Interactions.State.InCinematic);
-        if(commandList[action] == Command.Movement)
+        //GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(2).GetComponent<Animator>().SetBool("ClickOn", true);
+        Debug.Log("Action n° " + action + " Command " + commandList[action]);
+        switch (commandList[action])
         {
-            IEnumerator newCoroutine = MovementTimer(annexInformation[action].time);
-            StartCoroutine(newCoroutine);
-        }
-        if(commandList[action] == Command.StartDialog)
-        {
+            case Command.Movement :
+            StartCoroutine("MovementTimer", annexInformation[action].time);
+            break;
+
+            case Command.StartDialog :
             Fonction_StartDialog();
-            //GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInCinematic = true;
-        }
-        if(commandList[action] == Command.Wait)
-        {
-            //GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInCinematic = true;
-            IEnumerator newCoroutine = WaitTimer(annexInformation[action].time);
-            StartCoroutine(newCoroutine);
-        }
-        if(commandList[action] == Command.ChangeParent)
-        {
-            //GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInCinematic = true;
+            break;
+
+            case Command.Wait :
+            StartCoroutine("WaitTimer", annexInformation[action].time);
+            break;
+
+            case Command.ChangeParent :
             ChangeParent();
-        }
-        if(commandList[action] == Command.ActiveDialogComponent)
-        {
-            //GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInCinematic = true;
+            break;
+
+            case Command.ActiveDialogComponent :
             ActiveDialogComponent();
+            break;
+
+            case Command.PlaySound :
+            PlaySound();
+            break;
+
+            case Command.DeactivateSelf :
+            DeactivateSelf();
+            break;
+
+            case Command.DeactivateOther :
+            DeactivateOther();
+            break;
+
+            case Command.ActivateObject :
+            ActivateObject();
+            break;
+
+            case Command.FadePanel :
+            FadePanel();
+            break;
+
+            case Command.SetDay :
+            SetDay();
+            break;
         }
+    }
+
+    void SetDay()
+    {
+        GameObject.FindObjectOfType<DayNightLight>().DayTime();
+        CheckIndex();
+    }
+
+    void DeactivateSelf()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInCinematic = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInDialog = false;
+        //GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(2).GetComponent<Animator>().SetBool("ClickOn", true);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().QuitCinematicMode();
+        GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", false);
+        Destroy(gameObject);
     }
 
     void ChangeParent()
     {
-        transform.SetParent(annexInformation[action].newParent);
-        transform.localPosition = annexInformation[action].newPosition.transform.localPosition;
+        //GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().QuitCinematicMode();
+        //GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInCinematic = false;
+        //GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", false);
+        annexInformation[action].objectToMove.transform.SetParent(annexInformation[action].newParent);
+        annexInformation[action].objectToMove.transform.localPosition = annexInformation[action].newPosition.transform.localPosition;
         CheckIndex();
     }
 
     void ActiveDialogComponent()
     {
-        transform.tag = "PNJinteractable";
-        GetComponent<PNJ>().enabled = true;
+        annexInformation[action].objectToMove.transform.tag = "PNJinteractable";
+        annexInformation[action].objectToMove.GetComponent<PNJ>().enabled = true;
+        CheckIndex();
+    }
+
+    void PlaySound()
+    {
+        annexInformation[action].Origin.clip = annexInformation[action].clip;
+        annexInformation[action].Origin.Play();
+        StartCoroutine("Timer", annexInformation[action].clip.length);
+        //CheckIndex();
+    }
+
+    void DeactivateOther()
+    {
+        Destroy(annexInformation[action].objectToMove);
+        CheckIndex();
+    }
+
+    void ActivateObject()
+    {
+        annexInformation[action].objectToMove.SetActive(true);
+        CheckIndex();
+    }
+
+    IEnumerator Timer(float time)
+    {
+        yield return new WaitForSeconds(time);
+        CheckIndex();
+    }
+
+    void FadePanel()
+    {
+        GameObject.Find("FadePanel").GetComponent<Animator>().SetTrigger("FadeIn");
+        //StartCoroutine("Timer", 2);
         CheckIndex();
     }
 }

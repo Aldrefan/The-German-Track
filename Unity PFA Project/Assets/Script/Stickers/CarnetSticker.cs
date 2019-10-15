@@ -25,10 +25,15 @@ public class CarnetSticker : MonoBehaviour
     void OnMouseDown()
     {
         GameObject player = transform.parent.parent.parent.GetComponent<CarnetControls>().player;
-        if(player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.tag != "Item")
+        if(player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.tag == "PNJinteractable")
         {
             player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().Response(stickerIndex);
+            player.GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
             transform.parent.parent.parent.parent.gameObject.SetActive(false);
+        }
+        if(player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.name == "Phone")
+        {
+            player.GetComponent<Interactions>().PNJContact.GetComponent<Phone>().GetInTouch(stickerIndex);
         }
     }
 

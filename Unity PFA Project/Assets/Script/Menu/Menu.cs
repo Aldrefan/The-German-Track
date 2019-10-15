@@ -14,7 +14,8 @@ public class Menu : MonoBehaviour
     public AudioMixer fxMixer;
     public Dropdown resolutionDropdown;
     Resolution[] resolutions;
-    
+    public Texture2D cursor;
+
     public GameObject englishArrow;
     public GameObject frenchArrow;
     public GameObject canvasTitle;
@@ -40,6 +41,11 @@ public class Menu : MonoBehaviour
             canvasPlay.SetActive(true);
             titleActivate = false;
         }
+    }
+
+    void Awake()
+    {
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
     }
 
     void Start()
@@ -82,6 +88,11 @@ public class Menu : MonoBehaviour
         canvasQuit.SetActive(false);
     }
 
+    void ChangeTexts()
+    {
+
+    }
+
     public void PlayTypeSound()
     {
         GameObject.Find("TypeSound").transform.GetComponent<AudioSource>().Play(0);
@@ -103,6 +114,7 @@ public class Menu : MonoBehaviour
     public void LoadGame()
     {
         JsonSave save = SaveGameManager.GetCurrentSave();
+        save = SaveGameManager.GetCurrentSave();
         SceneManager.LoadScene(save.level);
         Debug.Log("LoadGame");
     }
@@ -131,18 +143,24 @@ public class Menu : MonoBehaviour
 
     public void EnglishSelection()
     {
+        JsonSave save = SaveGameManager.GetCurrentSave();
         isFrench = false;
         englishArrow.SetActive(true);
         frenchArrow.SetActive(false);
+        save.language = "english";
+        SaveGameManager.Save();
         FrenchSelection();
         Debug.Log(isFrench);
     }
 
-        public void FrenchSelection()
+    public void FrenchSelection()
     {
+        JsonSave save = SaveGameManager.GetCurrentSave();
         isFrench = true;
         frenchArrow.SetActive(true);
         englishArrow.SetActive(false);
+        save.language = "french";
+        SaveGameManager.Save();
         Debug.Log(isFrench);
     }
 

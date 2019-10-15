@@ -16,6 +16,7 @@ public class PlayerMemory : MonoBehaviour
     public Vector2Int faitsRange;
     public GameObject newSticker;
     public Transform carnet;
+    Vector2 offsets = new Vector2(5, 5);
 
     void Awake()
     {
@@ -119,7 +120,10 @@ public class PlayerMemory : MonoBehaviour
                 else
                 {
                     GameObject newSticker = Instantiate(stickerList[newStickerIndex], boardCanvas);
-                    newSticker.transform.localPosition = new Vector3(0, -100, -10);
+                    newSticker.GetComponent<RectTransform>().localPosition = new Vector2(0 + offsets.x * i, -100 + offsets.y * i);
+                    //newSticker.transform.localPosition = new Vector2(0 + offsets.x * i, -100 + offsets.y * i);
+                    //Debug.Log(newSticker.name + " " + "Position : " + newSticker.GetComponent<RectTransform>().localPosition);
+                    //Debug.Log(new Vector2(0 + offsets.x * i, -100 + offsets.y * i));
                     newSticker.GetComponent<StickerManager>().OnBoard();
                 }
             }

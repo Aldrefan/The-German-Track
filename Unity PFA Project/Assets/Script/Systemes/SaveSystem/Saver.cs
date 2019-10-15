@@ -13,6 +13,8 @@ public class Saver : MonoBehaviour
     public List<string> meetingListFM;
     public GameObject carnet;
     public GameObject boardCanvas;
+    public List<string> eventListFM;
+    public List<string> caracters;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,11 +24,11 @@ public class Saver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P))
+        if(Input.GetKeyDown(KeyCode.O))
         {
             MakeASave();
         }
-        if(Input.GetKeyDown(KeyCode.O))
+        if(Input.GetKeyDown(KeyCode.P))
         {
             JsonSave save = SaveGameManager.GetCurrentSave();
             SaveGameManager.DeleteAllSaves();
@@ -34,6 +36,16 @@ public class Saver : MonoBehaviour
     }
 
     public void MakeASave()
+    {
+        if(caracters.Contains("Kenneth"))
+        {KennethSave();}
+        if(caracters.Contains("Leon"))
+        {LeonSave();}
+        if(caracters.Contains("Garance"))
+        {GaranceSave();}
+    }
+
+    void KennethSave()
     {
         JsonSave save = SaveGameManager.GetCurrentSave();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -50,6 +62,12 @@ public class Saver : MonoBehaviour
             if(save.memoryStickers.Contains(player.GetComponent<PlayerMemory>().allStickers[i]))
             {}
             else save.memoryStickers.Add(player.GetComponent<PlayerMemory>().allStickers[i]);
+        }
+        for(int i = 0; i < eventListFM.Count; i++)
+        {
+            if(save.eventList.Contains(eventListFM[i]))
+            {}
+            else save.eventList.Add(eventListFM[i]);
         }
         /*for(int i = 0; i < 4; i++)
         {
@@ -69,6 +87,17 @@ public class Saver : MonoBehaviour
         SaveGameManager.Save();
     }
 
+
+    void LeonSave()
+    {
+
+    }
+
+    void GaranceSave()
+    {
+
+    }
+    
     public void ClearSave()
     {
         JsonSave save = SaveGameManager.GetCurrentSave();
@@ -77,6 +106,7 @@ public class Saver : MonoBehaviour
         save.memoryStickers.Clear();
         save.stickersIndexOnBoard.Clear();
         save.stickersPositionOnBoard.Clear();
+        save.eventList.Clear();
         SaveGameManager.Save();
     }
 }
