@@ -21,15 +21,28 @@ public class InGameMenu : MonoBehaviour
     bool isFrench;
     float musicValue;
     float fxValue;
+    bool canQuit = false;
 
     void Update()
     {
         musicMixer.SetFloat("musicVolume", musicSlider.value);
         fxMixer.SetFloat("fxVolume", fxSlider.value);
-        if(Input.GetButtonDown("Escape"))
+        if(Input.GetButtonDown("Cancel") && canQuit)
         {
             ResumeGame();
         }
+    }
+
+    IEnumerator Timer()
+    {
+        yield return new WaitForSecondsRealtime(0.2f);
+        canQuit = true;
+    }
+
+    void OnEnable()
+    {
+        canQuit = false;
+        StartCoroutine("Timer");
     }
 
     void Start()
@@ -174,15 +187,14 @@ public class InGameMenu : MonoBehaviour
         button.GetChild(0).GetComponent<Text>().color = Color.black;
     }
 
-
-    public void OpenOptions()
-    {
-
-    }
-
     public void ResumeGame()
     {
         gameObject.SetActive(false);
         GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().ChangeState(Interactions.State.Normal);
     }
+
+    /*IEnumerator TimerResume()
+    {
+
+    }*/
 }

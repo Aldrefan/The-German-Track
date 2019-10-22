@@ -69,6 +69,7 @@ public class PNJ : MonoBehaviour
     public Quote allDialogs;
     public bool quoteFinished;
     IEnumerator show;
+    public List<int> stickersAlreadyGiven;
 
     // Start is called before the first frame update
     void Start()
@@ -217,6 +218,7 @@ public class PNJ : MonoBehaviour
 
     public void Response(int stickerIndex)
     {
+        stickerAlreadyGivenList.Add(stickerIndex);
         for(int i = 0; i < stickerRedirection.stickerGivenList.Count; i++)
         {
             if(stickerIndex == stickerRedirection.stickerGivenList[i])

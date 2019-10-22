@@ -8,8 +8,14 @@ public class CarnetSticker : MonoBehaviour
 {
     public int stickerIndex;
     Vector2 colliderSize;
+    GameObject player;
 
     // Start is called before the first frame update
+    void Awake()
+    {
+        player = GameObject.Find("Kenneth");
+    }
+
     void Start()
     {
         colliderSize = transform.parent.GetComponent<GridLayoutGroup>().cellSize;
@@ -22,9 +28,19 @@ public class CarnetSticker : MonoBehaviour
         
     }
 
+    void OnEnable()
+    {
+        if(player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().stickerAlreadyGivenList.Contains(stickerIndex))
+        {
+            GetComponent<Image>().color = Color.gray;
+        }
+        else 
+        {
+            GetComponent<Image>().color = Color.white;
+        }
+    }
     void OnMouseDown()
     {
-        GameObject player = transform.parent.parent.parent.GetComponent<CarnetControls>().player;
         if(player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.tag == "PNJinteractable")
         {
             player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().Response(stickerIndex);

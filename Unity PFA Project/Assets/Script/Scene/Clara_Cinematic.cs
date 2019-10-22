@@ -5,7 +5,7 @@ using UnityEngine;
 public class Clara_Cinematic : MonoBehaviour
 {
     bool movements;
-    enum Command {Movement, StartDialog, Wait, ActiveDialogComponent, ChangeParent, PlaySound, DeactivateSelf, DeactivateOther, ActivateObject, FadePanel, SetDay};
+    enum Command {Movement, StartDialog, Wait, ActiveDialogComponent, ChangeParent, PlaySound, DeactivateSelf, DeactivateOther, ActivateObject, FadePanel, SetDay, EndGame};
 
     [SerializeField]
     List<Command> commandList;
@@ -106,6 +106,11 @@ public class Clara_Cinematic : MonoBehaviour
     void Fonction_StartDialog()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if(player.GetComponent<Interactions>().state == Interactions.State.OnBoard)
+        {
+            player.GetComponent<Interactions>().dialAndBookCanvas.SetActive(true);
+            player.GetComponent<Interactions>().boardCanvas.SetActive(false);
+        }
         if(annexInformation[action].objectToMove == null)
         {
             player.GetComponent<Interactions>().PNJContact = gameObject;
@@ -169,7 +174,16 @@ public class Clara_Cinematic : MonoBehaviour
             case Command.SetDay :
             SetDay();
             break;
+
+            case Command.EndGame :
+            EndGame();
+            break;
         }
+    }
+
+    void EndGame()
+    {
+        GameObject.Find("EndCanvas").GetComponent<EndScreen>().EndDemo();
     }
 
     void SetDay()
@@ -182,7 +196,6 @@ public class Clara_Cinematic : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInCinematic = false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInDialog = false;
-        //GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(2).GetComponent<Animator>().SetBool("ClickOn", true);
         GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().QuitCinematicMode();
         GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", false);
         Destroy(gameObject);
@@ -190,9 +203,6 @@ public class Clara_Cinematic : MonoBehaviour
 
     void ChangeParent()
     {
-        //GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().QuitCinematicMode();
-        //GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInCinematic = false;
-        //GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", false);
         annexInformation[action].objectToMove.transform.SetParent(annexInformation[action].newParent);
         annexInformation[action].objectToMove.transform.localPosition = annexInformation[action].newPosition.transform.localPosition;
         CheckIndex();

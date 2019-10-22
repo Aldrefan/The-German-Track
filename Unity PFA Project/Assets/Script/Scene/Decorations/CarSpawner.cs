@@ -51,6 +51,14 @@ public class CarSpawner : MonoBehaviour
         StartCoroutine(coroutine);
     }
 
+    void OnDisable()
+    {
+        foreach(Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
     IEnumerator TimeBetweenCars(float time)
     {
         yield return new WaitForSeconds(time);

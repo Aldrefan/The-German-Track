@@ -34,7 +34,7 @@ public class Interactions : MonoBehaviour
     #region State Informations
     public enum State {Normal, InDialog, OnBoard, OnCarnet, InCinematic, Pause};
     [SerializeField]
-    public static State state;
+    public State state;
     #endregion
 
     void Awake()
@@ -338,6 +338,10 @@ public class Interactions : MonoBehaviour
 
             case State.Pause :
             GameObject.Find("Necessary_Floating_Canvas").transform.GetChild(2).gameObject.SetActive(true);
+            carnet.GetComponent<Animator>().SetBool("ClickOn", true);
+            carnet.GetComponent<Animator>().SetBool("InDialog", false);
+            DisableMovements();
+            state = State.Pause;
             break;
         }
     }
@@ -422,7 +426,7 @@ public class Interactions : MonoBehaviour
             GetComponent<EventsCheck>().CheckEvents("endDialogWilliamScott");
             GameObject.Find("scott_nelson").GetComponent<Clara_Cinematic>().ExecuteCommand();
         }*/
-        if (PNJContact == GameObject.Find("marvin_meyer_phone"))
+        /*if (PNJContact == GameObject.Find("marvin_meyer_phone"))
         {
             GetComponent<EventsCheck>().eventsList.Remove("numberMarvinMeyer");
             PNJContact = GameObject.Find("empty_pibphone");
@@ -431,7 +435,7 @@ public class Interactions : MonoBehaviour
         {
             GetComponent<EventsCheck>().eventsList.Remove("numberClaraGrey");
             PNJContact = GameObject.Find("empty_kennethphone");
-        }
+        }*/
         /*if(GetComponent<EventsCheck>().fauteuil)
         {
             GetComponent<EventsCheck>().StartCoroutine("Fade");
@@ -465,7 +469,6 @@ public class Interactions : MonoBehaviour
             PNJContact.SetActive(false);
             PNJContact = null;
         }
-        Debug.Log(PNJContact);
         //carnet.GetComponent<Animator>().SetBool("InDialog", false);
         //carnet.GetComponent<Animator>().SetBool("ClickOn", false);
         //PNJContact = null;

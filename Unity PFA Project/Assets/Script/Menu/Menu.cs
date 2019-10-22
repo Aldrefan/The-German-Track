@@ -14,7 +14,6 @@ public class Menu : MonoBehaviour
     public AudioMixer fxMixer;
     public Dropdown resolutionDropdown;
     Resolution[] resolutions;
-    public Texture2D cursor;
 
     public GameObject englishArrow;
     public GameObject frenchArrow;
@@ -41,11 +40,6 @@ public class Menu : MonoBehaviour
             canvasPlay.SetActive(true);
             titleActivate = false;
         }
-    }
-
-    void Awake()
-    {
-        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
     }
 
     void Start()

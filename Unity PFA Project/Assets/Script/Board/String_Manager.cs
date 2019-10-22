@@ -136,7 +136,15 @@ GameObject player;
                     newSticker.GetComponent<StickerManager>().OnBoard();
                     if(hypotheseresponses[i].GetComponent<Pin_System>().stickerIndex == finalDemoHypothese.GetComponent<Pin_System>().stickerIndex)
                     {
-                        GameObject.Find("EndCanvas").GetComponent<EndScreen>().EndDemo();
+                        if(GameObject.Find("EndDialog"))
+                        {
+                            //player.GetComponent<Interactions>().dialAndBookCanvas.SetActive(true);
+                            //player.GetComponent<Interactions>().boardCanvas.SetActive(false);
+                            player.SetActive(true);
+                            player.GetComponent<Interactions>().CloseBoard();
+                            //player.GetComponent<Interactions>().state = Interactions.State.Pause;
+                            GameObject.Find("EndDialog").GetComponent<Clara_Cinematic>().ExecuteCommand();
+                        }
                     }
                     ListOfHypLists.list.RemoveAt(i);   
                     hypotheseresponses.RemoveAt(i);
@@ -148,22 +156,22 @@ GameObject player;
                     switch(notValidateStickersList.Count)
                     {
                         case 1:
-                        quoteList.Add("1 étiquette en trop");
+                        quoteList.Add("Il y a quelque chose en trop.");
                         break;
 
                         default:
-                        quoteList.Add("Il y a beaucoup trop d'étiquettes");
+                        quoteList.Add("Il y a beaucoup trop d'étiquettes.");
                         break;
                     }
                 }
             }
             else if(validateStickersList.Count == ListOfHypLists.list[i].list.Count - 1 && pinList.Count == ListOfHypLists.list[i].list.Count - 1)
             {
-                quoteList.Add("Il manque 1 étiquette");
+                quoteList.Add("Hmm... Il manque quelque chose.");
             }
             else if(validateStickersList.Count == ListOfHypLists.list[i].list.Count - 1 && pinList.Count == ListOfHypLists.list[i].list.Count)
             {
-                quoteList.Add("Il y a une étiquette fausse");
+                quoteList.Add("Non, ça ne colle pas...");
             }
         }
         if(!createASticker && quoteList.Count > 0)
