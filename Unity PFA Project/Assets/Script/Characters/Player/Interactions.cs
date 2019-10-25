@@ -298,7 +298,7 @@ public class Interactions : MonoBehaviour
 
     public void ChangeState(State newState)
     {
-        Debug.Log(newState);
+        //Debug.Log(newState);
         switch(newState)
         {
             case State.InCinematic:
@@ -419,43 +419,12 @@ public class Interactions : MonoBehaviour
 
     public void EndDialog()
     {
-        //animator.SetBool("Talk", false);
-        /*if (PNJContact.name == "dialog_williamscott")
-        {
-            GetComponent<EventsCheck>().eventsList.Add("endDialogWilliamScott");
-            GetComponent<EventsCheck>().CheckEvents("endDialogWilliamScott");
-            GameObject.Find("scott_nelson").GetComponent<Clara_Cinematic>().ExecuteCommand();
-        }*/
-        /*if (PNJContact == GameObject.Find("marvin_meyer_phone"))
-        {
-            GetComponent<EventsCheck>().eventsList.Remove("numberMarvinMeyer");
-            PNJContact = GameObject.Find("empty_pibphone");
-        }
-        if (PNJContact == GameObject.Find("clara_grey_phone"))
-        {
-            GetComponent<EventsCheck>().eventsList.Remove("numberClaraGrey");
-            PNJContact = GameObject.Find("empty_kennethphone");
-        }*/
-        /*if(GetComponent<EventsCheck>().fauteuil)
-        {
-            GetComponent<EventsCheck>().StartCoroutine("Fade");
-            GameObject.Find("FadePanel").GetComponent<Animator>().SetTrigger("FadeIn");
-            GameObject.Find("Fauteuil").SetActive(false);
-            GetComponent<EventsCheck>().clara.SetActive(false);
-            GameObject.Find("E_InvisibleWall").SetActive(false);
-            GetComponent<EventsCheck>().fauteuil = false;
-        }*/
-        //GetComponent<MovementsPlayer>().enabled = true;
-        //carnet.GetComponent<Animator>().SetBool("InDialog", false);
-        /*if(PNJContact.name == "Clara")
-        {
-            isInCinematic = false;
-        }*/
         if(state != State.InCinematic)
         {
             GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", false);
             carnet.GetComponent<Animator>().SetBool("InDialog", false);
-            ChangeState(State.Normal);
+            //ChangeState(State.Normal);
+            StartCoroutine("TimerQuitDialog");
         }
         else 
         {
@@ -469,17 +438,20 @@ public class Interactions : MonoBehaviour
             PNJContact.SetActive(false);
             PNJContact = null;
         }
-        //carnet.GetComponent<Animator>().SetBool("InDialog", false);
-        //carnet.GetComponent<Animator>().SetBool("ClickOn", false);
-        //PNJContact = null;
-        //canOpenCarnet = true;
-        //state = State.Normal;
     }
+
     void OpenPauseMenu()
     {
         if(Input.GetButtonDown("Cancel"))
         {
             ChangeState(State.Pause);
         }
+    }
+
+    IEnumerator TimerQuitDialog()
+    {
+        state = State.Pause;
+        yield return new WaitForSecondsRealtime(0.1f);
+        ChangeState(State.Normal);
     }
 }

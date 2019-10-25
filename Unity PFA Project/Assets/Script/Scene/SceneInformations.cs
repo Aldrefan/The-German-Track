@@ -19,13 +19,14 @@ public class SceneInformations : MonoBehaviour
 
     void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        directionalLight = GameObject.Find("Directional Light");
+        
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        directionalLight = GameObject.Find("Directional Light");
         if(fixedCamera)
         {
             Camera.main.transform.position = CameraSpot.position;

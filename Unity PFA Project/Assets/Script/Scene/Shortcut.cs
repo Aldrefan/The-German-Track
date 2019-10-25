@@ -16,14 +16,14 @@ public class Shortcut : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        fadePanel =  GameObject.Find("Necessary_Floating_Canvas").transform.GetChild(0).gameObject;
+        player = GameObject.FindGameObjectWithTag("Player");
+        directionalLight = GameObject.Find("Directional Light");
     }
 
     void Awake()
     {
-        fadePanel =  GameObject.Find("Necessary_Floating_Canvas").transform.GetChild(0).gameObject;
-        player = GameObject.FindGameObjectWithTag("Player");
-        directionalLight = GameObject.Find("Directional Light");
+
     }
 
     // Update is called once per frame

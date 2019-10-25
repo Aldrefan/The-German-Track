@@ -75,6 +75,10 @@ public class PNJ : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        carnet = GameObject.Find("CarnetUI").transform;
+        DialogCanvas = GameObject.Find("Ken_Dial_Book_FlCanvas");
+        leftPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().leftPanel;
+        rightPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().rightPanel;
     }
 
     // Update is called once per frame
@@ -85,10 +89,7 @@ public class PNJ : MonoBehaviour
 
     void Awake()
     {
-        carnet = GameObject.Find("CarnetUI").transform;
-        DialogCanvas = GameObject.Find("Ken_Dial_Book_FlCanvas");
-        leftPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().leftPanel;
-        rightPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().rightPanel;
+        
     }
 
     public void ChangeDialog(int newDialog)
@@ -283,8 +284,7 @@ public class PNJ : MonoBehaviour
             for(int i = 0; i < allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].eventTrigger.Count; i++)
             {
                 if(player.GetComponent<EventsCheck>().eventsList.Contains(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].eventTrigger[i]))
-                {
-                }
+                {}
                 else 
                 {
                     player.GetComponent<EventsCheck>().eventsList.Add(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].eventTrigger[i]);

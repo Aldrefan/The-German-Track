@@ -22,17 +22,17 @@ public class PlayerMemory : MonoBehaviour
     {
         //carnet = GameObject.Find("FlottingCanvas").transform.GetChild(3).GetChild(0).transform;// Initial
         //newSticker = GameObject.Find("FlottingCanvas").transform.GetChild(GameObject.Find("FlottingCanvas").transform.childCount - 5).gameObject;// Initial
-        JsonSave save = SaveGameManager.GetCurrentSave();
-        for(int i = 0; i < save.memoryStickers.Count; i++)
-        {
-            AddToMemory(save.memoryStickers[i]);
-        }
+        
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        JsonSave save = SaveGameManager.GetCurrentSave();
+        for(int i = 0; i < save.memoryStickers.Count; i++)
+        {
+            AddToMemory(save.memoryStickers[i]);
+        }
     }
 
     // Update is called once per frame

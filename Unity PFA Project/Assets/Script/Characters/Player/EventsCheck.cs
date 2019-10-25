@@ -8,7 +8,6 @@ public class EventsCheck : MonoBehaviour
     public bool fauteuil;
     bool lamp;
     public GameObject EtiquetteLaissezPasser;
-    public GameObject clara;
 
     // Start is called before the first frame update
     void Start()
@@ -194,9 +193,11 @@ public class EventsCheck : MonoBehaviour
         {
             case "laissezPasser":
                 EtiquetteLaissezPasser.GetComponent<Animator>().SetTrigger("NewSticker");
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller voir Lou Ellis à l'hopital.");
                 break;
+
             case "hopitalOpen":
-                GameObject.Find("doorHopital").SetActive(false);
+                GetComponent<Interactions>().PNJContact.GetComponent<Clara_Cinematic>().ExecuteCommand();
                 break;
 
             case "policeOpen":
@@ -220,7 +221,7 @@ public class EventsCheck : MonoBehaviour
             case "numberMarvinMeyer":
                 GetComponent<Interactions>().PNJContact = GameObject.Find("marvin_meyer_phone");
                 GetComponent<Interactions>().StartDialog();
-                GetComponent<Interactions>().carnet.GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Contactez Marvin Myer");
+                GetComponent<Interactions>().carnet.GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Contacter Marvin Meyer.");
                 break;
 
             case "numberClaraGrey":
@@ -232,6 +233,30 @@ public class EventsCheck : MonoBehaviour
                 GetComponent<Interactions>().PNJContact.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/Door/KEY_In_Wood_Door_01_mono");
                 GetComponent<Interactions>().PNJContact.GetComponent<AudioSource>().Play();
                 GameObject.Find("doorKurt").SetActive(false);
+                break;
+
+            case "GoToSleep":
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller Dormir.");
+                break;
+
+            case "HasSlep":
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Aller Dormir.");
+                break;
+
+            case "GoToSeeWhite":
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller voir White au comissariat.");
+                break;
+
+            case "HasSeenWhite":
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Aller voir White au comissariat.");
+                break;
+
+            case "HasSeenLou":
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Aller voir Lou Ellis à l'hopital.");
+                break;
+
+            case "HasContactedMarvin":
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Contacter Marvin Meyer.");
                 break;
 
             default:

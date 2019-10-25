@@ -45,17 +45,17 @@ public class HypotheseListT
     public List<HypothesesT> list;
 }
 
-GameObject player;
+public GameObject player;
     
     // Start is called before the first frame update
     void Start()
     {
-        lineRenderer = GetComponent<LineRenderer>();
+        
     }
 
     void Awake()
     {
-        player = GameObject.Find("Kenneth");
+        lineRenderer = GetComponent<LineRenderer>();
     }
 
     // Update is called once per frame
@@ -103,15 +103,12 @@ GameObject player;
 
     void OnEnable()
     {
-        
+        //player.SetActive()
     }
     
     public void CheckComponent()
     {
-        /*bool needSticker;
-        bool tooMuchStickers;
-        bool oneStickerLess; */
-        for(int i = 0; i < ListOfHypLists.list.Count; i++)                                              // Pour chaque élément dans l'hypothèse
+        for(int i = 0; i < ListOfHypLists.list.Count; i++)                                                   // Pour chaque élément dans l'hypothèse
         {
             List<int> validateStickersList = new List<int>();
             List<int> notValidateStickersList = new List<int>();
@@ -180,49 +177,10 @@ GameObject player;
         }
         createASticker = false;
     }
-    
-
-    /*void OldLoop()
-    {
-        //CheckMacroList(0);
-        for(int i = 0; i < ListOfPointLists.list.Count; i++)
-        {
-            if(ListOfPointLists.list[i].list.Count == pinList.Count)
-            {
-                for(int n = 0; n < pinList.Count; n++)                                                // Pour chaque élément dans l'hypothèse
-                {
-                    for(int j = 0; j < ListOfPointLists.list[i].list.Count; j++)
-                    {
-                        if(ListOfPointLists.list[i].list[j].GetComponent<Pin_System>().stickerIndex == pinList[n].GetComponent<Pin_System>().stickerIndex)
-                        {
-                            validateList.Add(ListOfPointLists.list[i].list[j]);
-                            if(validateList.Count == ListOfPointLists.list[i].list.Count)
-                            {
-                                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMemory>().stickerIndexCarnetList.Add(hypotheseresponses[i].GetComponent<Pin_System>().stickerIndex);
-                                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMemory>().allStickers.Add(hypotheseresponses[i].GetComponent<Pin_System>().stickerIndex);
-                                Transform boardCanvas = GameObject.Find("BoardCanvas").transform;
-                                Camera camera = Camera.main;
-                                Instantiate(hypotheseresponses[i], new Vector3(camera.transform.position.x, camera.transform.position.y, boardCanvas.position.z), boardCanvas.rotation, boardCanvas); // Fait apparaitre l'hypothèse crée
-                                if(hypotheseresponses[i].GetComponent<Pin_System>().stickerIndex == finalDemoHypothese.GetComponent<Pin_System>().stickerIndex)
-                                {
-                                    GameObject.Find("EndCanvas").GetComponent<EndScreen>().EndDemo();
-                                }
-                                ListOfPointLists.list.RemoveAt(i);   
-                                hypotheseresponses.RemoveAt(i);                                       // Supprime l'hypothèse de la liste d'hypothèses
-                            }
-                        }
-                    }
-                }
-                validateList.Clear();
-            }
-        }
-        validateList.Clear();
-    } */
 
     IEnumerator ActivateTime()
     {
         GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).gameObject.SetActive(true);
-        //Debug.Log(GameObject.Find("FlottingCanvas").transform.GetChild(GameObject.Find("FlottingCanvas").transform.childCount - 4).transform.GetChild(0).GetComponent<Text>().text = quoteList[quoteList.Count - 1]);
         GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).GetChild(0).GetComponent<Text>().text = quoteList[quoteList.Count - 1];
         yield return new WaitForSeconds(1);
         for(int i = 0; i > 0; i--)
