@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547858896879180951}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.471, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0.126, z: 0}
+  m_LocalScale: {x: 0.210715, y: 0.210715, z: 0.42143}
   m_Children: []
   m_Father: {fileID: 547858896963516295}
   m_RootOrder: 0
@@ -200,14 +200,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJName: "T\xE9l\xE9phone"
+  characterSprite: {fileID: 21300000, guid: d32b38448ae9b764eb90053d37e1d202, type: 3}
+  kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
   dialogIndex: 0
   transitionQuote: 0
+  negativeQuote: 2
   haveEvent: 0
+  stickerAlreadyGivenList: 
   stickerRedirection:
     stickerGivenList: 
     redirectionList: 
   eventRedirection:
-    eventGivenList: 
+    eventGivenList: []
     redirectionEventList: 
   allDialogs:
     listOfDialogs:
@@ -216,7 +220,8 @@ MonoBehaviour:
         characterName: "T\xE9l\xE9phone"
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       endDialog: 1
     - dialog:
@@ -224,9 +229,21 @@ MonoBehaviour:
         characterName: "T\xE9l\xE9phone"
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
-      canAskQuestions: 0
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 1
       endDialog: 1
+    - dialog:
+      - quote: "Je n'ai pas ce num\xE9ro."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 1
+      endDialog: 0
+  quoteFinished: 0
+  stickersAlreadyGiven: 
 --- !u!1 &547858897018733359
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +267,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547858897018733359}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -225.5, y: -29.7, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children:
@@ -381,14 +398,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJName: "T\xE9l\xE9phone"
+  characterSprite: {fileID: 21300000, guid: d32b38448ae9b764eb90053d37e1d202, type: 3}
+  kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
   dialogIndex: 0
   transitionQuote: 0
+  negativeQuote: 3
   haveEvent: 0
+  stickerAlreadyGivenList: 
   stickerRedirection:
     stickerGivenList: 09000000
     redirectionList: 02000000
   eventRedirection:
-    eventGivenList: 
+    eventGivenList: []
     redirectionEventList: 
   allDialogs:
     listOfDialogs:
@@ -397,7 +418,8 @@ MonoBehaviour:
         characterName: "T\xE9l\xE9phone"
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       endDialog: 1
     - dialog:
@@ -405,22 +427,37 @@ MonoBehaviour:
         characterName: "T\xE9l\xE9phone"
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
-      canAskQuestions: 0
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 1
       endDialog: 1
     - dialog:
       - quote: '*Sonne*'
         characterName: "T\xE9l\xE9phone"
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger:
+        - numberMarvinMeyer
+        spriteCharacter: {fileID: 0}
       - quote: '*Sonne...*'
         characterName: "T\xE9l\xE9phone"
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 04000000
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       endDialog: 1
+    - dialog:
+      - quote: "Je n'ai pas ce num\xE9ro."
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      endDialog: 1
+  quoteFinished: 0
+  stickersAlreadyGiven: 
 --- !u!1 &547858897806317102
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,8 +483,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547858897806317102}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.471, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0.12599999, z: 0}
+  m_LocalScale: {x: 0.210715, y: 0.210715, z: 0.42143}
   m_Children: []
   m_Father: {fileID: 547858897205137918}
   m_RootOrder: 0
@@ -541,7 +578,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547858897815374305}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -589,7 +626,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547858897815374305}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -621,14 +658,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJName: Marvin Meyer
+  characterSprite: {fileID: 21300000, guid: 3ce98010305452a4d832949309ca0ad1, type: 3}
+  kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
   dialogIndex: 0
   transitionQuote: 6
+  negativeQuote: 0
   haveEvent: 0
+  stickerAlreadyGivenList: 
   stickerRedirection:
     stickerGivenList: 01000000330000000700000004000000
     redirectionList: 02000000030000000400000005000000
   eventRedirection:
-    eventGivenList: 
+    eventGivenList: []
     redirectionEventList: 
   allDialogs:
     listOfDialogs:
@@ -637,38 +678,45 @@ MonoBehaviour:
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Marvin Meyer ?
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Qui est \xE0 l\u2019appareil ?"
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Je m\u2019appelle Kenneth, je suis un ami de Scott Nelson."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "J\u2019ai des questions \xE0 vous poser."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Je vous \xE9coute. Mais si la conversation devient trop indiscr\xE8te,
           je raccroche."
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Tr\xE8s bien."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       endDialog: 0
     - dialog:
@@ -676,7 +724,8 @@ MonoBehaviour:
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       endDialog: 0
     - dialog:
@@ -685,101 +734,119 @@ MonoBehaviour:
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Laissez tomber, vous ne savez pas dans quoi vous mettez les pieds.
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Dites m\u2019en plus."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "J\u2019imagine que si vous menez l\u2019enqu\xEAte, c\u2019est que
           vous avez compris que ce n\u2019\xE9tait pas un simple suicide. "
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Quand mon contact m\u2019a appel\xE9 pour m\u2019annoncer la nouvelle
           je me suis tout de suite rendu sur place. "
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Le suicide d\u2019un proche de Clara Grey, \xE7a allait forc\xE9ment
           faire les gros titres."
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Et vous ne vous \xEAtes pas g\xEAn\xE9 pour faire de l\u2019argent
           sur la mort de cette jeune femme."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "\xC7a mon gars, c\u2019est mon m\xE9tier."
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Bref, une fois l\xE0-bas j\u2019interviewe le bonhomme de Loraine,"
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "je fais quelques photos, et je rentre chez moi r\xE9diger mon article."
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Et sur le chemin, deux types me tombent dessus, genre gros bras.
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Ils \xE9clatent mon appareil sur le sol - quatre cents dollars foutus
           en l\u2019air -,"
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "et me balancent comme \xE7a : \xAB Tu ne parles pas de Kurt Becker
           dans ton papier ou on t\u2019arrache les couilles \xBB,"
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "ou un truc comme \xE7a. "
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Qu\u2019est ce que vous dites de \xE7a ?"
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 3300000031000000
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "C\u2019est tout ce qu\u2019ils voulaient ? Pourquoi ne pas vous dire
           de ne pas publier l\u2019article ?"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Je crois qu\u2019ils s'int\xE9ressent seulement \xE0 Kurt, et l\u2019affaire
           aurait fini dans les journaux de toute fa\xE7on. "
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "En tout cas, moi je tiens \xE0 mes couilles alors j\u2019ai fait ce
           qu\u2019ils ont dit."
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       endDialog: 0
     - dialog:
@@ -787,43 +854,51 @@ MonoBehaviour:
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "C\u2019est plus qu\u2019une id\xE9e, je le sais. "
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "C\u2019est un type qui se fait appeler L\u2019Allemand."
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 07000000
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Jamais entendu parler.
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "\xC7a ne m\u2019\xE9tonne pas. "
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: 'Il est connu seulement par la police et quelques fouilles-merdes comme
           moi. '
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "C\u2019est le plus gros baron de la p\xE8gre du quartier. "
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Mais personne ne l\u2019a jamais vu."
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       endDialog: 0
     - dialog:
@@ -831,105 +906,124 @@ MonoBehaviour:
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: 'Je ne peux pas vous en dire beaucoup. '
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Il s\u2019est impos\xE9 depuis quelque temps comme le ma\xEEtre du
           quartier, apr\xE8s la mort de DiMarco, l\u2019ancien parrain de Midtown. "
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "J\u2019avais couvert cette affaire a l\u2019\xE9poque. "
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Un myst\xE9rieux type arrive et s\u2019approprie une \xE0 une les
           affaires de DiMarco."
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "La police ne s\u2019en occupe pas trop. "
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Elle se contente de ramasser les cadavres, mieux vaut laisser les
           truands s\u2019entretuer."
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Et l\xE0 une guerre \xE9clate je suppose."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Tout juste. DiMarco est compl\xE8tement d\xE9bord\xE9."
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "\xC7a a dur\xE9 quelques mois, jusqu\u2019\xE0 ce qu\u2019on retrouve
           son corps avec une balle dans le cr\xE2ne. "
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Depuis ce jour, l\u2019Allemand r\xE8gne sur Midtown."
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Alors personne ne le conna\xEEt ? Ni son nom, ni son visage ?"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: 'Apparemment pas. '
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "La police a bien essay\xE9 de le coincer, mais sans preuves, c\u2019est
           une perte de temps. "
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Tout ce qu\u2019on a retrouv\xE9 c\u2019est des cadavres horriblement
           tortur\xE9s."
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Vraiment ?
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Je vous ai pas dit, c\u2019est la sp\xE9cialit\xE9 de l\u2019Allemand
           c\u2019est la torture."
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Je vous raconte pas l\u2019\xE9tat des cadavres qu\u2019on a retrouv\xE9s.
           Mais \xE7a, \xE7a fait les gros titres !"
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Mouais\u2026"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       endDialog: 0
     - dialog:
@@ -937,29 +1031,34 @@ MonoBehaviour:
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Discussion, c\u2019est un bien grand mot, ce type \xE9tait incapable
           d'aligner deux mots quand on s\u2019est parl\xE9."
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Il avait sans doute bu.
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Non je sais reconna\xEEtre un Junkie quand j\u2019en vois un, ce type
           \xE9tait compl\xE8tement cram\xE9. "
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 30000000
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "\xC7a explique beaucoup de choses."
         characterName: Kenneth
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       endDialog: 0
     - dialog:
@@ -967,9 +1066,12 @@ MonoBehaviour:
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       endDialog: 0
+  quoteFinished: 0
+  stickersAlreadyGiven: 
 --- !u!1 &547858898453919649
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,8 +1097,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547858898453919649}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.471, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0.12599999, z: 0}
+  m_LocalScale: {x: 0.210715, y: 0.210715, z: 0.42143}
   m_Children: []
   m_Father: {fileID: 547858897815374304}
   m_RootOrder: 0

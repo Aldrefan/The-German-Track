@@ -91,9 +91,11 @@ GameObject:
   - component: {fileID: 5966079576536928787}
   - component: {fileID: 5966079576536928786}
   - component: {fileID: 5966079576536928785}
+  - component: {fileID: 978765926}
+  - component: {fileID: 978765925}
   m_Layer: 0
   m_Name: scott_nelson
-  m_TagString: PNJinteractable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +107,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5966079576536928791}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -154.6, y: -34.9, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children:
@@ -130,7 +132,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 88c7f60ef33560c4a966466760e67e93, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -150,12 +152,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 674aeefc861d122439627d399cc4523f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b04365d9f0f3ea041be1fe199247d897, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.19, y: 0.59}
+  m_Size: {x: 0.16, y: 0.57}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -179,7 +181,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.16, y: 0.57}
-    newSize: {x: 0.19, y: 0.59}
+    newSize: {x: 0.16, y: 0.57}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -194,177 +196,285 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5966079576536928791}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PNJName: S. Nelson
+  characterSprite: {fileID: 21300000, guid: b04365d9f0f3ea041be1fe199247d897, type: 3}
+  kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
   dialogIndex: 0
   transitionQuote: 3
+  negativeQuote: 4
   haveEvent: 0
+  stickerAlreadyGivenList: 
   stickerRedirection:
     stickerGivenList: 0e000000
     redirectionList: 02000000
   eventRedirection:
-    eventGivenList: 
+    eventGivenList: []
     redirectionEventList: 
   allDialogs:
     listOfDialogs:
     - dialog:
-      - quote: "Hey, je peux vous aider m\u2019sieur ?"
+      - quote: "Hey, je peux vous aider m\u2019sieur ? "
         characterName: S. Nelson
         isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: 
+        newStickerIndexList: 06000000
+        eventTrigger:
+        - 
+        spriteCharacter: {fileID: 0}
       - quote: "J\u2019ai entendu votre discussion avec le commissaire. Vous vous
-          \xEAtes pris une sacr\xE9e rouste."
+          \xEAtes pris une sacr\xE9e rouste. "
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
-      - quote: "Oh depuis le temps, je suis habitu\xE9."
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: "Oh depuis le temps, je suis habitu\xE9. "
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
-      - quote: "Et puis ce bon vieux White aboie plus qu\u2019il ne mord."
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: "Et puis ce bon vieux White aboie plus qu\u2019il ne mord. "
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "C\u2019est quand il partira \xE0 la retraite que \xE7a va vraiment
-          chauffer pour moi."
+          chauffer pour moi. "
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
-      - quote: "Pourquoi \xE7a ?"
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: "Pourquoi \xE7a ? "
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
-      - quote: "J\u2019ai mes petites combines depuis le temps."
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: "J\u2019ai mes petites combines depuis le temps. "
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "On n\u2019est pas trop cens\xE9s le faire mais bon, tout le monde
-          est au courant maintenant."
+          est au courant maintenant. "
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
-      - quote: "Je vends des infos \xE0 la presse."
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: "Je vends des infos \xE0 la presse. "
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
-      - quote: "Vous avez le droit de faire \xE7a ?"
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: "Vous avez le droit de faire \xE7a ? "
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
-      - quote: Normalement non.
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: 'Normalement non. '
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Mais franchement quand on voit ce qu\u2019ils nous payent juste pour
-          \xEAtre premier sur le coup,"
+          \xEAtre premier sur le coup, "
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "des fois je me demande pourquoi on est pas plus nombreux \xE0 vendre
-          nos infos."
+          nos infos. "
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       endDialog: 1
     - dialog:
-      - quote: Je peux vous aider ?
+      - quote: 'Je peux vous aider ? '
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
-      endDialog: 1
+      endDialog: 0
     - dialog:
-      - quote: Vous connaissez ce journal ?
+      - quote: 'Vous connaissez ce journal ? '
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
-      - quote: "Bien s\xFBr ! C\u2019est un de mes meilleurs clients."
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: "Bien s\xFBr ! C\u2019est un de mes meilleurs clients. "
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
-      - quote: Ah vraiment ?
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: 'Ah vraiment ? '
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "J\u2019aimerais bien rencontrer l\u2019auteur de l\u2019article sur
-          Loraine Grey, c\u2019est possible ?"
+          Loraine Grey, c\u2019est possible ? "
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "C\u2019est qu\u2019il n\u2019aime pas trop qu\u2019on le voit, par
-          rapport \xE0 son m\xE9tier tout \xE7a."
+          rapport \xE0 son m\xE9tier tout \xE7a. "
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Mais bon je peux faire une exception parce que vous \xEAtes pote avec
-          le patron."
+          le patron. "
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
-      - quote: "C\u2019est aimable."
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: "C\u2019est aimable. "
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "On se rencontre en g\xE9n\xE9ral au Paddy\u2019s Irish Pub, \xE0 c\xF4t\xE9
-          du commissariat."
+          du commissariat. "
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Il n\u2019y est pas tout le temps, mais si vous le demandez au barman
-          il pourra surement vous renseigner."
+          il pourra surement vous renseigner. "
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: 'Demandez Marvin Meyer. '
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 09000000
-        eventTrigger: 
-      - quote: Oh et dites-lui que vous venez de ma part !
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: 'Oh et dites-lui que vous venez de ma part ! '
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger:
+        - getNumberMarvinMeyer
+        spriteCharacter: {fileID: 0}
       - quote: Entendu.
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
-      canAskQuestions: 1
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
       endDialog: 0
     - dialog:
-      - quote: Je peux vous aider autrement ?
+      - quote: 'Je peux vous aider autrement ? '
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       endDialog: 0
+    - dialog:
+      - quote: "Hmmm... \xE7a ne me dit rien. "
+        characterName: S. Nelson
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 1
+      endDialog: 0
+  quoteFinished: 0
+  stickersAlreadyGiven: 
+--- !u!95 &978765926
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5966079576536928791}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 065eef129da907c468b9cb5a1b3d5bbc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &978765925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5966079576536928791}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandList: 00000000020000000400000003000000
+  annexInformation:
+  - objectToMove: {fileID: 0}
+    direction: 0.05
+    time: 2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 0.2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 0
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 0
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+  action: 0
+  fromStart: 0
+  triggerByContact: 0
