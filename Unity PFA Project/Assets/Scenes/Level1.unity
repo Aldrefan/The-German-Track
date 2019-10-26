@@ -1357,8 +1357,8 @@ MonoBehaviour:
   fxSlider: {fileID: 473385200}
   fxMixer: {fileID: 24100000, guid: 33bfe25356e3c34429e4b9cf51422678, type: 2}
   resolutionDropdown: {fileID: 195526794}
-  englishArrow: {fileID: 0}
-  frenchArrow: {fileID: 0}
+  englishArrow: {fileID: 1897349012}
+  frenchArrow: {fileID: 512704193}
 --- !u!114 &35979323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1856,7 +1856,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53767141}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.76, y: 2.72, z: 0}
+  m_LocalPosition: {x: -7.28, y: 2.72, z: 0}
   m_LocalScale: {x: 0.73082024, y: 4.704648, z: 0.73082376}
   m_Children:
   - {fileID: 1549178240}
@@ -4929,6 +4929,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8501330485250003440, guid: 2d3912855de43b847a53a95028f41e11,
         type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[8].eventTrigger.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501330485250003440, guid: 2d3912855de43b847a53a95028f41e11,
+        type: 3}
       propertyPath: kennethSprite
       value: 
       objectReference: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
@@ -4939,6 +4944,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d8d98386251ad654bbcee8800197dbd5,
         type: 3}
+    - target: {fileID: 8501330485250003440, guid: 2d3912855de43b847a53a95028f41e11,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[8].eventTrigger.Array.data[0]
+      value: doorKurtOpen
+      objectReference: {fileID: 0}
     - target: {fileID: 8501330485250003446, guid: 2d3912855de43b847a53a95028f41e11,
         type: 3}
       propertyPath: m_Enabled
@@ -5316,7 +5326,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &158222252
 Transform:
   m_ObjectHideFlags: 0
@@ -5675,6 +5685,7 @@ RectTransform:
   - {fileID: 791615083}
   - {fileID: 195526793}
   - {fileID: 784918123}
+  - {fileID: 2019271935}
   m_Father: {fileID: 35979321}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6151,9 +6162,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 35979322}
         m_MethodName: SetResolution
-        m_Mode: 0
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7169,7 +7180,8 @@ MonoBehaviour:
         characterName: "T\xE9l\xE9phone"
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: []
+        eventTrigger:
+        - numberClaraGrey
         spriteCharacter: {fileID: 0}
       - quote: '*Sonne...*'
         characterName: "T\xE9l\xE9phone"
@@ -9825,6 +9837,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
         type: 3}
+      propertyPath: eventRedirection.eventGivenList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[6].eventTrigger.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
       propertyPath: characterSprite
       value: 
       objectReference: {fileID: 21300000, guid: ad550e825e1728842a3053edca8b87d5,
@@ -10784,9 +10806,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 35979322}
         m_MethodName: SetQuality
-        m_Mode: 0
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -13305,6 +13327,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &458185408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3062418669636132086, guid: 33ddad3a370b0824b848ab3b505bf613,
+    type: 3}
+  m_PrefabInstance: {fileID: 1714092047808702667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &465459823
 GameObject:
   m_ObjectHideFlags: 0
@@ -13592,7 +13620,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 35979322}
           m_MethodName: PlayTypeSound
           m_Mode: 1
           m_Arguments:
@@ -19380,6 +19408,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 278563568155890673, guid: 69e81edae239c8c48b2616c4d79927be,
         type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[3].eventTrigger.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 278563568155890673, guid: 69e81edae239c8c48b2616c4d79927be,
+        type: 3}
       propertyPath: kennethSprite
       value: 
       objectReference: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
@@ -19418,7 +19451,7 @@ PrefabInstance:
     - target: {fileID: 278563568155890673, guid: 69e81edae239c8c48b2616c4d79927be,
         type: 3}
       propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[3].eventTrigger.Array.data[0]
-      value: marvin_meyer_phone
+      value: pibPhoneUnlocked
       objectReference: {fileID: 0}
     - target: {fileID: 278563568155890672, guid: 69e81edae239c8c48b2616c4d79927be,
         type: 3}
@@ -20616,16 +20649,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 741262399}
-    - target: {fileID: 2296014135351492269, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
         type: 3}
       propertyPath: objectsToDesactivate.Array.data[0]
@@ -20636,260 +20659,180 @@ PrefabInstance:
       propertyPath: objectsToDesactivate.Array.data[1]
       value: 
       objectReference: {fileID: 1156105002}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
+    - target: {fileID: 2296014133512851939, guid: 2669dd881e4f52548ab85a236e104c7b,
         type: 3}
-      propertyPath: objectsToDesactivate.Array.data[2]
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014134696286476, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014134087921874, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014133648960681, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014133648960681, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014133648960681, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014133895096444, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014133895096444, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014133895096444, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014134085119803, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014134085119803, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014134085119803, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014134087921876, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014134087921876, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014134087921876, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014134087921876, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014134087921876, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014134087921876, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014134087921876, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296014134087921876, guid: 2669dd881e4f52548ab85a236e104c7b,
+        type: 3}
+      propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
+    - target: {fileID: 2296014134153608468, guid: 2669dd881e4f52548ab85a236e104c7b,
         type: 3}
-      propertyPath: objectsToDesactivate.Array.data[3]
-      value: 
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
+    - target: {fileID: 2296014134153608468, guid: 2669dd881e4f52548ab85a236e104c7b,
         type: 3}
-      propertyPath: objectsToDesactivate.Array.data[4]
-      value: 
+      propertyPath: m_Color.g
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
+    - target: {fileID: 2296014134153608468, guid: 2669dd881e4f52548ab85a236e104c7b,
         type: 3}
-      propertyPath: objectsToDesactivate.Array.data[5]
-      value: 
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
+    - target: {fileID: 2296014134332979041, guid: 2669dd881e4f52548ab85a236e104c7b,
         type: 3}
-      propertyPath: objectsToDesactivate.Array.data[6]
-      value: 
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
+    - target: {fileID: 2296014134332979041, guid: 2669dd881e4f52548ab85a236e104c7b,
         type: 3}
-      propertyPath: objectsToDesactivate.Array.data[7]
-      value: 
+      propertyPath: m_Color.g
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
+    - target: {fileID: 2296014134332979041, guid: 2669dd881e4f52548ab85a236e104c7b,
         type: 3}
-      propertyPath: objectsToDesactivate.Array.data[8]
-      value: 
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
+    - target: {fileID: 2296014134390320232, guid: 2669dd881e4f52548ab85a236e104c7b,
         type: 3}
-      propertyPath: objectsToDesactivate.Array.data[9]
-      value: 
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
+    - target: {fileID: 2296014134390320232, guid: 2669dd881e4f52548ab85a236e104c7b,
         type: 3}
-      propertyPath: objectsToDesactivate.Array.data[10]
-      value: 
+      propertyPath: m_Color.g
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
+    - target: {fileID: 2296014134390320232, guid: 2669dd881e4f52548ab85a236e104c7b,
         type: 3}
-      propertyPath: objectsToDesactivate.Array.data[11]
-      value: 
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
+    - target: {fileID: 2296014134508919193, guid: 2669dd881e4f52548ab85a236e104c7b,
         type: 3}
-      propertyPath: objectsToDesactivate.Array.data[12]
-      value: 
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
+    - target: {fileID: 2296014134508919193, guid: 2669dd881e4f52548ab85a236e104c7b,
         type: 3}
-      propertyPath: objectsToDesactivate.Array.data[13]
-      value: 
+      propertyPath: m_Color.g
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
+    - target: {fileID: 2296014134508919193, guid: 2669dd881e4f52548ab85a236e104c7b,
         type: 3}
-      propertyPath: objectsToDesactivate.Array.data[14]
-      value: 
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
+    - target: {fileID: 2296014134877582966, guid: 2669dd881e4f52548ab85a236e104c7b,
         type: 3}
-      propertyPath: objectsToDesactivate.Array.data[15]
-      value: 
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
+    - target: {fileID: 2296014134877582966, guid: 2669dd881e4f52548ab85a236e104c7b,
         type: 3}
-      propertyPath: objectsToDesactivate.Array.data[16]
-      value: 
+      propertyPath: m_Color.g
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
+    - target: {fileID: 2296014134877582966, guid: 2669dd881e4f52548ab85a236e104c7b,
         type: 3}
-      propertyPath: objectsToDesactivate.Array.data[17]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[18]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[19]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[20]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[21]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[22]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[23]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[24]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[25]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[26]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[27]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[28]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[29]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[30]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[31]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[32]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[33]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[34]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[35]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[36]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[37]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[38]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[39]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[40]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[41]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: objectsToDesactivate.Array.data[42]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014134390320231, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2078564439}
-    - target: {fileID: 2296014134390320231, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014134390320230, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MouseEnter
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014134390320230, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MouseExit
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014134508919192, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2078564439}
-    - target: {fileID: 2296014134508919192, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReturnTitle
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014134508919191, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MouseEnter
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296014134508919191, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MouseExit
-      objectReference: {fileID: 0}
-    - target: {fileID: 926078325345601461, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 926078325345601461, guid: 2669dd881e4f52548ab85a236e104c7b,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 40
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2669dd881e4f52548ab85a236e104c7b, type: 3}
@@ -21005,6 +20948,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &560785447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 560785448}
+  - component: {fileID: 560785450}
+  - component: {fileID: 560785449}
+  m_Layer: 5
+  m_Name: Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &560785448
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560785447}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_Children: []
+  m_Father: {fileID: 831084932}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 1, y: -15.799999}
+  m_SizeDelta: {x: 64.285, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &560785449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560785447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b9f75bb5f8025314ca75251f16914019, type: 3}
+    m_FontSize: 13
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: (indisponible)
+--- !u!222 &560785450
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560785447}
+  m_CullTransparentMesh: 0
 --- !u!1 &561686002
 GameObject:
   m_ObjectHideFlags: 0
@@ -23997,7 +24019,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718997487}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
   m_Name: 
@@ -25471,9 +25493,9 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 35979322}
         m_MethodName: SetFullscreen
-        m_Mode: 0
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -26125,8 +26147,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807097149}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.72, y: 3.09, z: 0}
-  m_LocalScale: {x: 0.73081857, y: 4.7046447, z: 0.73081857}
+  m_LocalPosition: {x: -14.47, y: 3.09, z: 0}
+  m_LocalScale: {x: 0.7308202, y: 4.7046447, z: 0.73081857}
   m_Children:
   - {fileID: 2542436}
   m_Father: {fileID: 995658411}
@@ -26703,6 +26725,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1492102904}
+  - {fileID: 560785448}
   m_Father: {fileID: 35979321}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26747,7 +26770,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 831084934}
   m_OnClick:
     m_PersistentCalls:
@@ -26778,7 +26801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -31954,13 +31977,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1047642481}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.9, y: 0, z: 1}
-  m_LocalScale: {x: 11.887, y: 1.8465244, z: 11.887}
+  m_LocalScale: {x: 1.846524, y: 11.887, z: 11.887}
   m_Children: []
   m_Father: {fileID: 1846603880}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &1047642483
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35268,7 +35291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PNJName: Clara Gray
+  PNJName: Clara Grey
   characterSprite: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
   dialogIndex: 0
@@ -35307,7 +35330,7 @@ MonoBehaviour:
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
           type: 3}
-      - quote: "Clara Gray. Actrice de com\xE9die musicale \xE0 Broadway. "
+      - quote: "Clara Grey. Actrice de com\xE9die musicale \xE0 Broadway. "
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 02000000
@@ -35315,7 +35338,7 @@ MonoBehaviour:
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
       - quote: '... '
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35328,7 +35351,7 @@ MonoBehaviour:
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
       - quote: "Je suis flatt\xE9e. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35343,7 +35366,7 @@ MonoBehaviour:
           type: 3}
       - quote: 'Puisque vous me connaissez, vous savez certainement pourquoi je viens
           vous voir. '
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35358,7 +35381,7 @@ MonoBehaviour:
           type: 3}
       - quote: "Vous ne lisez pas les magazines ? \xC7a ne peut que me donner une
           bonne opinion de vous. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35366,7 +35389,7 @@ MonoBehaviour:
           type: 3}
       - quote: "Mon affaire concerne ma s\u0153ur, Loraine. Et plus pr\xE9cis\xE9ment,
           les circonstances de sa mort. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 01000000
         eventTrigger: []
@@ -35374,7 +35397,7 @@ MonoBehaviour:
           type: 3}
       - quote: "Il y a deux jours, elle a \xE9t\xE9 retrouv\xE9e pendue chez son petit
           ami. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35382,7 +35405,7 @@ MonoBehaviour:
           type: 3}
       - quote: "La police a enqu\xEAt\xE9, ils ont fait une autopsie, interrog\xE9
           les t\xE9moins, et ils ont convenu d\u2019un suicide. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35397,7 +35420,7 @@ MonoBehaviour:
           type: 3}
       - quote: "C\u2019\xE9tait effectivement l\u2019hypoth\xE8se la plus plausible.
           Mais je sais que ce n\u2019est pas aussi simple. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35405,12 +35428,13 @@ MonoBehaviour:
           type: 3}
       - quote: "Je connaissais ma s\u0153ur. Et je sais que jamais elle n'aurait mis
           fin \xE0 ses jours. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Hmm Hmm\u2026 "
+        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
+          type: 3}
+      - quote: "Hmm hmm\u2026 "
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
@@ -35426,7 +35450,7 @@ MonoBehaviour:
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
       - quote: "Bien s\xFBr, je vous \xE9coute. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35435,7 +35459,7 @@ MonoBehaviour:
       endDialog: 0
     - dialog:
       - quote: 'Je peux faire autre chose pour vous ? '
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35452,14 +35476,14 @@ MonoBehaviour:
           type: 3}
       - quote: "Loraine et moi \xE9tions tr\xE8s proche plus jeunes. Nous passions
           tout notre temps ensemble. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: "Elle aimait beaucoup s\u2019amuser, sortir et tra\xEEner avec les
           gar\xE7ons. C\u2019est apr\xE8s le Lyc\xE9e que nos chemins se sont s\xE9par\xE9s. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35472,21 +35496,21 @@ MonoBehaviour:
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
       - quote: "Elle est partie faire ses \xE9tudes \xE0 Paris. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: "La pauvre ne s'attendait pas \xE0 ce que la guerre \xE9clate. Quand
           elle est revenue, elle \xE9tait diff\xE9rente. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: "Je l\u2019appelais toujours de temps \xE0 autres, je lui rendais visite,
           \ mais elle \xE9tait sans cesse occup\xE9e, elle coupait court \xE0 la conversation\u2026 "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35499,20 +35523,20 @@ MonoBehaviour:
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
       - quote: 'Je ne sais pas. '
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: "Tout ce que je sais, c\u2019est que je n\u2019ai jamais aim\xE9 les
           gar\xE7ons avec qui elle sortait. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: "Le dernier en date, Kurt, est un v\xE9ritable abruti. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 04000000
         eventTrigger: []
@@ -35525,14 +35549,14 @@ MonoBehaviour:
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
       - quote: "Je ne sais pas quoi vous dire d\u2019autre... "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: "Si vous la connaissiez comme je la connaissais, vous sauriez qu\u2019elle
           n\u2019aurait jamais pu mettre fin \xE0 ses jours. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35545,14 +35569,14 @@ MonoBehaviour:
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
       - quote: "On l\u2019a assassin\xE9e. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: "Je ne sais pas qui a pu faire \xE7a ni pourquoi mais je le sais, c\u2019est
           tout. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35565,14 +35589,14 @@ MonoBehaviour:
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
       - quote: "En fait, il y autre chose qui me donne \xE0 penser \xE7a. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: "Quand j\u2019\xE9tais \xE0 l\u2019h\xF4pital pour entendre le rapport
           d\u2019autopsie, j\u2019ai parl\xE9 avec une femme m\xE9decin. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35587,20 +35611,20 @@ MonoBehaviour:
       - quote: "Oui \xE7a m\u2019a surprise aussi. Brillante apparemment. Elle a parl\xE9
           de quelque chose, \xE0 propos d\u2019un produit retrouv\xE9 dans le sang
           de Loraine. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: "Nous n\u2019avons pas pu finir la conversation car un m\xE9decin l\u2019a
           interrompue. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: "Elle s\u2019appelait Lou Ellis. \xC7a peut peut-\xEAtre vous aider. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 08000000
         eventTrigger: []
@@ -35616,7 +35640,7 @@ MonoBehaviour:
         spriteCharacter: {fileID: 0}
       - quote: "Je ne peux pas vous dire grand-chose sur elle, je ne lui ai parler
           qu\u2019un instant. "
-        characterName: Clara
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35624,13 +35648,13 @@ MonoBehaviour:
       - quote: "Elle m\u2019a juste dit qu\u2019elle trouvait certaines donn\xE9es
           \xE9tranges dans le rapport d\u2019autopsie du l\xE9giste. Mais on a \xE9t\xE9
           interrompu par un de ses coll\xE8gues. "
-        characterName: Clara
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: "Je crois qu\u2019elle n\u2019est pas tr\xE8s aim\xE9e par ses paires. "
-        characterName: Clara
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35652,7 +35676,7 @@ MonoBehaviour:
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
       - quote: "Oui, c\u2019est\u2026 C\u2019\xE9tait le petit ami de Loraine. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35666,21 +35690,21 @@ MonoBehaviour:
           type: 3}
       - quote: "Je ne l\u2019ai vu que de rares fois, mais il m\u2019a fait une tr\xE8s
           mauvaise impression. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: "C\u2019est un ivrogne si vous voulez mon avis. Tout son appartement
           est une porcherie. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: "Je n\u2019ai jamais compris ce que Loraine faisait avec un type pareil,
           elle venait tout de m\xEAme d\u2019une bonne famille."
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35693,7 +35717,7 @@ MonoBehaviour:
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
       - quote: "Kurt ? Oh non, pas du tout, c\u2019est une chiffe molle."
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35701,14 +35725,14 @@ MonoBehaviour:
       - quote: "Il n\u2019est m\xEAme pas capable de d\xE9placer une commode. La derni\xE8re
           fois c\u2019est moi qui ai d\xFB le faire pour aider Loraine \xE0 mettre
           de l\u2019ordre. Lui pendant ce temps pr\xE9f\xE9rais regarder la t\xE9l\xE9vision. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: "Et puis il n\u2019est pas assez intelligent pour tromper les inspecteurs
           de police, aussi fain\xE9ants soient-ils. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35721,8 +35745,8 @@ MonoBehaviour:
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: "Bien s\xFBr"
-        characterName: Clara Gray
+      - quote: "Bien s\xFBr."
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35738,7 +35762,7 @@ MonoBehaviour:
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
       - quote: "De moi ? C\u2019est un peu d\xE9licat. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35749,9 +35773,9 @@ MonoBehaviour:
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Eh bien\u2026 je suis actrice, mais \xE7a vous le savez d\xE9j\xE0.
-          Pour le reste \xE7a ne vous regarde pas"
-        characterName: Clara Gray
+      - quote: "Eh bien\u2026 Je suis actrice, mais \xE7a vous le savez d\xE9j\xE0.
+          Pour le reste \xE7a ne vous regarde pas."
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35767,7 +35791,7 @@ MonoBehaviour:
       endDialog: 1
     - dialog:
       - quote: Autre chose ?
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -35801,7 +35825,7 @@ MonoBehaviour:
       endDialog: 0
     - dialog:
       - quote: "Je ne sais rien \xE0 ce sujet"
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -36365,7 +36389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventsList: []
   fauteuil: 0
-  EtiquetteLaissezPasser: {fileID: 0}
+  EtiquetteLaissezPasser: {fileID: 458185408}
 --- !u!1 &1158299795
 GameObject:
   m_ObjectHideFlags: 0
@@ -38102,7 +38126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canTeleport: 1
-  linkedWith: {fileID: 0}
+  linkedWith: {fileID: 1460634276}
   distanceOfTheCamera: -20
   internTeleport: 0
 --- !u!61 &1258908192
@@ -41804,6 +41828,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 88c7f60ef33560c4a966466760e67e93, type: 2}
     - target: {fileID: 2461638595535870618, guid: 0c5ba1daf38971a4782024aa6e1f4ed4,
         type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[3].eventTrigger.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2461638595535870618, guid: 0c5ba1daf38971a4782024aa6e1f4ed4,
+        type: 3}
       propertyPath: characterSprite
       value: 
       objectReference: {fileID: 21300000, guid: 0bdc80c93ce89e54a90cc4d6c5d649ad,
@@ -43165,12 +43194,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 1
   backgroundsInAWindowDay:
-  - {fileID: 0}
   - {fileID: 5882002}
   backgroundsInAWindowNight:
-  - {fileID: 0}
   - {fileID: 954160242}
-  - {fileID: 0}
   - {fileID: 1467519090}
 --- !u!1 &1456610456 stripped
 GameObject:
@@ -48709,7 +48735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -48996,12 +49022,12 @@ PrefabInstance:
     - target: {fileID: 6252624642967059764, guid: e7c94aa2610c9844293398dde8a0fbf7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 710.42
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6252624642967059764, guid: e7c94aa2610c9844293398dde8a0fbf7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.48
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6252624642967059764, guid: e7c94aa2610c9844293398dde8a0fbf7,
         type: 3}
@@ -54733,18 +54759,20 @@ MonoBehaviour:
     - dialog:
       - quote: "Je vais vous laisser. N'h\xE9sitez pas \xE0 m'appeler pour me faire
           part de vos hypoth\xE8ses. "
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
           type: 3}
       - quote: 'Bonsoir. '
-        characterName: Clara Gray
+        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
+        eventTrigger:
+        - GoToSleep
+        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
+          type: 3}
       canAskQuestions: 0
       endDialog: 1
   quoteFinished: 0
@@ -57355,8 +57383,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1771664694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.5, y: 3.7000003, z: -9.6}
-  m_LocalScale: {x: 0.73082024, y: 4.704648, z: 0.73082376}
+  m_LocalPosition: {x: 5.69, y: 3.7000003, z: -9.6}
+  m_LocalScale: {x: 0.7308186, y: 4.704648, z: 0.73082376}
   m_Children:
   - {fileID: 602263773}
   m_Father: {fileID: 1916814289}
@@ -64924,7 +64952,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1846603880
 Transform:
   m_ObjectHideFlags: 0
@@ -66137,6 +66165,11 @@ PrefabInstance:
     - target: {fileID: 1123860177028353530, guid: db3d177d5cb9328429397b9f9245c057,
         type: 3}
       propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[0].eventTrigger.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123860177028353530, guid: db3d177d5cb9328429397b9f9245c057,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[27].eventTrigger.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1123860177028353530, guid: db3d177d5cb9328429397b9f9245c057,
@@ -68852,7 +68885,7 @@ PrefabInstance:
     - target: {fileID: 547858896963516294, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
         type: 3}
       propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[0].quote
-      value: "Je n'ai pas ce num\xE9ros."
+      value: "Je n'ai pas ce num\xE9ro."
       objectReference: {fileID: 0}
     - target: {fileID: 547858896963516294, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
         type: 3}
@@ -68902,6 +68935,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 547858897205137913, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
         type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[0].eventTrigger.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897205137913, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
       propertyPath: kennethSprite
       value: 
       objectReference: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
@@ -68914,7 +68952,7 @@ PrefabInstance:
     - target: {fileID: 547858897205137913, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
         type: 3}
       propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[0].quote
-      value: "Je n'ai pas ce num\xE9ros."
+      value: "Je n'ai pas ce num\xE9ro."
       objectReference: {fileID: 0}
     - target: {fileID: 547858897205137913, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
         type: 3}
@@ -68952,6 +68990,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d32b38448ae9b764eb90053d37e1d202,
         type: 3}
+    - target: {fileID: 547858897205137913, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[0].eventTrigger.Array.data[0]
+      value: numberMarvinMeyer
+      objectReference: {fileID: 0}
     - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
         type: 3}
       propertyPath: kennethSprite
@@ -71172,6 +71215,139 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017865091}
   m_CullTransparentMesh: 0
+--- !u!1 &2019271934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2019271935}
+  - component: {fileID: 2019271936}
+  m_Layer: 11
+  m_Name: TypeSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2019271935
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019271934}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 169.42079, y: 169.42079, z: 10.930308}
+  m_Children: []
+  m_Father: {fileID: 175028876}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -11.696274, y: -11.487013}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!82 &2019271936
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019271934}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 33bfe25356e3c34429e4b9cf51422678,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: ddb5cac1acb11604b94205eebbb2ea9b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2025022518
 GameObject:
   m_ObjectHideFlags: 0
@@ -72212,18 +72388,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2078564439 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2296014135351492271, guid: 2669dd881e4f52548ab85a236e104c7b,
-    type: 3}
-  m_PrefabInstance: {fileID: 551592377}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45178c7697d1f6247bb778d76205095b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2080110958
 GameObject:
   m_ObjectHideFlags: 0
@@ -74345,61 +74509,20 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 741262399}
-    - target: {fileID: 5455125687047012138, guid: 33ddad3a370b0824b848ab3b505bf613,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2127459358, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
-      propertyPath: m_Padding.m_Top
-      value: -18
-      objectReference: {fileID: 0}
-    - target: {fileID: 1296376092599038711, guid: 33ddad3a370b0824b848ab3b505bf613,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -290
-      objectReference: {fileID: 0}
-    - target: {fileID: 1296376092599038711, guid: 33ddad3a370b0824b848ab3b505bf613,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 256
-      objectReference: {fileID: 0}
     - target: {fileID: 1662462164923403486, guid: 33ddad3a370b0824b848ab3b505bf613,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 57806150, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
-      propertyPath: spacing.x
-      value: -27
+    - target: {fileID: 1228359011282240517, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -112
       objectReference: {fileID: 0}
-    - target: {fileID: 1582899645, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
-      propertyPath: childNumber
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1582899645, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
-      propertyPath: spacing.y
-      value: -8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1582899645, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
-      propertyPath: spacing.x
-      value: -25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1582899645, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
-      propertyPath: newPagePosition.x
-      value: -8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1582899645, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
-      propertyPath: newPagePosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1582899645, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
-      propertyPath: cellSize.x
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 1582899645, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
-      propertyPath: cellSize.y
-      value: 25
+    - target: {fileID: 2465721141043034339, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -112
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
@@ -74519,6 +74642,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483310137784031619, guid: a242d6748b480cd4a98e5f68843f4e9d,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetQuality
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483310137784031619, guid: a242d6748b480cd4a98e5f68843f4e9d,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a242d6748b480cd4a98e5f68843f4e9d, type: 3}

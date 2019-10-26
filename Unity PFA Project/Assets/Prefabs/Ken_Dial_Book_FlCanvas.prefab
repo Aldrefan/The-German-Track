@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellSize: {x: 60, y: 25}
-  spacing: {x: -25, y: -5}
+  spacing: {x: -27, y: -5}
   columnsCount: 3
   childNumber: 12
   pageList: []
@@ -1799,16 +1799,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6803f24f7d4f81d4f9f341a2673ed0f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellSize: {x: 70, y: 30}
-  spacing: {x: -25, y: -5}
+  cellSize: {x: 60, y: 25}
+  spacing: {x: -25, y: -8}
   columnsCount: 3
-  childNumber: 18
+  childNumber: 15
   pageList: []
   pageArchetype: {fileID: 4550858846938065075, guid: ebd4de85146935f4d8d540cc420fb8df,
     type: 3}
   pagePrefab: {fileID: 4550858846938065074, guid: ebd4de85146935f4d8d540cc420fb8df,
     type: 3}
-  newPagePosition: {x: -25, y: 25, z: 0}
+  newPagePosition: {x: -8, y: 0, z: 0}
   newFeedback: {fileID: 4580050707644574734, guid: 82ae1b9dd036bc4439fc851ed61dc47e,
     type: 3}
   newFeedbackSize: {x: 80, y: 80, z: 0}
@@ -2215,6 +2215,8 @@ MonoBehaviour:
   font: {fileID: 12800000, guid: b9f75bb5f8025314ca75251f16914019, type: 3}
   heightWidth: {x: 50, y: 30}
   fontSize: 14
+  goalList: []
+  removeGoalList: []
 --- !u!114 &2127459358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2230,7 +2232,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: -10
     m_Right: 0
-    m_Top: -25
+    m_Top: -18
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
@@ -2565,7 +2567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 32.375}
+  m_AnchoredPosition: {x: 0, y: 32.375}
   m_SizeDelta: {x: 133.48, y: 64.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3403037759579850092
@@ -2702,6 +2704,8 @@ MonoBehaviour:
   font: {fileID: 12800000, guid: b9f75bb5f8025314ca75251f16914019, type: 3}
   heightWidth: {x: 50, y: 30}
   fontSize: 14
+  goalList: []
+  removeGoalList: []
 --- !u!114 &7299334755535083399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3300,7 +3304,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 663dbb15fe12af549ae0b9811f48b103, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c28a2ba5896cd94c8d0d0afe3fcbd45, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
