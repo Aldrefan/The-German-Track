@@ -105,7 +105,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123860177028353508}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -430.9, y: -34.9, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children:
@@ -130,7 +130,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 88c7f60ef33560c4a966466760e67e93, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -150,12 +150,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 7476fc372dc4f984795847ea6e132ce3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.19, y: 0.59}
+  m_Size: {x: 0.16, y: 0.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -179,7 +179,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.16, y: 0.6}
-    newSize: {x: 0.19, y: 0.59}
+    newSize: {x: 0.16, y: 0.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -200,14 +200,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJName: W. White
+  characterSprite: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979, type: 3}
+  kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
   dialogIndex: 0
   transitionQuote: 5
+  negativeQuote: 6
   haveEvent: 0
+  stickerAlreadyGivenList: 
   stickerRedirection:
     stickerGivenList: 01000000040000000e000000
     redirectionList: 020000000300000004000000
   eventRedirection:
-    eventGivenList: 
+    eventGivenList: []
     redirectionEventList: 
   allDialogs:
     listOfDialogs:
@@ -217,157 +221,188 @@ MonoBehaviour:
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger:
+        - HasSeenWhite
+        spriteCharacter: {fileID: 0}
       - quote: "Oh m\u2019en parle pas, j\u2019ai l\u2019impression de g\xE9rer une
           garderie"
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 05000000
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "\xC7a doit te rappeler le r\xE9giment."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "C\u2019est vrai. Sauf qu\u2019au moins ici on ne s\u2019endort pas
           au son des bombes."
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Je ne peux pas dire que cette \xE9poque me manque."
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "\xC0 moi non plus mon vieux."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Bon. Et si tu me disais plut\xF4t ce qui t\u2019am\xE8ne ?"
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Je suis sur une nouvelle affaire, et j\u2019ai besoin de ton autorisation
           pour inspecter un corps."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Celui de Loraine Grey.
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "J\u2019y crois pas. M\xEAme toi tu viens me casser les oreilles avec
           cette histoire."
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Ecoute Kenneth, la petite Grey s\u2019est suicid\xE9e. J\u2019ai d\xE9j\xE0
           \xE9tudi\xE9 la sc\xE8ne de crime, on a interrog\xE9 les t\xE9moins. Affaire
           class\xE9e !"
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Clara Grey n\u2019est pas de cet avis."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "C\u2019est une hyst\xE9rique. C\u2019est toujours comme \xE7a les
           c\xE9l\xE9brit\xE9s."
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Elles passent leur vie sur un pi\xE9destal et le jour o\xF9 elles
           doivent en descendre elles se cassent la gueule."
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Ne me dis pas que tu travailles pour elle.
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "\xC7a m\u2019est \xE9gal que l\u2019affaire soit class\xE9e. On me
           paye pour enqu\xEAter, j\u2019enqu\xEAte."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "L\u2019avenir me dira bien si elle a eu raison de m\u2019engager."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Et puis je serai pay\xE9 de toute fa\xE7on."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "\u2026"
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Pourquoi tu perds ton temps avec ce genre de boulot ?
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Avec le talent que tu as, je t\u2019ai d\xE9j\xE0 dit que tu avais
           ta place chez nous."
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "\xC7a, \xE7a n\u2019arrivera jamais."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Pourquoi ?
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Parce que \xE7a impliquerait que je sois \xE0 tes ordres."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Et \xE7a, c\u2019est hors de question."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Ben voyons\u2026"
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "\u2026"
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: " T\u2019en fais pas, je vais te le donner, ton laissez-passer."
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 00000000
+        eventTrigger:
+        - laissezPasser
+        spriteCharacter: {fileID: 0}
       - quote: Tant mieux.
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       endDialog: 1
     - dialog:
@@ -375,76 +410,88 @@ MonoBehaviour:
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
-      endDialog: 1
+      endDialog: 0
     - dialog:
       - quote: "Tu peux me parler de la victime ? C\u2019\xE9tait comment quand tu
           l\u2019as trouv\xE9e ?"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "On est arriv\xE9s vers 7h du mat\u2019, c\u2019est son copain qui
           nous a appel\xE9."
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Il avait l\u2019air de d\xE9cuver d\u2019une sacr\xE9e cuite. Elle
           \xE9tait pendue \xE0 une poutre apparente."
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Rien de particulier, le l\xE9giste a fait son rapport, et on a r\xE9dig\xE9
           la paperasse."
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Je vois.
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
-      canAskQuestions: 1
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
       endDialog: 0
     - dialog:
       - quote: "Qu\u2019est ce que tu peux me dire sur Kurt Becker ?"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "C\u2019est un pauvre type. Le genre qu\u2019a pas eu de chance dans
           la vie."
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "On l\u2019a interrog\xE9 mais il ne nous a rien appris de particulier."
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Tu penses qu\u2019il pourrait avoir un lien avec la mort de Loraine
           ?"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Si tu insinues qu\u2019il aurait pu l\u2019assassiner, la r\xE9ponse
           est non."
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Esp\xE9rons que tu ais raison."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
-      canAskQuestions: 1
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
       endDialog: 0
     - dialog:
       - quote: "Tiens regarde \xE7a. C\u2019est le journal qui parle de l\u2019affaire
@@ -452,20 +499,34 @@ MonoBehaviour:
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Oh piti\xE9, je l\u2019ai assez vu. Va en parler \xE0 Scott si tu
           veux mais fous moi la paix avec \xE7a."
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
-      canAskQuestions: 1
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
       endDialog: 0
     - dialog:
-      - quote: Je peux faire autre chose pour toi ?
+      - quote: Besoin d'aide ?
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
-      canAskQuestions: 1
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
       endDialog: 0
+    - dialog:
+      - quote: J'en sais rien.
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      endDialog: 0
+  quoteFinished: 0
+  stickersAlreadyGiven: 

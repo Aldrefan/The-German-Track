@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 6747615265874859622}
   - component: {fileID: 6747615265874859623}
   - component: {fileID: 6747615265874859620}
+  - component: {fileID: 1018872111}
   m_Layer: 0
   m_Name: dialog_williamscott
   m_TagString: Untagged
@@ -185,7 +186,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 0.59}
+  m_Size: {x: 0.2, y: 0.59}
   m_EdgeRadius: 0
 --- !u!114 &6747615265874859620
 MonoBehaviour:
@@ -200,14 +201,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJName: S. Nelson
+  characterSprite: {fileID: 21300000, guid: b04365d9f0f3ea041be1fe199247d897, type: 3}
+  kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
   dialogIndex: 0
-  transitionQuote: 0
+  transitionQuote: 10
+  negativeQuote: 0
   haveEvent: 0
+  stickerAlreadyGivenList: 
   stickerRedirection:
     stickerGivenList: 
     redirectionList: 
   eventRedirection:
-    eventGivenList: 
+    eventGivenList: []
     redirectionEventList: 
   allDialogs:
     listOfDialogs:
@@ -216,55 +221,140 @@ MonoBehaviour:
         characterName: W. White
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
       - quote: "Je vous ai dit que je ne voulais pas que des journalistes foutent
           les pieds sur mes sc\xE8nes de crime ! "
         characterName: W. White
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
       - quote: Vous me mettez dans la merde !
         characterName: W. White
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
       - quote: "D\xE9sol\xE9 chef, mais quand on a un scoop comme \xE7a et que des
           journalistes sont pr\xEAts \xE0 allonger le pognon,"
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: ce serait criminel de s'asseoir dessus.
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Gr\xE2ce au papier de votre copain, mon t\xE9l\xE9phone sonne du soir
           au matin et tous les journaux veulent une part du g\xE2teau !"
         characterName: W. White
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
       - quote: "On n\u2019est pas des putains de paparazzi !"
         characterName: W. White
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
       - quote: "Mais chef\u2026"
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Fermez-la Nelson ! Ou je vous colle aux archives pour les six prochains
           mois !
         characterName: W. White
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
       - quote: Oh et puis tirez-vous !
         characterName: W. White
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
       canAskQuestions: 0
       endDialog: 1
+  quoteFinished: 0
+  stickersAlreadyGiven: 
+--- !u!114 &1018872111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6747615265874859618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandList: 02000000010000000000000002000000040000000300000006000000
+  annexInformation:
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 0.1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0.05
+    time: 2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0.05
+    time: 2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+  action: 0
+  fromStart: 0
+  triggerByContact: 1

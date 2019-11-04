@@ -50,12 +50,15 @@ public class Interactions : MonoBehaviour
         //animator = GetComponent<Animator>();
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.transform.tag == "PNJinteractable" || collision.transform.tag == "Item" || collision.transform.tag == "Board" || collision.transform.tag == "Interaction" || collision.transform.tag == "Shortcut")
         {
             PNJContact = collision.gameObject;
-            collision.transform.GetChild(0).gameObject.SetActive(true);
+            if (collision.transform.childCount > 0)
+            {
+                collision.transform.GetChild(0).gameObject.SetActive(true);
+            }
         }
     }
 
@@ -64,7 +67,10 @@ public class Interactions : MonoBehaviour
          if (collision.transform.tag == "PNJinteractable" || collision.transform.tag == "Item" || collision.transform.tag == "Board" || collision.transform.tag == "Interaction" || collision.transform.tag == "Shortcut")
         {
             PNJContact = null;
-            collision.transform.GetChild(0).gameObject.SetActive(false);
+            if (collision.transform.childCount > 0)
+            {
+                collision.transform.GetChild(0).gameObject.SetActive(false);
+            }
         }
     }
 

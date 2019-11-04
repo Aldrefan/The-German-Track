@@ -105,7 +105,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6373200947820980919}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -210.7, y: -34.9, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children:
@@ -130,7 +130,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 88c7f60ef33560c4a966466760e67e93, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -152,7 +152,7 @@ SpriteRenderer:
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 7b6c5ad84d59d2b4c8505d88c02dbd58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.19, y: 0.59}
@@ -200,14 +200,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJName: Dr. Lou Ellis
+  characterSprite: {fileID: 21300000, guid: 7b6c5ad84d59d2b4c8505d88c02dbd58, type: 3}
+  kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
   dialogIndex: 0
   transitionQuote: 5
+  negativeQuote: 6
   haveEvent: 0
+  stickerAlreadyGivenList: 
   stickerRedirection:
-    stickerGivenList: 080000000d0000000e000000
+    stickerGivenList: 080000000d00000010000000
     redirectionList: 020000000300000004000000
   eventRedirection:
-    eventGivenList: 
+    eventGivenList: []
     redirectionEventList: 
   allDialogs:
     listOfDialogs:
@@ -216,154 +220,183 @@ MonoBehaviour:
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger:
+        - HasSeenLou
+        spriteCharacter: {fileID: 0}
       - quote: "J\u2019ai un laisser-passer. Docteur Ellis, je dois vous parler \xE0
           propos de Loraine Grey."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Oh excusez-moi, pour la plupart des gens c\u2019est mon p\xE8re, le
           Docteur Ellis."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Vous pouvez m\u2019appeler Lou."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Comme vous voudrez.
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Je suis curieuse de voir ce que vous allez me demander.
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Finalement vous souhaitez \xE9couter ce que j\u2019ai \xE0 dire."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Je ne fais pas partie de la police. Je suis priv\xE9. Je viens de
           la part de Clara Grey."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Ah oui ? Une femme charmante.
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Si on veut\u2026 Il parait que vous avez une th\xE9orie sur la substance
           retrouv\xE9e dans le sang de Loraine."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "C\u2019est plus qu\u2019une th\xE9orie Monsieur\u2026"
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Quel est votre nom \xE0 propos ?"
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Kenneth.
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "\u2026Kenneth. Ce sont des faits av\xE9r\xE9s."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Voyez-vous, La victime a ing\xE9r\xE9 une puissante toxine qui lui
           aurait servie, en th\xE9orie, \xE0 provoquer une overdose."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Ce n\u2019est pas le cas ?"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Non. La quantit\xE9 de toxique ing\xE9r\xE9e lui aurait, dans le pire
           des cas, fait sauter le petit d\xE9jeuner."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Impossible de faire une overdose avec \xE7a."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Et quand bien m\xEAme la dose aurait \xE9t\xE9 suffisante, pourquoi
           se pendre en plus ?"
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "\xC7a semble \xEAtre des souffrances superflues."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Peut-\xEAtre voulait-elle simplement se d\xE9tendre avant de grimper
           sur le tabouret."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Impossible.
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Etant donn\xE9e la r\xE9partition du produit dans l\u2019organisme,
           elle a d\xFB le laisser circuler au moins 4h."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Dans un corps vivant j\u2019entends."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Or si elle avait attendu ne serait-ce que vingt minutes avant de se
           passer la corde au cou, elle se serait endormie lourdement.
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Effectivement c\u2019est \xE9trange."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Et concernant le reste du corps, vous avez remarqu\xE9 quelque chose
           d\u2019anormal ?"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Eh bien, il y a les marques de la corde bien s\xFBr, mais \xE0 part
           \xE7a aucune trace de violence, ni coups ni m\xEAme bousculade"
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 100000002c000000
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       endDialog: 1
     - dialog:
@@ -371,7 +404,8 @@ MonoBehaviour:
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       endDialog: 1
     - dialog:
@@ -379,111 +413,131 @@ MonoBehaviour:
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Docteur Lou Ellis, affect\xE9e \xE0 cet h\xF4pital depuis 2 ans."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Sortie major de promo de l\u2019Universit\xE9 de m\xE9decine de New
           York."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Sp\xE9cialis\xE9e en h\xE9matologie et m\xE9decine l\xE9gale."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Sacr\xE9 palmar\xE8s."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "C\u2019est \xE0 peine suffisant pour faire du caf\xE9 ici."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Vos coll\xE8gues ne vous appr\xE9cient pas \xE0 votre juste valeur
           ?"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Je suis la premi\xE8re femme m\xE9decin de New York, je ne m\u2019attendais
           pas \xE0 une sin\xE9cure quand j\u2019ai rejoint le service."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Mais je ne supporte plus de voir mon travail d\xE9pr\xE9ci\xE9 par
           ces abrutis."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Je sais ce que c\u2019est de se d\xE9mener pour moins que rien de
           remerciement."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "On se dit \xAB \xE0 quoi bon faire tout \xE7a ? Tout le monde s\u2019en
           fout. \xBB. Et le pire, c\u2019est que c\u2019est vrai."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Tout le monde s\u2019en fout."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Mais si on ne fait pas ce qu\u2019on a \xE0 faire au moment o\xF9
           on doit le faire, personne ne le fera \xE0 notre place."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Vous ne serez s\xFBrement jamais reconnue pour votre travail."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Des hommes moins comp\xE9tent s\u2019attribueront les m\xE9rites de
           vos efforts."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Mais \xE7a ne doit pas avoir d\u2019importance."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Je ne m\u2019attendais pas \xE0 de la philosophie de la part d\u2019un
           priv\xE9."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "La guerre \xE7a rend philosophe."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Tiens donc ?
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Laissez, je divague.
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       endDialog: 0
     - dialog:
@@ -492,59 +546,70 @@ MonoBehaviour:
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Faites voir\u2026"
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "\xC7a pourrait correspondre avec ce qu\u2019on a trouv\xE9 dans le
           sang de la victime."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Je vais comparer avec les r\xE9sultats du rapport."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "\u2026"
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Oui c\u2019est bien \xE7a !"
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "C\u2019est cette drogue que Loraine a ing\xE9r\xE9 le soir de sa mort."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 2f000000
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Je m\u2019en doutais."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Vous pensez qu\u2019elle en prenait fr\xE9quemment ?"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Non, au contraire. Ce devait \xEAtre la premi\xE8re fois qu\u2019elle
           en prenait d\u2019apr\xE8s les analyses sanguines."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Int\xE9ressant."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       endDialog: 0
     - dialog:
@@ -552,23 +617,27 @@ MonoBehaviour:
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "D\u2019apr\xE8s l'\xE9tat des h\xE9matomes sur le cou, la victime
           \xE9tait vivante lorsqu\u2019elle a \xE9t\xE9 pendue."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "C\u2019est donc bel et bien la corde qui est responsable de sa mort."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Reste \xE0 d\xE9couvrir comment elle est arriv\xE9e l\xE0."
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       endDialog: 0
     - dialog:
@@ -576,6 +645,18 @@ MonoBehaviour:
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       endDialog: 0
+    - dialog:
+      - quote: "Je ne sais rien \xE0 ce sujet."
+        characterName: Dr. Lou Ellis
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 1
+      endDialog: 0
+  quoteFinished: 0
+  stickersAlreadyGiven: 
