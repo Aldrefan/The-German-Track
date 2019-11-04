@@ -28,32 +28,6 @@ public class EventsCheck : MonoBehaviour
         {
             CheckInteraction();
         }
-
-        /*if(lamp && Input.GetButtonDown("Interaction"))// Initial
-        {
-            //JsonSave save = SaveGameManager.GetCurrentSave();
-            if(GetComponent<PlayerMemory>().allStickers.Contains(15))
-            {
-                if(eventsList.Contains("LettreDécodée"))
-                {
-                    GetComponent<Interactions>().PNJContact = gameObject;
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PNJ>().ChangeDialog(3);
-                }
-                else
-                {
-                    eventsList.Add("LettreDécodée");
-                    GetComponent<Interactions>().PNJContact = gameObject;
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PNJ>().ChangeDialog(2);
-                    //GameObject.Find("Lamp").SetActive(false);
-                    lamp = false;
-                }
-            }
-            else 
-            {
-                GetComponent<Interactions>().PNJContact = gameObject;
-                GameObject.FindGameObjectWithTag("Player").GetComponent<PNJ>().ChangeDialog(3);
-            }
-        }*/
     }
 
     IEnumerator Fade()
@@ -257,6 +231,14 @@ public class EventsCheck : MonoBehaviour
 
             case "HasContactedMarvin":
                 GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Contacter Marvin Meyer.");
+                break;
+            
+            case "TalkToTheBarman":
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Parler de Marvin au Barman.");
+                break;
+
+            case "HasTalkedToTheBarman":
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Parler de Marvin au Barman.");
                 break;
 
             default:
