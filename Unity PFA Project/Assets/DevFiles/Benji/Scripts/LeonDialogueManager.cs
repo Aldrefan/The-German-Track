@@ -7,7 +7,7 @@ public class LeonDialogueManager : MonoBehaviour
 {
     private Queue<string> sentences = new Queue<string>();
 
-    [HideInInspector]
+    //[HideInInspector]
     public string npcName;
     string playerName = "Léon";
 
@@ -21,7 +21,7 @@ public class LeonDialogueManager : MonoBehaviour
     void Start()
     {
         DialogWidget = this.transform.GetChild(0).gameObject;
-        InitPlayerSide();
+
         Enable(DialogWidget.transform, false);
     }
 
@@ -34,14 +34,16 @@ public class LeonDialogueManager : MonoBehaviour
     public void InitDialogWidget()
     {
         Enable(DialogWidget.transform,true);
+        InitPlayerSide();
         if (npcName != null)
         {
             npcSprite = Resources.Load("Resources/Sprites" + npcName) as Sprite;
+            this.transform.GetChild(0).Find("CharacRight").Find("RightSide").Find("CharacterName").GetChild(0).GetComponent<Text>().text = npcName;
         }
         if(npcSprite != null)
         {
             this.transform.Find("CharacterPict").GetChild(0).GetComponent<Image>().sprite = npcSprite;
-            this.transform.Find("CharacterName").GetChild(0).GetComponent<Text>().text = npcName;
+            
         }
     }
 
@@ -64,10 +66,11 @@ public class LeonDialogueManager : MonoBehaviour
         if (playerName != null)
         {
             leonSprite = Resources.Load("Resources/Sprites" + playerName) as Sprite;
+            this.transform.Find("DialogCanvas").Find("CharacLeft").Find("LeftSide").Find("CharacterName").GetChild(0).GetComponent<Text>().text = playerName;
         }
         if (leonSprite != null)
         {
-            this.transform.Find("CharacLeft").GetChild(0).Find("CharacterPict").GetChild(0).GetComponent<Image>().sprite = leonSprite;
+            this.transform.Find("DialogCanvas").Find("CharacLeft").Find("LeftSide").Find("CharacterPict").GetChild(0).GetComponent<Image>().sprite = leonSprite;
         }
     }
 

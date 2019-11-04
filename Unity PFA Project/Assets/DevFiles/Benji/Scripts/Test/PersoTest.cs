@@ -54,15 +54,11 @@ public class PersoTest : MonoBehaviour
     {
         if (collision.CompareTag("PNJinteractable"))
         {
-
-            Debug.Log(collision.name);
             if (collision.GetComponent<DialogueTrigger>() != null)
             {
-                Debug.Log("2");
-
                 if (Input.GetButton("Interaction"))
                 {
-                    Debug.Log("3");
+
                     inDialog = true;
                     this.DialogCanvas.GetComponent<LeonDialogueManager>().npcName = collision.GetComponent<DialogueTrigger>().npcName;
                     this.DialogCanvas.GetComponent<LeonDialogueManager>().InitDialogWidget();

@@ -5,7 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogue : MonoBehaviour
 {
-    public string name;
-    public string[] sentences;
+    public string speaker;
+    public string sentence;
+    public int dialogIndex;
+    public int moodIndex;
 
 }

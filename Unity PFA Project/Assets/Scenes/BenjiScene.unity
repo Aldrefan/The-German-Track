@@ -518,8 +518,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c065bc5cfc93f924db507effa286c480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moodIndex: 2
   npcName: JOJO
-  dialogue: {fileID: 0}
+  dialogue:
+  - {fileID: 0}
 --- !u!1 &1813780237
 GameObject:
   m_ObjectHideFlags: 0

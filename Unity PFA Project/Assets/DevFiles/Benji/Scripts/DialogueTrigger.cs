@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    public int moodIndex = 2;
     public string npcName;
-    public Dialogue dialogue;
+    public List<Dialogue> dialogue = new List<Dialogue>();
 }
