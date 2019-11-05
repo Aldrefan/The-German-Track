@@ -38,6 +38,11 @@ public class Pin_System : MonoBehaviour
         mouseOn = false;
     }
 
+    public void PlaySpawnAnimation()
+    {
+        
+    }
+
     public void PointerDown()
     {
         if(Input.GetKey(KeyCode.Mouse0))
