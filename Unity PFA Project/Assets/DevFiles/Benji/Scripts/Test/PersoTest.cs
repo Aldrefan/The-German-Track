@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PersoTest : MonoBehaviour
 {
 
     [SerializeField]
     float speed = 1;
+
+    public int level = 0;
+    public Text levelFrame;
 
     bool inDialog;
 
@@ -30,6 +34,35 @@ public class PersoTest : MonoBehaviour
             Movement();
 
         }
+
+        UpLevel();
+    }
+
+    void UpLevel()
+    {
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            level++;
+        }
+        levelFrame.text = level.ToString();
+    }
+
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this);
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        level = data.level;
+
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        transform.position = position;
     }
 
     void Movement()
