@@ -18,6 +18,8 @@ public class PlayerMemory : MonoBehaviour
     public GameObject newSticker;
     public Transform carnet;
     Vector2 offsets = new Vector2(5, 5);
+    public GameObject stickerTemplate;
+    public List<Sticker> stickersScriptableList;
 
     void Awake()
     {
@@ -70,26 +72,31 @@ public class PlayerMemory : MonoBehaviour
                 int newStickerIndex = stickerIndexCarnetList[i];
                 if(newStickerIndex >= charactersRange.x && newStickerIndex <= charactersRange.y)
                 {
-                    GameObject child = Instantiate(stickerList[newStickerIndex]);
+                    GameObject child = Instantiate(stickerTemplate, GameObject.FindObjectOfType<Ken_Canvas_Infos>().carnet.transform.GetChild(0));
+                    child.GetComponent<Sticker_Display>().sticker = stickersScriptableList[newStickerIndex];
+                    //stickerList[newStickerIndex]);
                     child.GetComponent<StickerManager>().OnCarnet();
                     carnet.transform.GetChild(0).GetComponent<CarnetIndex>().CheckChildNumber(child);
                 }
                 if(newStickerIndex >= indicesRange.x && newStickerIndex <= indicesRange.y)
                 {
-                    GameObject child = Instantiate(stickerList[newStickerIndex], Vector3.zero, carnet.rotation, carnet.GetChild(1));
+                    GameObject child = Instantiate(stickerTemplate, GameObject.FindObjectOfType<Ken_Canvas_Infos>().carnet.transform.GetChild(1));
+                    child.GetComponent<Sticker_Display>().sticker = stickersScriptableList[newStickerIndex];
                     child.GetComponent<StickerManager>().OnCarnet();
                     carnet.transform.GetChild(1).GetComponent<CarnetIndex>().CheckChildNumber(child);
                     //stickerIndexCarnetList.RemoveAt(i);
                 }
                 if(newStickerIndex >= faitsRange.x && newStickerIndex <= faitsRange.y)
                 {
-                    GameObject child = Instantiate(stickerList[newStickerIndex], Vector3.zero, carnet.rotation, carnet.GetChild(2));
+                    GameObject child = Instantiate(stickerTemplate, GameObject.FindObjectOfType<Ken_Canvas_Infos>().carnet.transform.GetChild(2));
+                    child.GetComponent<Sticker_Display>().sticker = stickersScriptableList[newStickerIndex];
                     child.GetComponent<StickerManager>().OnCarnet();
                     carnet.transform.GetChild(2).GetComponent<CarnetIndex>().CheckChildNumber(child);
                 }
                 if(newStickerIndex >= hypothesesRange.x && newStickerIndex <= hypothesesRange.y)
                 {
-                    GameObject child = Instantiate(stickerList[newStickerIndex], Vector3.zero, carnet.rotation, carnet.GetChild(3));
+                    GameObject child = Instantiate(stickerTemplate, GameObject.FindObjectOfType<Ken_Canvas_Infos>().carnet.transform.GetChild(3));
+                    child.GetComponent<Sticker_Display>().sticker = stickersScriptableList[newStickerIndex];
                     child.GetComponent<StickerManager>().OnCarnet();
                     carnet.transform.GetChild(3).GetComponent<CarnetIndex>().CheckChildNumber(child);
                 }
@@ -115,7 +122,9 @@ public class PlayerMemory : MonoBehaviour
                         //if(save.stickersIndexOnBoard[x] == newStickerIndex)
                         if(stickerIndexBoardList[x] == newStickerIndex)
                         {
-                            GameObject sticker = Instantiate(stickerList[newStickerIndex], boardCanvas);
+                            GameObject sticker = Instantiate(stickerTemplate, boardCanvas);
+                            sticker.GetComponent<Sticker_Display>().sticker = stickersScriptableList[newStickerIndex];
+                            //Instantiate(stickerList[newStickerIndex], boardCanvas);
                             //sticker.transform.localPosition = save.stickersPositionOnBoard[x];
                             //sticker.transform.localPosition = stickersPositionBoard[x];
                             sticker.GetComponent<RectTransform>().localPosition = new Vector2(0 + offsets.x * i, -100 + offsets.y * i);

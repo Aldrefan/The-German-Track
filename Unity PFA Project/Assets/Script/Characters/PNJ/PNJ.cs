@@ -14,6 +14,7 @@ public class PNJ : MonoBehaviour
     GameObject player;
     GameObject leftPanel;
     GameObject rightPanel;
+    GameObject questionPanel;
     Transform carnet;
     public int dialogIndex;
     public int transitionQuote;
@@ -50,7 +51,9 @@ public class PNJ : MonoBehaviour
     {
         public List<ArrayOfQuotes> dialog;
         public bool canAskQuestions;
+        public bool hasChoices;
         public bool endDialog;
+        public List<Button> buttonsList;
     }
 
     [System.Serializable]
@@ -79,6 +82,7 @@ public class PNJ : MonoBehaviour
         DialogCanvas = GameObject.Find("Ken_Dial_Book_FlCanvas");
         leftPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().leftPanel;
         rightPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().rightPanel;
+        questionPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().questionPanel;
     }
 
     // Update is called once per frame
@@ -99,18 +103,22 @@ public class PNJ : MonoBehaviour
         {
             player.GetComponent<Interactions>().QuitCinematicMode();
         }
+
+        if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.name == "Kenneth")
+        {
+            if(allDialogs.listOfDialogs[newDialog].canAskQuestions)
+            {
+                carnet.GetComponent<Animator>().SetBool("InDialog", true);
+                //player.GetComponent<Interactions>().canOpenCarnet = true;// Initial
+            }
+            else 
+            {
+                carnet.GetComponent<Animator>().SetBool("ClickOn", true);
+                carnet.GetComponent<Animator>().SetBool("InDialog", false);
+                //player.GetComponent<Interactions>().canOpenCarnet = false;// Initial
+            }
+        }
         
-        if(allDialogs.listOfDialogs[newDialog].canAskQuestions)
-        {
-            carnet.GetComponent<Animator>().SetBool("InDialog", true);
-            //player.GetComponent<Interactions>().canOpenCarnet = true;// Initial
-        }
-        else 
-        {
-            carnet.GetComponent<Animator>().SetBool("ClickOn", true);
-            carnet.GetComponent<Animator>().SetBool("InDialog", false);
-            //player.GetComponent<Interactions>().canOpenCarnet = false;// Initial
-        }
         dialogLine = 0;
         dialogIndex = newDialog;
         Startdialogue();
@@ -136,15 +144,18 @@ public class PNJ : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("Talk", true);
         }
-        if(allDialogs.listOfDialogs[dialogIndex].canAskQuestions)
+        if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.name == "Kenneth")
         {
-            carnet.GetComponent<Animator>().SetBool("InDialog", true);
-            //player.GetComponent<Interactions>().canOpenCarnet = true;// Initial
-        }
-        else 
-        {
-            carnet.GetComponent<Animator>().SetBool("InDialog", false);
-            //player.GetComponent<Interactions>().canOpenCarnet = false;// Initial
+            if(allDialogs.listOfDialogs[dialogIndex].canAskQuestions)
+            {
+                carnet.GetComponent<Animator>().SetBool("InDialog", true);
+                //player.GetComponent<Interactions>().canOpenCarnet = true;// Initial
+            }
+            else 
+            {
+                carnet.GetComponent<Animator>().SetBool("InDialog", false);
+                //player.GetComponent<Interactions>().canOpenCarnet = false;// Initial
+            }
         }
         if(GameObject.Find("BlackBands").GetComponent<Animator>().GetBool("Cinematic"))
         {
@@ -192,12 +203,30 @@ public class PNJ : MonoBehaviour
         }
         else
         {
-            if(allDialogs.listOfDialogs[dialogIndex].endDialog)
+            if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.name == "Kenneth")
             {
-                EndDialog();
-                //player.GetComponent<Interactions>().PNJContact = null;
+                if(allDialogs.listOfDialogs[dialogIndex].endDialog)
+                {
+                    EndDialog();
+                    //player.GetComponent<Interactions>().PNJContact = null;
+                }
+                else ChangeDialog(transitionQuote);
             }
-            else ChangeDialog(transitionQuote);
+            if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.name == "Leon")
+            {
+                if(allDialogs.listOfDialogs[dialogIndex].hasChoices)
+                {
+                    questionPanel.SetActive(true);
+                    rightPanel.SetActive(false);
+                    leftPanel.SetActive(false);
+                    questionPanel.GetComponent<QuestionInterface>().InstantiateQuestions(allDialogs.listOfDialogs[dialogIndex].buttonsList);
+                }
+                else if(allDialogs.listOfDialogs[dialogIndex].endDialog)
+                {
+                    EndDialog();
+                }
+                else ChangeDialog(1);
+            }
         }
     }
 
@@ -239,7 +268,7 @@ public class PNJ : MonoBehaviour
     public IEnumerator ShowText(GameObject panel)
     {
         quoteFinished = false;
-        for(int i = 0; i < allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote.Length; i++)
+        for(int i = 0; i < allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote.Length + 1; i++)
         {
             currentLine = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote.Substring(0,i);
             panel.transform.GetChild(1).GetComponent<Text>().text = currentLine;

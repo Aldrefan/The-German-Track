@@ -6,15 +6,6 @@ public class Ken_Canvas_Infos : MonoBehaviour
 {
     public GameObject leftPanel;
     public GameObject rightPanel;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject questionPanel;
+    public GameObject carnet;
 }

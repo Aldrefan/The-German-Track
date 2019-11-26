@@ -75,11 +75,11 @@ public class Camera_BoardMovements : MonoBehaviour
         {
             for(int i = 1; i < boardCanvas.transform.childCount; i++)
             {
-                if(saver.GetComponent<Saver>().stickersIndexOnBoardFM.Contains(boardCanvas.transform.GetChild(i).GetComponent<Pin_System>().stickerIndex))
+                if(saver.GetComponent<Saver>().stickersIndexOnBoardFM.Contains(boardCanvas.transform.GetChild(i).GetComponent<Sticker_Display>().sticker.index))
                 {
                     for(int x = 0; x < saver.GetComponent<Saver>().stickersIndexOnBoardFM.Count; x++)
                     {
-                        if(saver.GetComponent<Saver>().stickersIndexOnBoardFM[x] == boardCanvas.transform.GetChild(i).GetComponent<Pin_System>().stickerIndex)
+                        if(saver.GetComponent<Saver>().stickersIndexOnBoardFM[x] == boardCanvas.transform.GetChild(i).GetComponent<Sticker_Display>().sticker.index)
                         {
                             saver.GetComponent<Saver>().stickersPositionOnBoardFM[x] = boardCanvas.transform.GetChild(i).localPosition;
                             break;
@@ -88,13 +88,13 @@ public class Camera_BoardMovements : MonoBehaviour
                 }
                 else 
                 {
-                    saver.GetComponent<Saver>().stickersIndexOnBoardFM.Add(boardCanvas.transform.GetChild(i).GetComponent<Pin_System>().stickerIndex);
+                    saver.GetComponent<Saver>().stickersIndexOnBoardFM.Add(boardCanvas.transform.GetChild(i).GetComponent<Sticker_Display>().sticker.index);
                     saver.GetComponent<Saver>().stickersPositionOnBoardFM.Add(boardCanvas.transform.GetChild(i).localPosition);
                 }
             }
         }
         GetComponent<CameraFollow>().actualRoom.SetActive(true);
-        player.SetActive(true);
+        player.GetComponent<Rigidbody2D>().gravityScale = 1;
         player.GetComponent<Interactions>().CloseBoard();
         Camera.main.GetComponent<Camera_Manager>().NotOnBoard();
     }

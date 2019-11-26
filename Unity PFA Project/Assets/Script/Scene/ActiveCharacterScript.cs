@@ -14,18 +14,6 @@ public class ActiveCharacterScript : MonoBehaviour
     public List<playableCharacter> playableCharactersList;
     public GameObject startingCharacter;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ChangeActiveCharacter(string newCharacterName)
     {
         for(int i = 0; i < playableCharactersList.Count; i++)

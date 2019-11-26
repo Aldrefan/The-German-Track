@@ -67,6 +67,9 @@ public class Clara_Cinematic : MonoBehaviour
     IEnumerator MovementTimer(float time)
     {
         movements = true;
+        //GetComponent<BoxCollider2D>().enabled = false;
+        //Debug.Log(GetComponent<BoxCollider2D>().enabled);
+        annexInformation[action].objectToMove.GetComponent<BoxCollider2D>().enabled = false;
         if(annexInformation[action].direction < 0)
         {
             annexInformation[action].objectToMove.GetComponent<SpriteRenderer>().flipX = true;
@@ -74,7 +77,10 @@ public class Clara_Cinematic : MonoBehaviour
         else annexInformation[action].objectToMove.GetComponent<SpriteRenderer>().flipX = false;
         annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Talk", false);
         annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Walk", true);
-        yield return new WaitForSecondsRealtime(time);
+        yield return new WaitForSeconds(time);
+        //GetComponent<BoxCollider2D>().enabled = true;
+        //Debug.Log(GetComponent<BoxCollider2D>().enabled);
+        annexInformation[action].objectToMove.GetComponent<BoxCollider2D>().enabled = true;
         annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Walk", false);
         movements = false;
         CheckIndex();
@@ -136,7 +142,7 @@ public class Clara_Cinematic : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().ChangeState(Interactions.State.InCinematic);
         }
         //GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(2).GetComponent<Animator>().SetBool("ClickOn", true);
-        //Debug.Log("Action n° " + action + " Command " + commandList[action]);
+        Debug.Log("Action n° " + action + " Command " + commandList[action]);
         switch (commandList[action])
         {
             case Command.Movement :
@@ -191,6 +197,12 @@ public class Clara_Cinematic : MonoBehaviour
 
     void EndGame()
     {
+        GameObject.Find("FadePanel").GetComponent<Animator>().SetTrigger("FadeIn");
+        StartCoroutine("EndTimer");
+    }
+    IEnumerator EndTimer()
+    {
+        yield return new WaitForSecondsRealtime(0.7f);
         GameObject.Find("EndCanvas").GetComponent<EndScreen>().EndDemo();
     }
 

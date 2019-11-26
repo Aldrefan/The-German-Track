@@ -9,7 +9,7 @@ public class DialogInterface : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+
     }
 
     void Awake()
@@ -25,7 +25,7 @@ public class DialogInterface : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(!transform.parent.GetChild(transform.parent.childCount - 1).gameObject.activeInHierarchy)
+        if(!transform.parent.GetChild(transform.parent.childCount - 1).gameObject.activeInHierarchy && player.GetComponent<Interactions>().state != Interactions.State.OnCarnet)
         {
             if(player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().quoteFinished)
             {

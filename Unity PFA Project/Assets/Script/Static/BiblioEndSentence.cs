@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,10 +16,8 @@ public static class BiblioEndSentence
                 return Text.fullSentence;
             }
             return null;
-
         }
         return null;
-
     }
 
 }

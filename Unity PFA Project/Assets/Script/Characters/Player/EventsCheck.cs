@@ -24,7 +24,7 @@ public class EventsCheck : MonoBehaviour
             GetComponent<PNJ>().ChangeDialog(4);
             GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
         }*/
-        if(GetComponent<Interactions>().PNJContact && GetComponent<Interactions>().PNJContact.tag == "Interaction" && Input.GetButtonDown("Interaction") && !GetComponent<Interactions>().isInDialog)
+        if(GetComponent<Interactions>().PNJContact && GetComponent<Interactions>().PNJContact.tag == "Interaction" && Input.GetButtonDown("Interaction") && !GetComponent<Interactions>().isInDialog && GetComponent<Interactions>().state != Interactions.State.OnCarnet)
         {
             CheckInteraction();
         }

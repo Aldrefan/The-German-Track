@@ -32,7 +32,6 @@ public class Phone : MonoBehaviour
                     //Debug.Log("index found");
                     if(justStickerNeededList[i])
                     {
-                        //Debug.Log("2");
                         player.GetComponent<Interactions>().CloseBookExe();
                         player.GetComponent<Interactions>().PNJContact = transform.GetChild(i).gameObject;
                         player.GetComponent<Interactions>().StartDialog();
