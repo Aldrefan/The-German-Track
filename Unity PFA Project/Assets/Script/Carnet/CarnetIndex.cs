@@ -9,6 +9,7 @@ public class CarnetIndex : MonoBehaviour
     public Vector2 spacing;
     public int columnsCount;
     public int childNumber;
+    public Vector2 stickerSize;
     public List<GameObject> pageList;
     public Transform pageArchetype;
     public GameObject pagePrefab;
@@ -60,6 +61,7 @@ public class CarnetIndex : MonoBehaviour
         }
         newChild.transform.SetParent(PageSelected.transform);
         newChild.transform.localPosition = new Vector3(0,0,0);
+        newChild.transform.localScale = new Vector2(stickerSize.x, stickerSize.y);
         GameObject newSymbol = Instantiate(newFeedback, newChild.transform);
         newSymbol.transform.localScale = newFeedbackSize;
         newSymbol.transform.localPosition = Vector3.zero;

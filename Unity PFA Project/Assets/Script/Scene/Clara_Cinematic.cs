@@ -34,17 +34,16 @@ public class Clara_Cinematic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if(fromStart)
+        {
+            ExecuteCommand();
+        }
     }
     
     void Awake()
     {
         //rb2D = GetComponent<Rigidbody2D>();
         //animator = GetComponent<Animator>();
-        if(fromStart)
-        {
-            ExecuteCommand();
-        }
     }
 
     // Update is called once per frame
@@ -68,6 +67,9 @@ public class Clara_Cinematic : MonoBehaviour
     IEnumerator MovementTimer(float time)
     {
         movements = true;
+        //GetComponent<BoxCollider2D>().enabled = false;
+        //Debug.Log(GetComponent<BoxCollider2D>().enabled);
+        annexInformation[action].objectToMove.GetComponent<BoxCollider2D>().enabled = false;
         if(annexInformation[action].direction < 0)
         {
             annexInformation[action].objectToMove.GetComponent<SpriteRenderer>().flipX = true;
@@ -75,7 +77,10 @@ public class Clara_Cinematic : MonoBehaviour
         else annexInformation[action].objectToMove.GetComponent<SpriteRenderer>().flipX = false;
         annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Talk", false);
         annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Walk", true);
-        yield return new WaitForSecondsRealtime(time);
+        yield return new WaitForSeconds(time);
+        //GetComponent<BoxCollider2D>().enabled = true;
+        //Debug.Log(GetComponent<BoxCollider2D>().enabled);
+        annexInformation[action].objectToMove.GetComponent<BoxCollider2D>().enabled = true;
         annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Walk", false);
         movements = false;
         CheckIndex();
@@ -96,37 +101,46 @@ public class Clara_Cinematic : MonoBehaviour
         }
         else 
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInCinematic = false;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInDialog = false;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().QuitCinematicMode();
-            GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", false);
+            if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.name == "Kenneth")
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInCinematic = false;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInDialog = false;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().QuitCinematicMode();
+                GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", false);
+            }
         }
     }
 
     void Fonction_StartDialog()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if(player.GetComponent<Interactions>().state == Interactions.State.OnBoard)
+        if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.name == "Kenneth")
         {
-            player.GetComponent<Interactions>().dialAndBookCanvas.SetActive(true);
-            player.GetComponent<Interactions>().boardCanvas.SetActive(false);
-        }
-        if(annexInformation[action].objectToMove == null)
-        {
-            player.GetComponent<Interactions>().PNJContact = gameObject;
-        }
-        else player.GetComponent<Interactions>().PNJContact = annexInformation[action].objectToMove;
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if(player.GetComponent<Interactions>().state == Interactions.State.OnBoard)
+            {
+                player.GetComponent<Interactions>().dialAndBookCanvas.SetActive(true);
+                player.GetComponent<Interactions>().boardCanvas.SetActive(false);
+            }
+            if(annexInformation[action].objectToMove == null)
+            {
+                player.GetComponent<Interactions>().PNJContact = gameObject;
+            }
+            else player.GetComponent<Interactions>().PNJContact = annexInformation[action].objectToMove;
         
-        player.GetComponent<Interactions>().isInCinematic = true;
-        player.GetComponent<Interactions>().isInDialog = true;
-        //annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Talk", true);
-        player.GetComponent<Interactions>().StartDialog();
+            player.GetComponent<Interactions>().isInCinematic = true;
+            player.GetComponent<Interactions>().isInDialog = true;
+            //annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Talk", true);
+            player.GetComponent<Interactions>().StartDialog();
+        }
     }
 
     public void ExecuteCommand()
     {
         GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", true);
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().ChangeState(Interactions.State.InCinematic);
+        if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.name == "Kenneth")
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().ChangeState(Interactions.State.InCinematic);
+        }
         //GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(2).GetComponent<Animator>().SetBool("ClickOn", true);
         Debug.Log("Action n° " + action + " Command " + commandList[action]);
         switch (commandList[action])
@@ -183,6 +197,12 @@ public class Clara_Cinematic : MonoBehaviour
 
     void EndGame()
     {
+        GameObject.Find("FadePanel").GetComponent<Animator>().SetTrigger("FadeIn");
+        StartCoroutine("EndTimer");
+    }
+    IEnumerator EndTimer()
+    {
+        yield return new WaitForSecondsRealtime(0.7f);
         GameObject.Find("EndCanvas").GetComponent<EndScreen>().EndDemo();
     }
 
@@ -194,9 +214,12 @@ public class Clara_Cinematic : MonoBehaviour
 
     void DeactivateSelf()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInCinematic = false;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInDialog = false;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().QuitCinematicMode();
+        if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.name == "Kenneth")
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInCinematic = false;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInDialog = false;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().QuitCinematicMode();
+        }
         GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", false);
         Destroy(gameObject);
     }

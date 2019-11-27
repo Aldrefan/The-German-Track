@@ -5,19 +5,17 @@ using UnityEngine.UI;
 
 public class String_Manager : MonoBehaviour
 {
-    public List<GameObject> pinList = new List<GameObject>();
-    LineRenderer lineRenderer;
-    bool checking = false;
-    public GameObject finalDemoHypothese;
-    public List<GameObject> validateList;
-    int index = 0;
-    int microIndex = 0;
-    public List<GameObject> hypotheseresponses = new List<GameObject>();
-    bool finished;
-    public List<string> quoteList;
-    bool createASticker;
-
-public HypotheseList ListOfPointLists = new HypotheseList();
+public List<GameObject> pinList = new List<GameObject>();
+LineRenderer lineRenderer;
+bool checking = false;
+public int finalDemoHypothese;
+public List<GameObject> validateList;
+int index = 0;
+int microIndex = 0;
+public List<int> hypotheseresponses;
+bool finished;
+public List<string> quoteList;
+bool createASticker;
 
 [System.Serializable]
 public class Hypotheses
@@ -45,17 +43,18 @@ public class HypotheseListT
     public List<HypothesesT> list;
 }
 
-GameObject player;
+public GameObject player;
+public GameObject stickerTemplate;
     
     // Start is called before the first frame update
     void Start()
     {
-        lineRenderer = GetComponent<LineRenderer>();
+        
     }
 
     void Awake()
     {
-        player = GameObject.Find("Kenneth");
+        lineRenderer = GetComponent<LineRenderer>();
     }
 
     // Update is called once per frame
@@ -67,7 +66,7 @@ GameObject player;
             for(int i = 0; i < pinList.Count; ++i)
             {
                 lineRenderer.positionCount = pinList.Count;
-                lineRenderer.SetPosition(i, new Vector3(pinList[i].transform.GetChild(0).position.x, pinList[i].transform.GetChild(0).position.y, pinList[i].transform.GetChild(0).position.z - 1));
+                lineRenderer.SetPosition(i, new Vector3(pinList[i].transform.GetChild(2).position.x, pinList[i].transform.GetChild(2).position.y, pinList[i].transform.GetChild(2).position.z - 1));
             }
         }
         else lineRenderer.enabled = false;
@@ -82,7 +81,7 @@ GameObject player;
     {
         for(int i = 0; i < pinList.Count; i++)
             {
-                Destroy(pinList[0].transform.GetChild(0).gameObject);
+                Destroy(pinList[0].transform.GetChild(2).gameObject);
                 pinList.Remove(pinList[0]);
             }
         if(pinList.Count > 0)
@@ -103,45 +102,48 @@ GameObject player;
 
     void OnEnable()
     {
-        
+        //player.SetActive()
     }
     
     public void CheckComponent()
     {
-        /*bool needSticker;
-        bool tooMuchStickers;
-        bool oneStickerLess; */
-        for(int i = 0; i < ListOfHypLists.list.Count; i++)                                              // Pour chaque élément dans l'hypothèse
+        for(int i = 0; i < ListOfHypLists.list.Count; i++)                                                   // Pour chaque élément dans l'hypothèse
         {
             List<int> validateStickersList = new List<int>();
             List<int> notValidateStickersList = new List<int>();
 
             for(int n = 0; n < pinList.Count; n++)
             {
-                if(ListOfHypLists.list[i].list.Contains(pinList[n].GetComponent<Pin_System>().stickerIndex))
+                if(ListOfHypLists.list[i].list.Contains(pinList[n].GetComponent<Sticker_Display>().sticker.index))
                 {
-                    validateStickersList.Add(pinList[n].GetComponent<Pin_System>().stickerIndex);
+                    validateStickersList.Add(pinList[n].GetComponent<Sticker_Display>().sticker.index);
                 }
-                else notValidateStickersList.Add(pinList[n].GetComponent<Pin_System>().stickerIndex);
+                else notValidateStickersList.Add(pinList[n].GetComponent<Sticker_Display>().sticker.index);
             }
             if(validateStickersList.Count == ListOfHypLists.list[i].list.Count)
             {
                 if(notValidateStickersList.Count == 0)
                 {
-                    player.GetComponent<PlayerMemory>().stickerIndexCarnetList.Add(hypotheseresponses[i].GetComponent<Pin_System>().stickerIndex);
-                    player.GetComponent<PlayerMemory>().allStickers.Add(hypotheseresponses[i].GetComponent<Pin_System>().stickerIndex);
+                    player.GetComponent<PlayerMemory>().stickerIndexCarnetList.Add(hypotheseresponses[i]);
+                    player.GetComponent<PlayerMemory>().allStickers.Add(hypotheseresponses[i]);
                     Transform boardCanvas = GameObject.Find("BoardCanvas").transform;
                     Camera camera = Camera.main;
-                    GameObject newSticker = Instantiate(hypotheseresponses[i], new Vector3(camera.transform.position.x, camera.transform.position.y, boardCanvas.position.z), boardCanvas.rotation, boardCanvas); // Fait apparaitre l'hypothèse crée
+                    GameObject newSticker = Instantiate(stickerTemplate, new Vector3(camera.transform.position.x, camera.transform.position.y, boardCanvas.position.z), boardCanvas.rotation, boardCanvas);
+                    //hypotheseresponses[i], new Vector3(camera.transform.position.x, camera.transform.position.y, boardCanvas.position.z), boardCanvas.rotation, boardCanvas); // Fait apparaitre l'hypothèse crée
+                    newSticker.GetComponent<Sticker_Display>().sticker = player.GetComponent<PlayerMemory>().stickersScriptableList[hypotheseresponses[i]];
+                    newSticker.GetComponent<ParticleSystem>().Play();
+                    newSticker.GetComponent<AudioSource>().Play();
                     newSticker.GetComponent<StickerManager>().OnBoard();
-                    if(hypotheseresponses[i].GetComponent<Pin_System>().stickerIndex == finalDemoHypothese.GetComponent<Pin_System>().stickerIndex)
+                    if(i == finalDemoHypothese)
                     {
                         if(GameObject.Find("EndDialog"))
                         {
                             //player.GetComponent<Interactions>().dialAndBookCanvas.SetActive(true);
                             //player.GetComponent<Interactions>().boardCanvas.SetActive(false);
+                            Debug.Log(player.name);
                             player.SetActive(true);
                             player.GetComponent<Interactions>().CloseBoard();
+                            Camera.main.GetComponent<Camera_Manager>().NotOnBoard();
                             //player.GetComponent<Interactions>().state = Interactions.State.Pause;
                             GameObject.Find("EndDialog").GetComponent<Clara_Cinematic>().ExecuteCommand();
                         }
@@ -180,49 +182,10 @@ GameObject player;
         }
         createASticker = false;
     }
-    
-
-    /*void OldLoop()
-    {
-        //CheckMacroList(0);
-        for(int i = 0; i < ListOfPointLists.list.Count; i++)
-        {
-            if(ListOfPointLists.list[i].list.Count == pinList.Count)
-            {
-                for(int n = 0; n < pinList.Count; n++)                                                // Pour chaque élément dans l'hypothèse
-                {
-                    for(int j = 0; j < ListOfPointLists.list[i].list.Count; j++)
-                    {
-                        if(ListOfPointLists.list[i].list[j].GetComponent<Pin_System>().stickerIndex == pinList[n].GetComponent<Pin_System>().stickerIndex)
-                        {
-                            validateList.Add(ListOfPointLists.list[i].list[j]);
-                            if(validateList.Count == ListOfPointLists.list[i].list.Count)
-                            {
-                                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMemory>().stickerIndexCarnetList.Add(hypotheseresponses[i].GetComponent<Pin_System>().stickerIndex);
-                                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMemory>().allStickers.Add(hypotheseresponses[i].GetComponent<Pin_System>().stickerIndex);
-                                Transform boardCanvas = GameObject.Find("BoardCanvas").transform;
-                                Camera camera = Camera.main;
-                                Instantiate(hypotheseresponses[i], new Vector3(camera.transform.position.x, camera.transform.position.y, boardCanvas.position.z), boardCanvas.rotation, boardCanvas); // Fait apparaitre l'hypothèse crée
-                                if(hypotheseresponses[i].GetComponent<Pin_System>().stickerIndex == finalDemoHypothese.GetComponent<Pin_System>().stickerIndex)
-                                {
-                                    GameObject.Find("EndCanvas").GetComponent<EndScreen>().EndDemo();
-                                }
-                                ListOfPointLists.list.RemoveAt(i);   
-                                hypotheseresponses.RemoveAt(i);                                       // Supprime l'hypothèse de la liste d'hypothèses
-                            }
-                        }
-                    }
-                }
-                validateList.Clear();
-            }
-        }
-        validateList.Clear();
-    } */
 
     IEnumerator ActivateTime()
     {
         GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).gameObject.SetActive(true);
-        //Debug.Log(GameObject.Find("FlottingCanvas").transform.GetChild(GameObject.Find("FlottingCanvas").transform.childCount - 4).transform.GetChild(0).GetComponent<Text>().text = quoteList[quoteList.Count - 1]);
         GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).GetChild(0).GetComponent<Text>().text = quoteList[quoteList.Count - 1];
         yield return new WaitForSeconds(1);
         for(int i = 0; i > 0; i--)

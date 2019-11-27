@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 
 public class CarnetSticker : MonoBehaviour
 {
-    public int stickerIndex;
     Vector2 colliderSize;
     GameObject player;
 
@@ -23,41 +22,47 @@ public class CarnetSticker : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*public void Update()
     {
         
-    }
+    }*/
 
     void OnEnable()
     {
-        if(player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().stickerAlreadyGivenList.Contains(stickerIndex))
+        if(player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().stickerAlreadyGivenList.Contains(GetComponent<Sticker_Display>().sticker.index))
         {
-            GetComponent<Image>().color = Color.gray;
+            transform.GetChild(0).GetComponent<Image>().color = Color.gray;
+            //GetComponent<Image>().color = Color.gray;
         }
         else 
         {
-            GetComponent<Image>().color = Color.white;
+            transform.GetChild(0).GetComponent<Image>().color = GetComponent<Sticker_Display>().backgroundColor;
+            //GetComponent<Image>().color = Color.white;
         }
     }
     void OnMouseDown()
     {
         if(player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.tag == "PNJinteractable")
         {
-            player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().Response(stickerIndex);
+            player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().Response(GetComponent<Sticker_Display>().sticker.index);
             player.GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
             transform.parent.parent.parent.parent.gameObject.SetActive(false);
         }
         if(player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.name == "Phone")
         {
-            player.GetComponent<Interactions>().PNJContact.GetComponent<Phone>().GetInTouch(stickerIndex);
+            player.GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
+            Debug.Log(player.GetComponent<Interactions>().PNJContact);
+            player.GetComponent<Interactions>().PNJContact.GetComponent<Phone>().GetInTouch(GetComponent<Sticker_Display>().sticker.index);
         }
     }
-
+/*
     void OnMouseOver()
     {
-        if(transform.childCount > 0)
+        foreach(Transform child in transform)
         {
-            Destroy(transform.GetChild(0).gameObject);
-        }
+            if(child.name == "New(Clone)")
+            {
+                Destroy(child.gameObject);
+            }
+        }*/
     }
-}

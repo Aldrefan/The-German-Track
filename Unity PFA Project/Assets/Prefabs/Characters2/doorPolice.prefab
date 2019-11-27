@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8174987153838778231}
   - component: {fileID: 8174987153838778228}
+  - component: {fileID: 718997490}
+  - component: {fileID: 718997488}
   m_Layer: 0
   m_Name: doorPolice
   m_TagString: Untagged
@@ -24,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8174987153838778230}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -449.4, y: -34.3, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children: []
@@ -41,7 +43,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -57,3 +59,67 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.59}
   m_EdgeRadius: 0
+--- !u!61 &718997490
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8174987153838778230}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.16, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.21, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &718997488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8174987153838778230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandList: 020000000100000006000000
+  annexInformation:
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 0.1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 0
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 0
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+  action: 0
+  fromStart: 0
+  triggerByContact: 1

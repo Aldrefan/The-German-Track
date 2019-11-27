@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,9 +24,12 @@ public class Sticker_Display : MonoBehaviour
             text.text = sticker.frenchText;
         }
         else text.text = sticker.englishText;
+        if(sticker.index >= GameObject.Find("Kenneth").GetComponent<PlayerMemory>().charactersRange.x && sticker.index <= GameObject.Find("Kenneth").GetComponent<PlayerMemory>().charactersRange.y)
+        text.gameObject.SetActive(false);
         backgroundSticker.sprite = sticker.stickerBackground;
-        backgroundSticker.color = sticker.color;
+        backgroundColor = sticker.color;
+        transform.GetChild(0).GetComponent<Image>().color = backgroundColor;
         backgroundSticker.rectTransform.sizeDelta = new Vector2(sticker.backgoundSize.x, sticker.backgoundSize.y);
-        text.rectTransform.sizeDelta = new Vector2(GetComponent<BoxCollider2D>().size.x -50, GetComponent<BoxCollider2D>().size.y -20);
+        //text.rectTransform.sizeDelta = new Vector2(GetComponent<BoxCollider2D>().size.x, GetComponent<BoxCollider2D>().size.y/*  -20*/);
     }
 }

@@ -20,6 +20,7 @@ public class Interactions : MonoBehaviour
     bool boardIsNear;
     bool onBook = false;
     public Transform carnet;
+    Transform carnetUI;
     #endregion
 
     #region Other Informations
@@ -39,7 +40,7 @@ public class Interactions : MonoBehaviour
 
     void Awake()
     {
-        carnet = GameObject.Find("CarnetUI").transform;
+        carnetUI = GameObject.Find("CarnetUI").transform;
         animator = GetComponent<Animator>();
     }
 
@@ -50,12 +51,18 @@ public class Interactions : MonoBehaviour
         //animator = GetComponent<Animator>();
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.transform.tag == "PNJinteractable" || collision.transform.tag == "Item" || collision.transform.tag == "Board" || collision.transform.tag == "Interaction" || collision.transform.tag == "Shortcut")
+        if(state == State.Normal || state != State.InCinematic)
         {
-            PNJContact = collision.gameObject;
-            collision.transform.GetChild(0).gameObject.SetActive(true);
+            if (collision.transform.tag == "PNJinteractable" || collision.transform.tag == "Item" || collision.transform.tag == "Board" || collision.transform.tag == "Interaction" || collision.transform.tag == "Shortcut")
+            {
+                PNJContact = collision.gameObject;
+                if (collision.transform.childCount > 0)
+                {
+                    collision.transform.GetChild(0).gameObject.SetActive(true);
+                }
+            }
         }
     }
 
@@ -64,60 +71,12 @@ public class Interactions : MonoBehaviour
          if (collision.transform.tag == "PNJinteractable" || collision.transform.tag == "Item" || collision.transform.tag == "Board" || collision.transform.tag == "Interaction" || collision.transform.tag == "Shortcut")
         {
             PNJContact = null;
-            collision.transform.GetChild(0).gameObject.SetActive(false);
-        }
-    }
-
-    void Update() // Rien
-    {
-        /*if(Input.GetButtonDown("Interaction"))
-        {
-            if(PNJContact != null)
+            if (collision.transform.childCount > 0)
             {
-                if(!isInDialog)
-                {
-                    StartDialog();
-                }
-                else 
-                {
-                    if(PNJContact.GetComponent<PNJ>().quoteFinished)
-                    {
-                        PNJContact.GetComponent<PNJ>().Startdialogue();
-                    }
-                    else 
-                    {
-                        GameObject activePanel = GameObject.FindObjectOfType<DialogInterface>().gameObject;
-                        PNJContact.GetComponent<PNJ>().FullQuote(activePanel);
-                    }
-                }
-            }
-            else if(boardIsNear)
-            {
-                if(!onBoard)
-                {
-                    if(isInDialog)
-                    {
-                        EndDialog();
-                    }
-                    Camera.main.GetComponent<Camera_Manager>().OnBoard();
-                    GetComponent<PlayerMemory>().CheckStickersBoard();
-                    onBoard = true;
-                }
+                collision.transform.GetChild(0).gameObject.SetActive(false);
             }
         }
-
-        if(Input.GetButtonDown("Cancel"))
-        {
-            if(isInDialog && PNJContact.GetComponent<PNJ>().allDialogs.listOfDialogs[PNJContact.GetComponent<PNJ>().dialogIndex].canAskQuestions)
-            {
-                Camera.main.GetComponent<Camera_Manager>().NotOnCarnet();
-                onBook = false;
-                PNJContact.GetComponent<PNJ>().EndDialog();
-            }
-            else OpenOrCloseCarnet();
-        }*/
     }
-
 
     void FixedUpdate()
     {
@@ -168,7 +127,7 @@ public class Interactions : MonoBehaviour
 
     void OpenBookDuringDialog()
     {
-        if(Input.GetButtonDown("MenuSpecial") && carnet.GetComponent<Animator>().GetBool("InDialog"))
+        if(Input.GetButtonDown("MenuSpecial") && carnetUI.GetComponent<Animator>().GetBool("InDialog"))
         {
             if(!GameObject.Find("Carnet"))
             {
@@ -198,8 +157,8 @@ public class Interactions : MonoBehaviour
     public void OpenBookExe()
     {
         //Camera.main.GetComponent<Camera_Manager>().OnCarnet();
-        dialAndBookCanvas.transform.GetChild(dialAndBookCanvas.transform.childCount - 1).gameObject.SetActive(true);
-        carnet.GetComponent<Animator>().SetBool("ClickOn", true);
+        dialAndBookCanvas.transform.GetChild(5).gameObject.SetActive(true);
+        carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);
         GetComponent<PlayerMemory>().CheckStickersCarnet();
         ChangeState(State.OnCarnet);
     }
@@ -207,10 +166,10 @@ public class Interactions : MonoBehaviour
     {
         if(Input.GetButtonDown("Cancel"))
         {
-            if(PNJContact.GetComponent<PNJ>().dialogIndex > 0 || PNJContact.GetComponent<PNJ>().allDialogs.listOfDialogs[PNJContact.GetComponent<PNJ>().dialogIndex].canAskQuestions)
+            if(PNJContact.GetComponent<PNJ>().dialogIndex > 0)
             {
                 PNJContact.GetComponent<PNJ>().EndDialog();
-                carnet.GetComponent<Animator>().SetBool("ClickOn", false);
+                carnetUI.GetComponent<Animator>().SetBool("ClickOn", false);
                 //animator.SetBool("Talk", false);
                 ChangeState(State.Normal);
             }
@@ -218,7 +177,7 @@ public class Interactions : MonoBehaviour
     }
     void ChangeLineOfDialog()
     {
-        if(Input.GetButtonDown("Interaction"))
+        if(Input.GetButtonDown("Interaction") && !dialAndBookCanvas.transform.GetChild(6).gameObject.activeInHierarchy)
         {
             if(PNJContact.GetComponent<PNJ>().quoteFinished)
             {
@@ -241,7 +200,7 @@ public class Interactions : MonoBehaviour
     }
     void OpenDialog()
     {
-        if(Input.GetButtonDown("Interaction") && PNJContact!= null)
+        if(Input.GetButtonDown("Interaction") && PNJContact!= null && !dialAndBookCanvas.transform.GetChild(6).gameObject.activeInHierarchy)
         {
             if(PNJContact.tag == "PNJinteractable" || PNJContact.tag == "Item")
             {
@@ -261,9 +220,10 @@ public class Interactions : MonoBehaviour
             boardCanvas.SetActive(true);
             Camera.main.GetComponent<Camera_Manager>().OnBoard();
             GetComponent<PlayerMemory>().CheckStickersBoard();
-            //ChangeState(State.OnBoard);
+            ChangeState(State.OnBoard);
             Camera.main.GetComponent<CameraFollow>().actualRoom.SetActive(false);
-            gameObject.SetActive(false);
+            gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
+            //gameObject.SetActive(false);
         }
     }
 
@@ -277,8 +237,9 @@ public class Interactions : MonoBehaviour
     public void CloseBookExe()
     {
         //Camera.main.GetComponent<Camera_Manager>().NotOnCarnet();
-        dialAndBookCanvas.transform.GetChild(dialAndBookCanvas.transform.childCount - 1).gameObject.SetActive(false);
-        carnet.GetComponent<Animator>().SetBool("ClickOn", false);
+        dialAndBookCanvas.transform.GetChild(5).gameObject.SetActive(false);
+        //dialAndBookCanvas.transform.GetChild(dialAndBookCanvas.transform.childCount - 1).gameObject.SetActive(false);
+        carnetUI.GetComponent<Animator>().SetBool("ClickOn", false);
         if(isInDialog)
         {
             state = State.InDialog;
@@ -298,12 +259,12 @@ public class Interactions : MonoBehaviour
 
     public void ChangeState(State newState)
     {
-        Debug.Log(newState);
+        //Debug.Log(newState);
         switch(newState)
         {
             case State.InCinematic:
-            carnet.GetComponent<Animator>().SetBool("ClickOn", true);
-            carnet.GetComponent<Animator>().SetBool("InDialog", false);
+            carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);
+            carnetUI.GetComponent<Animator>().SetBool("InDialog", false);
             DisableMovements();
             state = State.InCinematic;
             break;
@@ -312,8 +273,8 @@ public class Interactions : MonoBehaviour
             onBook = false;
             isInDialog = false;
             animator.SetBool("Talk", false);
-            carnet.GetComponent<Animator>().SetBool("ClickOn", false);
-            carnet.GetComponent<Animator>().SetBool("InDialog", false);
+            carnetUI.GetComponent<Animator>().SetBool("ClickOn", false);
+            carnetUI.GetComponent<Animator>().SetBool("InDialog", false);
             EnableMovements();
             state = State.Normal;
             break;
@@ -338,8 +299,8 @@ public class Interactions : MonoBehaviour
 
             case State.Pause :
             GameObject.Find("Necessary_Floating_Canvas").transform.GetChild(2).gameObject.SetActive(true);
-            carnet.GetComponent<Animator>().SetBool("ClickOn", true);
-            carnet.GetComponent<Animator>().SetBool("InDialog", false);
+            carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);
+            carnetUI.GetComponent<Animator>().SetBool("InDialog", false);
             DisableMovements();
             state = State.Pause;
             break;
@@ -381,9 +342,9 @@ public class Interactions : MonoBehaviour
         //animator.SetBool("Talk", true);
         //animator.SetBool("Walk", false);
         //CloseCarnet();
-        int redirectionEventListCount = PNJContact.GetComponent<PNJ>().eventRedirection.redirectionEventList.Count;
+//        int redirectionEventListCount = PNJContact.GetComponent<PNJ>().eventRedirection.redirectionEventList.Count;
         int eventGivenListCount = PNJContact.GetComponent<PNJ>().eventRedirection.eventGivenList.Count;
-        if(PNJContact.GetComponent<PNJ>().allDialogs.listOfDialogs[PNJContact.GetComponent<PNJ>().dialogIndex].canAskQuestions)
+        /*if(PNJContact.GetComponent<PNJTest>().allDialogs[PNJContact.GetComponent<PNJTest>().dialogIndex].canAskQuestions)
         {
             carnet.GetComponent<Animator>().SetBool("InDialog", true);
         }
@@ -395,9 +356,9 @@ public class Interactions : MonoBehaviour
         if(redirectionEventListCount > 0 && eventGivenListCount > 0)
         {
             PNJContact.GetComponent<PNJ>().ResponseEvent();
-        }
+        }*/
 
-        if((redirectionEventListCount == 0) || (eventGivenListCount == 0) || (!PNJContact.GetComponent<PNJ>().haveEvent))
+        if(((eventGivenListCount == 0) || (!PNJContact.GetComponent<PNJ>().haveEvent)))
         {
             if(PnjMet.Contains(PNJContact.name))
             {
@@ -419,48 +380,17 @@ public class Interactions : MonoBehaviour
 
     public void EndDialog()
     {
-        //animator.SetBool("Talk", false);
-        /*if (PNJContact.name == "dialog_williamscott")
-        {
-            GetComponent<EventsCheck>().eventsList.Add("endDialogWilliamScott");
-            GetComponent<EventsCheck>().CheckEvents("endDialogWilliamScott");
-            GameObject.Find("scott_nelson").GetComponent<Clara_Cinematic>().ExecuteCommand();
-        }*/
-        /*if (PNJContact == GameObject.Find("marvin_meyer_phone"))
-        {
-            GetComponent<EventsCheck>().eventsList.Remove("numberMarvinMeyer");
-            PNJContact = GameObject.Find("empty_pibphone");
-        }
-        if (PNJContact == GameObject.Find("clara_grey_phone"))
-        {
-            GetComponent<EventsCheck>().eventsList.Remove("numberClaraGrey");
-            PNJContact = GameObject.Find("empty_kennethphone");
-        }*/
-        /*if(GetComponent<EventsCheck>().fauteuil)
-        {
-            GetComponent<EventsCheck>().StartCoroutine("Fade");
-            GameObject.Find("FadePanel").GetComponent<Animator>().SetTrigger("FadeIn");
-            GameObject.Find("Fauteuil").SetActive(false);
-            GetComponent<EventsCheck>().clara.SetActive(false);
-            GameObject.Find("E_InvisibleWall").SetActive(false);
-            GetComponent<EventsCheck>().fauteuil = false;
-        }*/
-        //GetComponent<MovementsPlayer>().enabled = true;
-        //carnet.GetComponent<Animator>().SetBool("InDialog", false);
-        /*if(PNJContact.name == "Clara")
-        {
-            isInCinematic = false;
-        }*/
         if(state != State.InCinematic)
         {
             GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", false);
-            carnet.GetComponent<Animator>().SetBool("InDialog", false);
-            ChangeState(State.Normal);
+            carnetUI.GetComponent<Animator>().SetBool("InDialog", false);
+            //ChangeState(State.Normal);
+            StartCoroutine("TimerQuitDialog");
         }
         else 
         {
-            carnet.GetComponent<Animator>().SetBool("InDialog", false);
-            carnet.GetComponent<Animator>().SetBool("ClickOn", true);            
+            carnetUI.GetComponent<Animator>().SetBool("InDialog", false);
+            carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);            
             PNJContact.GetComponent<Clara_Cinematic>().CheckIndex();
             PNJContact = null;
         }
@@ -469,17 +399,20 @@ public class Interactions : MonoBehaviour
             PNJContact.SetActive(false);
             PNJContact = null;
         }
-        //carnet.GetComponent<Animator>().SetBool("InDialog", false);
-        //carnet.GetComponent<Animator>().SetBool("ClickOn", false);
-        //PNJContact = null;
-        //canOpenCarnet = true;
-        //state = State.Normal;
     }
+
     void OpenPauseMenu()
     {
         if(Input.GetButtonDown("Cancel"))
         {
             ChangeState(State.Pause);
         }
+    }
+
+    IEnumerator TimerQuitDialog()
+    {
+        state = State.Pause;
+        yield return new WaitForSecondsRealtime(0.1f);
+        ChangeState(State.Normal);
     }
 }

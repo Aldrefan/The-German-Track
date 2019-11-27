@@ -8,8 +8,9 @@ public class CarnetGoal : MonoBehaviour
     public Vector3 scale;
     public Font font;
     public Vector2 heightWidth;
-
     public int fontSize;
+    public List<string> goalList;
+    public List<string> removeGoalList;
 
     // Start is called before the first frame update
     void Start()
@@ -20,23 +21,47 @@ public class CarnetGoal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.K))
-        {
-            NewGoal("Fait quelque chose putain, pense à ta mère");
-        }
+        
     }
 
     public void NewGoal(string goalString)
     {
-        GameObject newGoal = new GameObject("Goal", typeof (RectTransform));
-        newGoal.transform.SetParent(transform);
-        newGoal.GetComponent<RectTransform>().localPosition = Vector3.zero;
-        newGoal.AddComponent<Text>();
-        newGoal.GetComponent<RectTransform>().sizeDelta = heightWidth;
-        newGoal.GetComponent<Text>().color = Color.black;
-        newGoal.GetComponent<Text>().font = font;
-        newGoal.GetComponent<Text>().text = goalString;
-        newGoal.GetComponent<Text>().horizontalOverflow =  HorizontalWrapMode.Overflow;
-        newGoal.transform.localScale = scale;
+        goalList.Add(goalString);
+    }
+
+    public void RemoveGoal(string goalString)
+    {
+        removeGoalList.Add(goalString);
+    }
+
+    void OnEnable()
+    {
+        foreach (string goal in goalList)
+        {
+            GameObject newGoal = new GameObject("Goal", typeof (RectTransform));
+            newGoal.transform.SetParent(transform);
+            newGoal.GetComponent<RectTransform>().localPosition = Vector3.zero;
+            newGoal.name = goal;
+            newGoal.AddComponent<Text>();
+            newGoal.GetComponent<RectTransform>().sizeDelta = heightWidth;
+            newGoal.GetComponent<Text>().color = Color.black;
+            newGoal.GetComponent<Text>().font = font;
+            newGoal.GetComponent<Text>().text = goal;
+            newGoal.GetComponent<Text>().horizontalOverflow =  HorizontalWrapMode.Overflow;
+            newGoal.transform.localScale = scale;
+        }
+        goalList.Clear();
+
+        foreach (string goal in removeGoalList)
+        {
+            foreach (Transform finishedGoal in transform)
+            {
+                if(finishedGoal.name == goal)
+                {
+                    Destroy(finishedGoal.gameObject);
+                }
+            }
+        }
+        removeGoalList.Clear();
     }
 }

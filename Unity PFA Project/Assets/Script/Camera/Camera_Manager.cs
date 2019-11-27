@@ -85,6 +85,21 @@ public class Camera_Manager : MonoBehaviour
         //responseButton.SetActive(false);
     }
 
+    public void EndLevel()
+    {
+        cameraFollow.actualRoom.SetActive(true);
+        player.SetActive(true);
+        boardCanvas.SetActive(false);
+        cameraBoard.enabled = false;
+        cameraFollow.enabled = true;
+    }
+
+    /*IEnumerator EndTimer()
+    {
+        yield return new WaitForSecondsRealtime(1);
+
+    }*/
+
     public void OnCarnet()
     {
         //GetComponent<CameraFollow>().enabled = false;

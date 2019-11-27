@@ -79,7 +79,7 @@ public class InGameMenu : MonoBehaviour
 
     public void SaveGame()
     {
-        Debug.Log("SaveGame");
+        //Debug.Log("SaveGame");
         //LIGNE DE COMMANDE DE SAVE GAME
         GameObject.Find("Saver").GetComponent<Saver>().MakeASave();
         transform.GetChild(4).transform.GetChild(0).transform.GetChild(3).gameObject.SetActive(true); //feedbackSave
@@ -95,16 +95,16 @@ public class InGameMenu : MonoBehaviour
 
     public void ConfirmReturnTitle()
     {
-        Debug.Log("SaveGame");
+        //Debug.Log("SaveGame");
         //LIGNE DE COMMANDE DE SAVE GAME
         GameObject.Find("Saver").GetComponent<Saver>().MakeASave();
-        Debug.Log("ReturnTitle");
+        //Debug.Log("ReturnTitle");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void ReturnTitleWithoutSave()
     {
-        Debug.Log("ReturnTitle");
+        //Debug.Log("ReturnTitle");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
@@ -118,16 +118,16 @@ public class InGameMenu : MonoBehaviour
 
         public void ConfirmQuitGame()
     {
-        Debug.Log("SaveGame");
+        //Debug.Log("SaveGame");
         //LIGNE DE COMMANDE DE SAVE GAME
         GameObject.Find("Saver").GetComponent<Saver>().MakeASave();
-        Debug.Log("QuitGame");
+        //Debug.Log("QuitGame");
         Application.Quit();
     }
 
     public void QuitGameWithoutSave()
     {
-        Debug.Log("QuitGame");
+        //Debug.Log("QuitGame");
         //GameObject.Find("Saver").GetComponent<Saver>().ClearSave();
         Application.Quit();
     }
@@ -191,6 +191,11 @@ public class InGameMenu : MonoBehaviour
     {
         gameObject.SetActive(false);
         GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().ChangeState(Interactions.State.Normal);
+    }
+
+    public void PlayTypeSound()
+    {
+        GameObject.Find("TypeSound").transform.GetComponent<AudioSource>().Play(0);
     }
 
     /*IEnumerator TimerResume()

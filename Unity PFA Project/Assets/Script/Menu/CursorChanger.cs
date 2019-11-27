@@ -5,7 +5,8 @@ using UnityEngine;
 public class CursorChanger : MonoBehaviour
 {
     public Texture2D cursor;
-    void Awake()
+
+    void Start()
     {
         Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
     }

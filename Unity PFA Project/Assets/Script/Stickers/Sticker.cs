@@ -10,6 +10,5 @@ public class Sticker : ScriptableObject
     public Color color;
     public int index;
     public Sprite stickerBackground;
-
     public Vector2 backgoundSize;
 }

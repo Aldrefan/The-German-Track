@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 278563568155890672}
   - component: {fileID: 278563568155890673}
   m_Layer: 0
-  m_Name: john_seer
+  m_Name: barman
   m_TagString: PNJinteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,10 +149,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9625550827e375945965895962ede1f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.19, y: 0.59}
@@ -185,7 +185,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 0.59}
+  m_Size: {x: 0.2, y: 0.59}
   m_EdgeRadius: 0
 --- !u!114 &278563568155890673
 MonoBehaviour:
@@ -200,14 +200,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJName: Barman
+  characterSprite: {fileID: 21300000, guid: 9625550827e375945965895962ede1f2, type: 3}
+  kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
   dialogIndex: 0
   transitionQuote: 3
+  negativeQuote: 4
   haveEvent: 0
+  stickerAlreadyGivenList: 
   stickerRedirection:
     stickerGivenList: 09000000
     redirectionList: 02000000
   eventRedirection:
-    eventGivenList: 
+    eventGivenList: []
     redirectionEventList: 
   allDialogs:
     listOfDialogs:
@@ -216,45 +220,53 @@ MonoBehaviour:
         characterName: Barman
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Un demi.
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Mais encore ?
         characterName: Barman
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Surprenez-moi.
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
-      canAskQuestions: 0
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 1
       endDialog: 1
     - dialog:
       - quote: Ce sera quoi ?
         characterName: Barman
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Un demi.
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Mais encore ?
         characterName: Barman
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Surprenez-moi.
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       endDialog: 1
     - dialog:
@@ -262,23 +274,28 @@ MonoBehaviour:
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: Possible, vous lui voulez quoi ?
         characterName: Barman
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "J\u2019ai un truc \xE0 lui dire, c\u2019est de la part de Scott Nelson."
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       - quote: "Si vous voulez. Utilisez le t\xE9l\xE9phone l\xE0-bas, je vais vous
           donner le num\xE9ro."
         characterName: Barman
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 03000000
+        eventTrigger:
+        - pibPhoneUnlocked
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       endDialog: 0
     - dialog:
@@ -286,6 +303,18 @@ MonoBehaviour:
         characterName: Barman
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       endDialog: 0
+    - dialog:
+      - quote: "Aucune id\xE9e..."
+        characterName: Barman
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 1
+      endDialog: 0
+  quoteFinished: 0
+  stickersAlreadyGiven: 

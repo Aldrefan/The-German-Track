@@ -8,7 +8,6 @@ public class EventsCheck : MonoBehaviour
     public bool fauteuil;
     bool lamp;
     public GameObject EtiquetteLaissezPasser;
-    public GameObject clara;
 
     // Start is called before the first frame update
     void Start()
@@ -25,36 +24,10 @@ public class EventsCheck : MonoBehaviour
             GetComponent<PNJ>().ChangeDialog(4);
             GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
         }*/
-        if(GetComponent<Interactions>().PNJContact && GetComponent<Interactions>().PNJContact.tag == "Interaction" && Input.GetButtonDown("Interaction") && !GetComponent<Interactions>().isInDialog)
+        if(GetComponent<Interactions>().PNJContact && GetComponent<Interactions>().PNJContact.tag == "Interaction" && Input.GetButtonDown("Interaction") && !GetComponent<Interactions>().isInDialog && GetComponent<Interactions>().state != Interactions.State.OnCarnet)
         {
             CheckInteraction();
         }
-
-        /*if(lamp && Input.GetButtonDown("Interaction"))// Initial
-        {
-            //JsonSave save = SaveGameManager.GetCurrentSave();
-            if(GetComponent<PlayerMemory>().allStickers.Contains(15))
-            {
-                if(eventsList.Contains("LettreDécodée"))
-                {
-                    GetComponent<Interactions>().PNJContact = gameObject;
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PNJ>().ChangeDialog(3);
-                }
-                else
-                {
-                    eventsList.Add("LettreDécodée");
-                    GetComponent<Interactions>().PNJContact = gameObject;
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PNJ>().ChangeDialog(2);
-                    //GameObject.Find("Lamp").SetActive(false);
-                    lamp = false;
-                }
-            }
-            else 
-            {
-                GetComponent<Interactions>().PNJContact = gameObject;
-                GameObject.FindGameObjectWithTag("Player").GetComponent<PNJ>().ChangeDialog(3);
-            }
-        }*/
     }
 
     IEnumerator Fade()
@@ -194,9 +167,11 @@ public class EventsCheck : MonoBehaviour
         {
             case "laissezPasser":
                 EtiquetteLaissezPasser.GetComponent<Animator>().SetTrigger("NewSticker");
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller voir Lou Ellis à l'hôpital.");
                 break;
+
             case "hopitalOpen":
-                GameObject.Find("doorHopital").SetActive(false);
+                GetComponent<Interactions>().PNJContact.GetComponent<Clara_Cinematic>().ExecuteCommand();
                 break;
 
             case "policeOpen":
@@ -217,10 +192,14 @@ public class EventsCheck : MonoBehaviour
                 pibPhone.transform.GetChild(2).gameObject.SetActive(true);
                 break;
 
+            case "getNumberMarvinMeyer":
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Parler à Marvin Meyer.");
+                break;
+
             case "numberMarvinMeyer":
+                GameObject.Find("pib_phone").transform.GetChild(1).gameObject.SetActive(false);
                 GetComponent<Interactions>().PNJContact = GameObject.Find("marvin_meyer_phone");
                 GetComponent<Interactions>().StartDialog();
-                GetComponent<Interactions>().carnet.GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Contactez Marvin Myer");
                 break;
 
             case "numberClaraGrey":
@@ -228,10 +207,42 @@ public class EventsCheck : MonoBehaviour
                 GetComponent<Interactions>().StartDialog();
                 break;
 
-            case "doorKurtOpen":
+            /*case "doorKurtOpen":
                 GetComponent<Interactions>().PNJContact.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sounds/Door/KEY_In_Wood_Door_01_mono");
                 GetComponent<Interactions>().PNJContact.GetComponent<AudioSource>().Play();
                 GameObject.Find("doorKurt").SetActive(false);
+                break;*/
+
+            case "GoToSleep":
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller Dormir.");
+                break;
+
+            case "HasSlep":
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Aller Dormir.");
+                break;
+
+            case "GoToSeeWhite":
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller voir White au commissariat.");
+                break;
+
+            case "HasSeenWhite":
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Aller voir White au commissariat.");
+                break;
+
+            case "HasSeenLou":
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Aller voir Lou Ellis à l'hôpital.");
+                break;
+
+            case "HasContactedMarvin":
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Parler à Marvin Meyer.");
+                break;
+            
+            case "TalkToTheBarman":
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Parler de Marvin au Barman.");
+                break;
+
+            case "HasTalkedToTheBarman":
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Parler de Marvin au Barman.");
                 break;
 
             default:

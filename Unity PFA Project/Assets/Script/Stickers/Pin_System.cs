@@ -8,7 +8,6 @@ public class Pin_System : MonoBehaviour
     Vector3 screenPoint;
     public GameObject pin;
     public bool click;
-    public int stickerIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +37,11 @@ public class Pin_System : MonoBehaviour
         mouseOn = false;
     }
 
+    public void PlaySpawnAnimation()
+    {
+        
+    }
+
     public void PointerDown()
     {
         if(Input.GetKey(KeyCode.Mouse0))
@@ -52,10 +56,8 @@ public class Pin_System : MonoBehaviour
                 }
                 else 
                 {
-                    Debug.Log("1");
                     if(i == transform.childCount || transform.childCount == 0)
                     {
-                        Debug.Log("2");
                         click = true;
                     }
                 }

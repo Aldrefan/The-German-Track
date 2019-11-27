@@ -26,9 +26,11 @@ public class Phone : MonoBehaviour
         {
             for(int i = 0; i < contactList.Count; i++)
             {
+                //Debug.Log("index : " + i);
                 if(profil == contactList[i])
                 {
-                    if(i <= justStickerNeededList.Count && justStickerNeededList[i])
+                    //Debug.Log("index found");
+                    if(justStickerNeededList[i])
                     {
                         player.GetComponent<Interactions>().CloseBookExe();
                         player.GetComponent<Interactions>().PNJContact = transform.GetChild(i).gameObject;
@@ -44,8 +46,8 @@ public class Phone : MonoBehaviour
                     }
                 }
             }
-            player.GetComponent<Interactions>().CloseBookExe();
-            GetComponent<PNJ>().ChangeDialog(GetComponent<PNJ>().negativeQuote);
+            /*player.GetComponent<Interactions>().CloseBookExe();
+            GetComponent<PNJ>().ChangeDialog(GetComponent<PNJ>().negativeQuote);*/
         }
         else
         {
