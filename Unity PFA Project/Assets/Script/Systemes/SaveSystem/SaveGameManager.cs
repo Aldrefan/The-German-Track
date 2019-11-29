@@ -29,7 +29,7 @@ public class JsonSave
     public List<Vector3> stickersPositionOnBoard;
     public List<int> memoryStickers;
     public List<string> meetingList;
-    public string language = "french";
+    public string language = "english";
     public List<string> eventList;
 }
 

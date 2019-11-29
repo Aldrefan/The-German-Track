@@ -15,6 +15,7 @@ public class Saver : MonoBehaviour
     public GameObject boardCanvas;
     public List<string> eventListFM;
     public List<string> caracters;
+    
     // Start is called before the first frame update
     void Start()
     {
