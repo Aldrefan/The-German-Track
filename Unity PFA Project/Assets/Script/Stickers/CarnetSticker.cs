@@ -17,7 +17,7 @@ public class CarnetSticker : MonoBehaviour
 
     void Start()
     {
-        colliderSize = transform.parent.GetComponent<GridLayoutGroup>().cellSize;
+        colliderSize = transform.GetChild(0).GetComponent<RectTransform>().sizeDelta;
         GetComponent<BoxCollider2D>().size = colliderSize;
     }
 

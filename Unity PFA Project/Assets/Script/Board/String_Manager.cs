@@ -71,13 +71,13 @@ public GameObject stickerTemplate;
         }
         else lineRenderer.enabled = false;
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        /*if(Input.GetKeyDown(KeyCode.Space))
         {
             Loop();
-        }
+        }*/
     }
 
-    void Loop()
+    public void Loop()
     {
         for(int i = 0; i < pinList.Count; i++)
             {

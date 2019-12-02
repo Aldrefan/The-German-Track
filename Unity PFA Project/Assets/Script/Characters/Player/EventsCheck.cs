@@ -8,6 +8,7 @@ public class EventsCheck : MonoBehaviour
     public bool fauteuil;
     bool lamp;
     public GameObject EtiquetteLaissezPasser;
+    public List<GameObject> appartmentKurtLocked;
 
     // Start is called before the first frame update
     void Start()
@@ -161,6 +162,14 @@ public class EventsCheck : MonoBehaviour
         }
     }
 
+    void UnlockKurtAppartment()
+    {
+        for(int i = 0; i < appartmentKurtLocked.Count; i++)
+            {
+                appartmentKurtLocked[i].GetComponent<BoxCollider2D>().enabled = true;
+            }
+    }
+
     public void CheckEvents(string newEvent)
     {
         switch (newEvent)
@@ -243,6 +252,10 @@ public class EventsCheck : MonoBehaviour
 
             case "HasTalkedToTheBarman":
                 GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Parler de Marvin au Barman.");
+                break;
+
+            case "TalkToKurt":
+                UnlockKurtAppartment();
                 break;
 
             default:
