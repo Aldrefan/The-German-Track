@@ -6,12 +6,18 @@ public class ActiveCharacterScript : MonoBehaviour
 {
     public GameObject actualCharacter;
     [System.Serializable]
-    public class playableCharacter
+    public class PlayableCharacter
     {
         public GameObject character;
         public bool isPlayable;
+
+        public PlayableCharacter(GameObject newCharacter, bool playable)
+        {
+            character = newCharacter;
+            isPlayable = playable;
+        }
     }
-    public List<playableCharacter> playableCharactersList;
+    public List<PlayableCharacter> playableCharactersList;
     public GameObject startingCharacter;
 
     public void ChangeActiveCharacter(string newCharacterName)
@@ -24,5 +30,4 @@ public class ActiveCharacterScript : MonoBehaviour
             }
         }
     }
-    
 }

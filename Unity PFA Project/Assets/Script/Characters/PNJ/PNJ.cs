@@ -73,6 +73,7 @@ public class PNJ : MonoBehaviour
     public bool quoteFinished;
     IEnumerator show;
     public List<int> stickersAlreadyGiven;
+    string actualQuote;
 
     // Start is called before the first frame update
     void Start()
@@ -240,6 +241,10 @@ public class PNJ : MonoBehaviour
         {
             allDialogs.listOfDialogs[dialogIndex].canAskQuestions = true;
         }*/
+        if(transform.parent && transform.parent.GetComponent<Phone>())
+        {
+            transform.parent.GetComponent<BoxCollider2D>().enabled = true;
+        }
         player.GetComponent<Interactions>().EndDialog();
         rightPanel.SetActive(false);
         leftPanel.SetActive(false);
@@ -267,7 +272,20 @@ public class PNJ : MonoBehaviour
 
     public IEnumerator ShowText(GameObject panel)
     {
+        /*quoteFinished = false;
+        //Debug.Log(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
+        actualQuote = LanguageManager.Instance.GetDialog(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
+        for(int i = 0; i < actualQuote.Length + 1; i++)
+        {
+            currentLine = actualQuote.Substring(0,i);
+            panel.transform.GetChild(1).GetComponent<Text>().text = currentLine;
+            yield return new WaitForSeconds(dialogDelay);
+        }
+        quoteFinished = true;
+        DialogSecondPhase();*/
+
         quoteFinished = false;
+        actualQuote = LanguageManager.Instance.GetDialog(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
         for(int i = 0; i < allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote.Length + 1; i++)
         {
             currentLine = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote.Substring(0,i);
