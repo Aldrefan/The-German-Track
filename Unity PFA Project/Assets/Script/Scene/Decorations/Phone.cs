@@ -24,30 +24,38 @@ public class Phone : MonoBehaviour
     {
         if(contactList.Contains(profil))
         {
-            for(int i = 0; i < contactList.Count; i++)
+            int i = 0;
+            for(i = 0; i < contactList.Count; i++)
             {
-                //Debug.Log("index : " + i);
+                Debug.Log("index : " + i);
                 if(profil == contactList[i])
                 {
-                    //Debug.Log("index found");
+                    Debug.Log("index found");
                     if(justStickerNeededList[i])
                     {
+                        Debug.Log("Only Sticker Needed");
                         player.GetComponent<Interactions>().CloseBookExe();
+                        GetComponent<BoxCollider2D>().enabled = false;
                         player.GetComponent<Interactions>().PNJContact = transform.GetChild(i).gameObject;
                         player.GetComponent<Interactions>().StartDialog();
                         break;
                     }
                     else if(player.GetComponent<Interactions>().PnjMet.Contains(transform.GetChild(i).name))
                     {
+                        Debug.Log("Meeting Needed");
                         player.GetComponent<Interactions>().CloseBookExe();
+                        GetComponent<BoxCollider2D>().enabled = false;
                         player.GetComponent<Interactions>().PNJContact = transform.GetChild(i).gameObject;
                         player.GetComponent<Interactions>().StartDialog();
                         break;
                     }
                 }
             }
-            /*player.GetComponent<Interactions>().CloseBookExe();
-            GetComponent<PNJ>().ChangeDialog(GetComponent<PNJ>().negativeQuote);*/
+            if(i > contactList.Count)
+            {
+                player.GetComponent<Interactions>().CloseBookExe();
+                GetComponent<PNJ>().ChangeDialog(GetComponent<PNJ>().negativeQuote);
+            }
         }
         else
         {

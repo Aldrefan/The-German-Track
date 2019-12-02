@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SceneInformations : MonoBehaviour
 {
+    public string zoneName;
     public int zoneIndex;
     GameObject directionalLight;
     public float dayLightValue;
@@ -41,5 +43,12 @@ public class SceneInformations : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ShowZoneName()
+    {
+        GameObject.Find("ZoneNameHolder").GetComponent<Text>().text = zoneName;
+        GameObject.Find("ZoneNameHolder").GetComponent<Animator>().Play("New State", 0);
+        GameObject.Find("ZoneNameHolder").GetComponent<Animator>().SetTrigger("Fade");
     }
 }

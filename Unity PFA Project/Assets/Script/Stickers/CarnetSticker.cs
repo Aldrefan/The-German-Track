@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class CarnetSticker : MonoBehaviour
 {
-    Vector2 colliderSize;
+    public Vector2 colliderSize;
     GameObject player;
 
     // Start is called before the first frame update
@@ -17,7 +17,8 @@ public class CarnetSticker : MonoBehaviour
 
     void Start()
     {
-        colliderSize = transform.parent.GetComponent<GridLayoutGroup>().cellSize;
+        //colliderSize = transform.parent.GetComponent<GridLayoutGroup>().cellSize;
+        colliderSize = transform.GetChild(0).GetComponent<RectTransform>().sizeDelta;
         GetComponent<BoxCollider2D>().size = colliderSize;
     }
 
@@ -42,6 +43,7 @@ public class CarnetSticker : MonoBehaviour
     }
     void OnMouseDown()
     {
+        Debug.Log("Click");
         if(player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.tag == "PNJinteractable")
         {
             player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().Response(GetComponent<Sticker_Display>().sticker.index);
@@ -51,14 +53,14 @@ public class CarnetSticker : MonoBehaviour
         if(player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.name == "Phone")
         {
             player.GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
-            Debug.Log(player.GetComponent<Interactions>().PNJContact);
             player.GetComponent<Interactions>().PNJContact.GetComponent<Phone>().GetInTouch(GetComponent<Sticker_Display>().sticker.index);
         }
     }
-/*
+
     void OnMouseOver()
     {
-        foreach(Transform child in transform)
+        Debug.Log("Touch");
+        /*foreach(Transform child in transform)
         {
             if(child.name == "New(Clone)")
             {
@@ -66,3 +68,4 @@ public class CarnetSticker : MonoBehaviour
             }
         }*/
     }
+}

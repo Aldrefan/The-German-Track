@@ -83,6 +83,7 @@ public class Shortcut : MonoBehaviour
         if(!internTeleport)
         {
             transform.parent.parent.gameObject.SetActive(false);
+            linkedWith.transform.parent.parent.GetComponent<SceneInformations>().ShowZoneName();
         }
         else 
         {

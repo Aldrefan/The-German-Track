@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3810293468386775244}
   - component: {fileID: 3810293468386775242}
   - component: {fileID: 3810293468386775245}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 539252800528876376}
   - component: {fileID: 2039881878898806870}
   - component: {fileID: 1600553391701426135}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Sticker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,6 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a6385b218bf944fb66e015dd8e4d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colliderSize: {x: 100, y: 40}
 --- !u!199 &539252800528876376
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5136,7 +5137,7 @@ GameObject:
   - component: {fileID: 3810293469281458100}
   - component: {fileID: 3810293469281458098}
   - component: {fileID: 3810293469281458101}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}

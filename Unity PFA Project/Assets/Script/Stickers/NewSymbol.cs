@@ -16,7 +16,7 @@ public class NewSymbol : MonoBehaviour
         
     }
 
-    void OnMouseEnter()
+    void OnMouseOver()
     {
         Destroy(gameObject);
     }

@@ -241,6 +241,10 @@ public class PNJ : MonoBehaviour
         {
             allDialogs.listOfDialogs[dialogIndex].canAskQuestions = true;
         }*/
+        if(transform.parent && transform.parent.GetComponent<Phone>())
+        {
+            transform.parent.GetComponent<BoxCollider2D>().enabled = true;
+        }
         player.GetComponent<Interactions>().EndDialog();
         rightPanel.SetActive(false);
         leftPanel.SetActive(false);
