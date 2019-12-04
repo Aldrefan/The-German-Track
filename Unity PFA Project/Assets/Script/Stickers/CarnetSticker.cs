@@ -58,15 +58,15 @@ public class CarnetSticker : MonoBehaviour
         }
     }
 
-    void OnMouseOver()
+    /*void OnMouseOver()
     {
         Debug.Log("Touch");
-        /*foreach(Transform child in transform)
+        foreach(Transform child in transform)
         {
             if(child.name == "New(Clone)")
             {
                 Destroy(child.gameObject);
             }
-        }*/
-    }
+        }
+    }*/
 }

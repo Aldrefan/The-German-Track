@@ -47,8 +47,8 @@ public class SceneInformations : MonoBehaviour
 
     public void ShowZoneName()
     {
-        GameObject.Find("ZoneNameHolder").GetComponent<Text>().text = zoneName;
         GameObject.Find("ZoneNameHolder").GetComponent<Animator>().Play("New State", 0);
         GameObject.Find("ZoneNameHolder").GetComponent<Animator>().SetTrigger("Fade");
+        GameObject.Find("ZoneNameHolder").GetComponent<Text>().text = LanguageManager.Instance.GetDialog(zoneName);
     }
 }

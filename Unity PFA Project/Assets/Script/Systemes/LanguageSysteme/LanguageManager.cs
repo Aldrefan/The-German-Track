@@ -16,6 +16,7 @@ public class LanguageManager : MonoBehaviour
     }
 
     string french = "french";
+    public string filePath;
 
     [Serializable]
     public class TextData
@@ -36,9 +37,9 @@ public class LanguageManager : MonoBehaviour
     {
         //SaveGameManager.Save();
         string dataAsJson = null;
-        if(File.Exists("Assets/Resources/AllTexts.json"))
+        if(File.Exists("Assets/Resources/" + filePath))
         {
-            dataAsJson = File.ReadAllText("Assets/Resources/AllTexts.json");
+            dataAsJson = File.ReadAllText("Assets/Resources/" + filePath);
         }
         datas = JsonUtility.FromJson<TextData>("{\"mytexts\":" + dataAsJson + "}");
     }

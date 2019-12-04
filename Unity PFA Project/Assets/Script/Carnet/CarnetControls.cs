@@ -15,6 +15,14 @@ public class CarnetControls : MonoBehaviour
     public Text profils_Text;
     public Text inv_Text;
 
+    [System.Serializable]
+    public class TextsAndKey
+    {
+        public Text text;
+        public string key;
+    }
+    public List<TextsAndKey> textList;
+
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +34,14 @@ public class CarnetControls : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void Awake()
+    {
+        foreach(TextsAndKey text in textList)
+        {
+            text.text.text = LanguageManager.Instance.GetDialog(text.key);
+        }
     }
 
     /*public void SaveCarnet()

@@ -272,7 +272,7 @@ public class PNJ : MonoBehaviour
 
     public IEnumerator ShowText(GameObject panel)
     {
-        /*quoteFinished = false;
+        quoteFinished = false;
         //Debug.Log(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
         actualQuote = LanguageManager.Instance.GetDialog(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
         for(int i = 0; i < actualQuote.Length + 1; i++)
@@ -282,9 +282,9 @@ public class PNJ : MonoBehaviour
             yield return new WaitForSeconds(dialogDelay);
         }
         quoteFinished = true;
-        DialogSecondPhase();*/
+        DialogSecondPhase();
 
-        quoteFinished = false;
+        /*quoteFinished = false;
         actualQuote = LanguageManager.Instance.GetDialog(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
         for(int i = 0; i < allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote.Length + 1; i++)
         {
@@ -293,14 +293,14 @@ public class PNJ : MonoBehaviour
             yield return new WaitForSeconds(dialogDelay);
         }
         quoteFinished = true;
-        DialogSecondPhase();
+        DialogSecondPhase();*/
     }
 
     public void FullQuote(GameObject panel)
     {
         StopCoroutine(show);
         quoteFinished = true;
-        panel.transform.GetChild(1).GetComponent<Text>().text = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote;
+        panel.transform.GetChild(1).GetComponent<Text>().text = LanguageManager.Instance.GetDialog(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
         DialogSecondPhase();
     }
 
