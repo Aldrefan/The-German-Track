@@ -28,36 +28,43 @@ public class ObjectiveNotif : MonoBehaviour
 
         }
 
-        SetNotifVisible();
-
+        if (playerEventsCheck != null)
+        {
+            SetNotifVisible();
+        }
+        
     }
 
     IEnumerator FindPlayer()
     {
-        new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.1f);
         if (FindObjectOfType<EventsCheck>() != null)
         {
             notifText = this.transform.GetChild(0).GetChild(0).GetComponent<Text>();
             notifAtor = this.GetComponent<Animator>();
             playerEventsCheck = FindObjectOfType<EventsCheck>();
         }
-        yield return null;
     }
 
     void SetNotifVisible()
     {
         if(notifText.text != textToNotify)
         {
+
             notifText.text = textToNotify;
-            notifAtor.SetBool("Visible", true);
+            if(notifText.text != "")
+            {
+                notifAtor.SetBool("Visible", true);
+
+            }
             StartCoroutine(UnvisibleNotif());
         }
     }
 
     IEnumerator UnvisibleNotif()
     {
-        new WaitForSeconds(visibilityTime);
+        yield return new WaitForSeconds(visibilityTime);
         notifAtor.SetBool("Visible", false);
-        yield return null;
+
     }
 }

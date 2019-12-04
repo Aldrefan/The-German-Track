@@ -6,6 +6,10 @@ using UnityEngine;
 
 public static class GameSaveSystem
 {
+    static CameraFollow camScript;
+    static ActiveCharacterScript currentCharacters;
+
+
     public static readonly string SAVE_FOLDER = Application.dataPath + "/Saves/";
 
     public static void Init()
@@ -15,22 +19,33 @@ public static class GameSaveSystem
             Directory.CreateDirectory(SAVE_FOLDER);
         }
     }
-
-    public static void Save(string saveString)
+    
+    public static void Save()
     {
-        File.WriteAllText(SAVE_FOLDER + "/save.txt", saveString);
+        GameData saveObject = new GameData(camScript, currentCharacters);
+        string json = JsonUtility.ToJson(saveObject);
+
+        File.WriteAllText(SAVE_FOLDER + "/save.txt", json);
     }
 
-    public static string Load()
+    public static GameData Load()
     {
         if(File.Exists(SAVE_FOLDER + "/save.txt"))
         {
             string saveString = File.ReadAllText(SAVE_FOLDER + "/save.txt");
-            return saveString;
+            GameData saveObject = JsonUtility.FromJson<GameData>(saveString);
+            return saveObject;
         }
         else
         {
             return null;
         }
+
+    }
+
+    public static void GameDataInput(CameraFollow newCamScript, ActiveCharacterScript newCurrentCharacters)
+    {
+        camScript = newCamScript;
+        currentCharacters = newCurrentCharacters;
     }
 }
