@@ -7,6 +7,7 @@ public class Sticker_Display : MonoBehaviour
 {
     public Sticker sticker;
     public Text text;
+    public Text tooltipText;
     public Image backgroundSticker;
     public Color backgroundColor;
 
@@ -22,8 +23,14 @@ public class Sticker_Display : MonoBehaviour
         if(save.language == "french")
         {
             text.text = sticker.frenchText;
+            tooltipText.text = sticker.frenchTooltip;
         }
-        else text.text = sticker.englishText;
+        else
+        {
+            text.text = sticker.englishText;
+            tooltipText.text = sticker.englishTooltip;
+        }
+        
         if(sticker.index >= GameObject.Find("Kenneth").GetComponent<PlayerMemory>().charactersRange.x && sticker.index <= GameObject.Find("Kenneth").GetComponent<PlayerMemory>().charactersRange.y)
         text.gameObject.SetActive(false);
         backgroundSticker.sprite = sticker.stickerBackground;
