@@ -8,7 +8,7 @@ public class GameData
 
     //public int level = 0;
     public GameObject actualRoom;
-    public List<int> stickersIndexOnBoard = new List<int>();
+    //public List<int> stickersIndexOnBoard = new List<int>();
     //public List<Vector3> stickersPositionOnBoard;
     //public List<int> memoryStickers;
     //public List<string> meetingList;
@@ -34,6 +34,7 @@ public class GameData
 
 }
 
+[System.Serializable]
 public class CharacterPosition
 {
     public GameObject character;
