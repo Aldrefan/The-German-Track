@@ -71,12 +71,43 @@ public class SaveFile : MonoBehaviour
             FindObjectOfType<CameraFollow>().InitRoomLimit();
 
         }
+
+        GameObject player = null;
+        foreach (Interactions Charac in FindObjectsOfType<Interactions>())
+        {
+            if (Charac.gameObject.name == "Kenneth")
+            {
+                player = Charac.gameObject;
+
+            }
+        }
+        if (player != null)
+        {
+            player.GetComponent<PlayerMemory>().stickerIndexBoardList = gameSave.stickersIndexOnBoard;
+            player.GetComponent<PlayerMemory>().stickerIndexCarnetList = gameSave.stickersIndexInCarnet;
+            player.GetComponent<PlayerMemory>().allStickers = gameSave.allStickers;
+            player.GetComponent<PlayerMemory>().stickersPositionBoard = gameSave.stickersPositionOnBoard;
+            player.GetComponent<Interactions>().PnjMet = gameSave.NPCmet;
+            player.GetComponent<EventsCheck>().eventsList = gameSave.eventList;
+
+        }
     }
 
     void InitGameData()
     {
+        GameObject player = null;
+        foreach (Interactions Charac in FindObjectsOfType<Interactions>())
+        {
+            if (Charac.gameObject.name == "Kenneth")
+            {
+                player = Charac.gameObject;
+
+            }
+        }
+
         GameSaveSystem.GameDataInput(
             Camera.main.GetComponent<CameraFollow>(),
-            FindObjectOfType<ActiveCharacterScript>());
+            FindObjectOfType<ActiveCharacterScript>(),
+            player);
     }
 }
