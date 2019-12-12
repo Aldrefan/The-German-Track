@@ -15,19 +15,21 @@ public class TextAnimation : MonoBehaviour
     public string levelName;
     private AsyncOperation async;
     bool textFinished = false;
+    public GameObject IS_PB;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("ShowText");
+        //StartCoroutine("ShowText");
         //SceneManager.LoadScene(levelName);
+        StartCoroutine("FirstWait");
         StartCoroutine("LoadYourAsyncScene");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (async != null && textFinished)
+        if (async != null && textFinished && Input.anyKey)
             async.allowSceneActivation = true;
 
         if (async != null && async.isDone)
@@ -43,7 +45,18 @@ public class TextAnimation : MonoBehaviour
             textIndex++;
             StartCoroutine("ShowText");
         }
-        else textFinished = true;
+        else 
+        {
+            textFinished = true;
+            IS_PB.SetActive(true);
+            //GameObject.Find("ClignoText").GetComponent<Animator>().SetBool("CanLoad", true);
+        }
+    }
+
+    IEnumerator FirstWait()
+    {
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine("ShowText");
     }
 
     IEnumerator WaitTimer()
@@ -54,12 +67,13 @@ public class TextAnimation : MonoBehaviour
 
     IEnumerator ShowText()
     {
-        for(int i = 0; i < stringList[textIndex].Length + 1; i++)
+        string text = LanguageManager.Instance.GetDialog(stringList[textIndex]);
+        for(int i = 0; i < text.Length + 1; i++)
         {
             int sound = Random.Range(0, clickSounds.Count - 1);
             GetComponent<AudioSource>().clip = clickSounds[sound];
             GetComponent<AudioSource>().Play();
-            currentLine = stringList[textIndex].Substring(0, i);
+            currentLine = text.Substring(0, i);
             textsList[textIndex].GetComponent<Text>().text = currentLine;
             yield return new WaitForSeconds(dialogDelay);
         }
