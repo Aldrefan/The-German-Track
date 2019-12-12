@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PNJName: Kurt Becker
+  PNJName: Kurt Becker (?)
   characterSprite: {fileID: 21300000, guid: d8d98386251ad654bbcee8800197dbd5, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
   dialogIndex: 0
@@ -197,7 +197,9 @@ MonoBehaviour:
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 0
+      hasChoices: 0
       endDialog: 1
+      buttonsList: []
   quoteFinished: 0
   stickersAlreadyGiven: 
 --- !u!82 &1195792019

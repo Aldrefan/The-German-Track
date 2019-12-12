@@ -11,4 +11,6 @@ public class Sticker : ScriptableObject
     public int index;
     public Sprite stickerBackground;
     public Vector2 backgoundSize;
+    public string frenchTooltip;
+    public string englishTooltip;
 }
