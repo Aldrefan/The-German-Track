@@ -6,8 +6,14 @@ public class Shadow : MonoBehaviour
 {
     public GameObject owner;
     Animator ownerAnimator;
+    public Vector2 size;
     // Start is called before the first frame update
     void Start()
+    {
+        //ownerAnimator = owner.GetComponent<Animator>();
+    }
+
+    void OnEnable()
     {
         ownerAnimator = owner.GetComponent<Animator>();
     }
@@ -18,6 +24,7 @@ public class Shadow : MonoBehaviour
         transform.position = new Vector3(owner.transform.position.x, owner.transform.position.y - 4.5f, owner.transform.position.z);
         GetComponent<Animator>().SetBool("Walk", owner.GetComponent<Animator>().GetBool("Walk"));
         GetComponent<Animator>().SetBool("Run", owner.GetComponent<Animator>().GetBool("Run"));
-        transform.localScale = new Vector3(owner.transform.localScale.x / 1.5f, transform.localScale.y, transform.localScale.z);
+        transform.localScale = new Vector3(size.x, size.y, 1);
+        GetComponent<SpriteRenderer>().flipX = owner.GetComponent<SpriteRenderer>().flipX;
     }
 }

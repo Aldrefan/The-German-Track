@@ -13,10 +13,11 @@ public class EventsCheck : MonoBehaviour
     [HideInInspector]
     public ObjectiveNotif notif;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //StartCoroutine(EnableClaraCinematic(1));
     }
 
     // Update is called once per frame
@@ -171,6 +172,33 @@ public class EventsCheck : MonoBehaviour
             {
                 appartmentKurtLocked[i].GetComponent<BoxCollider2D>().enabled = true;
             }
+    }
+
+    void InstantiateClaraCinematic()
+    {
+        if (!this.GetComponent<Interactions>().PnjMet.Contains("Clara"))
+        {
+            Vector3 posToInstantiate = new Vector3(13.59f, -1.826f, 0.816f);
+            GameObject roomToInstantiate = null;
+            GameObject prefabToInstantiate = Resources.Load("GameObject/Clara") as GameObject;
+            foreach (SceneInformations room in FindObjectsOfType<SceneInformations>())
+            {
+                if (room.gameObject.name == "KennethBureau")
+                {
+                    roomToInstantiate = room.gameObject;
+                }
+            }
+
+            GameObject Clara = Instantiate(prefabToInstantiate, roomToInstantiate.transform, false);
+            Clara.transform.localPosition = posToInstantiate;
+        }
+    }
+
+    IEnumerator EnableClaraCinematic(float timeToWait)
+    {
+        yield return new WaitForSeconds(timeToWait);
+
+        InstantiateClaraCinematic();
     }
 
     public void CheckEvents(string newEvent)

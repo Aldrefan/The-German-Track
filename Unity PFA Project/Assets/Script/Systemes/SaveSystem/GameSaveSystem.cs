@@ -8,6 +8,7 @@ public static class GameSaveSystem
 {
     static CameraFollow camScript;
     static ActiveCharacterScript currentCharacters;
+    static GameObject actualPlayer;
 
 
     public static readonly string SAVE_FOLDER = Application.dataPath + "/Saves/";
@@ -22,7 +23,7 @@ public static class GameSaveSystem
     
     public static void Save()
     {
-        GameData saveObject = new GameData(camScript, currentCharacters);
+        GameData saveObject = new GameData(camScript, currentCharacters, actualPlayer);
         string json = JsonUtility.ToJson(saveObject);
 
         File.WriteAllText(SAVE_FOLDER + "/save.txt", json);
@@ -43,9 +44,10 @@ public static class GameSaveSystem
 
     }
 
-    public static void GameDataInput(CameraFollow newCamScript, ActiveCharacterScript newCurrentCharacters)
+    public static void GameDataInput(CameraFollow newCamScript, ActiveCharacterScript newCurrentCharacters, GameObject newPlayer)
     {
         camScript = newCamScript;
         currentCharacters = newCurrentCharacters;
+        actualPlayer = newPlayer;
     }
 }
