@@ -69,7 +69,7 @@ public class Camera_BoardMovements : MonoBehaviour
         }
     }
 
-    void QuitBoardExe()
+    public void QuitBoardExe()
     {
         if(boardCanvas.transform.childCount > 1)
         {

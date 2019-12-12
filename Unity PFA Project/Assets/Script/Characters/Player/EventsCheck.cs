@@ -203,6 +203,12 @@ public class EventsCheck : MonoBehaviour
 
     public void CheckEvents(string newEvent)
     {
+        if (newEvent == "dialogs" || newEvent == "endDialogs" || newEvent == "newSticker" || newEvent == "questions" || newEvent == "questionAsked" || newEvent == "quitDialog" || newEvent == "interacDone")
+        {
+            GameObject.Find("Tutorial").GetComponent<TutoKenneth>().checkTuto(newEvent);
+        }
+        else
+        {
         switch (newEvent)
         {
             case "laissezPasser":
@@ -296,6 +302,7 @@ public class EventsCheck : MonoBehaviour
 
             default:
                 break;
+        }
         }
     }
 }

@@ -77,28 +77,11 @@ public GameObject stickerTemplate;
         }*/
     }
 
-    public void Help()
-    {
-        GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).gameObject.SetActive(true);
-        GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
-        GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "C'est mon tableau. Il me suffit de cliquer sur des étiquettes pour faire des liens entre elles et tester des hypothèses.";
-        for(int i = 0; i > 0; i--)
-        {
-            GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).GetComponent<Image>().color = new Vector4(0, 0, 0, i);
-        }
-    }
-
-    public void CloseHelp()
-    {
-        GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
-        GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).gameObject.SetActive(false);
-    }
-
     public void Loop()
     {
         for(int i = 0; i < pinList.Count; i++)
             {
-                Destroy(pinList[0].transform.GetChild(2).gameObject);
+                Destroy(pinList[0].transform.GetChild(3).gameObject);
                 pinList.Remove(pinList[0]);
             }
         if(pinList.Count > 0)
@@ -198,6 +181,8 @@ public GameObject stickerTemplate;
             StartCoroutine("ActivateTime");
         }
         createASticker = false;
+
+        Loop();
     }
 
     IEnumerator ActivateTime()

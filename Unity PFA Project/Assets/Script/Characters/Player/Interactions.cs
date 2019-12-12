@@ -30,6 +30,7 @@ public class Interactions : MonoBehaviour
     public bool isInCinematic;
     public GameObject boardCanvas;
     public GameObject dialAndBookCanvas;
+    public bool isOnTooltip;
     #endregion
 
     #region State Informations
