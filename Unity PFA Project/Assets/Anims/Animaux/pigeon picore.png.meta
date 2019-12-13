@@ -79,7 +79,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -90,7 +90,7 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -104,9 +104,9 @@ TextureImporter:
       name: pigeon picore_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 34
-        width: 15
+        x: 24
+        y: 38
+        width: 16
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,7 +115,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67418c48e7b98b24696ec925d7f37ae8
+      spriteID: d4db45780a398164f9bc986cd3b74dbe
       vertices: []
       indices: 
       edges: []
@@ -124,9 +124,9 @@ TextureImporter:
       name: pigeon picore_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 34
-        width: 15
+        x: 24
+        y: 57
+        width: 16
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -135,7 +135,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cdd7c738c5937146b922b933860f2d6
+      spriteID: c6a7ca11b0a308c4c96af61ffcd3e812
       vertices: []
       indices: 
       edges: []
@@ -144,9 +144,9 @@ TextureImporter:
       name: pigeon picore_2
       rect:
         serializedVersion: 2
-        x: 34
-        y: 34
-        width: 15
+        x: 46
+        y: 57
+        width: 16
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -155,7 +155,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a6120042f77f574f8b323a46beb9790
+      spriteID: 91cd84921d550dc47b23d5869f2d38d2
       vertices: []
       indices: 
       edges: []
@@ -164,8 +164,8 @@ TextureImporter:
       name: pigeon picore_3
       rect:
         serializedVersion: 2
-        x: 51
-        y: 34
+        x: 47
+        y: 38
         width: 16
         height: 10
       alignment: 0
@@ -175,7 +175,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae414d1eed9fa1b4eb4da2b8688b127b
+      spriteID: 7d8063b63dec85e48a09e4fa35e66239
       vertices: []
       indices: 
       edges: []
@@ -184,8 +184,8 @@ TextureImporter:
       name: pigeon picore_4
       rect:
         serializedVersion: 2
-        x: 70
-        y: 34
+        x: 67
+        y: 57
         width: 16
         height: 10
       alignment: 0
@@ -195,7 +195,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd48e1546a71c634b804118527b9ce86
+      spriteID: 61ef1a22f625bd14997bbbdf12df9951
       vertices: []
       indices: 
       edges: []
@@ -204,8 +204,8 @@ TextureImporter:
       name: pigeon picore_5
       rect:
         serializedVersion: 2
-        x: 87
-        y: 34
+        x: 68
+        y: 38
         width: 16
         height: 10
       alignment: 0
@@ -215,7 +215,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c12d77d57ac84f439a6f216d5058925
+      spriteID: fc9e1b7d02a19164b907a8ffc1957070
       vertices: []
       indices: 
       edges: []
@@ -224,9 +224,9 @@ TextureImporter:
       name: pigeon picore_6
       rect:
         serializedVersion: 2
-        x: 105
-        y: 34
-        width: 15
+        x: 87
+        y: 57
+        width: 16
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -235,7 +235,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef8386e42f9376a4fbfae2bbe4e3fee3
+      spriteID: 1ee979c378d321e40ae2cf10a5840aa6
       vertices: []
       indices: 
       edges: []
@@ -244,10 +244,10 @@ TextureImporter:
       name: pigeon picore_7
       rect:
         serializedVersion: 2
-        x: 9
-        y: 17
-        width: 15
-        height: 6
+        x: 89
+        y: 38
+        width: 16
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,7 +255,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe83f906d011ef34bab20f2dc1be0ecc
+      spriteID: 6a2c143fe6d87bd45a145ff2484d15ec
       vertices: []
       indices: 
       edges: []
@@ -264,10 +264,10 @@ TextureImporter:
       name: pigeon picore_8
       rect:
         serializedVersion: 2
-        x: 27
-        y: 17
-        width: 15
-        height: 6
+        x: 109
+        y: 57
+        width: 16
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,7 +275,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f256f70e511c9924d91a3734b3024670
+      spriteID: e4f70f980a490044ba7c4f91548f018b
       vertices: []
       indices: 
       edges: []
@@ -284,10 +284,10 @@ TextureImporter:
       name: pigeon picore_9
       rect:
         serializedVersion: 2
-        x: 45
-        y: 17
-        width: 15
-        height: 6
+        x: 111
+        y: 38
+        width: 16
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,7 +295,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acb9fc4df9efc744d959c2dd3bad2bf1
+      spriteID: f92ae3e5e00aac347a1f43c263091f1b
       vertices: []
       indices: 
       edges: []
@@ -304,10 +304,10 @@ TextureImporter:
       name: pigeon picore_10
       rect:
         serializedVersion: 2
-        x: 63
-        y: 17
-        width: 15
-        height: 6
+        x: 130
+        y: 57
+        width: 16
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,7 +315,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59ba768d0f40dd54e954bc5ec0d0ccfe
+      spriteID: f95dd0558e781e04fa831fceed57e090
       vertices: []
       indices: 
       edges: []
@@ -324,10 +324,10 @@ TextureImporter:
       name: pigeon picore_11
       rect:
         serializedVersion: 2
-        x: 82
-        y: 17
-        width: 15
-        height: 6
+        x: 131
+        y: 37
+        width: 16
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -335,7 +335,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 892c47d9601719a47b5552b51b679266
+      spriteID: 8f4b7459dc3ec544a8efc3cc35aed2c7
       vertices: []
       indices: 
       edges: []
@@ -344,10 +344,10 @@ TextureImporter:
       name: pigeon picore_12
       rect:
         serializedVersion: 2
-        x: 99
-        y: 17
-        width: 15
-        height: 6
+        x: 150
+        y: 58
+        width: 16
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,7 +355,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73e05d2e66a33014ca34f958270ded65
+      spriteID: a0f659d896adf31489fbb5019b14bd0f
       vertices: []
       indices: 
       edges: []
@@ -364,10 +364,10 @@ TextureImporter:
       name: pigeon picore_13
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
+        x: 24
+        y: 18
         width: 16
-        height: 8
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -375,7 +375,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4174f37fa823bd4e9624ef824635962
+      spriteID: 4f33e94fed506934db533ce75aa497dc
       vertices: []
       indices: 
       edges: []
@@ -384,10 +384,10 @@ TextureImporter:
       name: pigeon picore_14
       rect:
         serializedVersion: 2
-        x: 19
-        y: 0
-        width: 15
-        height: 9
+        x: 48
+        y: 17
+        width: 16
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -395,7 +395,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5284e4d020c2ab84a9d7ca2b5440e907
+      spriteID: 08869c656b746f049bf6b23477632488
       vertices: []
       indices: 
       edges: []
@@ -404,9 +404,9 @@ TextureImporter:
       name: pigeon picore_15
       rect:
         serializedVersion: 2
-        x: 37
-        y: 0
-        width: 15
+        x: 68
+        y: 17
+        width: 16
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -415,7 +415,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 168c90080915d3a46b482cec1dfe8cc5
+      spriteID: f15aff7a1fe20874bbfbbfc2b3ee0988
       vertices: []
       indices: 
       edges: []
@@ -424,9 +424,9 @@ TextureImporter:
       name: pigeon picore_16
       rect:
         serializedVersion: 2
-        x: 56
-        y: 0
-        width: 14
+        x: 90
+        y: 17
+        width: 16
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -435,7 +435,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d66c9bcc5f21be4b84632159a594e33
+      spriteID: f9c8a2661e093fa4893969d1ca25b9b9
       vertices: []
       indices: 
       edges: []
