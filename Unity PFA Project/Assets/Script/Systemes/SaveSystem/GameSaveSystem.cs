@@ -6,6 +6,8 @@ using UnityEngine;
 
 public static class GameSaveSystem
 {
+    public static bool gameToLoad;
+
     static CameraFollow camScript;
     static ActiveCharacterScript currentCharacters;
     static GameObject actualPlayer;
@@ -42,6 +44,21 @@ public static class GameSaveSystem
             return null;
         }
 
+    }
+
+    public static string ReturnLevelName()
+    {
+        if (File.Exists(SAVE_FOLDER + "/save.txt"))
+        {
+            string saveString = File.ReadAllText(SAVE_FOLDER + "/save.txt");
+            GameData saveObject = JsonUtility.FromJson<GameData>(saveString);
+            string gameActualLevel = saveObject.currentLevel.name;
+            return gameActualLevel;
+        }
+        else
+        {
+            return null;
+        }
     }
 
     public static void GameDataInput(CameraFollow newCamScript, ActiveCharacterScript newCurrentCharacters, GameObject newPlayer, DayNightLight newDirLight)

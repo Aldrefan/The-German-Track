@@ -8,6 +8,7 @@ public class SaveFile : MonoBehaviour
     {
         GameSaveSystem.Init();
         InitGameData();
+        LoadAtStart();
     }
 
     private void Update()
@@ -31,6 +32,14 @@ public class SaveFile : MonoBehaviour
     void Load()
     {
         ReturnGameData(GameSaveSystem.Load());
+    }
+
+    void LoadAtStart()
+    {
+        if (GameSaveSystem.gameToLoad)
+        {
+            ReturnGameData(GameSaveSystem.Load());
+        }
     }
 
     public void ReturnGameData(GameData gameSave)

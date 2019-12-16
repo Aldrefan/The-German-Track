@@ -8,28 +8,27 @@ using UnityEngine.SceneManagement;
 public class LoadSaveButton : MonoBehaviour
 {
 
-
-    private void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        LoadButtonActive();
     }
 
     void LoadButtonActive()
     {
-        if (Directory.Exists("/Saves/save.txt"))
+        if (File.Exists(Application.dataPath + "/Saves/save.txt"))
         {
-            this.GetComponent<Text>().color = Color.black;
-
+            this.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            this.GetComponent<Button>().interactable = false;
+            GameSaveSystem.gameToLoad = false;
         }
     }
 
-    void LoadSave()
+    public void LoadSave()
     {
+        GameSaveSystem.gameToLoad = true;
+        SceneManager.LoadScene("InterScene" + GameSaveSystem.ReturnLevelName());
     }
 }
