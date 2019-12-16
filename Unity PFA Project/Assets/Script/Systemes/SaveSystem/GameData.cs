@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 
@@ -9,6 +10,10 @@ public class GameData
     //public int level = 0;
     //public string language = "french";
 
+    //Level
+    public Scene currentLevel;
+    //DayNightLight -> DirectionnalLight
+    public DayNightLight dayNightCycle;
     //EventsCheck -> Player
     public List<string> eventList;
     //Interactions -> Player
@@ -24,8 +29,10 @@ public class GameData
     public List<CharacterPosition> playableCharacters = new List<CharacterPosition>();
 
 
-    public GameData(CameraFollow camScript, ActiveCharacterScript currentCharacters, GameObject characterToPlay)
+    public GameData(CameraFollow camScript, ActiveCharacterScript currentCharacters, GameObject characterToPlay, DayNightLight directionalLight)
     {
+        currentLevel = SceneManager.GetActiveScene();
+
         if (camScript != null && currentCharacters != null)
         {
             actualRoom = camScript.actualRoom;
@@ -45,6 +52,11 @@ public class GameData
             stickersPositionOnBoard = characterToPlay.GetComponent<PlayerMemory>().stickersPositionBoard;
             NPCmet = characterToPlay.GetComponent<Interactions>().PnjMet;
             eventList = characterToPlay.GetComponent<EventsCheck>().eventsList;
+        }
+
+        if(directionalLight != null)
+        {
+            dayNightCycle = directionalLight;
         }
     }
 

@@ -17,7 +17,7 @@ public class EventsCheck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(EnableClaraCinematic(1));
+        StartCoroutine(EnableClaraCinematic(3));
     }
 
     // Update is called once per frame
@@ -178,9 +178,11 @@ public class EventsCheck : MonoBehaviour
     {
         if (!this.GetComponent<Interactions>().PnjMet.Contains("Clara"))
         {
-            Vector3 posToInstantiate = new Vector3(13.59f, -1.826f, 0.816f);
+            Vector3 posClaraToInstantiate = new Vector3(13.59f, -1.826f, 0.816f);
+            Vector3 posKD_IWToInstantiate = new Vector3(9.25f, -2.51f, 0);
             GameObject roomToInstantiate = null;
-            GameObject prefabToInstantiate = Resources.Load("GameObject/Clara") as GameObject;
+            GameObject prefabClaraToInstantiate = Resources.Load("GameObject/Clara") as GameObject;
+            GameObject prefabKD_IWToInstantiate = Resources.Load("GameObject/KD_InvisibleWall") as GameObject;
             foreach (SceneInformations room in FindObjectsOfType<SceneInformations>())
             {
                 if (room.gameObject.name == "KennethBureau")
@@ -189,8 +191,24 @@ public class EventsCheck : MonoBehaviour
                 }
             }
 
-            GameObject Clara = Instantiate(prefabToInstantiate, roomToInstantiate.transform, false);
-            Clara.transform.localPosition = posToInstantiate;
+            GameObject Clara = Instantiate(prefabClaraToInstantiate, roomToInstantiate.transform, false);
+            Clara.transform.localPosition = posClaraToInstantiate;
+            Clara.name = prefabClaraToInstantiate.name;
+            GameObject KD_IW = Instantiate(prefabKD_IWToInstantiate, roomToInstantiate.transform, false);
+            KD_IW.transform.localPosition = posKD_IWToInstantiate;
+            KD_IW.name = prefabKD_IWToInstantiate.name;
+
+
+            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[0].objectToMove = Clara.gameObject.transform.GetChild(0).gameObject;
+            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[1].objectToMove = Clara;
+            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[1].direction = 0.05f;
+            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[1].time = 1;
+            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[3].objectToMove = Clara;
+            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[3].direction = 0.05f;
+            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[3].time = 3.5f;
+            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[4].objectToMove = Clara;
+
+
         }
     }
 

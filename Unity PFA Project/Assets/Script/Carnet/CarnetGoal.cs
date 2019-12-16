@@ -46,6 +46,7 @@ public class CarnetGoal : MonoBehaviour
             newGoal.GetComponent<RectTransform>().sizeDelta = heightWidth;
             newGoal.GetComponent<Text>().color = Color.black;
             newGoal.GetComponent<Text>().font = font;
+            newGoal.GetComponent<Text>().fontSize = fontSize;
             newGoal.GetComponent<Text>().text = goal;
             newGoal.GetComponent<Text>().horizontalOverflow =  HorizontalWrapMode.Overflow;
             newGoal.transform.localScale = scale;
