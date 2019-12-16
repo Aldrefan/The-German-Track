@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Buttons_Display : MonoBehaviour
 {
-    public TheGermanTrack.Button button;
+    public Button button;
     public Text text;
     public int dialogIndex;
 

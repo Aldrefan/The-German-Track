@@ -53,7 +53,7 @@ public class PNJ : MonoBehaviour
         public bool canAskQuestions;
         public bool hasChoices;
         public bool endDialog;
-        public List<TheGermanTrack.Button> buttonsList;
+        public List<Button> buttonsList;
     }
 
     [System.Serializable]
