@@ -11,7 +11,7 @@ public class GameData
     //public string language = "french";
 
     //Level
-    public Scene currentLevel;
+    public string currentLevel;
     //DayNightLight -> DirectionnalLight
     public DayNightLight dayNightCycle;
     //EventsCheck -> Player
@@ -31,7 +31,7 @@ public class GameData
 
     public GameData(CameraFollow camScript, ActiveCharacterScript currentCharacters, GameObject characterToPlay, DayNightLight directionalLight)
     {
-        currentLevel = SceneManager.GetActiveScene();
+        currentLevel = SceneManager.GetActiveScene().name;
 
         if (camScript != null && currentCharacters != null)
         {

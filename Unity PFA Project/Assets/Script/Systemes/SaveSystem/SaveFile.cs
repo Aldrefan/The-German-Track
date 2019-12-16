@@ -8,6 +8,8 @@ public class SaveFile : MonoBehaviour
     {
         GameSaveSystem.Init();
         InitGameData();
+
+        Debug.Log(GameSaveSystem.gameToLoad);
         LoadAtStart();
     }
 
