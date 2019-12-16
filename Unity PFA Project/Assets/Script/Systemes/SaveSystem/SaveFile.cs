@@ -73,25 +73,12 @@ public class SaveFile : MonoBehaviour
 
         if (!gameSave.actualRoom.activeInHierarchy)
         {
-            CameraFollow gameCam = FindObjectOfType<CameraFollow>();
-            gameCam.actualRoom.SetActive(false);
-            gameCam.actualRoom = gameSave.actualRoom;
-            gameCam.actualRoom.SetActive(true);
-            gameCam.transform.position += gameCam.actualRoom.transform.position /*+= FindObjectOfType<EventsCheck>().transform.position*/;
-            gameCam.InitRoomLimit();
-        }
+            FindObjectOfType<CameraFollow>().actualRoom.SetActive(false);
+            FindObjectOfType<CameraFollow>().actualRoom = gameSave.actualRoom;
+            FindObjectOfType<CameraFollow>().actualRoom.SetActive(true);
+            FindObjectOfType<CameraFollow>().transform.position += FindObjectOfType<EventsCheck>().transform.position;
+            FindObjectOfType<CameraFollow>().InitRoomLimit();
 
-        GameObject levelLight = FindObjectOfType<DayNightLight>().gameObject;
-        if (levelLight != null)
-        {
-            levelLight.GetComponent<DayNightLight>().time = gameSave.dayNightCycle.time;
-            if (levelLight.GetComponent<DayNightLight>().time == DayNightLight.timeEnum.Day){
-
-                levelLight.GetComponent<Light>().intensity = gameSave.actualRoom.GetComponent<SceneInformations>().dayLightValue;
-            }
-            else {
-                levelLight.GetComponent<Light>().intensity = gameSave.actualRoom.GetComponent<SceneInformations>().nightLightValue;
-            }
         }
 
         GameObject player = null;
@@ -113,7 +100,6 @@ public class SaveFile : MonoBehaviour
             player.GetComponent<EventsCheck>().eventsList = gameSave.eventList;
 
         }
-
     }
 
     void InitGameData()
@@ -131,7 +117,6 @@ public class SaveFile : MonoBehaviour
         GameSaveSystem.GameDataInput(
             Camera.main.GetComponent<CameraFollow>(),
             FindObjectOfType<ActiveCharacterScript>(),
-            player,
-            FindObjectOfType<DayNightLight>());
+            player);
     }
 }
