@@ -10,7 +10,6 @@ public class ActiveCharacterScript : MonoBehaviour
     {
         public GameObject character;
         public bool isPlayable;
-        public Sprite charactersSprite;
 
         public PlayableCharacter(GameObject newCharacter, bool playable)
         {
