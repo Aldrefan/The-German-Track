@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class SaveFile : MonoBehaviour
 {
+    public bool loadAtStart;
+    List<GameObject> roomList = new List<GameObject>();
+
+
     private void Start()
     {
         GameSaveSystem.Init();
         InitGameData();
+        BuildRoomList();
+
+        Debug.Log(GameSaveSystem.gameToLoad);
         LoadAtStart();
+
     }
 
     private void Update()
@@ -36,10 +44,11 @@ public class SaveFile : MonoBehaviour
 
     void LoadAtStart()
     {
-        if (GameSaveSystem.gameToLoad)
+        if (GameSaveSystem.gameToLoad || loadAtStart)
         {
-            ReturnGameData(GameSaveSystem.Load());
+            Load();
         }
+
     }
 
     public void ReturnGameData(GameData gameSave)
@@ -48,34 +57,51 @@ public class SaveFile : MonoBehaviour
 
         if (FindObjectOfType<ActiveCharacterScript>().playableCharactersList.Count != gameSave.playableCharacters.Count)
         {
-            FindObjectOfType<ActiveCharacterScript>().playableCharactersList.Clear();
 
-            foreach (CharacterPosition character in gameSave.playableCharacters)
-            {
-                FindObjectOfType<ActiveCharacterScript>().playableCharactersList.Add(new ActiveCharacterScript.PlayableCharacter(character.character, true));
-            }
+
         }
 
         for (int i = 0; i < gameSave.playableCharacters.Count; i++)
         {
             GameObject[] playableCharacterInScene = GameObject.FindGameObjectsWithTag("Player");
+
             if (playableCharacterInScene != null)
             {
                 foreach (GameObject character in playableCharacterInScene)
                 {
-                    if (gameSave.playableCharacters[i].character.name == character.name)
+
+                    if (gameSave.playableCharacters[i].characterName == character.name)
                     {
-                        character.transform.position = gameSave.playableCharacters[i].position;
+                        if (i == 0)
+                        {
+                            FindObjectOfType<ActiveCharacterScript>().playableCharactersList.Clear();
+
+                        }
+
+                        character.transform.position = gameSave.playableCharacters[i].characterPosition;
+                        FindObjectOfType<ActiveCharacterScript>().playableCharactersList.Add(new ActiveCharacterScript.PlayableCharacter(character, true));
                     }
                 }
             }
         }
 
-        if (!gameSave.actualRoom.activeInHierarchy)
+        GameObject savedRoom = null;
+
+        for (int i = 0; i< roomList.Count; i++)
+        {
+
+            if (roomList[i].name == gameSave.actualRoomName)
+            {
+                savedRoom =roomList[i];
+            }
+            
+        }
+
+        if (!savedRoom.activeInHierarchy)
         {
             CameraFollow gameCam = FindObjectOfType<CameraFollow>();
             gameCam.actualRoom.SetActive(false);
-            gameCam.actualRoom = gameSave.actualRoom;
+            gameCam.actualRoom = savedRoom;
             gameCam.actualRoom.SetActive(true);
             gameCam.transform.position += gameCam.actualRoom.transform.position /*+= FindObjectOfType<EventsCheck>().transform.position*/;
             gameCam.InitRoomLimit();
@@ -84,15 +110,15 @@ public class SaveFile : MonoBehaviour
         GameObject levelLight = FindObjectOfType<DayNightLight>().gameObject;
         if (levelLight != null)
         {
-            levelLight.GetComponent<DayNightLight>().time = gameSave.dayNightCycle.time;
-            if (levelLight.GetComponent<DayNightLight>().time == DayNightLight.timeEnum.Day)
+            if (gameSave.dayNightCycle)
             {
-
-                levelLight.GetComponent<Light>().intensity = gameSave.actualRoom.GetComponent<SceneInformations>().dayLightValue;
+                levelLight.GetComponent<DayNightLight>().time = DayNightLight.timeEnum.Day;
+                levelLight.GetComponent<Light>().intensity = savedRoom.GetComponent<SceneInformations>().dayLightValue;
             }
             else
             {
-                levelLight.GetComponent<Light>().intensity = gameSave.actualRoom.GetComponent<SceneInformations>().nightLightValue;
+                levelLight.GetComponent<DayNightLight>().time = DayNightLight.timeEnum.Night;
+                levelLight.GetComponent<Light>().intensity = savedRoom.GetComponent<SceneInformations>().nightLightValue;
             }
         }
 
@@ -116,6 +142,20 @@ public class SaveFile : MonoBehaviour
 
         }
 
+    }
+
+    void BuildRoomList()
+    {
+        foreach (SceneInformations room in FindObjectsOfType<SceneInformations>())
+        {
+
+            roomList.Add(room.gameObject);
+
+            if (room.gameObject.name != FindObjectOfType<CameraFollow>().actualRoom.name)
+            {
+                room.gameObject.SetActive(false);
+            }
+        }
     }
 
     void InitGameData()
