@@ -14,7 +14,7 @@ public class Street_PigeonFly_Particles : MonoBehaviour
     {
         Vector3 cameraPosition = new Vector3(Camera.main.transform.position.x + decalage.x, Camera.main.transform.position.y + decalage.y, Camera.main.transform.position.z + decalage.z);
         transform.position = cameraPosition;
-        //GetComponent<ParticleSystem>().Play();
+        GetComponent<ParticleSystem>().Play();
         GetComponent<AudioSource>().Play();
     }
 

@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbbde7afcdde144819f5765541e6c7, type: 3}
   m_Name: Pho_7
   m_EditorClassIdentifier: 
-  frenchText: L'Allemand
-  englishText: L'Allemand
   color: {r: 1, g: 1, b: 1, a: 1}
   index: 7
   stickerBackground: {fileID: 21300000, guid: 25232e3e874efbe4dafb76a36b7fdb90, type: 3}
   backgoundSize: {x: 80, y: 90}
-  frenchTooltip: "Le chef de la p\xE8gre de Manhattan, inconnu de qui que ce soit"
-  englishTooltip: The boss of the Manhattan mafia, nobody knows who he is
+  textKey: ST_07_Pho_Text
+  toolTipText: ST_07_Pho_Tooltip

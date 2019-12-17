@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbbde7afcdde144819f5765541e6c7, type: 3}
   m_Name: Pho_4
   m_EditorClassIdentifier: 
-  frenchText: Kurt Becker
-  englishText: Kurt Becker
   color: {r: 1, g: 1, b: 1, a: 1}
   index: 4
   stickerBackground: {fileID: 21300000, guid: 4e65815200bcc5c4987333953cfaa5b0, type: 3}
   backgoundSize: {x: 80, y: 90}
-  frenchTooltip: Le copain de Loraine, un peu louche et faiblard
-  englishTooltip: Loraine's boyfriend, a little weird and pretty frail
+  textKey: ST_04_Pho_Text
+  toolTipText: ST_04_Pho_Tooltip

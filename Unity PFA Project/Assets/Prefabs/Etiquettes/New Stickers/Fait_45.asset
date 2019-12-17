@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbbde7afcdde144819f5765541e6c7, type: 3}
   m_Name: Fait_45
   m_EditorClassIdentifier: 
-  frenchText: La SDECE traque l'Allemand
-  englishText: The SDECE is tracking the German
   color: {r: 0.8352941, g: 1, b: 0.8235294, a: 1}
   index: 45
   stickerBackground: {fileID: 21300000, guid: a958dd6e903ce154ab67e5f04ac5998a, type: 3}
   backgoundSize: {x: 100, y: 100}
-  frenchTooltip: "Pourquoi la France s'int\xE9resse \xE0 un criminel de New York ?"
-  englishTooltip: Why is France up in a Manhattan criminal's business ?
+  textKey: ST_45_Fait_Text
+  toolTipText: ST_45_Fait_Tooltip

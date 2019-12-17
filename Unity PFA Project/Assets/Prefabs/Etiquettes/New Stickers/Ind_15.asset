@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbbde7afcdde144819f5765541e6c7, type: 3}
   m_Name: Ind_15
   m_EditorClassIdentifier: 
-  frenchText: "Lettre cod\xE9e"
-  englishText: Coded letter
   color: {r: 1, g: 0.87058824, b: 0.84313726, a: 1}
   index: 15
   stickerBackground: {fileID: 21300000, guid: 3301dc7bb6b5fbf4280c0ab5c9539ae0, type: 3}
   backgoundSize: {x: 100, y: 100}
-  frenchTooltip: "Trouv\xE9e sur le bureau de Loraine, je n'arrive pas \xE0 la d\xE9chiffrer"
-  englishTooltip: Found on Loraine's desk, I can't seem to decypher it
+  textKey: ST_15_Ind_Text
+  toolTipText: ST_15_Ind_Tooltip

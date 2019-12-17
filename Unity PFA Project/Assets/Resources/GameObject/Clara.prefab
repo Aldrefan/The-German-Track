@@ -298,7 +298,8 @@ MonoBehaviour:
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: []
+        eventTrigger:
+        - questionAsked
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
       - quote: L1_Clara_D2_Q2
@@ -570,7 +571,8 @@ MonoBehaviour:
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: []
+        eventTrigger:
+        - questionAsked
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
       - quote: L1_Clara_D5_Q2
@@ -603,7 +605,7 @@ MonoBehaviour:
       endDialog: 1
       buttonsList: []
     - dialog:
-      - quote: Autre chose ?
+      - quote: L1_Clara_D6_Q1
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
@@ -655,7 +657,7 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: "Je ne sais rien \xE0 ce sujet"
+      - quote: L1_Clara_D15_Q1
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 

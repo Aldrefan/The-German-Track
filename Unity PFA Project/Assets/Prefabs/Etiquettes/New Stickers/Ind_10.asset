@@ -12,12 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbbde7afcdde144819f5765541e6c7, type: 3}
   m_Name: Ind_10
   m_EditorClassIdentifier: 
-  frenchText: SDECE
-  englishText: SDECE
   color: {r: 1, g: 0.87058824, b: 0.84313726, a: 1}
   index: 10
   stickerBackground: {fileID: 21300000, guid: 3301dc7bb6b5fbf4280c0ab5c9539ae0, type: 3}
   backgoundSize: {x: 100, y: 100}
-  frenchTooltip: "La lettre cod\xE9e m'a r\xE9v\xE9l\xE9 que Loraine \xE9tait en contact
-    avec la SDECE"
-  englishTooltip: The coded letter showed me that Loraine was in touch with the SDECE
+  textKey: ST_10_Ind_Text
+  toolTipText: ST_10_Ind_Tooltip

@@ -20,7 +20,9 @@ public class Sticker_Display : MonoBehaviour
     public void SetInformations()
     {
         JsonSave save = SaveGameManager.GetCurrentSave();
-        if(save.language == "french")
+        text.text = LanguageManager.Instance.GetDialog(sticker.textKey);
+        tooltipText.text = LanguageManager.Instance.GetDialog(sticker.toolTipText);
+        /*if(save.language == "french")
         {
             text.text = sticker.frenchText;
             tooltipText.text = sticker.frenchTooltip;
@@ -29,7 +31,7 @@ public class Sticker_Display : MonoBehaviour
         {
             text.text = sticker.englishText;
             tooltipText.text = sticker.englishTooltip;
-        }
+        }*/
         
         if(sticker.index >= GameObject.Find("Kenneth").GetComponent<PlayerMemory>().charactersRange.x && sticker.index <= GameObject.Find("Kenneth").GetComponent<PlayerMemory>().charactersRange.y)
         text.gameObject.SetActive(false);

@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbbde7afcdde144819f5765541e6c7, type: 3}
   m_Name: Fait_52
   m_EditorClassIdentifier: 
-  frenchText: "Kurt \xE9tait fou amoureux"
-  englishText: Crazy in love
   color: {r: 0.8352941, g: 1, b: 0.8235294, a: 1}
   index: 52
   stickerBackground: {fileID: 21300000, guid: d0382d91b3583a74097606ba7148c83f, type: 3}
   backgoundSize: {x: 100, y: 100}
-  frenchTooltip: "Kurt \xE9tait fou amoureux de Loraine"
-  englishTooltip: Kurt was desperately in love with Loraine
+  textKey: ST_52_Fait_Text
+  toolTipText: ST_52_Fait_Tooltip

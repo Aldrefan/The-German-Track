@@ -12,13 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbbde7afcdde144819f5765541e6c7, type: 3}
   m_Name: Hyp_29
   m_EditorClassIdentifier: 
-  frenchText: "L'assassin a pendu Loraine alors quelle \xE9tait drogu\xE9e"
-  englishText: The murderer hanged Loraine while she was drugged
   color: {r: 1, g: 0.9607843, b: 0.60784316, a: 1}
   index: 29
   stickerBackground: {fileID: 21300000, guid: 14c4222d0e300fb429c080a3ab816dac, type: 3}
   backgoundSize: {x: 100, y: 100}
-  frenchTooltip: Loraine Grey - Marque de cordes - Absence de traces de violence -
-    Drogue dans le sang
-  englishTooltip: Loraine Grey - Marque de cordes - Absence de traces de violence
-    - Drogue dans le sang
+  textKey: ST_29_Hyp_Text
+  toolTipText: ST_29_Hyp_Tooltip

@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbbde7afcdde144819f5765541e6c7, type: 3}
   m_Name: Ind_16
   m_EditorClassIdentifier: 
-  frenchText: Marque de corde
-  englishText: Rope marks
   color: {r: 1, g: 0.87058824, b: 0.84313726, a: 1}
   index: 16
   stickerBackground: {fileID: 21300000, guid: 1c5114b40d0456444b5fea0dad5b8a2a, type: 3}
   backgoundSize: {x: 100, y: 100}
-  frenchTooltip: Des marques de cordes sont sur le corps de Loraine
-  englishTooltip: Loraine's corpse has rope marks on it
+  textKey: ST_16_Ind_Text
+  toolTipText: ST_16_Ind_Tooltip

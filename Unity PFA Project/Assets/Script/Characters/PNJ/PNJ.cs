@@ -147,11 +147,6 @@ public class PNJ : MonoBehaviour
         }
         if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.name == "Kenneth")
         {
-            if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.transform.position.x < transform.position.x && GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.GetComponent<Interactions>().state == Interactions.State.InDialog)
-            {
-                transform.localScale = new Vector3(-8,8,1);
-            }
-            else transform.localScale = new Vector3(8,8,1);
             if(allDialogs.listOfDialogs[dialogIndex].canAskQuestions)
             {
                 carnet.GetComponent<Animator>().SetBool("InDialog", true);
@@ -241,10 +236,6 @@ public class PNJ : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("Talk", false); // Temporaire (A changer le plus vite possible)
         }
-        /*if(!allDialogs.listOfDialogs[dialogIndex].canAskQuestions)
-        {
-            allDialogs.listOfDialogs[dialogIndex].canAskQuestions = true;
-        }*/
         if(transform.parent && transform.parent.GetComponent<Phone>())
         {
             transform.parent.GetComponent<BoxCollider2D>().enabled = true;
