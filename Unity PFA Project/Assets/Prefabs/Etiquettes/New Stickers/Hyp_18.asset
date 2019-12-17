@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbbde7afcdde144819f5765541e6c7, type: 3}
   m_Name: Hyp_18
   m_EditorClassIdentifier: 
+  frenchText: "Kurt \xE0 l'intention de partir"
+  englishText: Kurt plans to leave
   color: {r: 1, g: 0.9607843, b: 0.60784316, a: 1}
   index: 18
   stickerBackground: {fileID: 21300000, guid: d0382d91b3583a74097606ba7148c83f, type: 3}
   backgoundSize: {x: 100, y: 100}
-  textKey: ST_18_Hyp_Text
-  toolTipText: ST_18_Hyp_Tooltip
+  frenchTooltip: "Kurt Becker - Valise pr\xEAte"
+  englishTooltip: "Kurt Becker - Valise pr\xEAte"

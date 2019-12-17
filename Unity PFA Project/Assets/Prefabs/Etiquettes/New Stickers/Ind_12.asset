@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbbde7afcdde144819f5765541e6c7, type: 3}
   m_Name: Ind_12
   m_EditorClassIdentifier: 
+  frenchText: "Lettre Br\xFBl\xE9e"
+  englishText: Burnt letter
   color: {r: 0.98039216, g: 0.87058824, b: 0.84313726, a: 1}
   index: 12
   stickerBackground: {fileID: 21300000, guid: a958dd6e903ce154ab67e5f04ac5998a, type: 3}
   backgoundSize: {x: 100, y: 100}
-  textKey: ST_12_Ind_Text
-  toolTipText: ST_12_Ind_Tooltip
+  frenchTooltip: "Trouv\xE9e dans la chemin\xE9e de Kurt"
+  englishTooltip: Found in Kurt's fireplace

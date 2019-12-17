@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbbde7afcdde144819f5765541e6c7, type: 3}
   m_Name: Hyp_25
   m_EditorClassIdentifier: 
+  frenchText: Viktor Becker est l'Allemand
+  englishText: Viktor Becker is the German
   color: {r: 1, g: 0.9607843, b: 0.60784316, a: 1}
   index: 25
   stickerBackground: {fileID: 21300000, guid: 92521f05acda91c468ae13a326a02dcd, type: 3}
   backgoundSize: {x: 100, y: 100}
-  textKey: ST_25_Hyp_Text
-  toolTipText: ST_25_Hyp_Tooltip
+  frenchTooltip: "Viktor Becker - l'Allemand - l'Allemand prot\xE8ge Kurt - Viktor
+    Becker est le fr\xE8re de Kurt"
+  englishTooltip: "Viktor Becker - l'Allemand - l'Allemand prot\xE8ge Kurt - Viktor
+    Becker est le fr\xE8re de Kurt"

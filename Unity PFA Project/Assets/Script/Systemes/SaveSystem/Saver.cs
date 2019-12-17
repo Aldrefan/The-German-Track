@@ -31,9 +31,8 @@ public class Saver : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.P))
         {
-            ClearSave();
-            /*JsonSave save = SaveGameManager.GetCurrentSave();
-            SaveGameManager.DeleteAllSaves();*/
+            JsonSave save = SaveGameManager.GetCurrentSave();
+            SaveGameManager.DeleteAllSaves();
         }
     }
 

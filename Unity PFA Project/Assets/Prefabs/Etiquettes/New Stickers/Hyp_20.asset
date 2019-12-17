@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbbde7afcdde144819f5765541e6c7, type: 3}
   m_Name: Hyp_20
   m_EditorClassIdentifier: 
+  frenchText: "La lettre brul\xE9e appartient a Kurt"
+  englishText: The burnt letter is Kurt's
   color: {r: 1, g: 0.9607843, b: 0.60784316, a: 1}
   index: 20
   stickerBackground: {fileID: 21300000, guid: 1c5114b40d0456444b5fea0dad5b8a2a, type: 3}
   backgoundSize: {x: 100, y: 100}
-  textKey: ST_20_Hyp_Text
-  toolTipText: ST_20_Hyp_Tooltip
+  frenchTooltip: "Kurt Becker - Lettre br\xFBl\xE9e"
+  englishTooltip: "Kurt Becker - Lettre br\xFBl\xE9e"

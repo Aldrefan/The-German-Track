@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbbde7afcdde144819f5765541e6c7, type: 3}
   m_Name: Ind_11
   m_EditorClassIdentifier: 
+  frenchText: "Valise pr\xEAte"
+  englishText: Packed luggage
   color: {r: 1, g: 0.87058824, b: 0.84313726, a: 1}
   index: 11
   stickerBackground: {fileID: 21300000, guid: d0382d91b3583a74097606ba7148c83f, type: 3}
   backgoundSize: {x: 100, y: 100}
-  textKey: ST_11_Ind_Text
-  toolTipText: ST_11_Ind_Tooltip
+  frenchTooltip: "Trouv\xE9e dans le chambre de Kurt et Loraine"
+  englishTooltip: Found in Kurt and Loraine's bedroom

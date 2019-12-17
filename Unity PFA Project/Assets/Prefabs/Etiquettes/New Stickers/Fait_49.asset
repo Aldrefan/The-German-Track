@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbbde7afcdde144819f5765541e6c7, type: 3}
   m_Name: Fait_49
   m_EditorClassIdentifier: 
+  frenchText: "Quelqu'un prot\xE8ge Kurt"
+  englishText: Someone is protecting Kurt
   color: {r: 0.8352941, g: 1, b: 0.8235294, a: 1}
   index: 49
   stickerBackground: {fileID: 21300000, guid: a958dd6e903ce154ab67e5f04ac5998a, type: 3}
   backgoundSize: {x: 100, y: 100}
-  textKey: ST_49_Fait_Text
-  toolTipText: ST_49_Fait_Tooltip
+  frenchTooltip: "Kurt est prot\xE9g\xE9 par quelqu'un"
+  englishTooltip: Kurt is being protected by someone

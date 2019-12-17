@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbbde7afcdde144819f5765541e6c7, type: 3}
   m_Name: Fait_48
   m_EditorClassIdentifier: 
+  frenchText: "Kurt \xE9tait drogu\xE9"
+  englishText: Kurt was drugged
   color: {r: 0.8352941, g: 1, b: 0.8235294, a: 1}
   index: 48
   stickerBackground: {fileID: 21300000, guid: d0382d91b3583a74097606ba7148c83f, type: 3}
   backgoundSize: {x: 100, y: 100}
-  textKey: ST_48_Fait_Text
-  toolTipText: ST_48_Fait_Tooltip
+  frenchTooltip: "Kurt \xE9tait drogu\xE9 quand il a parl\xE9 avec Marvin Meyer"
+  englishTooltip: Kurt was on drugs when he spoke to Marvin Meyer
