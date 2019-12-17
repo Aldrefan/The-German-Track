@@ -38215,6 +38215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59dda0572c4e9f34e919df6aa7330d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadAtStart: 1
 --- !u!1 &1046037994
 GameObject:
   m_ObjectHideFlags: 0
@@ -58073,7 +58074,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434ccd704efbe5944bc1e89a3338fcbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomList: []
 --- !u!114 &1555739452 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6252624642967059762, guid: e7c94aa2610c9844293398dde8a0fbf7,

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SaveFile : MonoBehaviour
 {
-    public List<GameObject> roomList;
+    public bool loadAtStart;
+    List<GameObject> roomList = new List<GameObject>();
 
 
     private void Start()
@@ -15,6 +16,7 @@ public class SaveFile : MonoBehaviour
 
         Debug.Log(GameSaveSystem.gameToLoad);
         LoadAtStart();
+
     }
 
     private void Update()
@@ -42,10 +44,11 @@ public class SaveFile : MonoBehaviour
 
     void LoadAtStart()
     {
-        if (GameSaveSystem.gameToLoad)
+        if (GameSaveSystem.gameToLoad || loadAtStart)
         {
-            ReturnGameData(GameSaveSystem.Load());
+            Load();
         }
+
     }
 
     public void ReturnGameData(GameData gameSave)
@@ -145,7 +148,9 @@ public class SaveFile : MonoBehaviour
     {
         foreach (SceneInformations room in FindObjectsOfType<SceneInformations>())
         {
+
             roomList.Add(room.gameObject);
+
             if (room.gameObject.name != FindObjectOfType<CameraFollow>().actualRoom.name)
             {
                 room.gameObject.SetActive(false);
