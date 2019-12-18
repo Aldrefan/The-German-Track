@@ -97,13 +97,20 @@ public class SaveFile : MonoBehaviour
             
         }
 
+        GameObject KPlayer = null;
+        foreach(EventsCheck actualPlayer in FindObjectsOfType<EventsCheck>()){
+                if(actualPlayer.gameObject.name == "Kenneth"){
+                        KPlayer = actualPlayer.gameObject;
+                }
+        }
+
         if (!savedRoom.activeInHierarchy)
         {
             CameraFollow gameCam = FindObjectOfType<CameraFollow>();
             gameCam.actualRoom.SetActive(false);
             gameCam.actualRoom = savedRoom;
             gameCam.actualRoom.SetActive(true);
-            gameCam.transform.position += gameCam.actualRoom.transform.position /*+= FindObjectOfType<EventsCheck>().transform.position*/;
+            //gameCam.transform.position += KPlayer.transform.position /*+= FindObjectOfType<EventsCheck>().transform.position*/;
             gameCam.InitRoomLimit();
         }
 

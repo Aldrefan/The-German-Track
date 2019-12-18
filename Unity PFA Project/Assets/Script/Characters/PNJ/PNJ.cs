@@ -149,9 +149,9 @@ public class PNJ : MonoBehaviour
         {
             if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.transform.position.x < transform.position.x && GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.GetComponent<Interactions>().state == Interactions.State.InDialog)
             {
-                transform.localScale = new Vector3(-8,8,1);
+                transform.GetComponent<SpriteRenderer>().flipX = true;
             }
-            else transform.localScale = new Vector3(8,8,1);
+            else transform.GetComponent<SpriteRenderer>().flipX = false;
             if(allDialogs.listOfDialogs[dialogIndex].canAskQuestions)
             {
                 carnet.GetComponent<Animator>().SetBool("InDialog", true);
