@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4165409269266685879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4165409269266685873}
+  - component: {fileID: 4165409269266685878}
+  m_Layer: 0
+  m_Name: Tutorial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4165409269266685873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4165409269266685879}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.15971756, y: -0.16651535, z: -2.9609132}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4165409269266685878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4165409269266685879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327102c48a2c9294b97410e208d9594f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  isInHelp: 0
+  currentTuto: 
+  canEsc: 0
+  wantSkipTuto: 0
+  canSave: 0
+  topBoxHelp: {fileID: 0}
+  midBoxHelp: {fileID: 0}
+  bottomBoxHelp: {fileID: 0}
+  refNeeded:
+    leftDialog: {fileID: 0}
+    rightDialog: {fileID: 0}
+    newSticker: {fileID: 0}
+    book: {fileID: 0}
+    bookOnDialog: {fileID: 0}
+    board: {fileID: 0}
+    menu: {fileID: 0}
+    saveButton: {fileID: 0}
+  tutoDone:
+    dialogsDone: 0
+    newStickerDone: 0
+    questionsDone: 0
+    quitDialogDone: 0
+    moveDone: 0
+    interactionDone: 0
+    openBookDone: 0
+    navigateBookDone: 0
+    menuDone: 0
+    sprintDone: 0
+    boardDone: 0
+  textSkipTuto: Tuto_Skip
+  dialogs:
+    positionBoxHelp: 0
+    canClose: 0
+    endingString: 
+    keyTitle: Tuto_Dialogs_Title
+    keyText: Tuto_Dialogs_Text
+  newSticker:
+    positionBoxHelp: 0
+    canClose: 1
+    endingString: tuto_newSticker_end
+    keyTitle: Tuto_NewSticker_Title
+    keyText: Tuto_NewSticker_Text
+  questions:
+    positionBoxHelp: 0
+    canClose: 0
+    endingString: questions
+    keyTitle: Tuto_Questions_Title
+    keyText: Tuto_Questions_Text
+  quitDialog:
+    positionBoxHelp: 1
+    canClose: 0
+    endingString: quitDialog
+    keyTitle: Tuto_QuitDialog_Title
+    keyText: Tuto_QuitDialog_Text
+  move:
+    positionBoxHelp: 0
+    canClose: 0
+    endingString: move
+    keyTitle: Tuto_Move_Title
+    keyText: Tuto_Move_Text
+  interaction:
+    positionBoxHelp: 2
+    canClose: 0
+    endingString: 
+    keyTitle: Tuto_Interaction_Title
+    keyText: Tuto_Interaction_Text
+  openBook:
+    positionBoxHelp: 1
+    canClose: 0
+    endingString: 
+    keyTitle: Tuto_OpenBook_Title
+    keyText: Tuto_OpenBook_Text
+  navigateBook:
+    positionBoxHelp: 1
+    canClose: 1
+    endingString: tuto_navigateBook_end
+    keyTitle: Tuto_NavigateBook_Title
+    keyText: Tuto_NavigateBook_Text
+  menu:
+    positionBoxHelp: 1
+    canClose: 0
+    endingString: 
+    keyTitle: Tuto_Menu_Title
+    keyText: Tuto_Menu_Text
+  sprint:
+    positionBoxHelp: 0
+    canClose: 0
+    endingString: 
+    keyTitle: Tuto_Sprint_Text
+    keyText: Tuto_Sprint_Text
+  board:
+    positionBoxHelp: 1
+    canClose: 1
+    endingString: tuto_board_end
+    keyTitle: Tuto_Board_Title
+    keyText: Tuto_Board_Text
