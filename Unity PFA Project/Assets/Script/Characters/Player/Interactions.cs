@@ -167,7 +167,7 @@ public class Interactions : MonoBehaviour
     {
         if(Input.GetButtonDown("Cancel"))
         {
-            if(GameObject.Find("Tutorial").GetComponent<TutoKenneth>().canEsc && PNJContact.GetComponent<PNJ>().dialogIndex > 0 && PNJContact.GetComponent<PNJ>().allDialogs.listOfDialogs[PNJContact.GetComponent<PNJ>().dialogIndex].canAskQuestions)
+            if(PNJContact.GetComponent<PNJ>().dialogIndex > 0 && PNJContact.GetComponent<PNJ>().allDialogs.listOfDialogs[PNJContact.GetComponent<PNJ>().dialogIndex].canAskQuestions)
             {
                 PNJContact.GetComponent<PNJ>().EndDialog();
                 carnetUI.GetComponent<Animator>().SetBool("ClickOn", false);

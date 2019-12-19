@@ -10,7 +10,7 @@ public class PNJ : MonoBehaviour
     public Sprite characterSprite;
     public Sprite kennethSprite;
     GameObject DialogCanvas;
-    public int dialogLine = 0;
+    int dialogLine = 0;
     GameObject player;
     GameObject leftPanel;
     GameObject rightPanel;

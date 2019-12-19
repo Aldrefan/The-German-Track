@@ -2445,7 +2445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &70194918
 Transform:
   m_ObjectHideFlags: 0
@@ -3601,7 +3601,6 @@ MonoBehaviour:
   PNJName: Marvin Meyer
   characterSprite: {fileID: 21300000, guid: 3ce98010305452a4d832949309ca0ad1, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 6
   negativeQuote: 7
@@ -5302,7 +5301,6 @@ MonoBehaviour:
   PNJName: Commode
   characterSprite: {fileID: 0}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 0
   negativeQuote: 0
@@ -6741,7 +6739,6 @@ MonoBehaviour:
   PNJName: "Lettre Cod\xE9e"
   characterSprite: {fileID: 0}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 0
   negativeQuote: 0
@@ -7098,7 +7095,6 @@ MonoBehaviour:
   PNJName: "T\xE9l\xE9phone"
   characterSprite: {fileID: 21300000, guid: d32b38448ae9b764eb90053d37e1d202, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 0
   negativeQuote: 0
@@ -8330,7 +8326,6 @@ MonoBehaviour:
   PNJName: S. Nelson
   characterSprite: {fileID: 21300000, guid: b04365d9f0f3ea041be1fe199247d897, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 3
   negativeQuote: 4
@@ -9142,7 +9137,6 @@ MonoBehaviour:
   PNJName: W. White
   characterSprite: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 5
   negativeQuote: 6
@@ -15860,7 +15854,6 @@ MonoBehaviour:
   PNJName: Dr. Lou Ellis
   characterSprite: {fileID: 21300000, guid: 7b6c5ad84d59d2b4c8505d88c02dbd58, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 5
   negativeQuote: 6
@@ -17015,12 +17008,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &433079407 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2488211256309654760, guid: 33ddad3a370b0824b848ab3b505bf613,
-    type: 3}
-  m_PrefabInstance: {fileID: 1714092047808702667}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &438327412
 GameObject:
   m_ObjectHideFlags: 0
@@ -17377,12 +17364,6 @@ Transform:
   m_Father: {fileID: 1312731727}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &450218638 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8891736062403971573, guid: 33ddad3a370b0824b848ab3b505bf613,
-    type: 3}
-  m_PrefabInstance: {fileID: 1714092047808702667}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &455412412
 GameObject:
   m_ObjectHideFlags: 0
@@ -27359,7 +27340,6 @@ MonoBehaviour:
   PNJName: "T\xE9l\xE9phone"
   characterSprite: {fileID: 21300000, guid: d32b38448ae9b764eb90053d37e1d202, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 0
   negativeQuote: 2
@@ -27552,7 +27532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.4000244, y: -83}
+  m_AnchoredPosition: {x: 4.4000244, y: -121.70001}
   m_SizeDelta: {x: -75.6, y: -281.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &688176520
@@ -31319,14 +31299,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1558940067}
-        m_MethodName: closeBoxHelp
+        m_MethodName: closeTopBoxHelp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: top
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -34375,7 +34355,6 @@ MonoBehaviour:
   PNJName: Drogue
   characterSprite: {fileID: 0}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 0
   negativeQuote: 0
@@ -36441,7 +36420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1047992693
 Transform:
   m_ObjectHideFlags: 0
@@ -36688,7 +36667,6 @@ MonoBehaviour:
   PNJName: Marvin Meyer
   characterSprite: {fileID: 21300000, guid: 3ce98010305452a4d832949309ca0ad1, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 6
   negativeQuote: 7
@@ -38391,14 +38369,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1558940067}
-        m_MethodName: closeBoxHelp
+        m_MethodName: closeMidBoxHelp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: mid
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -39012,18 +38990,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1558940067}
-    - target: {fileID: 606209477, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: openBoardHelp
-      objectReference: {fileID: 0}
-    - target: {fileID: 606209477, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 606209477, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: board
-      objectReference: {fileID: 0}
     - target: {fileID: 637113917, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -40946,12 +40912,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1213558906 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6939456272973498312, guid: 33ddad3a370b0824b848ab3b505bf613,
-    type: 3}
-  m_PrefabInstance: {fileID: 1714092047808702667}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1214810723
 GameObject:
   m_ObjectHideFlags: 0
@@ -43617,7 +43577,6 @@ MonoBehaviour:
   PNJName: W. White
   characterSprite: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 5
   negativeQuote: 6
@@ -44210,7 +44169,6 @@ MonoBehaviour:
   PNJName: Clara Grey
   characterSprite: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 6
   negativeQuote: 15
@@ -44378,7 +44336,7 @@ MonoBehaviour:
       hasChoices: 0
       endDialog: 0
       buttonsList:
-      - {fileID: 0}
+      - {fileID: 11400000, guid: 4f476e55573c6314985740a9dc9a928c, type: 2}
     - dialog:
       - quote: L1_Clara_D2_Q1
         characterName: Kenneth
@@ -45237,7 +45195,6 @@ GameObject:
   - component: {fileID: 1384932554}
   - component: {fileID: 1384932556}
   - component: {fileID: 1384932555}
-  - component: {fileID: 1384932557}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -45301,32 +45258,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384932553}
   m_CullTransparentMesh: 0
---- !u!61 &1384932557
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384932553}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -2.5224, y: -1.7348785}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 887.03284, y: 567.78674}
-  m_EdgeRadius: 0
 --- !u!1 &1387433032
 GameObject:
   m_ObjectHideFlags: 0
@@ -45468,7 +45399,6 @@ MonoBehaviour:
   PNJName: Fauteuil
   characterSprite: {fileID: 0}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 10
   negativeQuote: 0
@@ -45698,14 +45628,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1558940067}
-        m_MethodName: closeBoxHelp
+        m_MethodName: closeBottomBoxHelp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: bottom
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -51768,7 +51698,6 @@ MonoBehaviour:
   PNJName: "T\xE9l\xE9phone"
   characterSprite: {fileID: 21300000, guid: d32b38448ae9b764eb90053d37e1d202, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 0
   negativeQuote: 2
@@ -53957,7 +53886,6 @@ MonoBehaviour:
   PNJName: Lamp
   characterSprite: {fileID: 0}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 10
   negativeQuote: 9
@@ -54076,7 +54004,6 @@ MonoBehaviour:
   PNJName: Clara Grey
   characterSprite: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 6
   negativeQuote: 7
@@ -54653,7 +54580,6 @@ MonoBehaviour:
   PNJName: Clara Gray
   characterSprite: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 6
   negativeQuote: 15
@@ -55370,22 +55296,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1156105002}
   isInHelp: 0
-  currentTuto: 
-  canEsc: 0
-  wantSkipTuto: 0
-  canSave: 0
   topBoxHelp: {fileID: 1974803100}
   midBoxHelp: {fileID: 560394030}
   bottomBoxHelp: {fileID: 688176518}
-  refNeeded:
-    leftDialog: {fileID: 1700093602}
-    rightDialog: {fileID: 1213558906}
-    newSticker: {fileID: 8891736063403011963}
-    book: {fileID: 433079407}
-    bookOnDialog: {fileID: 450218638}
-    board: {fileID: 347536217}
-    menu: {fileID: 35979320}
-    saveButton: {fileID: 831084931}
+  textSkipTuto: Tuto_Skip
   tutoDone:
     dialogsDone: 0
     newStickerDone: 0
@@ -55398,71 +55312,59 @@ MonoBehaviour:
     menuDone: 0
     sprintDone: 0
     boardDone: 0
-  textSkipTuto: Tuto_Skip
   dialogs:
     positionBoxHelp: 0
     canClose: 0
-    endingString: 
     keyTitle: Tuto_Dialogs_Title
     keyText: Tuto_Dialogs_Text
   newSticker:
     positionBoxHelp: 0
     canClose: 1
-    endingString: tuto_newSticker_end
     keyTitle: Tuto_NewSticker_Title
     keyText: Tuto_NewSticker_Text
   questions:
-    positionBoxHelp: 0
+    positionBoxHelp: 2
     canClose: 0
-    endingString: questions
     keyTitle: Tuto_Questions_Title
     keyText: Tuto_Questions_Text
   quitDialog:
     positionBoxHelp: 1
     canClose: 0
-    endingString: quitDialog
     keyTitle: Tuto_QuitDialog_Title
     keyText: Tuto_QuitDialog_Text
   move:
     positionBoxHelp: 0
     canClose: 0
-    endingString: move
     keyTitle: Tuto_Move_Title
     keyText: Tuto_Move_Text
   interaction:
     positionBoxHelp: 2
     canClose: 0
-    endingString: 
     keyTitle: Tuto_Interaction_Title
     keyText: Tuto_Interaction_Text
   openBook:
     positionBoxHelp: 1
     canClose: 0
-    endingString: 
     keyTitle: Tuto_OpenBook_Title
     keyText: Tuto_OpenBook_Text
   navigateBook:
     positionBoxHelp: 1
     canClose: 1
-    endingString: tuto_navigateBook_end
     keyTitle: Tuto_NavigateBook_Title
     keyText: Tuto_NavigateBook_Text
   menu:
     positionBoxHelp: 1
     canClose: 0
-    endingString: 
     keyTitle: Tuto_Menu_Title
     keyText: Tuto_Menu_Text
   sprint:
     positionBoxHelp: 0
     canClose: 0
-    endingString: 
     keyTitle: Tuto_Sprint_Text
     keyText: Tuto_Sprint_Text
   board:
     positionBoxHelp: 1
     canClose: 1
-    endingString: tuto_board_end
     keyTitle: Tuto_Board_Title
     keyText: Tuto_Board_Text
 --- !u!4 &1558940068
@@ -56126,21 +56028,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
-      propertyPath: stickerIndexCarnetList.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
       propertyPath: boardCanvas
       value: 
       objectReference: {fileID: 347536223}
@@ -56154,16 +56041,6 @@ PrefabInstance:
       propertyPath: carnet
       value: 
       objectReference: {fileID: 1149932897}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[1]
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017400, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: PNJContact
@@ -57328,7 +57205,6 @@ MonoBehaviour:
   PNJName: S. Nelson
   characterSprite: {fileID: 21300000, guid: b04365d9f0f3ea041be1fe199247d897, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 3
   negativeQuote: 4
@@ -58573,12 +58449,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.75
---- !u!1 &1700093602 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1662462164923403486, guid: 33ddad3a370b0824b848ab3b505bf613,
-    type: 3}
-  m_PrefabInstance: {fileID: 1714092047808702667}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1701863707
 GameObject:
   m_ObjectHideFlags: 0
@@ -59339,7 +59209,6 @@ MonoBehaviour:
   PNJName: Kurt Becker
   characterSprite: {fileID: 21300000, guid: cc025ebf42fbd1643b3f7fc456003ad0, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 12
   negativeQuote: 13
@@ -61291,7 +61160,6 @@ MonoBehaviour:
   PNJName: "Chemin\xE9e"
   characterSprite: {fileID: 0}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 0
   negativeQuote: 0
@@ -62073,7 +61941,6 @@ MonoBehaviour:
   PNJName: EndDialog
   characterSprite: {fileID: 0}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 10
   negativeQuote: 9
@@ -64692,7 +64559,6 @@ MonoBehaviour:
   PNJName: Kurt Becker
   characterSprite: {fileID: 21300000, guid: cc025ebf42fbd1643b3f7fc456003ad0, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 12
   negativeQuote: 13
@@ -65759,7 +65625,6 @@ MonoBehaviour:
   PNJName: "T\xE9l\xE9phone"
   characterSprite: {fileID: 21300000, guid: d32b38448ae9b764eb90053d37e1d202, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 0
   negativeQuote: 2
@@ -65956,7 +65821,6 @@ GameObject:
   - component: {fileID: 1933268897}
   - component: {fileID: 1933268899}
   - component: {fileID: 1933268898}
-  - component: {fileID: 1933268900}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -66020,32 +65884,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933268896}
   m_CullTransparentMesh: 0
---- !u!61 &1933268900
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933268896}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -2.5224, y: -1.7348785}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 887.03284, y: 567.78674}
-  m_EdgeRadius: 0
 --- !u!1 &1934659109
 GameObject:
   m_ObjectHideFlags: 0
@@ -67296,7 +67134,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.4000244, y: 65}
+  m_AnchoredPosition: {x: 4.4000244, y: 103.899994}
   m_SizeDelta: {x: -75.6, y: -271.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1974803102
@@ -68139,7 +67977,6 @@ MonoBehaviour:
   PNJName: Valise
   characterSprite: {fileID: 0}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 0
   negativeQuote: 0
@@ -69026,7 +68863,6 @@ GameObject:
   - component: {fileID: 2029488950}
   - component: {fileID: 2029488952}
   - component: {fileID: 2029488951}
-  - component: {fileID: 2029488953}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -69090,32 +68926,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029488949}
   m_CullTransparentMesh: 0
---- !u!61 &2029488953
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029488949}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -2.5224, y: -1.7348785}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 887.03284, y: 567.78674}
-  m_EdgeRadius: 0
 --- !u!1 &2030208161
 GameObject:
   m_ObjectHideFlags: 0
@@ -71201,7 +71011,6 @@ MonoBehaviour:
   PNJName: Dr. Lou Ellis
   characterSprite: {fileID: 21300000, guid: 7b6c5ad84d59d2b4c8505d88c02dbd58, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 5
   negativeQuote: 6
@@ -72228,11 +72037,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ken_Dial_Book_FlCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8891736062753409459, guid: 33ddad3a370b0824b848ab3b505bf613,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8891736062753409463, guid: 33ddad3a370b0824b848ab3b505bf613,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -72348,36 +72152,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1156105002}
-    - target: {fileID: 9185088232496603786, guid: 33ddad3a370b0824b848ab3b505bf613,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4223251144136150412, guid: 33ddad3a370b0824b848ab3b505bf613,
         type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1156105002}
-    - target: {fileID: 4223251144136150412, guid: 33ddad3a370b0824b848ab3b505bf613,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891736063403011964, guid: 33ddad3a370b0824b848ab3b505bf613,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9174854751271366671, guid: 33ddad3a370b0824b848ab3b505bf613,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891736062403971577, guid: 33ddad3a370b0824b848ab3b505bf613,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
 --- !u!61 &1746639213477368057

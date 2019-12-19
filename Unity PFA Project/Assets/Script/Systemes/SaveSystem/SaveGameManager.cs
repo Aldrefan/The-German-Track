@@ -82,7 +82,7 @@ public static class SaveGameManager
             }
             else
             {
-                //Debug.Log("File " + SAVE_FILE_PATH + " doesn't exist");
+                Debug.Log("File " + SAVE_FILE_PATH + " doesn't exist");
 
                 currentSaves = new ObjectSaved();
             }
