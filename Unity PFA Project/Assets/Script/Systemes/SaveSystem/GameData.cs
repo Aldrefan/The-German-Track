@@ -11,9 +11,9 @@ public class GameData
     //public string language = "french";
 
     //Level
-    public Scene currentLevel;
+    public string currentLevel;
     //DayNightLight -> DirectionnalLight
-    public DayNightLight dayNightCycle;
+    public bool dayNightCycle;
     //EventsCheck -> Player
     public List<string> eventList;
     //Interactions -> Player
@@ -24,18 +24,18 @@ public class GameData
     public List<int> allStickers = new List<int>();
     public List<Vector3> stickersPositionOnBoard = new List<Vector3>();
     //CameraFollow -> MainCamera
-    public GameObject actualRoom;
+    public string actualRoomName;
     //ActiveCharacterScript -> GameObject
     public List<CharacterPosition> playableCharacters = new List<CharacterPosition>();
 
 
     public GameData(CameraFollow camScript, ActiveCharacterScript currentCharacters, GameObject characterToPlay, DayNightLight directionalLight)
     {
-        currentLevel = SceneManager.GetActiveScene();
+        currentLevel = SceneManager.GetActiveScene().name;
 
         if (camScript != null && currentCharacters != null)
         {
-            actualRoom = camScript.actualRoom;
+            actualRoomName = camScript.actualRoom.name;
 
             for (int i = 0; i < currentCharacters.playableCharactersList.Count; i++)
             {
@@ -54,9 +54,14 @@ public class GameData
             eventList = characterToPlay.GetComponent<EventsCheck>().eventsList;
         }
 
-        if(directionalLight != null)
+        if (directionalLight.time == DayNightLight.timeEnum.Day)
         {
-            dayNightCycle = directionalLight;
+            dayNightCycle = true;
+        }
+        else
+        {
+            dayNightCycle = false;
+
         }
     }
 
@@ -66,15 +71,13 @@ public class GameData
 [System.Serializable]
 public class CharacterPosition
 {
-    public GameObject character;
-    public Vector3 position;
+    public string characterName;
+    public Vector3 characterPosition;
 
     public CharacterPosition(GameObject newCharacter)
     {
-        character = newCharacter;
-        position = newCharacter.transform.position;
+        characterName = newCharacter.name;
+        characterPosition = newCharacter.transform.position;
     }
 
 }
-
-

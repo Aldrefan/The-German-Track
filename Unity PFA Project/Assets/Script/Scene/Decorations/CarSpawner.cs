@@ -46,7 +46,7 @@ public class CarSpawner : MonoBehaviour
 
     void RandomNumber()
     {
-        float delay = Random.Range(1f, 4f);
+        float delay = Random.Range(2f, 5f);
         IEnumerator coroutine = TimeBetweenCars(delay);
         StartCoroutine(coroutine);
     }

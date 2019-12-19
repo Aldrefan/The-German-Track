@@ -19,6 +19,7 @@ public class Shortcut : MonoBehaviour
         fadePanel =  GameObject.Find("Necessary_Floating_Canvas").transform.GetChild(0).gameObject;
         player = GameObject.FindGameObjectWithTag("Player");
         directionalLight = GameObject.Find("Directional Light");
+        StartFade();
     }
 
     void Awake()
@@ -39,6 +40,12 @@ public class Shortcut : MonoBehaviour
             }
         }
     }*/
+
+    void StartFade()
+    {
+        fadePanel.GetComponent<Animator>().SetTrigger("StartFade");
+
+    }
 
     public void Teleport()
     {

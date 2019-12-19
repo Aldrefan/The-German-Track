@@ -604,7 +604,7 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: Autre chose ?
+      - quote: L1_Clara_D6_Q1
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
@@ -615,12 +615,86 @@ MonoBehaviour:
       hasChoices: 0
       endDialog: 0
       buttonsList: []
-    - dialog: []
+    - dialog:
+      - quote: L1_Clara_D7_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: L1_Clara_D7_Q2
+        characterName: Clara
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
+          type: 3}
+      - quote: L1_Clara_D7_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: L1_Clara_D7_Q4
+        characterName: Clara
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
+          type: 3}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
-    - dialog: []
+    - dialog:
+      - quote: 
+        characterName: 
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: 
+        characterName: 
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: 
+        characterName: 
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: 
+        characterName: 
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: 
+        characterName: 
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: 
+        characterName: 
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: 
+        characterName: 
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: 
+        characterName: 
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
@@ -656,7 +730,7 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: "Je ne sais rien \xE0 ce sujet"
+      - quote: L1_Clara_D15_Q1
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
@@ -786,7 +860,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7580b9a4e8e5826458a86c4c41f93320, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
