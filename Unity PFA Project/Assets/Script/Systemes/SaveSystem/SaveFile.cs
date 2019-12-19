@@ -19,18 +19,18 @@ public class SaveFile : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.K))
-        {
-            Debug.Log("Saved");
-            Save();
-        }
-        if (Input.GetKey(KeyCode.L))
-        {
-            Load();
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKey(KeyCode.K))
+    //    {
+    //        Debug.Log("Saved");
+    //        Save();
+    //    }
+    //    if (Input.GetKey(KeyCode.L))
+    //    {
+    //        Load();
+    //    }
+    //}
 
     void Save()
     {
@@ -140,12 +140,18 @@ public class SaveFile : MonoBehaviour
         }
         if (player != null)
         {
-            player.GetComponent<PlayerMemory>().stickerIndexBoardList = gameSave.stickersIndexOnBoard;
-            player.GetComponent<PlayerMemory>().stickerIndexCarnetList = gameSave.stickersIndexInCarnet;
-            player.GetComponent<PlayerMemory>().allStickers = gameSave.allStickers;
-            player.GetComponent<PlayerMemory>().stickersPositionBoard = gameSave.stickersPositionOnBoard;
-            player.GetComponent<Interactions>().PnjMet = gameSave.NPCmet;
-            player.GetComponent<EventsCheck>().eventsList = gameSave.eventList;
+            CheckListInt(player.GetComponent<PlayerMemory>().stickerIndexBoardList, gameSave.stickersIndexOnBoard);
+            CheckListInt(player.GetComponent<PlayerMemory>().stickerIndexCarnetList, gameSave.stickersIndexInCarnet);
+            CheckListInt(player.GetComponent<PlayerMemory>().allStickers, gameSave.allStickers);
+            CheckListVector3(player.GetComponent<PlayerMemory>().stickersPositionBoard, gameSave.stickersPositionOnBoard);
+            CheckListString(player.GetComponent<Interactions>().PnjMet, gameSave.NPCmet);
+            CheckListString(player.GetComponent<EventsCheck>().eventsList, gameSave.eventList);
+            //player.GetComponent<PlayerMemory>().stickerIndexBoardList = gameSave.stickersIndexOnBoard;
+            //player.GetComponent<PlayerMemory>().stickerIndexCarnetList = gameSave.stickersIndexInCarnet;
+            //player.GetComponent<PlayerMemory>().allStickers = gameSave.allStickers;
+            //player.GetComponent<PlayerMemory>().stickersPositionBoard = gameSave.stickersPositionOnBoard;
+            //player.GetComponent<Interactions>().PnjMet = gameSave.NPCmet;
+            //player.GetComponent<EventsCheck>().eventsList = gameSave.eventList;
 
         }
 
@@ -182,5 +188,36 @@ public class SaveFile : MonoBehaviour
             FindObjectOfType<ActiveCharacterScript>(),
             player,
             FindObjectOfType<DayNightLight>());
+    }
+
+    void CheckListInt(List<int> intList,List<int> savedIntList)
+    {
+        foreach(int index in savedIntList)
+        {
+            if (!intList.Contains(index))
+            {
+                intList.Add(index);
+            }
+        }
+    }
+    void CheckListVector3(List<Vector3> intList, List<Vector3> savedIntList)
+    {
+        foreach (Vector3 index in savedIntList)
+        {
+            if (!intList.Contains(index))
+            {
+                intList.Add(index);
+            }
+        }
+    }
+    void CheckListString(List<string> intList, List<string> savedIntList)
+    {
+        foreach (string index in savedIntList)
+        {
+            if (!intList.Contains(index))
+            {
+                intList.Add(index);
+            }
+        }
     }
 }
