@@ -125,6 +125,7 @@ MonoBehaviour:
   PNJName: Clara Grey
   characterSprite: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
+  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 6
   negativeQuote: 15
@@ -600,7 +601,7 @@ MonoBehaviour:
           type: 3}
       canAskQuestions: 0
       hasChoices: 0
-      endDialog: 1
+      endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Autre chose ?
@@ -612,7 +613,7 @@ MonoBehaviour:
           type: 3}
       canAskQuestions: 1
       hasChoices: 0
-      endDialog: 1
+      endDialog: 0
       buttonsList: []
     - dialog: []
       canAskQuestions: 0
