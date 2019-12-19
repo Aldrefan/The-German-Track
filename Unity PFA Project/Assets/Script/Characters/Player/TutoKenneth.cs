@@ -473,6 +473,7 @@ public class TutoKenneth : MonoBehaviour
         refNeeded.leftDialog.GetComponent<BoxCollider2D>().enabled = true;
         refNeeded.rightDialog.GetComponent<BoxCollider2D>().enabled = true;
         player.GetComponent<Interactions>().enabled = true;
+        refNeeded.newSticker.GetComponent<Animator>().speed = 1;
     }
 
     void skipAll()

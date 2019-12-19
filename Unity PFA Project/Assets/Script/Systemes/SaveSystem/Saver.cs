@@ -48,7 +48,7 @@ public class Saver : MonoBehaviour
 
     void KennethSave()
     {
-        JsonSave save = SaveGameManager.GetCurrentSave();
+        /*JsonSave save = SaveGameManager.GetCurrentSave();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         save.level = SceneManager.GetActiveScene().buildIndex;
         save.lieu = lieuFM;
@@ -85,7 +85,7 @@ public class Saver : MonoBehaviour
                 }
             }
         } */
-        SaveGameManager.Save();
+        //SaveGameManager.Save();
     }
 
 
@@ -99,7 +99,7 @@ public class Saver : MonoBehaviour
 
     }
     
-    public void ClearSave()
+   /* public void ClearSave()
     {
         JsonSave save = SaveGameManager.GetCurrentSave();
         //save.carnetStickersList.Clear();
@@ -109,5 +109,5 @@ public class Saver : MonoBehaviour
         save.stickersPositionOnBoard.Clear();
         save.eventList.Clear();
         SaveGameManager.Save();
-    }
+    }*/
 }
