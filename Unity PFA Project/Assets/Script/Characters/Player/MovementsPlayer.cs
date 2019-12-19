@@ -7,7 +7,7 @@ public class MovementsPlayer : MonoBehaviour {
     public float walk_speed;
     public float run_speed;
     bool facingRight = true;
-    bool sprint = false;
+    public bool sprint = false;
     float speed;
     public bool canRun;
     Rigidbody2D rb2d;
