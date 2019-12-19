@@ -142,7 +142,7 @@ public class Clara_Cinematic : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().ChangeState(Interactions.State.InCinematic);
         }
         //GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(2).GetComponent<Animator>().SetBool("ClickOn", true);
-        Debug.Log("Action n° " + action + " Command " + commandList[action]);
+        //Debug.Log("Action n° " + action + " Command " + commandList[action]);
         switch (commandList[action])
         {
             case Command.Movement :
