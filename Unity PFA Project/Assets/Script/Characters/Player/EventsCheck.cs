@@ -17,7 +17,8 @@ public class EventsCheck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(EnableClaraCinematic(3));
+        StartCoroutine(EnableClaraCinematic(1));
+
     }
 
     // Update is called once per frame

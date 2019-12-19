@@ -31,7 +31,8 @@ public class CarnetSticker : MonoBehaviour
 
     void OnEnable()
     {
-        if(player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().stickerAlreadyGivenList.Contains(GetComponent<Sticker_Display>().sticker.index))
+        Debug.Log(player.GetComponent<Interactions>().PNJContact);
+        if(player.GetComponent<Interactions>().PNJContact.tag == "PNJInteractable" && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().stickerAlreadyGivenList.Contains(GetComponent<Sticker_Display>().sticker.index))
         {
             transform.GetChild(0).GetComponent<Image>().color = Color.gray;
             //GetComponent<Image>().color = Color.gray;

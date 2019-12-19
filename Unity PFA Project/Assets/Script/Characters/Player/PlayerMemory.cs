@@ -8,7 +8,6 @@ public class PlayerMemory : MonoBehaviour
     public List<int> stickerIndexBoardList;
     public List<int> allStickers;
     //Transform carnet;
-    public List<GameObject> stickerList;
     public List<Vector3> stickersPositionBoard;
     public Transform boardCanvas;
     public Vector2Int charactersRange;
@@ -36,12 +35,6 @@ public class PlayerMemory : MonoBehaviour
         //{
             //AddToMemory(save.memoryStickers[i]);
         //}
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void AddToMemory(int stickerIndex)
@@ -135,7 +128,8 @@ public class PlayerMemory : MonoBehaviour
                 }
                 else
                 {
-                    GameObject newSticker = Instantiate(stickerList[newStickerIndex], boardCanvas);
+                    GameObject newSticker = Instantiate(stickerTemplate, boardCanvas);
+                    newSticker.GetComponent<Sticker_Display>().sticker = stickersScriptableList[newStickerIndex];
                     newSticker.GetComponent<RectTransform>().localPosition = new Vector2(0 + offsets.x * i, -100 + offsets.y * i);
                     newSticker.transform.localPosition = new Vector2(0 + offsets.x * i, -100 + offsets.y * i);
                     //Debug.Log(newSticker.name + " " + "Position : " + newSticker.GetComponent<RectTransform>().localPosition);

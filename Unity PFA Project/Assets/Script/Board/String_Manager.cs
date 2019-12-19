@@ -66,7 +66,7 @@ public GameObject stickerTemplate;
             for(int i = 0; i < pinList.Count; ++i)
             {
                 lineRenderer.positionCount = pinList.Count;
-                lineRenderer.SetPosition(i, new Vector3(pinList[i].transform.GetChild(2).position.x, pinList[i].transform.GetChild(2).position.y, pinList[i].transform.GetChild(2).position.z - 1));
+                lineRenderer.SetPosition(i, new Vector3(pinList[i].transform.GetChild(3).position.x, pinList[i].transform.GetChild(3).position.y, pinList[i].transform.GetChild(3).position.z - 1));
             }
         }
         else lineRenderer.enabled = false;

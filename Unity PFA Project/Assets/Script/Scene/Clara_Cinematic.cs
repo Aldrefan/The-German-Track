@@ -9,7 +9,7 @@ public class Clara_Cinematic : MonoBehaviour
 
     [SerializeField]
     List<Command> commandList;
-    //[SerializeField]
+    
     public List<TimeAndDirection> annexInformation;
     public int action = 0;
     public bool fromStart;

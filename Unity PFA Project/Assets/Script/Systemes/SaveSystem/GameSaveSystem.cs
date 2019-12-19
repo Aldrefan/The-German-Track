@@ -6,6 +6,8 @@ using UnityEngine;
 
 public static class GameSaveSystem
 {
+    public static bool gameToLoad;
+
     static CameraFollow camScript;
     static ActiveCharacterScript currentCharacters;
     static GameObject actualPlayer;
@@ -20,7 +22,7 @@ public static class GameSaveSystem
             Directory.CreateDirectory(SAVE_FOLDER);
         }
     }
-    
+
     public static void Save()
     {
         GameData saveObject = new GameData(camScript, currentCharacters, actualPlayer, directionalLight);
@@ -31,7 +33,7 @@ public static class GameSaveSystem
 
     public static GameData Load()
     {
-        if(File.Exists(SAVE_FOLDER + "/save.txt"))
+        if (File.Exists(SAVE_FOLDER + "/save.txt"))
         {
             string saveString = File.ReadAllText(SAVE_FOLDER + "/save.txt");
             GameData saveObject = JsonUtility.FromJson<GameData>(saveString);
@@ -44,6 +46,17 @@ public static class GameSaveSystem
 
     }
 
+    public static string ReturnLevelName()
+    {
+
+            string saveString = File.ReadAllText(SAVE_FOLDER + "/save.txt");
+            GameData saveObject = JsonUtility.FromJson<GameData>(saveString);
+            string gameActualLevel = saveObject.currentLevel;
+            return gameActualLevel;
+
+
+    }
+
     public static void GameDataInput(CameraFollow newCamScript, ActiveCharacterScript newCurrentCharacters, GameObject newPlayer, DayNightLight newDirLight)
     {
         camScript = newCamScript;
@@ -52,3 +65,4 @@ public static class GameSaveSystem
         directionalLight = newDirLight;
     }
 }
+

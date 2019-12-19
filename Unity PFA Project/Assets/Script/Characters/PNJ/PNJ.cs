@@ -53,7 +53,7 @@ public class PNJ : MonoBehaviour
         public bool canAskQuestions;
         public bool hasChoices;
         public bool endDialog;
-        public List<Button> buttonsList;
+        public List<TheGermanTrack.Button> buttonsList;
     }
 
     [System.Serializable]
@@ -147,6 +147,11 @@ public class PNJ : MonoBehaviour
         }
         if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.name == "Kenneth")
         {
+            if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.transform.position.x < transform.position.x && GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.GetComponent<Interactions>().state == Interactions.State.InDialog)
+            {
+                transform.GetComponent<SpriteRenderer>().flipX = false;
+            }
+            else transform.GetComponent<SpriteRenderer>().flipX = true;
             if(allDialogs.listOfDialogs[dialogIndex].canAskQuestions)
             {
                 carnet.GetComponent<Animator>().SetBool("InDialog", true);
@@ -159,8 +164,7 @@ public class PNJ : MonoBehaviour
             }
         }
         if(GameObject.Find("BlackBands").GetComponent<Animator>().GetBool("Cinematic"))
-        {
-        }
+        {}
         else GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", true);
 
         if(dialogLine < allDialogs.listOfDialogs[dialogIndex].dialog.Count)
@@ -283,17 +287,6 @@ public class PNJ : MonoBehaviour
         }
         quoteFinished = true;
         DialogSecondPhase();
-
-        /*quoteFinished = false;
-        actualQuote = LanguageManager.Instance.GetDialog(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
-        for(int i = 0; i < allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote.Length + 1; i++)
-        {
-            currentLine = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote.Substring(0,i);
-            panel.transform.GetChild(1).GetComponent<Text>().text = currentLine;
-            yield return new WaitForSeconds(dialogDelay);
-        }
-        quoteFinished = true;
-        DialogSecondPhase();*/
     }
 
     public void FullQuote(GameObject panel)
