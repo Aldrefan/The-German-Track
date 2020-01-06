@@ -17,7 +17,6 @@ public class LanguageManager : MonoBehaviour
 
     string french = "french";
     public string filePath;
-    static string textPath;
 
     [Serializable]
     public class TextData
@@ -36,19 +35,11 @@ public class LanguageManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        textPath = Application.dataPath + "/Language/";
-        //Debug.Log(Application.dataPath);
         //SaveGameManager.Save();
         string dataAsJson = null;
-        if (!Directory.Exists(textPath))
+        if(File.Exists("Assets/Resources/" + filePath))
         {
-            Directory.CreateDirectory(textPath);
-        }
-        if(File.Exists(Application.dataPath + "/StreamingAssets/" + filePath))
-        {
-            dataAsJson = File.ReadAllText(Application.dataPath + "/StreamingAssets/" + filePath);
-            Debug.Log(dataAsJson);
-            //File.Move(dataAsJson, textPath + filePath);
+            dataAsJson = File.ReadAllText("Assets/Resources/" + filePath);
         }
         datas = JsonUtility.FromJson<TextData>("{\"mytexts\":" + dataAsJson + "}");
     }

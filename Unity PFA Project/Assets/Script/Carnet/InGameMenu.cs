@@ -75,22 +75,6 @@ public class InGameMenu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
-
-        JsonSave save = SaveGameManager.GetCurrentSave();
-        if(save.language == "english")
-        {
-            isFrench = false;
-
-            englishArrow.SetActive(true);
-            frenchArrow.SetActive(false);
-        }
-        else
-        {
-            isFrench = true;
-
-            englishArrow.SetActive(false);
-            frenchArrow.SetActive(true);
-        }
     }
 
     public void SaveGame()
@@ -175,23 +159,14 @@ public class InGameMenu : MonoBehaviour
     public void EnglishSelection()
     {
         isFrench = false;
-        
-        JsonSave save = SaveGameManager.GetCurrentSave();
-        save.language = "english";
-        SaveGameManager.Save();
-
         englishArrow.SetActive(true);
         frenchArrow.SetActive(false);
+        FrenchSelection();
     }
 
         public void FrenchSelection()
     {
         isFrench = true;
-
-        JsonSave save = SaveGameManager.GetCurrentSave();
-        save.language = "french";
-        SaveGameManager.Save();
-
         frenchArrow.SetActive(true);
         englishArrow.SetActive(false);
     }

@@ -22,7 +22,15 @@ public class ObjectSaved
 [Serializable]
 public class JsonSave
 {
-    public string language = "french";
+    public bool isEmpty = true;
+    public int level = 0;
+    public int lieu = 0;
+    public List<int> stickersIndexOnBoard;
+    public List<Vector3> stickersPositionOnBoard;
+    public List<int> memoryStickers;
+    public List<string> meetingList;
+    public string language = "english";
+    public List<string> eventList;
 }
 
 public static class SaveGameManager
@@ -126,7 +134,7 @@ public static class SaveGameManager
         }
         else if (id >= 0 && id < currentSaves.savesArray.Length)
         {
-//            currentSaves.savesArray[id].isEmpty = false;
+            currentSaves.savesArray[id].isEmpty = false;
             currentSaves.selectedSaveID = id;
             Save();
                 

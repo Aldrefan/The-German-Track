@@ -109,7 +109,7 @@ public class Menu : MonoBehaviour
     {
         JsonSave save = SaveGameManager.GetCurrentSave();
         save = SaveGameManager.GetCurrentSave();
-//        SceneManager.LoadScene(save.level);
+        SceneManager.LoadScene(save.level);
         Debug.Log("LoadGame");
     }
 

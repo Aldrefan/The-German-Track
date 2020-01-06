@@ -28,11 +28,11 @@ public class Pin_System : MonoBehaviour
         Destroy(transform.GetChild(2));
     }
 
-    public void OnMouseEnter()
+    public void PointerEnter()
     {
         mouseOn = true;
     }
-    public void OnMouseExit()
+    public void PointerExit()
     {
         mouseOn = false;
     }
@@ -42,11 +42,10 @@ public class Pin_System : MonoBehaviour
         
     }
 
-    public void OnMouseDown()
+    public void PointerDown()
     {
         if(Input.GetKey(KeyCode.Mouse0))
         {
-            Debug.Log("Click On Sticker");
             int i = 0;
             foreach(RectTransform child in transform)
             {
@@ -81,7 +80,7 @@ public class Pin_System : MonoBehaviour
         }
     }
 
-    public void OnMouseUp()
+    public void PointerUp()
     {
         if(click)
         {
@@ -92,7 +91,7 @@ public class Pin_System : MonoBehaviour
         }
     }
 
-    public void OnMouseDrag()
+    public void Drag()
     {
         if(Input.GetKey(KeyCode.Mouse0))
         {
