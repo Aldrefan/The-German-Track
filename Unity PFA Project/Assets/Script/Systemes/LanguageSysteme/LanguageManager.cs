@@ -14,8 +14,6 @@ public class LanguageManager : MonoBehaviour
         public string FR;
         public string EN;
     }
-
-    string french = "french";
     public string filePath;
 
     [Serializable]
@@ -47,7 +45,7 @@ public class LanguageManager : MonoBehaviour
     public string GetDialog(string key)
     {
         JsonSave save = SaveGameManager.GetCurrentSave();
-        //save.language = "english";
+        //save.language = "french";
         if(datas != null)
         {
             for(int i = 0; i < datas.mytexts.Length; i++)

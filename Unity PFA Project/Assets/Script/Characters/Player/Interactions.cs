@@ -52,6 +52,11 @@ public class Interactions : MonoBehaviour
         //animator = GetComponent<Animator>();
     }
 
+    void OnEnable()
+    {
+        GetComponent<MovementsPlayer>().canRun = Camera.main.GetComponent<CameraFollow>().actualRoom.GetComponent<SceneInformations>().canRun;
+    }
+
     void OnTriggerStay2D(Collider2D collision)
     {
         if(state == State.Normal || state != State.InCinematic)

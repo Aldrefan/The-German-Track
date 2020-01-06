@@ -45,7 +45,6 @@ public class CarnetSticker : MonoBehaviour
     }
     void OnMouseDown()
     {
-        Debug.Log("Click");
         if(player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.tag == "PNJinteractable")
         {
             player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().Response(GetComponent<Sticker_Display>().sticker.index);

@@ -8,6 +8,7 @@ public class Pin_System : MonoBehaviour
     Vector3 screenPoint;
     public GameObject pin;
     public bool click;
+    float time;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,17 @@ public class Pin_System : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetMouseButtonDown(1) && mouseOn && transform.childCount == 4)
+        {
+            foreach(RectTransform child in transform)
+            {
+                if(child.name == "Pin 1(Clone)")
+                {
+                    GameObject.FindObjectOfType<String_Manager>().DeletePin(gameObject);
+                    Destroy(child.gameObject);
+                }
+            }
+        }
     }
 
     public void RemoveFromList()
@@ -56,15 +67,12 @@ public class Pin_System : MonoBehaviour
                 }
                 else 
                 {
-                    if(i == transform.childCount || transform.childCount == 0)
+                    if(i == transform.childCount || transform.childCount < 4)
                     {
                         click = true;
+                        time = Time.realtimeSinceStartup;
                     }
                 }
-            }
-            if(transform.childCount == 0)
-            {
-                click = true;
             }
         }
         if(Input.GetKey(KeyCode.Mouse1))
@@ -84,7 +92,7 @@ public class Pin_System : MonoBehaviour
     {
         if(click)
         {
-            click = !click;
+            click = false;
             GameObject newPin = Instantiate(pin, transform);
             newPin.transform.localPosition = new Vector3(0, 25, 0);
             GameObject.FindObjectOfType<String_Manager>().AddPin(gameObject);
@@ -95,7 +103,10 @@ public class Pin_System : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Mouse0))
         {
-            click = false;
+            if(Time.realtimeSinceStartup - time > 0.2)
+            {
+                click = false;
+            }
             screenPoint = Input.mousePosition;
             screenPoint.z = transform.parent.position.z;
             Camera camera = Camera.FindObjectOfType<Camera>();
