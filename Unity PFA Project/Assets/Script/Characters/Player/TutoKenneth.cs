@@ -114,7 +114,7 @@ public class TutoKenneth : MonoBehaviour
                 checkTuto("tuto_dialogs");
             }
 
-            if(player.GetComponent<Interactions>().PNJContact)
+            if(player.GetComponent<Interactions>().PNJContact && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>())
             {
                 if(player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().PNJName == "Clara Grey"
                 && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().dialogLine != 0
@@ -136,6 +136,7 @@ public class TutoKenneth : MonoBehaviour
         if(!tutoDone.questionsDone)
         {
             if(player.GetComponent<Interactions>().PNJContact
+            && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>()
             && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().PNJName == "Clara Grey")
             {
                 if(player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().dialogIndex
