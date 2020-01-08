@@ -20,7 +20,7 @@ public static class GameSaveSystem
     //SettingsData
     static AudioMixer musicMixer;
     static AudioMixer effectMixer;
-
+    static LanguageManager langManager;
 
 
     public static void Init()
@@ -56,24 +56,24 @@ public static class GameSaveSystem
 
     public static void SaveSettingsData()
     {
-        float musicVol;
-        float effectVol;
+        float musicVol = 1;
+        float effectVol = 1;
         musicMixer.GetFloat("musicVolume", out musicVol);
         effectMixer.GetFloat("fxVolume", out effectVol);
 
 
-        SettingsData settingObject = new SettingsData(musicVol, effectVol, "french");
+        SettingsData settingObject = new SettingsData(musicVol, effectVol, langManager.language);
         string json = JsonUtility.ToJson(settingObject);
 
         File.WriteAllText(SAVE_FOLDER + "/settingsSave.txt", json);
     }
 
-    public static GameData LoadSettingsData()
+    public static SettingsData LoadSettingsData()
     {
         if (File.Exists(SAVE_FOLDER + "/settingsSave.txt"))
         {
             string saveString = File.ReadAllText(SAVE_FOLDER + "/gameSave.txt");
-            GameData saveObject = JsonUtility.FromJson<GameData>(saveString);
+            SettingsData saveObject = JsonUtility.FromJson<SettingsData>(saveString);
             return saveObject;
         }
         else
@@ -99,10 +99,11 @@ public static class GameSaveSystem
         directionalLight = newDirLight;
     }
 
-    public static void SettingsDataInput(AudioMixer newMusicMixer, AudioMixer newEffectMixer)
+    public static void SettingsDataInput(AudioMixer newMusicMixer, AudioMixer newEffectMixer, LanguageManager newLangManager)
     {
         musicMixer = newMusicMixer;
         effectMixer = newEffectMixer;
+        langManager = newLangManager;
     }
 }
 

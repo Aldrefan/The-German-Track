@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class SettingsData
 {
-    float musicVol;
-    float effectVol;
-    string gameLanguage;
-    bool fullscreenBool;
-    Resolution screenResolution;
+    public float musicVol;
+    public float effectVol;
+    public string gameLanguage;
+    public bool fullscreenBool;
+    public Vector2 screenResolution;
 
-    public SettingsData(float newMusicVol, float newEffectVol, string newGameLanguge)
+    public SettingsData(float newMusicVol, float newEffectVol, string newGameLanguage)
     {
         musicVol = newMusicVol;
         effectVol = newEffectVol;
-        gameLanguage = newGameLanguge;
+        gameLanguage = newGameLanguage;
         fullscreenBool = Screen.fullScreen;
-        screenResolution = Screen.currentResolution;
+        screenResolution = new Vector2(Screen.currentResolution.width, Screen.currentResolution.height);
     }
 
 }
