@@ -77,26 +77,15 @@ public class InGameMenu : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
 
         JsonSave save = SaveGameManager.GetCurrentSave();
-        if(save.language == "english")
-        {
-            isFrench = false;
-
-            englishArrow.SetActive(true);
-            frenchArrow.SetActive(false);
-        }
-        else
-        {
-            isFrench = true;
-
-            englishArrow.SetActive(false);
-            frenchArrow.SetActive(true);
-        }
+        if(save.language == "english") EnglishSelection();
+        else if(save.language == "french") FrenchSelection();
     }
 
     public void SaveGame()
     {
         //Debug.Log("SaveGame");
         //LIGNE DE COMMANDE DE SAVE GAME
+        GameSaveSystem.SaveGameData();
         GameObject.Find("Saver").GetComponent<Saver>().MakeASave();
         transform.GetChild(9).GetChild(0).GetComponent<Text>().text = LanguageManager.Instance.GetDialog("Menu_03");
         transform.GetChild(9).GetComponent<Animator>().SetTrigger("Save"); //feedbackSave
@@ -175,26 +164,24 @@ public class InGameMenu : MonoBehaviour
 
     public void EnglishSelection()
     {
-        isFrench = false;
-        
         JsonSave save = SaveGameManager.GetCurrentSave();
-        save.language = "english";
-        SaveGameManager.Save();
-
+        isFrench = false;
         englishArrow.SetActive(true);
         frenchArrow.SetActive(false);
+        save.language = "english";
+        SaveGameManager.Save();
+        Debug.Log(isFrench);
     }
 
         public void FrenchSelection()
     {
-        isFrench = true;
-
         JsonSave save = SaveGameManager.GetCurrentSave();
-        save.language = "french";
-        SaveGameManager.Save();
-
+        isFrench = true;
         frenchArrow.SetActive(true);
         englishArrow.SetActive(false);
+        save.language = "french";
+        SaveGameManager.Save();
+        Debug.Log(isFrench);
     }
 
     public void MouseEnter(Transform button)

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SaveFile : MonoBehaviour
 {
@@ -19,47 +20,52 @@ public class SaveFile : MonoBehaviour
 
     }
 
-    //private void Update()
-    //{
-    //    if (Input.GetKey(KeyCode.K))
-    //    {
-    //        Debug.Log("Saved");
-    //        Save();
-    //    }
-    //    if (Input.GetKey(KeyCode.L))
-    //    {
-    //        Load();
-    //    }
-    //}
-
-    void Save()
+    private void Update()
     {
-        GameSaveSystem.Save();
+        if (Input.GetKey(KeyCode.K))
+        {
+            Debug.Log("Saved");
+            SaveGame();
+        }
+        if (Input.GetKey(KeyCode.L))
+        {
+            LoadGame();
+        }
     }
 
-    void Load()
+    public void SaveGame()
     {
-        ReturnGameData(GameSaveSystem.Load());
+        GameSaveSystem.SaveGameData();
+    }
+
+    public void SaveSettings()
+    {
+        GameSaveSystem.SaveSettingsData();
+        Debug.Log("Settings Saved !");
+    }
+
+    public void LoadGame()
+    {
+        ReturnGameData(GameSaveSystem.LoadGameData());
+    }
+
+    public void LoadSettings()
+    {
+        ReturnSettingsData(GameSaveSystem.LoadSettingsData());
+        Debug.Log("Settings Loaded !");
     }
 
     void LoadAtStart()
     {
         if (GameSaveSystem.gameToLoad || loadAtStart)
         {
-            Load();
+            LoadGame();
         }
 
     }
 
     public void ReturnGameData(GameData gameSave)
     {
-
-
-        if (FindObjectOfType<ActiveCharacterScript>().playableCharactersList.Count != gameSave.playableCharacters.Count)
-        {
-
-
-        }
 
         for (int i = 0; i < gameSave.playableCharacters.Count; i++)
         {
@@ -140,21 +146,37 @@ public class SaveFile : MonoBehaviour
         }
         if (player != null)
         {
-            CheckListInt(player.GetComponent<PlayerMemory>().stickerIndexBoardList, gameSave.stickersIndexOnBoard);
-            CheckListInt(player.GetComponent<PlayerMemory>().stickerIndexCarnetList, gameSave.stickersIndexInCarnet);
-            CheckListInt(player.GetComponent<PlayerMemory>().allStickers, gameSave.allStickers);
-            CheckListVector3(player.GetComponent<PlayerMemory>().stickersPositionBoard, gameSave.stickersPositionOnBoard);
-            CheckListString(player.GetComponent<Interactions>().PnjMet, gameSave.NPCmet);
-            CheckListString(player.GetComponent<EventsCheck>().eventsList, gameSave.eventList);
-            //player.GetComponent<PlayerMemory>().stickerIndexBoardList = gameSave.stickersIndexOnBoard;
-            //player.GetComponent<PlayerMemory>().stickerIndexCarnetList = gameSave.stickersIndexInCarnet;
-            //player.GetComponent<PlayerMemory>().allStickers = gameSave.allStickers;
-            //player.GetComponent<PlayerMemory>().stickersPositionBoard = gameSave.stickersPositionOnBoard;
-            //player.GetComponent<Interactions>().PnjMet = gameSave.NPCmet;
-            //player.GetComponent<EventsCheck>().eventsList = gameSave.eventList;
+            player.GetComponent<PlayerMemory>().stickerIndexBoardList = gameSave.stickersIndexOnBoard;
+            player.GetComponent<PlayerMemory>().stickerIndexCarnetList = gameSave.stickersIndexInCarnet;
+            player.GetComponent<PlayerMemory>().allStickers = gameSave.allStickers;
+            player.GetComponent<PlayerMemory>().stickersPositionBoard = gameSave.stickersPositionOnBoard;
+            player.GetComponent<Interactions>().PnjMet = gameSave.NPCmet;
+            player.GetComponent<EventsCheck>().eventsList = gameSave.eventList;
 
         }
 
+    }
+
+    public void ReturnSettingsData(SettingsData settingsSave)
+    {
+        if (settingsSave != null)
+        {
+            AudioMixer musicMixer = Resources.Load<AudioMixer>("SoundMixer/MusicMixer");
+            AudioMixer effectMixer = Resources.Load<AudioMixer>("SoundMixer/FXMixer");
+
+            musicMixer.SetFloat("musicVolume", settingsSave.musicVol);
+            effectMixer.SetFloat("fxVolume", settingsSave.effectVol);
+
+            if (settingsSave.gameLanguage != null)
+            {
+                Debug.Log(FindObjectOfType<LanguageManager>().language);
+                Debug.Log(settingsSave.gameLanguage);
+                FindObjectOfType<LanguageManager>().language = settingsSave.gameLanguage;
+            }
+
+            Screen.fullScreen = settingsSave.fullscreenBool;
+            Screen.SetResolution((int)settingsSave.screenResolution.x, (int)settingsSave.screenResolution.y, Screen.fullScreen);
+        }
     }
 
     void BuildRoomList()
@@ -183,41 +205,17 @@ public class SaveFile : MonoBehaviour
             }
         }
 
+        LoadSettings();
+
         GameSaveSystem.GameDataInput(
             Camera.main.GetComponent<CameraFollow>(),
             FindObjectOfType<ActiveCharacterScript>(),
             player,
             FindObjectOfType<DayNightLight>());
-    }
 
-    void CheckListInt(List<int> intList,List<int> savedIntList)
-    {
-        foreach(int index in savedIntList)
-        {
-            if (!intList.Contains(index))
-            {
-                intList.Add(index);
-            }
-        }
-    }
-    void CheckListVector3(List<Vector3> intList, List<Vector3> savedIntList)
-    {
-        foreach (Vector3 index in savedIntList)
-        {
-            if (!intList.Contains(index))
-            {
-                intList.Add(index);
-            }
-        }
-    }
-    void CheckListString(List<string> intList, List<string> savedIntList)
-    {
-        foreach (string index in savedIntList)
-        {
-            if (!intList.Contains(index))
-            {
-                intList.Add(index);
-            }
-        }
+        GameSaveSystem.SettingsDataInput(
+            Resources.Load<AudioMixer>("SoundMixer/MusicMixer"),
+            Resources.Load<AudioMixer>("SoundMixer/FXMixer"),
+            FindObjectOfType<LanguageManager>());
     }
 }

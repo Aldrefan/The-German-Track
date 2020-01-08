@@ -114,7 +114,7 @@ public class TutoKenneth : MonoBehaviour
                 checkTuto("tuto_dialogs");
             }
 
-            if(player.GetComponent<Interactions>().PNJContact)
+            if(player.GetComponent<Interactions>().PNJContact && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>())
             {
                 if(player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().PNJName == "Clara Grey"
                 && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().dialogLine != 0
@@ -136,6 +136,7 @@ public class TutoKenneth : MonoBehaviour
         if(!tutoDone.questionsDone)
         {
             if(player.GetComponent<Interactions>().PNJContact
+            && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>()
             && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().PNJName == "Clara Grey")
             {
                 if(player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().dialogIndex
@@ -473,7 +474,6 @@ public class TutoKenneth : MonoBehaviour
         refNeeded.leftDialog.GetComponent<BoxCollider2D>().enabled = true;
         refNeeded.rightDialog.GetComponent<BoxCollider2D>().enabled = true;
         player.GetComponent<Interactions>().enabled = true;
-        refNeeded.newSticker.GetComponent<Animator>().speed = 1;
     }
 
     void skipAll()

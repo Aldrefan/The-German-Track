@@ -2,18 +2,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 
 public static class GameSaveSystem
 {
     public static bool gameToLoad;
 
+    public static readonly string SAVE_FOLDER = Application.dataPath + "/Saves/";
+
+    //GameDataValue
     static CameraFollow camScript;
     static ActiveCharacterScript currentCharacters;
     static GameObject actualPlayer;
     static DayNightLight directionalLight;
 
-    public static readonly string SAVE_FOLDER = Application.dataPath + "/Saves/";
+    //SettingsData
+    static AudioMixer musicMixer;
+    static AudioMixer effectMixer;
+    static LanguageManager langManager;
+
 
     public static void Init()
     {
@@ -23,19 +31,19 @@ public static class GameSaveSystem
         }
     }
 
-    public static void Save()
+    public static void SaveGameData()
     {
         GameData saveObject = new GameData(camScript, currentCharacters, actualPlayer, directionalLight);
         string json = JsonUtility.ToJson(saveObject);
 
-        File.WriteAllText(SAVE_FOLDER + "/save.txt", json);
+        File.WriteAllText(SAVE_FOLDER + "/gameSave.txt", json);
     }
 
-    public static GameData Load()
+    public static GameData LoadGameData()
     {
-        if (File.Exists(SAVE_FOLDER + "/save.txt"))
+        if (File.Exists(SAVE_FOLDER + "/gameSave.txt"))
         {
-            string saveString = File.ReadAllText(SAVE_FOLDER + "/save.txt");
+            string saveString = File.ReadAllText(SAVE_FOLDER + "/gameSave.txt");
             GameData saveObject = JsonUtility.FromJson<GameData>(saveString);
             return saveObject;
         }
@@ -46,15 +54,41 @@ public static class GameSaveSystem
 
     }
 
+    public static void SaveSettingsData()
+    {
+        float musicVol = 1;
+        float effectVol = 1;
+        musicMixer.GetFloat("musicVolume", out musicVol);
+        effectMixer.GetFloat("fxVolume", out effectVol);
+
+
+        SettingsData settingObject = new SettingsData(musicVol, effectVol, langManager.language);
+        string json = JsonUtility.ToJson(settingObject);
+
+        File.WriteAllText(SAVE_FOLDER + "/settingsSave.txt", json);
+    }
+
+    public static SettingsData LoadSettingsData()
+    {
+        if (File.Exists(SAVE_FOLDER + "/settingsSave.txt"))
+        {
+            string saveString = File.ReadAllText(SAVE_FOLDER + "/gameSave.txt");
+            SettingsData saveObject = JsonUtility.FromJson<SettingsData>(saveString);
+            return saveObject;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+
     public static string ReturnLevelName()
     {
-
-            string saveString = File.ReadAllText(SAVE_FOLDER + "/save.txt");
-            GameData saveObject = JsonUtility.FromJson<GameData>(saveString);
-            string gameActualLevel = saveObject.currentLevel;
-            return gameActualLevel;
-
-
+        string saveString = File.ReadAllText(SAVE_FOLDER + "/gameSave.txt");
+        GameData saveObject = JsonUtility.FromJson<GameData>(saveString);
+        string gameActualLevel = saveObject.currentLevel;
+        return gameActualLevel;
     }
 
     public static void GameDataInput(CameraFollow newCamScript, ActiveCharacterScript newCurrentCharacters, GameObject newPlayer, DayNightLight newDirLight)
@@ -63,6 +97,13 @@ public static class GameSaveSystem
         currentCharacters = newCurrentCharacters;
         actualPlayer = newPlayer;
         directionalLight = newDirLight;
+    }
+
+    public static void SettingsDataInput(AudioMixer newMusicMixer, AudioMixer newEffectMixer, LanguageManager newLangManager)
+    {
+        musicMixer = newMusicMixer;
+        effectMixer = newEffectMixer;
+        langManager = newLangManager;
     }
 }
 
