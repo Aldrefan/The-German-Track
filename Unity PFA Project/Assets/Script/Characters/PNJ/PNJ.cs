@@ -97,6 +97,21 @@ public class PNJ : MonoBehaviour
         
     }
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.tag == "Player" && GetComponent<OutlineSystem>())
+        {
+            GetComponent<OutlineSystem>().ShowOutline();
+        }
+    }
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if(col.tag == "Player" && GetComponent<OutlineSystem>())
+        {
+            GetComponent<OutlineSystem>().HideOutline();
+        }
+    }
+
     public void ChangeDialog(int newDialog)
     {
         player.GetComponent<Interactions>().isInDialog = true;

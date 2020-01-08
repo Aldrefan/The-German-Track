@@ -15,6 +15,7 @@ public class Interactions : MonoBehaviour
     #region Contact Informations
     [Header("Contact Settings")]
     public GameObject PNJContact;
+    GameObject oldPNJContact;
     public bool isInDialog;
     GameObject dialogueManager;
     bool boardIsNear;
@@ -84,7 +85,7 @@ public class Interactions : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    void Update()
     {
         switch(state)
         {
@@ -343,6 +344,7 @@ public class Interactions : MonoBehaviour
         //state = State.InDialog;
         GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", true);
     }
+
     public void StartDialog()
     {
         //animator.SetBool("Talk", true);
