@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SaveFile : MonoBehaviour
 {
@@ -34,12 +35,12 @@ public class SaveFile : MonoBehaviour
 
     void Save()
     {
-        GameSaveSystem.Save();
+        GameSaveSystem.SaveGameData();
     }
 
     void Load()
     {
-        ReturnGameData(GameSaveSystem.Load());
+        ReturnGameData(GameSaveSystem.LoadGameData());
     }
 
     void LoadAtStart()
@@ -182,5 +183,9 @@ public class SaveFile : MonoBehaviour
             FindObjectOfType<ActiveCharacterScript>(),
             player,
             FindObjectOfType<DayNightLight>());
+
+        GameSaveSystem.SettingsDataInput(
+            Resources.Load<AudioMixer>("SoundMixer/MusicMixer"),
+            Resources.Load<AudioMixer>("SoundMixer/FXMixer"));
     }
 }
