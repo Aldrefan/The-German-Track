@@ -36,6 +36,8 @@ public class Menu : MonoBehaviour
     public GameObject canvasConfirm;
 
 
+    public bool changeOptions;
+    bool isFrench;
     bool titleActivate;
     float musicValue;
     float fxValue;
@@ -53,6 +55,8 @@ public class Menu : MonoBehaviour
             canvasPlay.SetActive(true);
             titleActivate = false;
         }
+
+        CanvasOptionsOut();
     }
 
     void OnEnable()
@@ -253,6 +257,20 @@ public class Menu : MonoBehaviour
         canvasOptions.SetActive(true);
         canvasPlay.SetActive(false);
         canvasQuit.SetActive(false);
+
+    }
+
+    void CanvasOptionsOut()
+    {
+        if(!changeOptions && canvasOptions.gameObject.activeSelf)
+        {
+            changeOptions = true;
+        }
+        if (changeOptions && !canvasOptions.gameObject.activeSelf)
+        {
+            FindObjectOfType<SaveFile>().SaveSettings();
+            changeOptions = false;
+        }
     }
 
     public void CanvasQuit()

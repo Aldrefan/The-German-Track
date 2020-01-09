@@ -6,6 +6,8 @@ using System.IO;
 
 public class LanguageManager : MonoBehaviour
 {
+
+    public string language = "english";
     public static LanguageManager Instance;
     [Serializable]
     public class Entry
@@ -52,7 +54,7 @@ public class LanguageManager : MonoBehaviour
             {
                 if(datas.mytexts[i].Key == key)
                 {
-                    if(save.language == "french")
+                    if(language == "french")
                     {
                         return datas.mytexts[i].FR;
                     }

@@ -10,6 +10,11 @@ public class CarnetUI : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        /*if(GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().PnjMet.Contains("Clara"))
+        {
+            animator.SetBool("ClickOn", false);
+        }
+        else animator.SetBool("ClickOn", true);*/
     }
 
     // Update is called once per frame
@@ -20,7 +25,10 @@ public class CarnetUI : MonoBehaviour
 
     void OnMouseDown()
     {
-        GameObject.Find("Kenneth").GetComponent<Interactions>().OpenBookExe();
+        if(GameObject.Find("Kenneth").GetComponent<Interactions>().state != Interactions.State.InCinematic)
+        {
+            GameObject.Find("Kenneth").GetComponent<Interactions>().OpenBookExe();
+        }
     }
 
     void OnMouseOver()

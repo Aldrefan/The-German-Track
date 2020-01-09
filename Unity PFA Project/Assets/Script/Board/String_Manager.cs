@@ -134,7 +134,7 @@ public GameObject stickerTemplate;
                     newSticker.GetComponent<ParticleSystem>().Play();
                     newSticker.GetComponent<AudioSource>().Play();
                     newSticker.GetComponent<StickerManager>().OnBoard();
-                    if(i == finalDemoHypothese)
+                    if(newSticker.GetComponent<Sticker_Display>().sticker.index == finalDemoHypothese)
                     {
                         if(GameObject.Find("EndDialog"))
                         {
