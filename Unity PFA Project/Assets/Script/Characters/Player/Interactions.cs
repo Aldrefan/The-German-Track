@@ -60,7 +60,7 @@ public class Interactions : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if(state == State.Normal || state != State.InCinematic)
+        if(state == State.Normal || state != State.InCinematic || state != State.InDialog)
         {
             if (collision.transform.tag == "PNJinteractable" || collision.transform.tag == "Item" || collision.transform.tag == "Board" || collision.transform.tag == "Interaction" || collision.transform.tag == "Shortcut")
             {

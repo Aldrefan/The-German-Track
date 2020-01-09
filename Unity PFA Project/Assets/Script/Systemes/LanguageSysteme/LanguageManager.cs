@@ -37,9 +37,9 @@ public class LanguageManager : MonoBehaviour
     {
         //SaveGameManager.Save();
         string dataAsJson = null;
-        if(File.Exists("Assets/Resources/" + filePath))
+        if(File.Exists(Application.dataPath + "/StreamingAssets/" + filePath))
         {
-            dataAsJson = File.ReadAllText("Assets/Resources/" + filePath);
+            dataAsJson = File.ReadAllText(Application.dataPath + "/StreamingAssets/" + filePath);
         }
         datas = JsonUtility.FromJson<TextData>("{\"mytexts\":" + dataAsJson + "}");
     }
