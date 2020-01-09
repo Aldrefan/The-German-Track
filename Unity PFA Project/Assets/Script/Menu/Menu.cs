@@ -7,26 +7,39 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
+    public GameObject saveFeedback;
+    public List<GameObject> showOnStart;
+    public List<GameObject> hideOnStart;
+    public GameObject saver;
+    public string mainMenuName;
 
-    public Slider musicSlider;
-    public AudioMixer musicMixer;
-    public Slider fxSlider;
-    public AudioMixer fxMixer;
-    public Dropdown resolutionDropdown;
-    Resolution[] resolutions;
-
-    public GameObject englishArrow;
-    public GameObject frenchArrow;
+    [Header("Main")]
+    public GameObject canvasPlay;
     public GameObject canvasTitle;
     public GameObject canvasButtons;
-    public GameObject canvasPlay;
-    public GameObject canvasOptions;
-    public GameObject canvasQuit;
 
-    bool isFrench;
+
+    [Header("Settings")]
+    public GameObject canvasOptions;
+    public AudioMixer musicMixer;
+    public AudioMixer fxMixer;
+    public Slider musicSlider;
+    public Slider fxSlider;
+    public Dropdown resolutionDropdown;
+    Resolution[] resolutions;
+    public GameObject englishArrow;
+    public GameObject frenchArrow;
+    public GameObject popupChangeLanguage;
+
+    [Header("Quit")]
+    public GameObject canvasQuit;
+    public GameObject canvasConfirm;
+
+
     bool titleActivate;
     float musicValue;
     float fxValue;
+    bool returnTitle;
 
     void Update()
     {
@@ -42,16 +55,24 @@ public class Menu : MonoBehaviour
         }
     }
 
+    void OnEnable()
+    {
+        ReturnMenu();
+    }
+
     void Start()
     {
         titleActivate = true;
 
+        //music initialisation
         musicMixer.GetFloat("musicVolume", out musicValue);
         fxMixer.GetFloat("fxVolume", out fxValue);
 
         musicSlider.value = musicValue;
         fxSlider.value = fxValue;
 
+
+        //resolution dropdown
         resolutions = Screen.resolutions;
 
         resolutionDropdown.ClearOptions();
@@ -74,6 +95,14 @@ public class Menu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+
+        //resolution & fullscreen initialisation
+        
+
+        //language initialisation
+        JsonSave save = SaveGameManager.GetCurrentSave();
+        if (save.language == "english") EnglishSelection();
+        else FrenchSelection();
         
         canvasTitle.SetActive(true);
         canvasButtons.SetActive(false);
@@ -82,15 +111,98 @@ public class Menu : MonoBehaviour
         canvasQuit.SetActive(false);
     }
 
-    void ChangeTexts()
+    void ReturnMenu()
     {
-
+        foreach(GameObject objet in showOnStart) objet.SetActive(true);
+        foreach(GameObject objet in hideOnStart) objet.SetActive(false);
     }
-
     public void PlayTypeSound()
     {
         GameObject.Find("TypeSound").transform.GetComponent<AudioSource>().Play(0);
     }
+
+    public void OpenOptions()
+    {
+        canvasOptions.SetActive(true);
+    }
+    public void OpenQuit()
+    {
+        canvasQuit.SetActive(true);
+    }
+
+    //Options
+    public void SetResolution(int resolutionIndex)
+    {
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+    public void SetQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
+    public void SetFullscreen(bool isFullscreen)
+    {
+        Screen.fullScreen = isFullscreen;
+    }
+    public void EnglishSelection()
+    {
+        JsonSave save = SaveGameManager.GetCurrentSave();
+        englishArrow.SetActive(true);
+        frenchArrow.SetActive(false);
+        save.language = "english";
+        //message de changement de la langue
+    }
+    public void FrenchSelection()
+    {
+        JsonSave save = SaveGameManager.GetCurrentSave();
+        frenchArrow.SetActive(true);
+        englishArrow.SetActive(false);
+        save.language = "french";
+        //message de changement de la langue
+    }
+    /*IEnumerator feedbackLanguage(float Time)
+    {
+        yield return new WaitForSeconds(Time);
+        popupChangeLanguage.SetActive(false);
+    }*/
+
+
+    //Quit
+    public void SaveGame()
+    {
+        saver.GetComponent<Saver>().MakeASave();
+        saveFeedback.transform.GetChild(0).GetComponent<Text>().text = LanguageManager.Instance.GetDialog("Menu_03");
+        saveFeedback.GetComponent<Animator>().SetTrigger("Save");
+    }
+    public void QuitGame()
+    {
+        returnTitle = false;
+        canvasConfirm.SetActive(true);
+    }
+    public void ReturnToMenu()
+    {
+        returnTitle = true;
+        canvasConfirm.SetActive(true);
+    }
+    public void ConfirmQuitGameWithSave(bool saveGame)
+    {
+        if(saveGame) saver.GetComponent<Saver>().MakeASave();
+        //else don't save
+
+        if(returnTitle) SceneManager.LoadScene(mainMenuName);
+        else Application.Quit();
+    }
+    public void ReturnTitle()
+    {
+        canvasOptions.SetActive(false);
+        canvasPlay.SetActive(true);
+        canvasQuit.SetActive(false);
+    }
+
+
+
+
+
 
     public void StartMenu()
     {
@@ -113,50 +225,13 @@ public class Menu : MonoBehaviour
         Debug.Log("LoadGame");
     }
 
-    public void QuitGame()
+    /*public void QuitGame()
     {
         Application.Quit();
         Debug.Log("QUIT!");
-    }
+    }*/
 
-    public void SetResolution(int resolutionIndex)
-    {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-    }
-
-    public void SetQuality(int qualityIndex)
-    {
-        QualitySettings.SetQualityLevel(qualityIndex);
-    }
-
-    public void SetFullscreen(bool isFullscreen)
-    {
-        Screen.fullScreen = isFullscreen;
-    }
-
-    public void EnglishSelection()
-    {
-        JsonSave save = SaveGameManager.GetCurrentSave();
-        isFrench = false;
-        englishArrow.SetActive(true);
-        frenchArrow.SetActive(false);
-        save.language = "english";
-        SaveGameManager.Save();
-        FrenchSelection();
-        Debug.Log(isFrench);
-    }
-
-    public void FrenchSelection()
-    {
-        JsonSave save = SaveGameManager.GetCurrentSave();
-        isFrench = true;
-        frenchArrow.SetActive(true);
-        englishArrow.SetActive(false);
-        save.language = "french";
-        SaveGameManager.Save();
-        Debug.Log(isFrench);
-    }
+    
 
     public void CanvasPlay()
     {
