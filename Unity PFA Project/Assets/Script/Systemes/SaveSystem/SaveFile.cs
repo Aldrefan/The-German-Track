@@ -155,6 +155,12 @@ public class SaveFile : MonoBehaviour
 
         }
 
+        if (FindObjectOfType<TutoKenneth>() != null)
+        {
+            FindObjectOfType<TutoKenneth>().skipTuto();
+            FindObjectOfType<TutoKenneth>().canSave = true;
+        }
+
     }
 
     public void ReturnSettingsData(SettingsData settingsSave)
