@@ -97,21 +97,6 @@ public class PNJ : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if(col.tag == "Player" && GetComponent<OutlineSystem>())
-        {
-            GetComponent<OutlineSystem>().ShowOutline();
-        }
-    }
-    void OnTriggerExit2D(Collider2D col)
-    {
-        if(col.tag == "Player" && GetComponent<OutlineSystem>())
-        {
-            GetComponent<OutlineSystem>().HideOutline();
-        }
-    }
-
     public void ChangeDialog(int newDialog)
     {
         player.GetComponent<Interactions>().isInDialog = true;
@@ -162,11 +147,11 @@ public class PNJ : MonoBehaviour
         }
         if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.name == "Kenneth")
         {
-            if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.transform.position.x < transform.position.x && GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.GetComponent<Interactions>().state == Interactions.State.InDialog)
+            /*if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.transform.position.x < transform.position.x && GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.GetComponent<Interactions>().state == Interactions.State.InDialog)
             {
                 transform.GetComponent<SpriteRenderer>().flipX = false;
             }
-            else transform.GetComponent<SpriteRenderer>().flipX = true;
+            else transform.GetComponent<SpriteRenderer>().flipX = true;*/
             if(allDialogs.listOfDialogs[dialogIndex].canAskQuestions)
             {
                 carnet.GetComponent<Animator>().SetBool("InDialog", true);

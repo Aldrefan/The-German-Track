@@ -18,6 +18,21 @@ public class OutlineSystem : MonoBehaviour
         
     }
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.tag == "Player" && GetComponent<SpriteRenderer>())
+        {
+            ShowOutline();
+        }
+    }
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if(col.tag == "Player" && GetComponent<SpriteRenderer>())
+        {
+            HideOutline();
+        }
+    }
+
     public void ShowOutline()
     {
         for(int i = 0; i < 4; i++)

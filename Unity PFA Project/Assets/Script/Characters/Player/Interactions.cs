@@ -272,6 +272,7 @@ public class Interactions : MonoBehaviour
             case State.InCinematic:
             carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);
             carnetUI.GetComponent<Animator>().SetBool("InDialog", false);
+            dialAndBookCanvas.transform.GetChild(5).gameObject.SetActive(false);
             DisableMovements();
             state = State.InCinematic;
             break;

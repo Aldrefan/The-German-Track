@@ -37,11 +37,11 @@ public class LanguageManager : MonoBehaviour
     {
         //SaveGameManager.Save();
         string dataAsJson = null;
-        //if(File.Exists("Assets/Resources/" + filePath))
-        //{
-        //    dataAsJson = File.ReadAllText("Assets/Resources/" + filePath);
-        //}
-        //datas = JsonUtility.FromJson<TextData>("{\"mytexts\":" + dataAsJson + "}");
+        if(File.Exists("Assets/Resources/" + filePath))
+        {
+            dataAsJson = File.ReadAllText("Assets/Resources/" + filePath);
+        }
+        datas = JsonUtility.FromJson<TextData>("{\"mytexts\":" + dataAsJson + "}");
     }
 
     public string GetDialog(string key)
@@ -54,7 +54,7 @@ public class LanguageManager : MonoBehaviour
             {
                 if(datas.mytexts[i].Key == key)
                 {
-                    if(save.language == "french")
+                    if(language == "french")
                     {
                         return datas.mytexts[i].FR;
                     }
