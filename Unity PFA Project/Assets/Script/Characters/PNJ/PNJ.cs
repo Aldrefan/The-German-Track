@@ -111,12 +111,14 @@ public class PNJ : MonoBehaviour
             {
                 carnet.GetComponent<Animator>().SetBool("InDialog", true);
                 //player.GetComponent<Interactions>().canOpenCarnet = true;// Initial
+                DialogCanvas.transform.GetChild(3).gameObject.SetActive(true);
             }
             else 
             {
                 carnet.GetComponent<Animator>().SetBool("ClickOn", true);
                 carnet.GetComponent<Animator>().SetBool("InDialog", false);
                 //player.GetComponent<Interactions>().canOpenCarnet = false;// Initial
+                DialogCanvas.transform.GetChild(3).gameObject.SetActive(false);
             }
         }
         

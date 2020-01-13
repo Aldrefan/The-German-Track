@@ -62,6 +62,7 @@ public class Interactions : MonoBehaviour
     {
         if(state == State.Normal || state != State.InCinematic || state != State.InDialog)
         {
+            Debug.Log(collision.name);
             if (collision.transform.tag == "PNJinteractable" || collision.transform.tag == "Item" || collision.transform.tag == "Board" || collision.transform.tag == "Interaction" || collision.transform.tag == "Shortcut")
             {
                 PNJContact = collision.gameObject;
@@ -177,6 +178,7 @@ public class Interactions : MonoBehaviour
             {
                 PNJContact.GetComponent<PNJ>().EndDialog();
                 carnetUI.GetComponent<Animator>().SetBool("ClickOn", false);
+                dialAndBookCanvas.transform.GetChild(3).gameObject.SetActive(false);
                 //animator.SetBool("Talk", false);
                 ChangeState(State.Normal);
             }

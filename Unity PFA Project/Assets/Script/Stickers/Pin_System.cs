@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pin_System : MonoBehaviour
 {
-    bool mouseOn = false;
+    public bool mouseOn = false;
     Vector3 screenPoint;
     public GameObject pin;
     public bool click;
@@ -34,6 +34,64 @@ public class Pin_System : MonoBehaviour
         }
     }
 
+    void OnMouseEnter()
+    {
+        mouseOn = true;
+    }
+    void OnMouseExit()
+    {
+        mouseOn = false;
+    }
+
+    void OnMouseOver()
+    {
+        if(Input.GetKey(KeyCode.Mouse0) && click == false)
+        {
+            int i = 0;
+            foreach(RectTransform child in transform)
+            {
+                i++;
+                if(child.name == "Pin 1(Clone)")
+                {
+                    break;
+                }
+                else 
+                {
+                    if(i == transform.childCount || transform.childCount < 4)
+                    {
+                        click = true;
+                        time = Time.realtimeSinceStartup;
+                        Debug.Log("Click On");
+                    }
+                }
+            }
+        }
+        if(Input.GetKey(KeyCode.Mouse1))
+        {
+            foreach(RectTransform child in transform)
+            {
+                if(child.name == "Pin 1(Clone)")
+                {
+                    GameObject.FindObjectOfType<String_Manager>().DeletePin(gameObject);
+                    Destroy(child.gameObject);
+                }
+            }
+        }
+    }
+
+    void OnMouseDrag()
+    {
+        if(Input.GetKey(KeyCode.Mouse0))
+        {
+            screenPoint = Input.mousePosition;
+            screenPoint.z = transform.parent.position.z;
+            Camera camera = Camera.FindObjectOfType<Camera>();
+            transform.position = camera.ScreenToWorldPoint(screenPoint);
+            //transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
+            //transform.position = Input.mousePosition;
+        }
+    }
+
     public void RemoveFromList()
     {
         Destroy(transform.GetChild(2));
@@ -48,12 +106,7 @@ public class Pin_System : MonoBehaviour
         mouseOn = false;
     }
 
-    public void PlaySpawnAnimation()
-    {
-        
-    }
-
-    public void PointerDown()
+    /*public void PointerDown()
     {
         if(Input.GetKey(KeyCode.Mouse0))
         {
@@ -86,9 +139,9 @@ public class Pin_System : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 
-    public void PointerUp()
+    /*public void PointerUp()
     {
         if(click)
         {
@@ -97,16 +150,25 @@ public class Pin_System : MonoBehaviour
             newPin.transform.localPosition = new Vector3(0, 25, 0);
             GameObject.FindObjectOfType<String_Manager>().AddPin(gameObject);
         }
+    }*/
+
+    public void OnMouseUp()
+    {
+        Debug.Log("UnClick (Time Pressed : " + (Time.realtimeSinceStartup - time) + " )");
+        if(Time.realtimeSinceStartup - time < 0.2)
+        {
+            GameObject newPin = Instantiate(pin, transform);
+            newPin.transform.localPosition = new Vector3(0, 25, 0);
+            GameObject.FindObjectOfType<String_Manager>().AddPin(gameObject);
+            click = false;
+        }
+        else click = false;
     }
 
     public void Drag()
     {
         if(Input.GetKey(KeyCode.Mouse0))
         {
-            if(Time.realtimeSinceStartup - time > 0.2)
-            {
-                click = false;
-            }
             screenPoint = Input.mousePosition;
             screenPoint.z = transform.parent.position.z;
             Camera camera = Camera.FindObjectOfType<Camera>();
