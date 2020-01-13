@@ -4,20 +4,27 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using System.IO;
 
 public class Menu : MonoBehaviour
 {
+    public string mainMenuName;
     public GameObject saveFeedback;
+    public GameObject saver;
+    public bool changeOptions;
+    float musicValue;
+    float fxValue;
+    bool returnTitle;
+    bool isFullscreen;
+    int resolutionIndex;
     public List<GameObject> showOnStart;
     public List<GameObject> hideOnStart;
-    public GameObject saver;
-    public string mainMenuName;
 
     [Header("Main")]
     public GameObject canvasPlay;
     public GameObject canvasTitle;
     public GameObject canvasButtons;
-
+    public GameObject loadButton;
 
     [Header("Settings")]
     public GameObject canvasOptions;
@@ -29,31 +36,26 @@ public class Menu : MonoBehaviour
     Resolution[] resolutions;
     public GameObject englishArrow;
     public GameObject frenchArrow;
-    public GameObject popupChangeLanguage;
 
     [Header("Quit")]
     public GameObject canvasQuit;
     public GameObject canvasConfirm;
 
-
-    public bool changeOptions;
-    bool isFrench;
-    bool titleActivate;
-    float musicValue;
-    float fxValue;
-    bool returnTitle;
-
     void Update()
     {
+        //set les volumes des mixers selon les values des sliders
         musicMixer.SetFloat("musicVolume", musicSlider.value);
         fxMixer.SetFloat("fxVolume", fxSlider.value);
 
-        if(Input.anyKeyDown && titleActivate)
+
+        if(Input.anyKeyDown && canvasTitle!=null)
         {
-            canvasTitle.SetActive(false);
-            canvasButtons.SetActive(true);
-            canvasPlay.SetActive(true);
-            titleActivate = false;
+            if(canvasTitle.activeSelf)
+            {
+                canvasTitle.SetActive(false);
+                canvasButtons.SetActive(true);
+                canvasPlay.SetActive(true);
+            }
         }
 
         CanvasOptionsOut();
@@ -61,19 +63,14 @@ public class Menu : MonoBehaviour
 
     void OnEnable()
     {
+        //active le menu à sa forme initiale
         ReturnMenu();
     }
 
     void Start()
     {
-        titleActivate = true;
-
-        //music initialisation
-        musicMixer.GetFloat("musicVolume", out musicValue);
-        fxMixer.GetFloat("fxVolume", out fxValue);
-
-        musicSlider.value = musicValue;
-        fxSlider.value = fxValue;
+        //active le menu à sa forme initiale
+        ReturnMenu();
 
 
         //resolution dropdown
@@ -100,53 +97,144 @@ public class Menu : MonoBehaviour
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
 
+
         //resolution & fullscreen initialisation
+        SetResolution(resolutionIndex);
+        SetFullscreen(isFullscreen);
         
 
         //language initialisation
         JsonSave save = SaveGameManager.GetCurrentSave();
         if (save.language == "english") EnglishSelection();
         else FrenchSelection();
-        
-        canvasTitle.SetActive(true);
-        canvasButtons.SetActive(false);
-        canvasPlay.SetActive(false);
-        canvasOptions.SetActive(false);
-        canvasQuit.SetActive(false);
+
+
+        //music initialisation
+        musicMixer.GetFloat("musicVolume", out musicValue);
+        fxMixer.GetFloat("fxVolume", out fxValue);
+
+        musicSlider.value = musicValue;
+        fxSlider.value = fxValue;
+
+
+        //settings initialisation
+        saver.GetComponent<SaveFile>().LoadSettings();
+
+
+        //check if save exist
+        LoadButtonActive();
     }
+
+
+
+
 
     void ReturnMenu()
     {
         foreach(GameObject objet in showOnStart) objet.SetActive(true);
         foreach(GameObject objet in hideOnStart) objet.SetActive(false);
     }
-    public void PlayTypeSound()
+    public void CanvasPlay()
     {
-        GameObject.Find("TypeSound").transform.GetComponent<AudioSource>().Play(0);
+        if (!canvasPlay.gameObject.activeSelf)
+        {
+            GameObject.Find("TypeSound").transform.GetComponent<AudioSource>().Play(0);
+        }
+        canvasPlay.SetActive(true);
+        canvasOptions.SetActive(false);
+        canvasQuit.SetActive(false);
+    }
+    public void CanvasOptions()
+    {
+        if (!canvasOptions.gameObject.activeSelf)
+        {
+            GameObject.Find("TypeSound").transform.GetComponent<AudioSource>().Play(0);
+        }
+        canvasOptions.SetActive(true);
+        canvasPlay.SetActive(false);
+        canvasQuit.SetActive(false);
+
+    }
+    void CanvasOptionsOut()
+    {
+        if(!changeOptions && canvasOptions.gameObject.activeSelf)
+        {
+            changeOptions = true;
+        }
+        if (changeOptions && !canvasOptions.gameObject.activeSelf)
+        {
+            FindObjectOfType<SaveFile>().SaveSettings();
+            changeOptions = false;
+        }
+    }
+    public void CanvasQuit()
+    {
+        if (!canvasQuit.gameObject.activeSelf)
+        {
+            GameObject.Find("TypeSound").transform.GetComponent<AudioSource>().Play(0);
+        }
+        canvasQuit.SetActive(true);
+        canvasPlay.SetActive(false);
+        canvasOptions.SetActive(false);
+    }
+    public void MouseEnter(Transform button)
+    {
+        button.GetComponent<Text>().color = Color.grey;
+    }
+    public void MouseExit(Transform button)
+    {
+        button.GetComponent<Text>().color = Color.black;
+    }
+    void LoadButtonActive()
+    {
+        if (File.Exists(Application.dataPath + "/Saves/gameSave.txt"))
+        {
+            loadButton.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            loadButton.GetComponent<Button>().interactable = false;
+            GameSaveSystem.gameToLoad = false;
+        }
     }
 
-    public void OpenOptions()
+
+
+
+
+    //Play
+    public void NewGame()
     {
-        canvasOptions.SetActive(true);
+        SceneManager.LoadScene(1);
     }
-    public void OpenQuit()
+
+    public void LoadGame()
     {
-        canvasQuit.SetActive(true);
+        GameSaveSystem.gameToLoad = true;
+        string levelName = "InterScene" + GameSaveSystem.ReturnLevelName();
+        Debug.Log(GameSaveSystem.ReturnLevelName());
+        SceneManager.LoadScene(levelName);
     }
+
+
+
+
 
     //Options
-    public void SetResolution(int resolutionIndex)
+    public void SetResolution(int resolutionIndexTemp)
     {
-        Resolution resolution = resolutions[resolutionIndex];
+        resolutionIndex = resolutionIndexTemp;
+        Resolution resolution = resolutions[resolutionIndexTemp];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
-    public void SetQuality(int qualityIndex)
+    /*public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
-    }
-    public void SetFullscreen(bool isFullscreen)
+    }*/
+    public void SetFullscreen(bool isFullscreenTemp)
     {
-        Screen.fullScreen = isFullscreen;
+        isFullscreen = isFullscreenTemp;
+        Screen.fullScreen = isFullscreenTemp;
     }
     public void EnglishSelection()
     {
@@ -154,7 +242,6 @@ public class Menu : MonoBehaviour
         englishArrow.SetActive(true);
         frenchArrow.SetActive(false);
         save.language = "english";
-        //message de changement de la langue
     }
     public void FrenchSelection()
     {
@@ -162,20 +249,20 @@ public class Menu : MonoBehaviour
         frenchArrow.SetActive(true);
         englishArrow.SetActive(false);
         save.language = "french";
-        //message de changement de la langue
     }
-    /*IEnumerator feedbackLanguage(float Time)
+    public void TypePlaySound()
     {
-        yield return new WaitForSeconds(Time);
-        popupChangeLanguage.SetActive(false);
-    }*/
+        GameObject.Find("TypeSound").transform.GetComponent<AudioSource>().Play(0);
+    }
+
+
+
 
 
     //Quit
     public void SaveGame()
     {
-        saver.GetComponent<Saver>().MakeASave();
-        saveFeedback.transform.GetChild(0).GetComponent<Text>().text = LanguageManager.Instance.GetDialog("Menu_03");
+        saver.GetComponent<SaveFile>().SaveGame();
         saveFeedback.GetComponent<Animator>().SetTrigger("Save");
     }
     public void QuitGame()
@@ -190,7 +277,7 @@ public class Menu : MonoBehaviour
     }
     public void ConfirmQuitGameWithSave(bool saveGame)
     {
-        if(saveGame) saver.GetComponent<Saver>().MakeASave();
+        if(saveGame) saver.GetComponent<SaveFile>().SaveGame();
         //else don't save
 
         if(returnTitle) SceneManager.LoadScene(mainMenuName);
@@ -202,95 +289,9 @@ public class Menu : MonoBehaviour
         canvasPlay.SetActive(true);
         canvasQuit.SetActive(false);
     }
-
-
-
-
-
-
-    public void StartMenu()
-    {
-        canvasTitle.SetActive(false);
-        canvasButtons.SetActive(true);
-        canvasPlay.SetActive(true);
-    }
-
-    public void NewGame()
-    {
-        SceneManager.LoadScene(1);
-        Debug.Log("NewGame");
-    }
-
-    public void LoadGame()
-    {
-        JsonSave save = SaveGameManager.GetCurrentSave();
-        save = SaveGameManager.GetCurrentSave();
-        SceneManager.LoadScene(save.level);
-        Debug.Log("LoadGame");
-    }
-
-    /*public void QuitGame()
+    public void FullyQuitGame()
     {
         Application.Quit();
         Debug.Log("QUIT!");
-    }*/
-
-    
-
-    public void CanvasPlay()
-    {
-        if (!canvasPlay.gameObject.activeSelf)
-        {
-            GameObject.Find("TypeSound").transform.GetComponent<AudioSource>().Play(0);
-        }
-        canvasPlay.SetActive(true);
-        canvasOptions.SetActive(false);
-        canvasQuit.SetActive(false);
-    }
-
-    public void CanvasOptions()
-    {
-        if (!canvasOptions.gameObject.activeSelf)
-        {
-            GameObject.Find("TypeSound").transform.GetComponent<AudioSource>().Play(0);
-        }
-        canvasOptions.SetActive(true);
-        canvasPlay.SetActive(false);
-        canvasQuit.SetActive(false);
-
-    }
-
-    void CanvasOptionsOut()
-    {
-        if(!changeOptions && canvasOptions.gameObject.activeSelf)
-        {
-            changeOptions = true;
-        }
-        if (changeOptions && !canvasOptions.gameObject.activeSelf)
-        {
-            FindObjectOfType<SaveFile>().SaveSettings();
-            changeOptions = false;
-        }
-    }
-
-    public void CanvasQuit()
-    {
-        if (!canvasQuit.gameObject.activeSelf)
-        {
-            GameObject.Find("TypeSound").transform.GetComponent<AudioSource>().Play(0);
-        }
-        canvasQuit.SetActive(true);
-        canvasPlay.SetActive(false);
-        canvasOptions.SetActive(false);
-    }
-
-    public void MouseEnter(Transform button)
-    {
-        button.GetComponent<Text>().color = Color.grey;
-    }
-
-    public void MouseExit(Transform button)
-    {
-        button.GetComponent<Text>().color = Color.black;
     }
 }
