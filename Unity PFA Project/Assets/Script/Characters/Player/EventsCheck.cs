@@ -10,10 +10,6 @@ public class EventsCheck : MonoBehaviour
     public GameObject EtiquetteLaissezPasser;
     public List<GameObject> appartmentKurtLocked;
 
-    [HideInInspector]
-    public ObjectiveNotif notif;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -227,7 +223,6 @@ public class EventsCheck : MonoBehaviour
             case "laissezPasser":
                 EtiquetteLaissezPasser.GetComponent<Animator>().SetTrigger("NewSticker");
                 GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller voir Lou Ellis à l'hôpital.");
-                notif.textToNotify = "- Aller voir Lou Ellis à l'hôpital.";
                 break;
 
             case "hopitalOpen":
@@ -254,7 +249,6 @@ public class EventsCheck : MonoBehaviour
 
             case "getNumberMarvinMeyer":
                 GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Parler à Marvin Meyer.");
-                notif.textToNotify = "- Parler à Marvin Meyer.";
                 break;
 
             case "numberMarvinMeyer":
@@ -276,7 +270,6 @@ public class EventsCheck : MonoBehaviour
 
             case "GoToSleep":
                 GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller Dormir.");
-                notif.textToNotify = "- Aller Dormir.";
                 break;
 
             case "HasSlep":
@@ -285,7 +278,7 @@ public class EventsCheck : MonoBehaviour
 
             case "GoToSeeWhite":
                 GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller voir White au commissariat.");
-                notif.textToNotify = "- Aller voir White au commissariat.";
+
                 break;
 
             case "HasSeenWhite":
@@ -302,7 +295,6 @@ public class EventsCheck : MonoBehaviour
             
             case "TalkToTheBarman":
                 GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Parler de Marvin au Barman.");
-                notif.textToNotify = "- Parler de Marvin au Barman.";
                 break;
 
             case "HasTalkedToTheBarman":
