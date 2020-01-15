@@ -73,12 +73,15 @@ public static class GameSaveSystem
         if (File.Exists(SAVE_FOLDER + "/settingsSave.txt"))
         {
             string saveString = File.ReadAllText(SAVE_FOLDER + "/gameSave.txt");
-            SettingsData saveObject = JsonUtility.FromJson<SettingsData>(saveString);
-            return saveObject;
+            SettingsData newSettingsSave = JsonUtility.FromJson<SettingsData>(saveString);
+            return newSettingsSave;
         }
         else
         {
-            return null;
+            SettingsData defaultSettingsSave = new SettingsData();
+            string json = JsonUtility.ToJson(defaultSettingsSave);
+            File.WriteAllText(SAVE_FOLDER + "/settingsSave.txt", json);
+            return defaultSettingsSave;
         }
     }
 
