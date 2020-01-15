@@ -39,7 +39,7 @@ public class TutoKenneth : MonoBehaviour
         public GameObject bookOnDialog;
         public GameObject board;
         public GameObject menu;
-        public GameObject saveButton;
+        public List<GameObject> saveButton;
     }
 
 
@@ -564,13 +564,23 @@ public class TutoKenneth : MonoBehaviour
 
     void preventSave()
     {
-        refNeeded.saveButton.GetComponent<Button>().interactable = false;
-        refNeeded.saveButton.transform.GetChild(1).gameObject.SetActive(true);
+        foreach(GameObject objet in refNeeded.saveButton)
+        {
+            objet.GetComponent<Button>().interactable = false;
+            objet.transform.GetChild(1).gameObject.SetActive(true);
+            objet.transform.GetChild(0).GetComponent<Text>().color = new Color(156,156,156);
+            objet.transform.GetChild(1).GetComponent<Text>().color = new Color(156,156,156);
+        }
     }
     public void allowSave()
     {
-        refNeeded.saveButton.GetComponent<Button>().interactable = true;
-        refNeeded.saveButton.transform.GetChild(1).gameObject.SetActive(false);
+        foreach(GameObject objet in refNeeded.saveButton)
+        {
+            objet.GetComponent<Button>().interactable = true;
+            objet.transform.GetChild(1).gameObject.SetActive(false);
+            objet.transform.GetChild(0).GetComponent<Text>().color = new Color(255,255,255);
+            objet.transform.GetChild(1).GetComponent<Text>().color = new Color(255,255,255);
+        }
         skipAll();
     }
 }
