@@ -62,7 +62,6 @@ public class Interactions : MonoBehaviour
     {
         if(state == State.Normal || state != State.InCinematic || state != State.InDialog)
         {
-            Debug.Log(collision.name);
             if (collision.transform.tag == "PNJinteractable" || collision.transform.tag == "Item" || collision.transform.tag == "Board" || collision.transform.tag == "Interaction" || collision.transform.tag == "Shortcut")
             {
                 PNJContact = collision.gameObject;
@@ -165,7 +164,7 @@ public class Interactions : MonoBehaviour
     public void OpenBookExe()
     {
         //Camera.main.GetComponent<Camera_Manager>().OnCarnet();
-        dialAndBookCanvas.transform.GetChild(5).gameObject.SetActive(true);
+        dialAndBookCanvas.transform.GetChild(6).gameObject.SetActive(true);
         carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);
         GetComponent<PlayerMemory>().CheckStickersCarnet();
         ChangeState(State.OnCarnet);
@@ -209,14 +208,15 @@ public class Interactions : MonoBehaviour
     }
     void OpenDialog()
     {
-        if(Input.GetButtonDown("Interaction") && PNJContact!= null && !dialAndBookCanvas.transform.GetChild(6).gameObject.activeInHierarchy)
+        if(Input.GetButtonDown("Interaction") && PNJContact != null && !dialAndBookCanvas.transform.GetChild(6).gameObject.activeInHierarchy)
         {
-            if(PNJContact.tag == "PNJinteractable" || PNJContact.tag == "Item")
+            if(PNJContact.tag == "PNJinteractable" || PNJContact.tag == "Item" || PNJContact.tag == "Interaction")
             {
                 //GetComponent<Animator>().SetBool("Walk", false);
                 //dialAndBookCanvas.transform.GetChild(2).GetComponent<Animator>().SetBool("InDialog", true);
                 //animator.SetBool("Talk", true);
                 ChangeState(State.InDialog);
+                PNJContact.GetComponent<OutlineSystem>().HideOutline();
                 StartDialog();
             }
         }
@@ -246,7 +246,7 @@ public class Interactions : MonoBehaviour
     public void CloseBookExe()
     {
         //Camera.main.GetComponent<Camera_Manager>().NotOnCarnet();
-        dialAndBookCanvas.transform.GetChild(5).gameObject.SetActive(false);
+        dialAndBookCanvas.transform.GetChild(6).gameObject.SetActive(false);
         //dialAndBookCanvas.transform.GetChild(dialAndBookCanvas.transform.childCount - 1).gameObject.SetActive(false);
         carnetUI.GetComponent<Animator>().SetBool("ClickOn", false);
         if(isInDialog)
@@ -353,7 +353,7 @@ public class Interactions : MonoBehaviour
         //animator.SetBool("Talk", true);
         //animator.SetBool("Walk", false);
         //CloseCarnet();
-//        int redirectionEventListCount = PNJContact.GetComponent<PNJ>().eventRedirection.redirectionEventList.Count;
+        //int redirectionEventListCount = PNJContact.GetComponent<PNJ>().eventRedirection.redirectionEventList.Count;
         int eventGivenListCount = PNJContact.GetComponent<PNJ>().eventRedirection.eventGivenList.Count;
         /*if(PNJContact.GetComponent<PNJTest>().allDialogs[PNJContact.GetComponent<PNJTest>().dialogIndex].canAskQuestions)
         {
@@ -369,17 +369,21 @@ public class Interactions : MonoBehaviour
             PNJContact.GetComponent<PNJ>().ResponseEvent();
         }*/
 
-        if(((eventGivenListCount == 0) || (!PNJContact.GetComponent<PNJ>().haveEvent)))
+        if(eventGivenListCount == 0 || !PNJContact.GetComponent<PNJ>().haveEvent)
         {
-            if(PnjMet.Contains(PNJContact.name))
+            if(PNJContact.tag != "Interaction")
             {
-                PNJContact.GetComponent<PNJ>().ChangeDialog(1);
+                if(PnjMet.Contains(PNJContact.name))
+                {
+                    PNJContact.GetComponent<PNJ>().ChangeDialog(1);
+                }
+                else 
+                {
+                    PnjMet.Add(PNJContact.name);
+                    PNJContact.GetComponent<PNJ>().ChangeDialog(0);
+                }
             }
-            else 
-            {
-                PnjMet.Add(PNJContact.name);
-                PNJContact.GetComponent<PNJ>().ChangeDialog(0);
-            }
+            else PNJContact.GetComponent<PNJ>().ChangeDialog(0);
         }
         
         //GetComponent<MovementsPlayer>().enabled = false;// Initial
@@ -393,6 +397,7 @@ public class Interactions : MonoBehaviour
     {
         if(state != State.InCinematic)
         {
+            dialAndBookCanvas.transform.GetChild(3).gameObject.SetActive(false);
             GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", false);
             carnetUI.GetComponent<Animator>().SetBool("InDialog", false);
             //ChangeState(State.Normal);

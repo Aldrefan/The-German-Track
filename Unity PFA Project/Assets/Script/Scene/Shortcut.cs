@@ -44,7 +44,6 @@ public class Shortcut : MonoBehaviour
     void StartFade()
     {
         fadePanel.GetComponent<Animator>().SetTrigger("StartFade");
-
     }
 
     public void Teleport()
@@ -52,6 +51,7 @@ public class Shortcut : MonoBehaviour
         fadePanel.GetComponent<Animator>().SetTrigger("FadeIn");
         GameObject.FindObjectOfType<Saver>().lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
         StartCoroutine("Respawn");
+        linkedWith.transform.parent.parent.GetComponent<SceneInformations>().PlaceCamera();
     }
 
     void OnTriggerEnter2D(Collider2D col)

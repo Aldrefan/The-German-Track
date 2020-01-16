@@ -154,7 +154,6 @@ public class Pin_System : MonoBehaviour
 
     public void OnMouseUp()
     {
-        Debug.Log("UnClick (Time Pressed : " + (Time.realtimeSinceStartup - time) + " )");
         if(Time.realtimeSinceStartup - time < 0.2)
         {
             GameObject newPin = Instantiate(pin, transform);
