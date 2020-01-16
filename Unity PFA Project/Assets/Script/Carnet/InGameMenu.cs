@@ -7,14 +7,14 @@ using UnityEngine.UI;
 
 public class InGameMenu : MonoBehaviour
 {
-
-    public Slider musicSlider;
+    [Header("Options")]
+    public GameObject optionsCanvas;
     public AudioMixer musicMixer;
-    public Slider fxSlider;
     public AudioMixer fxMixer;
+    public Slider musicSlider;
+    public Slider fxSlider;
     public Dropdown resolutionDropdown;
     Resolution[] resolutions;
-    
     public GameObject englishArrow;
     public GameObject frenchArrow;
 
@@ -91,53 +91,7 @@ public class InGameMenu : MonoBehaviour
         transform.GetChild(9).GetComponent<Animator>().SetTrigger("Save"); //feedbackSave
     }
 
-    public void ReturnTitle()
-    {
-        transform.GetChild(4).transform.GetChild(0).gameObject.SetActive(false); //options
-        transform.GetChild(4).transform.GetChild(0).transform.GetChild(3).gameObject.SetActive(false); //feedbackSave
-        transform.GetChild(4).transform.GetChild(1).gameObject.SetActive(true); //returntitle
-        transform.GetChild(4).transform.GetChild(2).gameObject.SetActive(false); //quitgame
-    }
-
-    public void ConfirmReturnTitle()
-    {
-        //Debug.Log("SaveGame");
-        //LIGNE DE COMMANDE DE SAVE GAME
-        GameObject.Find("Saver").GetComponent<Saver>().MakeASave();
-        //Debug.Log("ReturnTitle");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-    }
-
-    public void ReturnTitleWithoutSave()
-    {
-        //Debug.Log("ReturnTitle");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-    }
-
-    public void QuitGame()
-    {
-        transform.GetChild(4).transform.GetChild(0).gameObject.SetActive(false); //options
-        transform.GetChild(4).transform.GetChild(0).transform.GetChild(3).gameObject.SetActive(false); //feedbackSave
-        transform.GetChild(4).transform.GetChild(1).gameObject.SetActive(false); //returntitle
-        transform.GetChild(4).transform.GetChild(2).gameObject.SetActive(true); //quitgame
-    }
-
-        public void ConfirmQuitGame()
-    {
-        //Debug.Log("SaveGame");
-        //LIGNE DE COMMANDE DE SAVE GAME
-        GameObject.Find("Saver").GetComponent<Saver>().MakeASave();
-        //Debug.Log("QuitGame");
-        Application.Quit();
-    }
-
-    public void QuitGameWithoutSave()
-    {
-        //Debug.Log("QuitGame");
-        //GameObject.Find("Saver").GetComponent<Saver>().ClearSave();
-        Application.Quit();
-    }
-
+    
     public void CancelSaveOptions()
     {
         transform.GetChild(4).transform.GetChild(0).gameObject.SetActive(true); //options
