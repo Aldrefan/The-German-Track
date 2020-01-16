@@ -638,6 +638,7 @@ GameObject:
   - component: {fileID: 326735031}
   - component: {fileID: 326735028}
   - component: {fileID: 326735029}
+  - component: {fileID: 326735032}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -807,6 +808,19 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Quitter
+--- !u!114 &326735032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326735026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: MainMenu_Quit
 --- !u!1 &337869075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,7 +1837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Menu_10
+  text: MainMenu_LoadGame
 --- !u!1 &624769983
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,6 +2182,7 @@ GameObject:
   - component: {fileID: 655935864}
   - component: {fileID: 655935866}
   - component: {fileID: 655935865}
+  - component: {fileID: 655935867}
   m_Layer: 5
   m_Name: noteytavailable
   m_TagString: Untagged
@@ -2236,6 +2251,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655935863}
   m_CullTransparentMesh: 0
+--- !u!114 &655935867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655935863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: MainMenu_Unavailable
 --- !u!1 &727088768
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,7 +2356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Menu_16
+  text: MainMenu_FullScreen
 --- !u!1 &729056960
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,7 +2657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Menu_09
+  text: MainMenu_Play
 --- !u!1 &786528723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2641,6 +2669,7 @@ GameObject:
   - component: {fileID: 786528725}
   - component: {fileID: 786528724}
   - component: {fileID: 786528726}
+  - component: {fileID: 786528727}
   m_Layer: 0
   m_Name: MENU_MANAGER
   m_TagString: Untagged
@@ -2663,6 +2692,7 @@ MonoBehaviour:
   mainMenuName: MainMenu
   saveFeedback: {fileID: 0}
   saver: {fileID: 786528723}
+  languageManager: {fileID: 786528723}
   changeOptions: 0
   showOnStart:
   - {fileID: 1861838867}
@@ -2712,6 +2742,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadAtStart: 0
+--- !u!114 &786528727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786528723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dadbe417d474f84db87f0ba72869d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  language: french
+  filePath: MainMenu.json
+  datas:
+    mytexts: []
 --- !u!1 &816485395
 GameObject:
   m_ObjectHideFlags: 0
@@ -3310,7 +3356,7 @@ GameObject:
   - component: {fileID: 1038188504}
   - component: {fileID: 1038188502}
   m_Layer: 5
-  m_Name: Options
+  m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3442,7 +3488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Menu_12
+  text: MainMenu_Settings
 --- !u!1 &1088396603
 GameObject:
   m_ObjectHideFlags: 0
@@ -4038,7 +4084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Menu_11
+  text: MainMenu_NewGame
 --- !u!1 &1200998381
 GameObject:
   m_ObjectHideFlags: 0
@@ -4131,7 +4177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Menu_14
+  text: MainMenu_FX
 --- !u!1 &1202663444
 GameObject:
   m_ObjectHideFlags: 0
@@ -5108,7 +5154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Menu_15
+  text: MainMenu_Resolution
 --- !u!1 &1433560619
 GameObject:
   m_ObjectHideFlags: 0
@@ -5492,7 +5538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Menu_13
+  text: MainMenu_Music
 --- !u!1 &1662124220
 GameObject:
   m_ObjectHideFlags: 0
@@ -10635,7 +10681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Menu_24
+  text: MainMenu_LanguageChanges
 --- !u!114 &1771984639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11456,7 +11502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Menu_04
+  text: MainMenu_Quit
 --- !u!1 &2115083893
 GameObject:
   m_ObjectHideFlags: 0
@@ -11493,7 +11539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 253, y: 206}
+  m_AnchoredPosition: {x: 306, y: 206}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2115083895
@@ -11523,7 +11569,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 60
-    m_Alignment: 4
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
@@ -11569,4 +11615,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: IS_PB
+  text: MainMenu_PressKey

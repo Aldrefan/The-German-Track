@@ -9,7 +9,7 @@ public class TextApparition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<Text>().text = LanguageManager.Instance.GetDialog(text);
     }
 
     void OnEnable()

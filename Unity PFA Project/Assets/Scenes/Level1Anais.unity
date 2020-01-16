@@ -2591,6 +2591,12 @@ Transform:
   m_Father: {fileID: 1976678347}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &100372186 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4163619210155392691, guid: 3651f4048b841834d9bbf51734ba01ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 4163619211695480736}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &100396905
 GameObject:
   m_ObjectHideFlags: 0
@@ -50420,12 +50426,12 @@ PrefabInstance:
     - target: {fileID: 6252624642967059764, guid: e7c94aa2610c9844293398dde8a0fbf7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -56
+      value: -2.2
       objectReference: {fileID: 0}
     - target: {fileID: 6252624642967059764, guid: e7c94aa2610c9844293398dde8a0fbf7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.8
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6252624642967059764, guid: e7c94aa2610c9844293398dde8a0fbf7,
         type: 3}
@@ -69791,6 +69797,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 43
       objectReference: {fileID: 0}
+    - target: {fileID: 47796585721202882, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
 --- !u!114 &1714092047808702676
@@ -72203,6 +72214,11 @@ PrefabInstance:
       propertyPath: saver
       value: 
       objectReference: {fileID: 1045542788}
+    - target: {fileID: 4163619211731328925, guid: 3651f4048b841834d9bbf51734ba01ae,
+        type: 3}
+      propertyPath: languageManager
+      value: 
+      objectReference: {fileID: 1192764751}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3651f4048b841834d9bbf51734ba01ae, type: 3}
 --- !u!4 &4165409269409925058
@@ -72265,7 +72281,9 @@ MonoBehaviour:
     bookOnDialog: {fileID: 7830747601512898878}
     board: {fileID: 1456610456}
     menu: {fileID: 35979320}
-    saveButton: {fileID: 831084931}
+    saveButton:
+    - {fileID: 831084931}
+    - {fileID: 100372186}
   tutoDone:
     dialogsDone: 0
     newStickerDone: 0

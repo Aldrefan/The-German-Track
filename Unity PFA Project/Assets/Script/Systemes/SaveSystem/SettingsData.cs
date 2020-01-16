@@ -10,7 +10,7 @@ public class SettingsData
     public bool fullscreenBool;
     public Vector2 screenResolution;
 
-    public SettingsData(float newMusicVol, float newEffectVol, string newGameLanguage)
+    public SettingsData(float newMusicVol = 0.5f, float newEffectVol =0.5f, string newGameLanguage = "english", bool newFullscreen = true)
     {
         musicVol = newMusicVol;
         effectVol = newEffectVol;

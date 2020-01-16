@@ -11,6 +11,7 @@ public class Menu : MonoBehaviour
     public string mainMenuName;
     public GameObject saveFeedback;
     public GameObject saver;
+    public GameObject languageManager;
     public bool changeOptions;
     float musicValue;
     float fxValue;
@@ -104,8 +105,8 @@ public class Menu : MonoBehaviour
         
 
         //language initialisation
-        JsonSave save = SaveGameManager.GetCurrentSave();
-        if (save.language == "english") EnglishSelection();
+        //JsonSave save = SaveGameManager.GetCurrentSave();
+        if (languageManager.GetComponent<LanguageManager>().language == "english") EnglishSelection();
         else FrenchSelection();
 
 
@@ -238,17 +239,26 @@ public class Menu : MonoBehaviour
     }
     public void EnglishSelection()
     {
-        JsonSave save = SaveGameManager.GetCurrentSave();
+        languageManager.GetComponent<LanguageManager>().language = "english";
         englishArrow.SetActive(true);
         frenchArrow.SetActive(false);
-        save.language = "english";
+        RefreshTexts();
     }
     public void FrenchSelection()
     {
-        JsonSave save = SaveGameManager.GetCurrentSave();
+        languageManager.GetComponent<LanguageManager>().language = "french";
         frenchArrow.SetActive(true);
         englishArrow.SetActive(false);
-        save.language = "french";
+        RefreshTexts();
+    }
+    void RefreshTexts()
+    {
+        TextApparition[] textsToRefresh = GameObject.FindObjectsOfType<TextApparition>();
+        foreach(TextApparition objet in textsToRefresh)
+        {
+            objet.gameObject.SetActive(false);
+            objet.gameObject.SetActive(true);
+        }
     }
     public void TypePlaySound()
     {
