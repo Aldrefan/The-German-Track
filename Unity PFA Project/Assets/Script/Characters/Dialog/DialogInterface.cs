@@ -17,6 +17,11 @@ public class DialogInterface : MonoBehaviour
         //player = GameObject.FindGameObjectWithTag("Player");
     }
 
+    void OnEnable()
+    {
+        player = GameObject.Find("Kenneth");
+    }
+
     // Update is called once per frame
     void Update()
     {

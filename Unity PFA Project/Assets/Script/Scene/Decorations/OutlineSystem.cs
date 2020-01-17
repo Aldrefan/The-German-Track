@@ -37,6 +37,7 @@ public class OutlineSystem : MonoBehaviour
 
     public void ShowOutline()
     {
+        transform.GetChild(0).gameObject.SetActive(true);
         if(player.GetComponent<Interactions>().PNJContact != null)
         {
             transform.GetChild(0).gameObject.SetActive(false);
@@ -72,6 +73,7 @@ public class OutlineSystem : MonoBehaviour
 
     public void HideOutline()
     {
+        transform.GetChild(0).gameObject.SetActive(false);
         foreach(Transform child in transform)
         {
             if(child.name == "OutlineComponent")
