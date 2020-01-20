@@ -23,6 +23,7 @@ public static class GameSaveSystem
     static LanguageManager langManager;
 
 
+
     public static void Init()
     {
         if (!Directory.Exists(SAVE_FOLDER))
@@ -62,7 +63,7 @@ public static class GameSaveSystem
         effectMixer.GetFloat("fxVolume", out effectVol);
 
 
-        SettingsData settingObject = new SettingsData(musicVol, effectVol, langManager.language);
+        SettingsData settingObject = new SettingsData(false, musicVol, effectVol, langManager.language, Screen.fullScreen, new Vector2(Screen.currentResolution.width, Screen.currentResolution.height));
         string json = JsonUtility.ToJson(settingObject);
 
         File.WriteAllText(SAVE_FOLDER + "/settingsSave.txt", json);
@@ -72,13 +73,14 @@ public static class GameSaveSystem
     {
         if (File.Exists(SAVE_FOLDER + "/settingsSave.txt"))
         {
-            string saveString = File.ReadAllText(SAVE_FOLDER + "/gameSave.txt");
+            string saveString = File.ReadAllText(SAVE_FOLDER + "/settingsSave.txt");
             SettingsData newSettingsSave = JsonUtility.FromJson<SettingsData>(saveString);
             return newSettingsSave;
         }
         else
         {
-            SettingsData defaultSettingsSave = new SettingsData();
+            
+            SettingsData defaultSettingsSave = new SettingsData(true);
             string json = JsonUtility.ToJson(defaultSettingsSave);
             File.WriteAllText(SAVE_FOLDER + "/settingsSave.txt", json);
             return defaultSettingsSave;

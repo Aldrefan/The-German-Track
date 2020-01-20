@@ -6,6 +6,7 @@ using System.IO;
 public class OutlineSystem : MonoBehaviour
 {
     float gap = 0.01f;
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class OutlineSystem : MonoBehaviour
     {
         if(col.tag == "Player" && GetComponent<SpriteRenderer>())
         {
+            player = col.gameObject;
             ShowOutline();
         }
     }
@@ -35,6 +37,12 @@ public class OutlineSystem : MonoBehaviour
 
     public void ShowOutline()
     {
+        transform.GetChild(0).gameObject.SetActive(true);
+        if(player.GetComponent<Interactions>().PNJContact != null)
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+            player.GetComponent<Interactions>().PNJContact.GetComponent<OutlineSystem>().HideOutline();
+        }
         for(int i = 0; i < 4; i++)
         {
             GameObject sprite = new GameObject("OutlineComponent");
@@ -65,6 +73,7 @@ public class OutlineSystem : MonoBehaviour
 
     public void HideOutline()
     {
+        transform.GetChild(0).gameObject.SetActive(false);
         foreach(Transform child in transform)
         {
             if(child.name == "OutlineComponent")
