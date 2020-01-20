@@ -10,7 +10,7 @@ public class SettingsData
     public bool fullscreenBool;
     public Vector2 screenResolution;
 
-    public SettingsData(bool defaultFile = true, float newMusicVol = 0.5f, float newEffectVol = 0.5f, string newGameLanguage = "english", bool newFullscreen = true, Vector2 newResolution = default)   {
+    public SettingsData(bool defaultFile, float newMusicVol = -20, float newEffectVol = -20, string newGameLanguage = "english", bool newFullscreen = true, Vector2 newResolution = default)   {
         Debug.Log(defaultFile);
         if (defaultFile)
         {
@@ -18,7 +18,7 @@ public class SettingsData
             effectVol = newEffectVol;
             gameLanguage = newGameLanguage;
             fullscreenBool = true;
-            screenResolution = new Vector2(1280, 720);
+            screenResolution = new Vector2(1920, 1080);
 
         }
         else

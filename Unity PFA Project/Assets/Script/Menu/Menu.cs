@@ -74,6 +74,9 @@ public class Menu : MonoBehaviour
         //active le menu à sa forme initiale
         ReturnMenu();
 
+        //settings initialisation
+        saver.GetComponent<SaveFile>().LoadSettings();
+
 
         //resolution dropdown
         resolutions = Screen.resolutions;
@@ -123,10 +126,6 @@ public class Menu : MonoBehaviour
         fxSlider.value = fxValue;
 
 
-        //settings initialisation
-        saver.GetComponent<SaveFile>().LoadSettings();
-
-
         //check if save exist
         LoadButtonActive();
     }
@@ -149,7 +148,11 @@ public class Menu : MonoBehaviour
         canvasPlay.SetActive(true);
         canvasOptions.SetActive(false);
         canvasQuit.SetActive(false);
+
+        //fullscreenCheckbox.GetComponent<Toggle>().isOn = Screen.fullScreen;
+
     }
+
     public void CanvasOptions()
     {
         if (!canvasOptions.gameObject.activeSelf)
@@ -161,6 +164,7 @@ public class Menu : MonoBehaviour
         canvasQuit.SetActive(false);
 
     }
+
     void CanvasOptionsOut()
     {
         if(!changeOptions && canvasOptions.gameObject.activeSelf)
@@ -173,6 +177,7 @@ public class Menu : MonoBehaviour
             changeOptions = false;
         }
     }
+
     public void CanvasQuit()
     {
         if (!canvasQuit.gameObject.activeSelf)
@@ -269,7 +274,6 @@ public class Menu : MonoBehaviour
     {
         GameObject.Find("TypeSound").transform.GetComponent<AudioSource>().Play(0);
     }
-
 
 
 
