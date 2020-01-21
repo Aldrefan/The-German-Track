@@ -8,7 +8,7 @@ public class ObjectiveNotif : MonoBehaviour
     [SerializeField]
     float visibilityTime = 3;
 
-    CarnetGoal playerGoalList;
+    CarnetGoal carnetGoal;
     Animator notifAtor;
     Text notifText;
 
@@ -18,17 +18,17 @@ public class ObjectiveNotif : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerGoalList == null)
+        if(carnetGoal == null)
         {
             StartCoroutine(FindPlayer());
         }
         else
         {
-            playerGoalList.notif = this;
-
+            carnetGoal.notif = this;
+            carnetGoal.Init();
         }
 
-        if (playerGoalList != null)
+        if (carnetGoal != null)
         {
             SetNotifVisible();
         }
@@ -42,7 +42,7 @@ public class ObjectiveNotif : MonoBehaviour
         {
             notifText = this.transform.GetChild(0).GetChild(0).GetComponent<Text>();
             notifAtor = this.GetComponent<Animator>();
-            playerGoalList = FindObjectOfType<CarnetGoal>();
+            carnetGoal = GameObject.FindObjectOfType<Ken_Canvas_Infos>().transform.Find("Panel").Find("Carnet").Find("Goal").Find("GoalFrame").GetComponent<CarnetGoal>();
         }
     }
 

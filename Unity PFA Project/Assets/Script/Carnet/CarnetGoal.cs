@@ -12,25 +12,24 @@ public class CarnetGoal : MonoBehaviour
     public List<string> goalList;
     public List<string> removeGoalList;
 
-    Transform completedGoals;
-    Transform toCompleteGoals;
-    Object goalObject;
+    public Transform completedGoals;
+    public Transform toCompleteGoals;
+    public Object goalObject;
 
-    [HideInInspector]
     public ObjectiveNotif notif;
 
     // Start is called before the first frame update
-    void Start()
+    public void Init()
     {
-        completedGoals = this.transform.Find("CompletedGoals").GetChild(0).GetChild(0).GetChild(0);
-        toCompleteGoals = this.transform.Find("GoalToComplete").GetChild(0).GetChild(0).GetChild(0);
+        completedGoals = this.transform.Find("CompletedGoals").Find("GoalListScrollViewport").Find("GoalListBckGrd").Find("GoalListViewport");
+        toCompleteGoals = this.transform.Find("GoalToComplete").Find("GoalListScrollViewport").Find("GoalListBckGrd").Find("GoalListViewport");
         goalObject = Resources.Load("UIObject/Goal");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void NewGoal(string goalString)
