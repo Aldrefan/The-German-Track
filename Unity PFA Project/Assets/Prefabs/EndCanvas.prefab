@@ -4698,6 +4698,99 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!1 &1890569300707151665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6852373019569940790}
+  - component: {fileID: 5519806991539160211}
+  - component: {fileID: 3804638638065988440}
+  - component: {fileID: 4598866765192551390}
+  m_Layer: 5
+  m_Name: Text_07
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6852373019569940790
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890569300707151665}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2296014134696286477}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000030518, y: -3652}
+  m_SizeDelta: {x: 800, y: 60.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5519806991539160211
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890569300707151665}
+  m_CullTransparentMesh: 0
+--- !u!114 &3804638638065988440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890569300707151665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: fbbd908daf8c93a4fa235fb190f5ac72, type: 3}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: FAIT AVEC UNITY
+--- !u!114 &4598866765192551390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890569300707151665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Credits_07
 --- !u!1 &2296014133512851939
 GameObject:
   m_ObjectHideFlags: 0
@@ -4828,7 +4921,7 @@ GameObject:
   - component: {fileID: 2296014133648960682}
   - component: {fileID: 2296014133648960681}
   m_Layer: 5
-  m_Name: Text (4)
+  m_Name: Text_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4901,7 +4994,7 @@ MonoBehaviour:
     Merazi Lopez\n\n\n\n\nLEAD PROGRAMMER\nDylan Brousse\n\n\n\n\nPROGRAMMER\nBenjamin
     Lapujade\n\n\n\n\nSUPPORT PROGRAMMER\nAna\xEFs Gasparotto\n\n\n\n\nLEAD ARTIST\nMartin
     Michaud\n\n\n\n\nARTIST\nMartin Michaud\n\n\n\n\nUI ARTIST\nLucas Merazi Lopez\n\n\n\n\nANIMATOR\nCamille
-    Marceau\n\n\n\n\nSOUND DESIGNER\nJerome Yven\n\n\n\n\nFAIT AVEC UNITY"
+    Marceau\nMartin Michaud\n\n\n\n\nSOUND DESIGNER\nJerome Yven"
 --- !u!1 &2296014133895096442
 GameObject:
   m_ObjectHideFlags: 0
@@ -4914,7 +5007,7 @@ GameObject:
   - component: {fileID: 2296014133895096445}
   - component: {fileID: 2296014133895096444}
   m_Layer: 5
-  m_Name: Text (3)
+  m_Name: Text_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4994,7 +5087,7 @@ GameObject:
   - component: {fileID: 2296014134085119803}
   - component: {fileID: 2296014134085119802}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: Text_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5120,8 +5213,9 @@ GameObject:
   - component: {fileID: 2296014134087921875}
   - component: {fileID: 2296014134087921877}
   - component: {fileID: 2296014134087921876}
+  - component: {fileID: 551592389}
   m_Layer: 5
-  m_Name: Text (6)
+  m_Name: Text_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5188,6 +5282,19 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Viktor a tu\xE9 Loraine."
+--- !u!114 &551592389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2296014134087921874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Credits_01
 --- !u!1 &2296014134153608466
 GameObject:
   m_ObjectHideFlags: 0
@@ -5199,8 +5306,9 @@ GameObject:
   - component: {fileID: 2296014134153608467}
   - component: {fileID: 2296014134153608469}
   - component: {fileID: 2296014134153608468}
+  - component: {fileID: 551592387}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: Text_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5222,8 +5330,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030518, y: -686}
-  m_SizeDelta: {x: 800, y: 60.9}
+  m_AnchoredPosition: {x: 3.5, y: -686}
+  m_SizeDelta: {x: 761.4, y: 60.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2296014134153608469
 CanvasRenderer:
@@ -5263,11 +5371,24 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Maintenant n'h\xE9site pas \xE0 nous dire ce que tu as pens\xE9 de cette
-    version\ndu jeu et \xE0 acheter le jeu complet !"
+    version du jeu et \xE0 acheter le jeu complet !"
+--- !u!114 &551592387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2296014134153608466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Credits_04
 --- !u!1 &2296014134332978975
 GameObject:
   m_ObjectHideFlags: 0
@@ -5279,8 +5400,9 @@ GameObject:
   - component: {fileID: 2296014134332979040}
   - component: {fileID: 2296014134332979042}
   - component: {fileID: 2296014134332979041}
+  - component: {fileID: 551592386}
   m_Layer: 5
-  m_Name: Text (5)
+  m_Name: Text_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5298,7 +5420,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2296014134696286477}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5347,6 +5469,19 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "FIN DE LA D\xC9MO"
+--- !u!114 &551592386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2296014134332978975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Credits_08
 --- !u!1 &2296014134390320228
 GameObject:
   m_ObjectHideFlags: 0
@@ -5360,8 +5495,9 @@ GameObject:
   - component: {fileID: 2296014134390320232}
   - component: {fileID: 2296014134390320231}
   - component: {fileID: 2296014134390320230}
+  - component: {fileID: 551592384}
   m_Layer: 5
-  m_Name: QuitGame (1)
+  m_Name: QuitGame_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5379,7 +5515,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2296014134696286477}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5529,6 +5665,19 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!114 &551592384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2296014134390320228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Credits_10
 --- !u!1 &2296014134508919189
 GameObject:
   m_ObjectHideFlags: 0
@@ -5542,8 +5691,9 @@ GameObject:
   - component: {fileID: 2296014134508919193}
   - component: {fileID: 2296014134508919192}
   - component: {fileID: 2296014134508919191}
+  - component: {fileID: 551592385}
   m_Layer: 5
-  m_Name: ReturnTitle (1)
+  m_Name: ReturnTitle_09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5561,7 +5711,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2296014134696286477}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5711,6 +5861,19 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!114 &551592385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2296014134508919189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Credits_09
 --- !u!1 &2296014134696286476
 GameObject:
   m_ObjectHideFlags: 0
@@ -5745,6 +5908,7 @@ RectTransform:
   - {fileID: 2296014134153608467}
   - {fileID: 2296014133895096443}
   - {fileID: 2296014133648960680}
+  - {fileID: 6852373019569940790}
   - {fileID: 2296014134332979040}
   - {fileID: 2296014134508919190}
   - {fileID: 2296014134390320229}
@@ -5786,8 +5950,9 @@ GameObject:
   - component: {fileID: 2296014134877582965}
   - component: {fileID: 2296014134877582967}
   - component: {fileID: 2296014134877582966}
+  - component: {fileID: 551592388}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5854,6 +6019,19 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "MERCI D'AVOIR JOU\xC9 \xC0 LA VERSION D\xC9MO DE"
+--- !u!114 &551592388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2296014134877582964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Credits_02
 --- !u!1 &2296014135144952036
 GameObject:
   m_ObjectHideFlags: 0
