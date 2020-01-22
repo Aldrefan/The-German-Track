@@ -26,6 +26,7 @@ public class ObjectiveNotif : MonoBehaviour
         {
             carnetGoal.notif = this;
             carnetGoal.Init();
+            carnetGoal.RetryNotif();
         }
 
         if (carnetGoal != null)

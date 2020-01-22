@@ -27,9 +27,12 @@ public class GameData
     public string actualRoomName;
     //ActiveCharacterScript -> GameObject
     public List<CharacterPosition> playableCharacters = new List<CharacterPosition>();
+    //GoalsList
+    public List<string> goalsInProgress = new List<string>();
+    public List<string> goalsComplete = new List<string>();
 
 
-    public GameData(CameraFollow camScript, ActiveCharacterScript currentCharacters, GameObject characterToPlay, DayNightLight directionalLight)
+    public GameData(CameraFollow camScript, ActiveCharacterScript currentCharacters, GameObject characterToPlay, DayNightLight directionalLight, CarnetGoal goalsObject)
     {
         currentLevel = SceneManager.GetActiveScene().name;
 
@@ -62,6 +65,12 @@ public class GameData
         {
             dayNightCycle = false;
 
+        }
+
+        if (goalsObject != null)
+        {
+            goalsInProgress = goalsObject.goalList;
+            goalsComplete = goalsObject.removeGoalList;
         }
     }
 
