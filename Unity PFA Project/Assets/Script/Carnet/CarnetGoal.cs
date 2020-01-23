@@ -9,8 +9,8 @@ public class CarnetGoal : MonoBehaviour
     //public Vector2 heightWidth;
     //public Font font;
     //public int fontSize;
-    public List<string> goalList;
-    public List<string> removeGoalList;
+    public List<GoalKeys> goalList = new List<GoalKeys>();
+    public List<GoalKeys> removeGoalList = new List<GoalKeys>();
 
     public Transform completedGoals;
     public Transform toCompleteGoals;
@@ -35,19 +35,19 @@ public class CarnetGoal : MonoBehaviour
 
     }
 
-    public void NewGoal(string goalString)
+    public void NewGoal(GoalKeys goalkeys)
     {
-        if (!goalList.Contains(goalString))
+        if (!goalList.Contains(goalkeys))
         {
-            goalList.Add(goalString);
+            goalList.Add(goalkeys);
             if(notif != null)
             {
-                notif.textToNotify = goalString;
+                notif.textToNotify = LanguageManager.Instance.GetDialog(goalkeys.nameGoalKey);
 
             }
             else
             {
-                notifSaver = goalString;
+                notifSaver = LanguageManager.Instance.GetDialog(goalkeys.nameGoalKey);
             }
         }
     }
@@ -62,27 +62,27 @@ public class CarnetGoal : MonoBehaviour
         }
     }
 
-    public void RemoveGoal(string goalString)
+    public void RemoveGoal(GoalKeys goalkeys)
     {
-        if (!removeGoalList.Contains(goalString))
+        if (!removeGoalList.Contains(goalkeys))
         {
-            removeGoalList.Add(goalString);
+            removeGoalList.Add(goalkeys);
             //if (!goalList.Contains(goalString))
             //{
             //    Debug.Log("Delete current Goal");
-                goalList.Remove(goalString);
+                goalList.Remove(goalkeys);
             //}
         }
     }
 
     void OnEnable()
     {
-        foreach (string goal in goalList)
+        foreach (GoalKeys goal in goalList)
         {
             int counter = 0;
             foreach (Transform currentGoal in toCompleteGoals)
             {
-                if(currentGoal.GetComponent<Goal>().ReturnGoal() == goal)
+                if(currentGoal.GetComponent<Goal>().ReturnGoal() ==  LanguageManager.Instance.GetDialog(goal.nameGoalKey))
                 {
                     counter++;
                 }
@@ -90,7 +90,7 @@ public class CarnetGoal : MonoBehaviour
             }
             if (counter ==0) 
             {
-                CreateGoal(true, goal, toCompleteGoals);
+                CreateGoal(true, LanguageManager.Instance.GetDialog(goal.nameGoalKey), toCompleteGoals);
             }
 
             //newGoal.GetComponent<Text>().horizontalOverflow =  HorizontalWrapMode.Overflow;
@@ -102,12 +102,12 @@ public class CarnetGoal : MonoBehaviour
             //newGoal.transform.localScale = scale;
         }
 
-        foreach (string goal in removeGoalList)
+        foreach (GoalKeys goal in removeGoalList)
         {
             int counter = 0;
             foreach (Transform currentGoal in completedGoals)
             {
-                if (currentGoal.GetComponent<Goal>().ReturnGoal() == goal)
+                if (currentGoal.GetComponent<Goal>().ReturnGoal() == LanguageManager.Instance.GetDialog(goal.nameGoalKey))
                 {
                     counter++;
                 }
@@ -115,7 +115,7 @@ public class CarnetGoal : MonoBehaviour
             }
             foreach (Transform finishedGoal in toCompleteGoals)
             {
-                if (finishedGoal.GetComponent<Goal>().ReturnGoal() == goal)
+                if (finishedGoal.GetComponent<Goal>().ReturnGoal() == LanguageManager.Instance.GetDialog(goal.nameGoalKey))
                 {
                     finishedGoal.SetParent(completedGoals);
                     finishedGoal.GetComponent<Goal>().ChangeColor(Color.gray);
@@ -130,14 +130,14 @@ public class CarnetGoal : MonoBehaviour
         }
     }
 
-    void CreateGoal(bool isNewGoal, string goalSentence, Transform parent)
+    void CreateGoal(bool isNewGoal, GoalKeys goal, Transform parent)
     {
 
         GameObject newGoal = Instantiate(goalObject, parent) as GameObject;
         newGoal.transform.SetParent(parent);
         newGoal.GetComponent<RectTransform>().localPosition = Vector3.zero;
         newGoal.name = goalObject.name;
-        newGoal.GetComponent<Goal>().Init(goalSentence);
+        newGoal.GetComponent<Goal>().Init(goal.nameGoalKey, goal.descriptionGoalKey);
         newGoal.GetComponent<Goal>().goalDescriptionTransform = goalDescription;
         if (!isNewGoal)
         {
@@ -146,3 +146,16 @@ public class CarnetGoal : MonoBehaviour
         }
     }
 }
+
+[System.Serializable]
+public class GoalKeys
+{
+    public string nameGoalKey;
+    public string descriptionGoalKey;
+
+    public GoalKeys(string newNameKey, string newDescriptionKey)
+    {
+        nameGoalKey = newNameKey;
+        descriptionGoalKey = newDescriptionKey;
+    }
+} 

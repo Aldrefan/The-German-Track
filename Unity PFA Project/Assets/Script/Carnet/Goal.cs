@@ -6,31 +6,24 @@ using UnityEngine.EventSystems;
 
 public class Goal : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    
-    string goalName;
-
-    public string goalDescription;
-
-    //[HideInInspector]
-    public string goalDescriptionKey;
+    string goalDescription;
 
     [HideInInspector]
     public Transform goalDescriptionTransform;
 
-    public void Init(string name)
+    public void Init(string newNameKey, string newDescKey)
     {
-        goalName = name;
         this.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 1);
         this.transform.GetChild(0).GetComponent<Text>().horizontalOverflow =  HorizontalWrapMode.Wrap;
-        this.transform.GetChild(0).GetComponent<Text>().text = name;
+        this.transform.GetChild(0).GetComponent<Text>().text = LanguageManager.Instance.GetDialog(newNameKey);
 
-        if (goalDescriptionKey == "")
+        if (LanguageManager.Instance.GetDialog(newDescKey) == "")
         {
             goalDescription = "Hello World !";
         }
         else
         {
-            goalDescription = LanguageManager.Instance.GetDialog(goalDescriptionKey);
+            goalDescription = LanguageManager.Instance.GetDialog(newDescKey);
         }
     }
 

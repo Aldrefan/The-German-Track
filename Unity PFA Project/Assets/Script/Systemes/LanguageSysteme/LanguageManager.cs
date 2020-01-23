@@ -42,6 +42,18 @@ public class LanguageManager : MonoBehaviour
             dataAsJson = File.ReadAllText(Application.dataPath + "/StreamingAssets/" + filePath);
         }
         datas = JsonUtility.FromJson<TextData>("{\"mytexts\":" + dataAsJson + "}");
+
+        RefreshTexts();
+    }
+
+    void RefreshTexts()
+    {
+        TextApparition[] textsToRefresh = GameObject.FindObjectsOfType<TextApparition>();
+        foreach(TextApparition objet in textsToRefresh)
+        {
+            objet.gameObject.SetActive(false);
+            objet.gameObject.SetActive(true);
+        }
     }
 
     public string GetDialog(string key)
