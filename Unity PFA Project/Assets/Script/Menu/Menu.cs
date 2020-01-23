@@ -123,7 +123,10 @@ public class Menu : MonoBehaviour
 
 
         //check if save exist
-        LoadButtonActive();
+        if(loadButton != null)
+        {
+            LoadButtonActive();
+        }
     }
 
 
@@ -145,6 +148,12 @@ public class Menu : MonoBehaviour
         canvasOptions.SetActive(false);
         canvasQuit.SetActive(false);
     }
+    public void Continue()
+    {
+        gameObject.SetActive(false);
+        GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.GetComponent<Interactions>().ChangeState(Interactions.State.Normal);
+    }
+
     public void CanvasOptions()
     {
         if (!canvasOptions.gameObject.activeSelf)
