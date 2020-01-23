@@ -160,7 +160,7 @@ public class Interactions : MonoBehaviour
     public void OpenBookExe()
     {
         //Camera.main.GetComponent<Camera_Manager>().OnCarnet();
-        dialAndBookCanvas.transform.GetChild(6).gameObject.SetActive(true);
+        dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.SetActive(true);
         carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);
         GetComponent<PlayerMemory>().CheckStickersCarnet();
         ChangeState(State.OnCarnet);

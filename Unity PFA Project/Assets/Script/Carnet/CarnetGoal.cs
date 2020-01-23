@@ -14,6 +14,7 @@ public class CarnetGoal : MonoBehaviour
 
     public Transform completedGoals;
     public Transform toCompleteGoals;
+    public Transform goalDescription;
     public Object goalObject;
 
     public ObjectiveNotif notif;
@@ -24,6 +25,7 @@ public class CarnetGoal : MonoBehaviour
     {
         completedGoals = this.transform.Find("CompletedGoals").Find("GoalListScrollViewport").Find("GoalListBckGrd").Find("GoalListViewport");
         toCompleteGoals = this.transform.Find("GoalToComplete").Find("GoalListScrollViewport").Find("GoalListBckGrd").Find("GoalListViewport");
+        goalDescription = this.transform.Find("GoalDescription");
         goalObject = Resources.Load("UIObject/Goal");
     }
 
@@ -48,7 +50,6 @@ public class CarnetGoal : MonoBehaviour
                 notifSaver = goalString;
             }
         }
-
     }
     
     public void RetryNotif()
@@ -127,7 +128,6 @@ public class CarnetGoal : MonoBehaviour
                 CreateGoal(false, goal, completedGoals);
             }
         }
-
     }
 
     void CreateGoal(bool isNewGoal, string goalSentence, Transform parent)
@@ -138,6 +138,7 @@ public class CarnetGoal : MonoBehaviour
         newGoal.GetComponent<RectTransform>().localPosition = Vector3.zero;
         newGoal.name = goalObject.name;
         newGoal.GetComponent<Goal>().Init(goalSentence);
+        newGoal.GetComponent<Goal>().goalDescriptionTransform = goalDescription;
         if (!isNewGoal)
         {
             newGoal.GetComponent<Goal>().ChangeColor(Color.gray);

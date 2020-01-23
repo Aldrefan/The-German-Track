@@ -35,8 +35,6 @@ public class LanguageManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InitLanguage();
-        
         //SaveGameManager.Save();
         string dataAsJson = null;
         if(File.Exists(Application.dataPath + "/StreamingAssets/" + filePath))
@@ -69,11 +67,5 @@ public class LanguageManager : MonoBehaviour
             return null;
         }
         return null;
-    }
-
-    public void InitLanguage()
-    {
-        SettingsData settingsSave = GameSaveSystem.LoadSettingsData();
-        if(settingsSave.gameLanguage != language) language = settingsSave.gameLanguage;
     }
 }

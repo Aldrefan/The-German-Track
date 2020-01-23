@@ -35,7 +35,6 @@ public class Menu : MonoBehaviour
     public Slider fxSlider;
     public Dropdown resolutionDropdown;
     Resolution[] resolutions;
-    public GameObject fullscreenCheckbox;
     public GameObject englishArrow;
     public GameObject frenchArrow;
 
@@ -74,9 +73,6 @@ public class Menu : MonoBehaviour
         //active le menu à sa forme initiale
         ReturnMenu();
 
-        //settings initialisation
-        saver.GetComponent<SaveFile>().LoadSettings();
-
 
         //resolution dropdown
         resolutions = Screen.resolutions;
@@ -109,13 +105,9 @@ public class Menu : MonoBehaviour
         
 
         //language initialisation
+        //JsonSave save = SaveGameManager.GetCurrentSave();
         if (languageManager.GetComponent<LanguageManager>().language == "english") EnglishSelection();
         else FrenchSelection();
-
-
-        //fullscreen checkbox initialisation
-        if (Screen.fullScreen) fullscreenCheckbox.GetComponent<Toggle>().isOn = true;
-        else fullscreenCheckbox.GetComponent<Toggle>().isOn = false;
 
 
         //music initialisation
@@ -126,8 +118,15 @@ public class Menu : MonoBehaviour
         fxSlider.value = fxValue;
 
 
+        //settings initialisation
+        saver.GetComponent<SaveFile>().LoadSettings();
+
+
         //check if save exist
-        LoadButtonActive();
+        if(loadButton != null)
+        {
+            LoadButtonActive();
+        }
     }
 
 
@@ -148,9 +147,11 @@ public class Menu : MonoBehaviour
         canvasPlay.SetActive(true);
         canvasOptions.SetActive(false);
         canvasQuit.SetActive(false);
-
-        //fullscreenCheckbox.GetComponent<Toggle>().isOn = Screen.fullScreen;
-
+    }
+    public void Continue()
+    {
+        gameObject.SetActive(false);
+        GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.GetComponent<Interactions>().ChangeState(Interactions.State.Normal);
     }
 
     public void CanvasOptions()
@@ -164,7 +165,6 @@ public class Menu : MonoBehaviour
         canvasQuit.SetActive(false);
 
     }
-
     void CanvasOptionsOut()
     {
         if(!changeOptions && canvasOptions.gameObject.activeSelf)
@@ -177,7 +177,6 @@ public class Menu : MonoBehaviour
             changeOptions = false;
         }
     }
-
     public void CanvasQuit()
     {
         if (!canvasQuit.gameObject.activeSelf)
@@ -274,6 +273,7 @@ public class Menu : MonoBehaviour
     {
         GameObject.Find("TypeSound").transform.GetComponent<AudioSource>().Play(0);
     }
+
 
 
 
