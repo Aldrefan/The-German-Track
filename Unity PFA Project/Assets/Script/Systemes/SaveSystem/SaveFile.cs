@@ -164,11 +164,11 @@ public class SaveFile : MonoBehaviour
         CarnetGoal gameGoals = GameObject.FindObjectOfType<Ken_Canvas_Infos>().transform.Find("Panel").Find("Carnet").Find("Goal").Find("GoalFrame").GetComponent<CarnetGoal>();
         if (gameGoals != null)
         {
-            foreach(string goal in gameSave.goalsInProgress)
+            foreach(GoalKeys goal in gameSave.goalsInProgress)
             {
                 gameGoals.NewGoal(goal);
             }
-            foreach (string goal in gameSave.goalsComplete)
+            foreach (GoalKeys goal in gameSave.goalsComplete)
             {
                 gameGoals.RemoveGoal(goal);
             }
