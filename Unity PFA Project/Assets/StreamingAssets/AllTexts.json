@@ -79,341 +79,6 @@
       "EN": "Morgue"
    },
    {
-      "Key": "InBook_Char",
-      "FR": "Profiles",
-      "EN": "Profiles"
-   },
-   {
-      "Key": "InBook_Clues",
-      "FR": "Indices",
-      "EN": "Clues"
-   },
-   {
-      "Key": "InBook_Facts",
-      "FR": "Faits",
-      "EN": "Facts"
-   },
-   {
-      "Key": "InBook_Hyp",
-      "FR": "Hypoth\u00E8ses",
-      "EN": "Hypothesis"
-   },
-   {
-      "Key": "InBook_Inv",
-      "FR": "Enqu\u00EAte",
-      "EN": "Investigation"
-   },
-   {
-      "Key": "InBook_Goals",
-      "FR": "Objectifs",
-      "EN": "Goals"
-   },
-   {
-      "Key": "InBook_Controls",
-      "FR": "Contr\u00F4les",
-      "EN": "Controls"
-   },
-   {
-      "Key": "InBook_Controls_Controls",
-      "FR": "Contr\u00F4les",
-      "EN": "Controls"
-   },
-   {
-      "Key": "InBook_Controls_OuvCarnet",
-      "FR": "Ouvrir le Carnet",
-      "EN": "Open the Book"
-   },
-   {
-      "Key": "InBook_Controls_Select",
-      "FR": "Selectionner",
-      "EN": "Select"
-   },
-   {
-      "Key": "InBook_Controls_Interact",
-      "FR": "Int\u00E9raction",
-      "EN": "Interact"
-   },
-   {
-      "Key": "InBook_Controls_MPQD",
-      "FR": "Menu Pause\nQuitter Dialogue",
-      "EN": "Pause Menu\nQuit Dialogue"
-   },
-   {
-      "Key": "InBook_Controls_ML",
-      "FR": "D\u00E9placement Gauche",
-      "EN": "Move to Left"
-   },
-   {
-      "Key": "InBook_Controls_MR",
-      "FR": "D\u00E9placement Droite",
-      "EN": "Move to Right"
-   },
-   {
-      "Key": "InBook_Controls_Run",
-      "FR": "Courir (Maintenir)",
-      "EN": "Run (Hold)"
-   },
-   {
-      "Key": "Tuto_Dialogs_Title",
-      "FR": "Les dialogues",
-      "EN": "The dialogs"
-   },
-   {
-      "Key": "Tuto_Dialogs_Text",
-      "FR": "Afin d'en apprendre plus sur l'histoire, vous devrez discuter avec les personnages. Pour passer \u00E0 la boite de dialogue suivante appuyez sur E ou clic gauche sur la boite de dialogue.",
-      "EN": "In order to learn more about the story, you will need to speak with the different characters. To get to the following line of the dialogue, press E or left-click on the dialogue box."
-   },
-   {
-      "Key": "Tuto_NewSticker_Title",
-      "FR": "Les notes",
-      "EN": "The notes"
-   },
-   {
-      "Key": "Tuto_NewSticker_Text",
-      "FR": "Au fil de l'histoire vous trouverez diff\u00E9rentes notes qui sont des r\u00E9pr\u00E9sentations \u00E9crites des informations que vous trouvez pour l'enqu\u00EAte. Quand vous en obtenez une le jeu vous le dit, et vous pouvez retrouver toutes vos notes dans votre carnet ou sur votre tableau.",
-      "EN": "Along the story you will find different notes which are written representations of the information you will gather regarding the case. When you get one, you will be notified and you can find all the notes in your notebook or on the board in your office."
-   },
-   {
-      "Key": "Tuto_Questions_Title",
-      "FR": "Poser une question",
-      "EN": "Ask a question"
-   },
-   {
-      "Key": "Tuto_Questions_Text",
-      "FR": "Pour poser une question, il vous suffit d'\u00EAtre en dialogue avec un personnage, ou d'\u00EAtre pr\u00E8s de lui, puis d'ouvrir le carnet en utilisant le clic gauche dessus, et de cliquer sur la note sur laquelle vous souhaitez l'interroger.",
-      "EN": "To ask a question, you simply need to be in a dialogue with someone, or stand close to them, click on the notebook to open it, then click the note you want to question them about."
-   },
-   {
-      "Key": "Tuto_QuitDialog_Title",
-      "FR": "Les dialogues",
-      "EN": "The dialogs"
-   },
-   {
-      "Key": "Tuto_QuitDialog_Text",
-      "FR": "Pour quitter un dialogue (s'il le permet), ou tout autre fen\u00EAtre, appuyez sur ECHAP.",
-      "EN": "To quit a dialogue sequence (if possible), or any other window, press the ESC key."
-   },
-   {
-      "Key": "Tuto_Move_Title",
-      "FR": "Se d\u00E9placer",
-      "EN": "Move"
-   },
-   {
-      "Key": "Tuto_Move_Text",
-      "FR": "Pour vous d\u00E9placer dans le jeu, utiliser les touches Q et D.",
-      "EN": "To move around, use the A and D keys."
-   },
-   {
-      "Key": "Tuto_Interaction_Title",
-      "FR": "Int\u00E9ragir",
-      "EN": "Interact"
-   },
-   {
-      "Key": "Tuto_Interaction_Text",
-      "FR": "Vous pouvez int\u00E9ragir avec un objet, un personnage, une porte... Avec la touche E \u00E0 chaque fois que le jeu vous l'indiquera.",
-      "EN": "You can interact with an object, a character, a door, etc. with the E key any time the game indicates it."
-   },
-   {
-      "Key": "Tuto_OpenBook_Title",
-      "FR": "Le carnet",
-      "EN": "The notebook"
-   },
-   {
-      "Key": "Tuto_OpenBook_Text",
-      "FR": "Vous pouvez ouvrir votre carnet \u00E0 tout moment en utilisant le clic gauche dessus, ou en utilisant les touches I ou TAB.",
-      "EN": "You can open your notebook at any moment by clicking it, or with the I or TAB keys."
-   },
-   {
-      "Key": "Tuto_NavigateBook_Title",
-      "FR": "Le carnet",
-      "EN": "The notebook"
-   },
-   {
-      "Key": "Tuto_NavigateBook_Text",
-      "FR": "\u00C0 l'int\u00E9rieur du carnet, vous pouvez utiliser le clic gauche pour naviguer entre les diff\u00E9rents onglets du carnet, et quitter avec ECHAP, I, ou TAB.",
-      "EN": "While in the notebook, you can navigate its tabs by clicking on them, and quit by pressing ESC, I, or TAB."
-   },
-   {
-      "Key": "Tuto_Menu_Title",
-      "FR": "Le menu",
-      "EN": "The menu"
-   },
-   {
-      "Key": "Tuto_Menu_Text",
-      "FR": "\u00C0 tout moment vous pouvez utiliser ECHAP pour acc\u00E9der au menu du jeu.",
-      "EN": "You can access the game's main menu at any time by pressing ESC."
-   },
-   {
-      "Key": "Tuto_Sprint_Title",
-      "FR": "Se d\u00E9placer",
-      "EN": "Move"
-   },
-   {
-      "Key": "Tuto_Sprint_Text",
-      "FR": "Quand le lieu vous le permet, vous pouvez maintenir SHIFT en vous d\u00E9placant pour courir.",
-      "EN": "When the game allows it, you can hold SHIFT while moving to run."
-   },
-   {
-      "Key": "Tuto_Board_Title",
-      "FR": "Le tableau",
-      "EN": "The board"
-   },
-   {
-      "Key": "Tuto_Board_Text",
-      "FR": "Il vous sert \u00E0 faire des liens entre vos notes. D\u00E9placement des notes avec la souris et le clic gauche. Clic gauche sur une note pour le lier. \"V\u00C9RIFIER\" pour v\u00E9rifier le lien. \"EFFACER\" pour effacer les liens. La croix pour fermer l'interface \u00E0 tout moment.",
-      "EN": "It allows you to link your different notes. Move notes by clicking and dragging them across the board. Click on the notes to link them. \"VERIFY\" verifies the link. \"ERASE\" unlinks the notes. The \"X\" closes the board."
-   },
-   {
-      "Key": "Tuto_Skip",
-      "FR": "Passer le tutoriel",
-      "EN": "Skip the tutorial"
-   },
-   {
-      "Key": "Lamp_D0_Q1",
-      "FR": "Ma lampe de bureau.",
-      "EN": "My old desk lamp."
-   },
-   {
-      "Key": "Lamp_D1_Q1",
-      "FR": "En superposant les deux lettres cod\u00E9es, un nouveau texte appara\u00EEt.",
-      "EN": "Now that I\u2019ve put the two letters together, a new text is showing through the page."
-   },
-   {
-      "Key": "Lamp_D1_Q2",
-      "FR": "Loraine semblait correspondre avec la SDECE, et on dirait que la SDECE traque l'Allemand.",
-      "EN": "It seems like Loraine was communicating with the SDECE, and the SDECE is tracking the German."
-   },
-   {
-      "Key": "Bureau_Ficus",
-      "FR": "Mon ficus. Il faudrait plus de lumi\u00E8re.",
-      "EN": "My ficus. It needs more light."
-   },
-   {
-      "Key": "Bureau_Dossiers",
-      "FR": "C'est l\u00E0 que je range les \"affaires class\u00E9es\".",
-      "EN": "That's where I keep my \"closed cases\"."
-   },
-   {
-      "Key": "AppartKen_PotDeFleur",
-      "FR": "Un \"v\u00E9ritable\" vase ming. $2.50...",
-      "EN": "A \"real\" Ming vase. $2.50..."
-   },
-   {
-      "Key": "AppartKen_PorteCouloir",
-      "FR": "C'est ma cuisine derri\u00E8re cette porte. Pour l'usage que j'en fais, je ferais mieux de la transformer en fumoir.",
-      "EN": "My kitchen is behind this door. For how little I use it, I might as well make it a smoking room."
-   },
-   {
-      "Key": "AppartKen_Etag\u00E8re",
-      "FR": "J'ai d\u00E9j\u00E0 lu tous ces livres une dizaine de fois.",
-      "EN": "I've already read all these books about ten times."
-   },
-   {
-      "Key": "AppartKen_MurAbim\u00E9",
-      "FR": "Le proprio est vraiment pingre.",
-      "EN": "The landlord is really stingy."
-   },
-   {
-      "Key": "CgeEscal_PorteConcierge",
-      "FR": "C'est la loge de la conci\u00E8rge. Je pr\u00E9f\u00E8re ne pas la croiser, elle va encore me r\u00E9clamer le loyer en retard.",
-      "EN": "The concierge's lodge. I'd rather not see her, she'll ask for my overdue rent."
-   },
-   {
-      "Key": "Street1_DrugsStore",
-      "FR": "Le patron de ce magasin m'adore. En m\u00EAme temps, vu tout le whisky que je lui ach\u00E8te...",
-      "EN": "The owner of that store loves me. Probably because of all the whisky I buy..."
-   },
-   {
-      "Key": "Street1_Pizzeria",
-      "FR": "Je n'ai pas vraiment les moyens de m'offrir un resto.",
-      "EN": "I can't really afford to eat at a restaurant right now."
-   },
-   {
-      "Key": "ComPolice_InvWing",
-      "FR": "Je n'ai pas acc\u00E8s \u00E0 cette partie du b\u00E2timent.",
-      "EN": "I don't have access to this part of the building."
-   },
-   {
-      "Key": "ComPolice_Offices",
-      "FR": "Je pr\u00E9f\u00E8re mon bureau \u00E0 ces cages \u00E0 lapin. Mieux vaut \u00EAtre priv\u00E9 que flic.",
-      "EN": "I prefer my office over these cramped boxes. I'd rather be a private than a cop."
-   },
-   {
-      "Key": "WhiteOffice_Etagere",
-      "FR": "William a toujours \u00E9t\u00E9 un obs\u00E9d\u00E9 du rangement...",
-      "EN": "William has always been obsessed with everything being in order..."
-   },
-   {
-      "Key": "Morgue_Cadavre1",
-      "FR": "J'ai vu assez de cadavres pour une vie.",
-      "EN": "I've seen enough corpses for my whole life."
-   },
-   {
-      "Key": "Morgue_Cadavre2",
-      "FR": "C'est s\u00FBrement Loraine Grey. Pauvre petite.",
-      "EN": "That's probably Loraine Grey. Poor girl."
-   },
-   {
-      "Key": "Morgue_Cadavre3",
-      "FR": "Et dire qu'on finira tous l\u00E0-dedans un jour.",
-      "EN": "Thinking that we'll all end up in there one day gives me the chills."
-   },
-   {
-      "Key": "Street2_Kiosque",
-      "FR": "\"Des espions sovi\u00E9tiques \u00E0 New York\" \"Un casse tourne mal \u00E0 Midtown\" \"La ligne des rats\". On vit une drole d'\u00E9poque.",
-      "EN": "\"Sovietic spies in New York\" \"A hold up goes wrong in Midtown\" \"Ratlines\". What a time to be a live..."
-   },
-   {
-      "Key": "Street2_HotDog",
-      "FR": "Le d\u00E9jeuner New-Yorkais par excellence. Mais je n'ai pas tr\u00E8s envie de hot dog.",
-      "EN": "The typical New York lunch. But I'm not hungry for a hot dog."
-   },
-   {
-      "Key": "Street2_Cartons",
-      "FR": "Cette ville est vraiment d\u00E9gueulasse.",
-      "EN": "This city is really disgusting."
-   },
-   {
-      "Key": "Street2_immeuble",
-      "FR": "Ce genre de taudis est fr\u00E9quent dans le quartier.",
-      "EN": "This kind of shithole is common in the neighborhood."
-   },
-   {
-      "Key": "KurtAppart_Absinthe",
-      "FR": "De l'absinthe.",
-      "EN": "Some absinthe."
-   },
-   {
-      "Key": "KurtAppart_Tele",
-      "FR": "Pauvres fleurs... Ce Kurt vit comme un porc.",
-      "EN": "Poor flowers... That Kurt guy lives like a swine."
-   },
-   {
-      "Key": "KurtAppart_Porte",
-      "FR": "Vu l'odeur, j'imagine que c'est les toilettes...",
-      "EN": "Judging by the smell, this must be the restroom..."
-   },
-   {
-      "Key": "KurtAppart_Mur",
-      "FR": "Mon appartement n'est pas si mal finalement.",
-      "EN": "Guess my apartment is not so bad after all."
-   },
-   {
-      "Key": "PIP_Beer",
-      "FR": "Laisser une pinte \u00E0 moiti\u00E9 vide. C'est criminel.",
-      "EN": "Leaving a pint half full... it's a crime."
-   },
-   {
-      "Key": "PIP_Cerf",
-      "FR": "Un troph\u00E9e de cerf... Pour faire plus authentique je suppose. Dommage qu'il soit factice.",
-      "EN": "A hunting trophy... To seem more authentic I guess. Too bad it's fake."
-   },
-   {
-      "Key": "PIP_Habitue",
-      "FR": "C'est ma premi\u00E8re bi\u00E8re de la journ\u00E9e *hic* enfin... je crois...",
-      "EN": "It's my first beer of the day... *hic* I think..."
-   },
-   {
       "Key": "Clara_D0_Q1",
       "FR": "Bonsoir, Mr Kenneth je pr\u00E9sume ?",
       "EN": "Good evening,\nMr Kenneth, I suppose ?"
@@ -755,8 +420,8 @@
    },
    {
       "Key": "Clara_D7_Q2",
-      "FR": "Oh mon Dieu\u2026 Qui a pu faire une chose pareille?",
-      "EN": "Dear God\u2026 Who could have done such a thing?"
+      "FR": "Oh mon Dieu\u2026 Qui a pu faire une chose pareille ?",
+      "EN": "Dear God\u2026 Who could have done such a thing ?"
    },
    {
       "Key": "Clara_D7_Q3",
@@ -810,8 +475,8 @@
    },
    {
       "Key": "Clara_D9_Q3",
-      "FR": "Que disent ces lettres?",
-      "EN": "What do they say?"
+      "FR": "Que disent ces lettres ?",
+      "EN": "What do they say ?"
    },
    {
       "Key": "Clara_D9_Q4",
@@ -920,7 +585,7 @@
    },
    {
       "Key": "Clara_D13_Q2",
-      "FR": "Oui, c\u2019est le nom des services secrets en France. Pourquoi?",
+      "FR": "Oui, c\u2019est le nom des services secrets en France. Pourquoi ?",
       "EN": "Yes, that\u2019s the name of the French secret services. Why ?"
    },
    {
@@ -955,18 +620,13 @@
    },
    {
       "Key": "Clara_D14_Q2",
-      "FR": "Son fr\u00E8re? J\u2019ai entendu parler de lui quelques fois, mais je ne l\u2019ai jamais rencontr\u00E9. Pourquoi?",
-      "EN": "His brother? I\u2019ve heard of him a little, but I\u2019ve never met him. Why?"
+      "FR": "Son fr\u00E8re? J\u2019ai entendu parler de lui quelques fois, mais je ne l\u2019ai jamais rencontr\u00E9. Pourquoi ?",
+      "EN": "His brother? I\u2019ve heard of him a little, but I\u2019ve never met him. Why ?"
    },
    {
       "Key": "Clara_D14_Q3",
       "FR": "Je me demandais simplement si vous saviez quoi que ce soit sur lui\u2026",
       "EN": "I was just wondering if you knew anything about him\u2026"
-   },
-   {
-      "Key": "Clara_D15_Q1",
-      "FR": "Je ne crois pas pouvoir vous aider \u00E0 ce sujet.",
-      "EN": "I don\u2019t think I can be of any help in that regard."
    },
    {
       "Key": "Clara_D15_Q1",
@@ -1000,8 +660,8 @@
    },
    {
       "Key": "Clara_D16_Q3",
-      "FR": "Que disent ces lettres?",
-      "EN": "What do they say?"
+      "FR": "Que disent ces lettres ?",
+      "EN": "What do they say ?"
    },
    {
       "Key": "Clara_D16_Q4",
@@ -1184,22 +844,22 @@
       "EN": "My old desk lamp."
    },
    {
-      "Key": "Fauteuil_D1_Q0",
+      "Key": "Kenneth_D4_Q1",
       "FR": "Un meurtre d\u00E9guis\u00E9 en suicide\u2026 \u00C7a sent l\u2019affaire compliqu\u00E9e.",
       "EN": "A murder made to look like a suicide\u2026 Smells like a twisted case."
    },
    {
-      "Key": "Fauteuil_D1_Q1",
+      "Key": "Kenneth_D4_Q2",
       "FR": "Je pense que j\u2019irai voir William au commissariat, il pourra sans doute me parler un peu plus de l\u2019affaire.",
       "EN": "I think I\u2019ll go see William at the police department, he\u2019ll probably be able to tell me more about this."
    },
    {
-      "Key": "Fauteuil_D1_Q2",
+      "Key": "Kenneth_D4_Q3",
       "FR": "De toute fa\u00E7on j\u2019aurai besoin de son autorisation pour voir Lou Ellis.",
       "EN": "I\u2019ll need his authorization anyway to be able to talk to Lou Ellis."
    },
    {
-      "Key": "Fauteuil_D1_Q3",
+      "Key": "Kenneth_D4_Q4",
       "FR": "Je m\u2019occuperai de \u00E7a demain. Pour le moment il faut que je dorme un peu.",
       "EN": "I\u2019ll take care of it tomorrow. For the time being, I need to get some sleep."
    },
@@ -1219,52 +879,167 @@
       "EN": "It seems like Loraine was communicating with the SDECE, and the SDECE is tracking the German."
    },
    {
-      "Key": "Phone_D0_Q1",
-      "FR": "Veuillez composer un num\u00E9ro.",
-      "EN": "Please dial a number."
+      "Key": "Bureau_Ficus",
+      "FR": "Mon ficus. Il faudrait plus de lumi\u00E8re.",
+      "EN": "That's where I keep my \"closed cases\"."
    },
    {
-      "Key": "Phone_D1_Q1",
-      "FR": "Je n'ai pas ce num\u00E9ro.",
-      "EN": "I don't have that person's number."
+      "Key": "Bureau_Dossiers",
+      "FR": "C'est l\u00E0 que je range les \"affaires class\u00E9es\".",
+      "EN": "My ficus. It needs more light."
    },
    {
-      "Key": "UI_01",
-      "FR": "pour quitter",
-      "EN": "to quit"
+      "Key": "AppartKen_PotDeFleur",
+      "FR": "Un \"v\u00E9ritable\" vase ming. $2.50...",
+      "EN": "A \"real\" Ming vase. $2.50..."
    },
    {
-      "Key": "R\u00E9ceptionniste_D1_Q1",
+      "Key": "AppartKen_PorteCouloir",
+      "FR": "C'est ma cuisine derri\u00E8re cette porte. Pour l'usage que j'en fais, je ferais mieux de la transformer en fumoir.",
+      "EN": "My kitchen is behind this door. For how little I use it, I might as well make it a smoking room."
+   },
+   {
+      "Key": "AppartKen_Etag\u00E8re",
+      "FR": "J'ai d\u00E9j\u00E0 lu tous ces livres une dizaine de fois.",
+      "EN": "I've already read all these books about ten times."
+   },
+   {
+      "Key": "AppartKen_MurAbim\u00E9",
+      "FR": "Le proprio est vraiment pingre.",
+      "EN": "The landlord is really stingy."
+   },
+   {
+      "Key": "CgeEscal_PorteConcierge",
+      "FR": "C'est la loge de la conci\u00E8rge. Je pr\u00E9f\u00E8re ne pas la croiser, elle va encore me r\u00E9clamer le loyer en retard.",
+      "EN": "The concierge's lodge. I'd rather not see her, she'll ask for my overdue rent."
+   },
+   {
+      "Key": "Street1_DrugsStore",
+      "FR": "Le patron de ce magasin m'adore. En m\u00EAme temps, vu tout le whisky que je lui ach\u00E8te...",
+      "EN": "The owner of that store loves me. Probably because of all the whisky I buy..."
+   },
+   {
+      "Key": "Street1_Pizzeria",
+      "FR": "Je n'ai pas vraiment les moyens de m'offrir un resto.",
+      "EN": "I can't really afford to eat at a restaurant right now."
+   },
+   {
+      "Key": "ComPolice_InvWing",
+      "FR": "Je n'ai pas acc\u00E8s \u00E0 cette partie du b\u00E2timent.",
+      "EN": "I don't have access to this part of the building."
+   },
+   {
+      "Key": "ComPolice_Offices",
+      "FR": "Je pr\u00E9f\u00E8re mon bureau \u00E0 ces cages \u00E0 lapin. Mieux vaut \u00EAtre priv\u00E9 que flic.",
+      "EN": "I prefer my office over these cramped boxes. I'd rather be a private than a cop."
+   },
+   {
+      "Key": "WhiteOffice_Etagere",
+      "FR": "William a toujours \u00E9t\u00E9 un obs\u00E9d\u00E9 du rangement...",
+      "EN": "William has always been obsessed with everything being in order..."
+   },
+   {
+      "Key": "Morgue_Cadavre1",
+      "FR": "J'ai vu assez de cadavres pour une vie.",
+      "EN": "I've seen enough corpses for my whole life."
+   },
+   {
+      "Key": "Morgue_Cadavre2",
+      "FR": "C'est s\u00FBrement Loraine Grey. Pauvre petite.",
+      "EN": "That's probably Loraine Grey. Poor girl."
+   },
+   {
+      "Key": "Morgue_Cadavre3",
+      "FR": "Et dire qu'on finira tous l\u00E0-dedans un jour.",
+      "EN": "Thinking that we'll all end up in there one day gives me the chills."
+   },
+   {
+      "Key": "Street2_Kiosque",
+      "FR": "\"Des espions sovi\u00E9tiques \u00E0 New York\" \"Un casse tourne mal \u00E0 Midtown\" \"La ligne des rats\". On vit une drole d'\u00E9poque.",
+      "EN": "\"Sovietic spies in New York\" \"A hold up goes wrong in Midtown\" \"Ratlines\". What a time to be a live..."
+   },
+   {
+      "Key": "Street2_HotDog",
+      "FR": "Le d\u00E9jeuner New-Yorkais par excellence. Mais je n'ai pas tr\u00E8s envie de hot dog.",
+      "EN": "The typical New York lunch. But I'm not hungry for a hot dog."
+   },
+   {
+      "Key": "Street2_Cartons",
+      "FR": "Cette ville est vraiment d\u00E9gueulasse.",
+      "EN": "This city is really disgusting."
+   },
+   {
+      "Key": "Street2_immeuble",
+      "FR": "Ce genre de taudis est fr\u00E9quent dans le quartier.",
+      "EN": "This kind of shithole is common in the neighborhood."
+   },
+   {
+      "Key": "KurtAppart_Absinthe",
+      "FR": "De l'absinthe.",
+      "EN": "Some absinthe."
+   },
+   {
+      "Key": "KurtAppart_Tele",
+      "FR": "Pauvres fleurs... Ce Kurt vit comme un porc.",
+      "EN": "Poor flowers... That Kurt guy lives like a swine."
+   },
+   {
+      "Key": "KurtAppart_Porte",
+      "FR": "Vu l'odeur, j'imagine que c'est les toilettes...",
+      "EN": "Judging by the smell, this must be the restroom..."
+   },
+   {
+      "Key": "KurtAppart_Mur",
+      "FR": "Mon appartement n'est pas si mal finalement.",
+      "EN": "Guess my apartment is not so bad after all."
+   },
+   {
+      "Key": "PIP_Beer",
+      "FR": "Laisser une pinte \u00E0 moiti\u00E9 vide. C'est criminel.",
+      "EN": "Leaving a pint half full... it's a crime."
+   },
+   {
+      "Key": "PIP_Cerf",
+      "FR": "Un troph\u00E9e de cerf... Pour faire plus authentique je suppose. Dommage qu'il soit factice.",
+      "EN": "A hunting trophy... To seem more authentic I guess. Too bad it's fake."
+   },
+   {
+      "Key": "PIP_Habitue",
+      "FR": "C'est ma premi\u00E8re bi\u00E8re de la journ\u00E9e *hic* enfin... je crois...",
+      "EN": "It's my first beer of the day... *hic* I think..."
+   },
+   {
+      "Key": "R\u00E9ceptionniste_D0_Q1",
       "FR": "Je peux vous aider ?",
       "EN": "May I help you ?"
    },
    {
-      "Key": "R\u00E9ceptionniste_D1_Q2",
+      "Key": "R\u00E9ceptionniste_D0_Q2",
       "FR": "Oui, j\u2019aimerais parler au commissaire White.",
       "EN": "Yes, I\u2019d like to speak to Chief White."
    },
    {
-      "Key": "R\u00E9ceptionniste_D1_Q3",
+      "Key": "R\u00E9ceptionniste_D0_Q3",
       "FR": "Ah vous \u00EAtes Kenneth n\u2019est-ce pas ?",
       "EN": "Ah you must be Kenneth, is that correct ?"
    },
    {
-      "Key": "R\u00E9ceptionniste_D1_Q4",
+      "Key": "R\u00E9ceptionniste_D0_Q4",
       "FR": "Allez-y, c\u2019est la porte de droite au fond du couloir. Mais je crois qu\u2019il discute avec quelqu\u2019un.",
       "EN": "Go on, door on the right at the end of the corridor. But I think he\u2019s speaking to someone right now."
    },
    {
-      "Key": "R\u00E9ceptionniste_D1_Q5",
+      "Key": "R\u00E9ceptionniste_D0_Q5",
       "FR": "Vous devrez peut-\u00EAtre attendre un peu.",
       "EN": "You might have to wait a little."
    },
    {
-      "Key": "R\u00E9ceptionniste_D1_Q6",
+      "Key": "R\u00E9ceptionniste_D0_Q6",
       "FR": "Merci.",
       "EN": "Thank you."
    },
    {
-      "Key": "R\u00E9ceptionniste_D2_Q1",
+      "Key": "R\u00E9ceptionniste_D1_Q1",
       "FR": "Allez-y, c\u2019est la porte de droite au fond du couloir.",
       "EN": "Go on, it\u2019s the door on the right at the end of the corridor."
    },
@@ -1275,48 +1050,38 @@
    },
    {
       "Key": "White_D0_Q2",
-      "FR": "Je vous ai dit que je ne voulais pas que des journalistes foutent les pieds sur mes sc\u00E8nes de crime !",
-      "EN": "I told you I didn\u2019t want any journalists walking on top of my crime scenes !"
+      "FR": "Je vous ai dit que je ne voulais pas que des journalistes foutent les pieds sur mes sc\u00E8nes de crime ! Vous me mettez dans la merde !",
+      "EN": "I told you I didn\u2019t want any journalists walking on top of my crime scenes ! I\u2019m drowning in shit because of you !"
    },
    {
       "Key": "White_D0_Q3",
-      "FR": "Vous me mettez dans la merde !",
-      "EN": "I\u2019m drowning in shit because of you !"
-   },
-   {
-      "Key": "White_D0_Q4",
       "FR": "D\u00E9sol\u00E9 chef, mais quand on a un scoop comme \u00E7a et que des journalistes sont pr\u00EAts \u00E0 allonger le pognon,",
       "EN": "Sorry Chief, but when we have a story like that and journalists are ready to throw in some cash,"
    },
    {
-      "Key": "White_D0_Q5",
+      "Key": "White_D0_Q4",
       "FR": "ce serait criminel de s'asseoir dessus.",
       "EN": "it\u2019d be a crime to say no."
    },
    {
-      "Key": "White_D0_Q6",
+      "Key": "White_D0_Q5",
       "FR": "Gr\u00E2ce au papier de votre copain, mon t\u00E9l\u00E9phone sonne du soir au matin et tous les journaux veulent une part du g\u00E2teau !",
       "EN": "Thanks to your friend\u2019s little paper, my telephone won\u2019t stop ringing all day and every journalist in town wants a piece of the cake !"
    },
    {
-      "Key": "White_D0_Q7",
+      "Key": "White_D0_Q6",
       "FR": "On n\u2019est pas des putains de paparazzi !",
       "EN": "Do I look like a fucking paparazzi ?"
    },
    {
-      "Key": "White_D0_Q8",
+      "Key": "White_D0_Q7",
       "FR": "Mais chef\u2026",
       "EN": "But Chief\u2026"
    },
    {
-      "Key": "White_D0_Q9",
-      "FR": "Fermez-la Nelson ! Ou je vous colle aux archives pour les six prochains mois !",
-      "EN": "Shut up, Nelson ! Or I\u2019m assigning you to the archives department for the next six months !"
-   },
-   {
-      "Key": "White_D0_Q10",
-      "FR": "Oh et puis tirez-vous !",
-      "EN": "Out of my sight !"
+      "Key": "White_D0_Q8",
+      "FR": "Fermez-la Nelson ! Ou je vous colle aux archives pour les six prochains mois !\nOh et puis tirez-vous !",
+      "EN": "Shut up, Nelson ! Or I\u2019m assigning you to the archives department for the next six months !\nOut of my sight !"
    },
    {
       "Key": "White_D1_Q1",
@@ -1365,7 +1130,7 @@
    },
    {
       "Key": "White_D1_Q10",
-      "FR": "J\u2019y crois pas. M\u00EAme toi tu viens me casser les oreilles avec cette histoire.",
+      "FR": "J\u2019y crois pas. M\u00EAme toi tu viens m'emmerder avec cette histoire.",
       "EN": "I can\u2019t believe it. You came to bother me about that too ?"
    },
    {
@@ -1389,7 +1154,7 @@
       "EN": "They spend their whole life on a pedestal and the day they have to come down, they fall on their face."
    },
    {
-      "Key": "White_D1_Q14",
+      "Key": "White_D1_Q15",
       "FR": "Ne me dis pas que tu travailles pour elle.",
       "EN": "Don\u2019t tell me you\u2019re working for her, now."
    },
@@ -1467,11 +1232,6 @@
       "Key": "White_D2_Q1",
       "FR": "Je peux faire autre chose pour toi ?",
       "EN": "Anything else I can do for you ?"
-   },
-   {
-      "Key": "White_D25_Q1",
-      "FR": "Tu devrais abandonner cette affaire, \u00E7a ne te m\u00E8nera \u00E0 rien.",
-      "EN": "You should give up on this case, nothing will come of it."
    },
    {
       "Key": "White_D3_Q1",
@@ -1860,7 +1620,7 @@
    },
    {
       "Key": "White_D17_Q4",
-      "FR": "Comme \u00E7a\u2026",
+      "FR": "Comme \u00E7a...",
       "EN": "No, I was just asking."
    },
    {
@@ -2075,8 +1835,8 @@
    },
    {
       "Key": "White_D23_Q4",
-      "FR": "Je sais pas trop... Je me suis dit que ce serait possible\u2026",
-      "EN": "I don\u2019t know... I just thought it\u2019d be a possibility\u2026"
+      "FR": "Je sais pas trop... Je me suis dit que ce serait possible...",
+      "EN": "I don\u2019t know... I just thought it\u2019d be a possibility..."
    },
    {
       "Key": "White_D23_Q5",
@@ -2109,47 +1869,47 @@
       "EN": "Oh, give it a rest ! You know what, I\u2019m gonna keep investigating just to prove you wrong."
    },
    {
-      "Key": "DoorKurt_D0_Q1",
+      "Key": "Kurt_D0_Q1",
       "FR": "Allez-vous-en ! Je ne re\u00E7ois plus la police, ni les journalistes !",
       "EN": "Go away ! I no longer accept the police in my house, no journalists either !"
    },
    {
-      "Key": "DoorKurt_D0_Q2",
+      "Key": "Kurt_D0_Q2",
       "FR": "Je ne suis pas de la police, et encore moins journaliste.",
       "EN": "I\u2019m not with the police, and much less with these paparazzi vultures."
    },
    {
-      "Key": "DoorKurt_D0_Q3",
+      "Key": "Kurt_D0_Q3",
       "FR": "Vous voulez quoi alors ?",
       "EN": "Then what do you want ?"
    },
    {
-      "Key": "DoorKurt_D0_Q4",
+      "Key": "Kurt_D0_Q4",
       "FR": "Je suis d\u00E9tective priv\u00E9, je veux juste vous poser quelques questions.",
       "EN": "I\u2019m a private detective, I just want to ask you a few questions."
    },
    {
-      "Key": "DoorKurt_D0_Q5",
+      "Key": "Kurt_D0_Q5",
       "FR": "Vous croyez que \u00E7a change quelque chose ?",
       "EN": "You think that\u2019s any different to me ?"
    },
    {
-      "Key": "DoorKurt_D0_Q6",
+      "Key": "Kurt_D0_Q6",
       "FR": "Ils sont tous venus me poser des questions, j\u2019en ai assez, foutez le camp !",
       "EN": "They all came to ask me questions, I\u2019m sick of it, so get lost !"
    },
    {
-      "Key": "DoorKurt_D0_Q7",
+      "Key": "Kurt_D0_Q7",
       "FR": "Mr Becker, \u00E9coutez,\n",
       "EN": "Mr Becker, listen,"
    },
    {
-      "Key": "DoorKurt_D0_Q8",
+      "Key": "Kurt_D0_Q8",
       "FR": "je pense que votre femme ne s\u2019est pas suicid\u00E9e mais a \u00E9t\u00E9 assassin\u00E9e.",
       "EN": "I think your wife didn\u2019t kill herself, but was murdered."
    },
    {
-      "Key": "DoorKurt_D0_Q9",
+      "Key": "Kurt_D0_Q9",
       "FR": "Votre aide pourrait m\u2019aider \u00E0 d\u00E9couvrir la v\u00E9rit\u00E9.",
       "EN": "Your cooperation could help me find out the truth."
    },
@@ -3540,56 +3300,41 @@
    },
    {
       "Key": "Lou_D5_Q6",
-      "FR": "Je suis la premi\u00E8re femme m\u00E9decin de New York, je ne m\u2019attendais pas \u00E0 une sin\u00E9cure quand j\u2019ai rejoint le service.",
-      "EN": "I\u2019m the first female doctor in New York, I wasn\u2019t expecting an easy time when I joined this service."
+      "FR": "Je suis la premi\u00E8re femme m\u00E9decin de New York, je ne m\u2019attendais pas \u00E0 une sin\u00E9cure quand j\u2019ai rejoint le service.\nMais je ne supporte plus de voir mon travail d\u00E9pr\u00E9ci\u00E9 par ces abrutis.",
+      "EN": "I\u2019m the first female doctor in New York, I wasn\u2019t expecting an easy time when I joined this service.\nBut I can\u2019t stand to see my work being devalued by these imbeciles."
    },
    {
       "Key": "Lou_D5_Q7",
-      "FR": "Mais je ne supporte plus de voir mon travail d\u00E9pr\u00E9ci\u00E9 par ces abrutis.",
-      "EN": "But I can\u2019t stand to see my work being devalued by these imbeciles."
-   },
-   {
-      "Key": "Lou_D5_Q8",
       "FR": "Je sais ce que c\u2019est de se d\u00E9mener pour moins que rien de remerciement.\nOn se dit \u00AB \u00E0 quoi bon faire tout \u00E7a ? Tout le monde s\u2019en fout. \u00BB. Et le pire, c\u2019est que c\u2019est vrai.",
       "EN": "I know what it\u2019s like to work hard for almost no credit or thanks.\nYou wonder \u00AB why am I doing this ? Nobody cares. \u00BB. And the worst part is that it\u2019s true."
    },
    {
+      "Key": "Lou_D5_Q8",
+      "FR": "Tout le monde s\u2019en fout.\nMais si on ne fait pas ce qu\u2019on a \u00E0 faire au moment o\u00F9 on doit le faire, personne ne le fera \u00E0 notre place.\nVous ne serez s\u00FBrement jamais reconnue pour votre travail.",
+      "EN": "Nobody cares.\nBut if we don\u2019t do what we must do, and when we must do it, then nobody will do it for us.\nYou will probably never be recognised for your work."
+   },
+   {
       "Key": "Lou_D5_Q9",
-      "FR": "Tout le monde s\u2019en fout.",
-      "EN": "Nobody cares."
-   },
-   {
-      "Key": "Lou_D5_Q10",
-      "FR": "Mais si on ne fait pas ce qu\u2019on a \u00E0 faire au moment o\u00F9 on doit le faire, personne ne le fera \u00E0 notre place.",
-      "EN": "But if we don\u2019t do what we must do, and when we must do it, then nobody will do it for us."
-   },
-   {
-      "Key": "Lou_D5_Q11",
-      "FR": "Vous ne serez s\u00FBrement jamais reconnue pour votre travail.",
-      "EN": "You will probably never be recognised for your work."
-   },
-   {
-      "Key": "Lou_D5_Q12",
-      "FR": "Des hommes moins comp\u00E9tents s\u2019attribueront les m\u00E9rites de vos efforts.\nMais \u00E7a ne doit pas avoir d\u2019importance.",
+      "FR": "Des hommes moins comp\u00E9tent s\u2019attribueront les m\u00E9rites de vos efforts.\nMais \u00E7a ne doit pas avoir d\u2019importance.",
       "EN": "Men who are less competent will take the credit for your efforts.\nBut it mustn\u2019t matter to you."
    },
    {
-      "Key": "Lou_D5_Q13",
+      "Key": "Lou_D5_Q10",
       "FR": "Je ne m\u2019attendais pas \u00E0 de la philosophie de la part d\u2019un priv\u00E9.",
       "EN": "I wasn\u2019t expecting a motivational speech from a private."
    },
    {
-      "Key": "Lou_D5_Q14",
+      "Key": "Lou_D5_Q11",
       "FR": "La guerre, \u00E7a rend philosophe.",
       "EN": "War makes you a bit of a philosopher."
    },
    {
-      "Key": "Lou_D5_Q15",
+      "Key": "Lou_D5_Q12",
       "FR": "Tiens donc ?",
       "EN": "Is that so ?"
    },
    {
-      "Key": "Lou_D5_Q16",
+      "Key": "Lou_D5_Q13",
       "FR": "Laissez, je divague.",
       "EN": "Forget it, I\u2019m just talking nonsense."
    },
@@ -4436,6 +4181,698 @@
       "EN": "Very well."
    },
    {
+      "Key": "InBook_Char",
+      "FR": "Profiles",
+      "EN": "Profiles"
+   },
+   {
+      "Key": "InBook_Clues",
+      "FR": "Indices",
+      "EN": "Clues"
+   },
+   {
+      "Key": "InBook_Facts",
+      "FR": "Faits",
+      "EN": "Facts"
+   },
+   {
+      "Key": "InBook_Hyp",
+      "FR": "Hypoth\u00E8ses",
+      "EN": "Hypothesis"
+   },
+   {
+      "Key": "InBook_Inv",
+      "FR": "Enqu\u00EAte",
+      "EN": "Investigation"
+   },
+   {
+      "Key": "InBook_Goals",
+      "FR": "Objectifs",
+      "EN": "Goals"
+   },
+   {
+      "Key": "InBook_Controls",
+      "FR": "Contr\u00F4les",
+      "EN": "Controls"
+   },
+   {
+      "Key": "InBook_Controls_Controls",
+      "FR": "Contr\u00F4les",
+      "EN": "Controls"
+   },
+   {
+      "Key": "InBook_Controls_OuvCarnet",
+      "FR": "Ouvrir le Carnet",
+      "EN": "Open the Book"
+   },
+   {
+      "Key": "InBook_Controls_Select",
+      "FR": "Selectionner",
+      "EN": "Select"
+   },
+   {
+      "Key": "InBook_Controls_Interact",
+      "FR": "Int\u00E9raction",
+      "EN": "Interact"
+   },
+   {
+      "Key": "InBook_Controls_MPQD",
+      "FR": "Menu Pause\nQuitter Dialogue",
+      "EN": "Pause Menu\nQuit Dialogue"
+   },
+   {
+      "Key": "InBook_Controls_ML",
+      "FR": "D\u00E9placement Gauche",
+      "EN": "Move to Left"
+   },
+   {
+      "Key": "InBook_Controls_MR",
+      "FR": "D\u00E9placement Droite",
+      "EN": "Move to Right"
+   },
+   {
+      "Key": "InBook_Controls_Run",
+      "FR": "Courir (Maintenir)",
+      "EN": "Run (Hold)"
+   },
+   {
+      "Key": "Tuto_Dialogs_Title",
+      "FR": "Les dialogues",
+      "EN": "The dialogs"
+   },
+   {
+      "Key": "Tuto_Dialogs_Text",
+      "FR": "Afin d'en apprendre plus sur l'histoire, vous devrez discuter avec les personnages. Pour passer \u00E0 la boite de dialogue suivante appuyez sur E ou clic gauche sur la boite de dialogue.",
+      "EN": "In order to learn more about the story, you will need to speak with the different characters. To get to the following line of the dialogue, press E or left-click on the dialogue box."
+   },
+   {
+      "Key": "Tuto_NewSticker_Title",
+      "FR": "Les notes",
+      "EN": "The notes"
+   },
+   {
+      "Key": "Tuto_NewSticker_Text",
+      "FR": "Au fil de l'histoire vous trouverez diff\u00E9rentes notes qui sont des r\u00E9pr\u00E9sentations \u00E9crites des informations que vous trouvez pour l'enqu\u00EAte. Quand vous en obtenez une le jeu vous le dit, et vous pouvez retrouver toutes vos notes dans votre carnet ou sur votre tableau.",
+      "EN": "Along the story you will find different notes which are written representations of the information you will gather regarding the case. When you get one, you will be notified and you can find all the notes in your notebook or on the board in your office."
+   },
+   {
+      "Key": "Tuto_Questions_Title",
+      "FR": "Poser une question",
+      "EN": "Ask a question"
+   },
+   {
+      "Key": "Tuto_Questions_Text",
+      "FR": "Pour poser une question, il vous suffit d'\u00EAtre en dialogue avec un personnage, ou d'\u00EAtre pr\u00E8s de lui, puis d'ouvrir le carnet en utilisant le clic gauche dessus, et de cliquer sur la note sur laquelle vous souhaitez l'interroger.",
+      "EN": "To ask a question, you simply need to be in a dialogue with someone, or stand close to them, click on the notebook to open it, then click the note you want to question them about."
+   },
+   {
+      "Key": "Tuto_QuitDialog_Title",
+      "FR": "Les dialogues",
+      "EN": "The dialogs"
+   },
+   {
+      "Key": "Tuto_QuitDialog_Text",
+      "FR": "Pour quitter un dialogue (s'il le permet), ou tout autre fen\u00EAtre, appuyez sur ECHAP.",
+      "EN": "To quit a dialogue sequence (if possible), or any other window, press the ESC key."
+   },
+   {
+      "Key": "Tuto_Move_Title",
+      "FR": "Se d\u00E9placer",
+      "EN": "Move"
+   },
+   {
+      "Key": "Tuto_Move_Text",
+      "FR": "Pour vous d\u00E9placer dans le jeu, utiliser les touches Q et D.",
+      "EN": "To move around, use the A and D keys."
+   },
+   {
+      "Key": "Tuto_Interaction_Title",
+      "FR": "Int\u00E9ragir",
+      "EN": "Interact"
+   },
+   {
+      "Key": "Tuto_Interaction_Text",
+      "FR": "Vous pouvez int\u00E9ragir avec un objet, un personnage, une porte... Avec la touche E \u00E0 chaque fois que le jeu vous l'indiquera.",
+      "EN": "You can interact with an object, a character, a door, etc. with the E key any time the game indicates it."
+   },
+   {
+      "Key": "Tuto_OpenBook_Title",
+      "FR": "Le carnet",
+      "EN": "The notebook"
+   },
+   {
+      "Key": "Tuto_OpenBook_Text",
+      "FR": "Vous pouvez ouvrir votre carnet \u00E0 tout moment en utilisant le clic gauche dessus, ou en utilisant les touches I ou TAB.",
+      "EN": "You can open your notebook at any moment by clicking it, or with the I or TAB keys."
+   },
+   {
+      "Key": "Tuto_NavigateBook_Title",
+      "FR": "Le carnet",
+      "EN": "The notebook"
+   },
+   {
+      "Key": "Tuto_NavigateBook_Text",
+      "FR": "\u00C0 l'int\u00E9rieur du carnet, vous pouvez utiliser le clic gauche pour naviguer entre les diff\u00E9rents onglets du carnet, et quitter avec ECHAP, I, ou TAB.",
+      "EN": "While in the notebook, you can navigate its tabs by clicking on them, and quit by pressing ESC, I, or TAB."
+   },
+   {
+      "Key": "Tuto_Menu_Title",
+      "FR": "Le menu",
+      "EN": "The menu"
+   },
+   {
+      "Key": "Tuto_Menu_Text",
+      "FR": "\u00C0 tout moment vous pouvez utiliser ECHAP pour acc\u00E9der au menu du jeu.",
+      "EN": "You can access the game's main menu at any time by pressing ESC."
+   },
+   {
+      "Key": "Tuto_Sprint_Title",
+      "FR": "Se d\u00E9placer",
+      "EN": "Move"
+   },
+   {
+      "Key": "Tuto_Sprint_Text",
+      "FR": "Quand le lieu vous le permet, vous pouvez maintenir SHIFT en vous d\u00E9placant pour courir.",
+      "EN": "When the game allows it, you can hold SHIFT while moving to run."
+   },
+   {
+      "Key": "Tuto_Board_Title",
+      "FR": "Le tableau",
+      "EN": "The board"
+   },
+   {
+      "Key": "Tuto_Board_Text",
+      "FR": "Il vous sert \u00E0 faire des liens entre vos notes. D\u00E9placement des notes avec la souris et le clic gauche. Clic gauche sur une note pour le lier. \"V\u00C9RIFIER\" pour v\u00E9rifier le lien. \"EFFACER\" pour effacer les liens. La croix pour fermer l'interface \u00E0 tout moment.",
+      "EN": "It allows you to link your different notes. Move notes by clicking and dragging them across the board. Click on the notes to link them. \"VERIFY\" verifies the link. \"ERASE\" unlinks the notes. The \"X\" closes the board."
+   },
+   {
+      "Key": "Tuto_Skip",
+      "FR": "Passer le tutoriel",
+      "EN": "Skip the tutorial"
+   },
+   {
+      "Key": "ST_01_Pho_Text",
+      "FR": "Loraine Grey",
+      "EN": "Loraine Grey"
+   },
+   {
+      "Key": "ST_01_Pho_Tooltip",
+      "FR": "La soeur de ma cliente, elle a \u00E9t\u00E9 retrouv\u00E9e pendue chez son copain",
+      "EN": "My client's sister, found hung at her boyfriend's apartment"
+   },
+   {
+      "Key": "ST_02_Pho_Text",
+      "FR": "Clara Grey",
+      "EN": "Clara Grey"
+   },
+   {
+      "Key": "ST_02_Pho_Tooltip",
+      "FR": "La soeur de la victime, elle est venue me solliciter au bureau",
+      "EN": "The victim's sister, she came to hire me at the office"
+   },
+   {
+      "Key": "ST_03_Pho_Text",
+      "FR": "Viktor Becker",
+      "EN": "Viktor Becker"
+   },
+   {
+      "Key": "ST_03_Pho_Tooltip",
+      "FR": "Le fr\u00E8re de Kurt",
+      "EN": "Kurt's brother"
+   },
+   {
+      "Key": "ST_04_Pho_Text",
+      "FR": "Kurt Becker",
+      "EN": "Kurt Becker"
+   },
+   {
+      "Key": "ST_04_Pho_Tooltip",
+      "FR": "Le copain de Loraine, un peu louche et faiblard",
+      "EN": "Loraine's boyfriend, a little weird and pretty frail"
+   },
+   {
+      "Key": "ST_05_Pho_Text",
+      "FR": "William White",
+      "EN": "William White"
+   },
+   {
+      "Key": "ST_05_Pho_Tooltip",
+      "FR": "Le commissaire de police, mon ami depuis le temps du r\u00E9giment",
+      "EN": "Chief of the police precinct, friend of mine since the army"
+   },
+   {
+      "Key": "ST_06_Pho_Text",
+      "FR": "Scott Nelson",
+      "EN": "Scott Nelson"
+   },
+   {
+      "Key": "ST_06_Pho_Tooltip",
+      "FR": "Un officier de William, dans des affaires louches mais il a des contacts",
+      "EN": "One of William's officers, into shady business but has a lot of contacts"
+   },
+   {
+      "Key": "ST_07_Pho_Text",
+      "FR": "L'Allemand",
+      "EN": "The German"
+   },
+   {
+      "Key": "ST_07_Pho_Tooltip",
+      "FR": "Le chef de la p\u00E8gre de Manhattan, inconnu de qui que ce soit",
+      "EN": "The boss of the Manhattan mafia, nobody knows who he is"
+   },
+   {
+      "Key": "ST_08_Pho_Text",
+      "FR": "Lou Ellis",
+      "EN": "Lou Ellis"
+   },
+   {
+      "Key": "ST_08_Pho_Tooltip",
+      "FR": "La l\u00E9giste qui a autopsi\u00E9 Loraine, une brillante femme.",
+      "EN": "The forensic doctor who examined Loraine, a brilliant woman."
+   },
+   {
+      "Key": "ST_09_Pho_Text",
+      "FR": "Marvin Meyer",
+      "EN": "Marvin Meyer"
+   },
+   {
+      "Key": "ST_09_Pho_Tooltip",
+      "FR": "Le journaliste qui a couvert l'affaire, connait bien le monde du crime",
+      "EN": "The journalist who covered the story, in touch with the underground society"
+   },
+   {
+      "Key": "ST_10_Ind_Text",
+      "FR": "SDECE",
+      "EN": "SDECE"
+   },
+   {
+      "Key": "ST_10_Ind_Tooltip",
+      "FR": "La lettre cod\u00E9e m'a r\u00E9v\u00E9l\u00E9 que Loraine \u00E9tait en contact avec la SDECE",
+      "EN": "The coded letter showed me that Loraine was in touch with the SDECE"
+   },
+   {
+      "Key": "ST_11_Ind_Text",
+      "FR": "Valise pr\u00EAte",
+      "EN": "Packed luggage"
+   },
+   {
+      "Key": "ST_11_Ind_Tooltip",
+      "FR": "Trouv\u00E9e dans le chambre de Kurt et Loraine",
+      "EN": "Found in Kurt and Loraine's bedroom"
+   },
+   {
+      "Key": "ST_12_Ind_Text",
+      "FR": "Lettre brul\u00E9e",
+      "EN": "Burnt letter"
+   },
+   {
+      "Key": "ST_12_Ind_Tooltip",
+      "FR": "Trouv\u00E9e dans la chemin\u00E9e de Kurt",
+      "EN": "Found in Kurt's fireplace"
+   },
+   {
+      "Key": "ST_13_Ind_Text",
+      "FR": "Drogue",
+      "EN": "Drugs"
+   },
+   {
+      "Key": "ST_13_Ind_Tooltip",
+      "FR": "Trouv\u00E9e sous le lit de Kurt et Loraine",
+      "EN": "Found under Kurt and Loraine's bed"
+   },
+   {
+      "Key": "ST_14_Ind_Text",
+      "FR": "Magazine \"Sassy New York\"",
+      "EN": "Sassy New York magazine"
+   },
+   {
+      "Key": "ST_14_Ind_Tooltip",
+      "FR": "Magazine raccoleur qui parle du suicide de Loraine",
+      "EN": "A gossip magazine with an article about Loraine's suicide"
+   },
+   {
+      "Key": "ST_15_Ind_Text",
+      "FR": "Lettre cod\u00E9e",
+      "EN": "Coded letter"
+   },
+   {
+      "Key": "ST_15_Ind_Tooltip",
+      "FR": "Trouv\u00E9e sur le bureau de Loraine, je n'arrive pas \u00E0 la d\u00E9chiffrer",
+      "EN": "Found on Loraine's desk, I can't seem to decypher it"
+   },
+   {
+      "Key": "ST_16_Ind_Text",
+      "FR": "Marque de cordes",
+      "EN": "Rope marks"
+   },
+   {
+      "Key": "ST_16_Ind_Tooltip",
+      "FR": "Des marques de cordes sont sur le corps de Loraine",
+      "EN": "Loraine's corpse has rope marks on it"
+   },
+   {
+      "Key": "ST_44_Ind_Text",
+      "FR": "Absence de trace de violence",
+      "EN": "Lack of signs of struggle"
+   },
+   {
+      "Key": "ST_44_Ind_Tooltip",
+      "FR": "D'apr\u00E8s Lou Ellis, le corps ne montre pas de signes de violence",
+      "EN": "According to Lou Ellis, the body doesn't show any signs of struggle"
+   },
+   {
+      "Key": "ST_47_Ind_Text",
+      "FR": "Drogue dans le sang",
+      "EN": "Drugs in Loraine's blood"
+   },
+   {
+      "Key": "ST_47_Ind_Tooltip",
+      "FR": "Lou Ellis a trouv\u00E9 de la drogue dans le sang de Loraine",
+      "EN": "Lou Ellis found drugs in Loraine's blood"
+   },
+   {
+      "Key": "ST_43_Fait_Text",
+      "FR": "Kurt a parl\u00E9 a son fr\u00E8re des lettres cod\u00E9es de Loraine",
+      "EN": "Kurt told his brother about Loraine's coded letters"
+   },
+   {
+      "Key": "ST_43_Fait_Tooltip",
+      "FR": "Loraine est devenue folle et Viktor l'a trait\u00E9 d'idiot",
+      "EN": "Loraine lost her mind and Viktor called him an idiot"
+   },
+   {
+      "Key": "ST_45_Fait_Text",
+      "FR": "La SDECE traque l'Allemand",
+      "EN": "The SDECE is tracking the German"
+   },
+   {
+      "Key": "ST_45_Fait_Tooltip",
+      "FR": "Pourquoi la France s'int\u00E9resse \u00E0 un criminel de New York ?",
+      "EN": "Why is France up in a Manhattan criminal's business ?"
+   },
+   {
+      "Key": "ST_46_Fait_Text",
+      "FR": "Viktor Becker est le fr\u00E8re de Kurt",
+      "EN": "Viktor Becker is Kurt's brother"
+   },
+   {
+      "Key": "ST_46_Fait_Tooltip",
+      "FR": "ses vraies",
+      "EN": "Word"
+   },
+   {
+      "Key": "ST_48_Fait_Text",
+      "FR": "Kurt \u00E9tait drogu\u00E9",
+      "EN": "Kurt was on drugs"
+   },
+   {
+      "Key": "ST_48_Fait_Tooltip",
+      "FR": "Kurt \u00E9tait drogu\u00E9 quand il a parl\u00E9 avec Marvin Meyer",
+      "EN": "Kurt was on drugs when he spoke to Marvin Meyer"
+   },
+   {
+      "Key": "ST_49_Fait_Text",
+      "FR": "Quelqu'un prot\u00E8ge Kurt",
+      "EN": "Someone protects Kurt"
+   },
+   {
+      "Key": "ST_49_Fait_Tooltip",
+      "FR": "Kurt est prot\u00E9g\u00E9 par quelqu'un",
+      "EN": "Kurt is being protected by someone"
+   },
+   {
+      "Key": "ST_50_Fait_Text",
+      "FR": "Loraine correspond avec quelqu'un.",
+      "EN": "Loraine was corresponding with someone"
+   },
+   {
+      "Key": "ST_50_Fait_Tooltip",
+      "FR": "Loraine envoyait ses lettres \u00E0 quelqu'un",
+      "EN": "Loraine sent her letters to someone unknown"
+   },
+   {
+      "Key": "ST_51_Fait_Text",
+      "FR": "Deux hommes ont menac\u00E9 Marvin",
+      "EN": "Two men threatened Marvin"
+   },
+   {
+      "Key": "ST_51_Fait_Tooltip",
+      "FR": "Marvin a \u00E9t\u00E9 menac\u00E9 pour qu'il ne parle pas de Kurt dans son article",
+      "EN": "Marvin was threatened so that he wouldn't mention Kurt in his article"
+   },
+   {
+      "Key": "ST_52_Fait_Text",
+      "FR": "Kurt \u00E9tait fou amoureux",
+      "EN": "Kurt was crazy in love"
+   },
+   {
+      "Key": "ST_52_Fait_Tooltip",
+      "FR": "Kurt \u00E9tait fou amoureux de Loraine",
+      "EN": "Kurt was desperately in love with Loraine"
+   },
+   {
+      "Key": "ST_17_Hyp_Text",
+      "FR": "Loraine menait une double vie",
+      "EN": "Loraine had a secret life"
+   },
+   {
+      "Key": "ST_17_Hyp_Tooltip",
+      "FR": "Loraine Grey - Lettre br\u00FBl\u00E9e - Lettre cod\u00E9e - Loraine correspond avec quelqu'un",
+      "EN": "Loraine Grey - Burnt letter - Coded letter - Loraine was corresponding with someone"
+   },
+   {
+      "Key": "ST_18_Hyp_Text",
+      "FR": "Kurt a l'intention de partir",
+      "EN": "Kurt plans to leave"
+   },
+   {
+      "Key": "ST_18_Hyp_Tooltip",
+      "FR": "Kurt Becker - Valise pr\u00EAte",
+      "EN": "Kurt Becker - Packed luggage"
+   },
+   {
+      "Key": "ST_19_Hyp_Text",
+      "FR": "Loraine correspond avec l'Allemand",
+      "EN": "Loraine was corresponding with the German"
+   },
+   {
+      "Key": "ST_19_Hyp_Tooltip",
+      "FR": "L'Allemand - Loraine Grey - Lettre br\u00FBl\u00E9e - Loraine correspond avec quelqu'un",
+      "EN": "The German - Loraine Grey - Burnt letter - Loraine was corresponding with someone"
+   },
+   {
+      "Key": "ST_20_Hyp_Text",
+      "FR": "La lettre brul\u00E9e appartient \u00E0 Kurt",
+      "EN": "The burnt letter is Kurt's"
+   },
+   {
+      "Key": "ST_20_Hyp_Tooltip",
+      "FR": "Kurt Becker - Lettre br\u00FBl\u00E9e",
+      "EN": "Kurt Becker - Burnt letter"
+   },
+   {
+      "Key": "ST_21_Hyp_Text",
+      "FR": "Loraine est une junkie",
+      "EN": "Loraine was a junkie"
+   },
+   {
+      "Key": "ST_21_Hyp_Tooltip",
+      "FR": "Loraine Grey - Drogue",
+      "EN": "Loraine Grey - Drugs"
+   },
+   {
+      "Key": "ST_22_Hyp_Text",
+      "FR": "Kurt a envoy\u00E9 deux hommes menacer Marvin",
+      "EN": "Kurt sent two men to threaten Marvin"
+   },
+   {
+      "Key": "ST_22_Hyp_Tooltip",
+      "FR": "Kurt Becker - Marvin Meyer - Magazine \"Sassy New York\" - Deux hommes ont menac\u00E9 Marvin",
+      "EN": "Kurt Becker - Marvin Meyer - Sassy New York magazine - Two men threatened Marvin"
+   },
+   {
+      "Key": "ST_23_Hyp_Text",
+      "FR": "Loraine travaillait pour la SDECE",
+      "EN": "Loraine worked for the SDECE"
+   },
+   {
+      "Key": "ST_23_Hyp_Tooltip",
+      "FR": "Loraine Grey - SDECE - Loraine menait une double vie",
+      "EN": "Loraine Grey - SDECE - Loraine had a secret life"
+   },
+   {
+      "Key": "ST_24_Hyp_Text",
+      "FR": "Loraine traquait l'Allemand",
+      "EN": "Loraine was tracking the German"
+   },
+   {
+      "Key": "ST_24_Hyp_Tooltip",
+      "FR": "Loraine Grey - Loraine travaillait pour la SDECE - La SDECE traque l'Allemand",
+      "EN": "Loraine Grey - Loraine worked for the SDECE - The SDECE is tracking the German"
+   },
+   {
+      "Key": "ST_25_Hyp_Text",
+      "FR": "Viktor Becker est l'Allemand",
+      "EN": "Viktor Becker is the German"
+   },
+   {
+      "Key": "ST_25_Hyp_Tooltip",
+      "FR": "Viktor Becker - L'Allemand - L'Allemand prot\u00E8ge Kurt - Viktor Becker est le fr\u00E8re de Kurt",
+      "EN": "Viktor Becker - The German - The German is protecting Kurt - Viktor Becker is Kurt's brother"
+   },
+   {
+      "Key": "ST_26_Hyp_Text",
+      "FR": "Kurt a drogu\u00E9 Loraine pour l'emp\u00EAcher de partir",
+      "EN": "Kurt drugged Loraine to stop her from leaving"
+   },
+   {
+      "Key": "ST_26_Hyp_Tooltip",
+      "FR": "Loraine Grey - Kurt Becker - Loraine a ing\u00E9r\u00E9 de la drogue - Kurt ne voulait pas que Loraine parte",
+      "EN": "Loraine Grey - Kurt Becker - Loraine ingested drugs - Kurt didn't want Loraine to leave"
+   },
+   {
+      "Key": "ST_27_Hyp_Text",
+      "FR": "Loraine sortait avec Kurt pour se rapprocher de Viktor",
+      "EN": "Loraine dated Kurt to get closer to Viktor"
+   },
+   {
+      "Key": "ST_27_Hyp_Tooltip",
+      "FR": "Kurt Becker - Loraine Grey - Loraine traquait l'Allemand - Viktor Becker est le fr\u00E8re de Kurt",
+      "EN": "Kurt Becker - Loraine Grey - Loraine was tracking the German - Viktor Becker is Kurt's brother"
+   },
+   {
+      "Key": "ST_28_Hyp_Text",
+      "FR": "L'Allemand a d\u00E9couvert que Loraine \u00E9tait de la SDECE",
+      "EN": "The German found out Loraine worked for the SDECE"
+   },
+   {
+      "Key": "ST_28_Hyp_Tooltip",
+      "FR": "Viktor Becker - Viktor Becker est l'Allemand - Kurt a parl\u00E9 \u00E0 son fr\u00E8re des lettres cod\u00E9es de Loraine",
+      "EN": "Viktor Becker - Viktor Becker is the German - Kurt told his brother about Loraine's coded letters"
+   },
+   {
+      "Key": "ST_29_Hyp_Text",
+      "FR": "L'assassin a pendu Loraine alors qu'elle \u00E9tait drogu\u00E9e",
+      "EN": "The murderer hanged Loraine while she was drugged"
+   },
+   {
+      "Key": "ST_29_Hyp_Tooltip",
+      "FR": "Loraine Grey - Marque de cordes - Absence de traces de violence - Drogue dans le sang",
+      "EN": "Loraine Grey - Rope marks - Lack of signs of struggle - Drugs in Loraine's blood"
+   },
+   {
+      "Key": "ST_30_Hyp_Text",
+      "FR": "Viktor a tu\u00E9 Loraine",
+      "EN": "Viktor killed Loraine"
+   },
+   {
+      "Key": "ST_30_Hyp_Tooltip",
+      "FR": "Viktor Becker - L'Allemand a pendu Loraine alors qu'elle \u00E9tait drogu\u00E9e",
+      "EN": "Viktor Becker - The German hanged Loraine while she was drugged"
+   },
+   {
+      "Key": "ST_31_Hyp_Text",
+      "FR": "Kurt a tu\u00E9 Loraine",
+      "EN": "Kurt killed Loraine"
+   },
+   {
+      "Key": "ST_31_Hyp_Tooltip"
+   },
+   {
+      "Key": "ST_32_Hyp_Text",
+      "FR": "Kurt est l'Allemand",
+      "EN": "Kurt is the German"
+   },
+   {
+      "Key": "ST_32_Hyp_Tooltip"
+   },
+   {
+      "Key": "ST_33_Hyp_Text",
+      "FR": "Loraine s'est suicid\u00E9e",
+      "EN": "Loraine committed suicide"
+   },
+   {
+      "Key": "ST_33_Hyp_Tooltip"
+   },
+   {
+      "Key": "ST_34_Hyp_Text",
+      "FR": "La SDECE a supprim\u00E9 Loraine",
+      "EN": "The SDECE erased Loraine"
+   },
+   {
+      "Key": "ST_34_Hyp_Tooltip"
+   },
+   {
+      "Key": "ST_35_Hyp_Text",
+      "FR": "Kurt est un junkie",
+      "EN": "Kurt is a junkie"
+   },
+   {
+      "Key": "ST_35_Hyp_Tooltip",
+      "FR": "Kurt Becker - Drogue - Kurt \u00E9tait drogu\u00E9",
+      "EN": "Kurt Becker - Drugs - Kurt was on drugs"
+   },
+   {
+      "Key": "ST_36_Hyp_Text",
+      "FR": "L'Allemand prot\u00E8ge Kurt",
+      "EN": "The German is protecting Kurt"
+   },
+   {
+      "Key": "ST_36_Hyp_Tooltip",
+      "FR": "L'Allemand - L'Allemand ne veut pas que Kurt apparaisse dans la presse - Quelqu'un prot\u00E8ge Kurt",
+      "EN": "The German - The German doesn't want Kurt to appear in the press - Someone protects Kurt"
+   },
+   {
+      "Key": "ST_37_Hyp_Text",
+      "FR": "Loraine a ing\u00E9r\u00E9 de la drogue",
+      "EN": "Loraine ingested drugs"
+   },
+   {
+      "Key": "ST_37_Hyp_Tooltip",
+      "FR": "Loraine Grey - Drogue dans le sang",
+      "EN": "Loraine Grey - Drugs in Loraine's blood"
+   },
+   {
+      "Key": "ST_39_Hyp_Text",
+      "FR": "L'Allemand ne veut pas que Kurt apparaisse dans la presse",
+      "EN": "The German doesn't want Kurt to appear in the press"
+   },
+   {
+      "Key": "ST_39_Hyp_Tooltip",
+      "FR": "Marvin Meyer - Kurt Becker - Magazine \"Sassy New York\" - L'Allemand - Deux hommes ont menac\u00E9 Marvin",
+      "EN": "Marvin Meyer - Kurt Becker - Sassy New York magazine - The German - Two men threatened Marvin"
+   },
+   {
+      "Key": "ST_40_Hyp_Text",
+      "FR": "Kurt ne voulait pas que Loraine parte",
+      "EN": "Kurt didn't want Loraine to leave"
+   },
+   {
+      "Key": "ST_40_Hyp_Tooltip",
+      "FR": "Kurt Becker - Loraine Grey - Kurt \u00E9tait fou amoureux - Loraine avait l'intention de partir",
+      "EN": "Kurt Becker - Loraine Grey - Kurt was crazy in love - Loraine planned to leave"
+   },
+   {
+      "Key": "ST_41_Hyp_Text",
+      "FR": "Loraine avait l'intention de partir.",
+      "EN": "Loraine planned to leave"
+   },
+   {
+      "Key": "ST_41_Hyp_Tooltip",
+      "FR": "Loraine Grey - Valise pr\u00EAte",
+      "EN": "Loraine Grey - Packed luggage"
+   },
+   {
+      "Key": "ST_53_Hyp_Text",
+      "FR": "L'Allemand a pendu Loraine alors qu'elle \u00E9tait drogu\u00E9e",
+      "EN": "The German hanged Loraine while she was drugged"
+   },
+   {
+      "Key": "ST_53_Hyp_Tooltip",
+      "FR": "Loraine Grey - L'assassin a pendu Loraine alors qu'elle \u00E9tait drogu\u00E9e - L'Allemand a d\u00E9couvert que Loraine \u00E9tait de la SDECE - Kurt a drogu\u00E9 Loraine pour l'emp\u00EAcher de partir",
+      "EN": "Loraine Grey - The murderer hanged Loraine while she was drugged - The German found out Loraine worked for the SDECE - Kurt drugged Loraine to stop her from leaving"
+   },
+   {
       "Key": "Menu_01",
       "FR": "Continuer",
       "EN": "Resume"
@@ -4644,5 +5081,50 @@
       "Key": "Board_04",
       "FR": "Non, \u00E7a ne colle pas...",
       "EN": "No, that doesn't make sense..."
+   },
+   {
+      "Key": "NewSticker",
+      "FR": "Nouvelle note ajout\u00E9e au carnet",
+      "EN": "New note added to the notebook"
+   },
+   {
+      "Key": "Credits_01",
+      "FR": "Viktor a tu\u00E9 Loraine.",
+      "EN": "Viktor killed Loraine."
+   },
+   {
+      "Key": "Credits_02",
+      "FR": "MERCI D'AVOIR JOU\u00C9 \u00C0 LA VERSION D\u00C9MO DE",
+      "EN": "THANK YOU FOR PLAYING THE DEMO VERSION OF"
+   },
+   {
+      "Key": "Credits_04",
+      "FR": "Maintenant n'h\u00E9site pas \u00E0 nous dire ce que tu as pens\u00E9 de cette version du jeu et \u00E0 acheter le jeu complet !",
+      "EN": "We would love to know what you thought of the demo, and we hope you buy the full game when it comes out !"
+   },
+   {
+      "Key": "Credits_07",
+      "FR": "FAIT AVEC UNITY",
+      "EN": "MADE WITH UNITY ENGINE"
+   },
+   {
+      "Key": "Credits_08",
+      "FR": "FIN DE LA D\u00C9MO",
+      "EN": "END OF THE DEMO"
+   },
+   {
+      "Key": "Credits_09",
+      "FR": "Retourner \u00E0 l'\u00E9cran titre",
+      "EN": "Return to title screen"
+   },
+   {
+      "Key": "Credits_10",
+      "FR": "Quitter le jeu",
+      "EN": "Exit game"
+   },
+   {
+      "Key": "LaissezPasser",
+      "FR": "Laissez-passer obtenu",
+      "EN": "Entry permit acquired"
    }
 ]
