@@ -167,12 +167,6 @@ public class SaveFile : MonoBehaviour
     {
         if (settingsSave != null)
         {
-            Debug.Log(settingsSave.musicVol);
-            Debug.Log(settingsSave.effectVol);
-            Debug.Log(settingsSave.gameLanguage);
-            Debug.Log(settingsSave.fullscreenBool);
-            Debug.Log(settingsSave.screenResolution);
-
             AudioMixer musicMixer = Resources.Load<AudioMixer>("SoundMixer/MusicMixer");
             AudioMixer effectMixer = Resources.Load<AudioMixer>("SoundMixer/FXMixer");
 
@@ -216,6 +210,8 @@ public class SaveFile : MonoBehaviour
 
             }
         }
+
+        LoadSettings();
 
         GameSaveSystem.GameDataInput(
             Camera.main.GetComponent<CameraFollow>(),
