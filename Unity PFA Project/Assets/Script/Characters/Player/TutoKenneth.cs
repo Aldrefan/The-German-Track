@@ -133,7 +133,7 @@ public class TutoKenneth : MonoBehaviour
             }
         }
 
-        if(!tutoDone.questionsDone)
+        if(!tutoDone.questionsDone && tutoDone.dialogsDone)
         {
             if(player.GetComponent<Interactions>().PNJContact
             && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>()

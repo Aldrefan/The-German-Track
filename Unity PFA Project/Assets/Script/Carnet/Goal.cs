@@ -17,6 +17,16 @@ public class Goal : MonoBehaviour, IPointerEnterHandler
 
     }
 
+    public void ChangeColor(Color newColor)
+    {
+        this.GetComponent<Image>().color = newColor;
+    }
+
+    public string ReturnGoal()
+    {
+        return this.transform.GetChild(0).GetComponent<Text>().text;
+    }
+
     public void OnPointerEnter (PointerEventData pointerEventData)
     {
 

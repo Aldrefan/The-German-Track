@@ -12,25 +12,25 @@ public class CarnetGoal : MonoBehaviour
     public List<string> goalList;
     public List<string> removeGoalList;
 
-    Transform completedGoals;
-    Transform toCompleteGoals;
-    Object goalObject;
+    public Transform completedGoals;
+    public Transform toCompleteGoals;
+    public Object goalObject;
 
-    [HideInInspector]
     public ObjectiveNotif notif;
+    public string notifSaver;
 
     // Start is called before the first frame update
-    void Start()
+    public void Init()
     {
-        completedGoals = this.transform.Find("CompletedGoals").GetChild(0).GetChild(0).GetChild(0);
-        toCompleteGoals = this.transform.Find("GoalToComplete").GetChild(0).GetChild(0).GetChild(0);
+        completedGoals = this.transform.Find("CompletedGoals").Find("GoalListScrollViewport").Find("GoalListBckGrd").Find("GoalListViewport");
+        toCompleteGoals = this.transform.Find("GoalToComplete").Find("GoalListScrollViewport").Find("GoalListBckGrd").Find("GoalListViewport");
         goalObject = Resources.Load("UIObject/Goal");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void NewGoal(string goalString)
@@ -38,9 +38,26 @@ public class CarnetGoal : MonoBehaviour
         if (!goalList.Contains(goalString))
         {
             goalList.Add(goalString);
-            notif.textToNotify = goalString;
-        }
+            if(notif != null)
+            {
+                notif.textToNotify = goalString;
 
+            }
+            else
+            {
+                notifSaver = goalString;
+            }
+        }
+    }
+    
+    public void RetryNotif()
+    {
+        if (notif != null && notifSaver != null)
+        {
+            notif.textToNotify = notifSaver;
+            notifSaver = null;
+
+        }
     }
 
     public void RemoveGoal(string goalString)
@@ -48,6 +65,11 @@ public class CarnetGoal : MonoBehaviour
         if (!removeGoalList.Contains(goalString))
         {
             removeGoalList.Add(goalString);
+            //if (!goalList.Contains(goalString))
+            //{
+            //    Debug.Log("Delete current Goal");
+                goalList.Remove(goalString);
+            //}
         }
     }
 
@@ -55,11 +77,20 @@ public class CarnetGoal : MonoBehaviour
     {
         foreach (string goal in goalList)
         {
-            GameObject newGoal = Instantiate(goalObject,toCompleteGoals) as GameObject;
-            newGoal.transform.SetParent(toCompleteGoals);
-            newGoal.GetComponent<RectTransform>().localPosition = Vector3.zero;
-            newGoal.name = goalObject.name;
-            newGoal.GetComponent<Goal>().Init(goal);
+            int counter = 0;
+            foreach (Transform currentGoal in toCompleteGoals)
+            {
+                if(currentGoal.GetComponent<Goal>().ReturnGoal() == goal)
+                {
+                    counter++;
+                }
+                
+            }
+            if (counter ==0) 
+            {
+                CreateGoal(true, goal, toCompleteGoals);
+            }
+
             //newGoal.GetComponent<Text>().horizontalOverflow =  HorizontalWrapMode.Overflow;
             //newGoal.AddComponent<Text>();
             //newGoal.GetComponent<RectTransform>().sizeDelta = heightWidth;
@@ -71,15 +102,44 @@ public class CarnetGoal : MonoBehaviour
 
         foreach (string goal in removeGoalList)
         {
+            int counter = 0;
+            foreach (Transform currentGoal in completedGoals)
+            {
+                if (currentGoal.GetComponent<Goal>().ReturnGoal() == goal)
+                {
+                    counter++;
+                }
+
+            }
             foreach (Transform finishedGoal in toCompleteGoals)
             {
-                if(finishedGoal.name == goal)
+                if (finishedGoal.GetComponent<Goal>().ReturnGoal() == goal)
                 {
                     finishedGoal.SetParent(completedGoals);
-                    finishedGoal.GetComponent<Image>().color = Color.gray;
+                    finishedGoal.GetComponent<Goal>().ChangeColor(Color.gray);
+                    counter++;
                 }
             }
-        }
 
+            if (counter == 0)
+            {
+                CreateGoal(false, goal, completedGoals);
+            }
+        }
+    }
+
+    void CreateGoal(bool isNewGoal, string goalSentence, Transform parent)
+    {
+
+        GameObject newGoal = Instantiate(goalObject, parent) as GameObject;
+        newGoal.transform.SetParent(parent);
+        newGoal.GetComponent<RectTransform>().localPosition = Vector3.zero;
+        newGoal.name = goalObject.name;
+        newGoal.GetComponent<Goal>().Init(goalSentence);
+        if (!isNewGoal)
+        {
+            newGoal.GetComponent<Goal>().ChangeColor(Color.gray);
+
+        }
     }
 }

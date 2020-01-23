@@ -10,11 +10,15 @@ public class EventsCheck : MonoBehaviour
     public GameObject EtiquetteLaissezPasser;
     public List<GameObject> appartmentKurtLocked;
 
+
+    CarnetGoal carnetGoal;
+
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(EnableClaraCinematic(1));
-
+        carnetGoal = GameObject.FindObjectOfType<Ken_Canvas_Infos>().transform.Find("Panel").Find("Carnet").Find("Goal").Find("GoalFrame").GetComponent<CarnetGoal>();
+        
     }
 
     // Update is called once per frame
@@ -222,7 +226,7 @@ public class EventsCheck : MonoBehaviour
         {
             case "laissezPasser":
                 EtiquetteLaissezPasser.GetComponent<Animator>().SetTrigger("NewSticker");
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller voir Lou Ellis à l'hôpital.");
+                carnetGoal.NewGoal("- Aller voir Lou Ellis à l'hôpital.");
                 break;
 
             case "hopitalOpen":
@@ -248,7 +252,7 @@ public class EventsCheck : MonoBehaviour
                 break;
 
             case "getNumberMarvinMeyer":
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Parler à Marvin Meyer.");
+                carnetGoal.NewGoal("- Parler à Marvin Meyer.");
                 break;
 
             case "numberMarvinMeyer":
@@ -269,36 +273,36 @@ public class EventsCheck : MonoBehaviour
                 break;*/
 
             case "GoToSleep":
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller Dormir.");
+                carnetGoal.NewGoal("- Aller Dormir.");
                 break;
 
             case "HasSlep":
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Aller Dormir.");
+                carnetGoal.RemoveGoal("- Aller Dormir.");
                 break;
 
             case "GoToSeeWhite":
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller voir White au commissariat.");
+                carnetGoal.NewGoal("- Aller voir White au commissariat.");
 
                 break;
 
             case "HasSeenWhite":
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Aller voir White au commissariat.");
+                carnetGoal.RemoveGoal("- Aller voir White au commissariat.");
                 break;
 
             case "HasSeenLou":
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Aller voir Lou Ellis à l'hôpital.");
+                carnetGoal.RemoveGoal("- Aller voir Lou Ellis à l'hôpital.");
                 break;
 
             case "HasContactedMarvin":
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Parler à Marvin Meyer.");
+                carnetGoal.RemoveGoal("- Parler à Marvin Meyer.");
                 break;
             
             case "TalkToTheBarman":
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Parler de Marvin au Barman.");
+                carnetGoal.NewGoal("- Parler de Marvin au Barman.");
                 break;
 
             case "HasTalkedToTheBarman":
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Parler de Marvin au Barman.");
+                carnetGoal.RemoveGoal("- Parler de Marvin au Barman.");
                 break;
 
             case "TalkToKurt":
