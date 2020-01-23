@@ -222,7 +222,7 @@ public class EventsCheck : MonoBehaviour
         {
             case "laissezPasser":
                 EtiquetteLaissezPasser.GetComponent<Animator>().SetTrigger("NewSticker");
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller voir Lou Ellis à l'hôpital.");
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller voir Lou Ellis à l'hôpital.");
                 break;
 
             case "hopitalOpen":
@@ -269,36 +269,36 @@ public class EventsCheck : MonoBehaviour
                 break;*/
 
             case "GoToSleep":
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller Dormir.");
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller Dormir.");
                 break;
 
             case "HasSlep":
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Aller Dormir.");
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Aller Dormir.");
                 break;
 
             case "GoToSeeWhite":
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller voir White au commissariat.");
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Aller voir White au commissariat.");
 
                 break;
 
             case "HasSeenWhite":
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Aller voir White au commissariat.");
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Aller voir White au commissariat.");
                 break;
 
             case "HasSeenLou":
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Aller voir Lou Ellis à l'hôpital.");
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Aller voir Lou Ellis à l'hôpital.");
                 break;
 
             case "HasContactedMarvin":
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Parler à Marvin Meyer.");
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Parler à Marvin Meyer.");
                 break;
             
             case "TalkToTheBarman":
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Parler de Marvin au Barman.");
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Parler de Marvin au Barman.");
                 break;
 
             case "HasTalkedToTheBarman":
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Parler de Marvin au Barman.");
+                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().RemoveGoal("- Parler de Marvin au Barman.");
                 break;
 
             case "TalkToKurt":
