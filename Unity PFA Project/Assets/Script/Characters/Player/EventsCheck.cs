@@ -252,11 +252,7 @@ public class EventsCheck : MonoBehaviour
                 break;
 
             case "getNumberMarvinMeyer":
-<<<<<<< HEAD
-                GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(6).GetChild(0).GetChild(4).GetChild(0).GetComponent<CarnetGoal>().NewGoal("- Parler à Marvin Meyer.");
-=======
                 carnetGoal.NewGoal("- Parler à Marvin Meyer.");
->>>>>>> 81a4d950061130dd1529d12df2e3c8fc9d193cba
                 break;
 
             case "numberMarvinMeyer":
