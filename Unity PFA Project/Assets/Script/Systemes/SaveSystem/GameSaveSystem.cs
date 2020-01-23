@@ -16,6 +16,7 @@ public static class GameSaveSystem
     static ActiveCharacterScript currentCharacters;
     static GameObject actualPlayer;
     static DayNightLight directionalLight;
+    static CarnetGoal goalFrame;
 
     //SettingsData
     static AudioMixer musicMixer;
@@ -33,7 +34,7 @@ public static class GameSaveSystem
 
     public static void SaveGameData()
     {
-        GameData saveObject = new GameData(camScript, currentCharacters, actualPlayer, directionalLight);
+        GameData saveObject = new GameData(camScript, currentCharacters, actualPlayer, directionalLight, goalFrame);
         string json = JsonUtility.ToJson(saveObject);
 
         File.WriteAllText(SAVE_FOLDER + "/gameSave.txt", json);
@@ -94,12 +95,13 @@ public static class GameSaveSystem
         return gameActualLevel;
     }
 
-    public static void GameDataInput(CameraFollow newCamScript, ActiveCharacterScript newCurrentCharacters, GameObject newPlayer, DayNightLight newDirLight)
+    public static void GameDataInput(CameraFollow newCamScript, ActiveCharacterScript newCurrentCharacters, GameObject newPlayer, DayNightLight newDirLight, CarnetGoal newGoalFrame)
     {
         camScript = newCamScript;
         currentCharacters = newCurrentCharacters;
         actualPlayer = newPlayer;
         directionalLight = newDirLight;
+        goalFrame = newGoalFrame;
     }
 
     public static void SettingsDataInput(AudioMixer newMusicMixer, AudioMixer newEffectMixer, LanguageManager newLangManager)
