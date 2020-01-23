@@ -127,10 +127,7 @@ public class Menu : MonoBehaviour
 
 
         //check if save exist
-        if(loadButton != null)
-        {
-            LoadButtonActive();
-        }
+        LoadButtonActive();
     }
 
 
@@ -154,12 +151,6 @@ public class Menu : MonoBehaviour
 
         //fullscreenCheckbox.GetComponent<Toggle>().isOn = Screen.fullScreen;
 
-    }
-
-    public void Continue()
-    {
-        gameObject.SetActive(false);
-        GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.GetComponent<Interactions>().ChangeState(Interactions.State.Normal);
     }
 
     public void CanvasOptions()

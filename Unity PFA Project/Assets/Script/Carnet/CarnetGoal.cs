@@ -40,6 +40,7 @@ public class CarnetGoal : MonoBehaviour
             goalList.Add(goalString);
             notif.textToNotify = goalString;
         }
+
     }
 
     public void RemoveGoal(string goalString)
@@ -79,5 +80,6 @@ public class CarnetGoal : MonoBehaviour
                 }
             }
         }
+
     }
 }

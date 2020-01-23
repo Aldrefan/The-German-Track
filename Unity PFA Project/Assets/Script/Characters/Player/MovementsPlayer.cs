@@ -18,7 +18,6 @@ public class MovementsPlayer : MonoBehaviour {
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        StartCoroutine("StartTimerBeforeCheckActivation");
     }
 
     // Update is called once per frame
@@ -74,15 +73,5 @@ public class MovementsPlayer : MonoBehaviour {
         //GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
         theScale.x *= -1;
         transform.localScale = theScale;
-    }
-
-    IEnumerator StartTimerBeforeCheckActivation()
-    {
-        yield return new WaitForSeconds(0.5f);
-        if(GetComponent<Interactions>().PnjMet.Contains("Clara"))
-        {
-            GetComponent<MovementsPlayer>().enabled = true;
-        }
-        else GetComponent<MovementsPlayer>().enabled = false;
     }
 }
