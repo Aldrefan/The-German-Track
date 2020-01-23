@@ -2658,6 +2658,7 @@ MonoBehaviour:
   removeGoalList: []
   completedGoals: {fileID: 0}
   toCompleteGoals: {fileID: 0}
+  goalDescription: {fileID: 0}
   goalObject: {fileID: 0}
   notif: {fileID: 0}
   notifSaver: 
@@ -3420,7 +3421,7 @@ SpriteRenderer:
   m_Size: {x: 4.87, y: 1.95}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &3062418669636132088
@@ -4958,7 +4959,6 @@ GameObject:
   - component: {fileID: 1361115674239314929}
   - component: {fileID: 1425348996338521747}
   - component: {fileID: 8164468875008140962}
-  - component: {fileID: 38555039295618684}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -5040,18 +5040,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: LaissezPasser
---- !u!114 &38555039295618684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7132221762559275625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7d55103ee6d01346bf6e6dac1dcae91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7610382561965273286
 GameObject:
   m_ObjectHideFlags: 0
@@ -5216,8 +5204,12 @@ GameObject:
   - component: {fileID: 4406131573481075780}
   - component: {fileID: 7830523730840129550}
   - component: {fileID: 8467289337503566570}
+<<<<<<< HEAD
   - component: {fileID: 1690289324721148577}
   - component: {fileID: 1751947896}
+=======
+  - component: {fileID: 2795887796261529310}
+>>>>>>> 5dc54e782688f1c307d6e98d1462c8ee2a29742f
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -5298,6 +5290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7d55103ee6d01346bf6e6dac1dcae91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!114 &1751947896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5310,6 +5303,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> 5dc54e782688f1c307d6e98d1462c8ee2a29742f
   text: NewSticker
 --- !u!1 &8610089310792161634
 GameObject:
@@ -5723,7 +5718,7 @@ SpriteRenderer:
   m_Size: {x: 4.87, y: 1.95}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &8891736063403011965
@@ -6050,6 +6045,19 @@ PrefabInstance:
       propertyPath: m_FontData.m_MinSize
       value: 2
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 6447466676149696642, guid: 8c173d531b3c6264cbb5f3753642acf7,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447466676149696642, guid: 8c173d531b3c6264cbb5f3753642acf7,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> 5dc54e782688f1c307d6e98d1462c8ee2a29742f
     - target: {fileID: 6447466677040977694, guid: 8c173d531b3c6264cbb5f3753642acf7,
         type: 3}
       propertyPath: m_TargetGraphic
@@ -6077,6 +6085,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c173d531b3c6264cbb5f3753642acf7, type: 3}
+<<<<<<< HEAD
+=======
+--- !u!224 &688771500 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2844838549771981525, guid: 8c173d531b3c6264cbb5f3753642acf7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2844838549385298809}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> 5dc54e782688f1c307d6e98d1462c8ee2a29742f
 --- !u!224 &9079509042901775334 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6447466675769553055, guid: 8c173d531b3c6264cbb5f3753642acf7,
@@ -6113,13 +6130,11 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!224 &688771500 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2844838549771981525, guid: 8c173d531b3c6264cbb5f3753642acf7,
-    type: 3}
-  m_PrefabInstance: {fileID: 2844838549385298809}
-  m_PrefabAsset: {fileID: 0}
+=======
 --- !u!224 &9079509044062918514 stripped
+>>>>>>> 5dc54e782688f1c307d6e98d1462c8ee2a29742f
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6447466676620612619, guid: 8c173d531b3c6264cbb5f3753642acf7,
     type: 3}
@@ -6131,6 +6146,15 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2844838549385298809}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+--- !u!114 &9079509043305614907 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6447466675903089986, guid: 8c173d531b3c6264cbb5f3753642acf7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2844838549385298809}
+  m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> 5dc54e782688f1c307d6e98d1462c8ee2a29742f
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -6158,6 +6182,7 @@ MonoBehaviour:
 --- !u!224 &9079509043727697445 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6447466676553565532, guid: 8c173d531b3c6264cbb5f3753642acf7,
+<<<<<<< HEAD
     type: 3}
   m_PrefabInstance: {fileID: 2844838549385298809}
   m_PrefabAsset: {fileID: 0}
@@ -6166,4 +6191,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6447466677447598536, guid: 8c173d531b3c6264cbb5f3753642acf7,
     type: 3}
   m_PrefabInstance: {fileID: 2844838549385298809}
+=======
+    type: 3}
+  m_PrefabInstance: {fileID: 2844838549385298809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &9079509044847993521 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6447466677447598536, guid: 8c173d531b3c6264cbb5f3753642acf7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2844838549385298809}
+>>>>>>> 5dc54e782688f1c307d6e98d1462c8ee2a29742f
   m_PrefabAsset: {fileID: 0}
