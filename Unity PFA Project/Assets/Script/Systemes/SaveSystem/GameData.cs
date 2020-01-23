@@ -28,8 +28,8 @@ public class GameData
     //ActiveCharacterScript -> GameObject
     public List<CharacterPosition> playableCharacters = new List<CharacterPosition>();
     //GoalsList
-    public List<string> goalsInProgress = new List<string>();
-    public List<string> goalsComplete = new List<string>();
+    public List<GoalKeys> goalsInProgress = new List<GoalKeys>();
+    public List<GoalKeys> goalsComplete = new List<GoalKeys>();
 
 
     public GameData(CameraFollow camScript, ActiveCharacterScript currentCharacters, GameObject characterToPlay, DayNightLight directionalLight, CarnetGoal goalsObject)
