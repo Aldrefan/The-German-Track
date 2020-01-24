@@ -187,7 +187,7 @@ public class Interactions : MonoBehaviour
             {
                 PNJContact.GetComponent<PNJ>().Startdialogue();
             }
-            else 
+            else
             {
                 GameObject activePanel = GameObject.FindObjectOfType<DialogInterface>().gameObject;
                 PNJContact.GetComponent<PNJ>().FullQuote(activePanel);
