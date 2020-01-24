@@ -79,6 +79,19 @@ public class CarnetGoal : MonoBehaviour
     {
         foreach (GoalKeys goal in goalList)
         {
+
+            GameObject newGoal = new GameObject("Goal", typeof (RectTransform));
+            newGoal.transform.SetParent(transform);
+            newGoal.GetComponent<RectTransform>().localPosition = Vector3.zero;
+            newGoal.name = goal;
+            newGoal.AddComponent<Text>();
+            newGoal.GetComponent<RectTransform>().sizeDelta = heightWidth;
+            newGoal.GetComponent<Text>().color = Color.black;
+            newGoal.GetComponent<Text>().font = font;
+            newGoal.GetComponent<Text>().text = goal;
+            newGoal.GetComponent<Text>().horizontalOverflow =  HorizontalWrapMode.Overflow;
+            newGoal.transform.localScale = scale;
+
             int counter = 0;
             foreach (Transform currentGoal in toCompleteGoals)
             {
@@ -90,7 +103,8 @@ public class CarnetGoal : MonoBehaviour
             }
             if (counter ==0) 
             {
-                CreateGoal(true, LanguageManager.Instance.GetDialog(goal.nameGoalKey), toCompleteGoals);
+                CreateGoal(true, goal, toCompleteGoals);
+
             }
 
             //newGoal.GetComponent<Text>().horizontalOverflow =  HorizontalWrapMode.Overflow;
@@ -100,6 +114,7 @@ public class CarnetGoal : MonoBehaviour
             //newGoal.GetComponent<Text>().font = font;
             //newGoal.GetComponent<Text>().text = goal;
             //newGoal.transform.localScale = scale;
+
         }
 
         foreach (GoalKeys goal in removeGoalList)

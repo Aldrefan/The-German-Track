@@ -17,7 +17,7 @@ public class EventsCheck : MonoBehaviour
     void Start()
     {
         carnetGoal = GameObject.FindObjectOfType<Ken_Canvas_Infos>().transform.Find("Panel").Find("Carnet").Find("Goal").Find("GoalFrame").GetComponent<CarnetGoal>();
-        
+
     }
 
     // Update is called once per frame
