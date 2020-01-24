@@ -242,7 +242,7 @@ public class Interactions : MonoBehaviour
     public void CloseBookExe()
     {
         //Camera.main.GetComponent<Camera_Manager>().NotOnCarnet();
-        dialAndBookCanvas.transform.GetChild(6).gameObject.SetActive(false);
+        dialAndBookCanvas.transform.Find("Panel").gameObject.SetActive(false);
         //dialAndBookCanvas.transform.GetChild(dialAndBookCanvas.transform.childCount - 1).gameObject.SetActive(false);
         carnetUI.GetComponent<Animator>().SetBool("ClickOn", false);
         if(isInDialog)
