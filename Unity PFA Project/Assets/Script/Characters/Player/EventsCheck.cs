@@ -12,7 +12,11 @@ public class EventsCheck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< Updated upstream
         
+=======
+        carnetGoal = GameObject.FindObjectOfType<Ken_Canvas_Infos>().transform.Find("Panel").Find("Carnet").Find("Goal").Find("GoalFrame").GetComponent<CarnetGoal>();
+>>>>>>> Stashed changes
     }
 
     // Update is called once per frame

@@ -38,6 +38,7 @@ public class CarnetGoal : MonoBehaviour
     {
         foreach (string goal in goalList)
         {
+<<<<<<< Updated upstream
             GameObject newGoal = new GameObject("Goal", typeof (RectTransform));
             newGoal.transform.SetParent(transform);
             newGoal.GetComponent<RectTransform>().localPosition = Vector3.zero;
@@ -49,6 +50,29 @@ public class CarnetGoal : MonoBehaviour
             newGoal.GetComponent<Text>().text = goal;
             newGoal.GetComponent<Text>().horizontalOverflow =  HorizontalWrapMode.Overflow;
             newGoal.transform.localScale = scale;
+=======
+            int counter = 0;
+            foreach (Transform currentGoal in toCompleteGoals)
+            {
+                if(currentGoal.GetComponent<Goal>().ReturnGoal() ==  LanguageManager.Instance.GetDialog(goal.nameGoalKey))
+                {
+                    counter++;
+                }
+                
+            }
+            if (counter ==0) 
+            {
+                CreateGoal(true, goal, toCompleteGoals);
+            }
+
+            //newGoal.GetComponent<Text>().horizontalOverflow =  HorizontalWrapMode.Overflow;
+            //newGoal.AddComponent<Text>();
+            //newGoal.GetComponent<RectTransform>().sizeDelta = heightWidth;
+            //newGoal.GetComponent<Text>().color = Color.black;
+            //newGoal.GetComponent<Text>().font = font;
+            //newGoal.GetComponent<Text>().text = goal;
+            //newGoal.transform.localScale = scale;
+>>>>>>> Stashed changes
         }
         goalList.Clear();
 

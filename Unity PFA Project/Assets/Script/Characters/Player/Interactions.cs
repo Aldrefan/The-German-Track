@@ -177,7 +177,7 @@ public class Interactions : MonoBehaviour
     }
     void ChangeLineOfDialog()
     {
-        if(Input.GetButtonDown("Interaction") && !dialAndBookCanvas.transform.GetChild(6).gameObject.activeInHierarchy)
+        if(Input.GetButtonDown("Interaction") && !dialAndBookCanvas.transform.Find("Panel").gameObject.activeInHierarchy)
         {
             if(PNJContact.GetComponent<PNJ>().quoteFinished)
             {
@@ -200,7 +200,11 @@ public class Interactions : MonoBehaviour
     }
     void OpenDialog()
     {
+<<<<<<< Updated upstream
         if(Input.GetButtonDown("Interaction") && PNJContact!= null && !dialAndBookCanvas.transform.GetChild(6).gameObject.activeInHierarchy)
+=======
+        if(Input.GetButtonDown("Interaction") && PNJContact != null && !dialAndBookCanvas.transform.Find("Panel").gameObject.activeInHierarchy)
+>>>>>>> Stashed changes
         {
             if(PNJContact.tag == "PNJinteractable" || PNJContact.tag == "Item")
             {
