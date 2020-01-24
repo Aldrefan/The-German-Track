@@ -9,17 +9,27 @@ public class TextApparition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Text>().text = LanguageManager.Instance.GetDialog(text);
+        TransfersTrad();
     }
 
     void OnEnable()
     {
-        GetComponent<Text>().text = LanguageManager.Instance.GetDialog(text);
+        TransfersTrad();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void TransfersTrad()
+    {
+        LanguageManager langManager = GameObject.FindObjectOfType<LanguageManager>();
+        if(langManager!= null)
+        {
+            this.GetComponent<Text>().text = langManager.GetDialog(text);
+
+        }
     }
 }
