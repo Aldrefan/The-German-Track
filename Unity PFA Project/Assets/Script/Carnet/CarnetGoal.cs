@@ -90,7 +90,7 @@ public class CarnetGoal : MonoBehaviour
             }
             if (counter ==0) 
             {
-                CreateGoal(true, LanguageManager.Instance.GetDialog(goal.nameGoalKey), toCompleteGoals);
+                CreateGoal(true,goal, toCompleteGoals);
             }
 
             //newGoal.GetComponent<Text>().horizontalOverflow =  HorizontalWrapMode.Overflow;

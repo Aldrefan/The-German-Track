@@ -15,7 +15,15 @@ public class Goal : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         this.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 1);
         this.transform.GetChild(0).GetComponent<Text>().horizontalOverflow =  HorizontalWrapMode.Wrap;
-        this.transform.GetChild(0).GetComponent<Text>().text = LanguageManager.Instance.GetDialog(newNameKey);
+
+        if (LanguageManager.Instance.GetDialog(newNameKey) == "")
+        {
+            this.transform.GetChild(0).GetComponent<Text>().text = "Goal";
+        }
+        else
+        {
+            this.transform.GetChild(0).GetComponent<Text>().text = LanguageManager.Instance.GetDialog(newNameKey);
+        }
 
         if (LanguageManager.Instance.GetDialog(newDescKey) == "")
         {
