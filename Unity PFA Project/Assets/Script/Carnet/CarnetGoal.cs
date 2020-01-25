@@ -19,6 +19,7 @@ public class CarnetGoal : MonoBehaviour
 
     public ObjectiveNotif notif;
     public string notifSaver;
+    public bool notifState;
 
     // Start is called before the first frame update
     public void Init()
@@ -42,12 +43,13 @@ public class CarnetGoal : MonoBehaviour
             goalList.Add(goalkeys);
             if(notif != null)
             {
-                notif.textToNotify = LanguageManager.Instance.GetDialog(goalkeys.nameGoalKey);
+                notif.NotifQueue.Add(new StringToNotif(LanguageManager.Instance.GetDialog(goalkeys.nameGoalKey), false));
 
             }
             else
             {
                 notifSaver = LanguageManager.Instance.GetDialog(goalkeys.nameGoalKey);
+                notifState = false;
             }
         }
     }
@@ -56,8 +58,9 @@ public class CarnetGoal : MonoBehaviour
     {
         if (notif != null && notifSaver != null)
         {
-            notif.textToNotify = notifSaver;
+            notif.NotifQueue.Add(new StringToNotif(LanguageManager.Instance.GetDialog(notifSaver), notifState));
             notifSaver = null;
+            notifState = false;
 
         }
     }
@@ -72,6 +75,17 @@ public class CarnetGoal : MonoBehaviour
             //    Debug.Log("Delete current Goal");
                 goalList.Remove(goalkeys);
             //}
+            if (notif != null)
+            {
+                notif.NotifQueue.Add(new StringToNotif(LanguageManager.Instance.GetDialog(goalkeys.nameGoalKey), true));
+
+            }
+            else
+            {
+                notifSaver = LanguageManager.Instance.GetDialog(goalkeys.nameGoalKey);
+                notifState = true;
+            }
+
         }
     }
 
