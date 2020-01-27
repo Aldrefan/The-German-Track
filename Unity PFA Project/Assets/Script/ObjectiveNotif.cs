@@ -51,7 +51,7 @@ public class ObjectiveNotif : MonoBehaviour
 
     void SetNotifVisible()
     {
-        if(NotifQueue.Count !=0 & NotifQueue[0] != null)
+        if(NotifQueue.Count !=0)
         {
 
             if (notifText.text != NotifQueue[0].goalTitle)
@@ -85,8 +85,10 @@ public class ObjectiveNotif : MonoBehaviour
         }
         notifAtor.SetBool("Visible", false);
 
-        NotifQueue.RemoveAt(0);
-
+        if (NotifQueue.Count != 0)
+        {
+            NotifQueue.RemoveAt(0);
+        }
     }
 }
 
