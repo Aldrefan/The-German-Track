@@ -17,8 +17,7 @@ public class Buttons_Display : MonoBehaviour
 
     public void SetInformations()
     {
-        JsonSave save = SaveGameManager.GetCurrentSave();
-        if(save.language == "french")
+        if(LanguageManager.Instance.language == "french")
         {
             text.text = button.frenchText;
         }

@@ -31907,7 +31907,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1045542790}
-  - component: {fileID: 1045542789}
   - component: {fileID: 1045542791}
   m_Layer: 0
   m_Name: Saver
@@ -31916,28 +31915,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1045542789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1045542788}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 400cf4e187b17e940bf1adc4013a189b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelFM: 0
-  lieuFM: 0
-  stickersIndexOnBoardFM: 
-  stickersPositionOnBoardFM: []
-  memoryStickersFM: 
-  meetingListFM: []
-  carnet: {fileID: 0}
-  boardCanvas: {fileID: 1555739446}
-  eventListFM: []
-  caracters: []
 --- !u!4 &1045542790
 Transform:
   m_ObjectHideFlags: 0
@@ -71993,6 +71970,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851743289768396185, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851743289768396185, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851743289768396185, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -170
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851743289768396185, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -89.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 920062438311128838, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 920062438311128838, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 920062438311128838, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -170
+      objectReference: {fileID: 0}
+    - target: {fileID: 920062438311128838, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -150.2
       objectReference: {fileID: 0}
     - target: {fileID: 3062418669636132091, guid: 33ddad3a370b0824b848ab3b505bf613,
         type: 3}

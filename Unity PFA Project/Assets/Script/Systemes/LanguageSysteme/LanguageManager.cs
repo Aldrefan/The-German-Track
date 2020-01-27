@@ -37,9 +37,9 @@ public class LanguageManager : MonoBehaviour
     {
         //SaveGameManager.Save();
         string dataAsJson = null;
-        if(File.Exists(Application.dataPath + "/StreamingAssets/" + filePath))
+        if(File.Exists(Application.streamingAssetsPath + "/" + filePath))
         {
-            dataAsJson = File.ReadAllText(Application.dataPath + "/StreamingAssets/" + filePath);
+            dataAsJson = File.ReadAllText(Application.streamingAssetsPath + "/" + filePath);
         }
         datas = JsonUtility.FromJson<TextData>("{\"mytexts\":" + dataAsJson + "}");
 
@@ -58,7 +58,6 @@ public class LanguageManager : MonoBehaviour
 
     public string GetDialog(string key)
     {
-        JsonSave save = SaveGameManager.GetCurrentSave();
         //save.language = "french";
         if(datas != null)
         {

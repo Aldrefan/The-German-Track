@@ -19,8 +19,7 @@ public class Sticker_Display : MonoBehaviour
 
     public void SetInformations()
     {
-        JsonSave save = SaveGameManager.GetCurrentSave();
-        if(save.language == "french")
+        if(LanguageManager.Instance.language == "french")
         {
             text.text = sticker.frenchText;
             tooltipText.text = sticker.frenchTooltip;

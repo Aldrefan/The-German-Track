@@ -76,9 +76,8 @@ public class InGameMenu : MonoBehaviour
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
 
-        JsonSave save = SaveGameManager.GetCurrentSave();
-        if(save.language == "english") EnglishSelection();
-        else if(save.language == "french") FrenchSelection();
+        if(LanguageManager.Instance.language == "english") EnglishSelection();
+        else if(LanguageManager.Instance.language == "french") FrenchSelection();
     }
 
     public void SaveGame()
@@ -118,23 +117,19 @@ public class InGameMenu : MonoBehaviour
 
     public void EnglishSelection()
     {
-        JsonSave save = SaveGameManager.GetCurrentSave();
+        LanguageManager.Instance.language = "english";
         isFrench = false;
         englishArrow.SetActive(true);
         frenchArrow.SetActive(false);
-        save.language = "english";
-        SaveGameManager.Save();
         Debug.Log(isFrench);
     }
 
         public void FrenchSelection()
     {
-        JsonSave save = SaveGameManager.GetCurrentSave();
+        LanguageManager.Instance.language = "french";
         isFrench = true;
         frenchArrow.SetActive(true);
         englishArrow.SetActive(false);
-        save.language = "french";
-        SaveGameManager.Save();
         Debug.Log(isFrench);
     }
 

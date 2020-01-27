@@ -31,24 +31,23 @@ public class Saver : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.P))
         {
-            JsonSave save = SaveGameManager.GetCurrentSave();
-            SaveGameManager.DeleteAllSaves();
+            /*JsonSave save = SaveGameManager.GetCurrentSave();
+            SaveGameManager.DeleteAllSaves();*/
         }
     }
 
     public void MakeASave()
     {
-        if(caracters.Contains("Kenneth"))
-        {KennethSave();}
+        /*if(caracters.Contains("Kenneth"))
+        {KennethSave();}*/
         if(caracters.Contains("Leon"))
         {LeonSave();}
         if(caracters.Contains("Garance"))
         {GaranceSave();}
     }
 
-    void KennethSave()
+    /*void KennethSave()
     {
-        JsonSave save = SaveGameManager.GetCurrentSave();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         save.level = SceneManager.GetActiveScene().buildIndex;
         save.lieu = lieuFM;
@@ -70,7 +69,7 @@ public class Saver : MonoBehaviour
             {}
             else save.eventList.Add(eventListFM[i]);
         }
-        /*for(int i = 0; i < 4; i++)
+        for(int i = 0; i < 4; i++)
         {
             if(carnet.transform.GetChild(i).childCount > 1)
             {
@@ -84,9 +83,9 @@ public class Saver : MonoBehaviour
                     }
                 }
             }
-        } */
+        } 
         SaveGameManager.Save();
-    }
+    }*/
 
 
     void LeonSave()
@@ -99,7 +98,7 @@ public class Saver : MonoBehaviour
 
     }
     
-    public void ClearSave()
+    /*public void ClearSave()
     {
         JsonSave save = SaveGameManager.GetCurrentSave();
         //save.carnetStickersList.Clear();
@@ -109,5 +108,5 @@ public class Saver : MonoBehaviour
         save.stickersPositionOnBoard.Clear();
         save.eventList.Clear();
         SaveGameManager.Save();
-    }
+    }*/
 }
