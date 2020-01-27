@@ -8463,6 +8463,86 @@ PrefabInstance:
       propertyPath: annexInformation.Array.data[0].objectToMove
       value: 
       objectReference: {fileID: 1939136818}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[1].dialog.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[0].quote
+      value: "R\xE9ceptionnisteH_D0_Q1"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[1].quote
+      value: "R\xE9ceptionnisteH_D0_Q2"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[2].quote
+      value: "R\xE9ceptionnisteH_D0_Q3"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[3].quote
+      value: "R\xE9ceptionnisteH_D0_Q4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[4].quote
+      value: "R\xE9ceptionnisteH_D0_Q5"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[5].quote
+      value: "R\xE9ceptionnisteH_D0_Q6"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[1].dialog.Array.data[0].quote
+      value: "R\xE9ceptionnisteH_D1_Q1"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[1].dialog.Array.data[1].quote
+      value: "R\xE9ceptionnisteH_D1_Q2"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[0].quote
+      value: "R\xE9ceptionnisteH_D2_Q1"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[1].quote
+      value: "R\xE9ceptionnisteH_D2_Q2"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[2].quote
+      value: "R\xE9ceptionnisteH_D2_Q3"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[3].quote
+      value: "R\xE9ceptionnisteH_D2_Q4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[4].quote
+      value: "R\xE9ceptionnisteH_D2_Q5"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[5].quote
+      value: "R\xE9ceptionnisteH_D2_Q6"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300192406102315126, guid: b54d7a811dadcee468d386f697750077,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[6].quote
+      value: "R\xE9ceptionnisteH_D2_Q7"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b54d7a811dadcee468d386f697750077, type: 3}
 --- !u!1 &315226195
@@ -12007,16 +12087,12 @@ PrefabInstance:
       propertyPath: annexInformation.Array.data[3].newPosition
       value: 
       objectReference: {fileID: 1376588989}
-    - target: {fileID: 5966079576536928785, guid: d242fe9a0c120094f8ecd5fe53bcf5b4,
+    - target: {fileID: 5966079576183552552, guid: d242fe9a0c120094f8ecd5fe53bcf5b4,
         type: 3}
-      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[9].eventTrigger.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5966079576536928785, guid: d242fe9a0c120094f8ecd5fe53bcf5b4,
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3,
         type: 3}
-      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[9].eventTrigger.Array.data[0]
-      value: TalkToTheBarman
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d242fe9a0c120094f8ecd5fe53bcf5b4, type: 3}
 --- !u!1001 &498060031
@@ -20998,139 +21074,139 @@ MonoBehaviour:
   allDialogs:
     listOfDialogs:
     - dialog:
-      - quote: L1_Clara_D0_Q1
+      - quote: Clara_D0_Q1
         characterName: '?'
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
           type: 3}
-      - quote: L1_Clara_D0_Q2
+      - quote: Clara_D0_Q2
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D0_Q3
+      - quote: Clara_D0_Q3
         characterName: '?'
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
           type: 3}
-      - quote: L1_Clara_D0_Q4
+      - quote: Clara_D0_Q4
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 02000000
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D0_Q5
+      - quote: Clara_D0_Q5
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D0_Q6
+      - quote: Clara_D0_Q6
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D0_Q7
+      - quote: Clara_D0_Q7
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
           type: 3}
-      - quote: L1_Clara_D0_Q8
+      - quote: Clara_D0_Q8
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D0_Q9
+      - quote: Clara_D0_Q9
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
           type: 3}
-      - quote: L1_Clara_D0_Q10
+      - quote: Clara_D0_Q10
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D0_Q11
+      - quote: Clara_D0_Q11
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
           type: 3}
-      - quote: L1_Clara_D0_Q12
+      - quote: Clara_D0_Q12
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 01000000
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
           type: 3}
-      - quote: L1_Clara_D0_Q13
+      - quote: Clara_D0_Q13
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
           type: 3}
-      - quote: L1_Clara_D0_Q14
+      - quote: Clara_D0_Q14
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
           type: 3}
-      - quote: L1_Clara_D0_Q15
+      - quote: Clara_D0_Q15
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D0_Q16
+      - quote: Clara_D0_Q16
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
           type: 3}
-      - quote: L1_Clara_D0_Q17
+      - quote: Clara_D0_Q17
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
           type: 3}
-      - quote: L1_Clara_D0_Q18
+      - quote: Clara_D0_Q18
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D0_Q19
+      - quote: Clara_D0_Q19
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D0_Q20
+      - quote: Clara_D0_Q20
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
@@ -21141,7 +21217,7 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: L1_Clara_D1_Q1
+      - quote: Clara_D1_Q1
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
@@ -21153,152 +21229,146 @@ MonoBehaviour:
       buttonsList:
       - {fileID: 11400000, guid: 4f476e55573c6314985740a9dc9a928c, type: 2}
     - dialog:
-      - quote: L1_Clara_D2_Q1
+      - quote: Clara_D2_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D2_Q2
+      - quote: Clara_D2_Q2
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D2_Q3
+      - quote: Clara_D2_Q3
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D2_Q4
+      - quote: Clara_D2_Q4
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D2_Q5
+      - quote: Clara_D2_Q5
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D2_Q7
+      - quote: Clara_D2_Q6
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D2_Q8
+      - quote: Clara_D2_Q7
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D2_Q9
+      - quote: Clara_D2_Q8
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D2_Q10
+      - quote: Clara_D2_Q9
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D2_Q11
-        characterName: Clara Grey
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D2_Q12
+      - quote: Clara_D2_Q10
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 04000000
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D2_Q13
+      - quote: Clara_D2_Q11
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Clara_D2_Q12
+        characterName: Clara Grey
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D2_Q14
+      - quote: Clara_D2_Q13
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D2_Q15
-        characterName: Clara Grey
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D2_Q16
+      - quote: Clara_D2_Q14
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Clara_D2_Q15
+        characterName: Clara Grey
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D2_Q17
+      - quote: Clara_D2_Q16
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D2_Q18
-        characterName: Clara Grey
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D2_Q19
+      - quote: Clara_D2_Q17
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Clara_D2_Q18
+        characterName: Clara Grey
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D2_Q20
+      - quote: Clara_D2_Q19
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D2_Q21
-        characterName: Clara Grey
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D2_Q22
+      - quote: Clara_D2_Q20
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Clara_D2_Q21
+        characterName: Clara Grey
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D2_Q23
+      - quote: Clara_D2_Q22
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D2_Q24
-        characterName: Clara Grey
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D2_Q25
+      - quote: Clara_D2_Q23
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 08000000
@@ -21309,31 +21379,31 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: L1_Clara_D3_Q1
+      - quote: Clara_D3_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D3_Q2
+      - quote: Clara_D3_Q2
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D3_Q3
+      - quote: Clara_D3_Q3
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D3_Q4
+      - quote: Clara_D3_Q4
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D3_Q5
+      - quote: Clara_D3_Q5
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
@@ -21344,77 +21414,77 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: L1_Clara_D4_Q1
+      - quote: Clara_D4_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D4_Q2
+      - quote: Clara_D4_Q2
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D4_Q3
+      - quote: Clara_D4_Q3
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D4_Q4
+      - quote: Clara_D4_Q4
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D4_Q5
+      - quote: Clara_D4_Q5
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D4_Q6
+      - quote: Clara_D4_Q6
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D4_Q7
+      - quote: Clara_D4_Q7
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D4_Q8
+      - quote: Clara_D4_Q8
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D4_Q9
+      - quote: Clara_D4_Q9
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D4_Q10
+      - quote: Clara_D4_Q10
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D4_Q11
+      - quote: Clara_D4_Q11
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D4_Q12
+      - quote: Clara_D4_Q12
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
@@ -21425,32 +21495,32 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: L1_Clara_D5_Q1
+      - quote: Clara_D5_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: L1_Clara_D5_Q2
+      - quote: Clara_D5_Q2
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D5_Q3
+      - quote: Clara_D5_Q3
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D5_Q4
+      - quote: Clara_D5_Q4
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D5_Q5
+      - quote: Clara_D5_Q5
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
@@ -21459,10 +21529,10 @@ MonoBehaviour:
           type: 3}
       canAskQuestions: 0
       hasChoices: 0
-      endDialog: 1
+      endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: L1_Clara_D6_Q1
+      - quote: Clara_D6_Q1
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
@@ -21471,29 +21541,29 @@ MonoBehaviour:
           type: 3}
       canAskQuestions: 1
       hasChoices: 0
-      endDialog: 1
+      endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: L1_Clara_D7_Q1
+      - quote: Clara_D7_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D7_Q2
+      - quote: Clara_D7_Q2
         characterName: Clara
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
           type: 3}
-      - quote: L1_Clara_D7_Q3
+      - quote: Clara_D7_Q3
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D7_Q4
+      - quote: Clara_D7_Q4
         characterName: Clara
         isInLeftSide: 0
         newStickerIndexList: 
@@ -21505,41 +21575,51 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: L1_Clara_D8_Q1
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D8_Q2
-        characterName: Clara
+      - quote: 
+        characterName: 
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
-      - quote: L1_Clara_D8_Q3
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D8_Q4
-        characterName: Clara
+      - quote: 
+        characterName: 
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
-      - quote: L1_Clara_D8_Q5
-        characterName: Kenneth
-        isInLeftSide: 1
+        spriteCharacter: {fileID: 0}
+      - quote: 
+        characterName: 
+        isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D8_Q6
-        characterName: Kenneth
-        isInLeftSide: 1
+      - quote: 
+        characterName: 
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: 
+        characterName: 
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: 
+        characterName: 
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: 
+        characterName: 
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: 
+        characterName: 
+        isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
@@ -21547,67 +21627,7 @@ MonoBehaviour:
       hasChoices: 0
       endDialog: 0
       buttonsList: []
-    - dialog:
-      - quote: L1_Clara_D9_Q1
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D9_Q2
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D9_Q3
-        characterName: Clara
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
-      - quote: L1_Clara_D9_Q4
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: L1_Clara_D9_Q5
-        characterName: Clara
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
-      - quote: L1_Clara_D9_Q6
-        characterName: Clara
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
-      - quote: L1_Clara_D9_Q7
-        characterName: Clara
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
-      - quote: L1_Clara_D9_Q8
-        characterName: Clara
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
-      - quote: L1_Clara_D9_Q9
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
+    - dialog: []
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
@@ -21638,7 +21658,7 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: L1_Clara_D15_Q1
+      - quote: Clara_D15_Q1
         characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
@@ -25108,7 +25128,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 806600032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.29, y: -4.660113, z: 0}
+  m_LocalPosition: {x: 5.29, y: -4.660113, z: 0.8169146}
   m_LocalScale: {x: 0.9603, y: 0.9603, z: 0.9603}
   m_Children:
   - {fileID: 1460634277}
@@ -25603,7 +25623,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833803108}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.33, y: -0.63, z: 2.08}
+  m_LocalPosition: {x: -20.32, y: -0.63, z: 2.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 667359989}
@@ -27737,6 +27757,832 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.data[3]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.data[4]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.data[5]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.data[6]
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.data[7]
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[3]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[4]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[5]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[6]
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[7]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[0].quote
+      value: Lou_D0_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[1].quote
+      value: Lou_D0_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[2].quote
+      value: Lou_D0_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[3].quote
+      value: Lou_D0_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[4].quote
+      value: Lou_D0_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[5].quote
+      value: Lou_D0_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[6].quote
+      value: Lou_D0_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[7].quote
+      value: Lou_D0_Q8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[8].quote
+      value: Lou_D0_Q9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[9].quote
+      value: Lou_D0_Q10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[10].quote
+      value: Lou_D0_Q11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[11].quote
+      value: Lou_D0_Q12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[12].quote
+      value: Lou_D0_Q13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[13].quote
+      value: Lou_D0_Q14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[14].quote
+      value: Lou_D0_Q15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[15].quote
+      value: Lou_D0_Q16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[16].quote
+      value: Lou_D0_Q17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[17].quote
+      value: Lou_D0_Q18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[18].quote
+      value: Lou_D0_Q19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[19].quote
+      value: Lou_D0_Q20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[20].quote
+      value: Lou_D0_Q21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[21].quote
+      value: Lou_D0_Q22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[22].quote
+      value: Lou_D0_Q23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[23].quote
+      value: Lou_D0_Q24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[24].quote
+      value: Lou_D0_Q25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[25].quote
+      value: Lou_D0_Q26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[26].quote
+      value: Lou_D0_Q27
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[27].quote
+      value: Lou_D0_Q28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[1].dialog.Array.data[0].quote
+      value: Lou_D1_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[0].quote
+      value: Lou_D5_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[1].quote
+      value: Lou_D5_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[2].quote
+      value: Lou_D5_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[3].quote
+      value: Lou_D5_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[4].quote
+      value: Lou_D5_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[5].quote
+      value: Lou_D5_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[6].quote
+      value: Lou_D5_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[7].quote
+      value: Lou_D5_Q8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[8].quote
+      value: Lou_D5_Q9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[9].quote
+      value: Lou_D5_Q10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[10].quote
+      value: Lou_D5_Q11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[11].quote
+      value: Lou_D5_Q12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[12].quote
+      value: Lou_D5_Q13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[13].quote
+      value: Lou_D5_Q14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[14].quote
+      value: Lou_D5_Q15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[15].quote
+      value: Lou_D5_Q16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[15].characterName
+      value: Dr. Lou Ellis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[15].isInLeftSide
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[16].quote
+      value: Lou_D5_Q17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[17].quote
+      value: Lou_D5_Q18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[18].quote
+      value: Lou_D5_Q19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[16].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[16].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[17].isInLeftSide
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[17].characterName
+      value: Dr. Lou Ellis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[18].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[18].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[0].quote
+      value: Lou_D6_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[1].quote
+      value: Lou_D6_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[2].quote
+      value: Lou_D6_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[3].quote
+      value: Lou_D6_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[4].quote
+      value: Lou_D6_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[5].quote
+      value: Lou_D6_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[6].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[6].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[6].quote
+      value: Lou_D6_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[7].isInLeftSide
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[7].characterName
+      value: Dr. Lou Ellis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[7].quote
+      value: Lou_D6_Q8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[8].quote
+      value: Lou_D6_Q9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.data[0].quote
+      value: Lou_D8_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.data[1].quote
+      value: Lou_D8_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.data[2].quote
+      value: Lou_D8_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.data[3].quote
+      value: Lou_D8_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[0].quote
+      value: Lou_D2_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[0].quote
+      value: Lou_D3_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[0].quote
+      value: Lou_D7_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[0].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[1].quote
+      value: Lou_D7_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[1].characterName
+      value: Dr. Lou Ellis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[2].quote
+      value: Lou_D7_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[2].characterName
+      value: Dr. Lou Ellis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[3].quote
+      value: Lou_D7_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[3].characterName
+      value: Dr. Lou Ellis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[4].quote
+      value: Lou_D7_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[4].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[4].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[0].quote
+      value: Lou_D9_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[0].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[1].quote
+      value: Lou_D9_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[1].characterName
+      value: Dr. Lou Ellis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[2].quote
+      value: Lou_D9_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[2].characterName
+      value: Dr. Lou Ellis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[3].quote
+      value: Lou_D9_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[3].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[4].quote
+      value: Lou_D9_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[4].characterName
+      value: Dr. Lou Ellis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[4].isInLeftSide
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[3].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].canAskQuestions
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[0].quote
+      value: Lou_D10_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[0].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[1].quote
+      value: Lou_D10_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[1].characterName
+      value: Dr. Lou Ellis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[2].quote
+      value: Lou_D10_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[2].characterName
+      value: Dr. Lou Ellis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[3].quote
+      value: Lou_D10_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[3].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[3].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[4].quote
+      value: Lou_D10_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[4].characterName
+      value: Dr. Lou Ellis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[0].quote
+      value: Lou_D11_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[0].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[1].quote
+      value: Lou_D11_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[1].characterName
+      value: Dr. Lou Ellis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[0].quote
+      value: Lou_D12_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[0].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[1].quote
+      value: Lou_D12_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[1].characterName
+      value: Dr. Lou Ellis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[2].quote
+      value: Lou_D12_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[2].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[3].quote
+      value: Lou_D12_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[3].characterName
+      value: Dr. Lou Ellis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[4].quote
+      value: Lou_D12_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[4].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[5].quote
+      value: Lou_D12_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[5].characterName
+      value: Dr. Lou Ellis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[6].quote
+      value: Lou_D12_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[6].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[2].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[4].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[6].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].endDialog
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[1].endDialog
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[4].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947820980913, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].canAskQuestions
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6373200947195682547, guid: 5df1687d39e3507468932e2b3d31a557,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5df1687d39e3507468932e2b3d31a557, type: 3}
 --- !u!1 &919977222
@@ -32588,9 +33434,790 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
         type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.size
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
       propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[29].eventTrigger.Array.data[0]
       value: TalkToKurt
       objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[1].dialog.Array.data[0].quote
+      value: Kurt_D1_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[0].quote
+      value: Kurt_D0_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[1].quote
+      value: Kurt_D0_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[2].quote
+      value: Kurt_D0_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[3].quote
+      value: Kurt_D0_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[4].quote
+      value: Kurt_D0_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[5].quote
+      value: Kurt_D0_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[6].quote
+      value: Kurt_D0_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[7].quote
+      value: Kurt_D0_Q8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[8].quote
+      value: Kurt_D0_Q9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[9].quote
+      value: Kurt_D0_Q10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[10].quote
+      value: Kurt_D0_Q11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[11].quote
+      value: Kurt_D0_Q12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[12].quote
+      value: Kurt_D0_Q13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[13].quote
+      value: Kurt_D0_Q14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[14].quote
+      value: Kurt_D0_Q15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[15].quote
+      value: Kurt_D0_Q16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[16].quote
+      value: Kurt_D0_Q17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[17].quote
+      value: Kurt_D0_Q18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[18].quote
+      value: Kurt_D0_Q19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[19].quote
+      value: Kurt_D0_Q20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[20].quote
+      value: Kurt_D0_Q21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[21].quote
+      value: Kurt_D0_Q22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[22].quote
+      value: Kurt_D0_Q23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[23].quote
+      value: Kurt_D0_Q24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[23].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[23].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[24].quote
+      value: Kurt_D0_Q25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[24].characterName
+      value: Kurt Kecker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[24].isInLeftSide
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[25].quote
+      value: Kurt_D0_Q26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[26].quote
+      value: Kurt_D0_Q27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[26].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[26].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[27].quote
+      value: Kurt_D0_Q28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[28].quote
+      value: Kurt_D0_Q29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[28].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[28].isInLeftSide
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[29].quote
+      value: Kurt_D0_Q30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[29].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[29].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[0].quote
+      value: Kurt_D5_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[1].quote
+      value: Kurt_D5_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[2].quote
+      value: Kurt_D5_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[3].quote
+      value: Kurt_D5_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[4].quote
+      value: Kurt_D5_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[5].quote
+      value: Kurt_D5_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[6].quote
+      value: Kurt_D5_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[7].quote
+      value: Kurt_D5_Q8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[8].quote
+      value: Kurt_D5_Q9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[9].quote
+      value: Kurt_D5_Q10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[10].quote
+      value: Kurt_D5_Q11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[11].quote
+      value: Kurt_D5_Q12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].endDialog
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[0].quote
+      value: Kurt_D6_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[1].quote
+      value: Kurt_D6_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[2].quote
+      value: Kurt_D6_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[3].quote
+      value: Kurt_D6_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[4].quote
+      value: Kurt_D6_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[5].quote
+      value: Kurt_D6_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[6].quote
+      value: Kurt_D6_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[7].quote
+      value: Kurt_D6_Q8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[8].quote
+      value: Kurt_D6_Q9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[4].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.data[0].quote
+      value: Kurt_D7_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.data[1].quote
+      value: Kurt_D7_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.data[2].quote
+      value: Kurt_D7_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.data[3].quote
+      value: Kurt_D7_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.data[4].quote
+      value: Kurt_D7_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.data[5].quote
+      value: Kurt_D7_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.data[6].quote
+      value: Kurt_D7_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[0].quote
+      value: Kurt_D8_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[1].quote
+      value: Kurt_D8_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[2].quote
+      value: Kurt_D8_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[3].quote
+      value: Kurt_D8_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[4].quote
+      value: Kurt_D8_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[5].quote
+      value: Kurt_D8_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[12].canAskQuestions
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[0].quote
+      value: Kurt_D9_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[1].quote
+      value: Kurt_D9_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[2].quote
+      value: Kurt_D9_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[3].quote
+      value: Kurt_D9_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[4].quote
+      value: Kurt_D9_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[5].quote
+      value: Kurt_D9_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[6].quote
+      value: Kurt_D9_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[7].quote
+      value: Kurt_D9_Q8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[8].quote
+      value: Kurt_D9_Q9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[9].quote
+      value: Kurt_D9_Q10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[10].quote
+      value: Kurt_D9_Q11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[11].quote
+      value: Kurt_D9_Q12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[12].quote
+      value: Kurt_D9_Q13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[13].quote
+      value: Kurt_D9_Q14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[14].quote
+      value: Kurt_D9_Q15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[0].quote
+      value: Kurt_D11_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[1].quote
+      value: Kurt_D11_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[2].quote
+      value: Kurt_D11_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[3].quote
+      value: Kurt_D11_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[4].quote
+      value: Kurt_D11_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[5].quote
+      value: Kurt_D11_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[0].quote
+      value: Kurt_D12_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[1].quote
+      value: Kurt_D12_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[2].quote
+      value: Kurt_D12_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[3].quote
+      value: Kurt_D12_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[4].quote
+      value: Kurt_D12_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[0].quote
+      value: Kurt_D13_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[1].quote
+      value: Kurt_D13_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[2].quote
+      value: Kurt_D13_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[3].quote
+      value: Kurt_D13_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[4].quote
+      value: Kurt_D13_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[5].quote
+      value: Kurt_D13_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[6].quote
+      value: Kurt_D13_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[7].quote
+      value: Kurt_D13_Q8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[8].quote
+      value: Kurt_D13_Q9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[9].quote
+      value: Kurt_D13_Q10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[10].quote
+      value: Kurt_D13_Q11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[11].quote
+      value: Kurt_D13_Q12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[12].quote
+      value: Kurt_D13_Q13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[0].quote
+      value: Kurt_D14_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[1].quote
+      value: Kurt_D14_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[2].quote
+      value: Kurt_D14_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[3].quote
+      value: Kurt_D14_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[4].quote
+      value: Kurt_D14_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[5].quote
+      value: Kurt_D14_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[6].quote
+      value: Kurt_D14_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[7].quote
+      value: Kurt_D14_Q8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[8].quote
+      value: Kurt_D14_Q9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[9].quote
+      value: Kurt_D14_Q10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[10].quote
+      value: Kurt_D14_Q11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[11].quote
+      value: Kurt_D14_Q12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[12].quote
+      value: Kurt_D14_Q13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[13].quote
+      value: Kurt_D14_Q14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[14].quote
+      value: Kurt_D14_Q15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[15].quote
+      value: Kurt_D14_Q16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[16].quote
+      value: Kurt_D14_Q17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[0].quote
+      value: Kurt_D15_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[1].quote
+      value: Kurt_D15_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[2].quote
+      value: Kurt_D15_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[3].quote
+      value: Kurt_D15_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[4].quote
+      value: Kurt_D15_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[5].quote
+      value: Kurt_D15_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[6].quote
+      value: Kurt_D15_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[7].quote
+      value: Kurt_D15_Q8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[8].quote
+      value: Kurt_D15_Q9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[12].dialog.Array.data[0].quote
+      value: Kurt_D2_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[13].dialog.Array.data[0].quote
+      value: Kurt_D3_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309795452977, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d18fcc2da7a132469f3897b85b3c07e, type: 3}
 --- !u!1 &1107775074
@@ -32878,7 +34505,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115622982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.98, y: 1.75, z: 2.67551}
+  m_LocalPosition: {x: -6.22, y: 1.75, z: 2.67551}
   m_LocalScale: {x: 11, y: 11, z: 8}
   m_Children: []
   m_Father: {fileID: 667359989}
@@ -40643,7 +42270,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 4}
+  m_Size: {x: 2, y: 4}
   m_EdgeRadius: 0
 --- !u!1 &1467519090 stripped
 GameObject:
@@ -55822,13 +57449,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: commandList.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[0].objectToMove
       value: 
       objectReference: {fileID: 1107775074}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[2].objectToMove
       value: 
-      objectReference: {fileID: 978765920}
+      objectReference: {fileID: 0}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[3].objectToMove
       value: 
@@ -55877,6 +57512,66 @@ PrefabInstance:
       propertyPath: annexInformation.Array.data[6].newPosition
       value: 
       objectReference: {fileID: 1376588989}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: commandList.Array.data[7]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[7].objectToMove
+      value: 
+      objectReference: {fileID: 978765920}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[7].time
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[7].newParent
+      value: 
+      objectReference: {fileID: 327148842}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[7].newPosition
+      value: 
+      objectReference: {fileID: 1376588989}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: commandList.Array.data[6]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: commandList.Array.data[5]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: commandList.Array.data[4]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: commandList.Array.data[3]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: commandList.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: commandList.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[1].direction
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[1].time
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[3].direction
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[3].time
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6747615265874859620, guid: 471f45fa56e850a428f90def4e6c2923,
         type: 3}
       propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[0].quote
@@ -57843,7 +59538,7 @@ PrefabInstance:
     - target: {fileID: 1123860177028353530, guid: db3d177d5cb9328429397b9f9245c057,
         type: 3}
       propertyPath: allDialogs.listOfDialogs.Array.size
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 1123860177028353530, guid: db3d177d5cb9328429397b9f9245c057,
         type: 3}
@@ -58851,7 +60546,7 @@ PrefabInstance:
     - target: {fileID: 1123860177028353530, guid: db3d177d5cb9328429397b9f9245c057,
         type: 3}
       propertyPath: allDialogs.listOfDialogs.Array.data[13].dialog.Array.data[3].quote
-      value: White_D13_Q4
+      value: White_D14_Q4
       objectReference: {fileID: 0}
     - target: {fileID: 1123860177028353530, guid: db3d177d5cb9328429397b9f9245c057,
         type: 3}
@@ -60114,7 +61809,7 @@ PrefabInstance:
     - target: {fileID: 1123860177028353530, guid: db3d177d5cb9328429397b9f9245c057,
         type: 3}
       propertyPath: allDialogs.listOfDialogs.Array.data[21].dialog.Array.data[5].characterName
-      value: Kenneth
+      value: W. White
       objectReference: {fileID: 0}
     - target: {fileID: 1123860177028353530, guid: db3d177d5cb9328429397b9f9245c057,
         type: 3}
@@ -60225,7 +61920,7 @@ PrefabInstance:
     - target: {fileID: 1123860177028353530, guid: db3d177d5cb9328429397b9f9245c057,
         type: 3}
       propertyPath: allDialogs.listOfDialogs.Array.data[22].dialog.Array.data[5].characterName
-      value: Kenneth
+      value: W. White
       objectReference: {fileID: 0}
     - target: {fileID: 1123860177028353530, guid: db3d177d5cb9328429397b9f9245c057,
         type: 3}
@@ -61687,6 +63382,12 @@ PrefabInstance:
       propertyPath: allDialogs.listOfDialogs.Array.data[21].dialog.Array.data[3].isInLeftSide
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1123860176220558204, guid: db3d177d5cb9328429397b9f9245c057,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3d177d5cb9328429397b9f9245c057, type: 3}
 --- !u!1 &1896983994
@@ -64437,6 +66138,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8326363363774141359, guid: b6cb05b043840d240bf034f949a2079a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 82a9bf6f81ccc6848aced4141ed3e86a,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6cb05b043840d240bf034f949a2079a, type: 3}
 --- !u!1 &1968415196
@@ -65623,7 +67330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007885061}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.98, y: 1.75, z: 2.67551}
+  m_LocalPosition: {x: -6.22, y: 1.75, z: 2.67551}
   m_LocalScale: {x: 11, y: 11, z: 8}
   m_Children: []
   m_Father: {fileID: 667359989}
@@ -69232,6 +70939,35 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1156105002}
+    - target: {fileID: 445984924, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
+      propertyPath: spacing.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 445984924, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
+      propertyPath: spacing.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 445984924, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
+      propertyPath: newFeedbackSize.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 445984924, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
+      propertyPath: newFeedbackSize.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445984924, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
+      propertyPath: newPagePosition.x
+      value: -75
+      objectReference: {fileID: 0}
+    - target: {fileID: 445984924, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
+      propertyPath: newPagePosition.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019564226954291519, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
 --- !u!1 &1714092047808702668 stripped

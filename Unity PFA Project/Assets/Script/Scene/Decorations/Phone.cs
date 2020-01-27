@@ -42,7 +42,7 @@ public class Phone : MonoBehaviour
                     }
                     else if(player.GetComponent<Interactions>().PnjMet.Contains(transform.GetChild(i).name))
                     {
-                        Debug.Log("Meeting Needed");
+                        Debug.Log("Meeting with " + transform.GetChild(i).name + " Needed");
                         player.GetComponent<Interactions>().CloseBookExe();
                         GetComponent<BoxCollider2D>().enabled = false;
                         player.GetComponent<Interactions>().PNJContact = transform.GetChild(i).gameObject;

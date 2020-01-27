@@ -172,6 +172,7 @@ public class Interactions : MonoBehaviour
             if(GameObject.Find("Tutorial").GetComponent<TutoKenneth>().canEsc && PNJContact.GetComponent<PNJ>().dialogIndex > 0 && PNJContact.GetComponent<PNJ>().allDialogs.listOfDialogs[PNJContact.GetComponent<PNJ>().dialogIndex].canAskQuestions)
             {
                 PNJContact.GetComponent<PNJ>().EndDialog();
+                Debug.Log("QuitDialog");
                 carnetUI.GetComponent<Animator>().SetBool("ClickOn", false);
                 dialAndBookCanvas.transform.GetChild(3).gameObject.SetActive(false);
                 //animator.SetBool("Talk", false);
@@ -181,7 +182,7 @@ public class Interactions : MonoBehaviour
     }
     void ChangeLineOfDialog()
     {
-        if(Input.GetButtonDown("Interaction") && !dialAndBookCanvas.transform.Find("Panel").gameObject.activeInHierarchy)
+        if(Input.GetButtonDown("Interaction") && !dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.activeInHierarchy)
         {
             if(PNJContact.GetComponent<PNJ>().quoteFinished)
             {
@@ -204,7 +205,7 @@ public class Interactions : MonoBehaviour
     }
     void OpenDialog()
     {
-        if(Input.GetButtonDown("Interaction") && PNJContact != null && !dialAndBookCanvas.transform.Find("Panel").gameObject.activeInHierarchy)
+        if(Input.GetButtonDown("Interaction") && PNJContact != null && !dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.activeInHierarchy)
         {
             if(PNJContact.tag == "PNJinteractable" || PNJContact.tag == "Item" || PNJContact.tag == "Interaction")
             {
@@ -242,7 +243,7 @@ public class Interactions : MonoBehaviour
     public void CloseBookExe()
     {
         //Camera.main.GetComponent<Camera_Manager>().NotOnCarnet();
-        dialAndBookCanvas.transform.Find("Panel").gameObject.SetActive(false);
+        dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.SetActive(false);
         //dialAndBookCanvas.transform.GetChild(dialAndBookCanvas.transform.childCount - 1).gameObject.SetActive(false);
         carnetUI.GetComponent<Animator>().SetBool("ClickOn", false);
         if(isInDialog)
@@ -259,7 +260,8 @@ public class Interactions : MonoBehaviour
     {
         dialAndBookCanvas.SetActive(true);
         boardCanvas.SetActive(false);
-        ChangeState(State.Normal);
+        StartCoroutine(TimerQuitDialog());
+        //ChangeState(State.Normal);
     }
 
     public void ChangeState(State newState)
@@ -268,9 +270,11 @@ public class Interactions : MonoBehaviour
         switch(newState)
         {
             case State.InCinematic:
+            isInCinematic = false;
+            dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.SetActive(false);
             carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);
             carnetUI.GetComponent<Animator>().SetBool("InDialog", false);
-            dialAndBookCanvas.transform.GetChild(5).gameObject.SetActive(false);
+            dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.SetActive(false);
             DisableMovements();
             state = State.InCinematic;
             break;

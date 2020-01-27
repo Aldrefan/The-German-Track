@@ -21,6 +21,7 @@ public class Camera_BoardMovements : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Kenneth");
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         saver = GameObject.FindObjectOfType<Saver>().gameObject;
@@ -28,7 +29,7 @@ public class Camera_BoardMovements : MonoBehaviour
 
     void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     public void GetPosition()
