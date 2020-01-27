@@ -51,7 +51,7 @@ public class ObjectiveNotif : MonoBehaviour
 
     void SetNotifVisible()
     {
-        if(NotifQueue[0] != null)
+        if(NotifQueue.Count !=0 & NotifQueue[0] != null)
         {
 
             if (notifText.text != NotifQueue[0].goalTitle)
