@@ -15,7 +15,7 @@ public class LoadSaveButton : MonoBehaviour
 
     void LoadButtonActive()
     {
-        if (File.Exists(Application.dataPath + "/Saves/gameSave.txt"))
+        if (File.Exists(Application.dataPath + "/Saves/gameSave.tgt"))
         {
             this.GetComponent<Button>().interactable = true;
         }

@@ -225,18 +225,27 @@ public class SaveFile : MonoBehaviour
             }
         }
 
-        LoadSettings();
-
-        GameSaveSystem.GameDataInput(
-            Camera.main.GetComponent<CameraFollow>(),
-            FindObjectOfType<ActiveCharacterScript>(),
-            player,
-            FindObjectOfType<DayNightLight>(),
-            GameObject.FindObjectOfType<Ken_Canvas_Infos>().transform.Find("Panel").Find("Carnet").Find("Goal").Find("GoalFrame").GetComponent<CarnetGoal>());
+        if (GameObject.FindGameObjectWithTag("Player"))
+        {
+            GameSaveSystem.GameDataInput(
+                Camera.main.GetComponent<CameraFollow>(),
+                FindObjectOfType<ActiveCharacterScript>(),
+                player,
+                FindObjectOfType<DayNightLight>(),
+                GameObject.FindObjectOfType<Ken_Canvas_Infos>().transform.Find("Panel").Find("Carnet").Find("Goal").Find("GoalFrame").GetComponent<CarnetGoal>());
+        }
 
         GameSaveSystem.SettingsDataInput(
             Resources.Load<AudioMixer>("SoundMixer/MusicMixer"),
             Resources.Load<AudioMixer>("SoundMixer/FXMixer"),
             FindObjectOfType<LanguageManager>());
+
+        //StartCoroutine(TimerLoad());
+    }
+
+    IEnumerator TimerLoad()
+    {
+        yield return new WaitForSeconds(0.5f);
+        LoadSettings();
     }
 }

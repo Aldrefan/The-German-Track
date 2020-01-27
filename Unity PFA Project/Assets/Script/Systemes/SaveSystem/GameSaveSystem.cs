@@ -29,7 +29,12 @@ public static class GameSaveSystem
         if (!Directory.Exists(SAVE_FOLDER))
         {
             Directory.CreateDirectory(SAVE_FOLDER);
+
+
         }
+        Debug.Log(new DirectoryInfo(SAVE_FOLDER + "/settingsSave.tgt").FullName);
+        Debug.Log(new DirectoryInfo(SAVE_FOLDER + "/settingsSave.tgt").Exists);
+        Debug.Log(File.Exists(SAVE_FOLDER + "/settingsSave.tgt"));
     }
 
     public static void SaveGameData()
@@ -37,14 +42,14 @@ public static class GameSaveSystem
         GameData saveObject = new GameData(camScript, currentCharacters, actualPlayer, directionalLight, goalFrame);
         string json = JsonUtility.ToJson(saveObject);
 
-        File.WriteAllText(SAVE_FOLDER + "/gameSave.txt", json);
+        File.WriteAllText(SAVE_FOLDER + "/gameSave.tgt", json);
     }
 
     public static GameData LoadGameData()
     {
-        if (File.Exists(SAVE_FOLDER + "/gameSave.txt"))
+        if (File.Exists(SAVE_FOLDER + "/gameSave.tgt"))
         {
-            string saveString = File.ReadAllText(SAVE_FOLDER + "/gameSave.txt");
+            string saveString = File.ReadAllText(SAVE_FOLDER + "/gameSave.tgt");
             GameData saveObject = JsonUtility.FromJson<GameData>(saveString);
             return saveObject;
         }
@@ -63,25 +68,28 @@ public static class GameSaveSystem
         effectMixer.GetFloat("fxVolume", out effectVol);
 
 
-        SettingsData settingObject = new SettingsData(musicVol, effectVol, langManager.language);
+        SettingsData settingObject = new SettingsData(false, musicVol, effectVol, langManager.language, Screen.fullScreen, new Vector2(Screen.currentResolution.width, Screen.currentResolution.height));
         string json = JsonUtility.ToJson(settingObject);
 
-        File.WriteAllText(SAVE_FOLDER + "/settingsSave.txt", json);
+        File.WriteAllText(SAVE_FOLDER + "/settingsSave.tgt", json);
     }
 
     public static SettingsData LoadSettingsData()
     {
-        if (File.Exists(SAVE_FOLDER + "/settingsSave.txt"))
+        if (File.Exists(SAVE_FOLDER + "/settingsSave.tgt"))
         {
-            string saveString = File.ReadAllText(SAVE_FOLDER + "/gameSave.txt");
+            string saveString = File.ReadAllText(SAVE_FOLDER + "/settingsSave.tgt");
             SettingsData newSettingsSave = JsonUtility.FromJson<SettingsData>(saveString);
             return newSettingsSave;
         }
         else
         {
-            SettingsData defaultSettingsSave = new SettingsData();
-            string json = JsonUtility.ToJson(defaultSettingsSave);
-            File.WriteAllText(SAVE_FOLDER + "/settingsSave.txt", json);
+            SettingsData defaultSettingsSave = new SettingsData(true);
+            if (File.Exists(SAVE_FOLDER))
+            {
+                string json = JsonUtility.ToJson(defaultSettingsSave);
+                File.WriteAllText(SAVE_FOLDER + "/settingsSave.tgt", json);
+            }
             return defaultSettingsSave;
         }
     }
@@ -89,7 +97,7 @@ public static class GameSaveSystem
 
     public static string ReturnLevelName()
     {
-        string saveString = File.ReadAllText(SAVE_FOLDER + "/gameSave.txt");
+        string saveString = File.ReadAllText(SAVE_FOLDER + "/gameSave.tgt");
         GameData saveObject = JsonUtility.FromJson<GameData>(saveString);
         string gameActualLevel = saveObject.currentLevel;
         return gameActualLevel;

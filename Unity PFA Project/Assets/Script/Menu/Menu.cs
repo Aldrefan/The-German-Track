@@ -73,6 +73,9 @@ public class Menu : MonoBehaviour
         //active le menu à sa forme initiale
         ReturnMenu();
 
+        //settings initialisation
+        saver.GetComponent<SaveFile>().LoadSettings();
+
 
         //resolution dropdown
         resolutions = Screen.resolutions;
@@ -117,9 +120,6 @@ public class Menu : MonoBehaviour
         musicSlider.value = musicValue;
         fxSlider.value = fxValue;
 
-
-        //settings initialisation
-        saver.GetComponent<SaveFile>().LoadSettings();
 
 
         //check if save exist
@@ -197,7 +197,7 @@ public class Menu : MonoBehaviour
     }
     void LoadButtonActive()
     {
-        if (File.Exists(Application.dataPath + "/Saves/gameSave.txt"))
+        if (File.Exists(Application.dataPath + "/Saves/gameSave.tgt"))
         {
             loadButton.GetComponent<Button>().interactable = true;
         }
