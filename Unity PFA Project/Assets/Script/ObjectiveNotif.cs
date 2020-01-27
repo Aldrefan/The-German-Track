@@ -15,6 +15,8 @@ public class ObjectiveNotif : MonoBehaviour
     [HideInInspector]
     public string textToNotify;
 
+    public List<StringToNotif> NotifQueue = new List<StringToNotif>();
+
     // Update is called once per frame
     void Update()
     {
@@ -49,23 +51,54 @@ public class ObjectiveNotif : MonoBehaviour
 
     void SetNotifVisible()
     {
-        if(notifText.text != textToNotify)
+        if(NotifQueue[0] != null)
         {
 
-            notifText.text = textToNotify;
-            if(notifText.text != "")
+            if (notifText.text != NotifQueue[0].goalTitle)
             {
-                notifAtor.SetBool("Visible", true);
 
+                notifText.text = NotifQueue[0].goalTitle;
+                if (notifText.text != "")
+                {
+                    if(notifAtor.GetBool("ValidGoal")!= NotifQueue[0].goalAchieved)
+                    {
+                        notifAtor.SetBool("ValidGoal", NotifQueue[0].goalAchieved);
+
+                    }
+                    notifAtor.SetBool("Visible", true);
+
+                }
+                StartCoroutine(UnvisibleNotif());
             }
-            StartCoroutine(UnvisibleNotif());
         }
     }
+
+
 
     IEnumerator UnvisibleNotif()
     {
         yield return new WaitForSeconds(visibilityTime);
+        if (notifAtor.GetBool("ValidGoal"))
+        {
+            notifAtor.SetBool("ValidGoal", false);
+
+        }
         notifAtor.SetBool("Visible", false);
 
+        NotifQueue.RemoveAt(0);
+
+    }
+}
+
+[System.Serializable]
+public class StringToNotif
+{
+    public bool goalAchieved;
+    public string goalTitle;
+
+    public StringToNotif(string newGoal, bool newState)
+    {
+        goalTitle = newGoal;
+        goalAchieved = newState;
     }
 }
