@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbbde7afcdde144819f5765541e6c7, type: 3}
   m_Name: Fait_43
   m_EditorClassIdentifier: 
-  frenchText: "Kurt a parl\xE9 a son fr\xE8re des lettres cod\xE9es de Loraine"
-  englishText: Kurt told his brother about Loraine's coded letters
+  Text: ST_43_Fait_Text
   color: {r: 0.8352941, g: 1, b: 0.8235294, a: 1}
   index: 43
   stickerBackground: {fileID: 21300000, guid: 2455fbd84e3316844b622fac26018824, type: 3}
   backgoundSize: {x: 100, y: 100}
-  frenchTooltip: "Loraine est devenue folle et Viktor l'a trait\xE9 d'idiot"
-  englishTooltip: Loraine lost her mind and Viktor called him an idiot
+  tooltipText: ST_43_Fait_Tooltip
