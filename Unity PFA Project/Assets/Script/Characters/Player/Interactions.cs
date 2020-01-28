@@ -112,6 +112,7 @@ public class Interactions : MonoBehaviour
             break;
 
             case State.Pause :
+            QuitPauseMenu();
             break;
         }
     }
@@ -423,6 +424,20 @@ public class Interactions : MonoBehaviour
         {
             ChangeState(State.Pause);
         }
+    }
+
+    void QuitPauseMenu()
+    {
+        if(Input.GetButtonDown("Cancel"))
+        {
+            QuitPauseMenuExe();
+        }
+    }
+
+    void QuitPauseMenuExe()
+    {
+        GameObject.FindObjectOfType<Menu>().gameObject.SetActive(false);
+        ChangeState(State.Normal);
     }
 
     IEnumerator TimerQuitDialog()

@@ -35,6 +35,7 @@ public class Menu : MonoBehaviour
     public Slider fxSlider;
     public Dropdown resolutionDropdown;
     Resolution[] resolutions;
+    public GameObject fullscreenCheckbox;
     public GameObject englishArrow;
     public GameObject frenchArrow;
 
@@ -113,12 +114,21 @@ public class Menu : MonoBehaviour
         else FrenchSelection();
 
 
+        //fullscreen checkbox initialisation
+        if (Screen.fullScreen) fullscreenCheckbox.GetComponent<Toggle>().isOn = true;
+        else fullscreenCheckbox.GetComponent<Toggle>().isOn = false;
+
+
         //music initialisation
         musicMixer.GetFloat("musicVolume", out musicValue);
         fxMixer.GetFloat("fxVolume", out fxValue);
 
         musicSlider.value = musicValue;
         fxSlider.value = fxValue;
+        
+        
+        //settings initialisation
+        saver.GetComponent<SaveFile>().LoadSettings();
 
 
 

@@ -49,7 +49,7 @@ public class Shortcut : MonoBehaviour
     public void Teleport()
     {
         fadePanel.GetComponent<Animator>().SetTrigger("FadeIn");
-        GameObject.FindObjectOfType<Saver>().lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
+        //GameObject.FindObjectOfType<Saver>().lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
         StartCoroutine("Respawn");
         linkedWith.transform.parent.parent.GetComponent<SceneInformations>().PlaceCamera();
     }
@@ -92,14 +92,14 @@ public class Shortcut : MonoBehaviour
             transform.parent.parent.gameObject.SetActive(false);
             linkedWith.transform.parent.parent.GetComponent<SceneInformations>().ShowZoneName();
         }
-        else 
-        {
-            Saver saver = GameObject.FindObjectOfType<Saver>();
-            saver.lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
+        //else 
+        //{
+            //Saver saver = GameObject.FindObjectOfType<Saver>();
+            //saver.lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
             /*JsonSave save = SaveGameManager.GetCurrentSave();
             save.lieu = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
-            SaveGameManager.Save(); */
-        }
+            SaveGameManager.Save();*/
+        //}
         if(!linkedWith.transform.parent.parent.GetComponent<SceneInformations>().fixedCamera)
         {
             Camera.main.GetComponent<CameraFollow>().isFollowing = true;

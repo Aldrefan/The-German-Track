@@ -24,7 +24,6 @@ public class Camera_BoardMovements : MonoBehaviour
         player = GameObject.Find("Kenneth");
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
-        saver = GameObject.FindObjectOfType<Saver>().gameObject;
     }
 
     void Awake()
@@ -72,7 +71,7 @@ public class Camera_BoardMovements : MonoBehaviour
 
     public void QuitBoardExe()
     {
-        if(boardCanvas.transform.childCount > 1)
+        /*if(boardCanvas.transform.childCount > 1)
         {
             for(int i = 1; i < boardCanvas.transform.childCount; i++)
             {
@@ -93,7 +92,7 @@ public class Camera_BoardMovements : MonoBehaviour
                     saver.GetComponent<Saver>().stickersPositionOnBoardFM.Add(boardCanvas.transform.GetChild(i).localPosition);
                 }
             }
-        }
+        }*/
         GetComponent<CameraFollow>().actualRoom.SetActive(true);
         player.GetComponent<Rigidbody2D>().gravityScale = 1;
         player.GetComponent<Interactions>().CloseBoard();
