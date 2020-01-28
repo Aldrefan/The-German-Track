@@ -107,6 +107,10 @@ public class TutoKenneth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.O)) allowSave();
+        if(Input.GetKeyDown(KeyCode.L)) preventSave();
+
+
         if(!tutoDone.dialogsDone)
         {
             if(refNeeded.leftDialog.activeSelf || refNeeded.rightDialog.activeSelf)
@@ -568,8 +572,9 @@ public class TutoKenneth : MonoBehaviour
         {
             objet.GetComponent<Button>().interactable = false;
             objet.transform.GetChild(1).gameObject.SetActive(true);
-            objet.transform.GetChild(0).GetComponent<Text>().color = new Color(156,156,156);
-            objet.transform.GetChild(1).GetComponent<Text>().color = new Color(156,156,156);
+            objet.GetComponent<Image>().color = new Color32(156,156,156,255);
+            objet.transform.GetChild(0).GetComponent<Text>().color = new Color32(169,169,169,255);
+            objet.transform.GetChild(1).GetComponent<Text>().color = new Color32(169,169,169,255);
         }
     }
     public void allowSave()
@@ -578,8 +583,9 @@ public class TutoKenneth : MonoBehaviour
         {
             objet.GetComponent<Button>().interactable = true;
             objet.transform.GetChild(1).gameObject.SetActive(false);
-            objet.transform.GetChild(0).GetComponent<Text>().color = new Color(255,255,255);
-            objet.transform.GetChild(1).GetComponent<Text>().color = new Color(255,255,255);
+            objet.GetComponent<Image>().color = new Color32(255,255,255,255);
+            objet.transform.GetChild(0).GetComponent<Text>().color = new Color32(255,255,255,255);
+            objet.transform.GetChild(1).GetComponent<Text>().color = new Color32(255,255,255,255);
         }
         skipAll();
     }
