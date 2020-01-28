@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bebd417f76e60684088d5389a788c65e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseOn: 0
   pin: {fileID: 2413988863419678978, guid: c65b60ebf3ee39c46b42bb38b7cb72ee, type: 3}
   click: 0
 --- !u!114 &1745930333
@@ -5354,7 +5355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.6}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.88235295}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
