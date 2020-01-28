@@ -32,6 +32,15 @@ public class Pin_System : MonoBehaviour
                 }
             }
         }
+
+        //Clamp
+        //Vector3 pos = this.transform.position;
+        //pos.x =  Mathf.Clamp(transform.position.x, -350f, 350f);
+        //pos.y =  Mathf.Clamp(transform.position.y, -180f, 180f);
+        //this.transform.position = pos;
+        float xPos = Mathf.Clamp(transform.localPosition.x, -350f, 350f);
+        float yPos = Mathf.Clamp(transform.localPosition.y, -180f, 180f);
+        transform.localPosition = new Vector3(xPos, yPos, 0.0f);
     }
 
     void OnMouseEnter()
