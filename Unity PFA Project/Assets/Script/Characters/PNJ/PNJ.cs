@@ -73,7 +73,7 @@ public class PNJ : MonoBehaviour
     public bool quoteFinished;
     IEnumerator show;
     public List<int> stickersAlreadyGiven;
-    string actualQuote;
+    public string actualQuote;
 
     // Start is called before the first frame update
     void Start()
@@ -281,8 +281,27 @@ public class PNJ : MonoBehaviour
         quoteFinished = false;
         //Debug.Log(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
         actualQuote = LanguageManager.Instance.GetDialog(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
-        for(int i = 0; i < actualQuote.Length + 1; i++)
+
+        panel.transform.GetChild(1).GetComponent<Text>().text = actualQuote;
+        actualQuote = panel.transform.GetChild(1).GetComponent<Text>().text;
+        //int length = 0;
+        //if(actualQuote.Contains("<b>"))
+        //{
+            //length = actualQuote.Length - 6;
+        //}
+        //else length = actualQuote.Length;
+        for(int i = 0; i < actualQuote.Length/*length*/ + 1; i++)
         {
+            /*if(actualQuote.Substring(i, i + 2) == "<b>")
+            {
+                Debug.Log("It's a '<b>' !");
+                i += 2;
+            }
+            if(actualQuote.Substring(i, i + 3) == "</b>")
+            {
+                Debug.Log("It's a '</b>' !");
+                i += 3;
+            }*/
             currentLine = actualQuote.Substring(0,i);
             panel.transform.GetChild(1).GetComponent<Text>().text = currentLine;
             yield return new WaitForSeconds(dialogDelay);
@@ -303,17 +322,15 @@ public class PNJ : MonoBehaviour
     {
         if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList.Count > 0)
         {
-            //JsonSave save = SaveGameManager.GetCurrentSave();
             for(int i = 0; i < allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList.Count; i++)
             {
-                if(/*save.memoryStickers.Contains(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList[i]) */player.GetComponent<PlayerMemory>().allStickers.Contains(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList[i]))
+                if(player.GetComponent<PlayerMemory>().allStickers.Contains(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList[i]))
                 {
                 }
                 else 
                 {
                     player.GetComponent<PlayerMemory>().KeepInMemory(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList[i]);
                     player.GetComponent<PlayerMemory>().allStickers.Add(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList[i]);
-                    //save.memoryStickers.Add(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList[i]);
                 }
             }
             allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList.RemoveRange(0, allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList.Count);

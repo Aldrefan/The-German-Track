@@ -85,7 +85,7 @@ public class InGameMenu : MonoBehaviour
         //Debug.Log("SaveGame");
         //LIGNE DE COMMANDE DE SAVE GAME
         GameSaveSystem.SaveGameData();
-        GameObject.Find("Saver").GetComponent<Saver>().MakeASave();
+        //GameObject.Find("Saver").GetComponent<Saver>().MakeASave();
         transform.GetChild(9).GetChild(0).GetComponent<Text>().text = LanguageManager.Instance.GetDialog("Menu_03");
         transform.GetChild(9).GetComponent<Animator>().SetTrigger("Save"); //feedbackSave
     }
