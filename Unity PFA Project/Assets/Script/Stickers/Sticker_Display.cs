@@ -19,17 +19,8 @@ public class Sticker_Display : MonoBehaviour
 
     public void SetInformations()
     {
-        if(LanguageManager.Instance.language == "french")
-        {
-            text.text = sticker.frenchText;
-            tooltipText.text = sticker.frenchTooltip;
-        }
-        else
-        {
-            text.text = sticker.englishText;
-            tooltipText.text = sticker.englishTooltip;
-        }
-        
+        text.text = LanguageManager.Instance.GetDialog(sticker.Text);
+        tooltipText.text = LanguageManager.Instance.GetDialog(sticker.tooltipText);
         if(sticker.index >= GameObject.Find("Kenneth").GetComponent<PlayerMemory>().charactersRange.x && sticker.index <= GameObject.Find("Kenneth").GetComponent<PlayerMemory>().charactersRange.y)
         text.gameObject.SetActive(false);
         backgroundSticker.sprite = sticker.stickerBackground;
@@ -37,5 +28,10 @@ public class Sticker_Display : MonoBehaviour
         transform.GetChild(0).GetComponent<Image>().color = backgroundColor;
         backgroundSticker.rectTransform.sizeDelta = new Vector2(sticker.backgoundSize.x, sticker.backgoundSize.y);
         //text.rectTransform.sizeDelta = new Vector2(GetComponent<BoxCollider2D>().size.x, GetComponent<BoxCollider2D>().size.y/*  -20*/);
+    }
+
+    void OnEnable()
+    {
+        SetInformations();
     }
 }

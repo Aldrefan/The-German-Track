@@ -185,14 +185,17 @@ public class Interactions : MonoBehaviour
     {
         if(Input.GetButtonDown("Interaction") && !dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.activeInHierarchy)
         {
-            if(PNJContact.GetComponent<PNJ>().quoteFinished)
+            if(dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().leftPanel.activeInHierarchy || dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().rightPanel.activeInHierarchy)
             {
-                PNJContact.GetComponent<PNJ>().Startdialogue();
-            }
-            else
-            {
-                GameObject activePanel = GameObject.FindObjectOfType<DialogInterface>().gameObject;
-                PNJContact.GetComponent<PNJ>().FullQuote(activePanel);
+                if(PNJContact.GetComponent<PNJ>().quoteFinished)
+                {
+                    PNJContact.GetComponent<PNJ>().Startdialogue();
+                }
+                else
+                {
+                    GameObject activePanel = GameObject.FindObjectOfType<DialogInterface>().gameObject;
+                    PNJContact.GetComponent<PNJ>().FullQuote(activePanel);
+                }
             }
         }
     }
