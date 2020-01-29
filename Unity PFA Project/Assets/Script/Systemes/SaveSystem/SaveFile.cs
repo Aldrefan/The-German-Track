@@ -125,12 +125,12 @@ public class SaveFile : MonoBehaviour
         {
             if (gameSave.dayNightCycle)
             {
-                levelLight.GetComponent<DayNightLight>().time = DayNightLight.timeEnum.Day;
+                levelLight.GetComponent<DayNightLight>().DayTime();
                 levelLight.GetComponent<Light>().intensity = savedRoom.GetComponent<SceneInformations>().dayLightValue;
             }
             else
             {
-                levelLight.GetComponent<DayNightLight>().time = DayNightLight.timeEnum.Night;
+                levelLight.GetComponent<DayNightLight>().NightTime();
                 levelLight.GetComponent<Light>().intensity = savedRoom.GetComponent<SceneInformations>().nightLightValue;
             }
         }
