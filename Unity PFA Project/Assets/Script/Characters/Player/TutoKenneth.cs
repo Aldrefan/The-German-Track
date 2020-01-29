@@ -273,7 +273,7 @@ public class TutoKenneth : MonoBehaviour
             refNeeded.newSticker.GetComponent<Animator>().speed = 1;
         }
 
-        if (refNeeded.menu.activeInHierarchy && refNeeded.newSticker.GetComponent<Animator>().speed != 0)
+        if (refNeeded.menu.activeInHierarchy)
         {
             refNeeded.newSticker.GetComponent<Animator>().SetTrigger("AnimOff");
         }

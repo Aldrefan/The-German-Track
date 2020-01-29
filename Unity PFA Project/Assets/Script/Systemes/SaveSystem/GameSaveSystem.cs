@@ -32,9 +32,7 @@ public static class GameSaveSystem
 
 
         }
-        Debug.Log(new DirectoryInfo(SAVE_FOLDER + "/settingsSave.tgt").FullName);
-        Debug.Log(new DirectoryInfo(SAVE_FOLDER + "/settingsSave.tgt").Exists);
-        Debug.Log(File.Exists(SAVE_FOLDER + "/settingsSave.tgt"));
+
     }
 
     public static void SaveGameData()
