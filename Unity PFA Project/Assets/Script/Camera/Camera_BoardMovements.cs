@@ -94,7 +94,7 @@ public class Camera_BoardMovements : MonoBehaviour
             }
         }*/
         GetComponent<CameraFollow>().actualRoom.SetActive(true);
-        player.GetComponent<Rigidbody2D>().gravityScale = 1;
+        player.GetComponent<Rigidbody2D>().gravityScale = 3;
         player.GetComponent<Interactions>().CloseBoard();
         GetComponent<Camera_Manager>().NotOnBoard();
     }
