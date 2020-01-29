@@ -107,10 +107,6 @@ public class TutoKenneth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.O)) allowSave();
-        if(Input.GetKeyDown(KeyCode.L)) preventSave();
-
-
         if(!tutoDone.dialogsDone)
         {
             if(refNeeded.leftDialog.activeSelf || refNeeded.rightDialog.activeSelf)
@@ -270,6 +266,11 @@ public class TutoKenneth : MonoBehaviour
         {
             canSave = true;
             allowSave();
+        }
+
+        if(refNeeded.newSticker.GetComponent<Animator>().speed == 0 && tutoDone.newStickerDone)
+        {
+            refNeeded.newSticker.GetComponent<Animator>().speed = 1;
         }
     }
 
