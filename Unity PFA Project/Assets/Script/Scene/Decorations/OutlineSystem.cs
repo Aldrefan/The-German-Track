@@ -40,7 +40,8 @@ public class OutlineSystem : MonoBehaviour
         if(player.GetComponent<Interactions>().PNJContact != null)
         {
             transform.GetChild(0).gameObject.SetActive(false);
-            player.GetComponent<Interactions>().PNJContact.GetComponent<OutlineSystem>().HideOutline();
+            if(player.GetComponent<Interactions>().PNJContact.GetComponent<OutlineSystem>())
+            {player.GetComponent<Interactions>().PNJContact.GetComponent<OutlineSystem>().HideOutline();}
         }
         transform.GetChild(0).gameObject.SetActive(true);
         for(int i = 0; i < 4; i++)

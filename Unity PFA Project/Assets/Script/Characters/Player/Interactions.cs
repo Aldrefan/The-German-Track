@@ -217,7 +217,8 @@ public class Interactions : MonoBehaviour
                 //dialAndBookCanvas.transform.GetChild(2).GetComponent<Animator>().SetBool("InDialog", true);
                 //animator.SetBool("Talk", true);
                 ChangeState(State.InDialog);
-                PNJContact.GetComponent<OutlineSystem>().HideOutline();
+                if(PNJContact.GetComponent<OutlineSystem>())
+                {PNJContact.GetComponent<OutlineSystem>().HideOutline();}
                 StartDialog();
             }
         }

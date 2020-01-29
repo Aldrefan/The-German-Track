@@ -12255,6 +12255,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5966079576536928784, guid: d242fe9a0c120094f8ecd5fe53bcf5b4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 978765925, guid: d242fe9a0c120094f8ecd5fe53bcf5b4, type: 3}
       propertyPath: annexInformation.Array.data[2].newParent
       value: 
@@ -12277,6 +12282,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3,
         type: 3}
+    - target: {fileID: 5966079576536928787, guid: d242fe9a0c120094f8ecd5fe53bcf5b4,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d242fe9a0c120094f8ecd5fe53bcf5b4, type: 3}
 --- !u!1001 &498060031
@@ -24997,45 +25007,44 @@ MonoBehaviour:
   allDialogs:
     listOfDialogs:
     - dialog:
-      - quote: "All\xF4. "
+      - quote: Marvin_D0_Q1
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger:
         - HasContactedMarvin
         spriteCharacter: {fileID: 0}
-      - quote: 'Marvin Meyer ? '
+      - quote: Marvin_D0_Q2
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Qui est \xE0 l\u2019appareil ? "
+      - quote: Marvin_D0_Q3
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je m\u2019appelle Kenneth, je suis un ami de Scott Nelson. "
+      - quote: Marvin_D0_Q4
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "J\u2019ai des questions \xE0 vous poser. "
+      - quote: Marvin_D0_Q5
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je vous \xE9coute. Mais si la conversation devient trop indiscr\xE8te,
-          je raccroche. "
+      - quote: Marvin_D0_Q6
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Tr\xE8s bien. "
+      - quote: Marvin_D0_Q7
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
@@ -25046,7 +25055,7 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: "All\xF4 ? "
+      - quote: Marvin_D4_Q1
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
@@ -25057,348 +25066,327 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: "J\u2019enqu\xEAte sur l\u2019affaire Loraine Grey. Vous en avez parl\xE9
-          dans Sassy New York. "
+      - quote: Marvin_D5_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: 'Laissez tomber, vous ne savez pas dans quoi vous mettez les pieds. '
+      - quote: Marvin_D5_Q2
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Dites m\u2019en plus. "
+      - quote: Marvin_D5_Q3
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "J\u2019imagine que si vous menez l\u2019enqu\xEAte, c\u2019est que
-          vous avez compris que ce n\u2019\xE9tait pas un simple suicide. "
+      - quote: Marvin_D5_Q4
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Quand mon contact m\u2019a appel\xE9 pour m\u2019annoncer la nouvelle
-          je me suis tout de suite rendu sur place. "
+      - quote: Marvin_D5_Q5
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Le suicide d\u2019un proche de Clara Grey, \xE7a allait forc\xE9ment
-          faire les gros titres. "
+      - quote: Marvin_D5_Q6
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Et vous ne vous \xEAtes pas g\xEAn\xE9 pour faire de l\u2019argent
-          sur la mort de cette jeune femme. "
+      - quote: Marvin_D5_Q7
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "\xC7a mon gars, c\u2019est mon m\xE9tier. "
+      - quote: Marvin_D5_Q8
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Bref, une fois l\xE0-bas j\u2019interviewe le bonhomme de Loraine, "
+      - quote: Marvin_D5_Q9
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "je fais quelques photos, et je rentre chez moi r\xE9diger mon article. "
+      - quote: Marvin_D5_Q10
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: 'Et sur le chemin, deux types me tombent dessus, genre gros bras. '
+      - quote: Marvin_D5_Q11
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Ils \xE9clatent mon appareil sur le sol - quatre cents dollars foutus
-          en l\u2019air -, "
+      - quote: Marvin_D5_Q12
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "et me balancent comme \xE7a : \xAB Tu ne parles pas de Kurt Becker
-          dans ton papier ou on t\u2019arrache les couilles \xBB, "
+      - quote: Marvin_D5_Q13
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "ou un truc comme \xE7a. "
+      - quote: Marvin_D5_Q14
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Qu\u2019est ce que vous dites de \xE7a ? "
+      - quote: Marvin_D5_Q15
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 3300000031000000
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "C\u2019est tout ce qu\u2019ils voulaient ? Pourquoi ne pas vous dire
-          de ne pas publier l\u2019article ? "
+      - quote: Marvin_D5_Q16
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je crois qu\u2019ils s'int\xE9ressent seulement \xE0 Kurt, et l\u2019affaire
-          aurait fini dans les journaux de toute fa\xE7on. "
+      - quote: Marvin_D5_Q17
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "En tout cas, moi je tiens \xE0 mes couilles alors j\u2019ai fait ce
-          qu\u2019ils ont dit. "
+      - quote: Marvin_D5_Q18
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: "Vous avez une id\xE9e de qui a pu envoyer ces hommes ? "
+      - quote: Marvin_D6_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "C\u2019est plus qu\u2019une id\xE9e, je le sais. "
+      - quote: Marvin_D6_Q2
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "C\u2019est un type qui se fait appeler L\u2019Allemand. "
+      - quote: Marvin_D6_Q3
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 07000000
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: 'Jamais entendu parler. '
+      - quote: Marvin_D6_Q4
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "\xC7a ne m\u2019\xE9tonne pas. "
+      - quote: Marvin_D6_Q5
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: 'Il est connu seulement par la police et quelques fouilles-merdes comme
-          moi. '
+      - quote: Marvin_D6_Q6
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "C\u2019est le plus gros baron de la p\xE8gre du quartier. "
+      - quote: Marvin_D6_Q7
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Mais personne ne l\u2019a jamais vu. "
+      - quote: Marvin_D6_Q8
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: "Je veux en savoir plus sur l\u2019Allemand. "
+      - quote: Marvin_D7_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: 'Je ne peux pas vous en dire beaucoup. '
+      - quote: Marvin_D7_Q2
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Il s\u2019est impos\xE9 depuis quelque temps comme le ma\xEEtre du
-          quartier, apr\xE8s la mort de DiMarco, l\u2019ancien parrain de Midtown. "
+      - quote: Marvin_D7_Q3
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "J\u2019avais couvert cette affaire a l\u2019\xE9poque. "
+      - quote: Marvin_D7_Q4
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Un myst\xE9rieux type arrive et s\u2019approprie une \xE0 une les
-          affaires de DiMarco. "
+      - quote: Marvin_D7_Q5
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "La police ne s\u2019en occupe pas trop. "
+      - quote: Marvin_D7_Q6
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Elle se contente de ramasser les cadavres, mieux vaut laisser les
-          truands s\u2019entretuer. "
+      - quote: Marvin_D7_Q7
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Et l\xE0 une guerre \xE9clate je suppose. "
+      - quote: Marvin_D7_Q8
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Tout juste. DiMarco est compl\xE8tement d\xE9bord\xE9. "
+      - quote: Marvin_D7_Q9
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "\xC7a a dur\xE9 quelques mois, jusqu\u2019\xE0 ce qu\u2019on retrouve
-          son corps avec une balle dans le cr\xE2ne. "
+      - quote: Marvin_D7_Q10
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Depuis ce jour, l\u2019Allemand r\xE8gne sur Midtown. "
+      - quote: Marvin_D7_Q11
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Alors personne ne le conna\xEEt ? Ni son nom, ni son visage ? "
+      - quote: Marvin_D7_Q12
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: 'Apparemment pas. '
+      - quote: Marvin_D7_Q13
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "La police a bien essay\xE9 de le coincer, mais sans preuves, c\u2019est
-          une perte de temps. "
+      - quote: Marvin_D7_Q14
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Tout ce qu\u2019on a retrouv\xE9 c\u2019est des cadavres horriblement
-          tortur\xE9s. "
+      - quote: Marvin_D7_Q15
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: 'Vraiment ? '
+      - quote: Marvin_D7_Q16
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je vous ai pas dit, c\u2019est la sp\xE9cialit\xE9 de l\u2019Allemand
-          c\u2019est la torture. "
+      - quote: Marvin_D7_Q17
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je vous raconte pas l\u2019\xE9tat des cadavres qu\u2019on a retrouv\xE9s.
-          Mais \xE7a, \xE7a fait les gros titres ! "
+      - quote: Marvin_D7_Q18
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Mouais\u2026 "
+      - quote: Marvin_D7_Q179
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: 'Vous pouvez me parler de votre discussion avec Kurt Becker ? '
+      - quote: Marvin_D8_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Discussion, c\u2019est un bien grand mot, ce type \xE9tait incapable
-          d'aligner deux mots quand on s\u2019est parl\xE9. "
+      - quote: Marvin_D8_Q2
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: 'Il avait sans doute bu. '
+      - quote: Marvin_D8_Q3
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Non je sais reconna\xEEtre un Junkie quand j\u2019en vois un, ce type
-          \xE9tait compl\xE8tement cram\xE9. "
+      - quote: Marvin_D8_Q4
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 30000000
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "\xC7a explique beaucoup de choses. "
+      - quote: Marvin_D8_Q5
         characterName: Kenneth
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: 'Que voulez-vous savoir ? '
+      - quote: Marvin_D1_Q1
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
@@ -25409,7 +25397,7 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: "Aucune Id\xE9e. "
+      - quote: Marvin_D3_Q1
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
@@ -26708,7 +26696,7 @@ MonoBehaviour:
   distanceBetweenPlayerAndCamera: 8.5
   fixedCamera: 0
   CameraSpot: {fileID: 0}
-  canRun: 0
+  canRun: 1
   YOffset: 1.7
   theme: {fileID: 0}
 --- !u!1 &858033976
@@ -33953,6 +33941,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
         type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[14].dialog.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
       propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[29].eventTrigger.Array.data[0]
       value: TalkToKurt
       objectReference: {fileID: 0}
@@ -34725,6 +34758,646 @@ PrefabInstance:
         type: 3}
       propertyPath: allDialogs.listOfDialogs.Array.data[13].dialog.Array.data[0].quote
       value: Kurt_D3_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[14].dialog.Array.data[0].quote
+      value: Kurt_D16_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[14].dialog.Array.data[0].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[14].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.data[10]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.data[11]
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.data[12]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.data[13]
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.data[14]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.data[15]
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[10]
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[11]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[12]
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[13]
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[14]
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[15]
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[14].dialog.Array.data[1].quote
+      value: Kurt_D16_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[14].dialog.Array.data[1].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[14].dialog.Array.data[2].quote
+      value: Kurt_D16_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[14].dialog.Array.data[2].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[14].dialog.Array.data[3].quote
+      value: Kurt_D16_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[14].dialog.Array.data[3].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[14].dialog.Array.data[4].quote
+      value: Kurt_D16_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[14].dialog.Array.data[4].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[14].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[14].dialog.Array.data[2].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[0].quote
+      value: Kurt_D17_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[0].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[1].quote
+      value: Kurt_D17_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[1].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[2].quote
+      value: Kurt_D17_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[2].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[2].isInLeftSide
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[3].quote
+      value: Kurt_D17_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[3].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[4].quote
+      value: Kurt_D17_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[4].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[5].quote
+      value: Kurt_D17_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[5].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[6].quote
+      value: Kurt_D17_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[6].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[7].quote
+      value: Kurt_D17_Q8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[7].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[3].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[15].dialog.Array.data[6].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[0].quote
+      value: Kurt_D18_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[0].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[1].quote
+      value: Kurt_D18_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[1].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[2].quote
+      value: Kurt_D18_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[2].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[3].quote
+      value: Kurt_D18_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[3].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[3].isInLeftSide
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[4].quote
+      value: Kurt_D18_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[4].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[5].quote
+      value: Kurt_D18_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[5].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[6].quote
+      value: Kurt_D18_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[6].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[6].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[7].quote
+      value: Kurt_D17_Q8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[7].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[2].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[16].dialog.Array.data[4].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[0].quote
+      value: Kurt_D19_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[0].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[1].quote
+      value: Kurt_D19_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[1].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[2].quote
+      value: Kurt_D19_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[2].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[2].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[3].quote
+      value: Kurt_D19_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[3].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[4].quote
+      value: Kurt_D19_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[4].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[4].isInLeftSide
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[5].quote
+      value: Kurt_D19_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[5].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[6].quote
+      value: Kurt_D19_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[6].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[17].dialog.Array.data[6].isInLeftSide
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[0].quote
+      value: Kurt_D20_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[0].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[1].quote
+      value: Kurt_D20_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[1].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[2].quote
+      value: Kurt_D20_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[2].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[2].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[3].quote
+      value: Kurt_D20_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[3].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[4].quote
+      value: Kurt_D20_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[4].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[5].quote
+      value: Kurt_D20_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[5].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[6].quote
+      value: Kurt_D20_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[6].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[7].quote
+      value: Kurt_D20_Q8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[7].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[4].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[0].quote
+      value: Kurt_D21_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[0].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[1].quote
+      value: Kurt_D21_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[1].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[2].quote
+      value: Kurt_D21_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[2].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[2].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[3].quote
+      value: Kurt_D21_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[3].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[4].quote
+      value: Kurt_D21_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[4].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[4].isInLeftSide
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[5].quote
+      value: Kurt_D21_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[5].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[6].quote
+      value: Kurt_D21_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[6].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[7].quote
+      value: Kurt_D21_Q8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[7].characterName
+      value: Kenneth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[8].quote
+      value: Kurt_D21_Q9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[8].characterName
+      value: Kurt Becker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[3].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[18].dialog.Array.data[6].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[6].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147712309492673544, guid: 0d18fcc2da7a132469f3897b85b3c07e,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[19].dialog.Array.data[7].isInLeftSide
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3147712309795452977, guid: 0d18fcc2da7a132469f3897b85b3c07e,
         type: 3}
@@ -51526,7 +52199,7 @@ PrefabInstance:
     - target: {fileID: 1955605217293017406, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017406, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
@@ -51536,12 +52209,12 @@ PrefabInstance:
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexCarnetList.Array.size
-      value: 15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.size
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
@@ -52019,7 +52692,7 @@ PrefabInstance:
     - target: {fileID: 1955605217293017403, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: m_GravityScale
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017407, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
@@ -58164,7 +58837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[1].direction
-      value: -1
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[1].time
@@ -58178,6 +58851,10 @@ PrefabInstance:
       propertyPath: annexInformation.Array.data[3].time
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[1].objectToMove
+      value: 
+      objectReference: {fileID: 1156105002}
     - target: {fileID: 6747615265874859620, guid: 471f45fa56e850a428f90def4e6c2923,
         type: 3}
       propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[0].quote
@@ -71750,7 +72427,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 835219e1454e8f14dbbc162fba105af8, type: 2}
+      objectReference: {fileID: 9100000, guid: d7c599361dd1baf44abc2d9faea04cca, type: 2}
     - target: {fileID: 9079509043305614904, guid: 33ddad3a370b0824b848ab3b505bf613,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -71790,6 +72467,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467289337503566570, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467289337503566570, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_Text
+      value: "Nouvelle note rajout\xE9e au carnet"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467289337503566570, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467289337503566570, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467289337503566570, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8891736063403011964, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
@@ -73993,8 +74700,8 @@ MonoBehaviour:
     leftDialog: {fileID: 1714092047808702674}
     rightDialog: {fileID: 1714092047808702673}
     newSticker: {fileID: 1714092047808702672}
-    book: {fileID: 1714092047808702671}
-    bookOnDialog: {fileID: 1714092047808702668}
+    book: {fileID: 1714092047808702668}
+    bookOnDialog: {fileID: 1714092047808702671}
     board: {fileID: 1456610456}
     menu: {fileID: 1995698767}
     saveButton:

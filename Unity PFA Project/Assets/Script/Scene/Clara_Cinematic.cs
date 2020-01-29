@@ -70,7 +70,7 @@ public class Clara_Cinematic : MonoBehaviour
         //GetComponent<BoxCollider2D>().enabled = false;
         //Debug.Log(GetComponent<BoxCollider2D>().enabled);
         annexInformation[action].objectToMove.GetComponent<BoxCollider2D>().enabled = false;
-        if(annexInformation[action].direction < 0)
+        if(annexInformation[action].direction < 0 && annexInformation[action].objectToMove.tag != "Player")
         {
             annexInformation[action].objectToMove.GetComponent<SpriteRenderer>().flipX = true;
         }

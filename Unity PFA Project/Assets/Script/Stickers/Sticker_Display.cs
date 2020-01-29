@@ -14,7 +14,7 @@ public class Sticker_Display : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetInformations();
+        StartCoroutine(Timer());
     }
 
     public void SetInformations()
@@ -32,6 +32,12 @@ public class Sticker_Display : MonoBehaviour
 
     void OnEnable()
     {
+        StartCoroutine(Timer());
+    }
+
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(0.001f);
         SetInformations();
     }
 }
