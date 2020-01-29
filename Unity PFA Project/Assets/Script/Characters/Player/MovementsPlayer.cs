@@ -18,7 +18,7 @@ public class MovementsPlayer : MonoBehaviour {
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        StartCoroutine("StartTimerBeforeCheckActivation");
+        StartCoroutine(StartTimerBeforeCheckActivation());
     }
 
     // Update is called once per frame
@@ -78,7 +78,7 @@ public class MovementsPlayer : MonoBehaviour {
 
     IEnumerator StartTimerBeforeCheckActivation()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.001f);
         if(GetComponent<Interactions>().PnjMet.Contains("Clara"))
         {
             GetComponent<MovementsPlayer>().enabled = true;
