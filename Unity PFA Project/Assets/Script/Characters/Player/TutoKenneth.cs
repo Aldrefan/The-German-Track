@@ -272,6 +272,36 @@ public class TutoKenneth : MonoBehaviour
         {
             refNeeded.newSticker.GetComponent<Animator>().speed = 1;
         }
+
+        if (refNeeded.menu.activeInHierarchy && refNeeded.newSticker.GetComponent<Animator>().speed != 0)
+        {
+            refNeeded.newSticker.GetComponent<Animator>().SetTrigger("AnimOff");
+        }
+
+        /*if(refNeeded.menu.activeInHierarchy
+        && refNeeded.newSticker.transform.GetChild(0).GetComponent<Text>().color != new Color32(0,0,0,0))
+        {
+            Debug.Log("nigtfdvc");
+            //refNeeded.newSticker.GetComponent<SpriteRenderer>().color = new Vector4(255,255,255,0);
+            //refNeeded.newSticker.transform.GetChild(0).gameObject.GetComponent<Text>().color = new Vector4(0,0,0,0);
+            //refNeeded.newSticker.transform.GetChild(0).GetComponent<Text>().color = new Vector4(0,0,0,0);
+            refNeeded.newSticker.SetActive(false);
+
+            //refNeeded.newSticker.SetActive(true);
+        }
+        else
+        {
+            refNeeded.newSticker.SetActive(true);
+            refNeeded.newSticker.GetComponent<SpriteRenderer>().color = new Vector4(255,255,255,0);
+            refNeeded.newSticker.transform.GetChild(0).gameObject.GetComponent<Text>().color = new Vector4(0,0,0,0);
+        }*/
+
+            /*if(refNeeded.menu.activeSelf
+            && GameObject.Find("EtiquetteLaissezPasser").transform.GetChild(0).GetComponent<Text>().color.a != 0)
+            {
+                GameObject.Find("EtiquetteLaissezPasser").transform.GetChild(0).GetComponent<Text>().gameObject.SetActive(false);
+                GameObject.Find("EtiquetteLaissezPasser").transform.GetChild(0).GetComponent<Text>().gameObject.SetActive(true);
+            }*/
     }
 
     IEnumerator WaitMove(float Time){
