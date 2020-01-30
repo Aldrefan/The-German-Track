@@ -68,7 +68,7 @@ public class PNJ : MonoBehaviour
     }
     
     string currentLine = "";
-    float dialogDelay = 0.01f;
+    //float dialogDelay = 0.01f;
     public Quote allDialogs;
     public bool quoteFinished;
     IEnumerator show;
@@ -304,7 +304,7 @@ public class PNJ : MonoBehaviour
             }*/
             currentLine = actualQuote.Substring(0,i);
             panel.transform.GetChild(1).GetComponent<Text>().text = currentLine;
-            yield return new WaitForSeconds(dialogDelay);
+            yield return new WaitForSeconds(LanguageManager.Instance.dialogSpeed);
         }
         quoteFinished = true;
         DialogSecondPhase();
