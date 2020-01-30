@@ -77,13 +77,6 @@ public class Menu : MonoBehaviour
         ReturnMenu();
     }
 
-    void Awake()
-    {
-        //set gameobjects
-        speedDropdown = GameObject.Find("DropdownSpeedDialog").GetComponent<Dropdown>();
-
-    }
-
     void Start()
     {
 

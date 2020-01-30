@@ -277,6 +277,7 @@ public class Interactions : MonoBehaviour
             case State.InCinematic:
             isInCinematic = false;
             dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.SetActive(false);
+            GameObject.Find("Necessary_Floating_Canvas").transform.GetChild(2).gameObject.SetActive(false);
             carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);
             carnetUI.GetComponent<Animator>().SetBool("InDialog", false);
             dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.SetActive(false);
