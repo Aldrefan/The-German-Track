@@ -186,6 +186,7 @@ public class EventsCheck : MonoBehaviour
                 break;
 
             case "hopitalOpen":
+            Debug.Log("Hospital Overture");
                 GetComponent<Interactions>().PNJContact.GetComponent<Clara_Cinematic>().ExecuteCommand();
                 break;
 
