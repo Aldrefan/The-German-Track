@@ -369,8 +369,8 @@ public class Interactions : MonoBehaviour
         {
             carnet.GetComponent<Animator>().SetBool("InDialog", false);
             carnet.GetComponent<Animator>().SetBool("ClickOn", true);
-        }
-        if(redirectionEventListCount > 0 && eventGivenListCount > 0)
+        }*/
+        /*if(redirectionEventListCount > 0 && eventGivenListCount > 0)
         {
             PNJContact.GetComponent<PNJ>().ResponseEvent();
         }*/
@@ -391,6 +391,7 @@ public class Interactions : MonoBehaviour
             }
             else PNJContact.GetComponent<PNJ>().ChangeDialog(0);
         }
+        else PNJContact.GetComponent<PNJ>().Response(PNJContact.GetComponent<PNJ>().eventRedirection.redirectionEventList[0]);
         
         //GetComponent<MovementsPlayer>().enabled = false;// Initial
         transform.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
