@@ -158,22 +158,26 @@ public GameObject stickerTemplate;
                     switch(notValidateStickersList.Count)
                     {
                         case 1:
-                        quoteList.Add("Il y a quelque chose en trop.");
+                        quoteList.Add(LanguageManager.Instance.GetDialog("Board_01"));
                         break;
 
                         default:
-                        quoteList.Add("Il y a beaucoup trop d'étiquettes.");
+                        quoteList.Add(LanguageManager.Instance.GetDialog("Board_02"));
                         break;
                     }
+                }
+                else if(notValidateStickersList.Count == ListOfHypLists.list[i].list.Count)
+                {
+                    quoteList.Add(LanguageManager.Instance.GetDialog("Board_07"));
                 }
             }
             else if(validateStickersList.Count == ListOfHypLists.list[i].list.Count - 1 && pinList.Count == ListOfHypLists.list[i].list.Count - 1)
             {
-                quoteList.Add("Hmm... Il manque quelque chose.");
+                quoteList.Add(LanguageManager.Instance.GetDialog("Board_03"));
             }
             else if(validateStickersList.Count == ListOfHypLists.list[i].list.Count - 1 && pinList.Count == ListOfHypLists.list[i].list.Count)
             {
-                quoteList.Add("Non, ça ne colle pas...");
+                quoteList.Add(LanguageManager.Instance.GetDialog("Board_04"));
             }
         }
         if(!createASticker && quoteList.Count > 0)

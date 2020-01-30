@@ -73,7 +73,7 @@ public class PNJ : MonoBehaviour
     public bool quoteFinished;
     IEnumerator show;
     public List<int> stickersAlreadyGiven;
-    public string actualQuote;
+    string actualQuote;
 
     // Start is called before the first frame update
     void Start()
