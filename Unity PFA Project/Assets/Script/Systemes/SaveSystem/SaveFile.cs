@@ -57,6 +57,7 @@ public class SaveFile : MonoBehaviour
 
     void LoadAtStart()
     {
+        LoadSettings();
         if (GameSaveSystem.gameToLoad || loadAtStart)
         {
             LoadGame();
@@ -146,8 +147,8 @@ public class SaveFile : MonoBehaviour
         }
         if (player != null)
         {
-            player.GetComponent<PlayerMemory>().stickerIndexBoardList = gameSave.stickersIndexOnBoard;
-            player.GetComponent<PlayerMemory>().stickerIndexCarnetList = gameSave.stickersIndexInCarnet;
+            player.GetComponent<PlayerMemory>().stickerIndexBoardList = gameSave.allStickers;
+            player.GetComponent<PlayerMemory>().stickerIndexCarnetList = gameSave.allStickers;
             player.GetComponent<PlayerMemory>().allStickers = gameSave.allStickers;
             player.GetComponent<PlayerMemory>().stickersPositionBoard = gameSave.stickersPositionOnBoard;
             player.GetComponent<Interactions>().PnjMet = gameSave.NPCmet;
