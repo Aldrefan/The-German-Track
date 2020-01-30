@@ -1181,7 +1181,7 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Option A
@@ -3020,9 +3020,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 786528725}
+  - component: {fileID: 786528727}
   - component: {fileID: 786528724}
   - component: {fileID: 786528726}
-  - component: {fileID: 786528727}
   m_Layer: 0
   m_Name: MENU_MANAGER
   m_TagString: Untagged
@@ -4334,7 +4334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1139686373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4788,8 +4788,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -176.19998, y: -17.399998}
-  m_SizeDelta: {x: 71.2, y: 30}
+  m_AnchoredPosition: {x: -111.8, y: -17.399998}
+  m_SizeDelta: {x: 177.1, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1200998383
 MonoBehaviour:
@@ -6388,8 +6388,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -177.29999, y: 64.8}
-  m_SizeDelta: {x: 71.2, y: 30}
+  m_AnchoredPosition: {x: -114.6, y: 64.8}
+  m_SizeDelta: {x: 177.1, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1637598363
 MonoBehaviour:
