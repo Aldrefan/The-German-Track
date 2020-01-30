@@ -18,6 +18,10 @@ public class Menu : MonoBehaviour
     bool returnTitle;
     bool isFullscreen;
     int resolutionIndex;
+    int speedIndex;
+    float slowSpeed = 0.04f;
+    float midSpeed = 0.025f;
+    float fastSpeed = 0.01f;
     public List<GameObject> showOnStart;
     public List<GameObject> hideOnStart;
 
@@ -34,6 +38,7 @@ public class Menu : MonoBehaviour
     public Slider musicSlider;
     public Slider fxSlider;
     public Dropdown resolutionDropdown;
+    public Dropdown speedDropdown;
     Resolution[] resolutions;
     public GameObject fullscreenCheckbox;
     public GameObject englishArrow;
@@ -48,6 +53,9 @@ public class Menu : MonoBehaviour
         //set les volumes des mixers selon les values des sliders
         musicMixer.SetFloat("musicVolume", musicSlider.value);
         fxMixer.SetFloat("fxVolume", fxSlider.value);
+
+        //set le speed des textes selon la value du slider
+        
 
 
         if(Input.anyKeyDown && canvasTitle!=null)
@@ -69,8 +77,17 @@ public class Menu : MonoBehaviour
         ReturnMenu();
     }
 
+    void Awake()
+    {
+        //set gameobjects
+        speedDropdown = GameObject.Find("DropdownSpeedDialog").GetComponent<Dropdown>();
+
+    }
+
     void Start()
     {
+
+
         //active le menu à sa forme initiale
         ReturnMenu();
 
@@ -101,6 +118,38 @@ public class Menu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+
+
+        //speed dropdown
+        speedDropdown.ClearOptions();
+
+        List<string> speed = new List<string>();
+        speed.Add(LanguageManager.Instance.GetDialog("Speed1"));
+        speed.Add(LanguageManager.Instance.GetDialog("Speed2"));
+        speed.Add(LanguageManager.Instance.GetDialog("Speed3"));
+
+        speedDropdown.AddOptions(speed);
+
+        if(LanguageManager.Instance.dialogSpeed == 0)
+        {
+            speedDropdown.value = 0;
+            LanguageManager.Instance.dialogSpeed = slowSpeed;
+        }
+        else if(LanguageManager.Instance.dialogSpeed == slowSpeed)
+        {
+            speedDropdown.value = 0;
+        }
+        else if(LanguageManager.Instance.dialogSpeed == midSpeed)
+        {
+            speedDropdown.value = 1;
+        }
+        else if(LanguageManager.Instance.dialogSpeed == fastSpeed)
+        {
+            speedDropdown.value = 2;
+        }
+
+        speedDropdown.RefreshShownValue();
+        
 
 
         //resolution & fullscreen initialisation
@@ -251,6 +300,23 @@ public class Menu : MonoBehaviour
     {
         QualitySettings.SetQualityLevel(qualityIndex);
     }*/
+    public void SetSpeed(int speedIndexTemp)
+    {
+        speedIndex = speedIndexTemp;
+        switch(speedIndex)
+        {
+            case 0:
+                LanguageManager.Instance.dialogSpeed = slowSpeed;
+                break;
+            case 1:
+                LanguageManager.Instance.dialogSpeed = midSpeed;
+                break;
+            case 2:
+                LanguageManager.Instance.dialogSpeed = fastSpeed;
+                break;
+        }
+
+    }
     public void SetFullscreen(bool isFullscreenTemp)
     {
         isFullscreen = isFullscreenTemp;

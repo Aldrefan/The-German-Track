@@ -189,8 +189,7 @@ public class SaveFile : MonoBehaviour
 
             if (settingsSave.gameLanguage != null)
             {
-                Debug.Log(FindObjectOfType<LanguageManager>().language);
-                Debug.Log(settingsSave.gameLanguage);
+
                 FindObjectOfType<LanguageManager>().language = settingsSave.gameLanguage;
             }
 
