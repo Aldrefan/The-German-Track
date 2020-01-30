@@ -6,7 +6,7 @@ using System.IO;
 
 public class LanguageManager : MonoBehaviour
 {
-    public float dialogSpeed;
+    public float dialogSpeed = 0.04f;
     public string language = "english";
     public static LanguageManager Instance;
     [Serializable]
