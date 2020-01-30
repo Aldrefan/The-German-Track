@@ -75,6 +75,10 @@ public class Clara_Cinematic : MonoBehaviour
             annexInformation[action].objectToMove.GetComponent<SpriteRenderer>().flipX = true;
         }
         else annexInformation[action].objectToMove.GetComponent<SpriteRenderer>().flipX = false;
+        if(annexInformation[action].objectToMove.tag == "Player")
+        {
+            annexInformation[action].objectToMove.GetComponent<MovementsPlayer>().enabled = false;
+        }
         annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Talk", false);
         annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Walk", true);
         yield return new WaitForSeconds(time);

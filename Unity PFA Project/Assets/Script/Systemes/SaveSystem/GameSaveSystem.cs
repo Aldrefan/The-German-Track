@@ -23,7 +23,6 @@ public static class GameSaveSystem
     static AudioMixer effectMixer;
     static LanguageManager langManager;
 
-
     public static void Init()
     {
         if (!Directory.Exists(SAVE_FOLDER))
@@ -66,7 +65,7 @@ public static class GameSaveSystem
         effectMixer.GetFloat("fxVolume", out effectVol);
 
 
-        SettingsData settingObject = new SettingsData(false, musicVol, effectVol, langManager.language, Screen.fullScreen, new Vector2(Screen.currentResolution.width, Screen.currentResolution.height));
+        SettingsData settingObject = new SettingsData(false, langManager.dialogSpeed, musicVol, effectVol, langManager.language, Screen.fullScreen, new Vector2(Screen.currentResolution.width, Screen.currentResolution.height));
         string json = JsonUtility.ToJson(settingObject);
 
         File.WriteAllText(SAVE_FOLDER + "/settingsSave.tgt", json);

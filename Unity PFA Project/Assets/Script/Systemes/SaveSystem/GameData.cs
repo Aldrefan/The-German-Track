@@ -19,8 +19,8 @@ public class GameData
     //Interactions -> Player
     public List<string> NPCmet;
     //PlayerMemory -> Player
-    public List<int> stickersIndexOnBoard = new List<int>();
-    public List<int> stickersIndexInCarnet = new List<int>();
+    //public List<int> stickersIndexOnBoard = new List<int>();
+    //public List<int> stickersIndexInCarnet = new List<int>();
     public List<int> allStickers = new List<int>();
     public List<Vector3> stickersPositionOnBoard = new List<Vector3>();
     //CameraFollow -> MainCamera
@@ -49,8 +49,8 @@ public class GameData
 
         if (characterToPlay != null)
         {
-            stickersIndexOnBoard = characterToPlay.GetComponent<PlayerMemory>().stickerIndexBoardList;
-            stickersIndexInCarnet = characterToPlay.GetComponent<PlayerMemory>().stickerIndexCarnetList;
+            //stickersIndexOnBoard = characterToPlay.GetComponent<PlayerMemory>().stickerIndexBoardList;
+            //stickersIndexInCarnet = characterToPlay.GetComponent<PlayerMemory>().stickerIndexCarnetList;
             allStickers = characterToPlay.GetComponent<PlayerMemory>().allStickers;
             stickersPositionOnBoard = characterToPlay.GetComponent<PlayerMemory>().stickersPositionBoard;
             NPCmet = characterToPlay.GetComponent<Interactions>().PnjMet;

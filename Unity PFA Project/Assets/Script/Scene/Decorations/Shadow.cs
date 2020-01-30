@@ -24,7 +24,7 @@ public class Shadow : MonoBehaviour
         transform.position = new Vector3(owner.transform.position.x, owner.transform.position.y - 4.5f, owner.transform.position.z);
         GetComponent<Animator>().SetBool("Walk", owner.GetComponent<Animator>().GetBool("Walk"));
         GetComponent<Animator>().SetBool("Run", owner.GetComponent<Animator>().GetBool("Run"));
-        transform.localScale = new Vector3(size.x, size.y, 1);
+        transform.localScale = new Vector3(size.x * (owner.transform.localScale.x / 8), size.y, 1);
         GetComponent<SpriteRenderer>().flipX = owner.GetComponent<SpriteRenderer>().flipX;
     }
 }
