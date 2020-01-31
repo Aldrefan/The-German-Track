@@ -16,7 +16,7 @@ public class SceneInformations : MonoBehaviour
     public Transform CameraSpot;
     public bool canRun;
     public float YOffset;
-    GameObject player;
+    public GameObject player;
     public AudioClip theme;
 
     void Awake()
@@ -27,7 +27,7 @@ public class SceneInformations : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindObjectOfType<EventsCheck>().gameObject;
         directionalLight = GameObject.Find("Directional Light");
         //Camera.main.GetComponent<CameraFollow>().YOffset = YOffset;
         //player.GetComponent<MovementsPlayer>().canRun = canRun;
@@ -36,7 +36,20 @@ public class SceneInformations : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        CheckCanRun();
+    }
+
+
+    void CheckCanRun()
+    {
+
+        if (player != null && GameObject.FindObjectOfType<CameraFollow>().actualRoom.name == this.gameObject.name)
+        {
+            if (player.GetComponent<MovementsPlayer>().canRun != canRun)
+            {
+                player.GetComponent<MovementsPlayer>().canRun = canRun; 
+            }
+        }
     }
 
     public void PlaceCamera()
