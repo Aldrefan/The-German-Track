@@ -1623,6 +1623,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 268903514}
   canRun: 0
   YOffset: 0
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &62926399
 GameObject:
@@ -1882,6 +1883,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 1
   YOffset: 5
+  player: {fileID: 0}
   theme: {fileID: 8300000, guid: 372a2384a2badcb4da6b4b5cc66be912, type: 3}
 --- !u!1 &73978944
 GameObject:
@@ -7018,6 +7020,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 0
   YOffset: 1.7
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &251514438
 GameObject:
@@ -8976,6 +8979,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 1
   YOffset: 1.7
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &329086836 stripped
 GameObject:
@@ -12545,6 +12549,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 0
   YOffset: 2.1
+  player: {fileID: 0}
   theme: {fileID: 8300000, guid: e02d0b8baba1b8e44b9ea2bb8a614fe8, type: 3}
 --- !u!4 &529763521 stripped
 Transform:
@@ -14660,6 +14665,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 1
   YOffset: 2.1
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &604619351
 GameObject:
@@ -21561,6 +21567,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 0
   YOffset: 2.1
+  player: {fileID: 0}
   theme: {fileID: 8300000, guid: ed4abda22421dff44975f3e79cc7cade, type: 3}
 --- !u!4 &667359989
 Transform:
@@ -26005,6 +26012,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 1
   YOffset: 1.7
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &858306910
 GameObject:
@@ -28659,6 +28667,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 0
   YOffset: 1.5
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &925023108
 GameObject:
@@ -31198,6 +31207,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 1
   YOffset: 5
+  player: {fileID: 0}
   theme: {fileID: 8300000, guid: 372a2384a2badcb4da6b4b5cc66be912, type: 3}
 --- !u!1 &1049512873
 GameObject:
@@ -34882,6 +34892,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1456610456, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
+      propertyPath: m_Name
+      value: Ken_Board_FlCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 7534403406999664860, guid: 883065d35bf8001418b4f638f428c3ca,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -34897,10 +34911,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1555739453}
-    - target: {fileID: 1456610456, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
-      propertyPath: m_Name
-      value: Ken_Board_FlCanvas
-      objectReference: {fileID: 0}
     - target: {fileID: 1456610457, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -38687,6 +38697,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 448469379}
   canRun: 1
   YOffset: 0
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &1317332575
 GameObject:
@@ -40796,6 +40807,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 362563616}
   canRun: 0
   YOffset: 1.7
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &1387442356
 GameObject:
@@ -48520,6 +48532,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 0
   YOffset: 2.1
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!4 &1528585352
 Transform:
@@ -49110,6 +49123,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 1
   YOffset: 2.1
+  player: {fileID: 0}
   theme: {fileID: 8300000, guid: ed4abda22421dff44975f3e79cc7cade, type: 3}
 --- !u!1 &1545691744
 GameObject:
@@ -66050,6 +66064,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 1197991084}
   canRun: 0
   YOffset: 1.7
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &1975932117
 GameObject:
@@ -66194,6 +66209,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 600990479}
   canRun: 1
   YOffset: 0
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &1986108762
 GameObject:
@@ -68092,6 +68108,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 1
   YOffset: 3
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &2083860539
 GameObject:
