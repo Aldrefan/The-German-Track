@@ -117,7 +117,7 @@ public class SaveFile : MonoBehaviour
             gameCam.actualRoom.SetActive(false);
             gameCam.actualRoom = savedRoom;
             gameCam.actualRoom.SetActive(true);
-            //gameCam.transform.position += KPlayer.transform.position /*+= FindObjectOfType<EventsCheck>().transform.position*/;
+            gameCam.transform.position = KPlayer.transform.position - new Vector3(0,0, gameCam.actualRoom.GetComponent<SceneInformations>().distanceBetweenPlayerAndCamera) ;
             gameCam.InitRoomLimit();
         }
 
