@@ -17,11 +17,19 @@ public class Tooltip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnMouseEnter()
     {
+        //check if another tooltip is open
+        Tooltip[] tooltips = GameObject.FindObjectsOfType<Tooltip>();
+        foreach(Tooltip objet in tooltips)
+        {
+            objet.GetComponent<Tooltip>().hideTooltip();
+        }
+
+        //open this tooltip
         showTooltip();
     }
 
