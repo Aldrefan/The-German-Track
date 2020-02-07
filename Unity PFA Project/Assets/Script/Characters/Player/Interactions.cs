@@ -277,7 +277,6 @@ public class Interactions : MonoBehaviour
             case State.InCinematic:
             isInCinematic = false;
             dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.SetActive(false);
-            GameObject.Find("Necessary_Floating_Canvas").transform.GetChild(2).gameObject.SetActive(false);
             carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);
             carnetUI.GetComponent<Animator>().SetBool("InDialog", false);
             dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.SetActive(false);
@@ -369,13 +368,14 @@ public class Interactions : MonoBehaviour
         {
             carnet.GetComponent<Animator>().SetBool("InDialog", false);
             carnet.GetComponent<Animator>().SetBool("ClickOn", true);
-        }*/
-        /*if(redirectionEventListCount > 0 && eventGivenListCount > 0)
+        }
+        if(redirectionEventListCount > 0 && eventGivenListCount > 0)
         {
             PNJContact.GetComponent<PNJ>().ResponseEvent();
         }*/
 
-        if(eventGivenListCount == 0 || !PNJContact.GetComponent<PNJ>().haveEvent)
+        transform.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+        if(eventGivenListCount == 0 && !PNJContact.GetComponent<PNJ>().haveEvent)
         {
             if(PNJContact.tag != "Interaction")
             {
@@ -391,10 +391,25 @@ public class Interactions : MonoBehaviour
             }
             else PNJContact.GetComponent<PNJ>().ChangeDialog(0);
         }
-        else PNJContact.GetComponent<PNJ>().Response(PNJContact.GetComponent<PNJ>().eventRedirection.redirectionEventList[0]);
+        else if(eventGivenListCount > 0 && PNJContact.GetComponent<PNJ>().haveEvent)
+        {
+            if(PNJContact.tag != "Interaction")
+            {
+                for(int i = 0; i < eventGivenListCount; i++)
+                {
+                    for(int n = 0; n < GetComponent<EventsCheck>().eventsList.Count; n++)
+                    {
+                        if(PNJContact.GetComponent<PNJ>().eventRedirection.eventGivenList[i] == GetComponent<EventsCheck>().eventsList[n])
+                        {
+                            PNJContact.GetComponent<PNJ>().ChangeDialog(PNJContact.GetComponent<PNJ>().eventRedirection.redirectionEventList[i]);
+                            return;
+                        }
+                    }
+                }
+            }
+        }
         
         //GetComponent<MovementsPlayer>().enabled = false;// Initial
-        transform.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         //isInDialog = true;// Initial
         //PNJContact.transform.GetChild(0).gameObject.SetActive(false);
         //PNJContact.GetComponent<PNJ>().Startdialogue();
