@@ -117,9 +117,12 @@ public class Menu : MonoBehaviour
         speedDropdown.ClearOptions();
 
         List<string> speed = new List<string>();
-        speed.Add(LanguageManager.Instance.GetDialog("Speed1"));
+        /*speed.Add(LanguageManager.Instance.GetDialog("Speed1"));
         speed.Add(LanguageManager.Instance.GetDialog("Speed2"));
-        speed.Add(LanguageManager.Instance.GetDialog("Speed3"));
+        speed.Add(LanguageManager.Instance.GetDialog("Speed3"));*/
+        speed.Add("x1");
+        speed.Add("x2");
+        speed.Add("x3");
 
         speedDropdown.AddOptions(speed);
 

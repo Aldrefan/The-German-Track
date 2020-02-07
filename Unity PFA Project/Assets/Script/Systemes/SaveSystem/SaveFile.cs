@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 public class SaveFile : MonoBehaviour
@@ -15,7 +16,7 @@ public class SaveFile : MonoBehaviour
         InitGameData();
         BuildRoomList();
 
-        Debug.Log(GameSaveSystem.gameToLoad);
+        //Debug.Log(GameSaveSystem.gameToLoad);
         LoadAtStart();
 
     }
@@ -52,14 +53,15 @@ public class SaveFile : MonoBehaviour
     public void LoadSettings()
     {
         ReturnSettingsData(GameSaveSystem.LoadSettingsData());
-        Debug.Log("Settings Loaded !");
+        //Debug.Log("Settings Loaded !");
     }
 
     void LoadAtStart()
     {
         LoadSettings();
-        if (GameSaveSystem.gameToLoad || loadAtStart)
+        if (SceneManager.GetActiveScene().name != "MainMenu" && (GameSaveSystem.gameToLoad || loadAtStart))
         {
+            Debug.Log("1");
             LoadGame();
         }
 
@@ -96,12 +98,10 @@ public class SaveFile : MonoBehaviour
 
         for (int i = 0; i< roomList.Count; i++)
         {
-
             if (roomList[i].name == gameSave.actualRoomName)
             {
                 savedRoom =roomList[i];
             }
-            
         }
 
         GameObject KPlayer = null;
@@ -117,7 +117,7 @@ public class SaveFile : MonoBehaviour
             gameCam.actualRoom.SetActive(false);
             gameCam.actualRoom = savedRoom;
             gameCam.actualRoom.SetActive(true);
-            //gameCam.transform.position += KPlayer.transform.position /*+= FindObjectOfType<EventsCheck>().transform.position*/;
+            gameCam.transform.position = KPlayer.transform.position - new Vector3(0,0, gameCam.actualRoom.GetComponent<SceneInformations>().distanceBetweenPlayerAndCamera) ;
             gameCam.InitRoomLimit();
         }
 

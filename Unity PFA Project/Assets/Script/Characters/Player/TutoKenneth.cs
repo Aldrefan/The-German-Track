@@ -11,6 +11,13 @@ public class TutoKenneth : MonoBehaviour
     [HideInInspector]
     public string currentTuto; //Pour checker le tuto en cours quand on ferme sa box
     [HideInInspector]
+    public List<string> tempText;
+    [HideInInspector]
+    public string tempTitle;
+    [HideInInspector]
+    public GameObject tempBoxHelp;
+    [HideInInspector]
+    
     public bool canEsc;
     public bool wantSkipTuto;
     public bool canSave;
@@ -89,7 +96,7 @@ public class TutoKenneth : MonoBehaviour
         public string endingString;
         [Space(30)]
         public string keyTitle;
-        public string keyText;
+        public List<string> keyText;
     }
 
     // Start is called before the first frame update
@@ -102,6 +109,9 @@ public class TutoKenneth : MonoBehaviour
         if(canSave) allowSave();
 
         countStickers = player.GetComponent<PlayerMemory>().allStickers.Count;
+
+        //define tuto
+        InitilisationTextsTuto();
     }
 
     // Update is called once per frame
@@ -533,7 +543,7 @@ public class TutoKenneth : MonoBehaviour
     void openBoxHelp(Tuto tempTuto, bool canSkipTuto)
     {
         //Trouve la box à la bonne position pour ensuite l'activer
-        GameObject tempBoxHelp = null;
+        tempBoxHelp = null;
 
         switch (tempTuto.positionBoxHelp)
         {
@@ -572,20 +582,36 @@ public class TutoKenneth : MonoBehaviour
         isInHelp = true;
         
         //Insère les bons textes
-        tempBoxHelp.transform.GetChild(1).GetComponent<Text>().text = "- " + LanguageManager.Instance.GetDialog(tempTuto.keyTitle) + " -";
-        tempBoxHelp.transform.GetChild(2).GetComponent<Text>().text = LanguageManager.Instance.GetDialog(tempTuto.keyText);
-        tempBoxHelp.transform.GetChild(3).GetComponent<Text>().text = LanguageManager.Instance.GetDialog(textSkipTuto);
+        /*tempBoxHelp.transform.GetChild(1).GetComponent<Text>().text = "- " + LanguageManager.Instance.GetDialog(tempTuto.keyTitle) + " -";
+        //tempList = new List<string>(tempTuto.keyText);
+        tempBoxHelp.transform.GetChild(2).GetComponent<Text>().text = LanguageManager.Instance.GetDialog(tempList[0]);
+        tempBoxHelp.transform.GetChild(3).GetComponent<Text>().text = LanguageManager.Instance.GetDialog(textSkipTuto);*/
+        tempText = new List<string>(tempTuto.keyText);
+        tempTitle = tempTuto.keyTitle;
+        WriteText(tempText, tempTitle, tempBoxHelp);
 
         //Check si on peut passer le tuto, et affiche ou non le bouton en conséquences
         if(canSkipTuto) tempBoxHelp.transform.GetChild(3).gameObject.SetActive(true);
         else tempBoxHelp.transform.GetChild(3).gameObject.SetActive(false);
     }
 
+    void WriteText(List<string> tempTexts, string tempTitle, GameObject tempBoxHelp)
+    {
+        tempBoxHelp.transform.GetChild(1).GetComponent<Text>().text = "- " + LanguageManager.Instance.GetDialog(tempTitle) + " -";
+        tempBoxHelp.transform.GetChild(2).GetComponent<Text>().text = LanguageManager.Instance.GetDialog(tempTexts[0]);
+        tempBoxHelp.transform.GetChild(3).GetComponent<Text>().text = LanguageManager.Instance.GetDialog(textSkipTuto);
+        tempTexts.Remove(tempTexts[0]);
+    }
+
     public void closeBoxHelp()
     {
-        topBoxHelp.SetActive(false);
-        midBoxHelp.SetActive(false);
-        bottomBoxHelp.SetActive(false);
+        if(tempText.Count > 0) WriteText(tempText, tempTitle, tempBoxHelp);
+        else
+        {
+            topBoxHelp.SetActive(false);
+            midBoxHelp.SetActive(false);
+            bottomBoxHelp.SetActive(false);
+        }
 
         isInHelp = false;
         checkTuto(currentTuto);
@@ -620,4 +646,144 @@ public class TutoKenneth : MonoBehaviour
         }
         skipAll();
     }
+
+    void InitilisationTextsTuto()
+    {
+        dialogs.positionBoxHelp = Tuto.PositionBoxHelp.Top;
+        dialogs.canClose = false;
+        dialogs.endingString = "";
+        dialogs.keyTitle = "Tuto_Dialogs_Title";
+        dialogs.keyText = new List<string>();
+        dialogs.keyText.Add("Tuto_Dialogs_Text");
+
+        newSticker.positionBoxHelp = Tuto.PositionBoxHelp.Top;
+        newSticker.canClose = true;
+        newSticker.endingString = "tuto_newSticker_end";
+        newSticker.keyTitle = "Tuto_NewSticker_Title";
+        newSticker.keyText = new List<string>();
+        newSticker.keyText.Add("Tuto_NewSticker_Text");
+
+        questions.positionBoxHelp = Tuto.PositionBoxHelp.Top;
+        questions.canClose = false;
+        questions.endingString = "";
+        questions.keyTitle = "Tuto_Questions_Title";
+        questions.keyText = new List<string>();
+        questions.keyText.Add("Tuto_Questions_Text");
+
+        quitDialog.positionBoxHelp = Tuto.PositionBoxHelp.Mid;
+        quitDialog.canClose = true;
+        quitDialog.endingString = "quitDialog";
+        quitDialog.keyTitle = "Tuto_QuitDialog_Title";
+        quitDialog.keyText = new List<string>();
+        quitDialog.keyText.Add("Tuto_QuitDialog_Text");
+
+        move.positionBoxHelp = Tuto.PositionBoxHelp.Top;
+        move.canClose = false;
+        move.endingString = "move";
+        move.keyTitle = "Tuto_Move_Title";
+        move.keyText = new List<string>();
+        move.keyText.Add("Tuto_Move_Text");
+
+        interaction.positionBoxHelp = Tuto.PositionBoxHelp.Bottom;
+        interaction.canClose = false;
+        interaction.endingString = "";
+        interaction.keyTitle = "Tuto_Interaction_Title";
+        interaction.keyText = new List<string>();
+        interaction.keyText.Add("Tuto_Interaction_Text");
+
+        openBook.positionBoxHelp = Tuto.PositionBoxHelp.Mid;
+        openBook.canClose = false;
+        openBook.endingString = "";
+        openBook.keyTitle = "Tuto_OpenBook_Title";
+        openBook.keyText = new List<string>();
+        openBook.keyText.Add("Tuto_OpenBook_Text");
+
+        navigateBook.positionBoxHelp = Tuto.PositionBoxHelp.Mid;
+        navigateBook.canClose = true;
+        navigateBook.endingString = "tuto_navigateBook_end";
+        navigateBook.keyTitle = "Tuto_NavigateBook_Title";
+        navigateBook.keyText = new List<string>();
+        navigateBook.keyText.Add("Tuto_NavigateBook_Text");
+
+        menu.positionBoxHelp = Tuto.PositionBoxHelp.Mid;
+        menu.canClose = false;
+        menu.endingString = "";
+        menu.keyTitle = "Tuto_Menu_Title";
+        menu.keyText = new List<string>();
+        menu.keyText.Add("Tuto_Menu_Text");
+
+        sprint.positionBoxHelp = Tuto.PositionBoxHelp.Top;
+        sprint.canClose = false;
+        sprint.endingString = "";
+        sprint.keyTitle = "Tuto_Sprint_Title";
+        sprint.keyText = new List<string>();
+        sprint.keyText.Add("Tuto_Sprint_Text");
+
+        board.positionBoxHelp = Tuto.PositionBoxHelp.Mid;
+        board.canClose = true;
+        board.endingString = "tuto_board_end";
+        board.keyTitle = "Tuto_Board_Title";
+        board.keyText = new List<string>();
+        board.keyText.Add("Tuto_Board_Text");
+    }
+
+    public void OpenHelpTuto(string tuto)
+    {
+        tempText = new List<string>();
+
+        switch(tuto)
+        {
+            case "dialogs":
+                tempText.Add("Tuto_Dialogs_Text");
+                tempText.Add("Tuto_QuitDialog_Text");
+                tempTitle = "Tuto_Dialogs_Title";
+                break;
+                
+            case "newsticker":
+                tempText.Add("Tuto_NewSticker_Text");
+                tempTitle = "Tuto_NewSticker_Title";
+                break;
+                
+            case "questions":
+                tempText.Add("Tuto_Questions_Text");
+                tempTitle = "Tuto_Questions_Title";
+                break;
+                
+            case "move":
+                tempText.Add("Tuto_Move_Text");
+                tempText.Add("Tuto_Sprint_Text");
+                tempTitle = "Tuto_Move_Title";
+                break;
+                
+            case "interaction":
+                tempText.Add("Tuto_Interaction_Text");
+                tempTitle = "Tuto_Interaction_Title";
+                break;
+                
+            case "openbook":
+                tempText.Add("Tuto_OpenBook_Text");
+                tempText.Add("Tuto_NavigateBook_Text");
+                tempTitle = "Tuto_OpenBook_Title";
+                break;
+                
+            case "menu":
+                tempText.Add("Tuto_Menu_Text");
+                tempTitle = "Tuto_Menu_Title";
+                break;
+                
+            case "board":
+                tempText.Add("Tuto_Board_Text");
+                tempTitle = "Tuto_Board_Title";
+                break;                
+        }
+        tempBoxHelp = midBoxHelp;
+
+        tempBoxHelp.SetActive(true);
+        tempBoxHelp.transform.GetChild(3).gameObject.SetActive(false);
+        tempBoxHelp.transform.GetChild(4).gameObject.SetActive(true);
+        tempBoxHelp.transform.GetChild(0).gameObject.SetActive(true);
+
+        WriteText(tempText, tempTitle, tempBoxHelp);
+    }
+
 }
