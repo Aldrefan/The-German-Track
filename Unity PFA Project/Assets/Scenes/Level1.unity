@@ -1657,6 +1657,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 268903514}
   canRun: 0
   YOffset: 0
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &62926399
 GameObject:
@@ -1913,6 +1914,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 1
   YOffset: 5
+  player: {fileID: 0}
   theme: {fileID: 8300000, guid: 372a2384a2badcb4da6b4b5cc66be912, type: 3}
 --- !u!1 &73978944
 GameObject:
@@ -7091,6 +7093,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 0
   YOffset: 1.7
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &251514438
 GameObject:
@@ -9389,6 +9392,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 1
   YOffset: 1.7
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &329086836 stripped
 GameObject:
@@ -13044,6 +13048,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 0
   YOffset: 2.1
+  player: {fileID: 0}
   theme: {fileID: 8300000, guid: e02d0b8baba1b8e44b9ea2bb8a614fe8, type: 3}
 --- !u!4 &529763521 stripped
 Transform:
@@ -15159,6 +15164,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 1
   YOffset: 2.1
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &604619351
 GameObject:
@@ -22060,6 +22066,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 0
   YOffset: 2.1
+  player: {fileID: 0}
   theme: {fileID: 8300000, guid: ed4abda22421dff44975f3e79cc7cade, type: 3}
 --- !u!4 &667359989
 Transform:
@@ -26504,6 +26511,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 1
   YOffset: 1.7
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &858306910
 GameObject:
@@ -29158,6 +29166,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 0
   YOffset: 1.5
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &925023108
 GameObject:
@@ -31697,6 +31706,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 1
   YOffset: 5
+  player: {fileID: 0}
   theme: {fileID: 8300000, guid: 372a2384a2badcb4da6b4b5cc66be912, type: 3}
 --- !u!1 &1049512873
 GameObject:
@@ -35381,6 +35391,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1456610456, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
+      propertyPath: m_Name
+      value: Ken_Board_FlCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 7534403406999664860, guid: 883065d35bf8001418b4f638f428c3ca,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -35396,10 +35410,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1555739453}
-    - target: {fileID: 1456610456, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
-      propertyPath: m_Name
-      value: Ken_Board_FlCanvas
-      objectReference: {fileID: 0}
     - target: {fileID: 1456610457, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -39186,6 +39196,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 448469379}
   canRun: 1
   YOffset: 0
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &1317332575
 GameObject:
@@ -41300,6 +41311,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 362563616}
   canRun: 0
   YOffset: 1.7
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &1387442356
 GameObject:
@@ -49024,6 +49036,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 0
   YOffset: 2.1
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!4 &1528585352
 Transform:
@@ -49614,6 +49627,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 1
   YOffset: 2.1
+  player: {fileID: 0}
   theme: {fileID: 8300000, guid: ed4abda22421dff44975f3e79cc7cade, type: 3}
 --- !u!1 &1545691744
 GameObject:
@@ -51717,12 +51731,12 @@ PrefabInstance:
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexCarnetList.Array.size
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.size
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
@@ -67347,6 +67361,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 1197991084}
   canRun: 0
   YOffset: 1.7
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &1975932117
 GameObject:
@@ -67491,6 +67506,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 600990479}
   canRun: 1
   YOffset: 0
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &1986108762
 GameObject:
@@ -69403,6 +69419,7 @@ MonoBehaviour:
   CameraSpot: {fileID: 0}
   canRun: 1
   YOffset: 3
+  player: {fileID: 0}
   theme: {fileID: 0}
 --- !u!1 &2083860539
 GameObject:
@@ -72298,105 +72315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327102c48a2c9294b97410e208d9594f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1156105002}
-  isInHelp: 0
-  currentTuto: 
-  canEsc: 0
-  wantSkipTuto: 0
-  canSave: 0
-  topBoxHelp: {fileID: 2900302817805876609}
-  midBoxHelp: {fileID: 2900302816401803315}
-  bottomBoxHelp: {fileID: 2900302816269802139}
-  refNeeded:
-    leftDialog: {fileID: 1714092047808702674}
-    rightDialog: {fileID: 1714092047808702673}
-    newSticker: {fileID: 1714092047808702672}
-    book: {fileID: 1714092047808702668}
-    bookOnDialog: {fileID: 1714092047808702671}
-    board: {fileID: 1456610456}
-    menu: {fileID: 1995698767}
-    saveButton:
-    - {fileID: 329086836}
-    - {fileID: 1146190055}
-  tutoDone:
-    dialogsDone: 0
-    newStickerDone: 0
-    questionsDone: 0
-    quitDialogDone: 0
-    moveDone: 0
-    interactionDone: 0
-    openBookDone: 0
-    navigateBookDone: 0
-    menuDone: 0
-    sprintDone: 0
-    boardDone: 0
-  textSkipTuto: Tuto_Skip
-  dialogs:
-    positionBoxHelp: 0
-    canClose: 0
-    endingString: 
-    keyTitle: Tuto_Dialogs_Title
-    keyText: Tuto_Dialogs_Text
-  newSticker:
-    positionBoxHelp: 0
-    canClose: 1
-    endingString: tuto_newSticker_end
-    keyTitle: Tuto_NewSticker_Title
-    keyText: Tuto_NewSticker_Text
-  questions:
-    positionBoxHelp: 0
-    canClose: 0
-    endingString: questions
-    keyTitle: Tuto_Questions_Title
-    keyText: Tuto_Questions_Text
-  quitDialog:
-    positionBoxHelp: 1
-    canClose: 0
-    endingString: quitDialog
-    keyTitle: Tuto_QuitDialog_Title
-    keyText: Tuto_QuitDialog_Text
-  move:
-    positionBoxHelp: 0
-    canClose: 0
-    endingString: move
-    keyTitle: Tuto_Move_Title
-    keyText: Tuto_Move_Text
-  interaction:
-    positionBoxHelp: 2
-    canClose: 0
-    endingString: 
-    keyTitle: Tuto_Interaction_Title
-    keyText: Tuto_Interaction_Text
-  openBook:
-    positionBoxHelp: 1
-    canClose: 0
-    endingString: 
-    keyTitle: Tuto_OpenBook_Title
-    keyText: Tuto_OpenBook_Text
-  navigateBook:
-    positionBoxHelp: 1
-    canClose: 1
-    endingString: tuto_navigateBook_end
-    keyTitle: Tuto_NavigateBook_Title
-    keyText: Tuto_NavigateBook_Text
-  menu:
-    positionBoxHelp: 1
-    canClose: 0
-    endingString: 
-    keyTitle: Tuto_Menu_Title
-    keyText: Tuto_Menu_Text
-  sprint:
-    positionBoxHelp: 0
-    canClose: 0
-    endingString: 
-    keyTitle: Tuto_Sprint_Title
-    keyText: Tuto_Sprint_Text
-  board:
-    positionBoxHelp: 1
-    canClose: 1
-    endingString: tuto_board_end
-    keyTitle: Tuto_Board_Title
-    keyText: Tuto_Board_Text
 --- !u!1001 &7826218033919892767
 PrefabInstance:
   m_ObjectHideFlags: 0
