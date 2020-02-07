@@ -45,10 +45,26 @@ public class EventsCheck : MonoBehaviour
     {
         if (col.name == "trigger_PoliceReceptionist")
         {
-            GetComponent<Interactions>().PNJContact = GameObject.Find("police_receptionist");
-            //collision.transform.GetChild(0).gameObject.SetActive(true);
-            //GameObject.Find("trigger_PoliceReceptionist").SetActive(false);
-            GetComponent<Interactions>().StartDialog();
+            if(eventsList.Contains("policeOpen"))
+            {
+                Destroy(col.gameObject);
+            }
+            else
+            {
+                GetComponent<Interactions>().PNJContact = GameObject.Find("police_receptionist");
+                GameObject.Find("police_receptionist").GetComponent<Clara_Cinematic>().CheckIndex();
+                //collision.transform.GetChild(0).gameObject.SetActive(true);
+                //GameObject.Find("trigger_PoliceReceptionist").SetActive(false);
+                GetComponent<Interactions>().StartDialog();
+            }
+        }
+
+        if(col.name == "doorPolice")
+        {
+            if(eventsList.Contains("policeOpen"))
+            {
+                Destroy(col.gameObject);
+            }
         }
         
         /*if (col.name == "dialog_williamscott")
@@ -58,6 +74,14 @@ public class EventsCheck : MonoBehaviour
             GetComponent<Interactions>().StartDialog();
             GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
         }*/
+
+        if(col.name == "Fauteuil")
+        {
+            if(eventsList.Contains("HasSlep"))
+            {
+                Destroy(col.gameObject);
+            }
+        }
         if(col.name == "KD_InvisibleWall")
         {
             //JsonSave save = SaveGameManager.GetCurrentSave();
@@ -76,9 +100,16 @@ public class EventsCheck : MonoBehaviour
 
         if(col.name == "E_InvisibleWall")
         {
-            GetComponent<Interactions>().PNJContact = gameObject;
-            GetComponent<PNJ>().ChangeDialog(1);
-            GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
+            if(eventsList.Contains("HasSlep"))
+            {
+                Destroy(col.gameObject);
+            }
+            else
+            { 
+                GetComponent<Interactions>().PNJContact = gameObject;
+                GetComponent<PNJ>().ChangeDialog(1);
+                GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
+            }
         }
 
         if(col.name == "doorHopital")
@@ -169,12 +200,10 @@ public class EventsCheck : MonoBehaviour
     void UnlockKurtAppartment()
     {
         for(int i = 0; i < appartmentKurtLocked.Count; i++)
-            {
-                appartmentKurtLocked[i].GetComponent<BoxCollider2D>().enabled = true;
-            }
+        {
+            appartmentKurtLocked[i].GetComponent<BoxCollider2D>().enabled = true;
+        }
     }
-
-
 
     public void CheckEvents(string newEvent)
     {
@@ -186,7 +215,6 @@ public class EventsCheck : MonoBehaviour
                 break;
 
             case "hopitalOpen":
-            Debug.Log("Hospital Overture");
                 GetComponent<Interactions>().PNJContact.GetComponent<Clara_Cinematic>().ExecuteCommand();
                 break;
 

@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadbe417d474f84db87f0ba72869d92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogSpeed: 0.04
   language: english
   filePath: IntersceneTexts.json
   datas:
@@ -613,8 +614,8 @@ MonoBehaviour:
   - C1_MainTitle
   - C1_Name
   clickSounds:
-  - {fileID: 8300000, guid: e9195ee4e0c3f3e4bb83058fd0370df1, type: 3}
-  - {fileID: 8300000, guid: 6fcf86514607d294d89de9d8a5707016, type: 3}
+  - {fileID: 8300000, guid: 7ff2fed0596da6b40b2656f483a7fd31, type: 3}
+  - {fileID: 8300000, guid: 2fcc2123224b0504e95b9208b89b1a4e, type: 3}
   levelName: Level1
   IS_PB: {fileID: 1793409264}
 --- !u!114 &1847012161
