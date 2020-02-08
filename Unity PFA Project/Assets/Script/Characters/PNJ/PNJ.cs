@@ -259,7 +259,10 @@ public class PNJ : MonoBehaviour
 
     public void Response(int stickerIndex)
     {
-        stickerAlreadyGivenList.Add(stickerIndex);
+        if(!stickerAlreadyGivenList.Contains(stickerIndex))
+        {
+            stickerAlreadyGivenList.Add(stickerIndex);
+        }
         for(int i = 0; i < stickerRedirection.stickerGivenList.Count; i++)
         {
             if(stickerIndex == stickerRedirection.stickerGivenList[i])

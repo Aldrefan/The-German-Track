@@ -31,20 +31,40 @@ public class CarnetSticker : MonoBehaviour
 
     void OnEnable()
     {
-        if(player.GetComponent<Interactions>().PNJContact != null)
+        /*if(player.GetComponent<Interactions>().PNJContact != null)
         {
-            if(player.GetComponent<Interactions>().PNJContact.tag == "PNJInteractable" && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().stickerAlreadyGivenList.Contains(GetComponent<Sticker_Display>().sticker.index))
+            if(player.GetComponent<Interactions>().PNJContact.tag == "PNJinteractable" && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().stickerAlreadyGivenList.Contains(GetComponent<Sticker_Display>().sticker.index))
             {
                 transform.GetChild(0).GetComponent<Image>().color = Color.gray;
+                Debug.Log(GetComponent<Sticker_Display>().name + "has already been used");
                 //GetComponent<Image>().color = Color.gray;
             }
             else 
             {
                 transform.GetChild(0).GetComponent<Image>().color = GetComponent<Sticker_Display>().backgroundColor;
+                Debug.Log(GetComponent<Sticker_Display>().name + "has never been used");
                 //GetComponent<Image>().color = Color.white;
             }
+        }*/
+        SetBackgroundColor();
+    }
+
+    public void SetBackgroundColor()
+    {
+        if(player.GetComponent<Interactions>().PNJContact.tag == "PNJinteractable" && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().stickerAlreadyGivenList.Contains(GetComponent<Sticker_Display>().sticker.index))
+        {
+            transform.GetChild(0).GetComponent<Image>().color = Color.gray;
+            Debug.Log(GetComponent<Sticker_Display>().name + "has already been used");
+            //GetComponent<Image>().color = Color.gray;
+        }
+        else 
+        {
+            transform.GetChild(0).GetComponent<Image>().color = GetComponent<Sticker_Display>().sticker.color;
+            Debug.Log(GetComponent<Sticker_Display>().name + "has never been used");
+            //GetComponent<Image>().color = Color.white;
         }
     }
+
     void OnMouseDown()
     {
         if(player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.tag == "PNJinteractable")

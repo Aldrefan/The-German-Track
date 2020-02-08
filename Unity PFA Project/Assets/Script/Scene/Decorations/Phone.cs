@@ -25,7 +25,7 @@ public class Phone : MonoBehaviour
         if(contactList.Contains(profil))
         {
             int i = 0;
-            for(i = 0; i < contactList.Count; i++)
+            for(i = 0; i < contactList.Count - 1; i++)
             {
                 Debug.Log("index : " + i);
                 if(profil == contactList[i])

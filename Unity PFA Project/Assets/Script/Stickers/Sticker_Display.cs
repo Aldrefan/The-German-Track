@@ -21,12 +21,18 @@ public class Sticker_Display : MonoBehaviour
     {
         text.text = LanguageManager.Instance.GetDialog(sticker.Text);
         tooltipText.text = LanguageManager.Instance.GetDialog(sticker.tooltipText);
-        if(sticker.index >= GameObject.Find("Kenneth").GetComponent<PlayerMemory>().charactersRange.x && sticker.index <= GameObject.Find("Kenneth").GetComponent<PlayerMemory>().charactersRange.y)
-        text.gameObject.SetActive(false);
+        backgroundSticker.rectTransform.sizeDelta = new Vector2(sticker.backgoundSize.x, sticker.backgoundSize.y);
         backgroundSticker.sprite = sticker.stickerBackground;
         backgroundColor = sticker.color;
-        transform.GetChild(0).GetComponent<Image>().color = backgroundColor;
-        backgroundSticker.rectTransform.sizeDelta = new Vector2(sticker.backgoundSize.x, sticker.backgoundSize.y);
+
+        if(sticker.index >= GameObject.Find("Kenneth").GetComponent<PlayerMemory>().charactersRange.x && sticker.index <= GameObject.Find("Kenneth").GetComponent<PlayerMemory>().charactersRange.y)
+        text.gameObject.SetActive(false);
+
+
+        if(GameObject.Find("Kenneth").GetComponent<Interactions>().state == Interactions.State.OnCarnet)
+        GetComponent<CarnetSticker>().SetBackgroundColor();
+
+        //transform.GetChild(0).GetComponent<Image>().color = backgroundColor;
         //text.rectTransform.sizeDelta = new Vector2(GetComponent<BoxCollider2D>().size.x, GetComponent<BoxCollider2D>().size.y/*  -20*/);
     }
 
@@ -37,7 +43,7 @@ public class Sticker_Display : MonoBehaviour
 
     IEnumerator Timer()
     {
-        yield return new WaitForSeconds(0.001f);
+        yield return new WaitForSeconds(0.0001f);
         SetInformations();
     }
 }
