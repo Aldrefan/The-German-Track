@@ -270,6 +270,10 @@ public class Menu : MonoBehaviour
     //Play
     public void NewGame()
     {
+        if (GameSaveSystem.gameToLoad)
+        {
+            GameSaveSystem.gameToLoad = false;
+        }
         SceneManager.LoadScene(1);
     }
 
