@@ -173,7 +173,7 @@ public class Interactions : MonoBehaviour
             if(GameObject.Find("Tutorial").GetComponent<TutoKenneth>().canEsc && PNJContact.GetComponent<PNJ>().dialogIndex > 0 && PNJContact.GetComponent<PNJ>().allDialogs.listOfDialogs[PNJContact.GetComponent<PNJ>().dialogIndex].canAskQuestions)
             {
                 PNJContact.GetComponent<PNJ>().EndDialog();
-                Debug.Log("QuitDialog");
+                //Debug.Log("QuitDialog");
                 carnetUI.GetComponent<Animator>().SetBool("ClickOn", false);
                 dialAndBookCanvas.transform.GetChild(3).gameObject.SetActive(false);
                 //animator.SetBool("Talk", false);
