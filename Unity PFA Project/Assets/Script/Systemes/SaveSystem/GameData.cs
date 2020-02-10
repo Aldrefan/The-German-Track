@@ -30,9 +30,11 @@ public class GameData
     //GoalsList
     public List<GoalKeys> goalsInProgress = new List<GoalKeys>();
     public List<GoalKeys> goalsComplete = new List<GoalKeys>();
+    //StrickersList
+    public List<StickersGivenToPNJ.PNJMemory> pnjStickerManager = new List<StickersGivenToPNJ.PNJMemory>();
 
 
-    public GameData(CameraFollow camScript, ActiveCharacterScript currentCharacters, GameObject characterToPlay, DayNightLight directionalLight, CarnetGoal goalsObject)
+    public GameData(CameraFollow camScript, ActiveCharacterScript currentCharacters, GameObject characterToPlay, DayNightLight directionalLight, CarnetGoal goalsObject, StickersGivenToPNJ newStrickerManager)
     {
         currentLevel = SceneManager.GetActiveScene().name;
 
@@ -71,6 +73,11 @@ public class GameData
         {
             goalsInProgress = goalsObject.goalList;
             goalsComplete = goalsObject.removeGoalList;
+        }
+
+        if (newStrickerManager != null)
+        {
+            pnjStickerManager = newStrickerManager.PnjsInGame;
         }
     }
 
