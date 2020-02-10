@@ -17,6 +17,7 @@ public static class GameSaveSystem
     static GameObject actualPlayer;
     static DayNightLight directionalLight;
     static CarnetGoal goalFrame;
+    static StickersGivenToPNJ stickerManager;
 
     //SettingsData
     static AudioMixer musicMixer;
@@ -28,15 +29,12 @@ public static class GameSaveSystem
         if (!Directory.Exists(SAVE_FOLDER))
         {
             Directory.CreateDirectory(SAVE_FOLDER);
-
-
         }
-
     }
 
     public static void SaveGameData()
     {
-        GameData saveObject = new GameData(camScript, currentCharacters, actualPlayer, directionalLight, goalFrame);
+        GameData saveObject = new GameData(camScript, currentCharacters, actualPlayer, directionalLight, goalFrame, stickerManager);
         string json = JsonUtility.ToJson(saveObject);
 
         File.WriteAllText(SAVE_FOLDER + "/gameSave.tgt", json);
@@ -100,13 +98,14 @@ public static class GameSaveSystem
         return gameActualLevel;
     }
 
-    public static void GameDataInput(CameraFollow newCamScript, ActiveCharacterScript newCurrentCharacters, GameObject newPlayer, DayNightLight newDirLight, CarnetGoal newGoalFrame)
+    public static void GameDataInput(CameraFollow newCamScript, ActiveCharacterScript newCurrentCharacters, GameObject newPlayer, DayNightLight newDirLight, CarnetGoal newGoalFrame, StickersGivenToPNJ newStickerManager)
     {
         camScript = newCamScript;
         currentCharacters = newCurrentCharacters;
         actualPlayer = newPlayer;
         directionalLight = newDirLight;
         goalFrame = newGoalFrame;
+        stickerManager = newStickerManager;
     }
 
     public static void SettingsDataInput(AudioMixer newMusicMixer, AudioMixer newEffectMixer, LanguageManager newLangManager)

@@ -175,6 +175,12 @@ public class SaveFile : MonoBehaviour
             }
         }
 
+        StickersGivenToPNJ actualStickersManager = GameObject.FindObjectOfType<StickersGivenToPNJ>();
+        if (actualStickersManager != null)
+        {
+            actualStickersManager.PnjsInGame = gameSave.pnjStickerManager;
+        }
+
 
     }
 
@@ -232,7 +238,8 @@ public class SaveFile : MonoBehaviour
                 FindObjectOfType<ActiveCharacterScript>(),
                 player,
                 FindObjectOfType<DayNightLight>(),
-                GameObject.FindObjectOfType<Ken_Canvas_Infos>().transform.Find("Panel").Find("Carnet").Find("Goal").Find("GoalFrame").GetComponent<CarnetGoal>());
+                GameObject.FindObjectOfType<Ken_Canvas_Infos>().transform.Find("Panel").Find("Carnet").Find("Goal").Find("GoalFrame").GetComponent<CarnetGoal>(),
+                GameObject.FindObjectOfType<StickersGivenToPNJ>());
         }
 
         GameSaveSystem.SettingsDataInput(
