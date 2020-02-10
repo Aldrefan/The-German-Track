@@ -154,18 +154,18 @@ public class EventsCheck : MonoBehaviour
             GetComponent<Interactions>().PNJContact.transform.GetChild(1).gameObject.SetActive(true);
         }
         
-        if(GetComponent<PlayerMemory>().allStickers.Contains(15))
+        if(/*GetComponent<PlayerMemory>().allStickers.Contains(15)*/ eventsList.Contains("LettreADecoder") && !eventsList.Contains("LettreDecodee")) //possède l'objectif de la lettre codée non fait
         {
-            if(/*eventsList.Contains("LettreDécodée")*/GetComponent<PlayerMemory>().allStickers.Contains(10) && GetComponent<PlayerMemory>().allStickers.Contains(45))
+            if(/*eventsList.Contains("LettreDécodée")*/GetComponent<PlayerMemory>().allStickers.Contains(10) && GetComponent<PlayerMemory>().allStickers.Contains(45)) //a déjà décodé
             {
                 //GetComponent<Interactions>().PNJContact = gameObject;
                 //GameObject.FindGameObjectWithTag("Player").GetComponent<PNJ>().ChangeDialog(0);
-                GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().ChangeDialog(0);
+                GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().ChangeDialog(3);
                 GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
             }
             else
             {
-                GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().ChangeDialog(1);
+                GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().ChangeDialog(2);
                 GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
                 //eventsList.Add("LettreDécodée");
                 //GetComponent<Interactions>().PNJContact = gameObject;
@@ -174,7 +174,14 @@ public class EventsCheck : MonoBehaviour
                 //lamp = false;
             }
         }
-        else 
+        else if(eventsList.Contains("LettreDecodee")) //a déjà décodé)
+        {
+            GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().ChangeDialog(3);
+            GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
+            //GetComponent<Interactions>().PNJContact = gameObject;
+            //GameObject.FindGameObjectWithTag("Player").GetComponent<PNJ>().ChangeDialog(0);
+        }
+        else
         {
             GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().ChangeDialog(0);
             GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
@@ -292,6 +299,14 @@ public class EventsCheck : MonoBehaviour
 
             case "TalkToKurt":
                 UnlockKurtAppartment();
+                break;
+
+            case "LettreADecoder":
+                carnetGoal.NewGoal(new GoalKeys("Goal_06", "DescGoal_06"));
+                break;
+
+            case "LettreDecodee":
+                carnetGoal.RemoveGoal(new GoalKeys("Goal_06", "DescGoal_06"));
                 break;
 
             default:

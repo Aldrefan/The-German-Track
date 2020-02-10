@@ -51077,6 +51077,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
+      propertyPath: allStickers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
+        type: 3}
+      propertyPath: stickerIndexBoardList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
+        type: 3}
+      propertyPath: stickerIndexCarnetList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
+        type: 3}
       propertyPath: boardCanvas
       value: 
       objectReference: {fileID: 347536223}
@@ -51090,6 +51105,21 @@ PrefabInstance:
       propertyPath: carnet
       value: 
       objectReference: {fileID: 1714092047808702670}
+    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
+        type: 3}
+      propertyPath: allStickers.Array.data[0]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
+        type: 3}
+      propertyPath: stickerIndexCarnetList.Array.data[0]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
+        type: 3}
+      propertyPath: stickerIndexBoardList.Array.data[0]
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017400, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: boardCanvas
@@ -70178,6 +70208,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8891736062753409459, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_Name
+      value: Ken_Dial_Book_FlCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 1308680419693276632, guid: 33ddad3a370b0824b848ab3b505bf613,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -70223,11 +70258,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1995698768}
-    - target: {fileID: 8891736062753409459, guid: 33ddad3a370b0824b848ab3b505bf613,
-        type: 3}
-      propertyPath: m_Name
-      value: Ken_Dial_Book_FlCanvas
-      objectReference: {fileID: 0}
     - target: {fileID: 8891736062753409463, guid: 33ddad3a370b0824b848ab3b505bf613,
         type: 3}
       propertyPath: m_LocalPosition.x

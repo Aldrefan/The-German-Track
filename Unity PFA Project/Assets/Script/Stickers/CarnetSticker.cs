@@ -54,20 +54,21 @@ public class CarnetSticker : MonoBehaviour
         if(player.GetComponent<Interactions>().PNJContact.tag == "PNJinteractable" && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().stickerAlreadyGivenList.Contains(GetComponent<Sticker_Display>().sticker.index))
         {
             transform.GetChild(0).GetComponent<Image>().color = Color.gray;
-            Debug.Log(GetComponent<Sticker_Display>().name + "has already been used");
+            //Debug.Log(GetComponent<Sticker_Display>().name + "has already been used");
             //GetComponent<Image>().color = Color.gray;
         }
         else 
         {
             transform.GetChild(0).GetComponent<Image>().color = GetComponent<Sticker_Display>().sticker.color;
-            Debug.Log(GetComponent<Sticker_Display>().name + "has never been used");
+            //Debug.Log(GetComponent<Sticker_Display>().name + "has never been used");
             //GetComponent<Image>().color = Color.white;
         }
     }
 
     void OnMouseDown()
     {
-        if(player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.tag == "PNJinteractable")
+        if(player.GetComponent<Interactions>().PNJContact != null && (player.GetComponent<Interactions>().PNJContact.tag == "PNJinteractable"
+                || (player.GetComponent<Interactions>().PNJContact.tag == "Interaction" && player.GetComponent<Interactions>().PNJContact.name == "Lamp")))
         {
             player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().Response(GetComponent<Sticker_Display>().sticker.index);
             player.GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);

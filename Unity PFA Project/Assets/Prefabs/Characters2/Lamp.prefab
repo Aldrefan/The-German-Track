@@ -96,7 +96,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9176138489401790011}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.723, y: -1.452, z: 0.8169146}
   m_LocalScale: {x: 8.599999, y: 8.599999, z: 1}
   m_Children:
@@ -149,12 +149,12 @@ MonoBehaviour:
   dialogLine: 0
   dialogIndex: 0
   transitionQuote: 10
-  negativeQuote: 9
+  negativeQuote: 2
   haveEvent: 0
   stickerAlreadyGivenList: 
   stickerRedirection:
-    stickerGivenList: 
-    redirectionList: 
+    stickerGivenList: 0f000000
+    redirectionList: 01000000
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
@@ -182,6 +182,29 @@ MonoBehaviour:
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 0a0000002d000000
+        eventTrigger:
+        - LettreDecodee
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 1
+      buttonsList: []
+    - dialog:
+      - quote: Lamp_D2_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 1
+      hasChoices: 0
+      endDialog: 1
+      buttonsList: []
+    - dialog:
+      - quote: Lamp_D3_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 0
