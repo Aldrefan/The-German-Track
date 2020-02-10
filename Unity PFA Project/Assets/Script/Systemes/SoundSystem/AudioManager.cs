@@ -7,6 +7,13 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
     public AudioClip[] _audioClips;
+    [SerializeField]
+    private AudioSource[] audiosources;
+
+    void Start()
+    {
+        audiosources = FindObjectsOfType<AudioSource>();
+    }
 }
 
 
