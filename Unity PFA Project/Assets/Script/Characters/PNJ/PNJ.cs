@@ -259,6 +259,7 @@ public class PNJ : MonoBehaviour
 
     public void Response(int stickerIndex)
     {
+        StickersGivenToPNJ.SGTP.AddStickerInAList(PNJName, stickerIndex);
         if(!stickerAlreadyGivenList.Contains(stickerIndex))
         {
             stickerAlreadyGivenList.Add(stickerIndex);

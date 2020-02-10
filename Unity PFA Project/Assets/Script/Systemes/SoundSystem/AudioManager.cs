@@ -14,8 +14,6 @@ public class AudioManager : MonoBehaviour
     {
         audiosources = FindObjectsOfType<AudioSource>();
     }
-
-
 }
 
 
