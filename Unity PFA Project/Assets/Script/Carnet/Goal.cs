@@ -7,12 +7,19 @@ using UnityEngine.EventSystems;
 public class Goal : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     string goalDescription;
+    string descKey;
+
+    [HideInInspector]
+    public string nameKey;
 
     [HideInInspector]
     public Transform goalDescriptionTransform;
 
     public void Init(string newNameKey, string newDescKey)
     {
+        nameKey = newNameKey;
+        descKey = newDescKey;
+
         this.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 1);
         this.transform.GetChild(0).GetComponent<Text>().horizontalOverflow =  HorizontalWrapMode.Wrap;
 
@@ -32,6 +39,19 @@ public class Goal : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         else
         {
             goalDescription = LanguageManager.Instance.GetDialog(newDescKey);
+        }
+    }
+
+    void Update()
+    {
+        CheckLanguage();
+    }
+
+    void CheckLanguage()
+    {
+        if(this.transform.GetChild(0).GetComponent<Text>().text != LanguageManager.Instance.GetDialog(nameKey))
+        {
+            Init(nameKey, descKey);
         }
     }
 
