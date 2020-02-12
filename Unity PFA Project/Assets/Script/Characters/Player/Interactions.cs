@@ -42,7 +42,10 @@ public class Interactions : MonoBehaviour
 
     void Awake()
     {
-        carnetUI = GameObject.Find("CarnetUI").transform;
+        if (GameObject.Find("CarnetUI") != null)
+        {
+            carnetUI = GameObject.Find("CarnetUI").transform;
+        }
         animator = GetComponent<Animator>();
     }
 
@@ -55,7 +58,11 @@ public class Interactions : MonoBehaviour
 
     void OnEnable()
     {
-        GetComponent<MovementsPlayer>().canRun = Camera.main.GetComponent<CameraFollow>().actualRoom.GetComponent<SceneInformations>().canRun;
+        if (Camera.main.GetComponent<CameraFollow>().actualRoom != null)
+        {
+            GetComponent<MovementsPlayer>().canRun = Camera.main.GetComponent<CameraFollow>().actualRoom.GetComponent<SceneInformations>().canRun;
+
+        }
     }
 
     void OnTriggerStay2D(Collider2D collision)

@@ -96,7 +96,7 @@ public class CarnetGoal : MonoBehaviour
             int counter = 0;
             foreach (Transform currentGoal in toCompleteGoals)
             {
-                if(currentGoal.GetComponent<Goal>().ReturnGoal() ==  LanguageManager.Instance.GetDialog(goal.nameGoalKey))
+                if(currentGoal.GetComponent<Goal>().nameKey ==  goal.nameGoalKey)
                 {
                     counter++;
                 }
@@ -121,7 +121,7 @@ public class CarnetGoal : MonoBehaviour
             int counter = 0;
             foreach (Transform currentGoal in completedGoals)
             {
-                if (currentGoal.GetComponent<Goal>().ReturnGoal() == LanguageManager.Instance.GetDialog(goal.nameGoalKey))
+                if (currentGoal.GetComponent<Goal>().nameKey == goal.nameGoalKey)
                 {
                     counter++;
                 }
@@ -129,7 +129,7 @@ public class CarnetGoal : MonoBehaviour
             }
             foreach (Transform finishedGoal in toCompleteGoals)
             {
-                if (finishedGoal.GetComponent<Goal>().ReturnGoal() == LanguageManager.Instance.GetDialog(goal.nameGoalKey))
+                if (finishedGoal.GetComponent<Goal>().nameKey == goal.nameGoalKey)
                 {
                     finishedGoal.SetParent(completedGoals);
                     finishedGoal.GetComponent<Goal>().ChangeColor(Color.gray);

@@ -30,8 +30,11 @@ public class CameraFollow : MonoBehaviour
 
     public void InitRoomLimit()
     {
-        leftBorder = actualRoom.transform.Find("Structure").Find("BarrierLeft").position;
-        rightBorder = actualRoom.transform.Find("Structure").Find("BarrierRight").position;
+        if (actualRoom != null)
+        {
+            leftBorder = actualRoom.transform.Find("Structure").Find("BarrierLeft").position;
+            rightBorder = actualRoom.transform.Find("Structure").Find("BarrierRight").position;
+        }
     }
 
     // Update is called once per frame
