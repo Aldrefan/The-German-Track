@@ -47,9 +47,24 @@ public class FigurantMovement : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.tag == "Player")
+        {
+            Debug.Log(LayerManager.layerManager.SetNewLayer(transform.position));
+            GetComponent<SpriteRenderer>().sortingOrder = LayerManager.layerManager.SetNewLayer(transform.position);
+        }
+        if(col.GetComponent<FigurantSpawner>())
+        {
+            ChangeState(State.Stand);
+            col.GetComponent<FigurantSpawner>().StartCoroutine("NewFigurantTimer", 4);
+            Destroy(gameObject, 1);
+        }
+    }
+
     void Walk()
     {
-        GetComponent<Animator>().SetFloat("actualSpeed", actualSpeed * 0.8f);
+        GetComponent<Animator>().SetFloat("actualSpeed", actualSpeed * 0.6f);
         if(isJustMoving)
         {
             if(transform.localPosition.x >= limits.y && GetComponent<Transform>().lossyScale.x > 0)
@@ -57,7 +72,6 @@ public class FigurantMovement : MonoBehaviour
                 //GetComponent<SpriteRenderer>().flipX = true;
                 //ChangeState(State.Slowering);
                 ChangeDirection();
-
             }
             if(transform.localPosition.x <= limits.x && GetComponent<Transform>().lossyScale.x < 0)
             {
@@ -66,13 +80,13 @@ public class FigurantMovement : MonoBehaviour
                 ChangeDirection();
             }
         }
-        else if(canDespawn)
+        /*else if(canDespawn)
         {
             if(transform.localPosition.x >= limits.y || transform.localPosition.x <= limits.x)
             {
                 Destroy(gameObject);
             }
-        }
+        }*/
     }
 
     void ChangeState(State newState)
@@ -87,6 +101,8 @@ public class FigurantMovement : MonoBehaviour
 
             case State.Stand:
             state = newState;
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+            GetComponent<Animator>().SetFloat("actualSpeed", 0);
             break;
 
             case State.Slowering:
@@ -167,14 +183,6 @@ public class FigurantMovement : MonoBehaviour
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         ChangeDirection();
-    }
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        /*if(col.transform.parent.name == "Structure")
-        {
-            Destroy(gameObject);
-        }*/
     }
 
     IEnumerator Pause()

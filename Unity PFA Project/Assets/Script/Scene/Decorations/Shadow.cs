@@ -5,8 +5,9 @@ using UnityEngine;
 public class Shadow : MonoBehaviour
 {
     public GameObject owner;
-    Animator ownerAnimator;
+    RuntimeAnimatorController ownerAnimator;
     public Vector2 size;
+    bool canBeDestroyed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,26 @@ public class Shadow : MonoBehaviour
 
     void OnEnable()
     {
-        ownerAnimator = owner.GetComponent<Animator>();
+        if(owner != null)
+        {
+            SetOwner();
+        }
+    }
+
+    public void SetOwner()
+    {
+        ownerAnimator = owner.GetComponent<Animator>().runtimeAnimatorController;
+        GetComponent<Animator>().runtimeAnimatorController = ownerAnimator;
+        transform.rotation = Quaternion.Euler(180,0,0);
+        StartCoroutine(TimerBeforeDestructionCheck());
+    }
+
+    void FixedUpdate()
+    {
+        if(owner == null && canBeDestroyed)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -24,7 +44,14 @@ public class Shadow : MonoBehaviour
         transform.position = new Vector3(owner.transform.position.x, owner.transform.position.y - 4.5f, owner.transform.position.z);
         GetComponent<Animator>().SetBool("Walk", owner.GetComponent<Animator>().GetBool("Walk"));
         GetComponent<Animator>().SetBool("Run", owner.GetComponent<Animator>().GetBool("Run"));
+        GetComponent<Animator>().SetFloat("actualSpeed", owner.GetComponent<Animator>().GetFloat("actualSpeed"));
         transform.localScale = new Vector3(size.x * (owner.transform.localScale.x / 8), size.y, 1);
         GetComponent<SpriteRenderer>().flipX = owner.GetComponent<SpriteRenderer>().flipX;
+    }
+
+    IEnumerator TimerBeforeDestructionCheck()
+    {
+        yield return new WaitForSeconds(0.0001f);
+        canBeDestroyed = true;
     }
 }

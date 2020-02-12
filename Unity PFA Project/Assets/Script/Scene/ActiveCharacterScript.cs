@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ActiveCharacterScript : MonoBehaviour
 {
+    public static ActiveCharacterScript ActiveCharacter;
     public GameObject actualCharacter;
     [System.Serializable]
     public class PlayableCharacter
@@ -20,6 +21,11 @@ public class ActiveCharacterScript : MonoBehaviour
     }
     public List<PlayableCharacter> playableCharactersList;
     public GameObject startingCharacter;
+
+    void Awake()
+    {
+        ActiveCharacter = this;
+    }
 
     public void ChangeActiveCharacter(string newCharacterName)
     {
