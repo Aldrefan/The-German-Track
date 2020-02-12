@@ -18,7 +18,10 @@ public class MovementsPlayer : MonoBehaviour {
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        StartCoroutine(StartTimerBeforeCheckActivation());
+        if(this.name == "Kenneth")
+        {
+            StartCoroutine(StartTimerBeforeCheckActivation());
+        }
     }
 
     // Update is called once per frame

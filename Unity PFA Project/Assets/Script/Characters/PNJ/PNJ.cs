@@ -79,12 +79,20 @@ public class PNJ : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        carnet = GameObject.Find("CarnetUI").transform;
-        DialogCanvas = GameObject.Find("Ken_Dial_Book_FlCanvas");
-        leftPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().leftPanel;
-        rightPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().rightPanel;
-        questionPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().questionPanel;
+        if (GameObject.Find("CarnetUI"))
+        {
+            carnet = GameObject.Find("CarnetUI").transform;
+        }
+        if (GameObject.Find("Ken_Dial_Book_FlCanvas") != null)
+        {
+            DialogCanvas = GameObject.Find("Ken_Dial_Book_FlCanvas");
+            leftPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().leftPanel;
+            rightPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().rightPanel;
+            questionPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().questionPanel;
+        }
+
     }
+
 
     // Update is called once per frame
     void Update()
