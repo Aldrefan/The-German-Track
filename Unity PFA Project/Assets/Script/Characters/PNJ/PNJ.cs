@@ -315,7 +315,7 @@ public class PNJ : MonoBehaviour
                 i += 3;
             }*/
             currentLine = actualQuote.Substring(0,i);
-            panel.transform.GetChild(1).GetComponent<TextMesh>().text = currentLine;
+            panel.transform.GetChild(1).GetComponent<Text>().text = currentLine;
             yield return new WaitForSeconds(dialogDelay);
         }
         quoteFinished = true;

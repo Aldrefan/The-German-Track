@@ -770,7 +770,8 @@ MonoBehaviour:
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: []
+        eventTrigger:
+        - LettreADecoder
         spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
