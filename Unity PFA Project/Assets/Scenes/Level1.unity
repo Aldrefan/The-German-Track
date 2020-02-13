@@ -10818,7 +10818,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 408455945}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c75fe1fe36b8a644ca23442f08085d8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e8905293a6f03c4d88993ca0a156795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &408455949
@@ -10830,9 +10830,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 408455945}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa1bb7a734bfe50449032cb69ea89ec7, type: 3}
+  m_Script: {fileID: 11500000, guid: 8384155f82d82a943955c76cbf5327a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PnjsInGame: []
 --- !u!1 &420666936
 GameObject:
   m_ObjectHideFlags: 0
@@ -14645,6 +14646,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &579691287 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 573241968, guid: 2adb0caa31d59b841b9fc46dfe0513c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2725505933677939288}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &582855194
 GameObject:
   m_ObjectHideFlags: 0
@@ -33068,7 +33081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59dda0572c4e9f34e919df6aa7330d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadAtStart: 1
+  loadAtStart: 0
 --- !u!1 &1046037994
 GameObject:
   m_ObjectHideFlags: 0
@@ -54105,26 +54118,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
-      propertyPath: stickerIndexCarnetList.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.size
-      value: 53
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
       propertyPath: boardCanvas
       value: 
       objectReference: {fileID: 347536223}
@@ -54138,458 +54131,6 @@ PrefabInstance:
       propertyPath: carnet
       value: 
       objectReference: {fileID: 1714092047808702670}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[0]
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[1]
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[2]
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[3]
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[4]
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[0]
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[1]
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[2]
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[3]
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[4]
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[5]
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[5]
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[6]
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[6]
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[7]
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[8]
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[7]
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[8]
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerTemplate
-      value: 
-      objectReference: {fileID: 3810293468784593066, guid: 1d6483f74250d2243be102a9cc38e29a,
-        type: 3}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: c6f71e55e1b86824498715af2ab46b0f,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[10]
-      value: 
-      objectReference: {fileID: 11400000, guid: 56e5dc5e5a8dc8b46bd50bef596a063f,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[11]
-      value: 
-      objectReference: {fileID: 11400000, guid: aa0e07cda193aff4bbefa00a28603ce1,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[12]
-      value: 
-      objectReference: {fileID: 11400000, guid: 894d045053d708b4ca5d6fd51af097ae,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[13]
-      value: 
-      objectReference: {fileID: 11400000, guid: bf192c989d919614eb8c9cb87f9e864a,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[14]
-      value: 
-      objectReference: {fileID: 11400000, guid: 02aae1456313ce84ea135e51e60b2706,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 63d1e3c90f8592545a242b2d05e0e5e6,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: e3c5f378003ffe14bbf53e9d0b9c519b,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: 2079703d39ab120469ac716f2f77c0ff,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[5]
-      value: 
-      objectReference: {fileID: 11400000, guid: a317d9b84c594a74b84c09eda26ab65a,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[6]
-      value: 
-      objectReference: {fileID: 11400000, guid: d64a3321e0753194e8f9fd9195c99e90,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[7]
-      value: 
-      objectReference: {fileID: 11400000, guid: 35e325be33a0acb45894410e58797d4b,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[8]
-      value: 
-      objectReference: {fileID: 11400000, guid: 530d615cec088204cbc4156e46dc5bfd,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[9]
-      value: 
-      objectReference: {fileID: 11400000, guid: b1656ef2b413cc94fb4a885b01f478dd,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[15]
-      value: 
-      objectReference: {fileID: 11400000, guid: 01349697d4a3e9147a0c6ff8866b8328,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[16]
-      value: 
-      objectReference: {fileID: 11400000, guid: 2786e597a1334c94dbc16735185719a1,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[17]
-      value: 
-      objectReference: {fileID: 11400000, guid: 2e6f66af5bf04354b95d57cafe9500f9,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[18]
-      value: 
-      objectReference: {fileID: 11400000, guid: 12a36d77b40584c4296bc8ce852e5057,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[19]
-      value: 
-      objectReference: {fileID: 11400000, guid: ad72c1759bc856842af7fca9eb9dc0fd,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[20]
-      value: 
-      objectReference: {fileID: 11400000, guid: 4862e760d37f2e842970f245fb15ca52,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[21]
-      value: 
-      objectReference: {fileID: 11400000, guid: 0c161ce3e18aa4c4993907917a252e6e,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[22]
-      value: 
-      objectReference: {fileID: 11400000, guid: 98afaac409484504497d4be25df708df,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[23]
-      value: 
-      objectReference: {fileID: 11400000, guid: d07395efccb3f2d4b93958532bea3505,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[24]
-      value: 
-      objectReference: {fileID: 11400000, guid: dc51af6928aa6ac4f8431e712e572568,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[25]
-      value: 
-      objectReference: {fileID: 11400000, guid: 090f2804903a50d42aeb86b5e1260d14,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[26]
-      value: 
-      objectReference: {fileID: 11400000, guid: d30b586cda18aa041b52b52d2b2d9dd5,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[27]
-      value: 
-      objectReference: {fileID: 11400000, guid: 3ab12c8e0656aef45b969e37cb096ce4,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[28]
-      value: 
-      objectReference: {fileID: 11400000, guid: 1c3b15ef69fea8c44aeb9f8a9556b239,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[29]
-      value: 
-      objectReference: {fileID: 11400000, guid: 946b91783282e2742b88ce83cd0c4558,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[30]
-      value: 
-      objectReference: {fileID: 11400000, guid: d3c982ae0bf34414ba515169e72da11f,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[31]
-      value: 
-      objectReference: {fileID: 11400000, guid: cef0a9f45536bb549b32cc3fcbb5348b,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[32]
-      value: 
-      objectReference: {fileID: 11400000, guid: 19fe2fa6bbf5da44094a6320f7ee2d95,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[33]
-      value: 
-      objectReference: {fileID: 11400000, guid: bf4d5c3e63844704aaf5a549e70d67d6,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[34]
-      value: 
-      objectReference: {fileID: 11400000, guid: 059d5e98709dca74ea9f111b787c665d,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[35]
-      value: 
-      objectReference: {fileID: 11400000, guid: e6666e7e114c3a04bb57634789c7eeb6,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[36]
-      value: 
-      objectReference: {fileID: 11400000, guid: cacd595f832a36b4aa886d2c1a3cc3af,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[37]
-      value: 
-      objectReference: {fileID: 11400000, guid: 1347c2b57e24aeb459541321a0aed216,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[39]
-      value: 
-      objectReference: {fileID: 11400000, guid: 7e52c4c236de34647807b5159c0fbaf4,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[40]
-      value: 
-      objectReference: {fileID: 11400000, guid: e5cce0aca2e49cb4f9b36e02e18b33d5,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[41]
-      value: 
-      objectReference: {fileID: 11400000, guid: 70f4d3a248e86f34ab30134808b58feb,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[43]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8891cd237b07e114a8c4005f2ce97d17,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[44]
-      value: 
-      objectReference: {fileID: 11400000, guid: 65245b34464fbca46b7416a1b307e493,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[45]
-      value: 
-      objectReference: {fileID: 11400000, guid: ad9293d05e9f5a5408867dff4852f1f1,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[46]
-      value: 
-      objectReference: {fileID: 11400000, guid: 4a2c14896760b2347a4d3a6de78c985b,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[47]
-      value: 
-      objectReference: {fileID: 11400000, guid: 46f997994f4092e4b8cf729fae80418f,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[48]
-      value: 
-      objectReference: {fileID: 11400000, guid: 19aafdcf3e430974d800c194aa244800,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[49]
-      value: 
-      objectReference: {fileID: 11400000, guid: 7d87aa71362ac5f45a7d6ebedf1ec48d,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[50]
-      value: 
-      objectReference: {fileID: 11400000, guid: af3a44bcfc17b7943b73228aa8006c24,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[51]
-      value: 
-      objectReference: {fileID: 11400000, guid: ecda679825a41334b925b9ff4284866d,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[52]
-      value: 
-      objectReference: {fileID: 11400000, guid: 4701de738c846f64c83bad51274601d3,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickersScriptableList.Array.data[42]
-      value: 
-      objectReference: {fileID: 11400000, guid: e8d1e43b9095e6048a335bd401d6e500,
-        type: 2}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[0]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[1]
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[9]
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[10]
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[11]
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[12]
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[13]
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[14]
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017400, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: PnjMet.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017400, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: carnet
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017400, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: boardCanvas
@@ -54612,225 +54153,6 @@ PrefabInstance:
       propertyPath: appartmentKurtLocked.Array.data[1]
       value: 
       objectReference: {fileID: 1753499838}
-    - target: {fileID: 1955605217293017401, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 68c5aec71ab17354096dc9235fc8c106,
-        type: 3}
-    - target: {fileID: 1955605217293017403, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017407, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: m_EdgeRadius
-      value: 0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017407, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017407, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017407, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017407, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017407, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017406, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017406, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: walk_speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156105011, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[0].quote
-      value: Kenneth_D0_Q1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156105011, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: allDialogs.listOfDialogs.Array.data[1].dialog.Array.data[0].quote
-      value: Kenneth_D1_Q1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156105011, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[0].quote
-      value: Kenneth_D2_Q1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156105011, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[1].quote
-      value: Kenneth_D2_Q2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156105011, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[0].quote
-      value: Kenneth_D3_Q1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156105011, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.data[0].quote
-      value: Kenneth_D4_Q1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156105011, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.data[1].quote
-      value: Kenneth_D4_Q2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156105011, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.data[2].quote
-      value: Kenneth_D4_Q3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156105011, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.data[3].quote
-      value: Kenneth_D4_Q4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156105011, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: haveEvent
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: SizeModule.curve.scalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.atime1
-      value: 38550
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.atime2
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.m_NumAlphaKeys
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: InitialModule.gravityModifier.scalar
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key2.r
-      value: 0.6509434
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key2.g
-      value: 0.6509434
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key2.b
-      value: 0.6509434
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.ctime2
-      value: 6168
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.g
-      value: 0.6509434
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.g
-      value: 0.6509434
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.ctime0
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.ctime1
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key3.r
-      value: 0.6509434
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key3.g
-      value: 0.6509434
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key3.b
-      value: 0.6509434
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.ctime3
-      value: 3277
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.m_NumColorKeys
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.r
-      value: 0.6509434
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.b
-      value: 0.6509434
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.r
-      value: 0.6509434
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514870, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.b
-      value: 0.6509434
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841514869, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: m_SortingOrder
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da130138f5003d14f970fac471a8b01f, type: 3}
 --- !u!1 &1584428645
@@ -70373,6 +69695,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1558806441}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1995698768 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4163619211731328925, guid: 3651f4048b841834d9bbf51734ba01ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 1558806441}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995698767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9572f6ff79ea56b448e014193818c717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1995698771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74520,6 +73854,104 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1286835994291198853, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 924739571097577629, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478441924, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1995698768}
+    - target: {fileID: 478441924, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TypePlaySound
+      objectReference: {fileID: 0}
+    - target: {fileID: 2204615899872012770, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4165409269409925061}
+    - target: {fileID: 2204615899872012770, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenHelpTuto
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639958432787455619, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4165409269409925061}
+    - target: {fileID: 4639958432787455619, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenHelpTuto
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985169790556623500, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4165409269409925061}
+    - target: {fileID: 7985169790556623500, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenHelpTuto
+      objectReference: {fileID: 0}
+    - target: {fileID: 7355197822550664434, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4165409269409925061}
+    - target: {fileID: 7355197822550664434, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenHelpTuto
+      objectReference: {fileID: 0}
+    - target: {fileID: 1557773469395215758, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4165409269409925061}
+    - target: {fileID: 1557773469395215758, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenHelpTuto
+      objectReference: {fileID: 0}
+    - target: {fileID: 8806394857857580818, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4165409269409925061}
+    - target: {fileID: 8806394857857580818, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenHelpTuto
+      objectReference: {fileID: 0}
+    - target: {fileID: 1308680419693276632, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4165409269409925061}
+    - target: {fileID: 1308680419693276632, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenHelpTuto
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469816277719255407, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4165409269409925061}
+    - target: {fileID: 3469816277719255407, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenHelpTuto
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
 --- !u!1 &1714092047808702668 stripped
@@ -74862,6 +74294,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4165409269409925061}
+    - target: {fileID: 1003461862069074184, guid: 2adb0caa31d59b841b9fc46dfe0513c4,
+        type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 579691287}
     - target: {fileID: 1003461861191554574, guid: 2adb0caa31d59b841b9fc46dfe0513c4,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
