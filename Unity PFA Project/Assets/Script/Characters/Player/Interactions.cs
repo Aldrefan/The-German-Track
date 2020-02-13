@@ -32,6 +32,7 @@ public class Interactions : MonoBehaviour
     public GameObject boardCanvas;
     public GameObject dialAndBookCanvas;
     public bool isOnTooltip;
+    bool talk;
     #endregion
 
     #region State Informations
@@ -381,6 +382,8 @@ public class Interactions : MonoBehaviour
             PNJContact.GetComponent<PNJ>().ResponseEvent();
         }*/
 
+        talk = false;
+
         transform.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         if(eventGivenListCount == 0 && !PNJContact.GetComponent<PNJ>().haveEvent)
         {
@@ -397,6 +400,7 @@ public class Interactions : MonoBehaviour
                 }
             }
             else PNJContact.GetComponent<PNJ>().ChangeDialog(0);
+            talk = true;
         }
         else if(eventGivenListCount > 0 && PNJContact.GetComponent<PNJ>().haveEvent)
         {
@@ -409,11 +413,28 @@ public class Interactions : MonoBehaviour
                         if(PNJContact.GetComponent<PNJ>().eventRedirection.eventGivenList[i] == GetComponent<EventsCheck>().eventsList[n])
                         {
                             PNJContact.GetComponent<PNJ>().ChangeDialog(PNJContact.GetComponent<PNJ>().eventRedirection.redirectionEventList[i]);
+                            talk = true;
                             return;
                         }
                     }
                 }
             }
+        }
+        if (!talk)
+        {
+            if(PNJContact.tag != "Interaction")
+            {
+                if(PnjMet.Contains(PNJContact.name))
+                {
+                    PNJContact.GetComponent<PNJ>().ChangeDialog(1);
+                }
+                else 
+                {
+                    PnjMet.Add(PNJContact.name);
+                    PNJContact.GetComponent<PNJ>().ChangeDialog(0);
+                }
+            }
+            else PNJContact.GetComponent<PNJ>().ChangeDialog(0);
         }
         
         //GetComponent<MovementsPlayer>().enabled = false;// Initial

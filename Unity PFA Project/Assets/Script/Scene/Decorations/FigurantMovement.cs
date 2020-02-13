@@ -51,7 +51,7 @@ public class FigurantMovement : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
-            Debug.Log(LayerManager.layerManager.SetNewLayer(transform.position));
+            //Debug.Log(LayerManager.layerManager.SetNewLayer(transform.position));
             GetComponent<SpriteRenderer>().sortingOrder = LayerManager.layerManager.SetNewLayer(transform.position);
         }
         if(col.GetComponent<FigurantSpawner>())
@@ -91,7 +91,6 @@ public class FigurantMovement : MonoBehaviour
 
     void ChangeState(State newState)
     {
-        Debug.Log(newState);
         switch(newState)
         {
             case State.Walk:

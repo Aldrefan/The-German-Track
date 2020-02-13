@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -70,7 +70,7 @@ public class Pin_System : MonoBehaviour
                     {
                         click = true;
                         time = Time.realtimeSinceStartup;
-                        Debug.Log("Click On");
+                        //Debug.Log("Click On");
                     }
                 }
             }
