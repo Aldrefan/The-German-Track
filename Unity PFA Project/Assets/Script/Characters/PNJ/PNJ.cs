@@ -293,9 +293,6 @@ public class PNJ : MonoBehaviour
         quoteFinished = false;
         //Debug.Log(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
         actualQuote = LanguageManager.Instance.GetDialog(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
-        string openBalise = "<material=2>";
-        string closeBalise = "</material>";
-        actualQuote = openBalise + actualQuote + closeBalise;
 
         //panel.transform.GetChild(1).GetComponent<Text>().text = actualQuote;
         //actualQuote = panel.transform.GetChild(1).GetComponent<Text>().text;
