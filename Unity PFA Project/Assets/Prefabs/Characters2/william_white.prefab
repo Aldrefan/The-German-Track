@@ -68,7 +68,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7580b9a4e8e5826458a86c4c41f93320, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 1123860177028353528}
   - component: {fileID: 1123860177028353531}
   - component: {fileID: 1123860177028353530}
+  - component: {fileID: 1433467266}
   m_Layer: 0
   m_Name: william_white
   m_TagString: PNJinteractable
@@ -185,7 +186,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 0.59}
+  m_Size: {x: 0.3, y: 0.5}
   m_EdgeRadius: 0
 --- !u!114 &1123860177028353530
 MonoBehaviour:
@@ -202,331 +203,1067 @@ MonoBehaviour:
   PNJName: W. White
   characterSprite: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
+  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 5
   negativeQuote: 6
   haveEvent: 0
   stickerAlreadyGivenList: 
   stickerRedirection:
-    stickerGivenList: 01000000040000000e000000
-    redirectionList: 020000000300000004000000
+    stickerGivenList: 01000000040000000e000000020000000800000005000000060000002c000000100000000d0000000c000000070000000a000000230000001a0000001d0000001f0000002000000021000000
+    redirectionList: 0200000003000000040000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000110000001200000013000000140000001500000016000000
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
   allDialogs:
     listOfDialogs:
     - dialog:
-      - quote: "Pourquoi j\u2019entends des cris qui sortent de ton bureau a chaque
-          fois que je viens te voir ?"
+      - quote: White_D1_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger:
         - HasSeenWhite
         spriteCharacter: {fileID: 0}
-      - quote: "Oh m\u2019en parle pas, j\u2019ai l\u2019impression de g\xE9rer une
-          garderie"
+      - quote: White_D1_Q2
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 05000000
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "\xC7a doit te rappeler le r\xE9giment."
+      - quote: White_D1_Q3
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "C\u2019est vrai. Sauf qu\u2019au moins ici on ne s\u2019endort pas
-          au son des bombes."
+      - quote: White_D1_Q4
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je ne peux pas dire que cette \xE9poque me manque."
+      - quote: White_D1_Q5
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "\xC0 moi non plus mon vieux."
+      - quote: White_D1_Q6
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Bon. Et si tu me disais plut\xF4t ce qui t\u2019am\xE8ne ?"
+      - quote: White_D1_Q7
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je suis sur une nouvelle affaire, et j\u2019ai besoin de ton autorisation
-          pour inspecter un corps."
+      - quote: White_D1_Q8
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: Celui de Loraine Grey.
+      - quote: White_D1_Q9
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "J\u2019y crois pas. M\xEAme toi tu viens me casser les oreilles avec
-          cette histoire."
+      - quote: White_D1_Q10
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Ecoute Kenneth, la petite Grey s\u2019est suicid\xE9e. J\u2019ai d\xE9j\xE0
-          \xE9tudi\xE9 la sc\xE8ne de crime, on a interrog\xE9 les t\xE9moins. Affaire
-          class\xE9e !"
+      - quote: White_D1_Q11
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Clara Grey n\u2019est pas de cet avis."
+      - quote: White_D1_Q12
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "C\u2019est une hyst\xE9rique. C\u2019est toujours comme \xE7a les
-          c\xE9l\xE9brit\xE9s."
+      - quote: White_D1_Q13
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Elles passent leur vie sur un pi\xE9destal et le jour o\xF9 elles
-          doivent en descendre elles se cassent la gueule."
+      - quote: White_D1_Q14
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: Ne me dis pas que tu travailles pour elle.
+      - quote: White_D1_Q15
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "\xC7a m\u2019est \xE9gal que l\u2019affaire soit class\xE9e. On me
-          paye pour enqu\xEAter, j\u2019enqu\xEAte."
+      - quote: White_D1_Q16
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "L\u2019avenir me dira bien si elle a eu raison de m\u2019engager."
+      - quote: White_D1_Q17
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Et puis je serai pay\xE9 de toute fa\xE7on."
+      - quote: White_D1_Q18
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "\u2026"
+      - quote: White_D1_Q19
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: Pourquoi tu perds ton temps avec ce genre de boulot ?
+      - quote: White_D1_Q20
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Avec le talent que tu as, je t\u2019ai d\xE9j\xE0 dit que tu avais
-          ta place chez nous."
+      - quote: White_D1_Q21
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "\xC7a, \xE7a n\u2019arrivera jamais."
+      - quote: White_D1_Q22
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: Pourquoi ?
+      - quote: White_D1_Q23
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Parce que \xE7a impliquerait que je sois \xE0 tes ordres."
+      - quote: White_D1_Q24
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Et \xE7a, c\u2019est hors de question."
+      - quote: White_D1_Q25
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Ben voyons\u2026"
+      - quote: White_D1_Q26
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "\u2026"
+      - quote: White_D1_Q27
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: " T\u2019en fais pas, je vais te le donner, ton laissez-passer."
+      - quote: White_D1_Q28
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger:
         - laissezPasser
         spriteCharacter: {fileID: 0}
-      - quote: Tant mieux.
+      - quote: White_D1_Q29
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 0
+      hasChoices: 0
       endDialog: 1
+      buttonsList: []
     - dialog:
-      - quote: "Tu devrais abandonner cette affaire, \xE7a ne te mennera \xE0 rien."
+      - quote: White_D25_Q1
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 1
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: "Tu peux me parler de la victime ? C\u2019\xE9tait comment quand tu
-          l\u2019as trouv\xE9e ?"
+      - quote: White_D5_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "On est arriv\xE9s vers 7h du mat\u2019, c\u2019est son copain qui
-          nous a appel\xE9."
+      - quote: White_D5_Q2
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Il avait l\u2019air de d\xE9cuver d\u2019une sacr\xE9e cuite. Elle
-          \xE9tait pendue \xE0 une poutre apparente."
+      - quote: White_D5_Q3
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Rien de particulier, le l\xE9giste a fait son rapport, et on a r\xE9dig\xE9
-          la paperasse."
+      - quote: White_D5_Q4
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: Je vois.
+      - quote: White_D5_Q5
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 0
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: "Qu\u2019est ce que tu peux me dire sur Kurt Becker ?"
+      - quote: White_D6_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "C\u2019est un pauvre type. Le genre qu\u2019a pas eu de chance dans
-          la vie."
+      - quote: White_D6_Q2
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "On l\u2019a interrog\xE9 mais il ne nous a rien appris de particulier."
+      - quote: White_D6_Q3
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Tu penses qu\u2019il pourrait avoir un lien avec la mort de Loraine
-          ?"
+      - quote: White_D6_Q4
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Si tu insinues qu\u2019il aurait pu l\u2019assassiner, la r\xE9ponse
-          est non."
+      - quote: White_D6_Q5
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Esp\xE9rons que tu ais raison."
+      - quote: White_D6_Q6
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 0
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: "Tiens regarde \xE7a. C\u2019est le journal qui parle de l\u2019affaire
-          Loraine Grey."
+      - quote: White_D7_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Oh piti\xE9, je l\u2019ai assez vu. Va en parler \xE0 Scott si tu
-          veux mais fous moi la paix avec \xE7a."
+      - quote: White_D7_Q2
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 0
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: Besoin d'aide ?
+      - quote: White_D2_Q1
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 0
+      canAskQuestions: 1
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: J'en sais rien.
+      - quote: White_D3_Q1
         characterName: W. White
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 0
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: White_D8_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D8_Q2
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: White_D9_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D9_Q2
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D9_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D9_Q4
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D9_Q5
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D9_Q6
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D9_Q7
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: White_D10_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D10_Q2
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D10_Q3
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D10_Q4
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D10_Q5
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D10_Q6
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D10_Q7
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D10_Q8
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D10_Q9
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D10_Q10
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D10_Q11
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D10_Q12
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: White_D11_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D11_Q2
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D11_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D11_Q4
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D11_Q5
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D11_Q6
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D11_Q7
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D11_Q8
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: White_D12_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D12_Q2
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D12_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: White_D13_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D13_Q2
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: White_D14_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D14_Q2
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D14_Q3
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D14_Q4
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: White_D15_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D15_Q2
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D15_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D15_Q4
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: White_D16_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D16_Q2
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D16_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D16_Q4
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D16_Q5
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D16_Q6
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D16_Q7
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D16_Q8
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D16_Q9
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D16_Q10
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D16_Q11
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D16_Q12
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D16_Q13
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D16_Q14
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D16_Q15
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D16_Q16
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: White_D17_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D17_Q2
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D17_Q3
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D17_Q4
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D17_Q5
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: White_D19_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D19_Q2
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D19_Q3
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D19_Q4
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D19_Q5
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D19_Q6
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D19_Q7
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D19_Q8
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D19_Q9
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: White_D20_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D20_Q2
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D20_Q3
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D20_Q4
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D20_Q5
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D20_Q6
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D20_Q7
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: White_D21_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D21_Q2
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D21_Q3
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D21_Q4
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D21_Q5
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D21_Q6
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D21_Q7
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: White_D22_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D22_Q2
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D22_Q3
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D22_Q4
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D22_Q5
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D22_Q6
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D22_Q7
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: White_D23_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D23_Q2
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D23_Q3
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D23_Q4
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D23_Q5
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D23_Q6
+        characterName: W. White
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: White_D24_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D24_Q2
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979,
+          type: 3}
+      - quote: White_D24_Q3
+        characterName: W. White
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: White_D24_Q4
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
   quoteFinished: 0
   stickersAlreadyGiven: 
+--- !u!114 &1433467266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123860177028353508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd484f8f0d7255489c5d23a7103bad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

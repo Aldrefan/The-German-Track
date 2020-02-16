@@ -68,7 +68,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7580b9a4e8e5826458a86c4c41f93320, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 5966079576536928785}
   - component: {fileID: 978765926}
   - component: {fileID: 978765925}
+  - component: {fileID: 978765921}
   m_Layer: 0
   m_Name: scott_nelson
   m_TagString: Untagged
@@ -187,7 +188,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 0.59}
+  m_Size: {x: 0.3, y: 0.5}
   m_EdgeRadius: 0
 --- !u!114 &5966079576536928785
 MonoBehaviour:
@@ -427,7 +428,7 @@ MonoBehaviour:
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
@@ -450,7 +451,7 @@ MonoBehaviour:
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
@@ -473,7 +474,7 @@ MonoBehaviour:
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
@@ -496,7 +497,7 @@ MonoBehaviour:
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
@@ -566,3 +567,15 @@ MonoBehaviour:
   action: 0
   fromStart: 0
   triggerByContact: 0
+--- !u!114 &978765921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5966079576536928791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd484f8f0d7255489c5d23a7103bad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -140,7 +140,7 @@ public GameObject stickerTemplate;
                         {
                             //player.GetComponent<Interactions>().dialAndBookCanvas.SetActive(true);
                             //player.GetComponent<Interactions>().boardCanvas.SetActive(false);
-                            Debug.Log(player.name);
+                            //Debug.Log(player.name);
                             player.SetActive(true);
                             player.GetComponent<Interactions>().CloseBoard();
                             Camera.main.GetComponent<Camera_Manager>().NotOnBoard();
@@ -186,7 +186,7 @@ public GameObject stickerTemplate;
         }
         createASticker = false;
 
-        Loop();
+        //Loop();
     }
 
     IEnumerator ActivateTime()

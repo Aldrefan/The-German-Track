@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 2461638595394875549}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0.471, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 2461638595535870617}
   m_RootOrder: 0
@@ -68,7 +68,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7580b9a4e8e5826458a86c4c41f93320, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 2461638595535870619}
   - component: {fileID: 2461638595535870618}
   - component: {fileID: 1218989569}
+  - component: {fileID: 1218989570}
   m_Layer: 0
   m_Name: police_receptionist
   m_TagString: PNJinteractable
@@ -150,7 +151,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 0bdc80c93ce89e54a90cc4d6c5d649ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -203,6 +204,7 @@ MonoBehaviour:
   PNJName: "R\xE9ceptionniste"
   characterSprite: {fileID: 21300000, guid: 0bdc80c93ce89e54a90cc4d6c5d649ad, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
+  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 1
   negativeQuote: 0
@@ -217,56 +219,58 @@ MonoBehaviour:
   allDialogs:
     listOfDialogs:
     - dialog:
-      - quote: Je peux vous aider ?
+      - quote: "R\xE9ceptionniste_D1_Q1"
         characterName: "R\xE9ceptionniste"
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Oui, j\u2019aimerais parler au commissaire White."
+      - quote: "R\xE9ceptionniste_D1_Q2"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Ah vous \xEAtes Kenneth n\u2019est-ce pas ?"
+      - quote: "R\xE9ceptionniste_D1_Q3"
         characterName: "R\xE9ceptionniste"
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Allez-y, c\u2019est la porte de droite au fond du couloir. Mais je
-          crois qu\u2019il discute avec quelqu\u2019un. "
+      - quote: "R\xE9ceptionniste_D1_Q4"
         characterName: "R\xE9ceptionniste"
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger:
         - policeOpen
         spriteCharacter: {fileID: 0}
-      - quote: "Vous devrez peut-\xEAtre attendre un peu."
+      - quote: "R\xE9ceptionniste_D1_Q5"
         characterName: "R\xE9ceptionniste"
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: Merci.
+      - quote: "R\xE9ceptionniste_D1_Q6"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 0
+      hasChoices: 0
       endDialog: 1
+      buttonsList: []
     - dialog:
-      - quote: "Allez-y, c\u2019est la porte de droite au fond du couloir. Mais je
-          crois qu\u2019il discute avec quelqu\u2019un. "
+      - quote: "R\xE9ceptionniste_D2_Q1"
         characterName: "R\xE9ceptionniste"
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 0
+      hasChoices: 0
       endDialog: 1
+      buttonsList: []
   quoteFinished: 0
   stickersAlreadyGiven: 
 --- !u!114 &1218989569
@@ -300,3 +304,15 @@ MonoBehaviour:
   action: 0
   fromStart: 0
   triggerByContact: 0
+--- !u!114 &1218989570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2461638595535870616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd484f8f0d7255489c5d23a7103bad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

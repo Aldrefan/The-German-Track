@@ -46,6 +46,9 @@ MonoBehaviour:
   player: {fileID: 0}
   isInHelp: 0
   currentTuto: 
+  tempText: []
+  tempTitle: 
+  tempBoxHelp: {fileID: 0}
   canEsc: 0
   wantSkipTuto: 0
   canSave: 0
@@ -81,64 +84,260 @@ MonoBehaviour:
     canClose: 0
     endingString: 
     keyTitle: Tuto_Dialogs_Title
-    keyText: Tuto_Dialogs_Text
+    keyText:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
   newSticker:
     positionBoxHelp: 0
     canClose: 1
     endingString: tuto_newSticker_end
     keyTitle: Tuto_NewSticker_Title
-    keyText: Tuto_NewSticker_Text
+    keyText:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
   questions:
     positionBoxHelp: 0
     canClose: 0
     endingString: questions
     keyTitle: Tuto_Questions_Title
-    keyText: Tuto_Questions_Text
+    keyText:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
   quitDialog:
     positionBoxHelp: 1
     canClose: 0
     endingString: quitDialog
     keyTitle: Tuto_QuitDialog_Title
-    keyText: Tuto_QuitDialog_Text
+    keyText:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
   move:
     positionBoxHelp: 0
     canClose: 0
     endingString: move
     keyTitle: Tuto_Move_Title
-    keyText: Tuto_Move_Text
+    keyText:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
   interaction:
     positionBoxHelp: 2
     canClose: 0
     endingString: 
     keyTitle: Tuto_Interaction_Title
-    keyText: Tuto_Interaction_Text
+    keyText:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
   openBook:
     positionBoxHelp: 1
     canClose: 0
     endingString: 
     keyTitle: Tuto_OpenBook_Title
-    keyText: Tuto_OpenBook_Text
+    keyText:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
   navigateBook:
     positionBoxHelp: 1
     canClose: 1
     endingString: tuto_navigateBook_end
     keyTitle: Tuto_NavigateBook_Title
-    keyText: Tuto_NavigateBook_Text
+    keyText:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
   menu:
     positionBoxHelp: 1
     canClose: 0
     endingString: 
     keyTitle: Tuto_Menu_Title
-    keyText: Tuto_Menu_Text
+    keyText:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
   sprint:
     positionBoxHelp: 0
     canClose: 0
     endingString: 
     keyTitle: Tuto_Sprint_Title
-    keyText: Tuto_Sprint_Text
+    keyText:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
   board:
     positionBoxHelp: 1
     canClose: 1
     endingString: tuto_board_end
     keyTitle: Tuto_Board_Title
-    keyText: Tuto_Board_Text
+    keyText:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
