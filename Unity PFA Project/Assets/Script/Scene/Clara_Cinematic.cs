@@ -210,6 +210,7 @@ public class Clara_Cinematic : MonoBehaviour
     IEnumerator EndTimer()
     {
         yield return new WaitForSecondsRealtime(0.7f);
+        Debug.Log("sakut");
         GameObject.Find("EndCanvas").GetComponent<EndScreen>().EndDemo();
     }
 

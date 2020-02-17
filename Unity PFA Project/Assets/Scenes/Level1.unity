@@ -732,11 +732,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1387433033}
     m_Modifications:
-    - target: {fileID: 4634512970318730232, guid: 742fdecfd51680e40a942bfa7c673efb,
-        type: 3}
-      propertyPath: m_Name
-      value: Particle System (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 4634512970318730215, guid: 742fdecfd51680e40a942bfa7c673efb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -807,15 +802,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.6478114
       objectReference: {fileID: 0}
-    - target: {fileID: 4634512970318730213, guid: 742fdecfd51680e40a942bfa7c673efb,
+    - target: {fileID: 4634512970318730232, guid: 742fdecfd51680e40a942bfa7c673efb,
         type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 40
+      propertyPath: m_Name
+      value: Particle System (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4634512970318730214, guid: 742fdecfd51680e40a942bfa7c673efb,
         type: 3}
       propertyPath: m_SortingOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634512970318730213, guid: 742fdecfd51680e40a942bfa7c673efb,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 742fdecfd51680e40a942bfa7c673efb, type: 3}
@@ -11007,7 +11007,7 @@ MonoBehaviour:
       endDialog: 1
       buttonsList: []
     - dialog:
-      - quote: Scott_D4_Q1
+      - quote: Scott_D1_Q1
         characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
@@ -11131,7 +11131,7 @@ MonoBehaviour:
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
@@ -11154,7 +11154,7 @@ MonoBehaviour:
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
@@ -11177,7 +11177,7 @@ MonoBehaviour:
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
@@ -11200,7 +11200,7 @@ MonoBehaviour:
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
@@ -20580,7 +20580,7 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: Lou_D4_Q1
+      - quote: Lou_D1_Q1
         characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
@@ -21762,7 +21762,8 @@ MonoBehaviour:
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: []
+        eventTrigger:
+        - LettreADecoder
         spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
@@ -23217,15 +23218,9 @@ MonoBehaviour:
       endDialog: 1
       buttonsList: []
     - dialog:
-      - quote: White_D4_Q1
+      - quote: White_D25_Q1
         characterName: W. White
         isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: White_D4_Q2
-        characterName: Kenneth
-        isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
@@ -25634,17 +25629,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJName: Marvin Meyer
-  characterSprite: {fileID: 21300000, guid: 3ce98010305452a4d832949309ca0ad1, type: 3}
+  characterSprite: {fileID: 21300000, guid: d845f7e27312afc42a84ea461ff17a03, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
   dialogLine: 0
   dialogIndex: 0
-  transitionQuote: 6
-  negativeQuote: 7
+  transitionQuote: 1
+  negativeQuote: 3
   haveEvent: 0
   stickerAlreadyGivenList: 
   stickerRedirection:
-    stickerGivenList: 01000000330000000700000004000000
-    redirectionList: 02000000030000000400000005000000
+    stickerGivenList: 01000000330000000700000004000000090000000e000000060000003000000024000000
+    redirectionList: 05000000060000000700000008000000090000000a0000000b0000000c0000000d000000
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
@@ -25695,6 +25690,39 @@ MonoBehaviour:
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Marvin_D1_Q1
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 1
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Marvin_D2_Q1
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 1
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Marvin_D3_Q1
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 1
       hasChoices: 0
       endDialog: 0
       buttonsList: []
@@ -25797,7 +25825,7 @@ MonoBehaviour:
       - quote: Marvin_D5_Q15
         characterName: Marvin Meyer
         isInLeftSide: 0
-        newStickerIndexList: 3300000031000000
+        newStickerIndexList: 3100000033000000
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: Marvin_D5_Q16
@@ -25984,7 +26012,7 @@ MonoBehaviour:
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: Marvin_D7_Q179
+      - quote: Marvin_D7_Q19
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
@@ -26021,6 +26049,23 @@ MonoBehaviour:
         spriteCharacter: {fileID: 0}
       - quote: Marvin_D8_Q5
         characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Marvin_D9_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Marvin_D9_Q2
+        characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -26030,24 +26075,100 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: Marvin_D1_Q1
+      - quote: Marvin_D10_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Marvin_D10_Q2
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      - quote: Marvin_D10_Q3
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Marvin_D10_Q4
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Marvin_D10_Q5
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: Marvin_D3_Q1
+      - quote: Marvin_D11_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Marvin_D11_Q2
         characterName: Marvin Meyer
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Marvin_D12_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Marvin_D12_Q2
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Marvin_D12_Q3
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Marvin_D13_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Marvin_D13_Q2
+        characterName: Marvin Meyer
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Marvin_D13_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
@@ -51961,17 +52082,17 @@ PrefabInstance:
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexCarnetList.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: allStickers.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
@@ -52042,6 +52163,21 @@ PrefabInstance:
         type: 3}
       propertyPath: stickerIndexBoardList.Array.data[2]
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
+        type: 3}
+      propertyPath: allStickers.Array.data[3]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
+        type: 3}
+      propertyPath: stickerIndexBoardList.Array.data[3]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
+        type: 3}
+      propertyPath: stickerIndexCarnetList.Array.data[3]
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017400, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
@@ -53390,7 +53526,7 @@ MonoBehaviour:
   PNJName: Kurt Becker
   characterSprite: {fileID: 21300000, guid: cc025ebf42fbd1643b3f7fc456003ad0, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
-  dialogLine: 0
+  dialogLine: 25
   dialogIndex: 0
   transitionQuote: 12
   negativeQuote: 13
@@ -53457,7 +53593,7 @@ MonoBehaviour:
       - quote: Kurt_D0_Q9
         characterName: Kurt Becker
         isInLeftSide: 0
-        newStickerIndexList: 04000000
+        newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: Kurt_D0_Q10
@@ -53551,7 +53687,7 @@ MonoBehaviour:
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: Kurt_D0_Q25
-        characterName: Kurt Kecker
+        characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -53592,7 +53728,7 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: Kurt_D4_Q1
+      - quote: Kurt_D1_Q1
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
