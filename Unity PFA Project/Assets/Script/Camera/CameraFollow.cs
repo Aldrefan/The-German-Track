@@ -40,6 +40,17 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        EnableFollow();
+    }
+
+    /*private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawCube(plToBorderLeft, Vector3.one);
+    }*/
+    
+    void EnableFollow()
+    {
         plToBorderRight = Camera.main.ViewportToWorldPoint(new Vector3(1, 0.5f, -Camera.main.transform.position.z));
         plToBorderLeft = Camera.main.ViewportToWorldPoint(new Vector3(0, 0.5f, -Camera.main.transform.position.z));
 
@@ -64,13 +75,6 @@ public class CameraFollow : MonoBehaviour
         }
     }
 
-
-    /*private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawCube(plToBorderLeft, Vector3.one);
-    }*/
-    
     void FollowPlayer()
     {
         if(isFollowing)

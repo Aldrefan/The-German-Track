@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3147712309492673547}
   - component: {fileID: 3147712309492673544}
   - component: {fileID: 1621324265}
+  - component: {fileID: 31892245}
   m_Layer: 0
   m_Name: kurt_becker
   m_TagString: PNJinteractable
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: cc025ebf42fbd1643b3f7fc456003ad0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -124,910 +125,1435 @@ MonoBehaviour:
   PNJName: Kurt Becker
   characterSprite: {fileID: 21300000, guid: cc025ebf42fbd1643b3f7fc456003ad0, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
+  dialogLine: 25
   dialogIndex: 0
   transitionQuote: 12
   negativeQuote: 13
   haveEvent: 0
   stickerAlreadyGivenList: 
   stickerRedirection:
-    stickerGivenList: 01000000040000000d0000000b0000000c0000000e0000001d00000023000000290000001a000000
-    redirectionList: 02000000030000000400000005000000060000000700000008000000090000000a0000000b000000
+    stickerGivenList: 01000000040000000d0000000b0000000c0000000e0000001d00000023000000290000001a00000002000000290000000900000034000000320000003100000003000000150000001600000024000000190000001f00000020000000
+    redirectionList: 02000000030000000400000005000000060000000700000008000000090000000a0000000b0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a000000
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
   allDialogs:
     listOfDialogs:
     - dialog:
-      - quote: "Pardon? Assassin\xE9e vous dites? "
+      - quote: Kurt_D0_Q1
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "C\u2019est ce que pense ma cliente. "
+      - quote: Kurt_D0_Q2
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
-      - quote: "Bon. J\u2019accepte de vous aider, mais pas plus de trente minutes. "
+      - quote: Kurt_D0_Q3
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: 'Je pense que ce sera amplement suffisant. '
+      - quote: Kurt_D0_Q4
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "\xC9coutez, j\u2019aimais Loraine plus que tout au monde. "
+      - quote: Kurt_D0_Q5
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je ne comprends pas ce qu\u2019il s\u2019est pass\xE9! "
+      - quote: Kurt_D0_Q6
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Du calme, du calme. Reprenons depuis le d\xE9but, voulez-vous ? "
+      - quote: Kurt_D0_Q7
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Vous \xEAtes bien Kurt Becker, le petit ami de Loraine Grey ? "
+      - quote: Kurt_D0_Q8
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "C\u2019est moi oui. "
+      - quote: Kurt_D0_Q9
         characterName: Kurt Becker
         isInLeftSide: 0
-        newStickerIndexList: 04000000
+        newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Bien. Pourriez-vous me d\xE9crire la soir\xE9e avant la mort de Loraine. "
+      - quote: Kurt_D0_Q10
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je vais vous dire ce que j\u2019ai dit \xE0 la police. "
+      - quote: Kurt_D0_Q11
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "C\u2019\xE9tait un dimanche soir ordinaire. "
+      - quote: Kurt_D0_Q12
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Loraine travaillait dans la chambre, et moi je regardais une \xE9mission
-          de t\xE9l\xE9. "
+      - quote: Kurt_D0_Q13
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Vers 22h, on est all\xE9s se coucher. Je n\u2019ai vraiment rien remarqu\xE9
-          d\u2019anormal. "
+      - quote: Kurt_D0_Q14
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Et le lendemain matin, j\u2019ai vu le corps de ma Loraine pendu \xE0
-          la poutre du salon. "
+      - quote: Kurt_D0_Q15
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Il m\u2019a fallu un peu de temps pour reprendre mes esprits, "
+      - quote: Kurt_D0_Q16
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "mais d\xE8s que j\u2019ai pu j\u2019ai appel\xE9 les flics qui ont
-          d\xE9barqu\xE9s dans le quart d\u2019heure. "
+      - quote: Kurt_D0_Q17
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Ils m\u2019ont pos\xE9 un tas de question, ils ont embarqu\xE9 le
-          corps et puis voil\xE0. "
+      - quote: Kurt_D0_Q18
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Apr\xE8s \xE7a j\u2019ai picol\xE9 un peu, je pense que c\u2019\xE9tait
-          mon droit. "
+      - quote: Kurt_D0_Q19
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Ah oui, un journaliste est venu m'interroger aussi dans l\u2019apr\xE8s-midi. "
+      - quote: Kurt_D0_Q20
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Comment ils font pour \xEAtre au courant si vite ces connards ? "
+      - quote: Kurt_D0_Q21
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: 'Loraine avait-elle un comportement suspect ? Ou inhabituel ? '
+      - quote: Kurt_D0_Q22
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Bah\u2026 C\u2019est vrai qu\u2019elle a allum\xE9 un feu dans la
-          chemin\xE9e alors qu\u2019il ne faisait pas froid, "
+      - quote: Kurt_D0_Q23
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "mais \xE0 part \xE7a, non, rien\u2026 "
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Est-ce que vous avez des ennemis ? Quelqu\u2019un qui pourrait vous
-          en vouloir ? "
+      - quote: Kurt_D0_Q24
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: 'Non, pas du tout ! '
+      - quote: Kurt_D0_Q25
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "On \xE9tait toujours entre nous, ce n\u2019\xE9tait pas notre genre
-          de se mettre dans des affaires louches. "
+      - quote: Kurt_D0_Q26
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: 'Bon. Vous me permettez de faire le tour de votre appartement ? '
+      - quote: Kurt_D0_Q27
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je suis s\xFBr que j\u2019y trouverais des indices. "
+      - quote: Kurt_D0_Q28
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Euh\u2026 Oui allez-y. Mais ne fouillez pas trop quand m\xEAme\u2026 "
+      - quote: Kurt_D0_Q29
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je vous remercie. Je n\u2019en ai que pour un instant. "
+      - quote: Kurt_D0_Q30
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger:
+        - TalkToKurt
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Kurt_D1_Q1
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 1
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Kurt_D5_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D5_Q2
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D5_Q3
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D5_Q4
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D5_Q5
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D5_Q6
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D5_Q7
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D5_Q8
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D5_Q9
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D5_Q10
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D5_Q11
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D5_Q12
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 34000000
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Kurt_D6_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D6_Q2
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D6_Q3
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D6_Q4
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D6_Q5
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D6_Q6
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D6_Q7
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D6_Q8
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D6_Q9
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 0
-      endDialog: 1
-    - dialog:
-      - quote: "Vous \xEAtes encore l\xE0 ?"
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: Vous pouvez me parler de Loraine ?
+      - quote: Kurt_D7_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Loraine\u2026 C\u2019est la seule chose bien qui me soit arriv\xE9e
-          dans la vie."
+      - quote: Kurt_D7_Q2
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je ne sais pas ce qui a pouss\xE9 une perle comme elle \xE0 poser
-          les yeux sur un d\xE9chet comme moi."
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Mais elle l\u2019a fait. On \xE9tait ensemble depuis deux mois\u2026
-          \xC7a semble peu pour s\u2019attacher hein ?"
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "L\u2019amour, \xE7a ne se discute pas."
+      - quote: Kurt_D7_Q3
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Mouais. Bah pour \xEAtre accro, \xE7a j\u2019\xE9tais accro. \xC7a
-          a \xE9t\xE9 les deux mois les plus heureux de ma vie."
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Et Loraine, comment \xE9tait-elle ?"
+      - quote: Kurt_D7_Q4
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: Un rayon de soleil. Elle avait un sourire magnifique.
+      - quote: Kurt_D7_Q5
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "On passait beaucoup de temps ensemble. Tout notre temps en fait, vu
-          qu\u2019on ne travaillait pas."
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Aucun de vous ne travaillait ? Mais comment vous faisiez pour l\u2019argent
-          ?"
+      - quote: Kurt_D7_Q6
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "On se d\xE9brouillait. On n\u2019\xE9tait pas riche mais on n\u2019en
-          avait pas besoin."
+      - quote: Kurt_D7_Q7
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Bordel\u2026 Ce qu\u2019elle me manque."
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 34000000
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: "Qu\u2019est ce que vous pouvez me dire sur vous ?"
+      - quote: Kurt_D8_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: Sur moi ?
+      - quote: Kurt_D8_Q2
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Bah\u2026 Je suis un ch\xF4meur, r\xE9cemment veuf. Il n\u2019y a
-          rien \xE0 dire de plus."
+      - quote: Kurt_D8_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D8_Q4
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Vous savez, c\u2019est pas si grave d\u2019\xEAtre un looser."
+      - quote: Kurt_D8_Q5
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: Vous avez de la famille ? Des amis ?
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "J\u2019ai un fr\xE8re, c\u2019est tout\u2026"
+      - quote: Kurt_D8_Q6
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "\xC7a va ?"
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Ce n\u2019est rien. On peut changer de sujet ?"
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: Comme vous voudrez.
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: "J\u2019ai trouv\xE9 \xE7a dans votre chambre, c\u2019est \xE0 vous
-          ?"
+      - quote: Kurt_D9_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Oh merde\u2026 Non ce n\u2019est pas ce que vous croyez."
+      - quote: Kurt_D9_Q2
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: Vous en faites pas, je ne suis pas de la police.
+      - quote: Kurt_D9_Q3
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je veux juste savoir si c\u2019est \xE0 vous."
+      - quote: Kurt_D9_Q4
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D9_Q5
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D9_Q6
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D9_Q7
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Non. C\u2019\xE9tait\u2026 \xE0 Loraine. Elle en prenait de temps
-          en temps."
+      - quote: Kurt_D9_Q8
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Vous avez oubli\xE9 de m\u2019en parler."
+      - quote: Kurt_D9_Q9
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D9_Q10
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D9_Q11
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D9_Q12
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Oui ce n\u2019est pas vraiment le genre de choses dont j\u2019aime
-          parler."
+      - quote: Kurt_D9_Q13
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
-      endDialog: 0
-    - dialog:
-      - quote: "J\u2019ai trouv\xE9 une valise dans votre chambre. Elle \xE9tait remplie
-          de v\xEAtements."
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: Ah ?
+      - quote: Kurt_D9_Q14
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Vous avez l\u2019intention de partir ?"
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Oui, c\u2019est \xE7a. Je me suis dit que changer d\u2019air me ferais
-          sans doute du bien."
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Je suis d\u2019accord, et vous partez o\xF9 comme \xE7a ?"
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Je\u2026 n\u2019ai pas encore d\xE9cid\xE9."
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
-      endDialog: 0
-    - dialog:
-      - quote: "J\u2019ai trouv\xE9 \xE7a dans la chemin\xE9e, mais je n\u2019y comprends
-          rien."
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Ah \xE7a ? \xC7a doit \xEAtre un po\xE8me rat\xE9 de Loraine."
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Un po\xE8me ?"
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Oui, c\u2019est sur \xE7a qu\u2019elle travaillait l\u2019autre soir."
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Elle aimait \xE9crire des po\xE8mes de temps en temps\u2026"
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Je n\u2019y ai jamais rien compris, ils sont tous \xE9crits dans une
-          esp\xE8ce de langage bizarre."
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Vous les avez d\xE9j\xE0 lus ?"
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "J\u2019vous dit, je n\u2019y comprenais rien."
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Les trucs de gonzesses \xE7a ne me r\xE9ussit pas trop alors je la
-          laissais faire."
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Parfois elle \xE9tait tellement \xE9nerv\xE9e de ne pas r\xE9ussir
-          \xE0 \xE9crire qu\u2019elle jetait tout au feu."
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "C\u2019est ce qui a d\xFB arriver \xE0 celui-l\xE0 d\u2019ailleurs."
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "C\u2019est \xE9trange\u2026 Elle les faisait lire \xE0 quelqu\u2019un
-          ?"
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Oui je crois, elle avait un ami \xE0 qui elle les envoyait."
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Mais je ne l\u2019ai jamais vu."
-        characterName: Kurt Becker
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Je ne vois pas trop qui \xE7a peut int\xE9resser ces conneries, mais
-          bon, \xE7a lui faisait plaisir alors\u2026"
+      - quote: Kurt_D9_Q15
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 32000000
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: Vous lisez ce genre de magazine vous ?
+      - quote: Kurt_D11_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "\xC7a m\u2019arrive oui, mais cette fois je l\u2019ai achet\xE9 parce
-          qu\u2019il parlait de Loraine."
+      - quote: Kurt_D11_Q2
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Vu que sa s\u0153ur est actrice, \xE7a a attir\xE9 les journalistes,
-          mais je veux plus avoir affaire \xE0 eux."
+      - quote: Kurt_D11_Q3
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: Rien que des ordures qui profitent du malheur des autres.
+      - quote: Kurt_D11_Q4
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "\xC7a vous d\xE9range si je l\u2019emporte avec moi ?"
+      - quote: Kurt_D11_Q5
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je l\u2019aurais foutu \xE0 la poubelle de toute fa\xE7on. Allez-y."
+      - quote: Kurt_D11_Q6
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: "J\u2019ai d\xE9couvert comment \xE9tait morte votre femme."
+      - quote: Kurt_D12_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: 'Comment? '
+      - quote: Kurt_D12_Q2
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "On l\u2019a drogu\xE9e. Elle s\u2019est endormie et l\u2019assassin
-          en a profit\xE9 pour lui passer la corde au cou."
+      - quote: Kurt_D12_Q3
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "C\u2019est impossible\u2026 Non vous devez vous tromper !"
+      - quote: Kurt_D12_Q4
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Il me reste encore quelques indices \xE0 trouver mais je sens que
-          je me rapproche de la v\xE9rit\xE9."
+      - quote: Kurt_D12_Q5
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: "Dites-moi Kurt, cette drogue, elle \xE9tait \xE0 vous pas vrai?"
+      - quote: Kurt_D13_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Pardon? Pas du tout! C\u2019\xE9tait \xE0 Loraine je vous ai dit!"
+      - quote: Kurt_D13_Q2
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "D\u2019apr\xE8s les preuves que j\u2019ai ici, vous mentez."
+      - quote: Kurt_D13_Q3
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: '...'
+      - quote: Kurt_D13_Q4
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Bon oui c\u2019est \xE0 moi et alors? C\u2019est ma vie priv\xE9e
-          \xE7a!"
+      - quote: Kurt_D13_Q5
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Vous me cachez des preuves qui peuvent m\u2019aider dans mon enqu\xEAte."
+      - quote: Kurt_D13_Q6
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "\xC7a m\u2019est \xE9gal que vous soyez un junkie."
+      - quote: Kurt_D13_Q7
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Me d\xE9noncez pas, s\u2019il vous pla\xEEt. "
+      - quote: Kurt_D13_Q8
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je viens de vous dire que je m\u2019en foutais que aimiez vous cramer
-          le cerveau. "
+      - quote: Kurt_D13_Q9
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "En revanche, je me pose la question de l\u2019argent."
+      - quote: Kurt_D13_Q10
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Comment \xE7a ?"
+      - quote: Kurt_D13_Q11
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "La drogue ne tombe pas du ciel. Qui vous donne de l\u2019argent?"
+      - quote: Kurt_D13_Q12
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "C\u2019est Viktor, mon fr\xE8re."
+      - quote: Kurt_D13_Q13
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 030000002e000000
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: "Vous ne comptez pas partir en vacances n\u2019est-ce pas ?"
+      - quote: Kurt_D14_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: Que voulez-vous dire ?
+      - quote: Kurt_D14_Q2
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "La valise dans la chambre \xE9tait \xE0 Loraine."
+      - quote: Kurt_D14_Q3
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Elle l'avait pr\xE9par\xE9e \xE0 la h\xE2te car elle comptait partir.
-          Visiblement quelque chose l\u2019en a emp\xEAch\xE9e. "
+      - quote: Kurt_D14_Q4
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "C\u2019est vrai\u2026 Elle avait pr\xE9vu de quitter la ville. Pour
-          une dispute \xE0 la con."
+      - quote: Kurt_D14_Q5
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Dites-m\u2019en plus."
+      - quote: Kurt_D14_Q6
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "J\u2019en ai pas parl\xE9 \xE0 la police parce que j\u2019avais peur
-          qu\u2019on me soup\xE7onne \xE0 cause de \xE7a."
+      - quote: Kurt_D14_Q7
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Mais effectivement, on s\u2019\xE9tait disput\xE9s. Je ne sais plus
-          pourquoi. "
+      - quote: Kurt_D14_Q8
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: Faites un effort !
+      - quote: Kurt_D14_Q9
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Euh\u2026 Ah oui \xE7a y est."
+      - quote: Kurt_D14_Q10
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "C\u2019est parce que j\u2019avais parl\xE9 \xE0 mon fr\xE8re des po\xE8mes
-          qu\u2019elle \xE9crivait."
+      - quote: Kurt_D14_Q11
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Pour rigoler, je lui en ai meme lu un. \xC7a l\u2019a rendue folle
-          de rage."
+      - quote: Kurt_D14_Q12
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Et c\u2019est l\xE0 qu\u2019elle a jet\xE9 ce qu\u2019elle \xE9crivait
-          dans la chemin\xE9e et qu\u2019elle a commenc\xE9 \xE0 faire sa valise. "
+      - quote: Kurt_D14_Q13
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "C\u2019est un peu disproportionn\xE9 comme r\xE9action pour un simple
-          po\xE8me."
+      - quote: Kurt_D14_Q14
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "C\u2019est aussi ce que j\u2019ai trouv\xE9. Viktor n\u2019as pas
-          eu l\u2019air de rire non plus. "
+      - quote: Kurt_D14_Q15
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Il a commenc\xE9 \xE0 me traiter d\u2019idiot ou je sais pas quoi."
+      - quote: Kurt_D14_Q16
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Mais de toute fa\xE7on j\u2019ai raccroch\xE9 pour tenter de raisonner
-          Loraine."
+      - quote: Kurt_D14_Q17
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 2b000000
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: "Vous avez drogu\xE9 Loraine."
+      - quote: Kurt_D15_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Non, vous vous trompez ! Pourquoi j\u2019aurais fait une chose pareille
-          ?"
+      - quote: Kurt_D15_Q2
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Loraine avait pr\xE9par\xE9 sa valise et \xE9tait pr\xEAte \xE0 partir. "
+      - quote: Kurt_D15_Q3
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Vous vouliez la garder pr\xE8s de vous mais elle ne voulait rien entendre. "
+      - quote: Kurt_D15_Q4
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Vous avez donc utilis\xE9 la drogue cach\xE9e sous votre lit pour
-          la droguer et l'emp\xEAcher de partir. "
+      - quote: Kurt_D15_Q5
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je\u2026 Je n\u2019ai pas tu\xE9 Loraine, je le jure ! Quand je me
-          suis r\xE9veill\xE9, elle \xE9tait d\xE9j\xE0 morte ! "
+      - quote: Kurt_D15_Q6
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je ne vous accuse pas de sa mort pour l\u2019instant, mais que vous
-          l\u2019ayez voulu ou non, vous \xEAtes complice."
+      - quote: Kurt_D15_Q7
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "C\u2019\xE9tait une erreur, je regrette ! Piti\xE9 monsieur, ne me
-          d\xE9noncez pas !"
+      - quote: Kurt_D15_Q8
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Je vais d\u2019abord tirer cette affaire au clair. Mais je pense toucher
-          au but."
+      - quote: Kurt_D15_Q9
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      canAskQuestions: 1
+      canAskQuestions: 0
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: Vous avez d'autres questions ?
+      - quote: Kurt_D2_Q1
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 1
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: Qu'est-ce que j'en sais moi ?
+      - quote: Kurt_D3_Q1
         characterName: Kurt Becker
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 1
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Kurt_D16_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D16_Q2
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D16_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D16_Q4
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D16_Q5
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Kurt_D17_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D17_Q2
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D17_Q3
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D17_Q4
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D17_Q5
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D17_Q6
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D17_Q7
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D17_Q8
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Kurt_D18_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D18_Q2
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D18_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D18_Q4
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D18_Q5
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D18_Q6
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D18_Q7
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Kurt_D19_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D19_Q2
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D19_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D19_Q4
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D19_Q5
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D19_Q6
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D19_Q7
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Kurt_D20_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D20_Q2
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D20_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D20_Q4
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D20_Q5
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D20_Q6
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D20_Q7
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D20_Q8
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Kurt_D21_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D21_Q2
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D21_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D21_Q4
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D21_Q5
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D21_Q6
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D21_Q7
+        characterName: Kurt Becker
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D21_Q8
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D21_Q9
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Kurt_D22_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D22_Q2
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D22_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D22_Q4
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D22_Q5
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Kurt_D25_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D25_Q2
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D25_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D25_Q4
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Kurt_D26_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D26_Q2
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D26_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D26_Q4
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D26_Q5
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D26_Q6
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Kurt_D27_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D27_Q2
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D27_Q3
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D27_Q4
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Kurt_D28_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D28_Q2
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D28_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D28_Q4
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D28_Q5
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D28_Q6
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D28_Q7
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D28_Q8
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D28_Q9
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Kurt_D29_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D29_Q2
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D29_Q3
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D29_Q4
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D29_Q5
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Kurt_D30_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D30_Q2
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D30_Q3
+        characterName: Kurt Becker
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Kurt_D30_Q4
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
   quoteFinished: 0
   stickersAlreadyGiven: 
 --- !u!95 &1621324265
@@ -1049,6 +1575,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &31892245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147712309492673550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd484f8f0d7255489c5d23a7103bad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3147712309795452983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,7 +1655,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7580b9a4e8e5826458a86c4c41f93320, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -51,7 +51,7 @@ public class CarnetSticker : MonoBehaviour
 
     public void SetBackgroundColor()
     {
-        if(player.GetComponent<Interactions>().PNJContact.tag == "PNJinteractable" && StickersGivenToPNJ.SGTP.CheckStickerInList(player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().PNJName, GetComponent<Sticker_Display>().sticker.index)/*player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().stickerAlreadyGivenList.Contains(GetComponent<Sticker_Display>().sticker.index*/)
+        if(player.GetComponent<Interactions>().PNJContact!=null && player.GetComponent<Interactions>().PNJContact.tag == "PNJinteractable" && StickersGivenToPNJ.SGTP.CheckStickerInList(player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().PNJName, GetComponent<Sticker_Display>().sticker.index)/*player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().stickerAlreadyGivenList.Contains(GetComponent<Sticker_Display>().sticker.index*/)
         {
             transform.GetChild(0).GetComponent<Image>().color = Color.gray;
             //Debug.Log(GetComponent<Sticker_Display>().name + "has already been used");

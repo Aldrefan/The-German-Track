@@ -45,7 +45,10 @@ public class ObjectiveNotif : MonoBehaviour
         {
             notifText = this.transform.GetChild(0).GetChild(0).GetComponent<Text>();
             notifAtor = this.GetComponent<Animator>();
-            carnetGoal = GameObject.FindObjectOfType<Ken_Canvas_Infos>().transform.Find("Panel").Find("Carnet").Find("Goal").Find("GoalFrame").GetComponent<CarnetGoal>();
+            if (GameObject.FindObjectOfType<Ken_Canvas_Infos>() != null)
+            {
+                carnetGoal = GameObject.FindObjectOfType<Ken_Canvas_Infos>().transform.Find("Panel").Find("Carnet").Find("Goal").Find("GoalFrame").GetComponent<CarnetGoal>();
+            }
         }
     }
 

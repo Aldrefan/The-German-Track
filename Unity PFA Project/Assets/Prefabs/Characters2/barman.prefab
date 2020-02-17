@@ -68,7 +68,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7580b9a4e8e5826458a86c4c41f93320, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 278563568155890679}
   - component: {fileID: 278563568155890672}
   - component: {fileID: 278563568155890673}
+  - component: {fileID: 1647823967}
   m_Layer: 0
   m_Name: barman
   m_TagString: PNJinteractable
@@ -202,94 +203,62 @@ MonoBehaviour:
   PNJName: Barman
   characterSprite: {fileID: 21300000, guid: 9625550827e375945965895962ede1f2, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
+  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 3
   negativeQuote: 4
   haveEvent: 0
   stickerAlreadyGivenList: 
   stickerRedirection:
-    stickerGivenList: 09000000
-    redirectionList: 02000000
+    stickerGivenList: 090000000600000007000000
+    redirectionList: 020000000500000006000000
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
   allDialogs:
     listOfDialogs:
     - dialog:
-      - quote: Ce sera quoi ?
+      - quote: Seer_D0_Q1
         characterName: Barman
         isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: Un demi.
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: Mais encore ?
-        characterName: Barman
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: Surprenez-moi.
-        characterName: Kenneth
-        isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 1
-      endDialog: 1
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: Ce sera quoi ?
+      - quote: Seer_D1_Q1
         characterName: Barman
         isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: Un demi.
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: Mais encore ?
-        characterName: Barman
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: Surprenez-moi.
-        characterName: Kenneth
-        isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 1
-      endDialog: 1
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: Dites, vous connaissez un type du nom de Marvin Meyer ?
+      - quote: Seer_D4_Q1
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: Possible, vous lui voulez quoi ?
+      - quote: Seer_D4_Q2
         characterName: Barman
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "J\u2019ai un truc \xE0 lui dire, c\u2019est de la part de Scott Nelson."
+      - quote: Seer_D4_Q3
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Si vous voulez. Utilisez le t\xE9l\xE9phone l\xE0-bas, je vais vous
-          donner le num\xE9ro."
+      - quote: Seer_D4_Q4
         characterName: Barman
         isInLeftSide: 0
         newStickerIndexList: 
@@ -297,24 +266,136 @@ MonoBehaviour:
         - pibPhoneUnlocked
         spriteCharacter: {fileID: 0}
       canAskQuestions: 1
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: Vous vouliez autre chose ?
+      - quote: Seer_D2_Q1
         characterName: Barman
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 1
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
-      - quote: "Aucune id\xE9e..."
+      - quote: Seer_D3_Q1
         characterName: Barman
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 1
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Seer_D5_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Seer_D5_Q2
+        characterName: Barman
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Seer_D5_Q3
+        characterName: Barman
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Seer_D6_Q1
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Seer_D6_Q2
+        characterName: Barman
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Seer_D6_Q3
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Seer_D6_Q4
+        characterName: Barman
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Seer_D6_Q5
+        characterName: Barman
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Seer_D6_Q6
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Seer_D6_Q7
+        characterName: Barman
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Seer_D6_Q8
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Seer_D6_Q9
+        characterName: Barman
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Seer_D6_Q10
+        characterName: Barman
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: Seer_D6_Q11
+        characterName: Kenneth
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
   quoteFinished: 0
   stickersAlreadyGiven: 
+--- !u!114 &1647823967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278563568155890675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd484f8f0d7255489c5d23a7103bad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

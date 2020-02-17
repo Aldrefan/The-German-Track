@@ -32,6 +32,7 @@ public class Interactions : MonoBehaviour
     public GameObject boardCanvas;
     public GameObject dialAndBookCanvas;
     public bool isOnTooltip;
+    bool talk;
     #endregion
 
     #region State Informations
@@ -60,12 +61,34 @@ public class Interactions : MonoBehaviour
     {
         if (Camera.main.GetComponent<CameraFollow>().actualRoom != null)
         {
-            GetComponent<MovementsPlayer>().canRun = Camera.main.GetComponent<CameraFollow>().actualRoom.GetComponent<SceneInformations>().canRun;
+            if (Camera.main.GetComponent<CameraFollow>().actualRoom.GetComponent<SceneInformations>() != null)
+            {
+                GetComponent<MovementsPlayer>().canRun = Camera.main.GetComponent<CameraFollow>().actualRoom.GetComponent<SceneInformations>().canRun;
+
+            }else if (Camera.main.GetComponent<CameraFollow>().actualRoom.GetComponent<RoomInformations>() != null)
+            {
+                GetComponent<MovementsPlayer>().canRun = Camera.main.GetComponent<CameraFollow>().actualRoom.GetComponent<RoomInformations>().canRun;
+            }
 
         }
     }
 
-    void OnTriggerStay2D(Collider2D collision)
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (state == State.Normal && state != State.InCinematic && state != State.InDialog)
+        {
+            if (collision.transform.tag == "PNJinteractable" || collision.transform.tag == "Item" || collision.transform.tag == "Board" || collision.transform.tag == "Interaction" || collision.transform.tag == "Shortcut")
+            {
+                if (collision.transform.childCount > 0)
+                {
+                    collision.transform.GetChild(0).gameObject.SetActive(true);
+                }
+            }
+        }
+    }
+
+        void OnTriggerStay2D(Collider2D collision)
     {
         if(state == State.Normal && state != State.InCinematic && state != State.InDialog)
         {
@@ -209,24 +232,37 @@ public class Interactions : MonoBehaviour
 
     void TeleportPossibility()
     {
+
         if(Input.GetButtonDown("Interaction") && PNJContact!= null  && PNJContact.tag == "Shortcut")
         {
-            PNJContact.GetComponent<Shortcut>().Teleport();
+            if (PNJContact.GetComponent<Shortcut>() != null)
+            {
+                PNJContact.GetComponent<Shortcut>().Teleport();
+
+            }
+            else if(PNJContact.transform.parent.parent.GetComponent<RoomInformations>()!=null)
+            {
+                PNJContact.transform.parent.parent.GetComponent<RoomInformations>().Teleport(PNJContact.name);
+            }
         }
     }
     void OpenDialog()
     {
-        if(Input.GetButtonDown("Interaction") && PNJContact != null && !dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.activeInHierarchy)
+        if (dialAndBookCanvas != null)
         {
-            if(PNJContact.tag == "PNJinteractable" || PNJContact.tag == "Item" || PNJContact.tag == "Interaction")
+
+            if (Input.GetButtonDown("Interaction") && PNJContact != null && !dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.activeInHierarchy)
             {
-                //GetComponent<Animator>().SetBool("Walk", false);
-                //dialAndBookCanvas.transform.GetChild(2).GetComponent<Animator>().SetBool("InDialog", true);
-                //animator.SetBool("Talk", true);
-                ChangeState(State.InDialog);
-                if(PNJContact.GetComponent<OutlineSystem>())
-                {PNJContact.GetComponent<OutlineSystem>().HideOutline();}
-                StartDialog();
+                if (PNJContact.tag == "PNJinteractable" || PNJContact.tag == "Item" || PNJContact.tag == "Interaction")
+                {
+                    //GetComponent<Animator>().SetBool("Walk", false);
+                    //dialAndBookCanvas.transform.GetChild(2).GetComponent<Animator>().SetBool("InDialog", true);
+                    //animator.SetBool("Talk", true);
+                    ChangeState(State.InDialog);
+                    if (PNJContact.GetComponent<OutlineSystem>())
+                    { PNJContact.GetComponent<OutlineSystem>().HideOutline(); }
+                    StartDialog();
+                }
             }
         }
     }
@@ -381,6 +417,8 @@ public class Interactions : MonoBehaviour
             PNJContact.GetComponent<PNJ>().ResponseEvent();
         }*/
 
+        talk = false;
+
         transform.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         if(eventGivenListCount == 0 && !PNJContact.GetComponent<PNJ>().haveEvent)
         {
@@ -397,6 +435,7 @@ public class Interactions : MonoBehaviour
                 }
             }
             else PNJContact.GetComponent<PNJ>().ChangeDialog(0);
+            talk = true;
         }
         else if(eventGivenListCount > 0 && PNJContact.GetComponent<PNJ>().haveEvent)
         {
@@ -409,11 +448,28 @@ public class Interactions : MonoBehaviour
                         if(PNJContact.GetComponent<PNJ>().eventRedirection.eventGivenList[i] == GetComponent<EventsCheck>().eventsList[n])
                         {
                             PNJContact.GetComponent<PNJ>().ChangeDialog(PNJContact.GetComponent<PNJ>().eventRedirection.redirectionEventList[i]);
+                            talk = true;
                             return;
                         }
                     }
                 }
             }
+        }
+        if (!talk)
+        {
+            if(PNJContact.tag != "Interaction")
+            {
+                if(PnjMet.Contains(PNJContact.name))
+                {
+                    PNJContact.GetComponent<PNJ>().ChangeDialog(1);
+                }
+                else 
+                {
+                    PnjMet.Add(PNJContact.name);
+                    PNJContact.GetComponent<PNJ>().ChangeDialog(0);
+                }
+            }
+            else PNJContact.GetComponent<PNJ>().ChangeDialog(0);
         }
         
         //GetComponent<MovementsPlayer>().enabled = false;// Initial

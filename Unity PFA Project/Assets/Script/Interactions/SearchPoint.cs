@@ -18,10 +18,13 @@ public class SearchPoint : MonoBehaviour
 
     Transform playerPos;
 
+    Color originalColor;
+
     // Start is called before the first frame update
     void Start()
     {
         //    searchPointTimer.color = new Vector4(1, 1, 1, 0);
+        originalColor = this.GetComponent<SpriteRenderer>().color;
         timeToActivate = timeToPress;
     }
 
@@ -44,7 +47,7 @@ public class SearchPoint : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            this.GetComponent<SpriteRenderer>().color = Color.red;
+            this.GetComponent<SpriteRenderer>().color = originalColor;
             playerInRange = false;
         }
     }

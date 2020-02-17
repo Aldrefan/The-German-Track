@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3300192406102315127}
   - component: {fileID: 3300192406102315126}
   - component: {fileID: 1818733301}
+  - component: {fileID: 1169190250}
   m_Layer: 0
   m_Name: hospital_receptionist
   m_TagString: PNJinteractable
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ad550e825e1728842a3053edca8b87d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -124,152 +125,140 @@ MonoBehaviour:
   PNJName: "R\xE9ceptionniste"
   characterSprite: {fileID: 21300000, guid: ad550e825e1728842a3053edca8b87d5, type: 3}
   kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
+  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 1
   negativeQuote: 0
-  haveEvent: 0
+  haveEvent: 1
   stickerAlreadyGivenList: 
   stickerRedirection:
     stickerGivenList: 
-    redirectionList: 
+    redirectionList: 00000000
   eventRedirection:
     eventGivenList:
     - laissezPasser
-    redirectionEventList: 02000000
+    - hopitalOpen
+    redirectionEventList: 0200000002000000
   allDialogs:
     listOfDialogs:
     - dialog:
-      - quote: 'Monsieur ? '
+      - quote: "R\xE9ceptionnisteH_D0_Q1"
         characterName: "R\xE9ceptionniste"
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Bonjour, j\u2019aimerais parler au Dr Lou Ellis. C\u2019est pour une
-          enqu\xEAte. "
+      - quote: "R\xE9ceptionnisteH_D0_Q2"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Ah vous \xEAtes de la police ? "
+      - quote: "R\xE9ceptionnisteH_D0_Q3"
         characterName: "R\xE9ceptionniste"
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Non, je suis d\xE9tective priv\xE9. "
+      - quote: "R\xE9ceptionnisteH_D0_Q4"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Dans ce cas je vais avoir besoin d\u2019un laisser-passer d\xE9livr\xE9
-          par le commissaire. Je suis d\xE9sol\xE9e. "
+      - quote: "R\xE9ceptionnisteH_D0_Q5"
         characterName: "R\xE9ceptionniste"
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Tr\xE8s bien, je repasserai. "
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      canAskQuestions: 0
-      endDialog: 1
-    - dialog:
-      - quote: 'Monsieur ? '
-        characterName: "R\xE9ceptionniste"
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Bonjour, j\u2019aimerais parler au Dr Lou Ellis. C\u2019est pour une
-          enqu\xEAte. "
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Ah vous \xEAtes de la police ? "
-        characterName: "R\xE9ceptionniste"
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Non, je suis d\xE9tective priv\xE9. "
-        characterName: Kenneth
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Dans ce cas je vais avoir besoin d\u2019un laisser-passer d\xE9livr\xE9
-          par le commissaire. Je suis d\xE9sol\xE9e. "
-        characterName: "R\xE9ceptionniste"
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-        spriteCharacter: {fileID: 0}
-      - quote: "Tr\xE8s bien, je repasserai. "
+      - quote: "R\xE9ceptionnisteH_D0_Q6"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
       canAskQuestions: 0
+      hasChoices: 0
       endDialog: 1
+      buttonsList: []
     - dialog:
-      - quote: 'Monsieur ? '
+      - quote: "R\xE9ceptionnisteH_D1_Q1"
         characterName: "R\xE9ceptionniste"
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Bonjour, j\u2019aimerais parler au Dr Lou Ellis. C\u2019est pour une
-          enqu\xEAte. "
+      - quote: "R\xE9ceptionnisteH_D1_Q2"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Ah vous \xEAtes de la police ? "
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 1
+      buttonsList: []
+    - dialog:
+      - quote: "R\xE9ceptionnisteH_D2_Q1"
         characterName: "R\xE9ceptionniste"
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Non, je suis d\xE9tective priv\xE9. "
+      - quote: "R\xE9ceptionnisteH_D2_Q2"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Dans ce cas je vais avoir besoin d\u2019un laisser-passer d\xE9livr\xE9
-          par le commissaire. Je suis d\xE9sol\xE9e. "
+      - quote: "R\xE9ceptionnisteH_D2_Q3"
         characterName: "R\xE9ceptionniste"
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Voil\xE0. "
+      - quote: "R\xE9ceptionnisteH_D2_Q4"
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
         spriteCharacter: {fileID: 0}
-      - quote: "Parfait. Prenez l\u2019ascenseur, \xE9tage -1, c\u2019est la que vous
-          trouverez le docteur. "
+      - quote: "R\xE9ceptionnisteH_D2_Q5"
         characterName: "R\xE9ceptionniste"
         isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      - quote: "R\xE9ceptionnisteH_D2_Q6"
+        characterName: Kenneth
+        isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger:
         - hopitalOpen
         spriteCharacter: {fileID: 0}
+      - quote: "R\xE9ceptionnisteH_D2_Q7"
+        characterName: "R\xE9ceptionniste"
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
+      hasChoices: 0
       endDialog: 1
-  quoteFinished: 0
+      buttonsList: []
+    - dialog:
+      - quote: "R\xE9ceptionnisteH_D3_Q1"
+        characterName: "R\xE9ceptionniste"
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 1
+      buttonsList: []
+  quoteFinished: 1
   stickersAlreadyGiven: 
 --- !u!114 &1818733301
 MonoBehaviour:
@@ -295,6 +284,18 @@ MonoBehaviour:
   action: 0
   fromStart: 0
   triggerByContact: 0
+--- !u!114 &1169190250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3300192406102315115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd484f8f0d7255489c5d23a7103bad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3300192406361280980
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +364,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7580b9a4e8e5826458a86c4c41f93320, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

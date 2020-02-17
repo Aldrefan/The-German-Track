@@ -204,7 +204,7 @@ public class TutoKenneth : MonoBehaviour
 
         if(tutoDone.moveDone && !tutoDone.interactionDone)
         {
-            if(player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().PNJName != null
+            if(player.GetComponent<Interactions>().PNJContact != null
             && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().PNJName != "Clara Grey")
             {
                 checkTuto("tuto_interaction");
@@ -665,7 +665,7 @@ public class TutoKenneth : MonoBehaviour
 
         questions.positionBoxHelp = Tuto.PositionBoxHelp.Top;
         questions.canClose = false;
-        questions.endingString = "";
+        questions.endingString = "questions";
         questions.keyTitle = "Tuto_Questions_Title";
         questions.keyText = new List<string>();
         questions.keyText.Add("Tuto_Questions_Text");

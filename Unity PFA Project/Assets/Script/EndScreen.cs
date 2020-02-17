@@ -28,6 +28,7 @@ public class EndScreen : MonoBehaviour
             newObjectToDesactivate.SetActive(false);
         }
         GameObject.FindWithTag("MainCamera").GetComponent<Camera_BoardMovements>().enabled = false;
+        Debug.Log("lol");
         transform.GetChild(0).gameObject.SetActive(true);
         transform.GetChild(0).transform.GetChild(3).localPosition = Vector3.zero;
     }
