@@ -146,7 +146,6 @@ public class Clara_Cinematic : MonoBehaviour
 
     public void ExecuteCommand()
     {
-        Debug.Log("Execute");
         GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", true);
         if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.name == "Kenneth")
         {
@@ -202,14 +201,12 @@ public class Clara_Cinematic : MonoBehaviour
 
             case Command.EndGame :
             EndGame();
-            Debug.Log("CommandEndGame");
             break;
         }
     }
 
     void EndGame()
     {
-        Debug.Log("EndGame");
         GameObject.Find("FadePanel").GetComponent<Animator>().SetBool("FadeIn",true);
         StartCoroutine("EndTimer");
     }
@@ -222,9 +219,9 @@ public class Clara_Cinematic : MonoBehaviour
 
     IEnumerator EndFade()
     {
-        Debug.Log("2");
+        //Debug.Log("2");
         yield return new WaitForSecondsRealtime(0.3f);
-        Debug.Log("3");
+        //Debug.Log("3");
 
         GameObject.Find("FadePanel").GetComponent<Animator>().SetBool("FadeIn", false);
 
@@ -291,7 +288,7 @@ public class Clara_Cinematic : MonoBehaviour
     void FadePanel()
     {
         GameObject.Find("FadePanel").GetComponent<Animator>().SetBool("FadeIn", true);
-        Debug.Log("1");
+        //Debug.Log("1");
 
         StartCoroutine(EndFade());
         CheckIndex();
