@@ -485,6 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0408d82c177bf334f8f56e16e37da1f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnAtStart: 0
   figurants:
   - {fileID: 2617508136760653129, guid: 7b71d4efc85d18b4ea0672a5e5ff9025, type: 3}
   - {fileID: 5017062156892643116, guid: fe36b317625141e4e8393235a7815fab, type: 3}
@@ -732,6 +733,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1387433033}
     m_Modifications:
+    - target: {fileID: 4634512970318730232, guid: 742fdecfd51680e40a942bfa7c673efb,
+        type: 3}
+      propertyPath: m_Name
+      value: Particle System (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 4634512970318730215, guid: 742fdecfd51680e40a942bfa7c673efb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -802,20 +808,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.6478114
       objectReference: {fileID: 0}
-    - target: {fileID: 4634512970318730232, guid: 742fdecfd51680e40a942bfa7c673efb,
+    - target: {fileID: 4634512970318730213, guid: 742fdecfd51680e40a942bfa7c673efb,
         type: 3}
-      propertyPath: m_Name
-      value: Particle System (1)
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4634512970318730214, guid: 742fdecfd51680e40a942bfa7c673efb,
         type: 3}
       propertyPath: m_SortingOrder
       value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4634512970318730213, guid: 742fdecfd51680e40a942bfa7c673efb,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 742fdecfd51680e40a942bfa7c673efb, type: 3}
@@ -10309,6 +10310,7 @@ GameObject:
   - component: {fileID: 408455946}
   - component: {fileID: 408455948}
   - component: {fileID: 408455949}
+  - component: {fileID: 408455950}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -10369,6 +10371,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PnjsInGame: []
+--- !u!114 &408455950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408455945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed0247521709a441bdcfa0523401483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &420666936
 GameObject:
   m_ObjectHideFlags: 0
@@ -52082,7 +52096,7 @@ PrefabInstance:
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexCarnetList.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
@@ -52092,7 +52106,7 @@ PrefabInstance:
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
@@ -52112,32 +52126,32 @@ PrefabInstance:
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexCarnetList.Array.data[0]
-      value: 3
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexCarnetList.Array.data[1]
-      value: 42
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.data[0]
-      value: 3
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.data[1]
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[0]
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
-      propertyPath: allStickers.Array.data[1]
+      propertyPath: allStickers.Array.data[0]
       value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
+        type: 3}
+      propertyPath: allStickers.Array.data[1]
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
@@ -52201,6 +52215,11 @@ PrefabInstance:
       propertyPath: appartmentKurtLocked.Array.data[1]
       value: 
       objectReference: {fileID: 1753499838}
+    - target: {fileID: 1955605217293017406, guid: da130138f5003d14f970fac471a8b01f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da130138f5003d14f970fac471a8b01f, type: 3}
 --- !u!1 &1584428645
@@ -64645,6 +64664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0408d82c177bf334f8f56e16e37da1f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnAtStart: 1
   figurants:
   - {fileID: 2617508136760653129, guid: 7b71d4efc85d18b4ea0672a5e5ff9025, type: 3}
   - {fileID: 5017062156892643116, guid: fe36b317625141e4e8393235a7815fab, type: 3}

@@ -314,6 +314,12 @@ public class Interactions : MonoBehaviour
 
     public void ChangeState(State newState)
     {
+        if(newState != State.Normal)
+        {
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            animator.SetBool("Walk", false);
+            animator.SetBool("Run", false);
+        }
         //Debug.Log(newState);
         switch(newState)
         {
@@ -323,7 +329,6 @@ public class Interactions : MonoBehaviour
             carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);
             carnetUI.GetComponent<Animator>().SetBool("InDialog", false);
             dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.SetActive(false);
-            DisableMovements();
             state = State.InCinematic;
             break;
 
@@ -333,25 +338,21 @@ public class Interactions : MonoBehaviour
             animator.SetBool("Talk", false);
             carnetUI.GetComponent<Animator>().SetBool("ClickOn", false);
             carnetUI.GetComponent<Animator>().SetBool("InDialog", false);
-            EnableMovements();
             state = State.Normal;
             break;
 
             case State.InDialog:
-            DisableMovements();
             animator.SetBool("Talk", true);
             isInDialog = true;
             state = State.InDialog;
             break;
 
             case State.OnBoard:
-            DisableMovements();
             state = State.OnBoard;
             break;
 
             case State.OnCarnet:
             onBook = true;
-            DisableMovements();
             state = State.OnCarnet;
             break;
 
@@ -359,7 +360,6 @@ public class Interactions : MonoBehaviour
             GameObject.Find("Necessary_Floating_Canvas").transform.GetChild(2).gameObject.SetActive(true);
             carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);
             carnetUI.GetComponent<Animator>().SetBool("InDialog", false);
-            DisableMovements();
             state = State.Pause;
             break;
         }
@@ -491,7 +491,7 @@ public class Interactions : MonoBehaviour
         else 
         {
             carnetUI.GetComponent<Animator>().SetBool("InDialog", false);
-            carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);            
+            carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);
             PNJContact.GetComponent<Clara_Cinematic>().CheckIndex();
             PNJContact = null;
         }
@@ -528,6 +528,9 @@ public class Interactions : MonoBehaviour
     {
         state = State.Pause;
         yield return new WaitForSecondsRealtime(0.1f);
-        ChangeState(State.Normal);
+        if(state != State.InCinematic)
+        {
+            ChangeState(State.Normal);
+        }
     }
 }

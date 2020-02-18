@@ -5,6 +5,8 @@ using UnityEngine;
 public class FigurantSpawner : MonoBehaviour
 {
     [SerializeField]
+    private bool spawnAtStart;
+    [SerializeField]
     private List<GameObject> figurants;
     [SerializeField]
     private Vector2 size;
@@ -19,7 +21,10 @@ public class FigurantSpawner : MonoBehaviour
 
     void OnEnable()
     {
-        SpawnFigurant();
+        if(spawnAtStart)
+        {
+            SpawnFigurant();
+        }
     }
     
     void OnDisable()

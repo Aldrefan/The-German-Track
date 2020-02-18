@@ -59,9 +59,15 @@ public class Clara_Cinematic : MonoBehaviour
     {
         if(col.gameObject.tag == "Player" && triggerByContact)
         {
-            GetComponent<Collider2D>().enabled = false;
-            ExecuteCommand();
+            StartCoroutine(TimerBeforeStart());
         }
+    }
+
+    IEnumerator TimerBeforeStart()
+    {
+        yield return new WaitForSeconds(0.01f);
+        GetComponent<Collider2D>().enabled = false;
+        ExecuteCommand();
     }
 
     IEnumerator MovementTimer(float time)
@@ -77,7 +83,7 @@ public class Clara_Cinematic : MonoBehaviour
         else annexInformation[action].objectToMove.GetComponent<SpriteRenderer>().flipX = false;
         if(annexInformation[action].objectToMove.tag == "Player")
         {
-            annexInformation[action].objectToMove.GetComponent<MovementsPlayer>().enabled = false;
+            annexInformation[action].objectToMove.GetComponent<MovementsPlayer>().CheckSensAndFlip(annexInformation[action].direction);
         }
         annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Talk", false);
         annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Walk", true);
@@ -210,7 +216,6 @@ public class Clara_Cinematic : MonoBehaviour
     IEnumerator EndTimer()
     {
         yield return new WaitForSecondsRealtime(0.7f);
-        Debug.Log("sakut");
         GameObject.Find("EndCanvas").GetComponent<EndScreen>().EndDemo();
     }
 
