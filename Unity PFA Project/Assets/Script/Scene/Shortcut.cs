@@ -48,10 +48,14 @@ public class Shortcut : MonoBehaviour
 
     public void Teleport()
     {
-        fadePanel.GetComponent<Animator>().SetTrigger("FadeIn");
-        //GameObject.FindObjectOfType<Saver>().lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
-        StartCoroutine("Respawn");
-        linkedWith.transform.parent.parent.GetComponent<SceneInformations>().PlaceCamera();
+        if (!fadePanel.GetComponent<Animator>().GetBool("FadeIn"))
+        {
+            fadePanel.GetComponent<Animator>().SetBool("FadeIn", true);
+
+            //GameObject.FindObjectOfType<Saver>().lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
+            StartCoroutine("Respawn");
+            linkedWith.transform.parent.parent.GetComponent<SceneInformations>().PlaceCamera();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -74,7 +78,7 @@ public class Shortcut : MonoBehaviour
     {
         Camera.main.GetComponent<BoxCollider2D>().enabled = false;
         yield return new WaitForSeconds(0.4f);
-        if(linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme != null && linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme != GameObject.Find("AudioManager").GetComponent<AudioSource>().clip)
+            if (linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme != null && linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme != GameObject.Find("AudioManager").GetComponent<AudioSource>().clip)
         {
             GameObject.Find("AudioManager").GetComponent<AudioSource>().clip = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme;
             GameObject.Find("AudioManager").GetComponent<AudioSource>().Play();
@@ -102,14 +106,14 @@ public class Shortcut : MonoBehaviour
         //}
         if(!linkedWith.transform.parent.parent.GetComponent<SceneInformations>().fixedCamera)
         {
-            Camera.main.GetComponent<CameraFollow>().isFollowing = true;
+            Camera.main.GetComponent<CameraFollow>().actualRoom = linkedWith.transform.parent.parent.gameObject;
+            Camera.main.GetComponent<CameraFollow>().InitRoomLimit();
+            Camera.main.GetComponent<BoxCollider2D>().enabled = true;
             Camera.main.transform.position = new Vector3(player.transform.position.x + distanceOfTheCamera, player.transform.position.y + linkedWith.transform.parent.parent.GetComponent<SceneInformations>().YOffset, player.transform.position.z - linkedWith.transform.parent.parent.GetComponent<SceneInformations>().distanceBetweenPlayerAndCamera);
             Camera.main.GetComponent<CameraFollow>().YOffset = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().YOffset;
             Camera.main.GetComponent<CameraFollow>().barrier = "none";
             Camera.main.GetComponent<CameraFollow>().collision = false;
-            Camera.main.GetComponent<CameraFollow>().actualRoom = linkedWith.transform.parent.parent.gameObject;
-            Camera.main.GetComponent<CameraFollow>().InitRoomLimit();
-            Camera.main.GetComponent<BoxCollider2D>().enabled = true;
+            Camera.main.GetComponent<CameraFollow>().isFollowing = true;
         }
         else 
         {
@@ -117,6 +121,10 @@ public class Shortcut : MonoBehaviour
             Camera.main.GetComponent<CameraFollow>().actualRoom = linkedWith.transform.parent.parent.gameObject;
             Camera.main.GetComponent<CameraFollow>().InitRoomLimit();
             Camera.main.GetComponent<CameraFollow>().isFollowing = false;
+        }
+        if (fadePanel.GetComponent<Animator>().GetBool("FadeIn"))
+        {
+            fadePanel.GetComponent<Animator>().SetBool("FadeIn", false);
         }
     }
 }

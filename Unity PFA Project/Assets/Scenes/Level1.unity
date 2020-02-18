@@ -808,15 +808,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.6478114
       objectReference: {fileID: 0}
-    - target: {fileID: 4634512970318730213, guid: 742fdecfd51680e40a942bfa7c673efb,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 40
-      objectReference: {fileID: 0}
     - target: {fileID: 4634512970318730214, guid: 742fdecfd51680e40a942bfa7c673efb,
         type: 3}
       propertyPath: m_SortingOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634512970318730213, guid: 742fdecfd51680e40a942bfa7c673efb,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 742fdecfd51680e40a942bfa7c673efb, type: 3}
@@ -41433,6 +41433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1387442358}
+  - component: {fileID: 1387442363}
   - component: {fileID: 1387442357}
   - component: {fileID: 1387442361}
   - component: {fileID: 1387442360}
@@ -41458,7 +41459,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.15, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -41662,7 +41663,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: 1b5c8c6f64eb61341969cd2a7069a3e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -41674,6 +41675,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1387442363
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387442356}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.39, y: 0.43}
+    newSize: {x: 0.39, y: 0.43}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.39, y: 0.43}
+  m_EdgeRadius: 0
 --- !u!1 &1388454993
 GameObject:
   m_ObjectHideFlags: 0
@@ -48999,21 +49026,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 6252624642967059767, guid: e7c94aa2610c9844293398dde8a0fbf7,
-        type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6252624642967059767, guid: e7c94aa2610c9844293398dde8a0fbf7,
-        type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6252624642967059767, guid: e7c94aa2610c9844293398dde8a0fbf7,
-        type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6252624642967059764, guid: e7c94aa2610c9844293398dde8a0fbf7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -49069,6 +49081,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6252624642967059760, guid: e7c94aa2610c9844293398dde8a0fbf7,
+        type: 3}
+      propertyPath: actualRoom
+      value: 
+      objectReference: {fileID: 667359987}
+    - target: {fileID: 6252624642967059767, guid: e7c94aa2610c9844293398dde8a0fbf7,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252624642967059767, guid: e7c94aa2610c9844293398dde8a0fbf7,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252624642967059767, guid: e7c94aa2610c9844293398dde8a0fbf7,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6252624642967059762, guid: e7c94aa2610c9844293398dde8a0fbf7,
         type: 3}
       propertyPath: boardCanvas
@@ -49079,11 +49111,6 @@ PrefabInstance:
       propertyPath: boardCanvas
       value: 
       objectReference: {fileID: 347536217}
-    - target: {fileID: 6252624642967059760, guid: e7c94aa2610c9844293398dde8a0fbf7,
-        type: 3}
-      propertyPath: actualRoom
-      value: 
-      objectReference: {fileID: 667359987}
     - target: {fileID: 6252624642967059774, guid: e7c94aa2610c9844293398dde8a0fbf7,
         type: 3}
       propertyPath: m_Enabled
@@ -52096,7 +52123,7 @@ PrefabInstance:
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexCarnetList.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
@@ -52106,7 +52133,7 @@ PrefabInstance:
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}

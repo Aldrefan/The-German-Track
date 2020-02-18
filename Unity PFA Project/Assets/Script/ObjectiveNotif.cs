@@ -66,7 +66,11 @@ public class ObjectiveNotif : MonoBehaviour
                     if(notifAtor.GetBool("ValidGoal")!= NotifQueue[0].goalAchieved)
                     {
                         notifAtor.SetBool("ValidGoal", NotifQueue[0].goalAchieved);
-
+                        visibilityTime = 5;
+                    }
+                    else
+                    {
+                        visibilityTime = 3;
                     }
                     notifAtor.SetBool("Visible", true);
 
