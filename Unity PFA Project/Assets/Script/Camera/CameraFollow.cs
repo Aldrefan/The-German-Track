@@ -22,7 +22,7 @@ public class CameraFollow : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        transform.position = new Vector3(player.transform.position.x + 5, player.transform.position.y + YOffset, transform.position.z);
+        transform.position = new Vector3(player.transform.position.x, player.transform.position.y + YOffset, actualRoom.GetComponent<RoomInformations>().distBtwPlAndCam);
         barrier = "none";
         //StartCoroutine("StartTimer");
         InitRoomLimit();
