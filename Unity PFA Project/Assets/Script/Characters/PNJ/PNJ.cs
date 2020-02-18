@@ -291,32 +291,52 @@ public class PNJ : MonoBehaviour
     public IEnumerator ShowText(GameObject panel)
     {
         quoteFinished = false;
-        //Debug.Log(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
         actualQuote = LanguageManager.Instance.GetDialog(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
+        
+        string [] words = actualQuote.Split(" "[0]);
+        string[] actualWordList = new string[words.Length];
+        string actualQuoteState = "";
+        string quoteStructure = "";
 
-        //panel.transform.GetChild(1).GetComponent<Text>().text = actualQuote;
-        //actualQuote = panel.transform.GetChild(1).GetComponent<Text>().text;
-        //int length = 0;
-        //if(actualQuote.Contains("<b>"))
-        //{
-            //length = actualQuote.Length - 6;
-        //}
-        //else length = actualQuote.Length;
-        for(int i = 0; i < actualQuote.Length/*length*/ + 1; i++)
+        for(int n = 0; n < words.Length; n++)
         {
-            /*if(actualQuote.Substring(i, i + 2) == "<b>")
+            if(BalisesManager.Balises.IsABalise(words[n])) {quoteStructure += words[n]; actualWordList[n] = words[n];}
+            else 
             {
-                Debug.Log("It's a '<b>' !");
-                i += 2;
+                quoteStructure += " ";
+                actualWordList[n] = " ";
+                if(n < words.Length - 1)
+                {
+                    quoteStructure += " ";
+                }
             }
-            if(actualQuote.Substring(i, i + 3) == "</b>")
+        }
+        for(int i = 0; i < words.Length; i++)           //Fait la phrase finale mot par mot => phrase finale "May I <b> help </b> you ?
+        {
+            if(!BalisesManager.Balises.IsABalise(words[i]))
+            {actualWordList[i] = words[i];}
+            
+            string currentWord = words[i];
+            actualWordList[i] = "";
+            for(int x = 0; x < words[i].Length + 1; x++)                     //S'occupe de générer le nouveau mot => May => I => <b>
             {
-                Debug.Log("It's a '</b>' !");
-                i += 3;
-            }*/
-            currentLine = actualQuote.Substring(0,i);
-            panel.transform.GetChild(1).GetComponent<Text>().text = currentLine;
-            yield return new WaitForSeconds(dialogDelay);
+                actualQuoteState = "";
+                actualWordList[i] = currentWord.Substring(0, x);
+                for(int n = 0; n < words.Length; n++)                        //Fait la nouvelle phrase => quoteState "May _ <b> _ </b> _ _" => "May I <b> _ </b> _ _"
+                {
+                    actualQuoteState += actualWordList[n];
+                    //Debug.Log("Actual Quote State : " + actualQuoteState + "index : " + n);
+                    if(n < actualWordList.Length - 1 && !BalisesManager.Balises.IsABalise(actualWordList[n]))
+                    {
+                        actualQuoteState += " ";
+                    }
+                }
+                if(!BalisesManager.Balises.IsABalise(words[i]))
+                {
+                    panel.transform.GetChild(1).GetComponent<Text>().text = actualQuoteState;       //Afficher la nouvelle phrase
+                    yield return new WaitForSeconds(dialogDelay);
+                }
+            }
         }
         quoteFinished = true;
         DialogSecondPhase();

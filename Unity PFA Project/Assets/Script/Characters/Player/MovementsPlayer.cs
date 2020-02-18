@@ -12,6 +12,7 @@ public class MovementsPlayer : MonoBehaviour {
     public bool canRun;
     Rigidbody2D rb2d;
     Animator animator;
+    bool canMove = false;
     
     // Start is called before the first frame update
     void Start()
@@ -27,44 +28,71 @@ public class MovementsPlayer : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Sprint") > 0 && canRun)
+        if(GetComponent<Interactions>().state == Interactions.State.Normal && canMove)
         {
-            sprint = true;
-            animator.SetBool("Run", true);
+            if (Input.GetAxis("Sprint") > 0 && canRun)
+            {
+                sprint = true;
+                animator.SetBool("Run", true);
+            }
+            else
+            {
+                sprint = false;
+                animator.SetBool("Run", false);
+            }
+
+            if (sprint)
+            {
+                speed = run_speed;
+            }
+            else
+            {
+                speed = walk_speed;
+            }
+
+            float x = Input.GetAxis("Horizontal") * speed;
+            float y = rb2d.velocity.y;
+            rb2d.velocity = new Vector2(x, y);
+
+            if (rb2d.velocity.x > 0 && !facingRight)
+            {
+                Flip();
+            }
+            else if (rb2d.velocity.x < 0 && facingRight)
+            {
+                Flip();
+            }
+
+            if(rb2d.velocity.x > 0.01f || rb2d.velocity.x < -0.01f)
+            {
+                animator.SetBool("Walk", true);
+            }
+            else animator.SetBool("Walk", false);
         }
         else
         {
-            sprint = false;
+            animator.SetBool("Walk", false);
             animator.SetBool("Run", false);
         }
+    }
 
-        if (sprint)
+    public void CheckSensAndFlip(float direction)
+    {
+        Debug.Log("Flip");
+        Vector3 theScale = transform.localScale;
+        if(direction < 0)
+        {facingRight = false;}
+        else facingRight = true;
+        if(theScale.x < 0 && facingRight)
         {
-            speed = run_speed;
+            facingRight = false;
+            theScale.x *= -1;
         }
-        else
+        else if(theScale.x > 0 && !facingRight)
         {
-            speed = walk_speed;
+            facingRight = true;
+            theScale.x *= -1;
         }
-
-        float x = Input.GetAxis("Horizontal") * speed;
-        float y = rb2d.velocity.y;
-        rb2d.velocity = new Vector2(x, y);
-
-        if (rb2d.velocity.x > 0 && !facingRight)
-        {
-            Flip();
-        }
-        else if (rb2d.velocity.x < 0 && facingRight)
-        {
-            Flip();
-        }
-
-        if(rb2d.velocity.x > 0.01f || rb2d.velocity.x < -0.01f)
-        {
-            animator.SetBool("Walk", true);
-        }
-        else animator.SetBool("Walk", false);
     }
 
 	void Flip()
@@ -81,11 +109,14 @@ public class MovementsPlayer : MonoBehaviour {
 
     IEnumerator StartTimerBeforeCheckActivation()
     {
-        yield return new WaitForSeconds(0.001f);
         if(GetComponent<Interactions>().PnjMet.Contains("Clara"))
         {
-            GetComponent<MovementsPlayer>().enabled = true;
+            canMove = true;
         }
-        else GetComponent<MovementsPlayer>().enabled = false;
+        else 
+        {
+            yield return new WaitForSeconds(1);
+            canMove = true;
+        }
     }
 }

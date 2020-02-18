@@ -31,6 +31,7 @@ public class Sticker_Display : MonoBehaviour
 
         if(GameObject.Find("Kenneth").GetComponent<Interactions>().state == Interactions.State.OnCarnet)
         GetComponent<CarnetSticker>().SetBackgroundColor();
+        else transform.GetChild(0).GetComponent<Image>().color = backgroundColor;
 
         //transform.GetChild(0).GetComponent<Image>().color = backgroundColor;
         //text.rectTransform.sizeDelta = new Vector2(GetComponent<BoxCollider2D>().size.x, GetComponent<BoxCollider2D>().size.y/*  -20*/);

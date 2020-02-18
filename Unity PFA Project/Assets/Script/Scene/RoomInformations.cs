@@ -21,7 +21,9 @@ public class RoomInformations : MonoBehaviour
 
     public bool canMove;
     public bool canRun;
-    
+
+    float distanceOfTheCamera;
+    bool inRespawn;
 
     public List<DoorShortcut> DoorList = new List<DoorShortcut>();
 
@@ -54,12 +56,15 @@ public class RoomInformations : MonoBehaviour
 
     public void Teleport(string DoorName)
     {
-        fadePanel.GetComponent<Animator>().SetTrigger("FadeIn");
         RoomInformations nextRoom = ReturnRoomDest(DoorName);
+        distanceOfTheCamera = CalculateDistBtwCamToDoor(DoorName);
 
+        if (!inRespawn)
+        {
 
         StartCoroutine(Respawn(ReturnDoorDest(DoorName).transform, nextRoom));
-        nextRoom.PlaceCamera();
+        }
+        //
     }
 
     void CheckCanRun()
@@ -81,7 +86,11 @@ public class RoomInformations : MonoBehaviour
             Camera.main.transform.position = CameraSpot.position;
             Camera.main.GetComponent<CameraFollow>().isFollowing = false;
         }
-        else Camera.main.GetComponent<CameraFollow>().isFollowing = true;
+        else
+        {
+            Camera.main.GetComponent<CameraFollow>().isFollowing = true;
+            Camera.main.transform.position = new Vector3( player.transform.position.x, 0, player.transform.position.z - distBtwPlAndCam);
+        }
     }
 
     public void ShowZoneName()
@@ -107,6 +116,69 @@ public class RoomInformations : MonoBehaviour
                 }
             }
         }
+    }
+
+
+    IEnumerator Respawn(Transform FinalDestTrans, RoomInformations FinalDestRoom)
+    {
+        if (!inRespawn)
+        {
+            inRespawn = true;
+            fadePanel.GetComponent<Animator>().SetBool("FadeIn",true);
+            Camera.main.GetComponent<BoxCollider2D>().enabled = false;
+            yield return new WaitForSeconds(0.3f);
+            fadePanel.GetComponent<Animator>().SetBool("FadeIn", false);
+            if (FinalDestRoom.roomTheme != null && FinalDestRoom.roomTheme != GameObject.Find("AudioManager").GetComponent<AudioSource>().clip)
+            {
+                GameObject.Find("AudioManager").GetComponent<AudioSource>().clip = FinalDestRoom.roomTheme;
+                GameObject.Find("AudioManager").GetComponent<AudioSource>().Play();
+            }
+            FinalDestRoom.gameObject.SetActive(true);
+            player.transform.position = CalculateDestPos(FinalDestTrans);
+            player.GetComponent<MovementsPlayer>().canRun = FinalDestRoom.canRun;
+
+            //if (!internTeleport)
+            //{
+            //    transform.parent.parent.gameObject.SetActive(false);
+            //    linkedWith.transform.parent.parent.GetComponent<SceneInformations>().ShowZoneName();
+            //}
+            //FinalDestRoom.PlaceCamera();
+            if (!FinalDestRoom.staticCamera)
+            {
+                Camera.main.GetComponent<CameraFollow>().actualRoom = FinalDestRoom.gameObject;
+                Camera.main.GetComponent<CameraFollow>().InitRoomLimit();
+                Camera.main.GetComponent<BoxCollider2D>().enabled = true;
+                Camera.main.transform.position = new Vector3(FinalDestRoom.transform.position.x + distanceOfTheCamera, player.transform.position.y + FinalDestRoom.YOffset, player.transform.position.z - FinalDestRoom.distBtwPlAndCam);
+                Camera.main.GetComponent<CameraFollow>().YOffset = FinalDestRoom.YOffset;
+                Camera.main.GetComponent<CameraFollow>().barrier = "none";
+                Camera.main.GetComponent<CameraFollow>().collision = false;
+                Camera.main.GetComponent<CameraFollow>().isFollowing = true;
+            }
+            else
+            {
+                Camera.main.GetComponent<CameraFollow>().actualRoom = FinalDestRoom.gameObject;
+                Camera.main.GetComponent<CameraFollow>().InitRoomLimit();
+                Camera.main.transform.position = FinalDestRoom.CameraSpot.position;
+                Camera.main.GetComponent<CameraFollow>().isFollowing = false;
+            }
+            inRespawn = false;
+        }
+    }
+
+    float CalculateDistBtwCamToDoor(string doorName)
+    {
+
+        Vector3 doorPos = ReturnAccessDoor(doorName).transform.position;
+        Vector3 camPos = new Vector3(Camera.main.transform.position.x, doorPos.y, doorPos.z);
+        float dist = Vector3.Distance(doorPos, camPos);
+
+        if (camPos.x > doorPos.x)
+        {
+            dist = -dist;
+        }
+
+        return dist;
+            
     }
 
     RoomInformations ReturnRoomDest(string doorRoomName)
@@ -135,43 +207,26 @@ public class RoomInformations : MonoBehaviour
         return null;
     }
 
-    IEnumerator Respawn(Transform FinalDestTrans, RoomInformations FinalDestRoom)
+    GameObject ReturnAccessDoor(string doorRoomName)
     {
-        Camera.main.GetComponent<BoxCollider2D>().enabled = false;
-        yield return new WaitForSeconds(0.4f);
-        if (FinalDestRoom.roomTheme != null && FinalDestRoom.roomTheme != GameObject.Find("AudioManager").GetComponent<AudioSource>().clip)
+        foreach (DoorShortcut door in DoorList)
         {
-            GameObject.Find("AudioManager").GetComponent<AudioSource>().clip = FinalDestRoom.roomTheme;
-            GameObject.Find("AudioManager").GetComponent<AudioSource>().Play();
+            if (doorRoomName == door.AccessDoor.name && door.FinalDest != null)
+            {
+                return door.AccessDoor;
+            }
+            return null;
         }
-        FinalDestRoom.gameObject.SetActive(true);
-        player.transform.position = FinalDestTrans.position;
-        player.GetComponent<MovementsPlayer>().canRun = FinalDestRoom.canRun;
-
-        ////if (!internTeleport)
-        ////{
-        ////    transform.parent.parent.gameObject.SetActive(false);
-        ////    linkedWith.transform.parent.parent.GetComponent<SceneInformations>().ShowZoneName();
-        ////}
-        if (!FinalDestRoom.staticCamera)
-        {
-            Camera.main.GetComponent<CameraFollow>().isFollowing = true;
-            Camera.main.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + FinalDestRoom.YOffset, player.transform.position.z - FinalDestRoom.distBtwPlAndCam);
-            Camera.main.GetComponent<CameraFollow>().YOffset = FinalDestRoom.YOffset;
-            Camera.main.GetComponent<CameraFollow>().barrier = "none";
-            Camera.main.GetComponent<CameraFollow>().collision = false;
-            Camera.main.GetComponent<CameraFollow>().actualRoom = FinalDestRoom.gameObject;
-            Camera.main.GetComponent<CameraFollow>().InitRoomLimit();
-            Camera.main.GetComponent<BoxCollider2D>().enabled = true;
-        }
-        else
-        {
-            Camera.main.transform.position = FinalDestRoom.CameraSpot.position;
-            Camera.main.GetComponent<CameraFollow>().actualRoom = FinalDestRoom.gameObject;
-            Camera.main.GetComponent<CameraFollow>().InitRoomLimit();
-            Camera.main.GetComponent<CameraFollow>().isFollowing = false;
-        }
+        return null;
     }
+
+    Vector3 CalculateDestPos(Transform finalDestTrans)
+    {
+        float distBtwDoorAndPl = Vector3.Distance(finalDestTrans.position,new Vector3(finalDestTrans.position.x, player.transform.position.y, player.transform.position.z));
+        Vector3 finalPos = new Vector3(finalDestTrans.position.x, finalDestTrans.position.y - distBtwDoorAndPl, finalDestTrans.position.z);
+        return finalPos;
+    }
+
 }
 
 

@@ -234,14 +234,14 @@ MonoBehaviour:
         characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger:
-        - hopitalOpen
+        eventTrigger: []
         spriteCharacter: {fileID: 0}
       - quote: "R\xE9ceptionnisteH_D2_Q7"
         characterName: "R\xE9ceptionniste"
         isInLeftSide: 0
         newStickerIndexList: 
-        eventTrigger: []
+        eventTrigger:
+        - hopitalOpen
         spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0

@@ -59,9 +59,15 @@ public class Clara_Cinematic : MonoBehaviour
     {
         if(col.gameObject.tag == "Player" && triggerByContact)
         {
-            GetComponent<Collider2D>().enabled = false;
-            ExecuteCommand();
+            StartCoroutine(TimerBeforeStart());
         }
+    }
+
+    IEnumerator TimerBeforeStart()
+    {
+        yield return new WaitForSeconds(0.01f);
+        GetComponent<Collider2D>().enabled = false;
+        ExecuteCommand();
     }
 
     IEnumerator MovementTimer(float time)
@@ -77,7 +83,7 @@ public class Clara_Cinematic : MonoBehaviour
         else annexInformation[action].objectToMove.GetComponent<SpriteRenderer>().flipX = false;
         if(annexInformation[action].objectToMove.tag == "Player")
         {
-            annexInformation[action].objectToMove.GetComponent<MovementsPlayer>().enabled = false;
+            annexInformation[action].objectToMove.GetComponent<MovementsPlayer>().CheckSensAndFlip(annexInformation[action].direction);
         }
         annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Talk", false);
         annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Walk", true);
@@ -204,14 +210,24 @@ public class Clara_Cinematic : MonoBehaviour
     void EndGame()
     {
         Debug.Log("EndGame");
-        GameObject.Find("FadePanel").GetComponent<Animator>().SetTrigger("FadeIn");
+        GameObject.Find("FadePanel").GetComponent<Animator>().SetBool("FadeIn",true);
         StartCoroutine("EndTimer");
     }
     IEnumerator EndTimer()
     {
         yield return new WaitForSecondsRealtime(0.7f);
-        Debug.Log("sakut");
+        GameObject.Find("FadePanel").GetComponent<Animator>().SetBool("FadeIn", false);
         GameObject.Find("EndCanvas").GetComponent<EndScreen>().EndDemo();
+    }
+
+    IEnumerator EndFade()
+    {
+        Debug.Log("2");
+        yield return new WaitForSecondsRealtime(0.3f);
+        Debug.Log("3");
+
+        GameObject.Find("FadePanel").GetComponent<Animator>().SetBool("FadeIn", false);
+
     }
 
     void SetDay()
@@ -274,8 +290,10 @@ public class Clara_Cinematic : MonoBehaviour
 
     void FadePanel()
     {
-        GameObject.Find("FadePanel").GetComponent<Animator>().SetTrigger("FadeIn");
-        //StartCoroutine("Timer", 2);
+        GameObject.Find("FadePanel").GetComponent<Animator>().SetBool("FadeIn", true);
+        Debug.Log("1");
+
+        StartCoroutine(EndFade());
         CheckIndex();
     }
 }
