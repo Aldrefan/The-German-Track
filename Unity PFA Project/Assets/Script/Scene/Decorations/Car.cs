@@ -22,7 +22,7 @@ public class Car : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if(coll.gameObject.name == "CarDespawn")
+        if(coll.GetComponent<CarSpawner>())
         {
             Destroy(gameObject);
         }
