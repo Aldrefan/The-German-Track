@@ -226,7 +226,7 @@ public class EventsCheck : MonoBehaviour
                 break;
 
             case "hopitalOpen":
-                GetComponent<Interactions>().PNJContact.GetComponent<Clara_Cinematic>().ExecuteCommand();
+                GameObject.Find("doorHopital").gameObject.SetActive(false);
                 break;
 
             case "policeOpen":
