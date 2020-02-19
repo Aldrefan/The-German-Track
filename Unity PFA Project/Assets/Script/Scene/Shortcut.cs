@@ -54,7 +54,6 @@ public class Shortcut : MonoBehaviour
 
             //GameObject.FindObjectOfType<Saver>().lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
             StartCoroutine("Respawn");
-            linkedWith.transform.parent.parent.GetComponent<SceneInformations>().PlaceCamera();
         }
     }
 
@@ -76,8 +75,9 @@ public class Shortcut : MonoBehaviour
 
     IEnumerator Respawn()
     {
+            Camera.main.GetComponent<CameraFollow>().isFollowing = false;
         Camera.main.GetComponent<BoxCollider2D>().enabled = false;
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.5f);
             if (linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme != null && linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme != GameObject.Find("AudioManager").GetComponent<AudioSource>().clip)
         {
             GameObject.Find("AudioManager").GetComponent<AudioSource>().clip = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme;
@@ -109,7 +109,8 @@ public class Shortcut : MonoBehaviour
             Camera.main.GetComponent<CameraFollow>().actualRoom = linkedWith.transform.parent.parent.gameObject;
             Camera.main.GetComponent<CameraFollow>().InitRoomLimit();
             Camera.main.GetComponent<BoxCollider2D>().enabled = true;
-            Camera.main.transform.position = new Vector3(player.transform.position.x + distanceOfTheCamera, player.transform.position.y + linkedWith.transform.parent.parent.GetComponent<SceneInformations>().YOffset, player.transform.position.z - linkedWith.transform.parent.parent.GetComponent<SceneInformations>().distanceBetweenPlayerAndCamera);
+            //Camera.main.transform.position = linkedWith.transform.parent.parent.gameObject.transform.position;
+            Camera.main.transform.position = new Vector3(linkedWith.transform.parent.parent.GetComponent<SceneInformations>().CameraSpot.position.x, player.transform.position.y + linkedWith.transform.parent.parent.GetComponent<SceneInformations>().YOffset*YOffsetAdd(), player.transform.position.z - linkedWith.transform.parent.parent.GetComponent<SceneInformations>().distanceBetweenPlayerAndCamera);
             Camera.main.GetComponent<CameraFollow>().YOffset = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().YOffset;
             Camera.main.GetComponent<CameraFollow>().barrier = "none";
             Camera.main.GetComponent<CameraFollow>().collision = false;
@@ -117,14 +118,45 @@ public class Shortcut : MonoBehaviour
         }
         else 
         {
+            Camera.main.GetComponent<CameraFollow>().isFollowing = false;
             Camera.main.transform.position = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().CameraSpot.position;
             Camera.main.GetComponent<CameraFollow>().actualRoom = linkedWith.transform.parent.parent.gameObject;
             Camera.main.GetComponent<CameraFollow>().InitRoomLimit();
-            Camera.main.GetComponent<CameraFollow>().isFollowing = false;
         }
+        //linkedWith.transform.parent.parent.GetComponent<SceneInformations>().PlaceCamera();
+
         if (fadePanel.GetComponent<Animator>().GetBool("FadeIn"))
         {
             fadePanel.GetComponent<Animator>().SetBool("FadeIn", false);
+        }
+    }
+
+    float CalculateDistBtwCamToDoor()
+    {
+
+        Vector3 doorPos = this.transform.position;
+        Vector3 camPos = new Vector3(Camera.main.transform.position.x, doorPos.y, doorPos.z);
+        float dist = Vector3.Distance(doorPos, camPos);
+
+        if (camPos.x > doorPos.x)
+        {
+            dist = -dist;
+        }
+
+        return dist;
+
+    }
+
+    float YOffsetAdd()
+    {
+        if (player.transform.position.y>=0)
+        {
+            return -1;
+        }
+        else
+        {
+            return 1;
+
         }
     }
 }
