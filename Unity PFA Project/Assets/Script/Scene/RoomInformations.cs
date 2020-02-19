@@ -224,8 +224,23 @@ public class RoomInformations : MonoBehaviour
     {
         float distBtwDoorAndPl = Vector3.Distance(finalDestTrans.position,new Vector3(finalDestTrans.position.x, player.transform.position.y, player.transform.position.z));
         Vector3 finalPos = new Vector3(finalDestTrans.position.x, finalDestTrans.position.y - distBtwDoorAndPl, finalDestTrans.position.z);
+
+        RaycastHit2D hit = Physics2D.Raycast(finalDestTrans.position, Vector2.down);
+        if(hit.collider!=null)
+        {
+            Debug.Log(hit.transform.position);
+            Debug.Log(hit.collider.name);
+
+
+        }
+
+
+
+
         return finalPos;
     }
+
+    
 
 }
 

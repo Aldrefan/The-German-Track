@@ -274,6 +274,7 @@ public class Menu : MonoBehaviour
         {
             GameSaveSystem.gameToLoad = false;
         }
+
         SceneManager.LoadScene(1);
     }
 

@@ -75,36 +75,46 @@ public class Shortcut : MonoBehaviour
 
     IEnumerator Respawn()
     {
-            Camera.main.GetComponent<CameraFollow>().isFollowing = false;
+        Camera.main.GetComponent<CameraFollow>().isFollowing = false;
         Camera.main.GetComponent<BoxCollider2D>().enabled = false;
+
         yield return new WaitForSeconds(0.5f);
-            if (linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme != null && linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme != GameObject.Find("AudioManager").GetComponent<AudioSource>().clip)
+        if (linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme != null && linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme != GameObject.Find("AudioManager").GetComponent<AudioSource>().clip)
         {
             GameObject.Find("AudioManager").GetComponent<AudioSource>().clip = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme;
             GameObject.Find("AudioManager").GetComponent<AudioSource>().Play();
         }
+
+
         linkedWith.transform.parent.parent.gameObject.SetActive(true);
         player.transform.position = linkedWith.transform.position;
         player.GetComponent<MovementsPlayer>().canRun = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().canRun;
-        if(directionalLight.GetComponent<DayNightLight>().time == DayNightLight.timeEnum.Day)
+
+        if (directionalLight.GetComponent<DayNightLight>().time == DayNightLight.timeEnum.Day)
         {
             directionalLight.GetComponent<Light>().intensity = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().dayLightValue;
         }
         else directionalLight.GetComponent<Light>().intensity = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().nightLightValue;
-        if(!internTeleport)
+
+        if (!internTeleport)
         {
             transform.parent.parent.gameObject.SetActive(false);
             linkedWith.transform.parent.parent.GetComponent<SceneInformations>().ShowZoneName();
         }
         //else 
         //{
-            //Saver saver = GameObject.FindObjectOfType<Saver>();
-            //saver.lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
-            /*JsonSave save = SaveGameManager.GetCurrentSave();
-            save.lieu = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
-            SaveGameManager.Save();*/
+        //Saver saver = GameObject.FindObjectOfType<Saver>();
+        //saver.lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
+        /*JsonSave save = SaveGameManager.GetCurrentSave();
+        save.lieu = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
+        SaveGameManager.Save();*/
         //}
-        if(!linkedWith.transform.parent.parent.GetComponent<SceneInformations>().fixedCamera)
+
+
+
+
+
+        if (!linkedWith.transform.parent.parent.GetComponent<SceneInformations>().fixedCamera)
         {
             Camera.main.GetComponent<CameraFollow>().actualRoom = linkedWith.transform.parent.parent.gameObject;
             Camera.main.GetComponent<CameraFollow>().InitRoomLimit();
@@ -147,16 +157,20 @@ public class Shortcut : MonoBehaviour
 
     }
 
-    float YOffsetAdd()
+    void LinkedDestPos()
     {
-        if (player.transform.position.y>=0)
-        {
-            return -1;
-        }
-        else
-        {
-            return 1;
+                Vector3 spawnPoint = Vector3.zero;        
+        RaycastHit2D hit = default;
+        RaycastHit2D[] hits = Physics2D.RaycastAll(linkedWith.transform.position, Vector2.down, 10);
 
+        foreach (RaycastHit2D eachHit in hits)
+        {
+            Debug.Log(eachHit.collider.name);
+            if(eachHit.collider.gameObject.layer == 16)
+            {
+                hit = eachHit;
+                spawnPoint = new Vector3(hit.point.x, hit.point.y + 4, 0);
+            }
         }
     }
 }
