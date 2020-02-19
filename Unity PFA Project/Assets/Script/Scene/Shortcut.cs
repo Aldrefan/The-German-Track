@@ -110,7 +110,7 @@ public class Shortcut : MonoBehaviour
             Camera.main.GetComponent<CameraFollow>().InitRoomLimit();
             Camera.main.GetComponent<BoxCollider2D>().enabled = true;
             //Camera.main.transform.position = linkedWith.transform.parent.parent.gameObject.transform.position;
-            Camera.main.transform.position = new Vector3(linkedWith.transform.parent.parent.GetComponent<SceneInformations>().CameraSpot.position.x, player.transform.position.y + linkedWith.transform.parent.parent.GetComponent<SceneInformations>().YOffset*YOffsetAdd(), player.transform.position.z - linkedWith.transform.parent.parent.GetComponent<SceneInformations>().distanceBetweenPlayerAndCamera);
+            Camera.main.transform.position = new Vector3(linkedWith.transform.parent.parent.GetComponent<SceneInformations>().CameraSpot.position.x, player.transform.position.y + linkedWith.transform.parent.parent.GetComponent<SceneInformations>().YOffset, player.transform.position.z - linkedWith.transform.parent.parent.GetComponent<SceneInformations>().distanceBetweenPlayerAndCamera);
             Camera.main.GetComponent<CameraFollow>().YOffset = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().YOffset;
             Camera.main.GetComponent<CameraFollow>().barrier = "none";
             Camera.main.GetComponent<CameraFollow>().collision = false;

@@ -22,6 +22,10 @@ public class SceneInformations : MonoBehaviour
     void Awake()
     {
         
+        if (this.transform.Find("CameraSpot"))
+        {
+            CameraSpot = this.transform.Find("CameraSpot");
+        }
     }
 
     // Start is called before the first frame update
@@ -31,10 +35,6 @@ public class SceneInformations : MonoBehaviour
         directionalLight = GameObject.Find("Directional Light");
         //Camera.main.GetComponent<CameraFollow>().YOffset = YOffset;
         //player.GetComponent<MovementsPlayer>().canRun = canRun;
-        if (this.transform.Find("CameraSpot"))
-        {
-            CameraSpot = this.transform.Find("CameraSpot");
-        }
     }
 
     // Update is called once per frame
