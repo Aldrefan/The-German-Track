@@ -31838,7 +31838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59dda0572c4e9f34e919df6aa7330d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadAtStart: 0
+  loadAtStart: 1
 --- !u!1 &1046037994
 GameObject:
   m_ObjectHideFlags: 0
@@ -32009,7 +32009,7 @@ MonoBehaviour:
   nightLightValue: 1
   distanceBetweenPlayerAndCamera: 20
   fixedCamera: 0
-  CameraSpot: {fileID: 0}
+  CameraSpot: {fileID: 1666070365}
   canRun: 1
   YOffset: 5
   player: {fileID: 0}
@@ -48539,6 +48539,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 6252624642967059767, guid: e7c94aa2610c9844293398dde8a0fbf7,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252624642967059767, guid: e7c94aa2610c9844293398dde8a0fbf7,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252624642967059767, guid: e7c94aa2610c9844293398dde8a0fbf7,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6252624642967059764, guid: e7c94aa2610c9844293398dde8a0fbf7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -48599,21 +48614,6 @@ PrefabInstance:
       propertyPath: actualRoom
       value: 
       objectReference: {fileID: 667359987}
-    - target: {fileID: 6252624642967059767, guid: e7c94aa2610c9844293398dde8a0fbf7,
-        type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6252624642967059767, guid: e7c94aa2610c9844293398dde8a0fbf7,
-        type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6252624642967059767, guid: e7c94aa2610c9844293398dde8a0fbf7,
-        type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6252624642967059762, guid: e7c94aa2610c9844293398dde8a0fbf7,
         type: 3}
       propertyPath: boardCanvas
@@ -49259,7 +49259,7 @@ MonoBehaviour:
   nightLightValue: 0.25
   distanceBetweenPlayerAndCamera: 10
   fixedCamera: 0
-  CameraSpot: {fileID: 0}
+  CameraSpot: {fileID: 844931661}
   canRun: 1
   YOffset: 2.1
   player: {fileID: 0}
@@ -65390,7 +65390,7 @@ MonoBehaviour:
   nightLightValue: 0.9
   distanceBetweenPlayerAndCamera: 12
   fixedCamera: 0
-  CameraSpot: {fileID: 0}
+  CameraSpot: {fileID: 1721731099}
   canRun: 1
   YOffset: 3
   player: {fileID: 0}
