@@ -87,7 +87,7 @@ public class Shortcut : MonoBehaviour
 
 
         linkedWith.transform.parent.parent.gameObject.SetActive(true);
-        player.transform.position = linkedWith.transform.position;
+        player.transform.position = CalculateDestPos(linkedWith.transform);
         player.GetComponent<MovementsPlayer>().canRun = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().canRun;
 
         if (directionalLight.GetComponent<DayNightLight>().time == DayNightLight.timeEnum.Day)
@@ -155,6 +155,26 @@ public class Shortcut : MonoBehaviour
 
         return dist;
 
+    }
+
+    Vector3 CalculateDestPos(Transform finalDestTrans)
+    {
+        float YDistBtwDoorAndDoor = Vector3.Distance(finalDestTrans.position, new Vector3(finalDestTrans.position.x, this.transform.position.y, player.transform.position.z));
+
+
+        float distBtwDoorAndPl = default;
+        if (this.transform.position.y < finalDestTrans.position.y)
+        {
+            distBtwDoorAndPl = Vector3.Distance(finalDestTrans.position, new Vector3(finalDestTrans.position.x, player.transform.position.y + YDistBtwDoorAndDoor, player.transform.position.z));
+
+        }else
+        {
+            distBtwDoorAndPl = Vector3.Distance(finalDestTrans.position, new Vector3(finalDestTrans.position.x, player.transform.position.y - YDistBtwDoorAndDoor, player.transform.position.z));
+
+        }
+        Vector3 finalPos = new Vector3(finalDestTrans.position.x, finalDestTrans.position.y - distBtwDoorAndPl, finalDestTrans.position.z);
+
+        return finalPos;
     }
 
     void LinkedDestPos()
