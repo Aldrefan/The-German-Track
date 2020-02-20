@@ -49,6 +49,7 @@ public class Tooltip : MonoBehaviour
 
         //open this tooltip
         showTooltip();
+        this.transform.SetSiblingIndex(this.transform.parent.childCount - 1);
     }
 
 
