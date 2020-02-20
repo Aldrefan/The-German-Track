@@ -9609,6 +9609,7 @@ GameObject:
   - component: {fileID: 408455948}
   - component: {fileID: 408455949}
   - component: {fileID: 408455950}
+  - component: {fileID: 408455951}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -9681,6 +9682,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fed0247521709a441bdcfa0523401483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &408455951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408455945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c1d233a9d893404db974279a0fb39ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectNameHideFrom: PauseMenu
+  objectParentNameHideFrom: Necessary_Floating_Canvas
+  objectNameToHide: Canvas_DialogBoxTuto
 --- !u!1 &420666936
 GameObject:
   m_ObjectHideFlags: 0
@@ -57367,8 +57383,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795009224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 738.27997, y: -8.39, z: 0.78111935}
-  m_LocalScale: {x: 1, y: 6.4375, z: 1}
+  m_LocalPosition: {x: 738.66, y: -8.39, z: 0.78111935}
+  m_LocalScale: {x: 3, y: 6.4375, z: 1}
   m_Children:
   - {fileID: 627333192}
   m_Father: {fileID: 815454493}
@@ -68354,6 +68370,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4165409269409925061}
+    - target: {fileID: 1003461862182589122, guid: 2adb0caa31d59b841b9fc46dfe0513c4,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 741262399}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2adb0caa31d59b841b9fc46dfe0513c4, type: 3}
 --- !u!1 &2900302816269802139 stripped

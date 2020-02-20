@@ -222,25 +222,23 @@ public class RoomInformations : MonoBehaviour
 
     Vector3 CalculateDestPos(Transform finalDestTrans)
     {
-        float distBtwDoorAndPl = Vector3.Distance(finalDestTrans.position,new Vector3(finalDestTrans.position.x, player.transform.position.y, player.transform.position.z));
-        Vector3 finalPos = new Vector3(finalDestTrans.position.x, finalDestTrans.position.y - distBtwDoorAndPl, finalDestTrans.position.z);
+        float YDistBtwDoorAndDoor = Vector3.Distance(finalDestTrans.position, new Vector3(finalDestTrans.position.x, this.transform.position.y, player.transform.position.z));
 
-        RaycastHit2D hit = Physics2D.Raycast(finalDestTrans.position, Vector2.down);
-        if(hit.collider!=null)
+        float distBtwDoorAndPl = default;
+        if (this.transform.position.y < finalDestTrans.position.y)
         {
-            Debug.Log(hit.transform.position);
-            Debug.Log(hit.collider.name);
-
+            distBtwDoorAndPl = Vector3.Distance(finalDestTrans.position, new Vector3(finalDestTrans.position.x, player.transform.position.y + YDistBtwDoorAndDoor, player.transform.position.z));
 
         }
+        else
+        {
+            distBtwDoorAndPl = Vector3.Distance(finalDestTrans.position, new Vector3(finalDestTrans.position.x, player.transform.position.y - YDistBtwDoorAndDoor, player.transform.position.z));
 
-
-
+        }
+        Vector3 finalPos = new Vector3(finalDestTrans.position.x, finalDestTrans.position.y - distBtwDoorAndPl, finalDestTrans.position.z);
 
         return finalPos;
     }
-
-    
 
 }
 
