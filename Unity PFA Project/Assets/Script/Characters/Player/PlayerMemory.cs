@@ -10,10 +10,6 @@ public class PlayerMemory : MonoBehaviour
     //Transform carnet;
     public List<Vector3> stickersPositionBoard;
     public Transform boardCanvas;
-    public Vector2Int charactersRange;
-    public Vector2Int indicesRange;
-    public Vector2Int hypothesesRange;
-    public Vector2Int faitsRange;
     public GameObject newSticker;
     public Transform carnet;
     Vector2 offsets = new Vector2(5, 5);
@@ -63,7 +59,31 @@ public class PlayerMemory : MonoBehaviour
             for(int i = 0; i < stickerIndexCarnetList.Count; i++)
             {
                 int newStickerIndex = stickerIndexCarnetList[i];
-                if(newStickerIndex >= charactersRange.x && newStickerIndex <= charactersRange.y)
+                GameObject child = Instantiate(stickerTemplate, GameObject.FindObjectOfType<Ken_Canvas_Infos>().carnet.transform.GetChild(0));
+                child.GetComponent<Sticker_Display>().sticker = stickersScriptableList[newStickerIndex];
+                switch(stickersScriptableList[stickerIndexCarnetList[i]].type)
+                {
+                    case Sticker.Type.Profile:
+                    child.GetComponent<StickerManager>().OnCarnet();
+                    carnet.transform.GetChild(0).GetComponent<CarnetIndex>().CheckChildNumber(child);
+                    break;
+
+                    case Sticker.Type.Clue:
+                    child.GetComponent<StickerManager>().OnCarnet();
+                    carnet.transform.GetChild(1).GetComponent<CarnetIndex>().CheckChildNumber(child);
+                    break;
+
+                    case Sticker.Type.Fact:
+                    child.GetComponent<StickerManager>().OnCarnet();
+                    carnet.transform.GetChild(2).GetComponent<CarnetIndex>().CheckChildNumber(child);
+                    break;
+
+                    case Sticker.Type.Hypothesis:
+                    child.GetComponent<StickerManager>().OnCarnet();
+                    carnet.transform.GetChild(3).GetComponent<CarnetIndex>().CheckChildNumber(child);
+                    break;
+                }
+                /*if(newStickerIndex >= charactersRange.x && newStickerIndex <= charactersRange.y)
                 {
                     GameObject child = Instantiate(stickerTemplate, GameObject.FindObjectOfType<Ken_Canvas_Infos>().carnet.transform.GetChild(0));
                     child.GetComponent<Sticker_Display>().sticker = stickersScriptableList[newStickerIndex];
@@ -92,7 +112,7 @@ public class PlayerMemory : MonoBehaviour
                     child.GetComponent<Sticker_Display>().sticker = stickersScriptableList[newStickerIndex];
                     child.GetComponent<StickerManager>().OnCarnet();
                     carnet.transform.GetChild(3).GetComponent<CarnetIndex>().CheckChildNumber(child);
-                }
+                }*/
             }
             stickerIndexCarnetList.Clear();
         }

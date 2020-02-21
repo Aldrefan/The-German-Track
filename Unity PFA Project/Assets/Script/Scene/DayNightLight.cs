@@ -41,7 +41,7 @@ public class DayNightLight : MonoBehaviour
 
     public void NightTime()
     {
-        time = timeEnum.Day;
+        time = timeEnum.Night;
         for(int i = 0; i < backgroundsInAWindowNight.Count; i++)
         {
             backgroundsInAWindowNight[i].SetActive(true);

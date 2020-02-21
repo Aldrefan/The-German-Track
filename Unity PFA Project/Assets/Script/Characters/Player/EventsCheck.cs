@@ -71,13 +71,13 @@ public class EventsCheck : MonoBehaviour
             }
         }
         
-        /*if (col.name == "dialog_williamscott")
+        if (col.name == "dialog_williamscott")
         {
-            GetComponent<Interactions>().PNJContact = col.gameObject;
-            col.transform.GetChild(0).gameObject.SetActive(true);
-            GetComponent<Interactions>().StartDialog();
-            GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
-        }*/
+            if(GetComponent<Interactions>().PnjMet.Contains("dialog_williamscott"))
+            {
+                Destroy(col.gameObject);
+            }
+        }
 
         if(col.name == "Fauteuil")
         {

@@ -222,8 +222,21 @@ public class RoomInformations : MonoBehaviour
 
     Vector3 CalculateDestPos(Transform finalDestTrans)
     {
-        float distBtwDoorAndPl = Vector3.Distance(finalDestTrans.position,new Vector3(finalDestTrans.position.x, player.transform.position.y, player.transform.position.z));
+        float YDistBtwDoorAndDoor = Vector3.Distance(finalDestTrans.position, new Vector3(finalDestTrans.position.x, this.transform.position.y, player.transform.position.z));
+
+        float distBtwDoorAndPl = default;
+        if (this.transform.position.y < finalDestTrans.position.y)
+        {
+            distBtwDoorAndPl = Vector3.Distance(finalDestTrans.position, new Vector3(finalDestTrans.position.x, player.transform.position.y + YDistBtwDoorAndDoor, player.transform.position.z));
+
+        }
+        else
+        {
+            distBtwDoorAndPl = Vector3.Distance(finalDestTrans.position, new Vector3(finalDestTrans.position.x, player.transform.position.y - YDistBtwDoorAndDoor, player.transform.position.z));
+
+        }
         Vector3 finalPos = new Vector3(finalDestTrans.position.x, finalDestTrans.position.y - distBtwDoorAndPl, finalDestTrans.position.z);
+
         return finalPos;
     }
 

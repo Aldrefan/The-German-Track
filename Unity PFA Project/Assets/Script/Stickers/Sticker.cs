@@ -11,4 +11,7 @@ public class Sticker : ScriptableObject
     public Sprite stickerBackground;
     public Vector2 backgoundSize;
     public string tooltipText;
+    [SerializeField]
+    public enum Type{Profile, Fact, Clue, Hypothesis}
+    public Type type;
 }

@@ -85,7 +85,17 @@ public class Menu : MonoBehaviour
         ReturnMenu();
 
         //settings initialisation
-        saver.GetComponent<SaveFile>().LoadSettings();
+        if (GameObject.FindObjectOfType<SaveFile>())
+        {
+            saver = GameObject.FindObjectOfType<SaveFile>().gameObject;
+            saver.GetComponent<SaveFile>().LoadSettings();
+        }
+
+        //set language Manager
+        if (GameObject.FindObjectOfType<LanguageManager>())
+        {
+            languageManager = GameObject.FindObjectOfType<LanguageManager>().gameObject;
+        }
 
 
         //resolution dropdown
@@ -274,6 +284,7 @@ public class Menu : MonoBehaviour
         {
             GameSaveSystem.gameToLoad = false;
         }
+
         SceneManager.LoadScene(1);
     }
 

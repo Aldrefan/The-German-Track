@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1841514868}
   - component: {fileID: 1841514870}
   - component: {fileID: 1841514869}
+  - component: {fileID: 7225323795560789643}
   m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
@@ -4698,6 +4699,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &7225323795560789643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841514867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ead17f4305f10e44a82939064f0646a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Board: {fileID: 0}
 --- !u!1 &1955605217293017405
 GameObject:
   m_ObjectHideFlags: 0
@@ -4872,6 +4886,7 @@ MonoBehaviour:
   run_speed: 10
   sprint: 0
   canRun: 0
+  canMove: 0
 --- !u!114 &1955605217293017397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4889,10 +4904,6 @@ MonoBehaviour:
   allStickers: 
   stickersPositionBoard: []
   boardCanvas: {fileID: 0}
-  charactersRange: {x: 1, y: 9}
-  indicesRange: {x: 10, y: 16}
-  hypothesesRange: {x: 17, y: 41}
-  faitsRange: {x: 42, y: 52}
   newSticker: {fileID: 0}
   carnet: {fileID: 0}
   stickerTemplate: {fileID: 3810293468784593066, guid: 1d6483f74250d2243be102a9cc38e29a,
