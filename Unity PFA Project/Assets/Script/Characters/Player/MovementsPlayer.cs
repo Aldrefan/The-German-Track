@@ -12,6 +12,7 @@ public class MovementsPlayer : MonoBehaviour {
     public bool canRun;
     Rigidbody2D rb2d;
     Animator animator;
+    [SerializeField]
     bool canMove = false;
     
     // Start is called before the first frame update

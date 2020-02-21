@@ -6,18 +6,36 @@ public class Tooltip : MonoBehaviour
 {
     public GameObject tooltip;
     bool onDrag = false;
-    
+
+    GameObject tutoObject;
+    GameObject characKenneth;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        tutoObject = GameObject.Find("Tutorial");
+        characKenneth = GameObject.Find("Kenneth");
     }
 
     // Update is called once per frame
     void Update()
     {
+        CheckValue();
+    }
 
+    void CheckValue()
+    {
+        if(tutoObject == null)
+        {
+            tutoObject = GameObject.Find("Tutorial");
+        }
+        if (characKenneth == null)
+        {
+            characKenneth = GameObject.Find("Kenneth");
+
+        }
     }
 
     void OnMouseEnter()
@@ -31,10 +49,13 @@ public class Tooltip : MonoBehaviour
 
         //open this tooltip
         showTooltip();
+        this.transform.SetSiblingIndex(this.transform.parent.childCount - 1);
     }
+
 
     void OnMouseDrag()
     {
+
         showTooltip();
         onDrag = true;
     }
@@ -61,10 +82,10 @@ public class Tooltip : MonoBehaviour
 
     void showTooltip()
     {
-        if (!GameObject.Find("Tutorial").GetComponent<TutoKenneth>().isInHelp && !GameObject.Find("Kenneth").GetComponent<Interactions>().isOnTooltip)
+        if (!tutoObject.GetComponent<TutoKenneth>().isInHelp && !characKenneth.GetComponent<Interactions>().isOnTooltip)
         {
             tooltip.SetActive(true);
-            GameObject.Find("Kenneth").GetComponent<Interactions>().isOnTooltip = true;
+            characKenneth.GetComponent<Interactions>().isOnTooltip = true;
         }
         //else do nothing
     }
@@ -72,7 +93,13 @@ public class Tooltip : MonoBehaviour
     void hideTooltip()
     {
         tooltip.SetActive(false);
-        GameObject.Find("Kenneth").GetComponent<Interactions>().isOnTooltip = false;
+        if (characKenneth != null)
+        {
+            characKenneth.GetComponent<Interactions>().isOnTooltip = false;
+
+        }
     }
+
+
 
 }

@@ -61,7 +61,7 @@ public class SaveFile : MonoBehaviour
         LoadSettings();
         if (SceneManager.GetActiveScene().name != "MainMenu" && (GameSaveSystem.gameToLoad || loadAtStart))
         {
-            Debug.Log("1");
+
             LoadGame();
         }
 
@@ -165,14 +165,17 @@ public class SaveFile : MonoBehaviour
         CarnetGoal gameGoals = GameObject.FindObjectOfType<Ken_Canvas_Infos>().transform.Find("Panel").Find("Carnet").Find("Goal").Find("GoalFrame").GetComponent<CarnetGoal>();
         if (gameGoals != null)
         {
-            foreach(GoalKeys goal in gameSave.goalsInProgress)
-            {
-                gameGoals.NewGoal(goal);
-            }
-            foreach (GoalKeys goal in gameSave.goalsComplete)
-            {
-                gameGoals.RemoveGoal(goal);
-            }
+            gameGoals.goalList = gameSave.goalsInProgress;
+            gameGoals.removeGoalList = gameSave.goalsComplete;
+
+            //foreach (GoalKeys goal in gameSave.goalsInProgress)
+            //{
+            //    gameGoals.NewGoal(goal);
+            //}
+            //foreach (GoalKeys goal in gameSave.goalsComplete)
+            //{
+            //    gameGoals.RemoveGoal(goal);
+            //}
         }
 
         StickersGivenToPNJ actualStickersManager = GameObject.FindObjectOfType<StickersGivenToPNJ>();
