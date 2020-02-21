@@ -42,14 +42,18 @@ public class Tooltip : MonoBehaviour
     {
         //check if another tooltip is open
         Tooltip[] tooltips = GameObject.FindObjectsOfType<Tooltip>();
-        foreach(Tooltip objet in tooltips)
+        foreach (Tooltip objet in tooltips)
         {
             objet.GetComponent<Tooltip>().hideTooltip();
         }
 
         //open this tooltip
         showTooltip();
-        this.transform.SetSiblingIndex(this.transform.parent.childCount - 1);
+
+        if (this.transform.parent.name == "BoardCanvas")
+        {
+            this.transform.SetSiblingIndex(this.transform.parent.childCount - 1);
+        }
     }
 
 

@@ -25,8 +25,8 @@ public class Sticker_Display : MonoBehaviour
         backgroundSticker.sprite = sticker.stickerBackground;
         backgroundColor = sticker.color;
 
-        if(sticker.type == Sticker.Type.Profile)
-        text.gameObject.SetActive(false);
+        if (sticker.type == Sticker.Type.Profile)
+            text.transform.localPosition = new Vector2(0, -32);
 
 
         if(GameObject.Find("Kenneth").GetComponent<Interactions>().state == Interactions.State.OnCarnet)
