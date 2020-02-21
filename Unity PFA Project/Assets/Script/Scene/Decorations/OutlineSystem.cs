@@ -39,11 +39,17 @@ public class OutlineSystem : MonoBehaviour
     {
         if(player.GetComponent<Interactions>().PNJContact != null)
         {
-            transform.GetChild(0).gameObject.SetActive(false);
+            if(transform.childCount > 0)
+            {
+                transform.GetChild(0).gameObject.SetActive(false);
+            }
             if(player.GetComponent<Interactions>().PNJContact.GetComponent<OutlineSystem>())
             {player.GetComponent<Interactions>().PNJContact.GetComponent<OutlineSystem>().HideOutline();}
         }
-        transform.GetChild(0).gameObject.SetActive(true);
+        if(transform.childCount > 0)
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
         for(int i = 0; i < 4; i++)
         {
             GameObject sprite = new GameObject("OutlineComponent");
@@ -74,7 +80,10 @@ public class OutlineSystem : MonoBehaviour
 
     public void HideOutline()
     {
-        transform.GetChild(0).gameObject.SetActive(false);
+        if(transform.childCount > 0)
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
         foreach(Transform child in transform)
         {
             if(child.name == "OutlineComponent")

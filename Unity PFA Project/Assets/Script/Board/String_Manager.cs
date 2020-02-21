@@ -124,34 +124,39 @@ public GameObject stickerTemplate;
             {
                 if(notValidateStickersList.Count == 0)
                 {
-                    player.GetComponent<PlayerMemory>().stickerIndexCarnetList.Add(hypotheseresponses[i]);
-                    player.GetComponent<PlayerMemory>().allStickers.Add(hypotheseresponses[i]);
-                    Transform boardCanvas = GameObject.Find("BoardCanvas").transform;
-                    Camera camera = Camera.main;
-                    GameObject newSticker = Instantiate(stickerTemplate, new Vector3(camera.transform.position.x, camera.transform.position.y, boardCanvas.position.z), boardCanvas.rotation, boardCanvas);
-                    //hypotheseresponses[i], new Vector3(camera.transform.position.x, camera.transform.position.y, boardCanvas.position.z), boardCanvas.rotation, boardCanvas); // Fait apparaitre l'hypothèse crée
-                    newSticker.GetComponent<Sticker_Display>().sticker = player.GetComponent<PlayerMemory>().stickersScriptableList[hypotheseresponses[i]];
-                    newSticker.GetComponent<ParticleSystem>().Play();
-                    newSticker.GetComponent<AudioSource>().Play();
-                    newSticker.GetComponent<StickerManager>().OnBoard();
-                    if(newSticker.GetComponent<Sticker_Display>().sticker.index == finalDemoHypothese)
+                    if(!player.GetComponent<PlayerMemory>().allStickers.Contains(hypotheseresponses[i]))
                     {
-                        if(GameObject.Find("EndDialog"))
+                        player.GetComponent<PlayerMemory>().stickerIndexCarnetList.Add(hypotheseresponses[i]);
+                        player.GetComponent<PlayerMemory>().allStickers.Add(hypotheseresponses[i]);
+                        Transform boardCanvas = GameObject.Find("BoardCanvas").transform;
+                        Camera camera = Camera.main;
+                        GameObject newSticker = Instantiate(stickerTemplate, new Vector3(camera.transform.position.x, camera.transform.position.y, boardCanvas.position.z), boardCanvas.rotation, boardCanvas);
+                        //hypotheseresponses[i], new Vector3(camera.transform.position.x, camera.transform.position.y, boardCanvas.position.z), boardCanvas.rotation, boardCanvas); // Fait apparaitre l'hypothèse crée
+                        newSticker.GetComponent<Sticker_Display>().sticker = player.GetComponent<PlayerMemory>().stickersScriptableList[hypotheseresponses[i]];
+                        
+                            
+                        newSticker.GetComponent<ParticleSystem>().Play();
+                        newSticker.GetComponent<AudioSource>().Play();
+                        newSticker.GetComponent<StickerManager>().OnBoard();
+                        if(newSticker.GetComponent<Sticker_Display>().sticker.index == finalDemoHypothese)
                         {
-                            //player.GetComponent<Interactions>().dialAndBookCanvas.SetActive(true);
-                            //player.GetComponent<Interactions>().boardCanvas.SetActive(false);
-                            //Debug.Log(player.name);
-                            player.SetActive(true);
-                            player.GetComponent<Interactions>().CloseBoard();
-                            Camera.main.GetComponent<Camera_Manager>().NotOnBoard();
-                            //player.GetComponent<Interactions>().state = Interactions.State.Pause;
-                            GameObject.Find("EndDialog").GetComponent<Clara_Cinematic>().ExecuteCommand();
+                            if(GameObject.Find("EndDialog"))
+                            {
+                                //player.GetComponent<Interactions>().dialAndBookCanvas.SetActive(true);
+                                //player.GetComponent<Interactions>().boardCanvas.SetActive(false);
+                                //Debug.Log(player.name);
+                                player.SetActive(true);
+                                player.GetComponent<Interactions>().CloseBoard();
+                                Camera.main.GetComponent<Camera_Manager>().NotOnBoard();
+                                //player.GetComponent<Interactions>().state = Interactions.State.Pause;
+                                GameObject.Find("EndDialog").GetComponent<Clara_Cinematic>().ExecuteCommand();
+                            }
                         }
                     }
+                    createASticker = true;
                     ListOfHypLists.list.RemoveAt(i);   
                     hypotheseresponses.RemoveAt(i);
                     quoteList.Clear();
-                    createASticker = true;
                 }
                 else if(notValidateStickersList.Count > 0)
                 {
@@ -193,12 +198,12 @@ public GameObject stickerTemplate;
     {
         GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).gameObject.SetActive(true);
         GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).GetChild(0).GetComponent<Text>().text = quoteList[quoteList.Count - 1];
+        quoteList.Clear();
         yield return new WaitForSeconds(1);
         for(int i = 0; i > 0; i--)
         {
             GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).GetComponent<Image>().color = new Vector4(0, 0, 0, i);
         }
         GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).gameObject.SetActive(false);
-        quoteList.Clear();
     }
 }

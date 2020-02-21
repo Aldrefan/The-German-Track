@@ -163,7 +163,7 @@ public class Pin_System : MonoBehaviour
 
     public void OnMouseUp()
     {
-        if(Time.realtimeSinceStartup - time < 0.2)
+        if(Time.realtimeSinceStartup - time < 0.1)
         {
             GameObject newPin = Instantiate(pin, transform);
             newPin.transform.localPosition = new Vector3(0, 25, 0);

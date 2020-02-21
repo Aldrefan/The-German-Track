@@ -25,7 +25,7 @@ public class Sticker_Display : MonoBehaviour
         backgroundSticker.sprite = sticker.stickerBackground;
         backgroundColor = sticker.color;
 
-        if(sticker.index >= GameObject.Find("Kenneth").GetComponent<PlayerMemory>().charactersRange.x && sticker.index <= GameObject.Find("Kenneth").GetComponent<PlayerMemory>().charactersRange.y)
+        if(sticker.type == Sticker.Type.Profile)
         text.gameObject.SetActive(false);
 
 

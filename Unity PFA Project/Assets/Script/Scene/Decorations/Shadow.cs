@@ -45,6 +45,14 @@ public class Shadow : MonoBehaviour
         GetComponent<Animator>().SetBool("Walk", owner.GetComponent<Animator>().GetBool("Walk"));
         GetComponent<Animator>().SetBool("Run", owner.GetComponent<Animator>().GetBool("Run"));
         GetComponent<Animator>().SetFloat("actualSpeed", owner.GetComponent<Animator>().GetFloat("actualSpeed"));
+        if(owner.tag != "Player")
+        {
+            if(owner.transform.localScale.x < 0)
+            {
+                transform.localScale = new Vector2(-size.x, size.y);
+            }
+            else transform.localScale = new Vector2(size.x, size.y);
+        }
         transform.localScale = new Vector3(size.x * (owner.transform.localScale.x / 8), size.y, 1);
         GetComponent<SpriteRenderer>().flipX = owner.GetComponent<SpriteRenderer>().flipX;
     }

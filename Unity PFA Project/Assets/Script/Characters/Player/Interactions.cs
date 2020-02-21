@@ -238,7 +238,6 @@ public class Interactions : MonoBehaviour
             if (PNJContact.GetComponent<Shortcut>() != null)
             {
                 PNJContact.GetComponent<Shortcut>().Teleport();
-
             }
             else if(PNJContact.transform.parent.parent.GetComponent<RoomInformations>()!=null)
             {
@@ -250,14 +249,10 @@ public class Interactions : MonoBehaviour
     {
         if (dialAndBookCanvas != null)
         {
-
             if (Input.GetButtonDown("Interaction") && PNJContact != null && !dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.activeInHierarchy)
             {
                 if (PNJContact.tag == "PNJinteractable" || PNJContact.tag == "Item" || PNJContact.tag == "Interaction")
                 {
-                    //GetComponent<Animator>().SetBool("Walk", false);
-                    //dialAndBookCanvas.transform.GetChild(2).GetComponent<Animator>().SetBool("InDialog", true);
-                    //animator.SetBool("Talk", true);
                     ChangeState(State.InDialog);
                     if (PNJContact.GetComponent<OutlineSystem>())
                     { PNJContact.GetComponent<OutlineSystem>().HideOutline(); }
@@ -266,19 +261,38 @@ public class Interactions : MonoBehaviour
             }
         }
     }
+
+    public void CheckOpenDialog()
+    {
+        if(state == State.Normal)
+        {
+            if (PNJContact.tag == "PNJinteractable" || PNJContact.tag == "Item" || PNJContact.tag == "Interaction")
+                {
+                    ChangeState(State.InDialog);
+                    if (PNJContact.GetComponent<OutlineSystem>())
+                    { PNJContact.GetComponent<OutlineSystem>().HideOutline(); }
+                    StartDialog();
+                }
+        }
+    }
+
     void OpenBoard()
     {
         if(Input.GetButtonDown("Interaction") && PNJContact != null && PNJContact.tag == "Board")
         {
-            dialAndBookCanvas.SetActive(false);
-            boardCanvas.SetActive(true);
-            Camera.main.GetComponent<Camera_Manager>().OnBoard();
-            GetComponent<PlayerMemory>().CheckStickersBoard();
-            ChangeState(State.OnBoard);
-            Camera.main.GetComponent<CameraFollow>().actualRoom.SetActive(false);
-            gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
-            //gameObject.SetActive(false);
+            OpenBoardExe();
         }
+    }
+
+    public void OpenBoardExe()
+    {
+        dialAndBookCanvas.SetActive(false);
+        boardCanvas.SetActive(true);
+        Camera.main.GetComponent<Camera_Manager>().OnBoard();
+        GetComponent<PlayerMemory>().CheckStickersBoard();
+        ChangeState(State.OnBoard);
+        Camera.main.GetComponent<CameraFollow>().actualRoom.SetActive(false);
+        gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
     }
 
     void CloseBook()
