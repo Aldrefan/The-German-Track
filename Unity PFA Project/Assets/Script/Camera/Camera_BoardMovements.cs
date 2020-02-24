@@ -57,6 +57,9 @@ public class Camera_BoardMovements : MonoBehaviour
 
     void HandleZoomPossibility()
     {
+        axisX = 0;
+        axisY = 0;
+        rb2d.velocity = new Vector3(0, 0, 0);
         if(Input.GetButtonDown("Interaction"))
         {
             ZoomExe();
