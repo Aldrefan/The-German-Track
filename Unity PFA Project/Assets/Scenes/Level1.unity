@@ -3792,6 +3792,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: doorKurt
       objectReference: {fileID: 0}
+    - target: {fileID: 8501330485250003442, guid: 2d3912855de43b847a53a95028f41e11,
+        type: 3}
+      propertyPath: m_TagString
+      value: PNJinteractable
+      objectReference: {fileID: 0}
     - target: {fileID: 8501330485250003443, guid: 2d3912855de43b847a53a95028f41e11,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4189,6 +4194,7 @@ GameObject:
   - component: {fileID: 160053637}
   - component: {fileID: 160053640}
   - component: {fileID: 160053639}
+  - component: {fileID: 160053641}
   m_Layer: 0
   m_Name: Commode
   m_TagString: Item
@@ -4339,6 +4345,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &160053641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160053635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bdb861ce5f2bfd448cf329020ecdfdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIndex: 14
 --- !u!1 &163848669
 GameObject:
   m_ObjectHideFlags: 0
@@ -5989,6 +6008,7 @@ GameObject:
   - component: {fileID: 213494871}
   - component: {fileID: 213494873}
   - component: {fileID: 213494874}
+  - component: {fileID: 213494875}
   m_Layer: 0
   m_Name: "Lettre Cod\xE9e"
   m_TagString: Item
@@ -6139,6 +6159,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd484f8f0d7255489c5d23a7103bad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &213494875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213494869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bdb861ce5f2bfd448cf329020ecdfdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIndex: 15
 --- !u!1 &214086524
 GameObject:
   m_ObjectHideFlags: 0
@@ -32741,6 +32774,7 @@ GameObject:
   - component: {fileID: 963866314}
   - component: {fileID: 963866317}
   - component: {fileID: 963866316}
+  - component: {fileID: 963866318}
   m_Layer: 0
   m_Name: Drogue
   m_TagString: Item
@@ -32891,6 +32925,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &963866318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963866312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bdb861ce5f2bfd448cf329020ecdfdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIndex: 13
 --- !u!1 &965906864
 GameObject:
   m_ObjectHideFlags: 0
@@ -34523,7 +34570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59dda0572c4e9f34e919df6aa7330d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadAtStart: 0
+  loadAtStart: 1
 --- !u!1 &1046037994
 GameObject:
   m_ObjectHideFlags: 0
@@ -55672,7 +55719,7 @@ PrefabInstance:
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexCarnetList.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
@@ -55682,7 +55729,7 @@ PrefabInstance:
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
@@ -55702,22 +55749,22 @@ PrefabInstance:
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexCarnetList.Array.data[0]
-      value: 44
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexCarnetList.Array.data[1]
-      value: 9
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.data[0]
-      value: 44
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.data[1]
-      value: 9
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
@@ -55742,7 +55789,7 @@ PrefabInstance:
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexCarnetList.Array.data[2]
-      value: 50
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
@@ -55752,7 +55799,7 @@ PrefabInstance:
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.data[2]
-      value: 44
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
@@ -55762,47 +55809,47 @@ PrefabInstance:
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.data[3]
-      value: 44
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexCarnetList.Array.data[3]
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.data[4]
-      value: 44
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.data[5]
-      value: 44
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.data[6]
-      value: 44
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.data[7]
-      value: 44
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.data[8]
-      value: 44
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.data[9]
-      value: 44
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.data[10]
-      value: 44
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
@@ -55858,6 +55905,11 @@ PrefabInstance:
         type: 3}
       propertyPath: stickerIndexBoardList.Array.data[21]
       value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
+        type: 3}
+      propertyPath: stickerIndexCarnetList.Array.data[4]
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1955605217293017400, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
@@ -62182,6 +62234,7 @@ GameObject:
   - component: {fileID: 1798857007}
   - component: {fileID: 1798857010}
   - component: {fileID: 1798857009}
+  - component: {fileID: 1798857011}
   m_Layer: 0
   m_Name: "Chemin\xE9e"
   m_TagString: Item
@@ -62332,6 +62385,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1798857011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798857005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bdb861ce5f2bfd448cf329020ecdfdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIndex: 12
 --- !u!1 &1800950291
 GameObject:
   m_ObjectHideFlags: 0
@@ -68975,6 +69041,7 @@ GameObject:
   - component: {fileID: 1995059587}
   - component: {fileID: 1995059590}
   - component: {fileID: 1995059589}
+  - component: {fileID: 1995059591}
   m_Layer: 0
   m_Name: Valise
   m_TagString: Item
@@ -69125,6 +69192,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd484f8f0d7255489c5d23a7103bad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1995059591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995059585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bdb861ce5f2bfd448cf329020ecdfdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIndex: 11
 --- !u!1 &1995698767 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4163619211731328920, guid: 3651f4048b841834d9bbf51734ba01ae,
