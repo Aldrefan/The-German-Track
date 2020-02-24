@@ -147,9 +147,22 @@ public class SaveFile : MonoBehaviour
         }
         if (player != null)
         {
-            player.GetComponent<PlayerMemory>().stickerIndexBoardList = gameSave.allStickers;
-            player.GetComponent<PlayerMemory>().stickerIndexCarnetList = gameSave.allStickers;
-            player.GetComponent<PlayerMemory>().allStickers = gameSave.allStickers;
+            foreach (int index in gameSave.allStickers)
+            {
+                if (!player.GetComponent<PlayerMemory>().stickerIndexBoardList.Contains(index))
+                {
+                    player.GetComponent<PlayerMemory>().stickerIndexBoardList.Add(index);
+                }
+                if (!player.GetComponent<PlayerMemory>().stickerIndexCarnetList.Contains(index))
+                {
+                    player.GetComponent<PlayerMemory>().stickerIndexCarnetList.Add(index);
+                }
+                if (!player.GetComponent<PlayerMemory>().allStickers.Contains(index))
+                {
+                    player.GetComponent<PlayerMemory>().allStickers.Add(index);
+                }
+            }
+
             player.GetComponent<PlayerMemory>().stickersPositionBoard = gameSave.stickersPositionOnBoard;
             player.GetComponent<Interactions>().PnjMet = gameSave.NPCmet;
             player.GetComponent<EventsCheck>().eventsList = gameSave.eventList;
@@ -186,6 +199,8 @@ public class SaveFile : MonoBehaviour
 
 
     }
+
+
 
     public void ReturnSettingsData(SettingsData settingsSave)
     {

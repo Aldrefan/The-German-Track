@@ -13,8 +13,8 @@ public class Menu : MonoBehaviour
     public GameObject saver;
     public GameObject languageManager;
     public bool changeOptions;
-    float musicValue;
-    float fxValue;
+    float musicValue = -20;
+    float fxValue = -20;
     bool returnTitle;
     bool isFullscreen;
     int resolutionIndex;
@@ -175,8 +175,8 @@ public class Menu : MonoBehaviour
 
 
         //music initialisation
-        musicMixer.GetFloat("musicVolume", out musicValue);
-        fxMixer.GetFloat("fxVolume", out fxValue);
+        //musicMixer.GetFloat("musicVolume", out musicValue);
+        //fxMixer.GetFloat("fxVolume", out fxValue);
 
         musicSlider.value = musicValue;
         fxSlider.value = fxValue;
