@@ -13,6 +13,8 @@ public class Camera_BoardMovements : MonoBehaviour
     public Transform boardCanvas;
     GameObject player;
     GameObject saver;
+    float axisY;
+    float axisX;
 
     enum State {Zoom, NotZoom}
     [SerializeField]
@@ -99,6 +101,25 @@ public class Camera_BoardMovements : MonoBehaviour
         GetComponent<Camera_Manager>().NotOnBoard();
     }
 
+    public void CheckZoom()
+    {
+        if(state == State.Zoom)
+        {
+            animator.SetTrigger("UnZoom");
+            //zoom = false;
+            axisX = 0;
+            axisY = 0;
+            rb2d.velocity = new Vector3(0, 0, 0);
+            transform.position = new Vector3(startPosition.x, startPosition.y, startPosition.z);
+            state = State.NotZoom;
+            QuitBoardExe();
+        }
+        else
+        {
+            QuitBoardExe();
+        }
+    }
+
     void ZoomExe()
     {
         animator.SetTrigger("Zoom");
@@ -110,7 +131,6 @@ public class Camera_BoardMovements : MonoBehaviour
         if(Input.GetButtonDown("Cancel") || Input.GetButtonDown("Interaction"))
         {
             UnzoomExe();
-            state = State.NotZoom;
         }
     }
 
@@ -118,14 +138,18 @@ public class Camera_BoardMovements : MonoBehaviour
     {
         animator.SetTrigger("UnZoom");
         //zoom = false;
+        axisX = 0;
+        axisY = 0;
         rb2d.velocity = new Vector3(0, 0, 0);
         transform.position = new Vector3(startPosition.x, startPosition.y, startPosition.z);
+        state = State.NotZoom;
     }
 
     void Movements()
     {
-        float axisY = Input.GetAxis("Vertical");
-        float axisX = Input.GetAxis("Horizontal");
+        Debug.Log("Movements Enabled");
+        axisY = Input.GetAxis("Vertical");
+        axisX = Input.GetAxis("Horizontal");
         rb2d.velocity = new Vector2(axisX * speed, axisY * speed);
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, startPosition.x - Limits.x, startPosition.x + Limits.x), Mathf.Clamp(transform.position.y, startPosition.y - Limits.y, startPosition.y + Limits.y), startPosition.z);
     }

@@ -118,8 +118,15 @@ public class EventsCheck : MonoBehaviour
 
         if(col.name == "doorHopital")
         {
-            GetComponent<Interactions>().PNJContact = GameObject.Find("hospital_receptionist");
-            GetComponent<Interactions>().StartDialog();
+            if(eventsList.Contains("hopitalOpen"))
+            {
+                CheckEvents("doorHopital");
+            }
+            else
+            {
+                GetComponent<Interactions>().PNJContact = GameObject.Find("hospital_receptionist");
+                GetComponent<Interactions>().StartDialog();
+            }
         }
 
         /*if(col.name == "Lamp")

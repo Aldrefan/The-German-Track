@@ -11,7 +11,6 @@ public class PNJ : MonoBehaviour
     public Sprite kennethSprite;
     GameObject DialogCanvas;
     public int dialogLine = 0;
-    GameObject player;
     GameObject leftPanel;
     GameObject rightPanel;
     GameObject questionPanel;
@@ -78,16 +77,12 @@ public class PNJ : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        if (GameObject.Find("CarnetUI"))
-        {
-            carnet = GameObject.Find("CarnetUI").transform;
-        }
+        carnet = ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(2);
+        DialogCanvas = ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<Interactions>().dialAndBookCanvas;
+        leftPanel = ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(4).gameObject;
+        rightPanel = ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).gameObject;
         if (GameObject.Find("Ken_Dial_Book_FlCanvas") != null)
         {
-            DialogCanvas = GameObject.Find("Ken_Dial_Book_FlCanvas");
-            leftPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().leftPanel;
-            rightPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().rightPanel;
             questionPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().questionPanel;
         }
 
@@ -107,10 +102,10 @@ public class PNJ : MonoBehaviour
 
     public void ChangeDialog(int newDialog)
     {
-        player.GetComponent<Interactions>().isInDialog = true;
+        ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<Interactions>().isInDialog = true;
         if(newDialog == transitionQuote)
         {
-            player.GetComponent<Interactions>().QuitCinematicMode();
+            ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<Interactions>().QuitCinematicMode();
         }
 
         if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.name == "Kenneth")
@@ -140,7 +135,7 @@ public class PNJ : MonoBehaviour
         haveEvent = false;
         for(int i = eventRedirection.eventGivenList.Count - 1; i >= 0; i--)
         {
-            if(player.GetComponent<EventsCheck>().eventsList.Contains(eventRedirection.eventGivenList[i].ToString()))
+            if(ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<EventsCheck>().eventsList.Contains(eventRedirection.eventGivenList[i].ToString()))
             {
                 ChangeDialog(eventRedirection.redirectionEventList[i]);
                 haveEvent = true;
@@ -247,6 +242,7 @@ public class PNJ : MonoBehaviour
 
     public void EndDialog()
     {
+        Debug.Log("End Dialog with " + PNJName);
         if(GetComponent<Animator>())
         {
             GetComponent<Animator>().SetBool("Talk", false); // Temporaire (A changer le plus vite possible)
@@ -259,7 +255,7 @@ public class PNJ : MonoBehaviour
         {
             transform.parent.GetComponent<BoxCollider2D>().enabled = true;
         }
-        player.GetComponent<Interactions>().EndDialog();
+        ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<Interactions>().EndDialog();
         rightPanel.SetActive(false);
         leftPanel.SetActive(false);
         dialogLine = 0;
@@ -356,16 +352,16 @@ public class PNJ : MonoBehaviour
         {
             for(int i = 0; i < allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList.Count; i++)
             {
-                if(player.GetComponent<PlayerMemory>().allStickers.Contains(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList[i]))
+                if(!ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<PlayerMemory>().allStickers.Contains(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList[i]))
                 {
+                    ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<PlayerMemory>().AddToMemory(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList[i]);
+                    //player.GetComponent<PlayerMemory>().KeepInMemory(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList[i]);
+                    //player.GetComponent<PlayerMemory>().allStickers.Add(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList[i]);
+                    //player.GetComponent<PlayerMemory>().stickerIndexCarnetList.Add(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList[i]);
+                    //player.GetComponent<PlayerMemory>().stickerIndexBoardList.Add(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList[i]);
                 }
-                else 
-                {
-                    player.GetComponent<PlayerMemory>().KeepInMemory(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList[i]);
-                    player.GetComponent<PlayerMemory>().allStickers.Add(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList[i]);
-                }
+                allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList.RemoveRange(0, allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList.Count);
             }
-            allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList.RemoveRange(0, allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList.Count);
         }
 
         //add or not event
@@ -374,12 +370,10 @@ public class PNJ : MonoBehaviour
             //JsonSave save = SaveGameManager.GetCurrentSave();
             for(int i = 0; i < allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].eventTrigger.Count; i++)
             {
-                if(player.GetComponent<EventsCheck>().eventsList.Contains(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].eventTrigger[i]))
-                {}
-                else 
+                if(!ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<EventsCheck>().eventsList.Contains(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].eventTrigger[i]))
                 {
-                    player.GetComponent<EventsCheck>().eventsList.Add(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].eventTrigger[i]);
-                    player.GetComponent<EventsCheck>().CheckEvents(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].eventTrigger[i]);
+                    ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<EventsCheck>().eventsList.Add(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].eventTrigger[i]);
+                    ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<EventsCheck>().CheckEvents(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].eventTrigger[i]);
                 }
             }
             //allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].eventTrigger.RemoveRange(0, allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].eventTrigger.Count);

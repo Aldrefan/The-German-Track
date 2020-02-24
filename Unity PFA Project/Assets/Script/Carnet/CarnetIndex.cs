@@ -16,7 +16,7 @@ public class CarnetIndex : MonoBehaviour
     public Vector3 newPagePosition;
     public GameObject newFeedback;
     public Vector3 newFeedbackSize;
-    // Start is called before the first frame update
+    List<int> stickersContained;
 
     void Awake()
     {
@@ -25,16 +25,6 @@ public class CarnetIndex : MonoBehaviour
         transform.GetComponentInChildren<GridLayoutGroup>().constraintCount = columnsCount; */
         /*pageArchetype = transform.GetChild(0);*/
         //pageList.Add(pageArchetype.gameObject);
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void CheckChildNumber(GameObject newChild)

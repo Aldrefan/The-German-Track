@@ -48,7 +48,6 @@ public class FigurantSpawner : MonoBehaviour
             spawnedShadow.GetComponent<Shadow>().owner = spawnedFigurant;
             spawnedShadow.GetComponent<Shadow>().SetOwner();
             spawnedShadow.GetComponent<Shadow>().size = new Vector2(Mathf.Abs(size.x), Mathf.Abs(size.y));
-            Debug.Break();
         }
         spawnedFigurant.GetComponent<SpriteRenderer>().sortingOrder = layer;
         spawnedFigurant.GetComponent<SpriteRenderer>().color = Color.white;

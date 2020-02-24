@@ -21,7 +21,7 @@ public class OutlineSystem : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.tag == "Player" && GetComponent<SpriteRenderer>())
+        if(col.tag == "Player" && GetComponent<SpriteRenderer>() && col.GetComponent<Interactions>().state == Interactions.State.Normal)
         {
             player = col.gameObject;
             ShowOutline();

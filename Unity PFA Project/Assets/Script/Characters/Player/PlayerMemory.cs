@@ -33,8 +33,9 @@ public class PlayerMemory : MonoBehaviour
         //}
     }
 
-    void AddToMemory(int stickerIndex)
+    public void AddToMemory(int stickerIndex)
     {
+        newSticker.GetComponent<Animator>().SetTrigger("NewSticker");
         stickerIndexBoardList.Add(stickerIndex);
         stickerIndexCarnetList.Add(stickerIndex);
         allStickers.Add(stickerIndex);
@@ -46,6 +47,7 @@ public class PlayerMemory : MonoBehaviour
         newSticker.GetComponent<Animator>().SetTrigger("NewSticker");
         stickerIndexBoardList.Add(stickerIndex);
         stickerIndexCarnetList.Add(stickerIndex);
+        allStickers.Add(stickerIndex);
         /*if(save.memoryStickers.Contains(stickerIndex))
         {}
         else save.memoryStickers.Add(stickerIndex); */
@@ -83,6 +85,16 @@ public class PlayerMemory : MonoBehaviour
                     carnet.transform.GetChild(3).GetComponent<CarnetIndex>().CheckChildNumber(child);
                     break;
                 }
+                /*if(stickerIndexCarnetList.Contains(newStickerIndex))
+                {
+                    foreach(int index in stickerIndexCarnetList)
+                    {
+                        if(index == newStickerIndex)
+                        {
+                            stickerIndexCarnetList.Remove(index);
+                        }
+                    }
+                }*/
                 /*if(newStickerIndex >= charactersRange.x && newStickerIndex <= charactersRange.y)
                 {
                     GameObject child = Instantiate(stickerTemplate, GameObject.FindObjectOfType<Ken_Canvas_Infos>().carnet.transform.GetChild(0));

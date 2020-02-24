@@ -76,7 +76,7 @@ public class Interactions : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (state == State.Normal && state != State.InCinematic && state != State.InDialog)
+        if (state == State.Normal)
         {
             if (collision.transform.tag == "PNJinteractable" || collision.transform.tag == "Item" || collision.transform.tag == "Board" || collision.transform.tag == "Interaction" || collision.transform.tag == "Shortcut")
             {
@@ -200,7 +200,8 @@ public class Interactions : MonoBehaviour
     {
         if(Input.GetButtonDown("Cancel"))
         {
-            if(GameObject.Find("Tutorial").GetComponent<TutoKenneth>().canEsc && PNJContact.GetComponent<PNJ>().dialogIndex > 0 && PNJContact.GetComponent<PNJ>().allDialogs.listOfDialogs[PNJContact.GetComponent<PNJ>().dialogIndex].canAskQuestions)
+            Debug.Log("Quit Dialog");
+            if(GameObject.Find("Tutorial").GetComponent<TutoKenneth>().canEsc && PNJContact.GetComponent<PNJ>().allDialogs.listOfDialogs[PNJContact.GetComponent<PNJ>().dialogIndex].canAskQuestions)
             {
                 PNJContact.GetComponent<PNJ>().EndDialog();
                 //Debug.Log("QuitDialog");
@@ -494,6 +495,7 @@ public class Interactions : MonoBehaviour
 
     public void EndDialog()
     {
+        Debug.Log("End Dialog Player");
         if(state != State.InCinematic)
         {
             dialAndBookCanvas.transform.GetChild(3).gameObject.SetActive(false);

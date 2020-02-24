@@ -6,14 +6,15 @@ public class MovementsPlayer : MonoBehaviour {
 
     public float walk_speed;
     public float run_speed;
-    bool facingRight = true;
+    [SerializeField]
+    private bool facingRight = true;
     public bool sprint = false;
     float speed;
     public bool canRun;
     Rigidbody2D rb2d;
     Animator animator;
     [SerializeField]
-    bool canMove = false;
+    private bool canMove = false;
     
     // Start is called before the first frame update
     void Start()
@@ -86,14 +87,13 @@ public class MovementsPlayer : MonoBehaviour {
         else facingRight = true;
         if(theScale.x < 0 && facingRight)
         {
-            facingRight = false;
             theScale.x *= -1;
         }
         else if(theScale.x > 0 && !facingRight)
         {
-            facingRight = true;
             theScale.x *= -1;
         }
+        transform.localScale = theScale;
     }
 
 	void Flip()
