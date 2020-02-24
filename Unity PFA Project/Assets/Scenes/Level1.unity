@@ -12714,6 +12714,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 278563568155890673, guid: 69e81edae239c8c48b2616c4d79927be,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69e81edae239c8c48b2616c4d79927be, type: 3}
 --- !u!1 &500525742
