@@ -11,7 +11,7 @@ public class CheckItemsInContact : MonoBehaviour
     {
         if(col.tag == "Player")
         {
-            if(GetComponent<PlayerMemory>().allStickers.Contains(objectIndex))
+            if(col.GetComponent<PlayerMemory>().allStickers.Contains(objectIndex))
             {
                 gameObject.SetActive(false);
             }
