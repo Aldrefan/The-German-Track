@@ -16,7 +16,7 @@ public class ScottVerification : MonoBehaviour
 
     void CheckEvent()
     {
-        if(GetComponent<Interactions>().PnjMet.Contains("scott_nelson"))
+        if(GetComponent<Interactions>().PnjMet.Contains("dialog_williamscott"))
         {
             _scott.transform.parent = _nelsonSpot.transform.parent;
             _scott.transform.position = _nelsonSpot.transform.position;
