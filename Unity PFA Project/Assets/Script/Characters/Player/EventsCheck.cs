@@ -21,6 +21,11 @@ public class EventsCheck : MonoBehaviour
             carnetGoal = GameObject.FindObjectOfType<Ken_Canvas_Infos>().transform.Find("Panel").Find("Carnet").Find("Goal").Find("GoalFrame").GetComponent<CarnetGoal>();
 
         }
+        if(GameObject.FindObjectOfType<Interactions>().PnjMet.Contains("Kurt Becker"))
+        {
+            Debug.Log("kk");
+            UnlockKurtAppartment();
+        }
         
     }
 
