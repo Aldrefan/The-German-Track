@@ -242,7 +242,6 @@ public class PNJ : MonoBehaviour
 
     public void EndDialog()
     {
-        Debug.Log("End Dialog with " + PNJName);
         if(GetComponent<Animator>())
         {
             GetComponent<Animator>().SetBool("Talk", false); // Temporaire (A changer le plus vite possible)

@@ -200,7 +200,6 @@ public class Interactions : MonoBehaviour
     {
         if(Input.GetButtonDown("Cancel"))
         {
-            Debug.Log("Quit Dialog");
             if(GameObject.Find("Tutorial").GetComponent<TutoKenneth>().canEsc && PNJContact.GetComponent<PNJ>().allDialogs.listOfDialogs[PNJContact.GetComponent<PNJ>().dialogIndex].canAskQuestions)
             {
                 PNJContact.GetComponent<PNJ>().EndDialog();
@@ -495,7 +494,6 @@ public class Interactions : MonoBehaviour
 
     public void EndDialog()
     {
-        Debug.Log("End Dialog Player");
         if(state != State.InCinematic)
         {
             dialAndBookCanvas.transform.GetChild(3).gameObject.SetActive(false);
