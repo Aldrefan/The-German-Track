@@ -26,7 +26,11 @@ public class Sticker_Display : MonoBehaviour
         backgroundColor = sticker.color;
 
         if (sticker.type == Sticker.Type.Profile)
-            text.transform.localPosition = new Vector2(0, -32);
+        {
+            text.transform.localPosition = new Vector2(0, -30);
+            text.rectTransform.sizeDelta = new Vector2 (75, 28);
+
+        }
 
 
         if(GameObject.Find("Kenneth").GetComponent<Interactions>().state == Interactions.State.OnCarnet)
