@@ -119,6 +119,7 @@ public class SaveFile : MonoBehaviour
             gameCam.actualRoom.SetActive(true);
             gameCam.transform.position = KPlayer.transform.position - new Vector3(0,0, gameCam.actualRoom.GetComponent<SceneInformations>().distanceBetweenPlayerAndCamera) ;
             gameCam.InitRoomLimit();
+            gameCam.actualRoom.GetComponent<SceneInformations>().PlaceCamera();
         }
 
         GameObject levelLight = FindObjectOfType<DayNightLight>().gameObject;

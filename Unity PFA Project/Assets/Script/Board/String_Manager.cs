@@ -9,7 +9,7 @@ public List<GameObject> pinList = new List<GameObject>();
 LineRenderer lineRenderer;
 bool checking = false;
 public int finalDemoHypothese;
-public List<GameObject> validateList;
+public List<int> validateList;
 int index = 0;
 int microIndex = 0;
 public List<int> hypotheseresponses;
@@ -45,6 +45,7 @@ public class HypotheseListT
 
 public GameObject player;
 public GameObject stickerTemplate;
+bool thereIsAProfile = false;
     
     // Start is called before the first frame update
     void Start()
@@ -114,6 +115,8 @@ public GameObject stickerTemplate;
 
             for(int n = 0; n < pinList.Count; n++)
             {
+                if(player.GetComponent<PlayerMemory>().stickersScriptableList[pinList[n].GetComponent<Sticker_Display>().sticker.index].type.ToString() == "Profile")
+                {thereIsAProfile = true;}
                 if(ListOfHypLists.list[i].list.Contains(pinList[n].GetComponent<Sticker_Display>().sticker.index))
                 {
                     validateStickersList.Add(pinList[n].GetComponent<Sticker_Display>().sticker.index);
@@ -134,7 +137,6 @@ public GameObject stickerTemplate;
                         //hypotheseresponses[i], new Vector3(camera.transform.position.x, camera.transform.position.y, boardCanvas.position.z), boardCanvas.rotation, boardCanvas); // Fait apparaitre l'hypothèse crée
                         newSticker.GetComponent<Sticker_Display>().sticker = player.GetComponent<PlayerMemory>().stickersScriptableList[hypotheseresponses[i]];
                         
-                            
                         newSticker.GetComponent<ParticleSystem>().Play();
                         newSticker.GetComponent<AudioSource>().Play();
                         newSticker.GetComponent<StickerManager>().OnBoard();
@@ -160,7 +162,12 @@ public GameObject stickerTemplate;
                 }
                 else if(notValidateStickersList.Count > 0)
                 {
-                    switch(notValidateStickersList.Count)
+                    if(notValidateStickersList.Count == 1)
+                    {
+                        quoteList.Add(LanguageManager.Instance.GetDialog("Board_01"));
+                    }
+                    else quoteList.Add(LanguageManager.Instance.GetDialog("Board_02"));
+                    /*switch(notValidateStickersList.Count)
                     {
                         case 1:
                         quoteList.Add(LanguageManager.Instance.GetDialog("Board_01"));
@@ -169,7 +176,7 @@ public GameObject stickerTemplate;
                         default:
                         quoteList.Add(LanguageManager.Instance.GetDialog("Board_02"));
                         break;
-                    }
+                    }*/
                 }
                 else if(notValidateStickersList.Count == ListOfHypLists.list[i].list.Count)
                 {
@@ -197,7 +204,12 @@ public GameObject stickerTemplate;
     IEnumerator ActivateTime()
     {
         GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).gameObject.SetActive(true);
-        GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).GetChild(0).GetComponent<Text>().text = quoteList[quoteList.Count - 1];
+        if(thereIsAProfile)
+        {
+            GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).GetChild(0).GetComponent<Text>().text = quoteList[quoteList.Count - 1];
+        }
+        else GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).GetChild(0).GetComponent<Text>().text = LanguageManager.Instance.GetDialog("Board_08");
+        thereIsAProfile = false;
         quoteList.Clear();
         yield return new WaitForSeconds(1);
         for(int i = 0; i > 0; i--)

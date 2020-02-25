@@ -325,6 +325,9 @@ public class EventsCheck : MonoBehaviour
                 carnetGoal.RemoveGoal(new GoalKeys("Goal_06", "DescGoal_06"));
                 break;
 
+            case "OuvrirPorteKurt":
+                break;
+
             default:
                 break;
         }

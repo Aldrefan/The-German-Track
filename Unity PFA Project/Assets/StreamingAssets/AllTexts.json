@@ -44,7 +44,7 @@
    },
    {
       "Key": "L1_Name_Zone9",
-      "FR": "Rue de l'H\u00F4pital",
+      "FR": "Rue de l'Hopital",
       "EN": "Hospital's Street"
    },
    {
@@ -261,7 +261,7 @@
    {
       "Key": "Tuto_Board_Text",
       "FR": "Il vous sert \u00E0 faire des liens entre vos notes. D\u00E9placement des notes avec la souris et le clic gauche. Clic gauche sur une note pour le lier. \"V\u00C9RIFIER\" pour v\u00E9rifier le lien. \"EFFACER\" pour effacer les liens. La croix pour fermer l'interface \u00E0 tout moment.",
-      "EN": "It allows you to link your different notes. Move notes by clicking and dragging them across the board. Click on the notes to link them. \"VERIFY\" verifies the link. \"CLEAR\" unlinks the notes. The \"X\" closes the board."
+      "EN": "It allows you to link your different notes. Move notes by clicking and dragging them across the board. Click on the notes to link them. \"VERIFY\" verifies the link. \"ERASE\" unlinks the notes. The \"X\" closes the board."
    },
    {
       "Key": "Tuto_Skip",
@@ -2190,7 +2190,7 @@
    },
    {
       "Key": "DoorKurt_D0_Q7",
-      "FR": "Mr Becker, \u00E9coutez,",
+      "FR": "Mr Becker, \u00E9coutez,\n",
       "EN": "Mr Becker, listen,"
    },
    {
@@ -2715,8 +2715,8 @@
    },
    {
       "Key": "Kurt_D12_Q1",
-      "FR": "J\u2019ai d\u00E9couvert comment est morte votre petite amie.",
-      "EN": "I found out how your girlfriend died."
+      "FR": "J\u2019ai d\u00E9couvert comment est morte votre femme.",
+      "EN": "I found out how your wife died."
    },
    {
       "Key": "Kurt_D12_Q2",
@@ -3730,8 +3730,8 @@
    },
    {
       "Key": "Lou_D6_Q7",
-      "FR": "Je m\u2019en doutais. Vous pensez qu\u2019elle en prenait fr\u00E9quemment ?",
-      "EN": "I thought so. Do you think she was a frequent consumer ?"
+      "FR": "Je m\u2019en doutais.\nVous pensez qu\u2019elle en prenait fr\u00E9quemment ?",
+      "EN": "I thought so.\nDo you think she was a frequent consumer ?"
    },
    {
       "Key": "Lou_D6_Q8",
@@ -3750,8 +3750,8 @@
    },
    {
       "Key": "Lou_D7_Q2",
-      "FR": "En effet, il s\u2019agit d\u2019une puissante toxine. Une overdose aurait pu la tuer, mais il y en a juste assez pour l'assommer.",
-      "EN": "Indeed, it\u2019s a powerful toxine. An overdose could\u2019ve killed her, but there was just enough to knock her out."
+      "FR": "En effet, il s\u2019agit d\u2019une puissante toxine. \nUne overdose aurait pu la tuer, mais il y en a juste assez pour l'assommer.",
+      "EN": "Indeed, it\u2019s a powerful toxine. \nAn overdose could\u2019ve killed her, but there was just enough to knock her out."
    },
    {
       "Key": "Lou_D7_Q3",
@@ -3830,8 +3830,8 @@
    },
    {
       "Key": "Lou_D11_Q2",
-      "FR": "Le commissaire ? Oui, je l\u2019ai vu quelques fois pour des autopsies, mais je ne pense pas que \u00E7a ait grand chose \u00E0 voir avec votre enqu\u00EAte, monsieur Kenneth.",
-      "EN": "The commissioner ? Yes, I\u2019ve seen him a few times about the autopsy, but I don\u2019t think that has much to do with your case, Mister Kenneth."
+      "FR": "Le commissaire ? Oui, je l\u2019ai vu quelques fois pour des autopsies,\nmais je ne pense pas que \u00E7a ait grand chose \u00E0 voir avec votre enqu\u00EAte, monsieur Kenneth.",
+      "EN": "The commissioner ? Yes, I\u2019ve seen him a few times about the autopsy,\nbut I don\u2019t think that has much to do with your case, Mister Kenneth."
    },
    {
       "Key": "Lou_D12_Q1",
@@ -4799,6 +4799,11 @@
       "EN": "Verify"
    },
    {
+      "Key": "Board_08",
+      "FR": "Je dois relier \u00E7a \u00E0 quelque un sinon \u00E7a ne veut rien dire.",
+      "EN": "I gotta link this to someone or else it doesn't make sense."
+   },
+   {
       "Key": "Credits_01",
       "FR": "Viktor a tu\u00E9 Loraine.",
       "EN": "Viktor killed Loraine."
@@ -5040,8 +5045,8 @@
    },
    {
       "Key": "ST_46_Fait_Tooltip",
-      "FR": "ses vraies",
-      "EN": "Word"
+      "FR": "J'en conclus qu'ils ont les m\u00EAmes parents\u2026",
+      "EN": "Therefore, they must have the same parents\u2026"
    },
    {
       "Key": "ST_48_Fait_Text",
@@ -5326,8 +5331,18 @@
       "EN": "Loraine Grey - Packed luggage"
    },
    {
-      "Key": "ST_42_Hyp_Text",
+      "Key": "ST_53_Hyp_Text",
       "FR": "L'Allemand a pendu Loraine alors qu'elle \u00E9tait drogu\u00E9e",
+      "EN": "The German hanged Loraine while she was drugged"
+   },
+   {
+      "Key": "ST_53_Hyp_Tooltip",
+      "FR": "Loraine Grey - L'assassin a pendu Loraine alors qu'elle \u00E9tait drogu\u00E9e - L'Allemand a d\u00E9couvert que Loraine \u00E9tait de la SDECE - Kurt a drogu\u00E9 Loraine pour l'emp\u00EAcher de partir",
+      "EN": "Loraine Grey - The murderer hanged Loraine while she was drugged - The German found out Loraine worked for the SDECE - Kurt drugged Loraine to stop her from leaving"
+   },
+   {
+      "Key": "ST_42_Hyp_Text",
+      "FR": "l'Allemand a pendu Loraine alors quelle \u00E9tait drogu\u00E9e",
       "EN": "The German hanged Loraine while she was drugged"
    },
    {

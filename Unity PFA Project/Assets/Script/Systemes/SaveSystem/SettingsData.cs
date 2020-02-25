@@ -13,7 +13,6 @@ public class SettingsData
 
     public SettingsData(bool defaultFile,float newDialogSpeed=0.04f, float newMusicVol = -20, float newEffectVol = -20, string newGameLanguage = "english", bool newFullscreen = true, Vector2 newResolution = default)
     {
-        Debug.Log(defaultFile);
         if (defaultFile)
         {
             dialogSpeed = newDialogSpeed;
