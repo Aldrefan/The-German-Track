@@ -662,6 +662,7 @@ public class TutoKenneth : MonoBehaviour
         newSticker.keyTitle = "Tuto_NewSticker_Title";
         newSticker.keyText = new List<string>();
         newSticker.keyText.Add("Tuto_NewSticker_Text");
+        newSticker.keyText.Add("Tuto_NewSticker_Text2");
 
         questions.positionBoxHelp = Tuto.PositionBoxHelp.Top;
         questions.canClose = false;
@@ -725,6 +726,9 @@ public class TutoKenneth : MonoBehaviour
         board.keyTitle = "Tuto_Board_Title";
         board.keyText = new List<string>();
         board.keyText.Add("Tuto_Board_Text");
+        board.keyText.Add("Tuto_Board_Text2");
+        board.keyText.Add("Tuto_Board_Text3");
+        board.keyText.Add("Tuto_Board_Text4");
     }
 
     public void OpenHelpTuto(string tuto)
