@@ -93,7 +93,7 @@ public class Pin_System : MonoBehaviour
         if(Input.GetKey(KeyCode.Mouse0))
         {
             screenPoint = Input.mousePosition;
-            screenPoint.z = transform.parent.position.z;
+            screenPoint.z = transform.parent.position.z + 9;
             Camera camera = Camera.main;
             transform.position = camera.ScreenToWorldPoint(screenPoint);
             //transform.position = Camera.main.ScreenToWorldPoint(screenPoint);

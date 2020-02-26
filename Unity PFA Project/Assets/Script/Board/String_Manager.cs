@@ -81,10 +81,10 @@ bool thereIsAProfile = false;
     public void Loop()
     {
         for(int i = 0; i < pinList.Count; i++)
-            {
-                Destroy(pinList[0].transform.GetChild(pinList[i].transform.childCount - 1).gameObject);
-                pinList.Remove(pinList[0]);
-            }
+        {
+            Destroy(pinList[0].transform.GetChild(pinList[i].transform.childCount - 1).gameObject);
+            pinList.Remove(pinList[0]);
+        }
         if(pinList.Count > 0)
         {
             Loop();
