@@ -11,11 +11,11 @@ public class Duck : MonoBehaviour
 
     void OnEnable()
     {
-        paused.TransitionTo(0.01f);
+        paused.TransitionTo(1f);
     }
 
     void OnDisable()
     {
-        unPaused.TransitionTo(0.01f);
+        unPaused.TransitionTo(1f);
     }
 }

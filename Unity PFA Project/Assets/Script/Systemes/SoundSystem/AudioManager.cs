@@ -10,9 +10,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     private AudioSource[] audiosources;
 
-    void Start()
+    void Awake()
     {
-        audiosources = FindObjectsOfType<AudioSource>();
+        Instance = this;
     }
 }
 
