@@ -67,7 +67,7 @@ bool thereIsAProfile = false;
             for(int i = 0; i < pinList.Count; ++i)
             {
                 lineRenderer.positionCount = pinList.Count;
-                lineRenderer.SetPosition(i, new Vector3(pinList[i].transform.GetChild(3).position.x, pinList[i].transform.GetChild(3).position.y, pinList[i].transform.GetChild(3).position.z - 1));
+                lineRenderer.SetPosition(i, new Vector3(pinList[i].transform.GetChild(pinList[i].transform.childCount - 1).position.x, pinList[i].transform.GetChild(pinList[i].transform.childCount - 1).position.y, pinList[i].transform.GetChild(pinList[i].transform.childCount - 1).position.z - 1));
             }
         }
         else lineRenderer.enabled = false;
@@ -82,7 +82,7 @@ bool thereIsAProfile = false;
     {
         for(int i = 0; i < pinList.Count; i++)
             {
-                Destroy(pinList[0].transform.GetChild(3).gameObject);
+                Destroy(pinList[0].transform.GetChild(pinList[i].transform.childCount - 1).gameObject);
                 pinList.Remove(pinList[0]);
             }
         if(pinList.Count > 0)

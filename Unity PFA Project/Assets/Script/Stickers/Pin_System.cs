@@ -54,7 +54,7 @@ public class Pin_System : MonoBehaviour
 
     void OnMouseOver()
     {
-        if(Input.GetKey(KeyCode.Mouse0) && click == false)
+        if(Input.GetKeyDown(KeyCode.Mouse0) && click == false)
         {
             int i = 0;
             foreach(RectTransform child in transform)
@@ -94,7 +94,7 @@ public class Pin_System : MonoBehaviour
         {
             screenPoint = Input.mousePosition;
             screenPoint.z = transform.parent.position.z;
-            Camera camera = Camera.FindObjectOfType<Camera>();
+            Camera camera = Camera.main;
             transform.position = camera.ScreenToWorldPoint(screenPoint);
             //transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
             //transform.position = Input.mousePosition;
