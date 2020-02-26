@@ -167,16 +167,6 @@ bool thereIsAProfile = false;
                         quoteList.Add(LanguageManager.Instance.GetDialog("Board_01"));
                     }
                     else quoteList.Add(LanguageManager.Instance.GetDialog("Board_02"));
-                    /*switch(notValidateStickersList.Count)
-                    {
-                        case 1:
-                        quoteList.Add(LanguageManager.Instance.GetDialog("Board_01"));
-                        break;
-
-                        default:
-                        quoteList.Add(LanguageManager.Instance.GetDialog("Board_02"));
-                        break;
-                    }*/
                 }
                 else if(notValidateStickersList.Count == ListOfHypLists.list[i].list.Count)
                 {
