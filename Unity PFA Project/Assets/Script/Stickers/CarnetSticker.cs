@@ -79,7 +79,7 @@ public class CarnetSticker : MonoBehaviour
         if (player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.name == "Phone")
         {
             player.GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
-            player.GetComponent<Interactions>().PNJContact.GetComponent<Phone>().GetInTouch(GetComponent<Sticker_Display>().sticker.index);
+            player.GetComponent<Interactions>().PNJContact.GetComponent<Phone>().GetInTouch(GetComponent<Sticker_Display>().sticker);
         }
     }
 

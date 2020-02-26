@@ -45783,6 +45783,28 @@ MonoBehaviour:
       hasChoices: 0
       endDialog: 0
       buttonsList: []
+    - dialog:
+      - quote: Phone_D2_Q1
+        characterName: Kenneth
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: Phone_D3_Q1
+        characterName: Kenneth
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+        spriteCharacter: {fileID: 0}
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
   quoteFinished: 0
   stickersAlreadyGiven: 
 --- !u!61 &1421815645
@@ -69817,7 +69839,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300002, guid: c6dc840e28ebb3142960a3e07a82998d, type: 3}
   m_Color: {r: 0.254717, g: 0.24274495, b: 0.21747063, a: 1}
   m_FlipX: 0
