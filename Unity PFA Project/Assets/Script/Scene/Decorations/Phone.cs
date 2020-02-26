@@ -49,6 +49,16 @@ public class Phone : MonoBehaviour
                         player.GetComponent<Interactions>().StartDialog();
                         break;
                     }
+                    else
+                    {
+                        player.GetComponent<Interactions>().CloseBookExe();
+                        GetComponent<PNJ>().ChangeDialog(GetComponent<PNJ>().negativeQuote);
+                    }
+                }
+                else
+                {
+                    player.GetComponent<Interactions>().CloseBookExe();
+                    GetComponent<PNJ>().ChangeDialog(GetComponent<PNJ>().negativeQuote);
                 }
             }
             if(i > contactList.Count)
