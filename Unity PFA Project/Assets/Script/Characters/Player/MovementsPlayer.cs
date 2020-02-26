@@ -80,7 +80,6 @@ public class MovementsPlayer : MonoBehaviour {
 
     public void CheckSensAndFlip(float direction)
     {
-        Debug.Log("Flip");
         Vector3 theScale = transform.localScale;
         if(direction < 0)
         {facingRight = false;}
@@ -106,6 +105,11 @@ public class MovementsPlayer : MonoBehaviour {
         //GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    public void PlaySound()
+    {
+        GetComponent<AudioSource>().Play();
     }
 
     IEnumerator StartTimerBeforeCheckActivation()
