@@ -35,6 +35,16 @@ public class SceneInformations : MonoBehaviour
         directionalLight = GameObject.Find("Directional Light");
         //Camera.main.GetComponent<CameraFollow>().YOffset = YOffset;
         //player.GetComponent<MovementsPlayer>().canRun = canRun;
+
+        if (fixedCamera)
+        {
+            distanceBetweenPlayerAndCamera = -CameraSpot.transform.position.z;
+        }
+
+        if (Camera.main.GetComponent<CameraFollow>().actualRoom == this.gameObject)
+        {
+            PlaceCamera();
+        }
     }
 
     // Update is called once per frame
@@ -58,12 +68,15 @@ public class SceneInformations : MonoBehaviour
 
     public void PlaceCamera()
     {
-        if(fixedCamera)
+        Camera.main.transform.position = new Vector3(CameraSpot.position.x,CameraSpot.position.y,-distanceBetweenPlayerAndCamera);
+        if (fixedCamera)
         {
-            Camera.main.transform.position = CameraSpot.position;
             Camera.main.GetComponent<CameraFollow>().isFollowing = false;
         }
-        else Camera.main.GetComponent<CameraFollow>().isFollowing = true;
+        else
+        {
+            Camera.main.GetComponent<CameraFollow>().isFollowing = true;
+        }
     }
 
     public void ShowZoneName()

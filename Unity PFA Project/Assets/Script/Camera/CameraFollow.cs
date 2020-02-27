@@ -32,11 +32,12 @@ public class CameraFollow : MonoBehaviour
         }
         else
         {
-            transform.position = new Vector3(player.transform.position.x, player.transform.position.y + YOffset, -8.5f);
+            transform.position = new Vector3(player.transform.position.x + 5, player.transform.position.y + YOffset, -8.5f);
         }
         barrier = "none";
         //StartCoroutine("StartTimer");
         InitRoomLimit();
+
     }
 
     public void InitRoomLimit()
@@ -49,7 +50,7 @@ public class CameraFollow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         EnableFollow();
     }
