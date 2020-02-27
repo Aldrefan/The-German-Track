@@ -18,7 +18,7 @@ public class Shortcut : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fadePanel =  GameObject.Find("Necessary_Floating_Canvas").transform.GetChild(0).gameObject;
+        fadePanel =  GameObject.Find("Necessary_Floating_Canvas").transform.Find("FadePanel").gameObject;
         player = GameObject.FindGameObjectWithTag("Player");
         directionalLight = GameObject.Find("Directional Light");
         StartFade();
@@ -30,18 +30,19 @@ public class Shortcut : MonoBehaviour
     }
 
     // Update is called once per frame
-    /*void Update()// Initial
+    void Update()// Initial
     {
-        if(canMove)
-        {
-            if(Input.GetButtonDown("Interaction") && !player.GetComponent<Interactions>().isInDialog && !player.GetComponent<Interactions>().isInCinematic)
-            {
-                fadePanel.GetComponent<Animator>().SetTrigger("FadeIn");
-                GameObject.FindObjectOfType<Saver>().lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
-                StartCoroutine("Respawn");
-            }
-        }
-    }*/
+        //if(canMove)
+        //{
+        //    if(Input.GetButtonDown("Interaction") && !player.GetComponent<Interactions>().isInDialog && !player.GetComponent<Interactions>().isInCinematic)
+        //    {
+        //        fadePanel.GetComponent<Animator>().SetTrigger("FadeIn");
+        //        GameObject.FindObjectOfType<Saver>().lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
+        //        StartCoroutine("Respawn");
+        //    }
+        //}
+
+    }
 
     void StartFade()
     {
@@ -51,7 +52,7 @@ public class Shortcut : MonoBehaviour
     public void Teleport()
     {
 
-        if (!inRespawn)
+        if (!GameObject.FindObjectOfType<MovementsPlayer>().inRespawn)
         {//GameObject.FindObjectOfType<Saver>().lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
             StartCoroutine("Respawn");
         }
@@ -75,9 +76,9 @@ public class Shortcut : MonoBehaviour
 
     IEnumerator Respawn()
     {
-        if (!inRespawn)
+        if (!GameObject.FindObjectOfType<MovementsPlayer>().inRespawn)
         {
-            inRespawn = true;
+            GameObject.FindObjectOfType<MovementsPlayer>().inRespawn = true;
             Camera.main.GetComponent<CameraFollow>().isFollowing = false;
             Camera.main.GetComponent<BoxCollider2D>().enabled = false;
 
@@ -146,7 +147,7 @@ public class Shortcut : MonoBehaviour
             {
                 fadePanel.GetComponent<Animator>().SetBool("FadeIn", false);
             }
-            inRespawn = false;
+            GameObject.FindObjectOfType<MovementsPlayer>().inRespawn = false;
 
         }
     }

@@ -15,6 +15,9 @@ public class MovementsPlayer : MonoBehaviour {
     Animator animator;
     [SerializeField]
     private bool canMove = false;
+
+    [HideInInspector]
+    public bool inRespawn;
     
     // Start is called before the first frame update
     void Start()
