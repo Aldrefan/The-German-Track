@@ -21,11 +21,11 @@ public class KennethStopSmokeWhenOnBoard : MonoBehaviour
 
             if (Board.activeSelf)
             {
-                this.GetComponent<ParticleSystem>().Stop();
+                this.gameObject.SetActive(false);
             }
             else if (!this.GetComponent<ParticleSystem>().isEmitting)
             {
-                this.GetComponent<ParticleSystem>().Play();
+                this.gameObject.SetActive(true);
 
             }
         }

@@ -13,6 +13,8 @@ public class Shortcut : MonoBehaviour
     public bool internTeleport;
     GameObject directionalLight;
 
+    bool inRespawn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,11 +50,9 @@ public class Shortcut : MonoBehaviour
 
     public void Teleport()
     {
-        if (!fadePanel.GetComponent<Animator>().GetBool("FadeIn"))
-        {
-            fadePanel.GetComponent<Animator>().SetBool("FadeIn", true);
 
-            //GameObject.FindObjectOfType<Saver>().lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
+        if (!inRespawn)
+        {//GameObject.FindObjectOfType<Saver>().lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
             StartCoroutine("Respawn");
         }
     }
@@ -75,69 +75,79 @@ public class Shortcut : MonoBehaviour
 
     IEnumerator Respawn()
     {
-        Camera.main.GetComponent<CameraFollow>().isFollowing = false;
-        Camera.main.GetComponent<BoxCollider2D>().enabled = false;
-
-        yield return new WaitForSeconds(0.5f);
-        if (linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme != null && linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme != GameObject.Find("AudioManager").GetComponent<AudioSource>().clip)
+        if (!inRespawn)
         {
-            GameObject.Find("AudioManager").GetComponent<AudioSource>().clip = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme;
-            GameObject.Find("AudioManager").GetComponent<AudioSource>().Play();
-        }
-
-
-        linkedWith.transform.parent.parent.gameObject.SetActive(true);
-        player.transform.position = CalculateDestPos(linkedWith.transform);
-        player.GetComponent<MovementsPlayer>().canRun = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().canRun;
-
-        if (directionalLight.GetComponent<DayNightLight>().time == DayNightLight.timeEnum.Day)
-        {
-            directionalLight.GetComponent<Light>().intensity = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().dayLightValue;
-        }
-        else directionalLight.GetComponent<Light>().intensity = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().nightLightValue;
-
-        if (!internTeleport)
-        {
-            transform.parent.parent.gameObject.SetActive(false);
-            linkedWith.transform.parent.parent.GetComponent<SceneInformations>().ShowZoneName();
-        }
-        //else 
-        //{
-        //Saver saver = GameObject.FindObjectOfType<Saver>();
-        //saver.lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
-        /*JsonSave save = SaveGameManager.GetCurrentSave();
-        save.lieu = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
-        SaveGameManager.Save();*/
-        //}
-
-
-
-
-
-        if (!linkedWith.transform.parent.parent.GetComponent<SceneInformations>().fixedCamera)
-        {
-            Camera.main.GetComponent<CameraFollow>().actualRoom = linkedWith.transform.parent.parent.gameObject;
-            Camera.main.GetComponent<CameraFollow>().InitRoomLimit();
-            Camera.main.GetComponent<BoxCollider2D>().enabled = true;
-            //Camera.main.transform.position = linkedWith.transform.parent.parent.gameObject.transform.position;
-            Camera.main.transform.position = new Vector3(linkedWith.transform.parent.parent.GetComponent<SceneInformations>().CameraSpot.position.x, player.transform.position.y + linkedWith.transform.parent.parent.GetComponent<SceneInformations>().YOffset, player.transform.position.z - linkedWith.transform.parent.parent.GetComponent<SceneInformations>().distanceBetweenPlayerAndCamera);
-            Camera.main.GetComponent<CameraFollow>().YOffset = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().YOffset;
-            Camera.main.GetComponent<CameraFollow>().barrier = "none";
-            Camera.main.GetComponent<CameraFollow>().collision = false;
-            Camera.main.GetComponent<CameraFollow>().isFollowing = true;
-        }
-        else 
-        {
+            inRespawn = true;
             Camera.main.GetComponent<CameraFollow>().isFollowing = false;
-            Camera.main.transform.position = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().CameraSpot.position;
-            Camera.main.GetComponent<CameraFollow>().actualRoom = linkedWith.transform.parent.parent.gameObject;
-            Camera.main.GetComponent<CameraFollow>().InitRoomLimit();
-        }
-        //linkedWith.transform.parent.parent.GetComponent<SceneInformations>().PlaceCamera();
+            Camera.main.GetComponent<BoxCollider2D>().enabled = false;
 
-        if (fadePanel.GetComponent<Animator>().GetBool("FadeIn"))
+        if (!fadePanel.GetComponent<Animator>().GetBool("FadeIn"))
         {
-            fadePanel.GetComponent<Animator>().SetBool("FadeIn", false);
+            fadePanel.GetComponent<Animator>().SetBool("FadeIn", true);
+        }
+            yield return new WaitForSeconds(0.5f);
+            if (linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme != null && linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme != GameObject.Find("AudioManager").GetComponent<AudioSource>().clip)
+            {
+                GameObject.Find("AudioManager").GetComponent<AudioSource>().clip = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().theme;
+                GameObject.Find("AudioManager").GetComponent<AudioSource>().Play();
+            }
+
+
+            linkedWith.transform.parent.parent.gameObject.SetActive(true);
+            player.transform.position = CalculateDestPos(linkedWith.transform);
+            player.GetComponent<MovementsPlayer>().canRun = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().canRun;
+
+            if (directionalLight.GetComponent<DayNightLight>().time == DayNightLight.timeEnum.Day)
+            {
+                directionalLight.GetComponent<Light>().intensity = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().dayLightValue;
+            }
+            else directionalLight.GetComponent<Light>().intensity = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().nightLightValue;
+
+            if (!internTeleport)
+            {
+                transform.parent.parent.gameObject.SetActive(false);
+                linkedWith.transform.parent.parent.GetComponent<SceneInformations>().ShowZoneName();
+            }
+            //else 
+            //{
+            //Saver saver = GameObject.FindObjectOfType<Saver>();
+            //saver.lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
+            /*JsonSave save = SaveGameManager.GetCurrentSave();
+            save.lieu = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
+            SaveGameManager.Save();*/
+            //}
+
+
+
+
+
+            if (!linkedWith.transform.parent.parent.GetComponent<SceneInformations>().fixedCamera)
+            {
+                Camera.main.GetComponent<CameraFollow>().actualRoom = linkedWith.transform.parent.parent.gameObject;
+                Camera.main.GetComponent<CameraFollow>().InitRoomLimit();
+                Camera.main.GetComponent<BoxCollider2D>().enabled = true;
+                //Camera.main.transform.position = linkedWith.transform.parent.parent.gameObject.transform.position;
+                Camera.main.transform.position = new Vector3(linkedWith.transform.parent.parent.GetComponent<SceneInformations>().CameraSpot.position.x, player.transform.position.y + linkedWith.transform.parent.parent.GetComponent<SceneInformations>().YOffset, player.transform.position.z - linkedWith.transform.parent.parent.GetComponent<SceneInformations>().distanceBetweenPlayerAndCamera);
+                Camera.main.GetComponent<CameraFollow>().YOffset = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().YOffset;
+                Camera.main.GetComponent<CameraFollow>().barrier = "none";
+                Camera.main.GetComponent<CameraFollow>().collision = false;
+                Camera.main.GetComponent<CameraFollow>().isFollowing = true;
+            }
+            else
+            {
+                Camera.main.GetComponent<CameraFollow>().isFollowing = false;
+                Camera.main.transform.position = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().CameraSpot.position;
+                Camera.main.GetComponent<CameraFollow>().actualRoom = linkedWith.transform.parent.parent.gameObject;
+                Camera.main.GetComponent<CameraFollow>().InitRoomLimit();
+            }
+            //linkedWith.transform.parent.parent.GetComponent<SceneInformations>().PlaceCamera();
+
+            if (fadePanel.GetComponent<Animator>().GetBool("FadeIn"))
+            {
+                fadePanel.GetComponent<Animator>().SetBool("FadeIn", false);
+            }
+            inRespawn = false;
+
         }
     }
 
