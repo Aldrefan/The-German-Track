@@ -47,6 +47,7 @@ public class CarnetSticker : MonoBehaviour
             }
         }*/
         SetBackgroundColor();
+        DetectIfCanBeCalled();
     }
 
     public void SetBackgroundColor()
@@ -73,11 +74,12 @@ public class CarnetSticker : MonoBehaviour
             player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().Response(GetComponent<Sticker_Display>().sticker.index);
             player.GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
             transform.parent.parent.parent.parent.gameObject.SetActive(false);
+
         }
-        if(player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.name == "Phone")
+        if (player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.name == "Phone")
         {
             player.GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
-            player.GetComponent<Interactions>().PNJContact.GetComponent<Phone>().GetInTouch(GetComponent<Sticker_Display>().sticker.index);
+            player.GetComponent<Interactions>().PNJContact.GetComponent<Phone>().GetInTouch(GetComponent<Sticker_Display>().sticker);
         }
     }
 
@@ -92,4 +94,36 @@ public class CarnetSticker : MonoBehaviour
             }
         }
     }*/
+
+    void DetectIfCanBeCalled()
+    {
+        Phone phone = GameObject.FindObjectOfType<Phone>();
+        if (player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.name == "Phone")
+        {
+            if ( phone != null && phone.contactList.Contains(GetComponent<Sticker_Display>().sticker.index))
+            {
+                int index = default;
+
+                for (int i = 0; i < phone.contactList.Count; i++)
+                {
+                    if (phone.contactList[i] == GetComponent<Sticker_Display>().sticker.index)
+                    {
+                        index = i;
+                    }
+
+                }
+                if ( player.GetComponent<Interactions>().PnjMet.Contains(phone.transform.GetChild(index).name) || phone.justStickerNeededList[index])
+                {
+                    this.transform.Find("PhoneIcon").gameObject.SetActive(true);
+                }
+            }
+        }
+        else
+        {
+            this.transform.Find("PhoneIcon").gameObject.SetActive(false);
+
+        }
+    }
+
+
 }

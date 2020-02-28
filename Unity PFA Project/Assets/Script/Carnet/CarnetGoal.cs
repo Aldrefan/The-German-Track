@@ -21,6 +21,9 @@ public class CarnetGoal : MonoBehaviour
     public string notifSaver;
     public bool notifState;
 
+    public int goalToDo;
+    public int goalDone;
+
     // Start is called before the first frame update
     public void Init()
     {
@@ -40,6 +43,7 @@ public class CarnetGoal : MonoBehaviour
     {
         if (!goalList.Contains(goalkeys))
         {
+            goalToDo++;
             goalList.Add(goalkeys);
             if(notif != null)
             {
@@ -69,11 +73,15 @@ public class CarnetGoal : MonoBehaviour
     {
         if (!removeGoalList.Contains(goalkeys))
         {
+            goalToDo--;
+            goalDone++;
+
             removeGoalList.Add(goalkeys);
             //if (!goalList.Contains(goalString))
             //{
             //    Debug.Log("Delete current Goal");
-                goalList.Remove(goalkeys);
+
+            //goalList.Remove(goalkeys);
             //}
             if (notif != null)
             {
@@ -91,6 +99,12 @@ public class CarnetGoal : MonoBehaviour
 
     void OnEnable()
     {
+
+        if (goalList.Count != goalToDo)
+        {
+            GoalCheck();
+        }
+
         foreach (GoalKeys goal in goalList)
         {
             int counter = 0;
@@ -159,7 +173,29 @@ public class CarnetGoal : MonoBehaviour
 
         }
     }
+
+    void GoalCheck()
+    {
+        List<GoalKeys> goalToRemove = new List<GoalKeys>();
+        foreach (GoalKeys finishedGoal in removeGoalList)
+        {
+            foreach (GoalKeys goal in goalList)
+            {
+
+                if (goal.nameGoalKey == finishedGoal.nameGoalKey)
+                {
+                    goalToRemove.Add(goal);
+                }
+            }
+        }
+        foreach (GoalKeys goalEnded in goalToRemove)
+        {
+            goalList.Remove(goalEnded);
+        }
+    }
 }
+
+
 
 [System.Serializable]
 public class GoalKeys

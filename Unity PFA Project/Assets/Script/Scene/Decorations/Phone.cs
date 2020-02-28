@@ -20,15 +20,15 @@ public class Phone : MonoBehaviour
         
     }
 
-    public void GetInTouch(int profil)
+    public void GetInTouch(Sticker profil)
     {
-        if(contactList.Contains(profil))
+        if(contactList.Contains(profil.index))
         {
             int i = 0;
             for(i = 0; i < contactList.Count; i++)
             {
                 //Debug.Log("index : " + i);
-                if(profil == contactList[i])
+                if(profil.index == contactList[i])
                 {
                     //Debug.Log("index found");
                     if(justStickerNeededList[i])
@@ -49,6 +49,16 @@ public class Phone : MonoBehaviour
                         player.GetComponent<Interactions>().StartDialog();
                         break;
                     }
+                    else
+                    {
+                        player.GetComponent<Interactions>().CloseBookExe();
+                        GetComponent<PNJ>().ChangeDialog(GetComponent<PNJ>().negativeQuote);
+                    }
+                }
+                else
+                {
+                    player.GetComponent<Interactions>().CloseBookExe();
+                    GetComponent<PNJ>().ChangeDialog(GetComponent<PNJ>().negativeQuote);
                 }
             }
             if(i > contactList.Count)
@@ -56,6 +66,15 @@ public class Phone : MonoBehaviour
                 player.GetComponent<Interactions>().CloseBookExe();
                 GetComponent<PNJ>().ChangeDialog(GetComponent<PNJ>().negativeQuote);
             }
+        }
+        else if(profil.type != Sticker.Type.Profile)
+        {
+            player.GetComponent<Interactions>().CloseBookExe();
+            GetComponent<PNJ>().ChangeDialog(3);
+        }else if (profil.index == 1)
+        {
+            player.GetComponent<Interactions>().CloseBookExe();
+            GetComponent<PNJ>().ChangeDialog(4);
         }
         else
         {
