@@ -4,11 +4,34 @@ using UnityEngine;
 
 public class CanvasManager : MonoBehaviour
 {
-    Interactions playerInteractionScript;
+    public static CanvasManager CManager;
+
+    [System.Serializable]
+    public class CanvasInfos
+    {
+        public string CanvasName;
+        public GameObject CanvasGO;
+    }
+
+    [System.Serializable]
+    public class CharactersInterfaces
+    {
+        public string CharcterName;
+        public List<CanvasInfos> CanvasList;
+    }
+
+    [SerializeField]
+    List<CharactersInterfaces> charactersInterfaces;
+
+    void Awake()
+    {
+        CManager = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        playerInteractionScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>();
+        
     }
 
     // Update is called once per frame

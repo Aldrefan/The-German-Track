@@ -2,50 +2,54 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class String_Manager : MonoBehaviour
 {
-public List<GameObject> pinList = new List<GameObject>();
-LineRenderer lineRenderer;
-bool checking = false;
-public int finalDemoHypothese;
-public List<int> validateList;
-int index = 0;
-int microIndex = 0;
-public List<int> hypotheseresponses;
-bool finished;
-public List<string> quoteList;
-bool createASticker;
+    public List<GameObject> pinList = new List<GameObject>();
+    LineRenderer lineRenderer;
+    bool checking = false;
+    public int finalDemoHypothese;
+    public List<int> validateList;
+    int index = 0;
+    int microIndex = 0;
+    public List<int> hypotheseresponses;
+    bool finished;
+    public List<string> quoteList;
+    bool createASticker;
 
-[System.Serializable]
-public class Hypotheses
-{
-    public List<GameObject> list;
-}
+    [System.Serializable]
+    public class Hypotheses
+    {
+        public List<GameObject> list;
+    }
 
-[System.Serializable]
-public class HypotheseList
-{
-    public List<Hypotheses> list;
-}
+    [System.Serializable]
+    public class HypotheseList
+    {
+        public List<Hypotheses> list;
+    }
 
-public HypotheseListT ListOfHypLists = new HypotheseListT();
+    public HypotheseListT ListOfHypLists = new HypotheseListT();
 
-[System.Serializable]
-public class HypothesesT
-{
-    public List<int> list;
-}
+    [System.Serializable]
+    public class HypothesesT
+    {
+        public List<int> list;
+    }
 
-[System.Serializable]
-public class HypotheseListT
-{
-    public List<HypothesesT> list;
-}
+    [System.Serializable]
+    public class HypotheseListT
+    {
+        public List<HypothesesT> list;
+    }
 
-public GameObject player;
-public GameObject stickerTemplate;
-bool thereIsAProfile = false;
+    [SerializeField]
+    private Text hypotheseAffichage;
+
+    public GameObject player;
+    public GameObject stickerTemplate;
+    bool thereIsAProfile = false;
     
     // Start is called before the first frame update
     void Start()
@@ -104,6 +108,43 @@ bool thereIsAProfile = false;
     void OnEnable()
     {
         //player.SetActive()
+        StartCoroutine(EnableTimer());
+    }
+
+    IEnumerator EnableTimer()
+    {
+        yield return new WaitForSeconds(0.1f);
+        CheckHypotheses();
+    }
+
+    void CheckHypotheses()
+    {
+        List<int> hypothesesPossibles = new List<int>();
+        List<int> indexOnBoard = new List<int>();
+
+        for(int i = 1; i < transform.childCount; i++)
+        {
+            indexOnBoard.Add(transform.GetChild(i).GetComponent<Sticker_Display>().sticker.index);
+        }
+
+        for(int i = 0; i < hypotheseresponses.Count; i++)
+        {
+            if(!hypothesesPossibles.Contains(hypotheseresponses[i]))
+            {
+                hypothesesPossibles.Add(hypotheseresponses[i]);
+                //hypothesesPossibles.Add(hypotheseresponses[i]);
+                for(int x = 0; x < ListOfHypLists.list[i].list.Count; x++)
+                {
+                    if(!indexOnBoard.Contains(ListOfHypLists.list[i].list[x]))
+                    {
+                        hypothesesPossibles.Remove(hypotheseresponses[i]);
+                    }
+                }
+            }
+        }
+        hypotheseAffichage.text = hypothesesPossibles.Count.ToString();
+        /*foreach(int index in hypothesesPossibles)
+        {Debug.Log(index);}*/
     }
     
     public void CheckComponent()
@@ -159,6 +200,7 @@ bool thereIsAProfile = false;
                     ListOfHypLists.list.RemoveAt(i);   
                     hypotheseresponses.RemoveAt(i);
                     quoteList.Clear();
+                    CheckHypotheses();
                 }
                 else if(notValidateStickersList.Count > 0)
                 {
