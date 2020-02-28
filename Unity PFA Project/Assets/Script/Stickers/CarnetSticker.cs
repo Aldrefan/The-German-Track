@@ -17,7 +17,7 @@ public class CarnetSticker : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(this.name);
+
         //colliderSize = transform.parent.GetComponent<GridLayoutGroup>().cellSize;
         colliderSize = transform.GetChild(0).GetComponent<RectTransform>().sizeDelta;
         GetComponent<BoxCollider2D>().size = colliderSize;
@@ -79,7 +79,7 @@ public class CarnetSticker : MonoBehaviour
         if (player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.name == "Phone")
         {
             player.GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
-            player.GetComponent<Interactions>().PNJContact.GetComponent<Phone>().GetInTouch(GetComponent<Sticker_Display>().sticker.index);
+            player.GetComponent<Interactions>().PNJContact.GetComponent<Phone>().GetInTouch(GetComponent<Sticker_Display>().sticker);
         }
     }
 
@@ -100,11 +100,8 @@ public class CarnetSticker : MonoBehaviour
         Phone phone = GameObject.FindObjectOfType<Phone>();
         if (player.GetComponent<Interactions>().PNJContact != null && player.GetComponent<Interactions>().PNJContact.name == "Phone")
         {
-            Debug.Log("Interact");
             if ( phone != null && phone.contactList.Contains(GetComponent<Sticker_Display>().sticker.index))
             {
-                Debug.Log("canBeCalled");
-
                 int index = default;
 
                 for (int i = 0; i < phone.contactList.Count; i++)
@@ -115,14 +112,9 @@ public class CarnetSticker : MonoBehaviour
                     }
 
                 }
-                Debug.Log(phone.transform.GetChild(index).name);
-
                 if ( player.GetComponent<Interactions>().PnjMet.Contains(phone.transform.GetChild(index).name) || phone.justStickerNeededList[index])
                 {
-                    Debug.Log("canCall");
-
                     this.transform.Find("PhoneIcon").gameObject.SetActive(true);
-
                 }
             }
         }
