@@ -81,6 +81,7 @@ public class TutoKenneth : MonoBehaviour
     public Tuto menu;
     public Tuto sprint;
     public Tuto board;
+    public bool stickertemp;
 
     [System.Serializable]
     public class Tuto
@@ -102,6 +103,10 @@ public class TutoKenneth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //define GO //cant because inac at start
+        //topBoxHelp = GameObject.Find("TopBoxHelp");
+
+
         if(wantSkipTuto) skipTuto();
         preventSave();
         canEsc = true;
@@ -109,6 +114,7 @@ public class TutoKenneth : MonoBehaviour
         if(canSave) allowSave();
 
         countStickers = player.GetComponent<PlayerMemory>().allStickers.Count;
+        stickertemp = false;
 
         //define tuto
         InitilisationTextsTuto();
@@ -205,6 +211,7 @@ public class TutoKenneth : MonoBehaviour
         if(tutoDone.moveDone && !tutoDone.interactionDone)
         {
             if(player.GetComponent<Interactions>().PNJContact != null
+            && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>()
             && player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().PNJName != "Clara Grey")
             {
                 checkTuto("tuto_interaction");
@@ -291,7 +298,6 @@ public class TutoKenneth : MonoBehaviour
         /*if(refNeeded.menu.activeInHierarchy
         && refNeeded.newSticker.transform.GetChild(0).GetComponent<Text>().color != new Color32(0,0,0,0))
         {
-            Debug.Log("nigtfdvc");
             //refNeeded.newSticker.GetComponent<SpriteRenderer>().color = new Vector4(255,255,255,0);
             //refNeeded.newSticker.transform.GetChild(0).gameObject.GetComponent<Text>().color = new Vector4(0,0,0,0);
             //refNeeded.newSticker.transform.GetChild(0).GetComponent<Text>().color = new Vector4(0,0,0,0);
@@ -323,6 +329,10 @@ public class TutoKenneth : MonoBehaviour
         yield return new WaitForSeconds(Time);
         refNeeded.newSticker.GetComponent<Animator>().speed = 0;
     }
+    IEnumerator WaitStickerEnd(float Time){
+        yield return new WaitForSeconds(Time);
+        refNeeded.newSticker.GetComponent<Animator>().speed = 1;
+    }
     IEnumerator WaitSprint(float Time){
         yield return new WaitForSeconds(Time);
         checkTuto("tuto_sprint_end");
@@ -339,6 +349,7 @@ public class TutoKenneth : MonoBehaviour
                 if(!tutoDone.dialogsDone)
                 {
                     openBoxHelp(dialogs, true);
+                    //tutoDone.dialogsDone = true;
                 }
                 break;
             //When pass the sentence 1
@@ -351,7 +362,7 @@ public class TutoKenneth : MonoBehaviour
 
             //When obtain Clara sticker
             case "tuto_newSticker":
-                if(!tutoDone.newStickerDone)
+                if(!tutoDone.newStickerDone && !stickertemp)
                 {
                     openBoxHelp(newSticker, true);
                     refNeeded.leftDialog.GetComponent<BoxCollider2D>().enabled = false;
@@ -361,6 +372,8 @@ public class TutoKenneth : MonoBehaviour
                     {
                         StartCoroutine(WaitSticker(1));
                         sticker = true;
+                        stickertemp = true;
+                        //tutoDone.newStickerDone = true;
                     }
                 }
                 break;
@@ -371,7 +384,7 @@ public class TutoKenneth : MonoBehaviour
                 refNeeded.leftDialog.GetComponent<BoxCollider2D>().enabled = true;
                 refNeeded.rightDialog.GetComponent<BoxCollider2D>().enabled = true;
                 player.GetComponent<Interactions>().enabled = true;
-                refNeeded.newSticker.GetComponent<Animator>().speed = 1;
+                StartCoroutine(WaitStickerEnd(1));
                 break;
 
 
@@ -605,17 +618,20 @@ public class TutoKenneth : MonoBehaviour
 
     public void closeBoxHelp()
     {
-        if(tempText.Count > 0) WriteText(tempText, tempTitle, tempBoxHelp);
+        if(tempText.Count > 0)
+        {
+            WriteText(tempText, tempTitle, tempBoxHelp);
+        }
         else
         {
             topBoxHelp.SetActive(false);
             midBoxHelp.SetActive(false);
             bottomBoxHelp.SetActive(false);
+            isInHelp = false;
+            checkTuto(currentTuto); //endingstring
+            currentTuto = null;
         }
 
-        isInHelp = false;
-        checkTuto(currentTuto);
-        currentTuto = null;
     }
 
     public void openBoardHelp()
