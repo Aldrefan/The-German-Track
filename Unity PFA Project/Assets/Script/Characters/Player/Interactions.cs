@@ -36,7 +36,7 @@ public class Interactions : MonoBehaviour
     #endregion
 
     #region State Informations
-    public enum State {Normal, InDialog, OnBoard, OnCarnet, InCinematic, Pause};
+    public enum State {Normal, InDialog, OnBoard, OnCarnet, InCinematic, Pause, Inactive};
     [SerializeField]
     public State state;
     #endregion
@@ -540,7 +540,7 @@ public class Interactions : MonoBehaviour
 
     IEnumerator TimerQuitDialog()
     {
-        state = State.Pause;
+        state = State.Inactive;
         yield return new WaitForSecondsRealtime(0.1f);
         if(state != State.InCinematic)
         {

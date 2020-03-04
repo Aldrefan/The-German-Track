@@ -53,6 +53,7 @@ public class Camera_Manager : MonoBehaviour
         }*/
         //player.GetComponent<MovementsPlayer>().enabled = false;// Initial
         GameObject.Find("Kenneth").GetComponent<SpriteRenderer>().enabled = false;
+        GameObject.Find("Kenneth").GetComponent<BoxCollider2D>().enabled = false;
         boardCanvas.SetActive(true);
         cameraBoard.enabled = true;
         cameraBoard.GetPosition();
@@ -80,6 +81,7 @@ public class Camera_Manager : MonoBehaviour
         //player.GetComponent<MovementsPlayer>().enabled = true;// Initial
         cameraFollow.actualRoom.SetActive(true);
         GameObject.Find("Kenneth").GetComponent<SpriteRenderer>().enabled = true;
+        GameObject.Find("Kenneth").GetComponent<BoxCollider2D>().enabled = true;
         boardCanvas.SetActive(false);
         cameraBoard.enabled = false;
         cameraFollow.enabled = true;
