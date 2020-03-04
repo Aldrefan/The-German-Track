@@ -2,56 +2,54 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class String_Manager : MonoBehaviour
 {
-public List<GameObject> pinList = new List<GameObject>();
-LineRenderer lineRenderer;
-bool checking = false;
-public int finalDemoHypothese;
-public List<int> validateList;
-int index = 0;
-int microIndex = 0;
-public List<int> hypotheseresponses;
-bool finished;
-public List<string> quoteList;
-bool createASticker;
+    public List<GameObject> pinList = new List<GameObject>();
+    LineRenderer lineRenderer;
+    bool checking = false;
+    public int finalDemoHypothese;
+    public List<int> validateList;
+    int index = 0;
+    int microIndex = 0;
+    public List<int> hypotheseresponses;
+    bool finished;
+    public List<string> quoteList;
+    bool createASticker;
 
-[System.Serializable]
-public class Hypotheses
-{
-    public List<GameObject> list;
-}
-
-[System.Serializable]
-public class HypotheseList
-{
-    public List<Hypotheses> list;
-}
-
-public HypotheseListT ListOfHypLists = new HypotheseListT();
-
-[System.Serializable]
-public class HypothesesT
-{
-    public List<int> list;
-}
-
-[System.Serializable]
-public class HypotheseListT
-{
-    public List<HypothesesT> list;
-}
-
-public GameObject player;
-public GameObject stickerTemplate;
-bool thereIsAProfile = false;
-    
-    // Start is called before the first frame update
-    void Start()
+    [System.Serializable]
+    public class Hypotheses
     {
-        
+        public List<GameObject> list;
     }
+
+    [System.Serializable]
+    public class HypotheseList
+    {
+        public List<Hypotheses> list;
+    }
+
+    public HypotheseListT ListOfHypLists = new HypotheseListT();
+
+    [System.Serializable]
+    public class HypothesesT
+    {
+        public List<int> list;
+    }
+
+    [System.Serializable]
+    public class HypotheseListT
+    {
+        public List<HypothesesT> list;
+    }
+
+    [SerializeField]
+    private Text hypotheseAffichage;
+
+    public GameObject player;
+    public GameObject stickerTemplate;
+    bool thereIsAProfile = false;
 
     void Awake()
     {
@@ -104,6 +102,102 @@ bool thereIsAProfile = false;
     void OnEnable()
     {
         //player.SetActive()
+        StartCoroutine(EnableTimer());
+    }
+
+    IEnumerator EnableTimer()
+    {
+        yield return new WaitForSeconds(0.1f);
+        CheckHypotheses();
+    }
+
+    void CheckHypotheses()
+    {
+        List<int> hypothesesPossibles = new List<int>();
+        List<int> indexOnBoard = new List<int>();
+        List<GameObject> stickers = new List<GameObject>();
+
+        for(int i = 1; i < transform.childCount; i++)
+        {
+            indexOnBoard.Add(transform.GetChild(i).GetComponent<Sticker_Display>().sticker.index);
+            stickers.Add(transform.GetChild(i).gameObject);
+            transform.GetChild(i).GetChild(0).GetComponent<Image>().material = null;
+            //stickers[i].transform.GetChild(0).GetComponent<Image>().material = null;
+        }
+
+        for(int i = 0; i < hypotheseresponses.Count; i++)
+        {
+            if(indexOnBoard.Contains(hypotheseresponses[i]))
+            {
+                hypotheseresponses.RemoveAt(i);
+                ListOfHypLists.list.RemoveAt(i);
+            }
+        }
+
+        for(int i = 0; i < hypotheseresponses.Count; i++)
+        {
+            if(!hypothesesPossibles.Contains(hypotheseresponses[i]))
+            {
+                hypothesesPossibles.Add(hypotheseresponses[i]);
+                for(int x = 0; x < ListOfHypLists.list[i].list.Count; x++)
+                {
+                    if(!indexOnBoard.Contains(ListOfHypLists.list[i].list[x]))
+                    {
+                        hypothesesPossibles.Remove(hypotheseresponses[i]);
+                        break;
+                    }
+                }
+            }
+        }
+        hypotheseAffichage.text = hypothesesPossibles.Count.ToString();
+
+        /*for(int x = 0; x < indexOnBoard.Count; x++)
+        {
+            for(int i = 0; i < ListOfHypLists.list.Count; i++)
+            {
+                if(ListOfHypLists.list[i].list.Contains(indexOnBoard[x]) && hypothesesPossibles.Contains(hypotheseresponses[i]))
+                {
+                    stickers[i].transform.GetChild(0).GetComponent<Image>().material = GetComponent<GlowSprite>().material;
+                }
+                else stickers[i].transform.GetChild(0).GetComponent<Image>().material = null;
+            }
+        }*/
+
+        /*for(int i = 0; i < hypotheseresponses.Count; i++)
+        {
+            if(hypothesesPossibles.Contains(hypotheseresponses[i]))
+            {
+                foreach(int index in indexOnBoard)
+                {
+                    if(ListOfHypLists.list[i].list.Contains(index))
+                    {
+                        stickers[i].transform.GetChild(0).GetComponent<Image>().material = GetComponent<GlowSprite>().material;
+                    }
+                }
+            }
+        }*/
+
+        foreach(GameObject stickerOnBoard in stickers)
+        {
+            for(int i = 0; i < ListOfHypLists.list.Count; i++)
+            {
+                if(hypothesesPossibles.Contains(hypotheseresponses[i]) && ListOfHypLists.list[i].list.Contains(stickerOnBoard.GetComponent<Sticker_Display>().sticker.index))
+                {
+                    stickerOnBoard.transform.GetChild(0).GetComponent<Image>().material = GetComponent<GlowSprite>().material;
+                }
+            }
+        }
+
+        /*foreach(int index in hypothesesPossibles)
+        {Debug.Log(index);}*/
+    }
+
+    void RemoveMaterial(int hypothesisToRemove)
+    {
+        for(int i = 0; i < ListOfHypLists.list[hypothesisToRemove].list.Count; i++)
+        {
+
+        }
     }
     
     public void CheckComponent()
@@ -159,6 +253,7 @@ bool thereIsAProfile = false;
                     ListOfHypLists.list.RemoveAt(i);   
                     hypotheseresponses.RemoveAt(i);
                     quoteList.Clear();
+                    CheckHypotheses();
                 }
                 else if(notValidateStickersList.Count > 0)
                 {
