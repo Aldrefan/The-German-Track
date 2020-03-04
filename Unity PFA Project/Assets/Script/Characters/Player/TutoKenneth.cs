@@ -276,6 +276,7 @@ public class TutoKenneth : MonoBehaviour
             if(refNeeded.board.activeSelf)
             {
                 checkTuto("tuto_board");
+                tutoDone.boardDone = true;
             }
         }
 
@@ -688,7 +689,7 @@ public class TutoKenneth : MonoBehaviour
         questions.keyText.Add("Tuto_Questions_Text");
 
         quitDialog.positionBoxHelp = Tuto.PositionBoxHelp.Mid;
-        quitDialog.canClose = true;
+        quitDialog.canClose = false;
         quitDialog.endingString = "quitDialog";
         quitDialog.keyTitle = "Tuto_QuitDialog_Title";
         quitDialog.keyText = new List<string>();
