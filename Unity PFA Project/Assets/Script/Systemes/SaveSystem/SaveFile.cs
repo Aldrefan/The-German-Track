@@ -23,7 +23,7 @@ public class SaveFile : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.K))
+        /*if (Input.GetKey(KeyCode.K))
         {
             Debug.Log("Saved");
             SaveGame();
@@ -31,7 +31,7 @@ public class SaveFile : MonoBehaviour
         if (Input.GetKey(KeyCode.L))
         {
             LoadGame();
-        }
+        }*/
     }
 
     public void SaveGame()
@@ -42,7 +42,7 @@ public class SaveFile : MonoBehaviour
     public void SaveSettings()
     {
         GameSaveSystem.SaveSettingsData();
-        Debug.Log("Settings Saved !");
+        //Debug.Log("Settings Saved !");
     }
 
     public void LoadGame()
