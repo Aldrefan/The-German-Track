@@ -117,9 +117,9 @@ public class SaveFile : MonoBehaviour
             gameCam.actualRoom.SetActive(false);
             gameCam.actualRoom = savedRoom;
             gameCam.actualRoom.SetActive(true);
-            gameCam.transform.position = KPlayer.transform.position - new Vector3(0,0, gameCam.actualRoom.GetComponent<SceneInformations>().distanceBetweenPlayerAndCamera) ;
+            gameCam.transform.position = gameSave.camPosition;
             gameCam.InitRoomLimit();
-            gameCam.actualRoom.GetComponent<SceneInformations>().PlaceCamera();
+            //gameCam.actualRoom.GetComponent<SceneInformations>().PlaceCamera();
         }
 
         GameObject levelLight = FindObjectOfType<DayNightLight>().gameObject;
@@ -253,7 +253,7 @@ public class SaveFile : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("Player"))
         {
             GameSaveSystem.GameDataInput(
-                Camera.main.GetComponent<CameraFollow>(),
+                Camera.main.GetComponent<CameraFollow>().gameObject,
                 FindObjectOfType<ActiveCharacterScript>(),
                 player,
                 FindObjectOfType<DayNightLight>(),

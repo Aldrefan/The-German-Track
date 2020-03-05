@@ -66,6 +66,18 @@ public class CameraFollow : MonoBehaviour
         plToBorderRight = Camera.main.ViewportToWorldPoint(new Vector3(1, 0.5f, -Camera.main.transform.position.z));
         plToBorderLeft = Camera.main.ViewportToWorldPoint(new Vector3(0, 0.5f, -Camera.main.transform.position.z));
 
+        
+        if(Vector3.Distance(new Vector3(Camera.main.transform.position.x, player.transform.position.y, Camera.main.transform.position.z), Camera.main.transform.position) > 1f)
+        {
+            if(actualRoom.GetComponent<RoomInformations>() && !actualRoom.GetComponent<RoomInformations>().staticCamera)
+            {
+                transform.position = Vector3.Lerp(transform.position, new Vector3(Camera.main.transform.position.x, player.transform.position.y + YOffset, Camera.main.transform.position.z), smoothSpeed);
+            }
+            if (actualRoom.GetComponent<SceneInformations>() && !actualRoom.GetComponent<SceneInformations>().fixedCamera)
+            {
+                transform.position = Vector3.Lerp(transform.position, new Vector3(Camera.main.transform.position.x, player.transform.position.y + YOffset, Camera.main.transform.position.z), smoothSpeed);
+            }
+        }
         if (plToBorderLeft.x < leftBorder.x)
         {
             if (player.transform.position.x > Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, -Camera.main.transform.position.z)).x)
