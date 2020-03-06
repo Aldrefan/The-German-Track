@@ -50,6 +50,7 @@ public class String_Manager : MonoBehaviour
     public GameObject player;
     public GameObject stickerTemplate;
     bool thereIsAProfile = false;
+    List<int> indexOnBoard = new List<int>();
 
     void Awake()
     {
@@ -107,7 +108,7 @@ public class String_Manager : MonoBehaviour
 
     IEnumerator EnableTimer()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.001f);
         CheckHypotheses();
     }
 
@@ -122,6 +123,34 @@ public class String_Manager : MonoBehaviour
             indexOnBoard.Add(transform.GetChild(i).GetComponent<Sticker_Display>().sticker.index);
             stickers.Add(transform.GetChild(i).gameObject);
             transform.GetChild(i).GetChild(0).GetComponent<Image>().material = null;
+            //stickers[i].transform.GetChild(0).GetComponent<Image>().material = null;
+        }
+        for(int i = 0; i < GetComponent<Piles>().pileProfiles.childCount; i++)
+        {
+            indexOnBoard.Add(GetComponent<Piles>().pileProfiles.GetChild(i).GetComponent<Sticker_Display>().sticker.index);
+            stickers.Add(GetComponent<Piles>().pileProfiles.GetChild(i).gameObject);
+            GetComponent<Piles>().pileProfiles.GetChild(i).GetChild(0).GetComponent<Image>().material = null;
+            //stickers[i].transform.GetChild(0).GetComponent<Image>().material = null;
+        }
+        for(int i = 0; i < GetComponent<Piles>().pileIndices.childCount; i++)
+        {
+            indexOnBoard.Add(GetComponent<Piles>().pileIndices.GetChild(i).GetComponent<Sticker_Display>().sticker.index);
+            stickers.Add(GetComponent<Piles>().pileIndices.GetChild(i).gameObject);
+            GetComponent<Piles>().pileIndices.GetChild(i).GetChild(0).GetComponent<Image>().material = null;
+            //stickers[i].transform.GetChild(0).GetComponent<Image>().material = null;
+        }
+        for(int i = 0; i < GetComponent<Piles>().pileFaits.childCount; i++)
+        {
+            indexOnBoard.Add(GetComponent<Piles>().pileFaits.GetChild(i).GetComponent<Sticker_Display>().sticker.index);
+            stickers.Add(GetComponent<Piles>().pileFaits.GetChild(i).gameObject);
+            GetComponent<Piles>().pileFaits.GetChild(i).GetChild(0).GetComponent<Image>().material = null;
+            //stickers[i].transform.GetChild(0).GetComponent<Image>().material = null;
+        }
+        for(int i = 0; i < GetComponent<Piles>().pileHypothèses.childCount; i++)
+        {
+            indexOnBoard.Add(GetComponent<Piles>().pileHypothèses.GetChild(i).GetComponent<Sticker_Display>().sticker.index);
+            stickers.Add(GetComponent<Piles>().pileHypothèses.GetChild(i).gameObject);
+            GetComponent<Piles>().pileHypothèses.GetChild(i).GetChild(0).GetComponent<Image>().material = null;
             //stickers[i].transform.GetChild(0).GetComponent<Image>().material = null;
         }
 
@@ -151,32 +180,6 @@ public class String_Manager : MonoBehaviour
         }
         hypotheseAffichage.text = hypothesesPossibles.Count.ToString();
 
-        /*for(int x = 0; x < indexOnBoard.Count; x++)
-        {
-            for(int i = 0; i < ListOfHypLists.list.Count; i++)
-            {
-                if(ListOfHypLists.list[i].list.Contains(indexOnBoard[x]) && hypothesesPossibles.Contains(hypotheseresponses[i]))
-                {
-                    stickers[i].transform.GetChild(0).GetComponent<Image>().material = GetComponent<GlowSprite>().material;
-                }
-                else stickers[i].transform.GetChild(0).GetComponent<Image>().material = null;
-            }
-        }*/
-
-        /*for(int i = 0; i < hypotheseresponses.Count; i++)
-        {
-            if(hypothesesPossibles.Contains(hypotheseresponses[i]))
-            {
-                foreach(int index in indexOnBoard)
-                {
-                    if(ListOfHypLists.list[i].list.Contains(index))
-                    {
-                        stickers[i].transform.GetChild(0).GetComponent<Image>().material = GetComponent<GlowSprite>().material;
-                    }
-                }
-            }
-        }*/
-
         foreach(GameObject stickerOnBoard in stickers)
         {
             for(int i = 0; i < ListOfHypLists.list.Count; i++)
@@ -190,14 +193,6 @@ public class String_Manager : MonoBehaviour
 
         /*foreach(int index in hypothesesPossibles)
         {Debug.Log(index);}*/
-    }
-
-    void RemoveMaterial(int hypothesisToRemove)
-    {
-        for(int i = 0; i < ListOfHypLists.list[hypothesisToRemove].list.Count; i++)
-        {
-
-        }
     }
     
     public void CheckComponent()

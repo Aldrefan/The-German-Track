@@ -16,6 +16,7 @@ public class Camera_Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        boardCanvas = CanvasManager.CManager.GetCanvas("Board_FIX");
         cameraBoard = GetComponent<Camera_BoardMovements>();
         cameraFollow = GetComponent<CameraFollow>();
         player = GameObject.FindGameObjectWithTag("Player");
@@ -106,18 +107,18 @@ public class Camera_Manager : MonoBehaviour
     public void OnCarnet()
     {
         //GetComponent<CameraFollow>().enabled = false;
-        player.GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).gameObject.SetActive(true);
+        CanvasManager.CManager.GetCanvas("Dialogue").transform.GetChild(5).gameObject.SetActive(true);
         //floatingCanvas.transform.GetChild(3).gameObject.SetActive(true);// Inital
-        player.GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(2).GetComponent<Animator>().SetBool("ClickOn", true);
+        CanvasManager.CManager.GetCanvas("Dialogue").transform.GetChild(2).GetComponent<Animator>().SetBool("ClickOn", true);
         //floatingCanvas.transform.GetChild(floatingCanvas.transform.childCount - 1).GetComponent<Animator>().SetBool("ClickOn", true);// Initial
     }
 
     public void NotOnCarnet()
     {
         //GetComponent<CameraFollow>().enabled = true;
-        player.GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).gameObject.SetActive(false);
+        CanvasManager.CManager.GetCanvas("Dialogue").transform.GetChild(5).gameObject.SetActive(false);
         //floatingCanvas.transform.GetChild(3).gameObject.SetActive(false);// Initial
-        player.GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(2).GetComponent<Animator>().SetBool("ClickOn", false);
+        CanvasManager.CManager.GetCanvas("Dialogue").transform.GetChild(2).GetComponent<Animator>().SetBool("ClickOn", false);
         //floatingCanvas.transform.GetChild(floatingCanvas.transform.childCount - 1).GetComponent<Animator>().SetBool("ClickOn", false);// Initial
     }
 }

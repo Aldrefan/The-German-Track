@@ -34,6 +34,21 @@ public class CanvasManager : MonoBehaviour
         
     }
 
+    public GameObject GetCanvas(string canvasName)
+    {
+        foreach(CharactersInterfaces character in charactersInterfaces)
+        {
+            foreach(CanvasInfos canvas in character.CanvasList)
+            {
+                if(canvas.CanvasName == canvasName)
+                {
+                    return canvas.CanvasGO;
+                }
+            }
+        }
+        return null;
+    }
+
     // Update is called once per frame
     /*void Update()
     {

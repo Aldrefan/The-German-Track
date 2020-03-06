@@ -77,14 +77,15 @@ public class PNJ : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        carnet = ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(2);
-        DialogCanvas = ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<Interactions>().dialAndBookCanvas;
-        leftPanel = ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(4).gameObject;
-        rightPanel = ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<Interactions>().dialAndBookCanvas.transform.GetChild(5).gameObject;
-        if (GameObject.Find("Ken_Dial_Book_FlCanvas") != null)
+        carnet = CanvasManager.CManager.GetCanvas("CarnetUI").transform;
+        //DialogCanvas = ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<Interactions>().dialAndBookCanvas;
+        DialogCanvas = CanvasManager.CManager.GetCanvas("Dialogue");
+        leftPanel = CanvasManager.CManager.GetCanvas("Dialogue").transform.GetChild(4).gameObject;
+        rightPanel = CanvasManager.CManager.GetCanvas("Dialogue").transform.GetChild(5).gameObject;
+        /*if (GameObject.Find("Ken_Dial_Book_FlCanvas") != null)
         {
             questionPanel = DialogCanvas.GetComponent<Ken_Canvas_Infos>().questionPanel;
-        }
+        }*/
 
     }
 

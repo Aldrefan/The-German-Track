@@ -35,6 +35,7 @@ public class Camera_BoardMovements : MonoBehaviour
 
     public void GetPosition()
     {
+        boardCanvas = CanvasManager.CManager.GetCanvas("Board_FIX").transform;
         boardCanvas.transform.position = new Vector3(transform.position.x, boardCanvas.transform.position.y, boardCanvas.transform.position.z);
         startPosition = transform.position;
     }
