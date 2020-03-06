@@ -25,6 +25,8 @@ public class GameData
     public List<Vector3> stickersPositionOnBoard = new List<Vector3>();
     //CameraFollow -> MainCamera
     public string actualRoomName;
+    //CameraPos
+    public Vector3 camPosition;
     //ActiveCharacterScript -> GameObject
     public List<CharacterPosition> playableCharacters = new List<CharacterPosition>();
     //GoalsList
@@ -34,13 +36,14 @@ public class GameData
     public List<StickersGivenToPNJ.PNJMemory> pnjStickerManager = new List<StickersGivenToPNJ.PNJMemory>();
 
 
-    public GameData(CameraFollow camScript, ActiveCharacterScript currentCharacters, GameObject characterToPlay, DayNightLight directionalLight, CarnetGoal goalsObject, StickersGivenToPNJ newStrickerManager)
+    public GameData(GameObject mainCamera, ActiveCharacterScript currentCharacters, GameObject characterToPlay, DayNightLight directionalLight, CarnetGoal goalsObject, StickersGivenToPNJ newStrickerManager)
     {
         currentLevel = SceneManager.GetActiveScene().name;
 
-        if (camScript != null && currentCharacters != null)
+        if (mainCamera != null && currentCharacters != null)
         {
-            actualRoomName = camScript.actualRoom.name;
+            actualRoomName = mainCamera.GetComponent<CameraFollow>().actualRoom.name;
+            camPosition = mainCamera.transform.position;
 
             for (int i = 0; i < currentCharacters.playableCharactersList.Count; i++)
             {

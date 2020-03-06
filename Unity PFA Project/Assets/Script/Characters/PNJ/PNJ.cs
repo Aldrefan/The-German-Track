@@ -360,7 +360,8 @@ public class PNJ : MonoBehaviour
                     //player.GetComponent<PlayerMemory>().stickerIndexCarnetList.Add(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList[i]);
                     //player.GetComponent<PlayerMemory>().stickerIndexBoardList.Add(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList[i]);
                 }
-                allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList.RemoveRange(0, allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList.Count);
+                //allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList.RemoveRange(0, allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList.Count);
+                allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].newStickerIndexList.Remove(i);
             }
         }
 

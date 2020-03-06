@@ -23,7 +23,7 @@ public class SaveFile : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.K))
+        /*if (Input.GetKey(KeyCode.K))
         {
             Debug.Log("Saved");
             SaveGame();
@@ -31,7 +31,7 @@ public class SaveFile : MonoBehaviour
         if (Input.GetKey(KeyCode.L))
         {
             LoadGame();
-        }
+        }*/
     }
 
     public void SaveGame()
@@ -42,7 +42,7 @@ public class SaveFile : MonoBehaviour
     public void SaveSettings()
     {
         GameSaveSystem.SaveSettingsData();
-        Debug.Log("Settings Saved !");
+        //Debug.Log("Settings Saved !");
     }
 
     public void LoadGame()
@@ -117,9 +117,9 @@ public class SaveFile : MonoBehaviour
             gameCam.actualRoom.SetActive(false);
             gameCam.actualRoom = savedRoom;
             gameCam.actualRoom.SetActive(true);
-            gameCam.transform.position = KPlayer.transform.position - new Vector3(0,0, gameCam.actualRoom.GetComponent<SceneInformations>().distanceBetweenPlayerAndCamera) ;
+            gameCam.transform.position = gameSave.camPosition;
             gameCam.InitRoomLimit();
-            gameCam.actualRoom.GetComponent<SceneInformations>().PlaceCamera();
+            //gameCam.actualRoom.GetComponent<SceneInformations>().PlaceCamera();
         }
 
         GameObject levelLight = FindObjectOfType<DayNightLight>().gameObject;
@@ -253,7 +253,7 @@ public class SaveFile : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("Player"))
         {
             GameSaveSystem.GameDataInput(
-                Camera.main.GetComponent<CameraFollow>(),
+                Camera.main.GetComponent<CameraFollow>().gameObject,
                 FindObjectOfType<ActiveCharacterScript>(),
                 player,
                 FindObjectOfType<DayNightLight>(),
