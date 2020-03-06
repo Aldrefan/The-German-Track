@@ -12,7 +12,7 @@ public static class GameSaveSystem
     public static readonly string SAVE_FOLDER = Application.dataPath + "/Saves/";
 
     //GameDataValue
-    static CameraFollow camScript;
+    static GameObject camObject;
     static ActiveCharacterScript currentCharacters;
     static GameObject actualPlayer;
     static DayNightLight directionalLight;
@@ -34,7 +34,7 @@ public static class GameSaveSystem
 
     public static void SaveGameData()
     {
-        GameData saveObject = new GameData(camScript, currentCharacters, actualPlayer, directionalLight, goalFrame, stickerManager);
+        GameData saveObject = new GameData(camObject, currentCharacters, actualPlayer, directionalLight, goalFrame, stickerManager);
         string json = JsonUtility.ToJson(saveObject);
 
         File.WriteAllText(SAVE_FOLDER + "/gameSave.tgt", json);
@@ -98,9 +98,9 @@ public static class GameSaveSystem
         return gameActualLevel;
     }
 
-    public static void GameDataInput(CameraFollow newCamScript, ActiveCharacterScript newCurrentCharacters, GameObject newPlayer, DayNightLight newDirLight, CarnetGoal newGoalFrame, StickersGivenToPNJ newStickerManager)
+    public static void GameDataInput(GameObject mainCamera, ActiveCharacterScript newCurrentCharacters, GameObject newPlayer, DayNightLight newDirLight, CarnetGoal newGoalFrame, StickersGivenToPNJ newStickerManager)
     {
-        camScript = newCamScript;
+        camObject = mainCamera;
         currentCharacters = newCurrentCharacters;
         actualPlayer = newPlayer;
         directionalLight = newDirLight;
