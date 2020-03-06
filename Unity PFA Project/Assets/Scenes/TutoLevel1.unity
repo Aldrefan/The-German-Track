@@ -1124,12 +1124,12 @@ PrefabInstance:
         type: 3}
       propertyPath: boardCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2108705923}
     - target: {fileID: 6252624642967059761, guid: e7c94aa2610c9844293398dde8a0fbf7,
         type: 3}
       propertyPath: boardCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 462948376}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7c94aa2610c9844293398dde8a0fbf7, type: 3}
 --- !u!1 &324868918
@@ -1951,7 +1951,7 @@ PrefabInstance:
     - target: {fileID: 1456610460, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 345647822}
     - target: {fileID: 8960208535500947351, guid: 883065d35bf8001418b4f638f428c3ca,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2022,7 +2022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &686893576
 Transform:
   m_ObjectHideFlags: 0
@@ -2413,7 +2413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &819234475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4103,6 +4103,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ken_Dial_Book_FlCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2488211256309654760, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8891736062753409463, guid: 33ddad3a370b0824b848ab3b505bf613,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4267,11 +4272,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 2488211256309654760, guid: 33ddad3a370b0824b848ab3b505bf613,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9174854751271366671, guid: 33ddad3a370b0824b848ab3b505bf613,
         type: 3}
       propertyPath: m_IsActive
@@ -4314,6 +4314,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
+--- !u!224 &987299312 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1149932897, guid: 33ddad3a370b0824b848ab3b505bf613,
+    type: 3}
+  m_PrefabInstance: {fileID: 987299311}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &987299313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8891736063403011963, guid: 33ddad3a370b0824b848ab3b505bf613,
+    type: 3}
+  m_PrefabInstance: {fileID: 987299311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &989018155
 GameObject:
   m_ObjectHideFlags: 0
@@ -4403,7 +4415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1016060583
 Transform:
   m_ObjectHideFlags: 0
@@ -13568,7 +13580,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 345647822}
     - target: {fileID: 1003461861333923800, guid: 2adb0caa31d59b841b9fc46dfe0513c4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -15618,17 +15630,17 @@ PrefabInstance:
         type: 3}
       propertyPath: boardCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2108705923}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: newSticker
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 987299313}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: carnet
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 987299312}
     - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: stickerIndexCarnetList.Array.data[0]
@@ -16422,7 +16434,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2074927307}
   - component: {fileID: 2074927306}
-  - component: {fileID: 2074927305}
   m_Layer: 0
   m_Name: KennethBureau
   m_TagString: Untagged
@@ -16430,18 +16441,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2074927305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074927304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44ea12c6027539a4aa82cfa391c47771, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2074927306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16646,9 +16645,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 345647822}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+--- !u!224 &2108705923 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6555912083691328245, guid: 95356b6030096ed40b6d2763e348a71a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2108705922}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2140318131
 GameObject:
   m_ObjectHideFlags: 0

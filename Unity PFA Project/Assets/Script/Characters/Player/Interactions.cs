@@ -17,7 +17,6 @@ public class Interactions : MonoBehaviour
     public GameObject PNJContact;
     GameObject oldPNJContact;
     public bool isInDialog;
-    GameObject dialogueManager;
     bool boardIsNear;
     bool onBook = false;
     public Transform carnet;
@@ -29,8 +28,13 @@ public class Interactions : MonoBehaviour
     public bool canOpenCarnet = true;
     public List<string> PnjMet;
     public bool isInCinematic;
-    public GameObject boardCanvas;
-    public GameObject dialAndBookCanvas;
+    [SerializeField]
+    string boardCanvasName;
+    GameObject boardCanvas;
+
+    [SerializeField]
+    string dialogCanvasName;
+    GameObject dialAndBookCanvas;
     public bool isOnTooltip;
     bool talk;
     #endregion
@@ -52,8 +56,9 @@ public class Interactions : MonoBehaviour
 
     void Start()
     {
-        dialogueManager = GameObject.Find("DialogueManager");
         rb2d = GetComponent<Rigidbody2D>();
+        dialAndBookCanvas = CanvasManager.CManager.GetCanvas(dialogCanvasName);
+        boardCanvas = CanvasManager.CManager.GetCanvas(boardCanvasName);
         //animator = GetComponent<Animator>();
     }
 
@@ -191,7 +196,7 @@ public class Interactions : MonoBehaviour
     public void OpenBookExe()
     {
         //Camera.main.GetComponent<Camera_Manager>().OnCarnet();
-        dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.SetActive(true);
+        CanvasManager.CManager.GetCanvas("CarnetPanel").gameObject.SetActive(true);
         carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);
         GetComponent<PlayerMemory>().CheckStickersCarnet();
         ChangeState(State.OnCarnet);
@@ -213,7 +218,7 @@ public class Interactions : MonoBehaviour
     }
     void ChangeLineOfDialog()
     {
-        if(Input.GetButtonDown("Interaction") && !dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.activeInHierarchy)
+        if(Input.GetButtonDown("Interaction") && !CanvasManager.CManager.GetCanvas("CarnetPanel").activeInHierarchy)
         {
             if(dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().leftPanel.activeInHierarchy || dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().rightPanel.activeInHierarchy)
             {
@@ -249,7 +254,7 @@ public class Interactions : MonoBehaviour
     {
         if (dialAndBookCanvas != null)
         {
-            if (Input.GetButtonDown("Interaction") && PNJContact != null && !dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.activeInHierarchy)
+            if (Input.GetButtonDown("Interaction") && PNJContact != null && !CanvasManager.CManager.GetCanvas("CarnetPanel").gameObject.activeInHierarchy)
             {
                 if (PNJContact.tag == "PNJinteractable" || PNJContact.tag == "Item" || PNJContact.tag == "Interaction")
                 {
@@ -305,7 +310,7 @@ public class Interactions : MonoBehaviour
     public void CloseBookExe()
     {
         //Camera.main.GetComponent<Camera_Manager>().NotOnCarnet();
-        dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.SetActive(false);
+        CanvasManager.CManager.GetCanvas("CarnetPanel").gameObject.SetActive(false);
         //dialAndBookCanvas.transform.GetChild(dialAndBookCanvas.transform.childCount - 1).gameObject.SetActive(false);
         carnetUI.GetComponent<Animator>().SetBool("ClickOn", false);
         if(isInDialog)
@@ -339,10 +344,10 @@ public class Interactions : MonoBehaviour
         {
             case State.InCinematic:
             isInCinematic = false;
-            dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.SetActive(false);
+            CanvasManager.CManager.GetCanvas("CarnetPanel").gameObject.SetActive(false);
             carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);
             carnetUI.GetComponent<Animator>().SetBool("InDialog", false);
-            dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.SetActive(false);
+            //dialAndBookCanvas.GetComponent<Ken_Canvas_Infos>().carnet.transform.parent.gameObject.SetActive(false);
             state = State.InCinematic;
             break;
 

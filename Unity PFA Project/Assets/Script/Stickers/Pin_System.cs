@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pin_System : MonoBehaviour
 {
@@ -92,6 +93,10 @@ public class Pin_System : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Mouse0))
         {
+            if(transform.parent.GetComponent<HorizontalLayoutGroup>())
+            {
+                transform.parent = CanvasManager.CManager.GetCanvas("Board_FIX").transform;
+            }
             screenPoint = Input.mousePosition;
             screenPoint.z = transform.parent.position.z + 9;
             Camera camera = Camera.main;
@@ -163,7 +168,7 @@ public class Pin_System : MonoBehaviour
 
     public void OnMouseUp()
     {
-        if(Time.realtimeSinceStartup - time < 0.1)
+        if(Time.realtimeSinceStartup - time < 0.15)
         {
             GameObject newPin = Instantiate(pin, transform);
             newPin.transform.localPosition = new Vector3(0, 25, 0);

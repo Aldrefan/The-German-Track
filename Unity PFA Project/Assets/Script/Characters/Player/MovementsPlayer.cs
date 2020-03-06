@@ -13,8 +13,7 @@ public class MovementsPlayer : MonoBehaviour {
     public bool canRun;
     Rigidbody2D rb2d;
     Animator animator;
-    [SerializeField]
-    private bool canMove = false;
+    public bool canMove = false;
 
     [HideInInspector]
     public bool inRespawn;
@@ -24,10 +23,6 @@ public class MovementsPlayer : MonoBehaviour {
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        if(this.name == "Kenneth")
-        {
-            StartCoroutine(StartTimerBeforeCheckActivation());
-        }
     }
 
     // Update is called once per frame
@@ -113,18 +108,5 @@ public class MovementsPlayer : MonoBehaviour {
     public void PlaySound()
     {
         GetComponent<AudioSource>().Play();
-    }
-
-    IEnumerator StartTimerBeforeCheckActivation()
-    {
-        if(GetComponent<Interactions>().PnjMet.Contains("Clara"))
-        {
-            canMove = true;
-        }
-        else 
-        {
-            yield return new WaitForSeconds(1);
-            canMove = true;
-        }
     }
 }
