@@ -131,8 +131,9 @@ public class Clara_Cinematic : MonoBehaviour
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if(player.GetComponent<Interactions>().state == Interactions.State.OnBoard)
             {
-                player.GetComponent<Interactions>().dialAndBookCanvas.SetActive(true);
-                player.GetComponent<Interactions>().boardCanvas.SetActive(false);
+                CanvasManager.CManager.GetCanvas("Dialogue").SetActive(true);
+                CanvasManager.CManager.GetCanvas("Board_FL").SetActive(false);
+                //player.GetComponent<Interactions>().boardCanvas.SetActive(false);
             }
             if(annexInformation[action].objectToMove == null)
             {
