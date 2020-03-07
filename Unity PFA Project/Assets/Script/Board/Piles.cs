@@ -6,23 +6,20 @@ using UnityEngine.UI;
 public class Piles : MonoBehaviour
 {
     public Transform pileProfiles;
-    Vector2 pileProfilesBounds;
 
     public Transform pileIndices;
-    Vector2 pileIndicesBounds;
 
     public Transform pileFaits;
-    Vector2 pileFaitsBounds;
 
     public Transform pileHypothèses;
-    Vector2 pileHypothesesBounds;
 
-    public enum MouseOverAPile{None, Profiles, Indices, Faits, Hypothèses}
-    public MouseOverAPile mouseOverState;
-
-    void OnEnable()
+    void Update()
     {
-        //pileProfilesBounds = Vector2(pileProfiles.GetComponent<RectTransform>().)
+        /*if(Input.mousePosition.x > pileProfiles.GetComponent<BoxCollider2D>().bounds.min.x && Input.mousePosition.y > pileProfiles.GetComponent<BoxCollider2D>().bounds.min.y && Input.mousePosition.x < pileProfiles.GetComponent<BoxCollider2D>().bounds.max.x && Input.mousePosition.y < pileProfiles.GetComponent<BoxCollider2D>().bounds.max.y)
+        {
+            mouseOverState = MouseOverAPile.Profiles;
+        }
+        else mouseOverState = MouseOverAPile.None;*/
     }
 
     public void CheckTypeAndSort(GameObject stickerToCheckAndSort)
@@ -73,17 +70,21 @@ public class Piles : MonoBehaviour
     public void UnwrapProfiles()
     {
         pileProfiles.GetComponent<Animator>().SetBool("Unwrap", !pileProfiles.GetComponent<Animator>().GetBool("Unwrap"));
+        GameObject.Find("Profile_Button").transform.localScale *= -1;
     }
     public void UnwrapIndices()
     {
         pileIndices.GetComponent<Animator>().SetBool("Unwrap", !pileIndices.GetComponent<Animator>().GetBool("Unwrap"));
+        GameObject.Find("Indices_Button").transform.localScale *= -1;
     }
     public void UnwrapFaits()
     {
         pileFaits.GetComponent<Animator>().SetBool("Unwrap", !pileFaits.GetComponent<Animator>().GetBool("Unwrap"));
+        GameObject.Find("Faits_Button").transform.localScale *= -1;
     }
     public void UnwrapHypotheses()
     {
         pileHypothèses.GetComponent<Animator>().SetBool("Unwrap", !pileHypothèses.GetComponent<Animator>().GetBool("Unwrap"));
+        GameObject.Find("Hypothèses_Button").transform.localScale *= -1;
     }
 }

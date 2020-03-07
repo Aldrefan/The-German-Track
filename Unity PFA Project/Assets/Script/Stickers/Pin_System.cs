@@ -175,7 +175,46 @@ public class Pin_System : MonoBehaviour
             GameObject.FindObjectOfType<String_Manager>().AddPin(gameObject);
             click = false;
         }
-        else click = false;
+        else
+        {
+            click = false;
+            if(Vector3.Distance(screenPoint, Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileProfiles.position)) < 110 && !CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileProfiles.GetComponent<Animator>().GetBool("Unwrap") && GetComponent<Sticker_Display>().sticker.type == Sticker.Type.Profile)
+            {
+                transform.SetParent(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileProfiles);
+            }
+            else if(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileProfiles.GetComponent<Animator>().GetBool("Unwrap") && screenPoint.y > Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileProfiles.position).y - 50 && screenPoint.y < Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileProfiles.position).y + 50 && GetComponent<Sticker_Display>().sticker.type == Sticker.Type.Profile)
+            {
+                transform.SetParent(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileProfiles);
+            }
+
+            if(Vector3.Distance(screenPoint, Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileIndices.position)) < 110 && !CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileIndices.GetComponent<Animator>().GetBool("Unwrap") && GetComponent<Sticker_Display>().sticker.type == Sticker.Type.Clue)
+            {
+                transform.SetParent(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileIndices);
+            }
+            else if(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileIndices.GetComponent<Animator>().GetBool("Unwrap") && screenPoint.y > Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileIndices.position).y - 50 && screenPoint.y < Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileIndices.position).y + 50 && GetComponent<Sticker_Display>().sticker.type == Sticker.Type.Clue)
+            {
+                transform.SetParent(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileIndices);
+            }
+
+            if(Vector3.Distance(screenPoint, Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileFaits.position)) < 110 && !CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileFaits.GetComponent<Animator>().GetBool("Unwrap") && GetComponent<Sticker_Display>().sticker.type == Sticker.Type.Fact)
+            {
+                transform.SetParent(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileFaits);
+            }
+            else if(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileFaits.GetComponent<Animator>().GetBool("Unwrap") && screenPoint.y > Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileFaits.position).y - 50 && screenPoint.y < Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileFaits.position).y + 50 && GetComponent<Sticker_Display>().sticker.type == Sticker.Type.Fact)
+            {
+                transform.SetParent(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileProfiles);
+            }
+
+            if(Vector3.Distance(screenPoint, Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileHypothèses.position)) < 110 && !CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileHypothèses.GetComponent<Animator>().GetBool("Unwrap")  && GetComponent<Sticker_Display>().sticker.type == Sticker.Type.Hypothesis)
+            {
+                transform.SetParent(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileHypothèses);
+            }
+            else if(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileHypothèses.GetComponent<Animator>().GetBool("Unwrap") && screenPoint.y > Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileHypothèses.position).y - 50 && screenPoint.y < Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileHypothèses.position).y + 50 && GetComponent<Sticker_Display>().sticker.type == Sticker.Type.Hypothesis)
+            {
+                transform.SetParent(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileHypothèses);
+            }
+            
+        }
     }
 
     public void Drag()

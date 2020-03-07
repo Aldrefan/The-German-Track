@@ -1,7 +1,9 @@
 fileFormatVersion: 2
-guid: 61917a0261936a24bb519cd68a240310
+guid: aa619509e27ea654ebbefc8b26192fa2
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: "fl\xE8chesuitedialogue - Copie_0"
+    21300002: "fl\xE8chesuitedialogue - Copie_1"
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -82,11 +84,51 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "fl\xE8chesuitedialogue - Copie_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d333ba4018684d4090a93cebb56e0a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "fl\xE8chesuitedialogue - Copie_1"
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2185a123a0e9c31499c367d079b0fc55
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3ac14147e6cd5684fb5ea4467548122a
+    spriteID: 697b34258f988d24b87eb026a6a70088
     vertices: []
     indices: 
     edges: []

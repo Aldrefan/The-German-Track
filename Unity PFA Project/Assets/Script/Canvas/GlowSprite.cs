@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GlowSprite : MonoBehaviour
-{    
-    [SerializeField]
+{
     bool glow;
     public Material material;
     float glowPosition = 0;
@@ -63,7 +62,7 @@ public class GlowSprite : MonoBehaviour
 
     IEnumerator DelayBetweenGlow()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(3);
         Glow();
         StartCoroutine(DelayBetweenGlow());
     }
