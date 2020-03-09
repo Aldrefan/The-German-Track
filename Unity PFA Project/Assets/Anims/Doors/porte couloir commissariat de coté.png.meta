@@ -1,10 +1,11 @@
 fileFormatVersion: 2
-guid: 9afc1451cb3baf046b2a14c765b1a861
+guid: 1202bc9900e36044893137a3d9c7dda2
 TextureImporter:
   fileIDToRecycleName:
-    21300000: "Porte d'entr\xE9e de kurt_2"
-    21300002: "Porte d'entr\xE9e de kurt_0"
-    21300004: "Porte d'entr\xE9e de kurt_1"
+    21300000: "porte couloir commissariat de cot\xE9_2"
+    21300002: "porte couloir commissariat de cot\xE9_1"
+    21300004: "porte couloir commissariat de cot\xE9_1"
+    21300006: "porte couloir commissariat de cot\xE9_3"
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -87,13 +88,33 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Porte d'entr\xE9e de kurt_2"
+      name: "porte couloir commissariat de cot\xE9_1"
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 15
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1de6cbca3239c4da68ea2e795e8a87
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "porte couloir commissariat de cot\xE9_3"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 41
-        height: 72
+        width: 15
+        height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -101,19 +122,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbf36eb4b3e5160418399f599f468696
+      spriteID: 6e982bacc572e2548bd726a62b24eef2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Porte d'entr\xE9e de kurt_0"
+      name: "porte couloir commissariat de cot\xE9_2"
       rect:
         serializedVersion: 2
-        x: 51
+        x: 40
         y: 0
-        width: 41
-        height: 72
+        width: 15
+        height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,27 +142,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2a1bd7c67a4e8f4dbc5afc05df32377
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Porte d'entr\xE9e de kurt_1"
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 0
-        width: 41
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 589783c5fc4b20440bdc5ee97627e6bb
+      spriteID: d57b858f5dc5c704780f9515dffe771c
       vertices: []
       indices: 
       edges: []
@@ -149,7 +150,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 43583d496e195ed4591a55d955bf4176
+    spriteID: e38f159e9b770eb4190d1c331b8609a2
     vertices: []
     indices: 
     edges: []
