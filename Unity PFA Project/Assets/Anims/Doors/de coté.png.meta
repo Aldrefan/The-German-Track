@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9afc1451cb3baf046b2a14c765b1a861
+guid: ada2e02bbc088724383aac9851e12f2e
 TextureImporter:
   fileIDToRecycleName:
-    21300000: "Porte d'entr\xE9e de kurt_2"
-    21300002: "Porte d'entr\xE9e de kurt_0"
-    21300004: "Porte d'entr\xE9e de kurt_1"
+    21300000: "de cot\xE9_0"
+    21300002: "de cot\xE9_1"
+    21300004: "de cot\xE9_2"
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -87,12 +87,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Porte d'entr\xE9e de kurt_2"
+      name: "de cot\xE9_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 41
+        width: 4
         height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -101,47 +101,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbf36eb4b3e5160418399f599f468696
+      spriteID: 5d18c80d97fcf0c4885bc6968fcdb37b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Porte d'entr\xE9e de kurt_0"
+      name: "de cot\xE9_1"
       rect:
         serializedVersion: 2
-        x: 51
+        x: 13
         y: 0
-        width: 41
+        width: 10
         height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.18788461, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2a1bd7c67a4e8f4dbc5afc05df32377
+      spriteID: bfc7c349ceea54845baf7246ebe594c5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Porte d'entr\xE9e de kurt_1"
+      name: "de cot\xE9_2"
       rect:
         serializedVersion: 2
-        x: 99
+        x: 31
         y: 0
-        width: 41
+        width: 17
         height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.113479614, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 589783c5fc4b20440bdc5ee97627e6bb
+      spriteID: c8b274a8d81ae5044b2d6813bf5dccc6
       vertices: []
       indices: 
       edges: []
@@ -149,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 43583d496e195ed4591a55d955bf4176
+    spriteID: 89b5e3407cc7ac44d889aefb2444ed36
     vertices: []
     indices: 
     edges: []
