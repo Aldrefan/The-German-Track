@@ -71,35 +71,40 @@ public class PlayerMemory : MonoBehaviour
     {
         if(stickerIndexCarnetList.Count > 0)
         {
-            for(int i = 0; i < stickerIndexCarnetList.Count; i++)
+            int stickersToAdd = stickerIndexCarnetList.Count;
+            for(int i = 0; i < stickersToAdd; i++)
             {
-                int newStickerIndex = stickerIndexCarnetList[i];
-                GameObject child = Instantiate(stickerTemplate, CanvasManager.CManager.GetCanvas("Carnet").transform.GetChild(0));
-                child.GetComponent<Sticker_Display>().sticker = stickersScriptableList[newStickerIndex];
-                switch(stickersScriptableList[stickerIndexCarnetList[i]].type)
+                int newStickerIndex = stickerIndexCarnetList[0];
+                stickerIndexCarnetList.RemoveAt(0);
+                if(!stickerIndexCarnetList.Contains(newStickerIndex))
                 {
-                    case Sticker.Type.Profile:
-                    child.GetComponent<StickerManager>().OnCarnet();
-                    carnet.transform.GetChild(0).GetComponent<CarnetIndex>().CheckChildNumber(child);
-                    break;
+                    GameObject child = Instantiate(stickerTemplate, CanvasManager.CManager.GetCanvas("Carnet").transform.GetChild(0));
+                    child.GetComponent<Sticker_Display>().sticker = stickersScriptableList[newStickerIndex];
+                    switch(stickersScriptableList[newStickerIndex].type)
+                    {
+                        case Sticker.Type.Profile:
+                        child.GetComponent<StickerManager>().OnCarnet();
+                        carnet.transform.GetChild(0).GetComponent<CarnetIndex>().CheckChildNumber(child);
+                        break;
 
-                    case Sticker.Type.Clue:
-                    child.GetComponent<StickerManager>().OnCarnet();
-                    carnet.transform.GetChild(1).GetComponent<CarnetIndex>().CheckChildNumber(child);
-                    break;
+                        case Sticker.Type.Clue:
+                        child.GetComponent<StickerManager>().OnCarnet();
+                        carnet.transform.GetChild(1).GetComponent<CarnetIndex>().CheckChildNumber(child);
+                        break;
 
-                    case Sticker.Type.Fact:
-                    child.GetComponent<StickerManager>().OnCarnet();
-                    carnet.transform.GetChild(2).GetComponent<CarnetIndex>().CheckChildNumber(child);
-                    break;
+                        case Sticker.Type.Fact:
+                        child.GetComponent<StickerManager>().OnCarnet();
+                        carnet.transform.GetChild(2).GetComponent<CarnetIndex>().CheckChildNumber(child);
+                        break;
 
-                    case Sticker.Type.Hypothesis:
-                    child.GetComponent<StickerManager>().OnCarnet();
-                    carnet.transform.GetChild(3).GetComponent<CarnetIndex>().CheckChildNumber(child);
-                    break;
+                        case Sticker.Type.Hypothesis:
+                        child.GetComponent<StickerManager>().OnCarnet();
+                        carnet.transform.GetChild(3).GetComponent<CarnetIndex>().CheckChildNumber(child);
+                        break;
+                    }
                 }
             }
-            stickerIndexCarnetList.Clear();
+            //stickerIndexCarnetList.Clear();
         }
     }
 
