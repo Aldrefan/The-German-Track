@@ -134,13 +134,13 @@ public class PNJ : MonoBehaviour
     public void ResponseEvent()
     {
         haveEvent = false;
-        for(int i = eventRedirection.eventGivenList.Count - 1; i >= 0; i--)
+        for(int i = 0 - 1; i < eventRedirection.eventGivenList.Count; i++)
         {
             if(ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<EventsCheck>().eventsList.Contains(eventRedirection.eventGivenList[i].ToString()))
             {
                 ChangeDialog(eventRedirection.redirectionEventList[i]);
                 haveEvent = true;
-                break;
+                //break;
             }
         }
     }
