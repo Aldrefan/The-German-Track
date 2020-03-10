@@ -99,6 +99,7 @@ public class Interactions : MonoBehaviour
         {
             if (collision.transform.tag == "PNJinteractable" || collision.transform.tag == "Item" || collision.transform.tag == "Board" || collision.transform.tag == "Interaction" || collision.transform.tag == "Shortcut")
             {
+                //Debug.Log("pue la merde " + PNJContact);
                 PNJContact = collision.gameObject;
             }
         }
