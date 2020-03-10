@@ -106,7 +106,7 @@ public class Interactions : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-         if (collision.transform.tag == "PNJinteractable" || collision.transform.tag == "Item" || collision.transform.tag == "Board" || collision.transform.tag == "Interaction" || collision.transform.tag == "Shortcut")
+        if (collision.transform.tag == "PNJinteractable" || collision.transform.tag == "Item" || collision.transform.tag == "Board" || collision.transform.tag == "Interaction" || collision.transform.tag == "Shortcut")
         {
             PNJContact = null;
             if (collision.transform.childCount > 0)

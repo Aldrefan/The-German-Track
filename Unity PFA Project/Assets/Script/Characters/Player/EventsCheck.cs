@@ -130,6 +130,7 @@ public class EventsCheck : MonoBehaviour
             else
             {
                 GetComponent<Interactions>().PNJContact = GameObject.Find("hospital_receptionist");
+
                 GetComponent<Interactions>().StartDialog();
             }
         }
