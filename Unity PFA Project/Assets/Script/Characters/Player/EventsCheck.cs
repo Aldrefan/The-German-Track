@@ -125,11 +125,12 @@ public class EventsCheck : MonoBehaviour
         {
             if(eventsList.Contains("hopitalOpen"))
             {
-                CheckEvents("doorHopital");
+                CheckEvents("hopitalOpen");
             }
             else
             {
                 GetComponent<Interactions>().PNJContact = GameObject.Find("hospital_receptionist");
+                GetComponent<Interactions>().state = Interactions.State.InDialog;
                 GetComponent<Interactions>().StartDialog();
             }
         }

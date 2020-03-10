@@ -67,13 +67,13 @@ public class Goal : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
-        Debug.Log("OnGoal");
+        //Debug.Log("OnGoal");
         goalDescriptionTransform.GetChild(0).GetComponent<Text>().text = goalDescription;
     }
 
     public void OnPointerExit(PointerEventData pointerEventData)
     {
-        Debug.Log("OutGoal");
+        //Debug.Log("OutGoal");
         goalDescriptionTransform.GetChild(0).GetComponent<Text>().text = "";
     }
 }
