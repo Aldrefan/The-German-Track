@@ -7285,6 +7285,12 @@ Transform:
   m_Father: {fileID: 742880105}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &225433062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3300192406102315115, guid: b54d7a811dadcee468d386f697750077,
+    type: 3}
+  m_PrefabInstance: {fileID: 315076257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &226986873
 GameObject:
   m_ObjectHideFlags: 0
@@ -12567,7 +12573,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448469378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 622.85, y: 17.4, z: -10}
+  m_LocalPosition: {x: 622.85, y: 17.4, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1312731727}
@@ -35717,7 +35723,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 988861846}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.83, y: -9.59, z: 0}
+  m_LocalPosition: {x: 29.81, y: -9.59, z: 0}
   m_LocalScale: {x: -10, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 1544935799}
@@ -40434,7 +40440,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120777895}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 194.29, y: -6.71, z: 0}
+  m_LocalPosition: {x: 194.29, y: -6.34, z: 0}
   m_LocalScale: {x: -10, y: 8, z: 10}
   m_Children: []
   m_Father: {fileID: 523775136}
@@ -48373,6 +48379,7 @@ MonoBehaviour:
   action: 0
   fromStart: 0
   triggerByContact: 0
+  hasToLoop: 0
 --- !u!212 &1387442362
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -67697,6 +67704,7 @@ MonoBehaviour:
   action: 0
   fromStart: 0
   triggerByContact: 0
+  hasToLoop: 0
 --- !u!1 &1833088287
 GameObject:
   m_ObjectHideFlags: 0
@@ -71990,6 +71998,7 @@ GameObject:
   - component: {fileID: 1939136819}
   - component: {fileID: 1939136820}
   - component: {fileID: 1939136821}
+  - component: {fileID: 1939136822}
   m_Layer: 0
   m_Name: doorHopital
   m_TagString: Untagged
@@ -72063,6 +72072,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1939136822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939136818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandList: 0000000001000000
+  annexInformation:
+  - objectToMove: {fileID: 1156105002}
+    direction: -0.1
+    time: 0.1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+  - objectToMove: {fileID: 225433062}
+    direction: 0
+    time: 0
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+  action: 0
+  fromStart: 0
+  triggerByContact: 0
+  hasToLoop: 1
 --- !u!1 &1940226867
 GameObject:
   m_ObjectHideFlags: 0
