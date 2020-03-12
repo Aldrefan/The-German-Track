@@ -119,6 +119,7 @@ public class SaveFile : MonoBehaviour
             gameCam.actualRoom.SetActive(true);
             gameCam.transform.position = gameSave.camPosition;
             gameCam.InitRoomLimit();
+            gameCam.YOffset = gameCam.actualRoom.GetComponent<SceneInformations>().YOffset;
             //gameCam.actualRoom.GetComponent<SceneInformations>().PlaceCamera();
         }
 

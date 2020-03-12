@@ -27,6 +27,7 @@ public class Clara_Cinematic : MonoBehaviour
     }
 
     public bool triggerByContact;
+    public bool hasToLoop;
 
     Rigidbody2D rb2D;
     Animator animator;
@@ -120,6 +121,7 @@ public class Clara_Cinematic : MonoBehaviour
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().isInDialog = false;
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().QuitCinematicMode();
                 GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", false);
+
             }
         }
     }
