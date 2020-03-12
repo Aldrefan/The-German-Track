@@ -13,6 +13,15 @@ public class Piles : MonoBehaviour
 
     public Transform pileHypothèses;
 
+    [SerializeField]
+    Transform profilesButton;
+    [SerializeField]
+    Transform indicesButton;
+    [SerializeField]
+    Transform faitsButton;
+    [SerializeField]
+    Transform hypothesesButton;
+
     void Update()
     {
         /*if(Input.mousePosition.x > pileProfiles.GetComponent<BoxCollider2D>().bounds.min.x && Input.mousePosition.y > pileProfiles.GetComponent<BoxCollider2D>().bounds.min.y && Input.mousePosition.x < pileProfiles.GetComponent<BoxCollider2D>().bounds.max.x && Input.mousePosition.y < pileProfiles.GetComponent<BoxCollider2D>().bounds.max.y)
@@ -20,6 +29,47 @@ public class Piles : MonoBehaviour
             mouseOverState = MouseOverAPile.Profiles;
         }
         else mouseOverState = MouseOverAPile.None;*/
+    }
+
+    void OnEnable()
+    {
+        profilesButton.parent.gameObject.SetActive(true);
+        profilesButton.localScale = new Vector3(1,1,1);
+        indicesButton.localScale = new Vector3(1,1,1);
+        faitsButton.localScale = new Vector3(1,1,1);
+        hypothesesButton.localScale = new Vector3(1,1,1);
+    }
+
+    public void HidePileHider()
+    {
+        HidePiles();
+        pileHypothèses.parent.GetComponent<Animator>().SetBool("Hide", !pileHypothèses.parent.GetComponent<Animator>().GetBool("Hide"));
+        if(!pileHypothèses.parent.GetComponent<Animator>().GetBool("Hide"))
+        {
+            StartCoroutine(TimerButton());
+        }
+        else
+        {
+            CanvasManager.CManager.GetCanvas("PilesButtons").SetActive(!CanvasManager.CManager.GetCanvas("PilesButtons").activeInHierarchy);
+        }
+    }
+
+    IEnumerator TimerButton()
+    {
+        yield return new WaitForSeconds(0.2f);
+        CanvasManager.CManager.GetCanvas("PilesButtons").SetActive(!CanvasManager.CManager.GetCanvas("PilesButtons").activeInHierarchy);
+    }
+
+    public void HidePiles()
+    {
+        profilesButton.transform.localScale = new Vector3(1,1,1);
+        indicesButton.transform.localScale = new Vector3(1,1,1);
+        faitsButton.transform.localScale = new Vector3(1,1,1);
+        hypothesesButton.transform.localScale = new Vector3(1,1,1);
+        pileProfiles.GetComponent<Animator>().SetBool("Unwrap", false);
+        pileIndices.GetComponent<Animator>().SetBool("Unwrap", false);
+        pileFaits.GetComponent<Animator>().SetBool("Unwrap", false);
+        pileHypothèses.GetComponent<Animator>().SetBool("Unwrap", false);
     }
 
     public void CheckTypeAndSort(GameObject stickerToCheckAndSort)
@@ -70,21 +120,25 @@ public class Piles : MonoBehaviour
     public void UnwrapProfiles()
     {
         pileProfiles.GetComponent<Animator>().SetBool("Unwrap", !pileProfiles.GetComponent<Animator>().GetBool("Unwrap"));
-        GameObject.Find("Profile_Button").transform.localScale *= -1;
+        pileProfiles.transform.parent.SetAsLastSibling();
+        profilesButton.localScale *= -1;
     }
     public void UnwrapIndices()
     {
         pileIndices.GetComponent<Animator>().SetBool("Unwrap", !pileIndices.GetComponent<Animator>().GetBool("Unwrap"));
-        GameObject.Find("Indices_Button").transform.localScale *= -1;
+        pileIndices.transform.parent.SetAsLastSibling();
+        indicesButton.localScale *= -1;
     }
     public void UnwrapFaits()
     {
         pileFaits.GetComponent<Animator>().SetBool("Unwrap", !pileFaits.GetComponent<Animator>().GetBool("Unwrap"));
-        GameObject.Find("Faits_Button").transform.localScale *= -1;
+        pileFaits.transform.parent.SetAsLastSibling();
+        faitsButton.localScale *= -1;
     }
     public void UnwrapHypotheses()
     {
         pileHypothèses.GetComponent<Animator>().SetBool("Unwrap", !pileHypothèses.GetComponent<Animator>().GetBool("Unwrap"));
-        GameObject.Find("Hypothèses_Button").transform.localScale *= -1;
+        pileHypothèses.transform.parent.SetAsLastSibling();
+        hypothesesButton.localScale *= -1;
     }
 }
