@@ -333,6 +333,7 @@ public class Interactions : MonoBehaviour
         ChangeState(State.OnBoard);
         Camera.main.GetComponent<CameraFollow>().actualRoom.SetActive(false);
         gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
+        GameObject.FindObjectOfType<SaveFile>().ReturnStickersOnBoard(GameSaveSystem.LoadGameData(), CanvasManager.CManager.GetCanvas("Board_FIX").transform);
     }
 
     void CloseBook()
@@ -360,6 +361,7 @@ public class Interactions : MonoBehaviour
 
     public void CloseBoard()
     {
+
         dialAndBookCanvas.SetActive(true);
         boardCanvas.SetActive(false);
         StartCoroutine(TimerQuitDialog());

@@ -128,21 +128,21 @@ public class StickersOnBoard
         
         if(newType == Sticker.Type.Profile)
         {
-            stickerType = 0;
+            stickerType = 1;
         }else
         if (newType == Sticker.Type.Clue)
-        {
-            stickerType = 1;
-        }
-        else
-        if (newType == Sticker.Type.Fact)
         {
             stickerType = 2;
         }
         else
-        if (newType == Sticker.Type.Hypothesis)
+        if (newType == Sticker.Type.Fact)
         {
             stickerType = 3;
+        }
+        else
+        if (newType == Sticker.Type.Hypothesis)
+        {
+            stickerType = 4;
         }
     }
 

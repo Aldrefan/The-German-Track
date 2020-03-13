@@ -289,21 +289,6 @@ public class SaveFile : MonoBehaviour
             }
         }
 
-        Transform BoardCanvas = default;
-        foreach(CanvasManager.CharactersInterfaces CI in GameObject.FindObjectOfType<CanvasManager>().charactersInterfaces)
-        {
-            if (CI.CharcterName == FindObjectOfType<ActiveCharacterScript>().actualCharacter.name)
-            {
-                foreach (CanvasManager.CanvasInfos CanI in CI.CanvasList)
-                {
-                    if (CanI.CanvasName == "Board_FIX")
-                    {
-                        BoardCanvas = CanI.CanvasGO.transform;
-                    }
-                }
-            }
-        }
-
         if (GameObject.FindGameObjectWithTag("Player"))
         {
             GameSaveSystem.GameDataInput(
@@ -313,7 +298,7 @@ public class SaveFile : MonoBehaviour
                 FindObjectOfType<DayNightLight>(),
                 GameObject.FindObjectOfType<Ken_Canvas_Infos>().transform.Find("Panel").Find("Carnet").Find("Goal").Find("GoalFrame").GetComponent<CarnetGoal>(),
                 GameObject.FindObjectOfType<StickersGivenToPNJ>(),
-                BoardCanvas
+                GameObject.FindObjectOfType<CanvasManager>().GetCanvas("Board_FIX").transform
                 );
         }
 
