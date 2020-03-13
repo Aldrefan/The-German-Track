@@ -45,6 +45,8 @@ public class Interactions : MonoBehaviour
     public State state;
     #endregion
 
+    float posY;
+
     void Awake()
     {
         if (GameObject.Find("CarnetUI") != null)
@@ -88,6 +90,37 @@ public class Interactions : MonoBehaviour
                 if (collision.transform.childCount > 0)
                 {
                     collision.transform.GetChild(0).gameObject.SetActive(true);
+
+                    //float posY;
+                    if(collision.transform.tag == "Shortcut")
+                    {
+                        /*collision.transform.GetChild(0).localPosition = new Vector3(0, 0, 0);
+                        float boxYshortcut = collision.GetComponent<BoxCollider2D>().size.y;
+                        float scaleYshortcut = collision.transform.localScale.y;
+                        float scaleYgameobject = collision.transform.GetChild(0).localScale.y;
+                        collision.transform.localScale = new Vector3 (2, 2, 2);
+                        collision.transform.GetChild(0).GetChild(0).localScale = new Vector3(1.6f, 1.6f, 1.6f);
+                        posY = 2.5f;*/
+                    }
+                    else if (collision.name == "doorKurt")
+                        posY = 3.6f;
+                    else
+                    {
+                        float spriteY = collision.GetComponent<SpriteRenderer>().sprite.rect.height;
+                        float scaleY = collision.transform.localScale.y;
+                        posY = ((spriteY / scaleY) * 0.05f) + 0.1f;
+                    }
+
+                    GameObject interactionE;
+                    if(collision.transform.GetChild(0).childCount > 0)
+                        interactionE = collision.transform.GetChild(0).GetChild(0).gameObject;
+                    else
+                        interactionE = collision.transform.GetChild(0).gameObject;
+
+                    if(collision.transform.tag == "Shortcut")
+                        {/*do nothing*/}
+                    else
+                        interactionE.transform.localPosition = new Vector3(0, posY, 0);
                 }
             }
         }
