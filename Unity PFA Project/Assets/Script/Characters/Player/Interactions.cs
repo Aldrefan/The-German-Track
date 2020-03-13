@@ -45,6 +45,8 @@ public class Interactions : MonoBehaviour
     public State state;
     #endregion
 
+    float posY;
+
     void Awake()
     {
         if (GameObject.Find("CarnetUI") != null)
@@ -89,7 +91,7 @@ public class Interactions : MonoBehaviour
                 {
                     collision.transform.GetChild(0).gameObject.SetActive(true);
 
-                    float posY;
+                    //float posY;
                     if(collision.transform.tag == "Shortcut")
                     {
                         /*collision.transform.GetChild(0).localPosition = new Vector3(0, 0, 0);
@@ -116,7 +118,7 @@ public class Interactions : MonoBehaviour
                         interactionE = collision.transform.GetChild(0).gameObject;
 
                     if(collision.transform.tag == "Shortcut")
-                        //do nothing
+                        {/*do nothing*/}
                     else
                         interactionE.transform.localPosition = new Vector3(0, posY, 0);
                 }
