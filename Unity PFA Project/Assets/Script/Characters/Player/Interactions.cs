@@ -327,6 +327,7 @@ public class Interactions : MonoBehaviour
     {
         dialAndBookCanvas.SetActive(false);
         boardCanvas.SetActive(true);
+        CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<String_Manager>().SavePositions();
         Camera.main.GetComponent<Camera_Manager>().OnBoard();
         GetComponent<PlayerMemory>().CheckStickersBoard();
         ChangeState(State.OnBoard);
@@ -360,7 +361,6 @@ public class Interactions : MonoBehaviour
     public void CloseBoard()
     {
         dialAndBookCanvas.SetActive(true);
-        CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<String_Manager>().SavePositions();
         boardCanvas.SetActive(false);
         StartCoroutine(TimerQuitDialog());
         //ChangeState(State.Normal);
