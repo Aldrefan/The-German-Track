@@ -138,21 +138,7 @@ public class SaveFile : MonoBehaviour
             }
         }
 
-        if (gameSave.stickersOnBoard.Count != 0)
-        {
-            foreach(StickersOnBoard sticker in gameSave.stickersOnBoard)
-            {
-                foreach(Transform stickerInChild in BoardCanvas.transform.Find("Piles").GetChild(sticker.stickerType))
-                {
-                    if(sticker.stickerIndex == stickerInChild.GetComponent<Sticker_Display>().sticker.index)
-                    {
-                        Debug.Log("StickerLoad");
-                        stickerInChild.SetParent(BoardCanvas);
-                        stickerInChild.localPosition = sticker.stickerPosition;
-                    }
-                }
-            }
-        }
+
 
         GameObject levelLight = FindObjectOfType<DayNightLight>().gameObject;
         if (levelLight != null)
@@ -230,6 +216,28 @@ public class SaveFile : MonoBehaviour
         }
 
 
+    }
+
+    public void ReturnStickersOnBoard(GameData gameSave, Transform boardCanvasTranform)
+    {
+        if (GameSaveSystem.gameToLoad)
+        {
+            if (gameSave.stickersOnBoard.Count != 0)
+            {
+                foreach (StickersOnBoard sticker in gameSave.stickersOnBoard)
+                {
+                    foreach (Transform stickerInChild in boardCanvasTranform.transform.Find("Piles").GetChild(sticker.stickerType))
+                    {
+                        if (sticker.stickerIndex == stickerInChild.GetComponent<Sticker_Display>().sticker.index)
+                        {
+                            Debug.Log("StickerLoad");
+                            stickerInChild.SetParent(boardCanvasTranform);
+                            stickerInChild.localPosition = sticker.stickerPosition;
+                        }
+                    }
+                }
+            }
+        }
     }
 
 
