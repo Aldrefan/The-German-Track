@@ -226,6 +226,11 @@ public class String_Manager : MonoBehaviour
         }
         return false;
     }
+
+    public void SavePositions()
+    {
+        
+    }
     
     public void CheckComponent()
     {

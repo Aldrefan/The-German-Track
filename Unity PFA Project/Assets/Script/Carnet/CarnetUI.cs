@@ -25,9 +25,14 @@ public class CarnetUI : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(GameObject.Find("Kenneth").GetComponent<Interactions>().state != Interactions.State.InCinematic && GameObject.Find("Kenneth").GetComponent<Interactions>().state != Interactions.State.Pause)
+        if(GameObject.Find("Kenneth").GetComponent<Interactions>().state == Interactions.State.Normal || GameObject.Find("Kenneth").GetComponent<Interactions>().state == Interactions.State.InDialog)
         {
             GameObject.Find("Kenneth").GetComponent<Interactions>().OpenBookExe();
+        }
+        else if(GameObject.Find("Kenneth").GetComponent<Interactions>().state == Interactions.State.OnBoard)
+        {
+            CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().HidePileHider();
+            animator.SetBool("ClickOn", true);
         }
     }
 

@@ -28,6 +28,18 @@ public class ActiveCharacterScript : MonoBehaviour
         ActiveCharacter = this;
     }
 
+    public Sprite GetCharacterSprite(string characterName)
+    {
+        foreach(PlayableCharacter character in playableCharactersList)
+        {
+            if(character.character.name == characterName)
+            {
+                return character.charactersSprite;
+            }
+        }
+        return null;
+    }
+
     public void ChangeActiveCharacter(string newCharacterName)
     {
         for(int i = 0; i < playableCharactersList.Count; i++)
