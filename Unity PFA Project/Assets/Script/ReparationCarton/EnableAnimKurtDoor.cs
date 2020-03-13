@@ -28,7 +28,7 @@ public class EnableAnimKurtDoor : MonoBehaviour
     {
         if(!getKurt)
         {
-            if (this.transform.parent.Find("doorKurt").gameObject)
+            if (this.transform.parent.Find("doorKurt"))
             {
                 kurtDoor = this.transform.parent.Find("doorKurt").gameObject;
                 getKurt = true;
