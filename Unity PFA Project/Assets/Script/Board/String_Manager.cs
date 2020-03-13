@@ -115,15 +115,19 @@ public class String_Manager : MonoBehaviour
     void CheckHypotheses()
     {
         List<int> hypothesesPossibles = new List<int>();
-        List<int> indexOnBoard = new List<int>();
+        indexOnBoard = new List<int>();
         List<GameObject> stickers = new List<GameObject>();
+        bool changements = false;
 
-        for(int i = 1; i < transform.childCount; i++)
+        for(int i = 0; i < transform.childCount; i++)
         {
-            indexOnBoard.Add(transform.GetChild(i).GetComponent<Sticker_Display>().sticker.index);
-            stickers.Add(transform.GetChild(i).gameObject);
-            transform.GetChild(i).GetChild(0).GetComponent<Image>().material = null;
-            //stickers[i].transform.GetChild(0).GetComponent<Image>().material = null;
+            if(transform.GetChild(i).GetComponent<Sticker_Display>())
+            {
+                indexOnBoard.Add(transform.GetChild(i).GetComponent<Sticker_Display>().sticker.index);
+                stickers.Add(transform.GetChild(i).gameObject);
+                transform.GetChild(i).GetChild(0).GetComponent<Image>().material = null;
+                //stickers[i].transform.GetChild(0).GetComponent<Image>().material = null;
+            }
         }
         for(int i = 0; i < GetComponent<Piles>().pileProfiles.childCount; i++)
         {
@@ -148,20 +152,32 @@ public class String_Manager : MonoBehaviour
         }
         for(int i = 0; i < GetComponent<Piles>().pileHypothèses.childCount; i++)
         {
+            /*if(!hypotheseresponses.Contains(GetComponent<Piles>().pileHypothèses.GetChild(i).GetComponent<Sticker_Display>().sticker.index))
+            {}*/
             indexOnBoard.Add(GetComponent<Piles>().pileHypothèses.GetChild(i).GetComponent<Sticker_Display>().sticker.index);
             stickers.Add(GetComponent<Piles>().pileHypothèses.GetChild(i).gameObject);
             GetComponent<Piles>().pileHypothèses.GetChild(i).GetChild(0).GetComponent<Image>().material = null;
             //stickers[i].transform.GetChild(0).GetComponent<Image>().material = null;
         }
 
-        for(int i = 0; i < hypotheseresponses.Count; i++)
+        /*Debug.Log("Actual Index List :");
+        foreach(int ind in indexOnBoard)
+        {Debug.Log("index " + ind);}*/
+
+        do {
+            changements = CheckHypothesePresence();
+            //Debug.Log("Changements :"+changements);
+        }while(changements);
+
+        /*for(int i = 0; i < hypotheseresponses.Count; i++)
         {
             if(indexOnBoard.Contains(hypotheseresponses[i]))
             {
+                Debug.Log("Remove " + hypotheseresponses[i]);
                 hypotheseresponses.RemoveAt(i);
                 ListOfHypLists.list.RemoveAt(i);
             }
-        }
+        }*/
 
         for(int i = 0; i < hypotheseresponses.Count; i++)
         {
@@ -194,6 +210,22 @@ public class String_Manager : MonoBehaviour
         /*foreach(int index in hypothesesPossibles)
         {Debug.Log(index);}*/
     }
+
+    bool CheckHypothesePresence()
+    {
+        for(int i = 0; i < hypotheseresponses.Count; i++)
+        {
+            //Debug.Log("Hypotese repons N°"+i+ " : "+hypotheseresponses[i]);
+            if(indexOnBoard.Contains(hypotheseresponses[i]))
+            {
+                //Debug.Log("Remove " + hypotheseresponses[i]);
+                hypotheseresponses.RemoveAt(i);
+                ListOfHypLists.list.RemoveAt(i);
+                return true;
+            }
+        }
+        return false;
+    }
     
     public void CheckComponent()
     {
@@ -225,6 +257,8 @@ public class String_Manager : MonoBehaviour
                         GameObject newSticker = Instantiate(stickerTemplate, new Vector3(camera.transform.position.x, camera.transform.position.y, boardCanvas.position.z), boardCanvas.rotation, boardCanvas);
                         //hypotheseresponses[i], new Vector3(camera.transform.position.x, camera.transform.position.y, boardCanvas.position.z), boardCanvas.rotation, boardCanvas); // Fait apparaitre l'hypothèse crée
                         newSticker.GetComponent<Sticker_Display>().sticker = player.GetComponent<PlayerMemory>().stickersScriptableList[hypotheseresponses[i]];
+                        //int index = newSticker.transform.GetSiblingIndex();
+                        newSticker.transform.SetSiblingIndex(transform.childCount - 2);
                         
                         newSticker.GetComponent<ParticleSystem>().Play();
                         newSticker.GetComponent<AudioSource>().Play();

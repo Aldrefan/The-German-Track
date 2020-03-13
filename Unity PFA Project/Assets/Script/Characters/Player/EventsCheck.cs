@@ -125,13 +125,15 @@ public class EventsCheck : MonoBehaviour
         {
             if(eventsList.Contains("hopitalOpen"))
             {
-                CheckEvents("doorHopital");
+                CheckEvents("hopitalOpen");
             }
             else
             {
-                GetComponent<Interactions>().PNJContact = GameObject.Find("hospital_receptionist");
-
-                GetComponent<Interactions>().StartDialog();
+                ////GetComponent<Interactions>().PNJContact = GameObject.Find("hospital_receptionist");
+                ////GetComponent<Interactions>().state = Interactions.State.InDialog;
+                ////GetComponent<Interactions>().StartDialog();
+                col.GetComponent<Clara_Cinematic>().action = 0;
+                col.GetComponent<Clara_Cinematic>().ExecuteCommand();
             }
         }
 
@@ -218,6 +220,10 @@ public class EventsCheck : MonoBehaviour
         {
             col.transform.GetChild(0).gameObject.SetActive(false);
             //lamp = false;
+        }
+        if (col.name == "doorHopital")
+        {
+            this.GetComponent<Interactions>().PNJContact = null;
         }
     }
 

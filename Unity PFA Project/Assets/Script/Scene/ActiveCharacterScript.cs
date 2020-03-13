@@ -6,6 +6,7 @@ public class ActiveCharacterScript : MonoBehaviour
 {
     public static ActiveCharacterScript ActiveCharacter;
     public GameObject actualCharacter;
+    public Sprite KennethSprite;
     [System.Serializable]
     public class PlayableCharacter
     {

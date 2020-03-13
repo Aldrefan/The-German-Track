@@ -51,7 +51,7 @@ public class Camera_BoardMovements : MonoBehaviour
 
             case State.NotZoom:
             QuitBoardPossibility();
-            HandleZoomPossibility();
+            //HandleZoomPossibility();
             break;
         }
     }

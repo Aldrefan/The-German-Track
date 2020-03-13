@@ -97,6 +97,41 @@ public class Pin_System : MonoBehaviour
             {
                 transform.parent = CanvasManager.CManager.GetCanvas("Board_FIX").transform;
             }
+
+            if(Vector3.Distance(screenPoint, Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileProfiles.position)) < 110 && !CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileProfiles.GetComponent<Animator>().GetBool("Unwrap"))
+            {
+                this.transform.SetSiblingIndex(this.transform.parent.childCount - 1);
+            }
+            else if(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileProfiles.GetComponent<Animator>().GetBool("Unwrap") && screenPoint.y > Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileProfiles.position).y - 50 && screenPoint.y < Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileProfiles.position).y + 50)
+            {
+                this.transform.SetSiblingIndex(this.transform.parent.childCount - 1);
+            }
+            if(Vector3.Distance(screenPoint, Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileIndices.position)) < 110 && !CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileIndices.GetComponent<Animator>().GetBool("Unwrap"))
+            {
+                this.transform.SetSiblingIndex(this.transform.parent.childCount - 1);
+            }
+            else if(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileIndices.GetComponent<Animator>().GetBool("Unwrap") && screenPoint.y > Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileIndices.position).y - 50 && screenPoint.y < Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileIndices.position).y + 50)
+            {
+                this.transform.SetSiblingIndex(this.transform.parent.childCount - 1);
+            }
+
+            if(Vector3.Distance(screenPoint, Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileFaits.position)) < 110 && !CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileFaits.GetComponent<Animator>().GetBool("Unwrap"))
+            {
+                this.transform.SetSiblingIndex(this.transform.parent.childCount - 1);
+            }
+            else if(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileFaits.GetComponent<Animator>().GetBool("Unwrap") && screenPoint.y > Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileFaits.position).y - 50 && screenPoint.y < Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileFaits.position).y + 50)
+            {
+                this.transform.SetSiblingIndex(this.transform.parent.childCount - 1);
+            }
+
+            if(Vector3.Distance(screenPoint, Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileHypothèses.position)) < 110 && !CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileHypothèses.GetComponent<Animator>().GetBool("Unwrap"))
+            {
+                this.transform.SetSiblingIndex(this.transform.parent.childCount - 1);
+            }
+            else if(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileHypothèses.GetComponent<Animator>().GetBool("Unwrap") && screenPoint.y > Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileHypothèses.position).y - 50 && screenPoint.y < Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileHypothèses.position).y + 50)
+            {
+                this.transform.SetSiblingIndex(this.transform.parent.childCount - 1);
+            }
             screenPoint = Input.mousePosition;
             screenPoint.z = transform.parent.position.z + 9;
             Camera camera = Camera.main;
@@ -202,7 +237,7 @@ public class Pin_System : MonoBehaviour
             }
             else if(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileFaits.GetComponent<Animator>().GetBool("Unwrap") && screenPoint.y > Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileFaits.position).y - 50 && screenPoint.y < Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileFaits.position).y + 50 && GetComponent<Sticker_Display>().sticker.type == Sticker.Type.Fact)
             {
-                transform.SetParent(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileProfiles);
+                transform.SetParent(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileFaits);
             }
 
             if(Vector3.Distance(screenPoint, Camera.main.WorldToScreenPoint(CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileHypothèses.position)) < 110 && !CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<Piles>().pileHypothèses.GetComponent<Animator>().GetBool("Unwrap")  && GetComponent<Sticker_Display>().sticker.type == Sticker.Type.Hypothesis)

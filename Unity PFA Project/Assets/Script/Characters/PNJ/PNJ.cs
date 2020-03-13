@@ -134,13 +134,13 @@ public class PNJ : MonoBehaviour
     public void ResponseEvent()
     {
         haveEvent = false;
-        for(int i = eventRedirection.eventGivenList.Count - 1; i >= 0; i--)
+        for(int i = 0 - 1; i < eventRedirection.eventGivenList.Count; i++)
         {
             if(ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<EventsCheck>().eventsList.Contains(eventRedirection.eventGivenList[i].ToString()))
             {
                 ChangeDialog(eventRedirection.redirectionEventList[i]);
                 haveEvent = true;
-                break;
+                //break;
             }
         }
     }
@@ -153,11 +153,6 @@ public class PNJ : MonoBehaviour
         }
         if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.name == "Kenneth")
         {
-            /*if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.transform.position.x < transform.position.x && GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.GetComponent<Interactions>().state == Interactions.State.InDialog)
-            {
-                transform.GetComponent<SpriteRenderer>().flipX = false;
-            }
-            else transform.GetComponent<SpriteRenderer>().flipX = true;*/
             if(allDialogs.listOfDialogs[dialogIndex].canAskQuestions)
             {
                 carnet.GetComponent<Animator>().SetBool("InDialog", true);
@@ -190,7 +185,7 @@ public class PNJ : MonoBehaviour
                 else leftPanel.transform.GetChild(4).GetComponent<Image>().sprite = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].spriteCharacter;
                 if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName == "Kenneth")
                 {
-                    leftPanel.transform.GetChild(4).GetComponent<Image>().sprite = kennethSprite;
+                    leftPanel.transform.GetChild(4).GetComponent<Image>().sprite = ActiveCharacterScript.ActiveCharacter.KennethSprite;
                 }
             }
             else 
@@ -208,7 +203,7 @@ public class PNJ : MonoBehaviour
                 else rightPanel.transform.GetChild(4).GetComponent<Image>().sprite = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].spriteCharacter;
                 if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName == "Kenneth")
                 {
-                    rightPanel.transform.GetChild(4).GetComponent<Image>().sprite = kennethSprite;
+                    rightPanel.transform.GetChild(4).GetComponent<Image>().sprite = ActiveCharacterScript.ActiveCharacter.KennethSprite;
                 }
             }
         }
@@ -379,6 +374,6 @@ public class PNJ : MonoBehaviour
             }
             //allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].eventTrigger.RemoveRange(0, allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].eventTrigger.Count);
         }
-        dialogLine++;
+        dialogLine++;      // Début du probleme
     }
 }

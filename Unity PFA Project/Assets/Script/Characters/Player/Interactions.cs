@@ -130,6 +130,7 @@ public class Interactions : MonoBehaviour
         {
             if (collision.transform.tag == "PNJinteractable" || collision.transform.tag == "Item" || collision.transform.tag == "Board" || collision.transform.tag == "Interaction" || collision.transform.tag == "Shortcut")
             {
+                //Debug.Log("pue la merde " + PNJContact);
                 PNJContact = collision.gameObject;
             }
         }
@@ -470,15 +471,15 @@ public class Interactions : MonoBehaviour
         talk = false;
 
         transform.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
-        if(eventGivenListCount == 0 && !PNJContact.GetComponent<PNJ>().haveEvent)
+        if (eventGivenListCount == 0 && !PNJContact.GetComponent<PNJ>().haveEvent)
         {
-            if(PNJContact.tag != "Interaction")
+            if (PNJContact.tag != "Interaction")
             {
-                if(PnjMet.Contains(PNJContact.name))
+                if (PnjMet.Contains(PNJContact.name))
                 {
                     PNJContact.GetComponent<PNJ>().ChangeDialog(1);
                 }
-                else 
+                else
                 {
                     PnjMet.Add(PNJContact.name);
                     PNJContact.GetComponent<PNJ>().ChangeDialog(0);
@@ -487,24 +488,43 @@ public class Interactions : MonoBehaviour
             else PNJContact.GetComponent<PNJ>().ChangeDialog(0);
             talk = true;
         }
-        else if(eventGivenListCount > 0 && PNJContact.GetComponent<PNJ>().haveEvent)
+        else if (eventGivenListCount > 0 && PNJContact.GetComponent<PNJ>().haveEvent)
         {
-            if(PNJContact.tag != "Interaction")
+            if (PNJContact.tag != "Interaction")
             {
-                for(int i = 0; i < eventGivenListCount; i++)
+                for (int i = 0; i < eventGivenListCount; i++)
                 {
-                    for(int n = 0; n < GetComponent<EventsCheck>().eventsList.Count; n++)
+                    for (int n = 0; n < GetComponent<EventsCheck>().eventsList.Count; n++)
                     {
-                        if(PNJContact.GetComponent<PNJ>().eventRedirection.eventGivenList[i] == GetComponent<EventsCheck>().eventsList[n])
+                        if (PNJContact.GetComponent<PNJ>().eventRedirection.eventGivenList[i] == GetComponent<EventsCheck>().eventsList[n])
                         {
                             PNJContact.GetComponent<PNJ>().ChangeDialog(PNJContact.GetComponent<PNJ>().eventRedirection.redirectionEventList[i]);
                             talk = true;
-                            return;
+                            //return;
                         }
                     }
                 }
             }
         }
+        else if (eventGivenListCount == 0 && PNJContact.GetComponent<PNJ>().haveEvent)
+        {
+            if (PNJContact.tag != "Interaction")
+            {
+                for (int i = 0; i < eventGivenListCount; i++)
+                {
+                    for (int n = 0; n < GetComponent<EventsCheck>().eventsList.Count; n++)
+                    {
+                        if (PNJContact.GetComponent<PNJ>().eventRedirection.eventGivenList[i] == GetComponent<EventsCheck>().eventsList[n])
+                        {
+                            PNJContact.GetComponent<PNJ>().ChangeDialog(PNJContact.GetComponent<PNJ>().eventRedirection.redirectionEventList[i]);
+                            talk = true;
+                            //return;
+                        }
+                    }
+                }
+            }
+        }
+
         if (!talk)
         {
             if(PNJContact.tag != "Interaction")

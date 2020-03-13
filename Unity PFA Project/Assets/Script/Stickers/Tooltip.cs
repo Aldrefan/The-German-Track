@@ -52,7 +52,7 @@ public class Tooltip : MonoBehaviour
 
         if (this.transform.parent.name == "BoardCanvas")
         {
-            this.transform.SetSiblingIndex(this.transform.parent.childCount - 1);
+            this.transform.SetSiblingIndex(this.transform.parent.childCount - 2);
         }
     }
 
