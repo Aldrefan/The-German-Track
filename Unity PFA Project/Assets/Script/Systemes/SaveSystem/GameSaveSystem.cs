@@ -18,6 +18,7 @@ public static class GameSaveSystem
     static DayNightLight directionalLight;
     static CarnetGoal goalFrame;
     static StickersGivenToPNJ stickerManager;
+    static Transform boardTransform;
 
     //SettingsData
     static AudioMixer musicMixer;
@@ -34,7 +35,7 @@ public static class GameSaveSystem
 
     public static void SaveGameData()
     {
-        GameData saveObject = new GameData(camObject, currentCharacters, actualPlayer, directionalLight, goalFrame, stickerManager);
+        GameData saveObject = new GameData(camObject, currentCharacters, actualPlayer, directionalLight, goalFrame, stickerManager, boardTransform);
         string json = JsonUtility.ToJson(saveObject);
 
         File.WriteAllText(SAVE_FOLDER + "/gameSave.tgt", json);
@@ -98,7 +99,7 @@ public static class GameSaveSystem
         return gameActualLevel;
     }
 
-    public static void GameDataInput(GameObject mainCamera, ActiveCharacterScript newCurrentCharacters, GameObject newPlayer, DayNightLight newDirLight, CarnetGoal newGoalFrame, StickersGivenToPNJ newStickerManager)
+    public static void GameDataInput(GameObject mainCamera, ActiveCharacterScript newCurrentCharacters, GameObject newPlayer, DayNightLight newDirLight, CarnetGoal newGoalFrame, StickersGivenToPNJ newStickerManager, Transform newBoardCanvas)
     {
         camObject = mainCamera;
         currentCharacters = newCurrentCharacters;
@@ -106,6 +107,7 @@ public static class GameSaveSystem
         directionalLight = newDirLight;
         goalFrame = newGoalFrame;
         stickerManager = newStickerManager;
+        boardTransform = newBoardCanvas;
     }
 
     public static void SettingsDataInput(AudioMixer newMusicMixer, AudioMixer newEffectMixer, LanguageManager newLangManager)

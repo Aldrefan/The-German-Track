@@ -21,7 +21,7 @@ public class CanvasManager : MonoBehaviour
     }
 
     [SerializeField]
-    List<CharactersInterfaces> charactersInterfaces;
+    public List<CharactersInterfaces> charactersInterfaces;
 
     void Awake()
     {

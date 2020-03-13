@@ -22,7 +22,7 @@ public class GameData
     //public List<int> stickersIndexOnBoard = new List<int>();
     //public List<int> stickersIndexInCarnet = new List<int>();
     public List<int> allStickers = new List<int>();
-    public List<Vector3> stickersPositionOnBoard = new List<Vector3>();
+    public List<StickersOnBoard> stickersOnBoard = new List<StickersOnBoard>();
     //CameraFollow -> MainCamera
     public string actualRoomName;
     //CameraPos
@@ -36,7 +36,7 @@ public class GameData
     public List<StickersGivenToPNJ.PNJMemory> pnjStickerManager = new List<StickersGivenToPNJ.PNJMemory>();
 
 
-    public GameData(GameObject mainCamera, ActiveCharacterScript currentCharacters, GameObject characterToPlay, DayNightLight directionalLight, CarnetGoal goalsObject, StickersGivenToPNJ newStrickerManager)
+    public GameData(GameObject mainCamera, ActiveCharacterScript currentCharacters, GameObject characterToPlay, DayNightLight directionalLight, CarnetGoal goalsObject, StickersGivenToPNJ newStrickerManager, Transform BoardTransform)
     {
         currentLevel = SceneManager.GetActiveScene().name;
 
@@ -57,9 +57,21 @@ public class GameData
             //stickersIndexOnBoard = characterToPlay.GetComponent<PlayerMemory>().stickerIndexBoardList;
             //stickersIndexInCarnet = characterToPlay.GetComponent<PlayerMemory>().stickerIndexCarnetList;
             allStickers = characterToPlay.GetComponent<PlayerMemory>().allStickers;
-            stickersPositionOnBoard = characterToPlay.GetComponent<PlayerMemory>().stickersPositionBoard;
             NPCmet = characterToPlay.GetComponent<Interactions>().PnjMet;
             eventList = characterToPlay.GetComponent<EventsCheck>().eventsList;
+        }
+
+        if (BoardTransform != null)
+        {
+            foreach(Transform childTransform in BoardTransform)
+            {
+                if (childTransform.GetComponent<Sticker_Display>())
+                {
+                    stickersOnBoard.Add(new StickersOnBoard(childTransform.GetComponent<Sticker_Display>().sticker.index,
+                                                            childTransform.GetComponent<Sticker_Display>().sticker.type,
+                                                            childTransform.localPosition));
+                }
+            }
         }
 
         if (directionalLight.time == DayNightLight.timeEnum.Day)
@@ -97,6 +109,41 @@ public class CharacterPosition
     {
         characterName = newCharacter.name;
         characterPosition = newCharacter.transform.position;
+    }
+
+}
+
+[System.Serializable]
+public class StickersOnBoard
+{
+    public int stickerIndex;
+    public int stickerType;
+    public Vector3 stickerPosition;
+
+    public StickersOnBoard(int newIndex, Sticker.Type newType, Vector3 newPosition)
+    {
+        stickerIndex = newIndex;
+
+        stickerPosition = newPosition;
+        
+        if(newType == Sticker.Type.Profile)
+        {
+            stickerType = 0;
+        }else
+        if (newType == Sticker.Type.Clue)
+        {
+            stickerType = 1;
+        }
+        else
+        if (newType == Sticker.Type.Fact)
+        {
+            stickerType = 2;
+        }
+        else
+        if (newType == Sticker.Type.Hypothesis)
+        {
+            stickerType = 3;
+        }
     }
 
 }

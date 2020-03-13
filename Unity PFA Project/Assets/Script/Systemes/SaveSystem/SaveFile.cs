@@ -123,6 +123,37 @@ public class SaveFile : MonoBehaviour
             //gameCam.actualRoom.GetComponent<SceneInformations>().PlaceCamera();
         }
 
+        Transform BoardCanvas = default;
+        foreach (CanvasManager.CharactersInterfaces CI in GameObject.FindObjectOfType<CanvasManager>().charactersInterfaces)
+        {
+            if (CI.CharcterName == FindObjectOfType<ActiveCharacterScript>().actualCharacter.name)
+            {
+                foreach (CanvasManager.CanvasInfos CanI in CI.CanvasList)
+                {
+                    if (CanI.CanvasName == "Board_FIX")
+                    {
+                        BoardCanvas = CanI.CanvasGO.transform;
+                    }
+                }
+            }
+        }
+
+        if (gameSave.stickersOnBoard.Count != 0)
+        {
+            foreach(StickersOnBoard sticker in gameSave.stickersOnBoard)
+            {
+                foreach(Transform stickerInChild in BoardCanvas.transform.Find("Piles").GetChild(sticker.stickerType))
+                {
+                    if(sticker.stickerIndex == stickerInChild.GetComponent<Sticker_Display>().sticker.index)
+                    {
+                        Debug.Log("StickerLoad");
+                        stickerInChild.SetParent(BoardCanvas);
+                        stickerInChild.localPosition = sticker.stickerPosition;
+                    }
+                }
+            }
+        }
+
         GameObject levelLight = FindObjectOfType<DayNightLight>().gameObject;
         if (levelLight != null)
         {
@@ -165,7 +196,6 @@ public class SaveFile : MonoBehaviour
                 }
             }
 
-            player.GetComponent<PlayerMemory>().stickersPositionBoard = gameSave.stickersPositionOnBoard;
             player.GetComponent<Interactions>().PnjMet = gameSave.NPCmet;
             player.GetComponent<EventsCheck>().eventsList = gameSave.eventList;
 
@@ -251,6 +281,21 @@ public class SaveFile : MonoBehaviour
             }
         }
 
+        Transform BoardCanvas = default;
+        foreach(CanvasManager.CharactersInterfaces CI in GameObject.FindObjectOfType<CanvasManager>().charactersInterfaces)
+        {
+            if (CI.CharcterName == FindObjectOfType<ActiveCharacterScript>().actualCharacter.name)
+            {
+                foreach (CanvasManager.CanvasInfos CanI in CI.CanvasList)
+                {
+                    if (CanI.CanvasName == "Board_FIX")
+                    {
+                        BoardCanvas = CanI.CanvasGO.transform;
+                    }
+                }
+            }
+        }
+
         if (GameObject.FindGameObjectWithTag("Player"))
         {
             GameSaveSystem.GameDataInput(
@@ -259,7 +304,9 @@ public class SaveFile : MonoBehaviour
                 player,
                 FindObjectOfType<DayNightLight>(),
                 GameObject.FindObjectOfType<Ken_Canvas_Infos>().transform.Find("Panel").Find("Carnet").Find("Goal").Find("GoalFrame").GetComponent<CarnetGoal>(),
-                GameObject.FindObjectOfType<StickersGivenToPNJ>());
+                GameObject.FindObjectOfType<StickersGivenToPNJ>(),
+                BoardCanvas
+                );
         }
 
         GameSaveSystem.SettingsDataInput(
