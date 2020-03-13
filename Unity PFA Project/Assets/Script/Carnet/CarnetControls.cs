@@ -9,39 +9,27 @@ public class CarnetControls : MonoBehaviour
     public GameObject nextPageButton;
     public GameObject previousPageButton;
 
-    public Text hyp_Text;
-    public Text facts_Text;
-    public Text clues_Text;
-    public Text profils_Text;
-    public Text inv_Text;
+    [SerializeField]
+    private Text hyp_Text;
+    [SerializeField]
+    private Text facts_Text;
+    [SerializeField]
+    private Text clues_Text;
+    [SerializeField]
+    private Text profils_Text;
+    [SerializeField]
+    private Text inv_Text;
 
-    [System.Serializable]
-    public class TextsAndKey
-    {
-        public Text text;
-        public string key;
-    }
-    public List<TextsAndKey> textList;
+    [SerializeField]
+    private Transform texts;
+    [SerializeField]
+    private Transform buttons;
 
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void Awake()
-    {
-        foreach(TextsAndKey text in textList)
-        {
-            text.text.text = LanguageManager.Instance.GetDialog(text.key);
-        }
     }
 
     /*public void SaveCarnet()
@@ -106,7 +94,7 @@ public class CarnetControls : MonoBehaviour
                             carnetIndex.pageList[p + 1].gameObject.SetActive(true);
                             //transform.GetChild(i).GetChild(p).gameObject.SetActive(false);
                             //transform.GetChild(i).GetChild(p + 1).gameObject.SetActive(true);
-                            break;
+                            return;
                         }
                     }
                 }
@@ -129,7 +117,7 @@ public class CarnetControls : MonoBehaviour
                         carnetIndex.pageList[p - 1].gameObject.SetActive(true);
                         //transform.GetChild(i).GetChild(p).gameObject.SetActive(false);
                         //transform.GetChild(i).GetChild(p - 1).gameObject.SetActive(true);
-                        break;
+                        return;
                     }
                 }
             }
@@ -256,6 +244,14 @@ public class CarnetControls : MonoBehaviour
         transform.GetChild(3).gameObject.SetActive(false); //hypotheses
         transform.GetChild(4).gameObject.SetActive(false); //Goal
         transform.GetChild(5).gameObject.SetActive(false); //Controles
+        texts.GetChild(0).gameObject.SetActive(true); //Name of the characters section
+        texts.GetChild(1).gameObject.SetActive(true); //Name of the clues section
+        texts.GetChild(2).gameObject.SetActive(true); //Name of the facts section
+        texts.GetChild(3).gameObject.SetActive(true); //Name of the hypotheses section
+        buttons.GetChild(2).gameObject.SetActive(true); //Button of the characters section
+        buttons.GetChild(3).gameObject.SetActive(true); //Button of the clues section
+        buttons.GetChild(4).gameObject.SetActive(true); //Button of the facts section
+        buttons.GetChild(5).gameObject.SetActive(true); //Button of the hypotheses section
         //transform.GetChild(4).gameObject.SetActive(false); //saves
         //transform.GetChild(5).gameObject.SetActive(false);  //options
     }
@@ -272,6 +268,14 @@ public class CarnetControls : MonoBehaviour
         transform.GetChild(3).gameObject.SetActive(false); //hypotheses
         transform.GetChild(4).gameObject.SetActive(true); //Goal
         transform.GetChild(5).gameObject.SetActive(false); //Controles
+        texts.GetChild(0).gameObject.SetActive(false); //Name of the characters section
+        texts.GetChild(1).gameObject.SetActive(false); //Name of the clues section
+        texts.GetChild(2).gameObject.SetActive(false); //Name of the facts section
+        texts.GetChild(3).gameObject.SetActive(false); //Name of the hypotheses section
+        buttons.GetChild(2).gameObject.SetActive(false); //Button of the characters section
+        buttons.GetChild(3).gameObject.SetActive(false); //Button of the clues section
+        buttons.GetChild(4).gameObject.SetActive(false); //Button of the facts section
+        buttons.GetChild(5).gameObject.SetActive(false); //Button of the hypotheses section
     }
 
     public void OpenSaves()
@@ -308,5 +312,13 @@ public class CarnetControls : MonoBehaviour
         transform.GetChild(3).gameObject.SetActive(false); //hypotheses
         transform.GetChild(4).gameObject.SetActive(false); //Goals
         transform.GetChild(5).gameObject.SetActive(true);  //Controles
+        texts.GetChild(0).gameObject.SetActive(false); //Name of the characters section
+        texts.GetChild(1).gameObject.SetActive(false); //Name of the clues section
+        texts.GetChild(2).gameObject.SetActive(false); //Name of the facts section
+        texts.GetChild(3).gameObject.SetActive(false); //Name of the hypotheses section
+        buttons.GetChild(2).gameObject.SetActive(false); //Button of the characters section
+        buttons.GetChild(3).gameObject.SetActive(false); //Button of the clues section
+        buttons.GetChild(4).gameObject.SetActive(false); //Button of the facts section
+        buttons.GetChild(5).gameObject.SetActive(false); //Button of the hypotheses section
     }
 }

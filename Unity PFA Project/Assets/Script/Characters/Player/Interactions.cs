@@ -360,6 +360,7 @@ public class Interactions : MonoBehaviour
     public void CloseBoard()
     {
         dialAndBookCanvas.SetActive(true);
+        CanvasManager.CManager.GetCanvas("Board_FIX").GetComponent<String_Manager>().SavePositions();
         boardCanvas.SetActive(false);
         StartCoroutine(TimerQuitDialog());
         //ChangeState(State.Normal);
