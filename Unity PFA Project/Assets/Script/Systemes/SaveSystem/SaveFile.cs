@@ -81,14 +81,14 @@ public class SaveFile : MonoBehaviour
 
                     if (gameSave.playableCharacters[i].characterName == character.name)
                     {
-                        if (i == 0)
-                        {
-                            FindObjectOfType<ActiveCharacterScript>().playableCharactersList.Clear();
+                        //if (i == 0)
+                        //{
+                        //    FindObjectOfType<ActiveCharacterScript>().playableCharactersList.Clear();
 
-                        }
+                        //}
 
                         character.transform.position = gameSave.playableCharacters[i].characterPosition;
-                        FindObjectOfType<ActiveCharacterScript>().playableCharactersList.Add(new ActiveCharacterScript.PlayableCharacter(character, true));
+                        //FindObjectOfType<ActiveCharacterScript>().playableCharactersList.Add(new ActiveCharacterScript.PlayableCharacter(character, true));
                     }
                 }
             }
@@ -237,6 +237,7 @@ public class SaveFile : MonoBehaviour
                     }
                 }
             }
+            GameSaveSystem.gameToLoad = false;
         }
     }
 
