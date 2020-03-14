@@ -237,6 +237,7 @@ public class SaveFile : MonoBehaviour
                     }
                 }
             }
+            GameSaveSystem.gameToLoad = false;
         }
     }
 
