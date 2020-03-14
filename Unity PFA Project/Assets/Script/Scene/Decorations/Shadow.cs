@@ -53,7 +53,12 @@ public class Shadow : MonoBehaviour
             }
             else transform.localScale = new Vector2(size.x, size.y);
         }
-        transform.localScale = new Vector3(size.x * (owner.transform.localScale.x / 8), size.y, 1);
+        if(owner.tag == "Player")
+        {
+            transform.localScale = new Vector3(size.x * (owner.transform.localScale.x / 8), size.y, 1);
+        }
+        else transform.localScale = new Vector3(owner.transform.localScale.x, size.y, 1);
+        
         GetComponent<SpriteRenderer>().flipX = owner.GetComponent<SpriteRenderer>().flipX;
     }
 

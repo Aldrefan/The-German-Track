@@ -16,7 +16,7 @@ public class QuestionInterface : MonoBehaviour
                 newButton.GetComponent<Buttons_Display>().button = button;
                 newButton.GetComponent<Buttons_Display>().SetInformations();
             }
-            else if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.GetComponent<EventsCheck>().eventsList.Contains(button.eventNeeded))
+            else if(ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<EventsCheck>().eventsList.Contains(button.eventNeeded))
             {
                 GameObject newButton = Instantiate(buttonBase, transform.GetChild(1));
                 newButton.GetComponent<Buttons_Display>().button = button;

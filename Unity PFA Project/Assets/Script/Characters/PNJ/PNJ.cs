@@ -151,7 +151,7 @@ public class PNJ : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("Talk", true);
         }
-        if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.name == "Kenneth")
+        if(ActiveCharacterScript.ActiveCharacter.actualCharacter.name == "Kenneth")
         {
             if(allDialogs.listOfDialogs[dialogIndex].canAskQuestions)
             {
@@ -185,7 +185,7 @@ public class PNJ : MonoBehaviour
                 else leftPanel.transform.GetChild(4).GetComponent<Image>().sprite = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].spriteCharacter;
                 if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName == "Kenneth")
                 {
-                    leftPanel.transform.GetChild(4).GetComponent<Image>().sprite = ActiveCharacterScript.ActiveCharacter.GetCharacterSprite("Kenneth");
+                    leftPanel.transform.GetChild(4).GetComponent<Image>().sprite = ActiveCharacterScript.ActiveCharacter.GetCharacterSprite("Kenneth"); // KennethSprite;
                 }
             }
             else 
