@@ -203,7 +203,7 @@ public class PNJ : MonoBehaviour
                 else rightPanel.transform.GetChild(4).GetComponent<Image>().sprite = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].spriteCharacter;
                 if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName == "Kenneth")
                 {
-                    rightPanel.transform.GetChild(4).GetComponent<Image>().sprite = ActiveCharacterScript.ActiveCharacter.KennethSprite;
+                    rightPanel.transform.GetChild(4).GetComponent<Image>().sprite = ActiveCharacterScript.ActiveCharacter.GetCharacterSprite("Kenneth");
                 }
             }
         }
