@@ -6053,7 +6053,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193856414}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 334.5, y: -11.09517, z: -0.7082126}
+  m_LocalPosition: {x: 391.4, y: -11.09517, z: -0.7082126}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1047992693}
@@ -31810,7 +31810,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861666416}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 548.9, y: -14.20483, z: 0}
+  m_LocalPosition: {x: 558.11, y: -14.20483, z: 0}
   m_LocalScale: {x: 3.68496, y: 39.30875, z: 1}
   m_Children: []
   m_Father: {fileID: 1047992693}
@@ -41951,129 +41951,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1580857181}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1156105003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156105002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 824a8bda70aa7cc4580269ea71d7be4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1156105013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156105002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84294d62ebfee3e43a82d8c1bfe0442f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _scott: {fileID: 978765920}
-  _nelsonSpot: {fileID: 1376588988}
---- !u!82 &1156105014
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156105002}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243737059429131894, guid: 33bfe25356e3c34429e4b9cf51422678,
-    type: 2}
-  m_audioClip: {fileID: 8300000, guid: 3bd6ba24682e7ef46a9fe34440a0c670, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 1
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1158299795
 GameObject:
   m_ObjectHideFlags: 0
@@ -49182,7 +49059,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1391932081}
-  - component: {fileID: 1391932082}
   m_Layer: 17
   m_Name: Recovery GameObject (0)
   m_TagString: Untagged
@@ -49204,23 +49080,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1391932082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391932080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 72e422f08ab034f4bb923961b85a365c, type: 2}
-  isGlobal: 1
-  blendDistance: 0
-  weight: 1
-  priority: 0
 --- !u!1 &1396928738
 GameObject:
   m_ObjectHideFlags: 0
@@ -50040,6 +49899,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1430267881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1430267883}
+  - component: {fileID: 1430267882}
+  m_Layer: 17
+  m_Name: PostProcessingVolume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1430267882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430267881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 72e422f08ab034f4bb923961b85a365c, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
+--- !u!4 &1430267883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430267881}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.5418491, y: -1.6948677, z: -54.24992}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1431035439
 GameObject:
   m_ObjectHideFlags: 0
@@ -59987,336 +59894,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.size
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.size
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.size
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: boardCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: newSticker
-      value: 
-      objectReference: {fileID: 1714092047808702672}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: carnet
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[0]
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[1]
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[0]
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[1]
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[0]
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[1]
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: faitsRange.x
-      value: 43
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: hypothesesRange.y
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[2]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[2]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[2]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[3]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[3]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[3]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[4]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[5]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[6]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[7]
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[8]
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[9]
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[10]
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[11]
-      value: 41
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[12]
-      value: 52
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[13]
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[14]
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[15]
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[16]
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[17]
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[18]
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[19]
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[20]
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[21]
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[4]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[5]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[6]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[7]
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[8]
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[9]
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[4]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[5]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[6]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[7]
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[8]
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[9]
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[10]
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[11]
-      value: 41
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexCarnetList.Array.data[12]
-      value: 52
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[10]
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[11]
-      value: 41
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: allStickers.Array.data[12]
-      value: 52
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: boardCanvasName
-      value: Board_FIX
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: carnetCanvasName
-      value: Carnet
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: newStickerName
-      value: NewSticker
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[22]
-      value: 26
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[23]
-      value: 27
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: stickerIndexBoardList.Array.data[24]
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017400, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: boardCanvas
-      value: 
-      objectReference: {fileID: 1456610456}
-    - target: {fileID: 1955605217293017400, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: dialAndBookCanvas
-      value: 
-      objectReference: {fileID: 1714092047808702675}
-    - target: {fileID: 1955605217293017400, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: boardCanvasName
-      value: Board_FL
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017400, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: dialogCanvasName
-      value: Dialogue
-      objectReference: {fileID: 0}
     - target: {fileID: 1156105012, guid: da130138f5003d14f970fac471a8b01f, type: 3}
       propertyPath: EtiquetteLaissezPasser
       value: 
@@ -60329,16 +59906,14 @@ PrefabInstance:
       propertyPath: appartmentKurtLocked.Array.data[1]
       value: 
       objectReference: {fileID: 1753499838}
-    - target: {fileID: 1955605217293017406, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1955605217293017403, guid: da130138f5003d14f970fac471a8b01f,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 1156105013, guid: da130138f5003d14f970fac471a8b01f, type: 3}
+      propertyPath: _scott
+      value: 
+      objectReference: {fileID: 978765920}
+    - target: {fileID: 1156105013, guid: da130138f5003d14f970fac471a8b01f, type: 3}
+      propertyPath: _nelsonSpot
+      value: 
+      objectReference: {fileID: 1376588988}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da130138f5003d14f970fac471a8b01f, type: 3}
 --- !u!1 &1584428645
@@ -67762,7 +67337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805411145}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 327.1, y: -14.20483, z: 0}
+  m_LocalPosition: {x: 354, y: -14.20483, z: 0}
   m_LocalScale: {x: 3.68496, y: 39.30875, z: 1}
   m_Children: []
   m_Father: {fileID: 1047992693}

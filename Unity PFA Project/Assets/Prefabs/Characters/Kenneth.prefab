@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1841514868}
   - component: {fileID: 1841514870}
   - component: {fileID: 1841514869}
-  - component: {fileID: 7225323795560789643}
   m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
@@ -4699,19 +4698,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &7225323795560789643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1841514867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ead17f4305f10e44a82939064f0646a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 0}
 --- !u!1 &1955605217293017405
 GameObject:
   m_ObjectHideFlags: 0
@@ -4730,6 +4716,9 @@ GameObject:
   - component: {fileID: 1955605217293017396}
   - component: {fileID: 1156105011}
   - component: {fileID: 1156105012}
+  - component: {fileID: 1156105014}
+  - component: {fileID: 1156105003}
+  - component: {fileID: 1156105013}
   m_Layer: 10
   m_Name: Kenneth
   m_TagString: Player
@@ -4819,7 +4808,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &1955605217293017407
 BoxCollider2D:
@@ -4866,8 +4855,8 @@ MonoBehaviour:
   canOpenCarnet: 1
   PnjMet: []
   isInCinematic: 0
-  boardCanvas: {fileID: 0}
-  dialAndBookCanvas: {fileID: 0}
+  boardCanvasName: Board_FL
+  dialogCanvasName: Dialogue
   isOnTooltip: 0
   state: 0
 --- !u!114 &1955605217293017406
@@ -4884,9 +4873,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walk_speed: 5
   run_speed: 10
+  facingRight: 1
   sprint: 0
   canRun: 0
   canMove: 0
+  inRespawn: 0
 --- !u!114 &1955605217293017397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4899,13 +4890,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90682c0752c27164ab384ff7c1c318d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stickerIndexCarnetList: 
-  stickerIndexBoardList: 
-  allStickers: 
+  stickerIndexCarnetList: 0b0000000c0000000100000002000000030000000400000005000000060000000d00000009000000280000002900000034000000
+  stickerIndexBoardList: 0b0000000c0000000100000002000000030000000400000005000000060000000d0000000d0000002800000029000000340000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c000000
+  allStickers: 0b0000000c0000000100000002000000030000000400000005000000060000000d0000000e000000280000002900000034000000
   stickersPositionBoard: []
-  boardCanvas: {fileID: 0}
-  newSticker: {fileID: 0}
-  carnet: {fileID: 0}
+  boardCanvasName: Board_FIX
+  newStickerName: NewSticker
+  carnetCanvasName: Carnet
   stickerTemplate: {fileID: 3810293468784593066, guid: 1d6483f74250d2243be102a9cc38e29a,
     type: 3}
   stickersScriptableList:
@@ -5111,3 +5102,126 @@ MonoBehaviour:
   appartmentKurtLocked:
   - {fileID: 0}
   - {fileID: 0}
+--- !u!82 &1156105014
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955605217293017405}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243737059429131894, guid: 33bfe25356e3c34429e4b9cf51422678,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 3bd6ba24682e7ef46a9fe34440a0c670, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1156105003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955605217293017405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824a8bda70aa7cc4580269ea71d7be4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1156105013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955605217293017405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84294d62ebfee3e43a82d8c1bfe0442f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scott: {fileID: 0}
+  _nelsonSpot: {fileID: 0}
