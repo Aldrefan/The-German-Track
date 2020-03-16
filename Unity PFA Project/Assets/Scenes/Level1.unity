@@ -40545,8 +40545,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1115622983}
   - component: {fileID: 1115622984}
-  - component: {fileID: 1115622985}
-  - component: {fileID: 1115622986}
   m_Layer: 12
   m_Name: nuit bureau
   m_TagString: Untagged
@@ -40616,36 +40614,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1115622985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115622982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: ace6d2c6ad74c8343a7dcac0a68b1b67, type: 2}
-  isGlobal: 0
-  blendDistance: 0
-  weight: 1
-  priority: 0
---- !u!65 &1115622986
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115622982}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.7699999, y: 0.53999996, z: -9.32}
-  m_Center: {x: 0.6, y: -0.22, z: 0}
 --- !u!1 &1117996994
 GameObject:
   m_ObjectHideFlags: 0
@@ -49214,6 +49182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1391932081}
+  - component: {fileID: 1391932082}
   m_Layer: 17
   m_Name: Recovery GameObject (0)
   m_TagString: Untagged
@@ -49235,6 +49204,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1391932082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391932080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 72e422f08ab034f4bb923961b85a365c, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1 &1396928738
 GameObject:
   m_ObjectHideFlags: 0
