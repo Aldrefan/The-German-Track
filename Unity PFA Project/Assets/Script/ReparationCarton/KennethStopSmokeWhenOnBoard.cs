@@ -5,12 +5,12 @@ using UnityEngine;
 public class KennethStopSmokeWhenOnBoard : MonoBehaviour
 {
 
-    public GameObject Board;
+    private GameObject Board;
 
     // Start is called before the first frame update
     void Start()
     {
-        Board = GameObject.Find("BoardCanvas");
+        Board = CanvasManager.CManager.GetCanvas("Board_FIX");
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class KennethStopSmokeWhenOnBoard : MonoBehaviour
         }
         else
         {
-            Board = GameObject.Find("BoardCanvas");
+            Board = CanvasManager.CManager.GetCanvas("Board_FIX");
 
         }
     }
