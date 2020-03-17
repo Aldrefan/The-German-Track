@@ -34,6 +34,7 @@ public class DialogInterface : MonoBehaviour
         {
             if(player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().quoteFinished)
             {
+                player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().dialogLine++;
                 player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().Startdialogue();
             }
             else 
