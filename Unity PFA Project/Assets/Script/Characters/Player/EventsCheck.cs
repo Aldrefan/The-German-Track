@@ -5,7 +5,6 @@ using UnityEngine;
 public class EventsCheck : MonoBehaviour
 {
     public List<string> eventsList;
-    public bool fauteuil;
     bool lamp;
     public GameObject EtiquetteLaissezPasser;
     public List<GameObject> appartmentKurtLocked;
@@ -23,7 +22,6 @@ public class EventsCheck : MonoBehaviour
         }
         if(GameObject.FindObjectOfType<Interactions>().PnjMet.Contains("Kurt Becker"))
         {
-            Debug.Log("kk");
             UnlockKurtAppartment();
         }
         
@@ -32,14 +30,13 @@ public class EventsCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if(GetComponent<Interactions>().PNJContact && GetComponent<Interactions>().PNJContact.name == "Fauteuil" && Input.GetButtonDown("Interaction"))
+        /*if(GetComponent<Interactions>().PNJContact && GetComponent<Interactions>().PNJContact.name == "Fauteuil" && Input.GetButtonDown("Interaction") && GetComponent<Interactions>().state != Interactions.State.InCinematic)
         {
-            GetComponent<Interactions>().PNJContact = gameObject;
-            GetComponent<PNJ>().ChangeDialog(4);
-            GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
+            GetComponent<Interactions>().PNJContact.GetComponent<Clara_Cinematic>().ExecuteCommand();
         }*/
-        if(GetComponent<Interactions>().PNJContact && GetComponent<Interactions>().PNJContact.tag == "Interaction" && Input.GetButtonDown("Interaction") && !GetComponent<Interactions>().isInDialog && GetComponent<Interactions>().state != Interactions.State.OnCarnet)
+        if(GetComponent<Interactions>().PNJContact && GetComponent<Interactions>().PNJContact.tag == "Interaction" && Input.GetButtonDown("Interaction") && GetComponent<Interactions>().state != Interactions.State.InCinematic && GetComponent<Interactions>().state != Interactions.State.OnCarnet)
         {
+            Debug.Log("Check Interaction");
             CheckInteraction();
         }
     }
@@ -86,10 +83,13 @@ public class EventsCheck : MonoBehaviour
 
         if(col.name == "Fauteuil")
         {
+            //Debug.Log("Contact Fauteuil");
             if(eventsList.Contains("HasSlep"))
             {
                 Destroy(col.gameObject);
             }
+            /*else if(Input.GetButtonDown("Interaction"))
+            {col.GetComponent<Clara_Cinematic>().ExecuteCommand();}*/
         }
         if(col.name == "KD_InvisibleWall")
         {
@@ -214,7 +214,6 @@ public class EventsCheck : MonoBehaviour
         if(col.name == "Fauteuil")
         {
             col.transform.GetChild(0).gameObject.SetActive(false);
-            fauteuil = false;
         }
         if(col.name == "Lamp")
         {

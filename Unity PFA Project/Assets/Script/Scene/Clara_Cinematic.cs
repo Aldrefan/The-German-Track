@@ -293,7 +293,7 @@ public class Clara_Cinematic : MonoBehaviour
 
     void FadePanel()
     {
-        GameObject.Find("FadePanel").GetComponent<Animator>().SetBool("FadeIn", true);
+        CanvasManager.CManager.GetCanvas("Fade_Panel").GetComponent<Animator>().SetBool("FadeIn", true);
         //Debug.Log("1");
 
         StartCoroutine(EndFade());

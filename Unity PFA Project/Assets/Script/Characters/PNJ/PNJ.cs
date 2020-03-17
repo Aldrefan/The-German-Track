@@ -374,6 +374,6 @@ public class PNJ : MonoBehaviour
             }
             //allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].eventTrigger.RemoveRange(0, allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].eventTrigger.Count);
         }
-        dialogLine++;      // Début du probleme
+        //dialogLine++;      // Début du probleme
     }
 }

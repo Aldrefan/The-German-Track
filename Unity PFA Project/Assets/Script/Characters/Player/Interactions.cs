@@ -258,6 +258,7 @@ public class Interactions : MonoBehaviour
             {
                 if(PNJContact.GetComponent<PNJ>().quoteFinished)
                 {
+                    PNJContact.GetComponent<PNJ>().dialogLine++;
                     PNJContact.GetComponent<PNJ>().Startdialogue();
                 }
                 else
