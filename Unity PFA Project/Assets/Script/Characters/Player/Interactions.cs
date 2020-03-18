@@ -441,6 +441,7 @@ public class Interactions : MonoBehaviour
     {
         if(Input.GetButtonDown("Interaction") && PNJContact != null && PNJContact.name == "Phone")
         {
+            AudioManager.Instance.PlaySoundTest("Téléphone 1");
             ChangeState(State.InDialog);
             StartDialog();
         }

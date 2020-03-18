@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Shortcut : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class Shortcut : MonoBehaviour
     bool canMove;
     public bool internTeleport;
     GameObject directionalLight;
-
+    [SerializeField]
+    private AudioClip teleportSound;
     bool inRespawn;
 
     // Start is called before the first frame update
@@ -54,6 +56,19 @@ public class Shortcut : MonoBehaviour
 
         if (!GameObject.FindObjectOfType<MovementsPlayer>().inRespawn)
         {//GameObject.FindObjectOfType<Saver>().lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
+            if(teleportSound != null)
+            {
+                /*AudioSource audioSource = gameObject.AddComponent<AudioSource>();
+                audioSource.clip = teleportSound;
+                audioSource.gameObject.AddComponent<LifeTimer>();
+                audioSource.GetComponent<LifeTimer>().time = audioSource.clip.length;
+                audioSource.transform.position = Camera.main.transform.position;
+                audioSource.Play();*/
+                AudioManager.Instance.PlaySound(teleportSound);
+                //AudioSource.PlayClipAtPoint(teleportSound, Camera.main.transform.position /*new Vector3(Camera.main.transform.position.x, )Camera.main.transform.position.y, Camera.main.transform.position.z + 10)*/);
+                //GameObject.Find("One shot audio").GetComponent<AudioSource>().outputAudioMixerGroup = Resources.Load("Assets/Resources/SoundMixer/FXMixer.mixer") as AudioMixerGroup;
+                //Debug.Break();
+            }
             StartCoroutine("Respawn");
         }
     }
