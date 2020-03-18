@@ -73,15 +73,12 @@ public class CameraFollow : MonoBehaviour
         
         if(Vector3.Distance(new Vector3(Camera.main.transform.position.x, player.transform.position.y + YOffset, Camera.main.transform.position.z), Camera.main.transform.position) > 0.2f)
         {
-            Debug.Log("1");
             if(actualRoom.GetComponent<RoomInformations>() && !actualRoom.GetComponent<RoomInformations>().staticCamera)
             {
                 transform.position = Vector3.Lerp(transform.position, new Vector3(Camera.main.transform.position.x, player.transform.position.y + YOffset, Camera.main.transform.position.z), smoothSpeed);
             }
             if (actualRoom.GetComponent<SceneInformations>() && !actualRoom.GetComponent<SceneInformations>().fixedCamera)
             {
-                Debug.Log("2");
-
                 transform.position = Vector3.Lerp(transform.position, new Vector3(Camera.main.transform.position.x, player.transform.position.y + YOffset, Camera.main.transform.position.z), smoothSpeed);
             }
         }
