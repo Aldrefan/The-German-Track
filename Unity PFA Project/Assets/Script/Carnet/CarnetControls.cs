@@ -24,6 +24,8 @@ public class CarnetControls : MonoBehaviour
     private Transform texts;
     [SerializeField]
     private Transform buttons;
+    [SerializeField]
+    private AudioClip pageSound;
 
 
     // Start is called before the first frame update
@@ -92,6 +94,7 @@ public class CarnetControls : MonoBehaviour
                         {
                             carnetIndex.pageList[p].gameObject.SetActive(false);
                             carnetIndex.pageList[p + 1].gameObject.SetActive(true);
+                            AudioManager.Instance.PlaySound(pageSound);
                             //transform.GetChild(i).GetChild(p).gameObject.SetActive(false);
                             //transform.GetChild(i).GetChild(p + 1).gameObject.SetActive(true);
                             return;
@@ -115,6 +118,7 @@ public class CarnetControls : MonoBehaviour
                     {
                         carnetIndex.pageList[p].gameObject.SetActive(false);
                         carnetIndex.pageList[p - 1].gameObject.SetActive(true);
+                        AudioManager.Instance.PlaySound(pageSound);
                         //transform.GetChild(i).GetChild(p).gameObject.SetActive(false);
                         //transform.GetChild(i).GetChild(p - 1).gameObject.SetActive(true);
                         return;
