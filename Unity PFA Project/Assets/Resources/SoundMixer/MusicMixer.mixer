@@ -24,7 +24,7 @@ AudioMixerController:
     - a86ff58f308f92d4fb0714a06e907002
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 24500006}
+  m_TargetSnapshot: {fileID: 245682456800147098}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -41,6 +41,7 @@ AudioMixerGroupController:
   - {fileID: 24400004}
   - {fileID: 244027409020492138}
   - {fileID: 244110752074953584}
+  - {fileID: 244638092404699632}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -71,7 +72,10 @@ AudioMixerSnapshotController:
   m_FloatValues:
     dfe5d382345c1d14d92fee3733018716: 649
     1a98ee33356e02a4d903514a928e7c4d: -0.041800007
+    34a0a0931c7c07f42a9af37bf7fe5a9f: 2
     3ae761666efeb8e4ca3baee5e5560ec2: 0
+    602055b675a06834caf1b480db0ecc17: 0.7
+    48a270a732f4b18489fcdf2ab937cc29: 2500
     986bddcb5e1760445a69b70795d74bd0: 22000
     555728bcdf906ee4ab68b8e5944f0551: 152
   m_TransitionOverrides:
@@ -108,6 +112,26 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &244638092404699632
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: cc8b365541378fe4b8359a22f14d056c
+  m_EffectName: ParamEQ
+  m_MixLevel: 6f4f45dbb2298884192c1880c7e5d95f
+  m_Parameters:
+  - m_ParameterName: Center freq
+    m_GUID: 48a270a732f4b18489fcdf2ab937cc29
+  - m_ParameterName: Octave range
+    m_GUID: 34a0a0931c7c07f42a9af37bf7fe5a9f
+  - m_ParameterName: Frequency gain
+    m_GUID: 602055b675a06834caf1b480db0ecc17
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!245 &245682456800147098
 AudioMixerSnapshotController:
   m_ObjectHideFlags: 0
@@ -118,7 +142,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 3752f81a4f176cf4086239bf56eec53b
   m_FloatValues:
-    1a98ee33356e02a4d903514a928e7c4d: -20.151855
+    1a98ee33356e02a4d903514a928e7c4d: -0.10848998
     3ae761666efeb8e4ca3baee5e5560ec2: 0.5
-    986bddcb5e1760445a69b70795d74bd0: 481
+    986bddcb5e1760445a69b70795d74bd0: 300
   m_TransitionOverrides: {}

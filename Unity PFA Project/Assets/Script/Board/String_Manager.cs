@@ -112,6 +112,79 @@ public class String_Manager : MonoBehaviour
         CheckHypotheses();
     }
 
+    public void SortAllProfiles()
+    {
+        List<Transform> stickersProfile = new List<Transform>();
+        foreach(Transform child in transform)
+        {
+            if(child.GetComponent<Sticker_Display>())
+            {
+                if(child.GetComponent<Sticker_Display>().sticker.type == Sticker.Type.Profile)
+                {stickersProfile.Add(child);}
+            }
+        }
+        int stickerCount = stickersProfile.Count;
+        for(int i = 0; i < stickerCount; i++)
+        {
+            GetComponent<Piles>().SortInProfiles(stickersProfile[0]);
+            stickersProfile.RemoveAt(0);
+        }
+    }
+    public void SortAllClues()
+    {
+        List<Transform> stickersClue = new List<Transform>();
+        foreach(Transform child in transform)
+        {
+            if(child.GetComponent<Sticker_Display>())
+            {
+                if(child.GetComponent<Sticker_Display>().sticker.type == Sticker.Type.Clue)
+                {stickersClue.Add(child);}
+            }
+        }
+        int stickerCount = stickersClue.Count;
+        for(int i = 0; i < stickerCount; i++)
+        {
+            GetComponent<Piles>().SortInIndices(stickersClue[0]);
+            stickersClue.RemoveAt(0);
+        }
+    }
+    public void SortAllFacts()
+    {
+        List<Transform> stickersFact = new List<Transform>();
+        foreach(Transform child in transform)
+        {
+            if(child.GetComponent<Sticker_Display>())
+            {
+                if(child.GetComponent<Sticker_Display>().sticker.type == Sticker.Type.Fact)
+                {stickersFact.Add(child);}
+            }
+        }
+        int stickerCount = stickersFact.Count;
+        for(int i = 0; i < stickerCount; i++)
+        {
+            GetComponent<Piles>().SortInFaits(stickersFact[0]);
+            stickersFact.RemoveAt(0);
+        }
+    }
+    public void SortAllHypotheses()
+    {
+        List<Transform> stickersHypotheses = new List<Transform>();
+        foreach(Transform child in transform)
+        {
+            if(child.GetComponent<Sticker_Display>())
+            {
+                if(child.GetComponent<Sticker_Display>().sticker.type == Sticker.Type.Hypothesis)
+                {stickersHypotheses.Add(child);}
+            }
+        }
+        int stickerCount = stickersHypotheses.Count;
+        for(int i = 0; i < stickerCount; i++)
+        {
+            GetComponent<Piles>().SortInHypothèses(stickersHypotheses[0]);
+            stickersHypotheses.RemoveAt(0);
+        }
+    }
+
     void CheckHypotheses()
     {
         List<int> hypothesesPossibles = new List<int>();
@@ -195,6 +268,8 @@ public class String_Manager : MonoBehaviour
             }
         }
         hypotheseAffichage.text = hypothesesPossibles.Count.ToString();
+        if(hypothesesPossibles.Count > 0)
+        {CanvasManager.CManager.GetCanvas("PilesContainer").GetComponent<Animator>().SetBool("MouseOver", true);}
 
         foreach(GameObject stickerOnBoard in stickers)
         {

@@ -21,6 +21,8 @@ public class Piles : MonoBehaviour
     Transform faitsButton;
     [SerializeField]
     Transform hypothesesButton;
+    
+    public Transform pileHiderButton;
 
     void Update()
     {
@@ -33,7 +35,7 @@ public class Piles : MonoBehaviour
 
     void OnEnable()
     {
-        profilesButton.parent.gameObject.SetActive(true);
+        //profilesButton.parent.gameObject.SetActive(true);
         profilesButton.localScale = new Vector3(1,1,1);
         indicesButton.localScale = new Vector3(1,1,1);
         faitsButton.localScale = new Vector3(1,1,1);
@@ -43,21 +45,24 @@ public class Piles : MonoBehaviour
     public void HidePileHider()
     {
         HidePiles();
-        pileHypothèses.parent.GetComponent<Animator>().SetBool("Hide", !pileHypothèses.parent.GetComponent<Animator>().GetBool("Hide"));
-        if(!pileHypothèses.parent.GetComponent<Animator>().GetBool("Hide"))
+        //pileHypothèses.parent.GetComponent<Animator>().SetBool("Hide", !pileHypothèses.parent.GetComponent<Animator>().GetBool("Hide"));
+        pileHypothèses.parent.GetComponent<Animator>().SetTrigger("Hide 0");
+        CanvasManager.CManager.GetCanvas("PilesButtons").SetActive(false);
+        /*if(!pileHypothèses.parent.GetComponent<Animator>().GetBool("Hide"))
         {
             StartCoroutine(TimerButton());
         }
         else
         {
+            //CanvasManager.CManager.GetCanvas("PilesButtons").SetActive(false);
             CanvasManager.CManager.GetCanvas("PilesButtons").SetActive(!CanvasManager.CManager.GetCanvas("PilesButtons").activeInHierarchy);
-        }
+        }*/
     }
 
-    IEnumerator TimerButton()
+    public IEnumerator TimerButton()
     {
         yield return new WaitForSeconds(0.2f);
-        CanvasManager.CManager.GetCanvas("PilesButtons").SetActive(!CanvasManager.CManager.GetCanvas("PilesButtons").activeInHierarchy);
+        CanvasManager.CManager.GetCanvas("PilesButtons").SetActive(false);
     }
 
     public void HidePiles()
@@ -93,24 +98,24 @@ public class Piles : MonoBehaviour
             break;
         }
     }
-    void SortInProfiles(Transform stickerToSort)
+    public void SortInProfiles(Transform stickerToSort)
     {
         stickerToSort.parent = pileProfiles;
         stickerToSort.localPosition = Vector3.zero;
     }
-    void SortInIndices(Transform stickerToSort)
+    public void SortInIndices(Transform stickerToSort)
     {
         stickerToSort.parent = pileIndices;
         stickerToSort.localPosition = Vector3.zero;
         //stickerToSort.position = new Vector3(pileIndices.position.x, pileIndices.position.y, pileIndices.position.z);
     }
-    void SortInFaits(Transform stickerToSort)
+    public void SortInFaits(Transform stickerToSort)
     {
         stickerToSort.parent = pileFaits;
         stickerToSort.localPosition = Vector3.zero;
         //stickerToSort.position = new Vector3(pileFaits.position.x, pileFaits.position.y, pileFaits.position.z);
     }
-    void SortInHypothèses(Transform stickerToSort)
+    public void SortInHypothèses(Transform stickerToSort)
     {
         stickerToSort.parent = pileHypothèses;
         stickerToSort.localPosition = Vector3.zero;

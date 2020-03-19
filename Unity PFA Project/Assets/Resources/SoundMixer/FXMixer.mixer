@@ -38,8 +38,8 @@ AudioMixerGroupController:
   m_GroupID: 1e108d6d3967b2f4c94e2e2bdecbe163
   m_Children:
   - {fileID: 243516979952457172}
-  - {fileID: 243793658315056664}
   - {fileID: 243737059429131894}
+  - {fileID: 243793658315056664}
   m_Volume: 9be59bbc915b7184c89d894fde841588
   m_Pitch: 9c297aea605f68b49a631647c187306b
   m_Effects:
@@ -72,10 +72,10 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: e8458d3ee7f02c6469dc028a76526670
   m_FloatValues:
-    7e5f39000043e5241bf49c936b862bdc: -29.519161
-    0aa92d6460b5587469abe45ac8aa076d: -19.999998
-    2945fc988b1dd54448d215f2453e4e2a: -30.320126
-    9be59bbc915b7184c89d894fde841588: -20.151855
+    7e5f39000043e5241bf49c936b862bdc: -12.498483
+    0aa92d6460b5587469abe45ac8aa076d: -6.1777687
+    2945fc988b1dd54448d215f2453e4e2a: -17.938717
+    9be59bbc915b7184c89d894fde841588: -0.19913243
   m_TransitionOverrides: {}
 --- !u!243 &243516979952457172
 AudioMixerGroupController:
@@ -101,7 +101,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Footsteps
+  m_Name: Medium
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 1dce4665605d6f64dae5848d073de812
   m_Children: []
