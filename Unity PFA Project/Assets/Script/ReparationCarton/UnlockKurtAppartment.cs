@@ -8,12 +8,20 @@ public class UnlockKurtAppartment : MonoBehaviour
     GameObject doorSalon;
     EventsCheck eventManager;
 
+    GameObject sideDoorAnim;
+    GameObject sideDoorOutline;
+
     bool checkFinished;
 
     void Start()
     {
         firePlace = this.transform.Find("Cheminée").gameObject;
-        doorSalon = this.transform.Find("Shortcuts").GetChild(0).gameObject; 
+        doorSalon = this.transform.Find("Shortcuts").GetChild(0).gameObject;
+        sideDoorAnim = this.transform.Find("Porte kurt latérale").gameObject;
+        sideDoorOutline = this.transform.Find("OutlinePorteKurtLatérale").gameObject;
+        sideDoorAnim.GetComponent<Animator>().enabled = false;
+        SetActiveGO(sideDoorOutline, false);
+
     }
 
     // Update is called once per frame
@@ -26,26 +34,32 @@ public class UnlockKurtAppartment : MonoBehaviour
     {
         if (!checkFinished)
         {
-            if (doorSalon.GetComponent<BoxCollider2D>().enabled == false)
+            if (eventManager != null)
             {
-                if (eventManager != null)
+                Debug.Log("3");
+
+                if (eventManager.eventsList.Contains("TalkToKurt"))
                 {
-                    if (eventManager.eventsList.Contains("TalkToKurt"))
-                    {
-                        doorSalon.GetComponent<BoxCollider2D>().enabled = true;
-                        firePlace.GetComponent<BoxCollider2D>().enabled = true;
-                        Debug.Log("1");
-                    }
-                }
-                else
-                {
-                    eventManager = GameObject.FindObjectOfType<EventsCheck>();
+                    Debug.Log("4");
+
+                    doorSalon.GetComponent<BoxCollider2D>().enabled = true;
+                    firePlace.GetComponent<BoxCollider2D>().enabled = true;
+                    sideDoorAnim.GetComponent<Animator>().enabled = true;
+                    SetActiveGO(sideDoorOutline, true);
+                    checkFinished = true;
                 }
             }
             else
             {
-                checkFinished = true;
+                eventManager = GameObject.FindObjectOfType<EventsCheck>();
             }
         }
+
+        
+    }
+
+    void SetActiveGO(GameObject newObject, bool Value)
+    {
+        newObject.SetActive(Value);
     }
 }

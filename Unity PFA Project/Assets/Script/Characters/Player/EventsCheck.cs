@@ -86,6 +86,8 @@ public class EventsCheck : MonoBehaviour
             //Debug.Log("Contact Fauteuil");
             if(eventsList.Contains("HasSlep"))
             {
+                col.GetComponent<PNJ>().enabled = false;
+                col.GetComponent<Clara_Cinematic>().enabled = false;
                 Destroy(col.gameObject);
             }
             /*else if(Input.GetButtonDown("Interaction"))
@@ -239,7 +241,8 @@ public class EventsCheck : MonoBehaviour
         switch (newEvent)
         {
             case "laissezPasser":
-                EtiquetteLaissezPasser.GetComponent<Animator>().SetTrigger("NewSticker");
+                //EtiquetteLaissezPasser.GetComponent<Animator>().SetTrigger("NewSticker");
+                carnetGoal.RemoveGoal(new GoalKeys("LaissezPasser", "LaissezPasser"));
                 carnetGoal.NewGoal(new GoalKeys("Goal_01","DescGoal_01"));
                 break;
 

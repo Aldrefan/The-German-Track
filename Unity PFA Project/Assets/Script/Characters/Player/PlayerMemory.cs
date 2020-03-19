@@ -48,24 +48,26 @@ public class PlayerMemory : MonoBehaviour
 
     public void AddToMemory(int stickerIndex)
     {
+        newSticker.GetComponent<NewStickerDisplay>().sticker = stickersScriptableList[stickerIndex];
+        newSticker.GetComponent<NewStickerDisplay>().Corou();
         newSticker.GetComponent<Animator>().SetTrigger("NewSticker");
         stickerIndexBoardList.Add(stickerIndex);
         stickerIndexCarnetList.Add(stickerIndex);
         allStickers.Add(stickerIndex);
     }
 
-    public void KeepInMemory(int stickerIndex)
-    {
-        //JsonSave save = SaveGameManager.GetCurrentSave();
-        newSticker.GetComponent<Animator>().SetTrigger("NewSticker");
-        stickerIndexBoardList.Add(stickerIndex);
-        stickerIndexCarnetList.Add(stickerIndex);
-        allStickers.Add(stickerIndex);
-        /*if(save.memoryStickers.Contains(stickerIndex))
-        {}
-        else save.memoryStickers.Add(stickerIndex); */
-        //SaveGameManager.Save();
-    }
+    //public void KeepInMemory(int stickerIndex)
+    //{
+    //    //JsonSave save = SaveGameManager.GetCurrentSave();
+    //    newSticker.GetComponent<Animator>().SetTrigger("NewSticker");
+    //    stickerIndexBoardList.Add(stickerIndex);
+    //    stickerIndexCarnetList.Add(stickerIndex);
+    //    allStickers.Add(stickerIndex);
+    //    /*if(save.memoryStickers.Contains(stickerIndex))
+    //    {}
+    //    else save.memoryStickers.Add(stickerIndex); */
+    //    //SaveGameManager.Save();
+    //}
 
     public void CheckStickersCarnet()
     {
