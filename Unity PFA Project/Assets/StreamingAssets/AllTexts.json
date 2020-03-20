@@ -79,7 +79,7 @@
       "EN": "Morgue"
    },
    {
-      "Key": "Clara",
+      "Key": "Clara Grey",
       "FRName": "Clara Grey",
       "ENName": "Clara Grey"
    },
@@ -89,37 +89,37 @@
       "ENName": "Kenneth"
    },
    {
-      "Key": "Loraine",
+      "Key": "Loraine Grey",
       "FRName": "Loraine Grey",
       "ENName": "Loraine Grey"
    },
    {
-      "Key": "Kurt",
-      "FRName": "Kurt",
-      "ENName": "Kurt"
+      "Key": "Kurt Becker",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
-      "Key": "White",
+      "Key": "W.White",
       "FRName": "W. White",
       "ENName": "W. White"
    },
    {
-      "Key": "Lou",
+      "Key": "Dr. Lou Ellis",
       "FRName": "Dr. Lou Ellis",
       "ENName": "Dr. Lou Ellis"
    },
    {
-      "Key": "Marvin",
+      "Key": "Marvin Meyer",
       "FRName": "Marvin Meyer",
       "ENName": "Marvin Meyer"
    },
    {
-      "Key": "Scott",
+      "Key": "S. Nelson",
       "FRName": "S. Nelson",
       "ENName": "S. Nelson"
    },
    {
-      "Key": "Seer",
+      "Key": "Barman",
       "FRName": "Barman",
       "ENName": "Bartender"
    },
@@ -127,6 +127,21 @@
       "Key": "R\u00E9ceptionniste",
       "FRName": "R\u00E9ceptionniste",
       "ENName": "Receptionist"
+   },
+   {
+      "Key": "T\u00E9l\u00E9phone",
+      "FRName": "T\u00E9l\u00E9phone",
+      "ENName": "Phone"
+   },
+   {
+      "Key": "Kurt Becker (?)",
+      "FRName": "Kurt Becker (?)",
+      "ENName": "Kurt Becker (?)"
+   },
+   {
+      "Key": "Clara (?)",
+      "FRName": "?",
+      "ENName": "?"
    },
    {
       "Key": "InBook_Char",
@@ -340,7 +355,7 @@
    },
    {
       "Key": "Tuto_Help",
-      "FR": "Aide?",
+      "FR": "Aide ?",
       "EN": "Help?"
    },
    {
@@ -572,15 +587,15 @@
    },
    {
       "Key": "LaissezPasser",
-      "FR": "Laissez-passer obtenue",
+      "FR": "Laissez-passer obtenu",
       "EN": "Entry permit acquired"
    },
    {
       "Key": "Clara_D0_Q1",
       "FR": "Bonsoir, Mr Kenneth je pr\u00E9sume ?",
       "EN": "Good evening, Mr Kenneth, I suppose ?",
-      "FRName": "Clara Grey",
-      "ENName": "Clara Grey"
+      "FRName": "?",
+      "ENName": "?"
    },
    {
       "Key": "Clara_D0_Q2",
@@ -1683,8 +1698,8 @@
    },
    {
       "Key": "Clara_D25_Q3",
-      "FR": "<i> Je devrais s\u00FBrement l'informer de ce qui s'est pass\u00E9... Peut-\u00EAtre plus tard\u2026 </i>",
-      "EN": "<i> I should probably tell them about what happened... Maybe later\u2026 </i>",
+      "FR": "I should probably tell them about what happened... Maybe later...",
+      "EN": "Je devrais s\u00FBrement l'informer de ce qui s'est pass\u00E9... Peut-\u00EAtre plus tard...",
       "FRName": "Clara Grey",
       "ENName": "Clara Grey"
    },
@@ -2117,7 +2132,7 @@
       "Key": "R\u00E9ceptionniste_D1_Q1",
       "FR": "Je peux vous aider ?",
       "EN": "May I help you ?",
-      "FRName": "R\u00E9ceptionniste",
+      "FRName": "R\u00E9ceptionniste_P",
       "ENName": "Receptionnist"
    },
    {
@@ -2131,21 +2146,21 @@
       "Key": "R\u00E9ceptionniste_D1_Q3",
       "FR": "Ah vous \u00EAtes Kenneth n\u2019est-ce pas ?",
       "EN": "Ah you must be Kenneth, is that correct ?",
-      "FRName": "R\u00E9ceptionniste",
+      "FRName": "R\u00E9ceptionniste_P",
       "ENName": "Receptionnist"
    },
    {
       "Key": "R\u00E9ceptionniste_D1_Q4",
       "FR": "Allez-y, c\u2019est la porte de droite au fond du couloir. Mais je crois qu\u2019il discute avec quelqu\u2019un.",
       "EN": "Go on, door on the right at the end of the corridor. But I think he\u2019s speaking to someone right now.",
-      "FRName": "R\u00E9ceptionniste",
+      "FRName": "R\u00E9ceptionniste_P",
       "ENName": "R\u00E9ceptionniste"
    },
    {
       "Key": "R\u00E9ceptionniste_D1_Q5",
       "FR": "Vous devrez peut-\u00EAtre attendre un peu.",
       "EN": "You might have to wait a little.",
-      "FRName": "R\u00E9ceptionniste",
+      "FRName": "R\u00E9ceptionniste_P",
       "ENName": "Receptionnist"
    },
    {
@@ -2159,7 +2174,7 @@
       "Key": "R\u00E9ceptionniste_D2_Q1",
       "FR": "Allez-y, c\u2019est la porte de droite au fond du couloir.",
       "EN": "Go on, it\u2019s the door on the right at the end of the corridor.",
-      "FRName": "R\u00E9ceptionniste",
+      "FRName": "R\u00E9ceptionniste_P",
       "ENName": "Receptionnist"
    },
    {
@@ -3874,939 +3889,1240 @@
       "Key": "Kurt_D7_Q1",
       "FR": "J\u2019ai trouv\u00E9 \u00E7a dans votre chambre, c\u2019est \u00E0 vous ?",
       "EN": "I found this in your room, is that yours ?",
-      "FRName": "Kenneth"
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D7_Q2",
       "FR": "Oh merde\u2026 Non, ce n\u2019est pas ce que vous croyez.",
       "EN": "Oh shit\u2026 No, it\u2019s not what you think.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D7_Q3",
       "FR": "Vous en faites pas, je ne suis pas de la police.",
       "EN": "Don\u2019t worry, I\u2019m not with the police.",
-      "FRName": "Kenneth"
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D7_Q4",
       "FR": "Je veux juste savoir si c\u2019est \u00E0 vous.",
       "EN": "I just wanna know if it\u2019s yours.",
-      "FRName": "Kenneth"
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D7_Q5",
       "FR": "Non. C\u2019\u00E9tait\u2026 \u00E0 Loraine. Elle en prenait de temps en temps.",
       "EN": "No. It was\u2026 Loraine\u2019s. She would have some from time to time.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D7_Q6",
       "FR": "Vous avez oubli\u00E9 de m\u2019en parler.",
       "EN": "You forgot to mention that.",
-      "FRName": "Kenneth"
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D7_Q7",
       "FR": "Oui, ce n\u2019est pas vraiment le genre de choses dont j\u2019aime parler.",
       "EN": "Yeah, it\u2019s not really the kind of thing I like to talk about.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D8_Q1",
       "FR": "J\u2019ai trouv\u00E9 une valise dans votre chambre. Elle \u00E9tait remplie de v\u00EAtements.",
       "EN": "I found a packed luggage in your room. It was full of clothes.",
-      "FRName": "Kenneth"
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D8_Q2",
       "FR": "Ah ?",
       "EN": "Ah ?",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D8_Q3",
       "FR": "Vous avez l\u2019intention de partir ?",
       "EN": "Are you planning to leave ?",
-      "FRName": "Kenneth"
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D8_Q4",
       "FR": "Oui, c\u2019est \u00E7a. Je me suis dit que changer d\u2019air me ferait sans doute du bien.",
       "EN": "Yes, that\u2019s right. I thought a change of scenery might help me get better.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D8_Q5",
       "FR": "Je suis d\u2019accord, et vous partez o\u00F9 comme \u00E7a ?",
       "EN": "You may be right, and where do you plan to go ?",
-      "FRName": "Kenneth"
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D8_Q6",
       "FR": "Je\u2026 n\u2019ai pas encore d\u00E9cid\u00E9.",
       "EN": "I\u2026 haven\u2019t decided yet.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D9_Q1",
       "FR": "J\u2019ai trouv\u00E9 \u00E7a dans la chemin\u00E9e, mais je n\u2019y comprends rien.",
       "EN": "I found this in the fireplace, but I can\u2019t seem to make any sense of it.",
-      "FRName": "Kenneth"
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D9_Q2",
       "FR": "Ah \u00E7a ? \u00C7a doit \u00EAtre un po\u00E8me rat\u00E9 de Loraine.",
       "EN": "Oh this ? Must be one of Loraine\u2019s failed poems.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D9_Q3",
       "FR": "Un po\u00E8me ?",
       "EN": "A poem ?",
-      "FRName": "Kenneth"
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D9_Q4",
       "FR": "Oui, c\u2019est sur \u00E7a qu\u2019elle travaillait l\u2019autre soir.",
       "EN": "Yes, That\u2019s what she was working on the other night.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D9_Q5",
       "FR": "Elle aimait \u00E9crire des po\u00E8mes de temps en temps\u2026",
       "EN": "She liked to write poems from time to time\u2026",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D9_Q6",
       "FR": "Je n\u2019y ai jamais rien compris, ils sont tous \u00E9crits dans une esp\u00E8ce de langage bizarre.",
       "EN": "I never understood any of them, they\u2019re all written in some bizarre language.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D9_Q7",
       "FR": "Vous les avez d\u00E9j\u00E0 lus ?",
       "EN": "Have you ever read them ?",
-      "FRName": "Kenneth"
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D9_Q8",
       "FR": "J\u2019vous dis, je n\u2019y comprenais rien.",
       "EN": "I\u2019m telling ya, I didn\u2019t understand any of it.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D9_Q9",
       "FR": "Les trucs de gonzesses \u00E7a ne me r\u00E9ussit pas trop alors je la laissais faire.",
       "EN": "I was never any good at all that ladies\u2019 stuff, so I just left her to it.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D9_Q10",
       "FR": "Parfois elle \u00E9tait tellement \u00E9nerv\u00E9e de ne pas r\u00E9ussir \u00E0 \u00E9crire qu\u2019elle jetait tout au feu.",
       "EN": "Sometimes she was so angry about not managing to write things well, she would throw it all in the fireplace.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D9_Q11",
       "FR": "C\u2019est ce qui a d\u00FB arriver \u00E0 celui-l\u00E0 d\u2019ailleurs.",
       "EN": "Must\u2019ve been what happened to that one, too.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D9_Q12",
       "FR": "C\u2019est \u00E9trange\u2026 Elle les faisait lire \u00E0 quelqu\u2019un ?",
       "EN": "That\u2019s weird\u2026 Did she have anyone read them ?",
-      "FRName": "Kenneth"
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D9_Q13",
       "FR": "Oui je crois, elle avait un ami \u00E0 qui elle les envoyait.",
       "EN": "Yes, I think she sent them to a friend of hers.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D9_Q14",
       "FR": "Mais je ne l\u2019ai jamais vu.",
       "EN": "But I never met him.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D9_Q15",
       "FR": "Je ne vois pas trop qui \u00E7a peut int\u00E9resser ces conneries, mais bon, \u00E7a lui faisait plaisir alors\u2026",
       "EN": "I don\u2019t really know who could be interested in that garbage, but oh well, she liked doing it so\u2026",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D10_Q1",
       "FR": "J\u2019ai trouv\u00E9 \u00E7a dans le bureau de Loraine, mais je n\u2019y comprends rien.",
       "EN": "I found this in the fireplace, but I can\u2019t seem to make any sense of it.",
-      "FRName": "Kenneth"
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D10_Q2",
       "FR": "Ah \u00E7a ? \u00C7a doit \u00EAtre un autre po\u00E8me de Loraine.",
       "EN": "Oh this ? Must be one of Loraine\u2019s failed poems.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D10_Q3",
       "FR": "Un po\u00E8me ?",
       "EN": "A poem ?",
-      "FRName": "Kenneth"
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D10_Q4",
       "FR": "Oui, c\u2019est sur \u00E7a qu\u2019elle travaillait l\u2019autre soir.",
       "EN": "Yes, That\u2019s what she was working on the other night.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D10_Q5",
       "FR": "Elle aimait \u00E9crire des po\u00E8mes de temps en temps\u2026",
       "EN": "She liked to write poems from time to time\u2026",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D10_Q6",
       "FR": "Je n\u2019y ai jamais rien compris, ils sont tous \u00E9crits dans une esp\u00E8ce de langage bizarre.",
       "EN": "I never understood any of them, they\u2019re all written in some bizarre language.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D10_Q7",
       "FR": "Vous les avez d\u00E9j\u00E0 lus ?",
       "EN": "Have you ever read them ?",
-      "FRName": "Kenneth"
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D10_Q8",
       "FR": "J\u2019vous dis, je n\u2019y comprenais rien.",
       "EN": "I\u2019m telling ya, I didn\u2019t understand any of it.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D10_Q9",
       "FR": "Les trucs de gonzesses \u00E7a ne me r\u00E9ussit pas trop alors je la laissais faire.",
       "EN": "I was never any good at all that ladies\u2019 stuff, so I just left her to it.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D10_Q10",
       "FR": "C\u2019est \u00E9trange\u2026 Elle les faisait lire \u00E0 quelqu\u2019un ?",
       "EN": "That\u2019s weird\u2026 Did she have anyone read them ?",
-      "FRName": "Kenneth"
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D10_Q11",
       "FR": "Oui je crois, elle avait un ami \u00E0 qui elle les envoyait.",
       "EN": "Yes, I think she sent them to a friend of hers.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D10_Q12",
       "FR": "Mais je ne l\u2019ai jamais vu.",
       "EN": "But I never met him.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D10_Q13",
       "FR": "Je ne vois pas trop qui \u00E7a peut int\u00E9resser ces conneries, mais bon, \u00E7a lui faisait plaisir alors\u2026",
       "EN": "I don\u2019t really know who could be interested in that garbage, but oh well, she liked doing it so\u2026",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D11_Q1",
       "FR": "Vous lisez ce genre de magazine, vous ?",
-      "EN": "Do you read that kind of magazine ?"
+      "EN": "Do you read that kind of magazine ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D11_Q2",
       "FR": "\u00C7a m\u2019arrive oui, mais cette fois je l\u2019ai achet\u00E9 parce qu\u2019il parlait de Loraine.",
       "EN": "Sometimes, yeah, but I bought this one because it was about Loraine.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D11_Q3",
       "FR": "Vu que sa s\u0153ur est actrice, \u00E7a a attir\u00E9 les journalistes, mais je veux plus avoir affaire \u00E0 eux.",
       "EN": "Since her sister\u2019s an actress, it drew in all these journalists, but I don\u2019t want anything to do with them anymore.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D11_Q4",
       "FR": "Rien que des ordures qui profitent du malheur des autres.",
       "EN": "Bunch of assholes profiting from other people\u2019s misery.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D11_Q5",
       "FR": "\u00C7a vous d\u00E9range si je l\u2019emporte avec moi ?",
-      "EN": "Do you mind if I take it with me ?"
+      "EN": "Do you mind if I take it with me ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D11_Q6",
       "FR": "Je l\u2019aurais foutu \u00E0 la poubelle de toute fa\u00E7on. Allez-y.",
       "EN": "I would\u2019ve thrown it out anyway. Take it.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D12_Q1",
       "FR": "J\u2019ai d\u00E9couvert comment est morte votre petite amie.",
-      "EN": "I found out how your girlfriend died."
+      "EN": "I found out how your girlfriend died.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D12_Q2",
       "FR": "Comment ?",
       "EN": "How ?",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D12_Q3",
       "FR": "On l\u2019a drogu\u00E9e. Elle s\u2019est endormie et l\u2019assassin en a profit\u00E9 pour lui passer la corde au cou.",
-      "EN": "She was drugged. She fell asleep and the murderer took the opportunity to hang her."
+      "EN": "She was drugged. She fell asleep and the murderer took the opportunity to hang her.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D12_Q4",
       "FR": "C\u2019est impossible\u2026 Non, vous devez vous tromper !",
       "EN": "That\u2019s impossible\u2026 No, you must be mistaken !",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D12_Q5",
       "FR": "Il me reste encore quelques indices \u00E0 trouver mais je sens que je me rapproche de la v\u00E9rit\u00E9.",
-      "EN": "I still have a couple clues to find, but I can feel that I\u2019m getting close to finding out the whole truth."
+      "EN": "I still have a couple clues to find, but I can feel that I\u2019m getting close to finding out the whole truth.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D13_Q1",
       "FR": "Dites-moi Kurt, cette drogue, elle \u00E9tait \u00E0 vous, pas vrai ?",
-      "EN": "Tell me, Kurt, those drugs, they were yours, weren\u2019t they ?"
+      "EN": "Tell me, Kurt, those drugs, they were yours, weren\u2019t they ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D13_Q2",
       "FR": "Pardon ? Pas du tout ! C\u2019\u00E9tait \u00E0 Loraine je vous ai dit !",
       "EN": "Excuse me ? Not at all ! They were Loraine\u2019s, I already told you !",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D13_Q3",
       "FR": "D\u2019apr\u00E8s les preuves que j\u2019ai ici, vous mentez.",
-      "EN": "According to the proof I\u2019ve got here, you\u2019re lying."
+      "EN": "According to the proof I\u2019ve got here, you\u2019re lying.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D13_Q4",
       "FR": "\u2026",
       "EN": "\u2026",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D13_Q5",
       "FR": "Bon oui c\u2019est \u00E0 moi et alors ? C\u2019est ma vie priv\u00E9e \u00E7a !",
       "EN": "Ok, yeah, they\u2019re mine, so what? That\u2019s my own private life !",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D13_Q6",
       "FR": "Vous me cachez des preuves qui peuvent m\u2019aider dans mon enqu\u00EAte.",
-      "EN": "You\u2019re withholding evidence that could help me in my investigation."
+      "EN": "You\u2019re withholding evidence that could help me in my investigation.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D13_Q7",
       "FR": "\u00C7a m\u2019est \u00E9gal que vous soyez un junkie.",
-      "EN": "I don\u2019t care that you\u2019re a junkie."
+      "EN": "I don\u2019t care that you\u2019re a junkie.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D13_Q8",
       "FR": "Me d\u00E9noncez pas, s\u2019il vous pla\u00EEt.",
       "EN": "Don\u2019t turn me in, for the love of God.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D13_Q9",
       "FR": "Je viens de vous dire que je m\u2019en foutais que vous aimiez vous cramer le cerveau.",
-      "EN": "I just told you, I don\u2019t care that you like frying up your brain."
+      "EN": "I just told you, I don\u2019t care that you like frying up your brain.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D13_Q10",
       "FR": "En revanche, je me pose la question de l\u2019argent.",
-      "EN": "What I\u2019m wondering though, is how you\u2019re paying for all this."
+      "EN": "What I\u2019m wondering though, is how you\u2019re paying for all this.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D13_Q11",
       "FR": "Comment \u00E7a ?",
       "EN": "What ?",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D13_Q12",
       "FR": "La drogue ne tombe pas du ciel. Qui vous donne de l\u2019argent ?",
-      "EN": "These drugs aren\u2019t falling from the sky. Who\u2019s providing you with the money to buy them ?"
+      "EN": "These drugs aren\u2019t falling from the sky. Who\u2019s providing you with the money to buy them ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D13_Q13",
       "FR": "C\u2019est Viktor, mon fr\u00E8re.",
       "EN": "That would be Viktor, my brother.",
-      "FRName": "Kurt Becker"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D14_Q1",
       "FR": "Vous ne comptez pas partir en vacances n\u2019est-ce pas ?",
-      "EN": "You\u2019re not really planning to go on vacation, are you ?"
+      "EN": "You\u2019re not really planning to go on vacation, are you ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D14_Q2",
       "FR": "Que voulez-vous dire ?",
-      "EN": "What do you mean ?"
+      "EN": "What do you mean ?",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D14_Q3",
       "FR": "La valise dans la chambre \u00E9tait \u00E0 Loraine.",
-      "EN": "The luggage in the room was Loraine\u2019s."
+      "EN": "The luggage in the room was Loraine\u2019s.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D14_Q4",
       "FR": "Elle l'avait pr\u00E9par\u00E9e \u00E0 la h\u00E2te car elle comptait partir. Visiblement quelque chose l\u2019en a emp\u00EAch\u00E9e.",
-      "EN": "She\u2019d prepared it hastily because she planned to leave. Visibly, something didn\u2019t let her."
+      "EN": "She\u2019d prepared it hastily because she planned to leave. Visibly, something didn\u2019t let her.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D14_Q5",
       "FR": "C\u2019est vrai\u2026 Elle avait pr\u00E9vu de quitter la ville. Pour une dispute \u00E0 la con.",
-      "EN": "You\u2019re right\u2026 She had planned to leave the city. Over a stupid fight."
+      "EN": "You\u2019re right\u2026 She had planned to leave the city. Over a stupid fight.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D14_Q6",
       "FR": "Dites-m\u2019en plus.",
-      "EN": "Tell me more."
+      "EN": "Tell me more.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D14_Q7",
       "FR": "J\u2019en ai pas parl\u00E9 \u00E0 la police parce que j\u2019avais peur qu\u2019on me soup\u00E7onne \u00E0 cause de \u00E7a.",
-      "EN": "I didn\u2019t tell the police about it because I thought they\u2019d suspect me for it."
+      "EN": "I didn\u2019t tell the police about it because I thought they\u2019d suspect me for it.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D14_Q8",
       "FR": "Mais effectivement, on s\u2019\u00E9tait disput\u00E9s. Je ne sais plus pourquoi.",
-      "EN": "But it\u2019s true, we\u2019d had a fight. I can\u2019t even remember what it was about."
+      "EN": "But it\u2019s true, we\u2019d had a fight. I can\u2019t even remember what it was about.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D14_Q9",
       "FR": "Faites un effort !",
-      "EN": "Make an effort !"
+      "EN": "Make an effort !",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D14_Q10",
       "FR": "Euh\u2026 Ah oui \u00E7a y est.",
-      "EN": "Uh\u2026 Ah yes, I\u2019ve got it."
+      "EN": "Uh\u2026 Ah yes, I\u2019ve got it.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D14_Q11",
       "FR": "C\u2019est parce que j\u2019avais parl\u00E9 \u00E0 mon fr\u00E8re des po\u00E8mes qu\u2019elle \u00E9crivait.",
-      "EN": "It was because I\u2019d told my brother about the poems she was writing."
+      "EN": "It was because I\u2019d told my brother about the poems she was writing.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D14_Q12",
       "FR": "Pour rigoler, je lui en ai m\u00EAme lu un. \u00C7a l\u2019a rendue folle de rage.",
-      "EN": "Just for laughs, I even read one out to him. She went mad."
+      "EN": "Just for laughs, I even read one out to him. She went mad.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D14_Q13",
       "FR": "Et c\u2019est l\u00E0 qu\u2019elle a jet\u00E9 ce qu\u2019elle \u00E9crivait dans la chemin\u00E9e et qu\u2019elle a commenc\u00E9 \u00E0 faire sa valise.",
-      "EN": "That\u2019s when she threw all she wrote out in the fireplace and then started packing her stuff."
+      "EN": "That\u2019s when she threw all she wrote out in the fireplace and then started packing her stuff.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D14_Q14",
       "FR": "C\u2019est un peu disproportionn\u00E9 comme r\u00E9action pour un simple po\u00E8me.",
-      "EN": "That\u2019s a bit of a disproportionate reaction for a poem."
+      "EN": "That\u2019s a bit of a disproportionate reaction for a poem.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D14_Q15",
       "FR": "C\u2019est aussi ce que j\u2019ai trouv\u00E9. Viktor n\u2019as pas eu l\u2019air de rire non plus.",
-      "EN": "I thought so as well. Viktor didn\u2019t seem to be laughing about it either."
+      "EN": "I thought so as well. Viktor didn\u2019t seem to be laughing about it either.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D14_Q16",
       "FR": "Il a commenc\u00E9 \u00E0 me traiter d\u2019idiot ou je sais pas quoi.",
-      "EN": "But he started calling me an idiot or something like that."
+      "EN": "But he started calling me an idiot or something like that.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D14_Q17",
       "FR": "Mais de toute fa\u00E7on j\u2019ai raccroch\u00E9 pour tenter de raisonner Loraine.",
-      "EN": "I hung up the phone anyway to try to reason Loraine."
+      "EN": "I hung up the phone anyway to try to reason Loraine.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D15_Q1",
       "FR": "Vous avez drogu\u00E9 Loraine.",
-      "EN": "You drugged Loraine."
+      "EN": "You drugged Loraine.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D15_Q2",
       "FR": "Non, vous vous trompez ! Pourquoi j\u2019aurais fait une chose pareille ?",
-      "EN": "No, you\u2019re wrong ! Why would I have done such a thing ?"
+      "EN": "No, you\u2019re wrong ! Why would I have done such a thing ?",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D15_Q3",
       "FR": "Loraine avait pr\u00E9par\u00E9 sa valise et \u00E9tait pr\u00EAte \u00E0 partir.",
-      "EN": "Loraine had packed her luggage and was ready to leave."
+      "EN": "Loraine had packed her luggage and was ready to leave.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D15_Q4",
       "FR": "Vous vouliez la garder pr\u00E8s de vous mais elle ne voulait rien entendre.",
-      "EN": "You wanted to keep her close to you but she wasn\u2019t having any of it."
+      "EN": "You wanted to keep her close to you but she wasn\u2019t having any of it.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D15_Q5",
       "FR": "Vous avez donc utilis\u00E9 la drogue cach\u00E9e sous votre lit pour l'assommer et l'emp\u00EAcher de partir.",
-      "EN": "So you used the drugs hidden under your bed to knock her out and stop her from leaving."
+      "EN": "So you used the drugs hidden under your bed to knock her out and stop her from leaving.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D15_Q6",
       "FR": "Je\u2026 Je n\u2019ai pas tu\u00E9 Loraine, je le jure ! Quand je me suis r\u00E9veill\u00E9, elle \u00E9tait d\u00E9j\u00E0 morte !",
-      "EN": "I\u2026 I didn\u2019t kill Loraine, I swear ! When I woke up, she was already dead !"
+      "EN": "I\u2026 I didn\u2019t kill Loraine, I swear ! When I woke up, she was already dead !",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D15_Q7",
       "FR": "Je ne vous accuse pas de sa mort pour l\u2019instant, mais que vous l\u2019ayez voulu ou non, vous \u00EAtes complice.",
-      "EN": "I\u2019m not accusing you of that for now, but whether you wanted to or not, you\u2019re an accomplice to her death."
+      "EN": "I\u2019m not accusing you of that for now, but whether you wanted to or not, you\u2019re an accomplice to her death.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D15_Q8",
       "FR": "C\u2019\u00E9tait une erreur, je regrette ! Piti\u00E9 monsieur, ne me d\u00E9noncez pas !",
-      "EN": "It was a mistake, adn I regret it ! I beg of you, Sir, please don\u2019t turn me in !"
+      "EN": "It was a mistake, adn I regret it ! I beg of you, Sir, please don\u2019t turn me in !",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D15_Q9",
       "FR": "Je vais d\u2019abord tirer cette affaire au clair. Mais je pense toucher au but.",
-      "EN": "First I\u2019m gonna sort out this whole case. But I think I\u2019m getting close."
+      "EN": "First I\u2019m gonna sort out this whole case. But I think I\u2019m getting close.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D16_Q1",
       "FR": "Vous connaissez Clara ? C\u2019est la soeur de Loraine.",
-      "EN": "Do you know Clara ? She\u2019s Loraine\u2019s sister."
+      "EN": "Do you know Clara ? She\u2019s Loraine\u2019s sister.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D16_Q2",
       "FR": "C\u2019est une connasse !",
-      "EN": "She\u2019s a real bitch !"
+      "EN": "She\u2019s a real bitch !",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D16_Q3",
       "FR": "Je vois.",
-      "EN": "I see."
+      "EN": "I see.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D16_Q4",
       "FR": "J\u2019ai du mal \u00E0 imaginer qu\u2019elles soient de la m\u00EAme famille.",
-      "EN": "I can\u2019t believe they come from the same family."
+      "EN": "I can\u2019t believe they come from the same family.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D16_Q5",
       "FR": "Clara passait son temps \u00E0 me critiquer et \u00E0 dire \u00E0 Loraine qu\u2019elle m\u00E9ritait mieux.",
-      "EN": "Clara spent all her time criticizing me and telling Loraine she deserved better."
+      "EN": "Clara spent all her time criticizing me and telling Loraine she deserved better.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D17_Q1",
       "FR": "Ca a d\u00FB \u00EAtre difficile pour vous quand vous avez r\u00E9alis\u00E9 que Loraine comptait partir.",
-      "EN": "Must\u2019ve been hard for you when you realized Loraine was planning to leave."
+      "EN": "Must\u2019ve been hard for you when you realized Loraine was planning to leave.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D17_Q2",
       "FR": "Oui, bien s\u00FBr, je ne comprenais pas sa d\u00E9cision soudaine.",
-      "EN": "Yes, of course, I didn\u2019t understand this sudden decision."
+      "EN": "Yes, of course, I didn\u2019t understand this sudden decision.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D17_Q3",
       "FR": "Heureusement, j\u2019ai \u00E9t\u00E9 en mesure de la raisonner. Mais quand je vois o\u00F9 \u00E7a l\u2019a men\u00E9e\u2026",
-      "EN": "Fortunately, I was able to reason her. But now that I see where that led her\u2026"
+      "EN": "Fortunately, I was able to reason her. But now that I see where that led her\u2026",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D17_Q4",
       "FR": "Je suis plut\u00F4t dubitatif quant \u00E0 vos m\u00E9thodes de persuasion.",
-      "EN": "I have some doubts about your persuasion methods."
+      "EN": "I have some doubts about your persuasion methods.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D17_Q5",
       "FR": "Qu\u2019est-ce que \u00E7a veut dire, \u00E7a ?",
-      "EN": "What\u2019s that supposed to mean ?"
+      "EN": "What\u2019s that supposed to mean ?",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D17_Q6",
       "FR": "Vous ne me soup\u00E7onnez quand m\u00EAme pas d\u2019avoir fait du mal \u00E0 Loraine pour qu\u2019elle reste ?",
-      "EN": "Surely you wouldn\u2019t suspect I\u2019d hurt Loraine and force her to stay ?"
+      "EN": "Surely you wouldn\u2019t suspect I\u2019d hurt Loraine and force her to stay ?",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D17_Q7",
       "FR": "Il va falloir \u00EAtre honn\u00EAte avec moi, Kurt.",
-      "EN": "You\u2019re gonna have to be honest with me, Kurt."
+      "EN": "You\u2019re gonna have to be honest with me, Kurt.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D17_Q8",
       "FR": "Je vous ai d\u00E9j\u00E0 dit toute la v\u00E9rit\u00E9, arr\u00EAtez vos insinuations insultantes ou bien je vais vraiment m\u2019\u00E9nerver !",
-      "EN": "I already told you the truth, stop your insulting accusations or I\u2019m really gonna get mad !"
+      "EN": "I already told you the truth, stop your insulting accusations or I\u2019m really gonna get mad !",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D18_Q1",
       "FR": "Marvin Meyer \u00E7a vous dit quelque chose ?",
-      "EN": "Marvin Meyer, does that ring any bells ?"
+      "EN": "Marvin Meyer, does that ring any bells ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D18_Q2",
       "FR": "\u00C7a devrait ?",
-      "EN": "Should it ?"
+      "EN": "Should it ?",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D18_Q3",
       "FR": "C\u2019est le journaliste qui vous a interrog\u00E9 sur Loraine.",
-      "EN": "He\u2019s the journalist who questioned you about Loraine."
+      "EN": "He\u2019s the journalist who questioned you about Loraine.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D18_Q4",
       "FR": "Ah, lui ! Je ne vais pas vous mentir, je n\u2019ai aucun souvenir de notre conversation.",
-      "EN": "Ah, him ! I\u2019m not gonna lie, I can\u2019t remember our conversation at all."
+      "EN": "Ah, him ! I\u2019m not gonna lie, I can\u2019t remember our conversation at all.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D18_Q5",
       "FR": "Pourquoi \u00E7a ?",
-      "EN": "Why not ?"
+      "EN": "Why not ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D18_Q6",
       "FR": "Et bien... Je sais plus.",
-      "EN": "Well... I don\u2019t know anymore."
+      "EN": "Well... I don\u2019t know anymore.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D18_Q7",
       "FR": "C\u2019est \u00E7a\u2026",
-      "EN": "You don\u2019t say\u2026"
+      "EN": "You don\u2019t say\u2026",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D19_Q1",
       "FR": "Vous aviez l\u2019air de vraiment l\u2019aimer, votre copine.",
-      "EN": "Seems like you were madly in love with your girlfriend."
+      "EN": "Seems like you were madly in love with your girlfriend.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D19_Q2",
       "FR": "Vous n\u2019avez pas id\u00E9e.",
-      "EN": "You have no idea."
+      "EN": "You have no idea.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D19_Q3",
       "FR": "Vous savez ce qui a pu la pousser \u00E0 venir vers vous ?",
-      "EN": "Do you know what made her like you in the first place ?"
+      "EN": "Do you know what made her like you in the first place ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D19_Q4",
       "FR": "Je ne vous permets pas ! Mais vous avez raison. J\u2019ai arr\u00EAt\u00E9 de me poser la question tant qu\u2019on \u00E9tait ensemble.",
-      "EN": "Hey, watch your mouth ! Although you are right\u2026 I stopped wondering after a while of us being together."
+      "EN": "Hey, watch your mouth ! Although you are right\u2026 I stopped wondering after a while of us being together.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D19_Q5",
       "FR": "Maintenant qu\u2019elle est morte, \u00E7a me torture le cerveau.",
-      "EN": "Now that she\u2019s dead, the question\u2019s torturing me."
+      "EN": "Now that she\u2019s dead, the question\u2019s torturing me.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D19_Q6",
       "FR": "On n\u2019avait pas grand chose en commun. Elle avait de la culture, elle \u00E9tait classe, elle venait d\u2019une bonne famille\u2026",
-      "EN": "We didn\u2019t have a lot in common. She was cultured, classy, came from a good family\u2026"
+      "EN": "We didn\u2019t have a lot in common. She was cultured, classy, came from a good family\u2026",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D19_Q7",
       "FR": "Moi, je n\u2019ai jamais rien eu de tout \u00E7a.",
-      "EN": "I never had any of that."
+      "EN": "I never had any of that.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D20_Q1",
       "FR": "Vous disiez que Loraine envoyait des po\u00E8mes \u00E0 quelqu\u2019un, vous avez une id\u00E9e de qui il s\u2019agissait ?",
-      "EN": "You said Loraine was sending her poems to someone, do you have any clue who that could\u2019ve been ?"
+      "EN": "You said Loraine was sending her poems to someone, do you have any clue who that could\u2019ve been ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D20_Q2",
       "FR": "Pas vraiment. Une fois elle m\u2019a dit que c\u2019\u00E9tait un parisien qu\u2019elle avait rencontr\u00E9 quand elle vivait l\u00E0-bas.",
-      "EN": "Not really. She once told me it was a guy from Paris she met while she was there."
+      "EN": "Not really. She once told me it was a guy from Paris she met while she was there.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D20_Q3",
       "FR": "Vous ne trouviez pas \u00E7a louche ?",
-      "EN": "Didn\u2019t you find that to be suspicious ?"
+      "EN": "Didn\u2019t you find that to be suspicious ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D20_Q4",
       "FR": "Pas vraiment\u2026 Vous pensez que j\u2019\u00E9tait cocu c\u2019est \u00E7a ?",
-      "EN": "Not really\u2026 You think she was cheating on me, is that it ?"
+      "EN": "Not really\u2026 You think she was cheating on me, is that it ?",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D20_Q5",
       "FR": "C\u2019est une \u00E9ventualit\u00E9.",
-      "EN": "Might be a possibility."
+      "EN": "Might be a possibility.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D20_Q6",
       "FR": "C\u2019est des conneries ! Jamais elle ne m'aurait fait \u00E7a !",
-      "EN": "Bunch of bullshit ! She never would\u2019ve done that to me !"
+      "EN": "Bunch of bullshit ! She never would\u2019ve done that to me !",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D20_Q7",
       "FR": "Et pourquoi pas ? Vous n\u2019aviez pas grand chose en commun apparemment.",
-      "EN": "And why is that ? You apparently didn\u2019t have much in common."
+      "EN": "And why is that ? You apparently didn\u2019t have much in common.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D20_Q8",
       "FR": "Je vous interdis de salir la m\u00E9moire de Loraine ! Je ne veux plus en parler !",
-      "EN": "I will not let you speak of Loraine in such a way ! I\u2019m done talking about this !"
+      "EN": "I will not let you speak of Loraine in such a way ! I\u2019m done talking about this !",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D21_Q1",
       "FR": "Dites-moi Kurt, est-ce que quelqu\u2019un vous prot\u00E8ge ?",
-      "EN": "Tell me Kurt, is someone protecting you ?"
+      "EN": "Tell me Kurt, is someone protecting you ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D21_Q2",
       "FR": "Qu\u2019est-ce que vous voulez dire par l\u00E0 ?",
-      "EN": "What do you mean by that ?"
+      "EN": "What do you mean by that ?",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D21_Q3",
       "FR": "Un de mes contacts a re\u00E7u des menaces plut\u00F4t directes apr\u00E8s vous avoir parl\u00E9.",
-      "EN": "One of my connections has received rather direct threats after speaking to you."
+      "EN": "One of my connections has received rather direct threats after speaking to you.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D21_Q4",
       "FR": "Vous savez quelque chose \u00E0 ce propos ?",
-      "EN": "Do you know anything about that ?"
+      "EN": "Do you know anything about that ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D21_Q5",
       "FR": "Pas du tout ! C\u2019est n\u2019importe quoi cette histoire !",
-      "EN": "Not in the least ! That\u2019s a bunch of nonsense !"
+      "EN": "Not in the least ! That\u2019s a bunch of nonsense !",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D21_Q6",
       "FR": "Je vous ai dit que je n\u2019avais quasiment aucun contact ext\u00E9rieur !",
-      "EN": "I told you, I have almost no friends or family, no one to talk to !"
+      "EN": "I told you, I have almost no friends or family, no one to talk to !",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D21_Q7",
       "FR": "Vous n\u2019\u00EAtes pas en train de me soup\u00E7onner, j\u2019esp\u00E8re ?",
-      "EN": "You\u2019re not accusing me of those threats, are you ?"
+      "EN": "You\u2019re not accusing me of those threats, are you ?",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D21_Q8",
       "FR": "Je ne fais que poser des questions Kurt, rien de plus.",
-      "EN": "I\u2019m just asking questions Kurt, nothing more."
+      "EN": "I\u2019m just asking questions Kurt, nothing more.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D21_Q9",
       "FR": "Ouais ouais\u2026",
-      "EN": "Sure..."
+      "EN": "Sure...",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D22_Q1",
       "FR": "Pouvez-vous me parler de votre fr\u00E8re, Victor ?",
-      "EN": "Can you tell me about your brother, Victor ?"
+      "EN": "Can you tell me about your brother, Victor ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D22_Q2",
       "FR": "Je ne vois pas ce qu\u2019il peut avoir \u00E0 faire avec \u00E7a, il n\u2019y a rien que vous ayez besoin de savoir sur lui.",
-      "EN": "I don\u2019t see what he has to do with this in any way, there\u2019s nothing you need to know about him."
+      "EN": "I don\u2019t see what he has to do with this in any way, there\u2019s nothing you need to know about him.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D22_Q3",
       "FR": "\u00C0 vous entendre on croirait que vous le couvrez\u2026",
-      "EN": "It sounds like you\u2019re covering him\u2026"
+      "EN": "It sounds like you\u2019re covering him\u2026",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D22_Q4",
       "FR": "Je vous ai dit qu\u2019il n\u2019a rien \u00E0 voir avec \u00E7a, inutile d\u2019insister !",
-      "EN": "I told you he has nothing to do with this, you pushy know-it-all !"
+      "EN": "I told you he has nothing to do with this, you pushy know-it-all !",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D22_Q5",
       "FR": "D\u2019accord, d\u2019accord\u2026",
-      "EN": "All right, all right\u2026"
+      "EN": "All right, all right\u2026",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D23_Q1",
       "FR": "Kurt, entre nous, et en laissant la police hors de \u00E7a, prenez-vous des drogues ?",
-      "EN": "Kurt, between you and me, leaving the police out of it, do you take drugs ?"
+      "EN": "Kurt, between you and me, leaving the police out of it, do you take drugs ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D23_Q2",
       "FR": "Je vous ai d\u00E9j\u00E0 dit que non ! Ce que vous pouvez \u00EAtre insistant !",
-      "EN": "I already told you, I don\u2019t ! How pushy can you be ?"
+      "EN": "I already told you, I don\u2019t ! How pushy can you be ?",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D24_Q1",
       "FR": "Cette lettre br\u00FBl\u00E9e\u2026 En r\u00E9alit\u00E9 c\u2019est \u00E0 vous qu\u2019elle appartient, n\u2019est-ce pas ?",
-      "EN": "This burnt letter\u2026 In reality it belongs to you, doesn\u2019t it ?"
+      "EN": "This burnt letter\u2026 In reality it belongs to you, doesn\u2019t it ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D24_Q2",
       "FR": "Hein ? Bah non, comme je vous ai dit, elle \u00E9tait \u00E0 Loraine.",
-      "EN": "What ? Uh no. As I told you, it was Loraine\u2019s."
+      "EN": "What ? Uh no. As I told you, it was Loraine\u2019s.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D24_Q3",
       "FR": "Ah\u2026",
-      "EN": "Ah\u2026"
+      "EN": "Ah\u2026",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D25_Q1",
       "FR": "Loraine \u00E9tait donc une junkie ?",
-      "EN": "So Loraine was a junkie, eh ?"
+      "EN": "So Loraine was a junkie, eh ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D25_Q2",
       "FR": "Je vous demanderai de parler d\u2019elle avec plus de respect ! Mais oui, elle prenait de la drogue r\u00E9guli\u00E8rement.",
-      "EN": "I would appreciate you speaking of her with more respect ! But yes, she took drugs from time to time."
+      "EN": "I would appreciate you speaking of her with more respect ! But yes, she took drugs from time to time.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D25_Q3",
       "FR": "Quel genre de drogue ?",
-      "EN": "What kind of drugs ?"
+      "EN": "What kind of drugs ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D25_Q4",
       "FR": "J\u2019en sais rien, j\u2019y connais pas grand chose\u2026",
-      "EN": "I wouldn\u2019t know, it\u2019s not really my thing\u2026"
+      "EN": "I wouldn\u2019t know, it\u2019s not really my thing\u2026",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D26_Q1",
       "FR": "Vous avez envoy\u00E9 deux hommes menacer Marvin Meyer.",
-      "EN": "You sent two men to threaten Marvin Meyer."
+      "EN": "You sent two men to threaten Marvin Meyer.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D26_Q2",
       "FR": "Pardon ? Mais de quoi vous parlez ? Pourquoi j\u2019aurais fait \u00E7a ?",
-      "EN": "Excuse me ? What are you on about ? Why would I do that ?"
+      "EN": "Excuse me ? What are you on about ? Why would I do that ?",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D26_Q3",
       "FR": "Vous ne vouliez pas appara\u00EEtre dans l\u2019article de Meyer afin de vous \u00E9loigner le plus possible de l\u2019affaire.",
-      "EN": "You didn\u2019t want to be in Meyer\u2019s article because you didn\u2019t want your name associated with Loraine\u2019s death."
+      "EN": "You didn\u2019t want to be in Meyer\u2019s article because you didn\u2019t want your name associated with Loraine\u2019s death.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D26_Q4",
       "FR": "Mais c\u2019est ridicule ! Je vous ai bien dit que je n\u2019avais aucun contact ici !",
-      "EN": "That\u2019s ridiculous ! Didn\u2019t I tell you I didn\u2019t have any contacts here ?"
+      "EN": "That\u2019s ridiculous ! Didn\u2019t I tell you I didn\u2019t have any contacts here ?",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D26_Q5",
       "FR": "Ca vous amuse de balancer des accusations comme \u00E7a ?",
-      "EN": "Do you think it\u2019s fun to throw around accusations like that ?"
+      "EN": "Do you think it\u2019s fun to throw around accusations like that ?",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D26_Q6",
       "FR": "Hmm\u2026 J\u2019imagine que vous avez raison\u2026",
-      "EN": "Hmm\u2026 I guess you\u2019re right\u2026"
+      "EN": "Hmm\u2026 I guess you\u2019re right\u2026",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D27_Q1",
       "FR": "Kurt, je soup\u00E7onne que vous \u00EAtes prot\u00E9g\u00E9 par l\u2019Allemand. Quels sont vos liens avec lui ?",
-      "EN": "Kurt, I suspect you are being protected by the German. What are your ties with him ?"
+      "EN": "Kurt, I suspect you are being protected by the German. What are your ties with him ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D27_Q2",
       "FR": "L\u2019Allemand ? Je ne vois pas du tout de qui vous voulez parler.",
-      "EN": "The German ? I don\u2019t see who you\u2019re speaking of."
+      "EN": "The German ? I don\u2019t see who you\u2019re speaking of.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D27_Q3",
       "FR": "Ma famille est d\u2019origine allemande, si c\u2019est ce que vous voulez dire...",
-      "EN": "My family is of German origin, if that\u2019s what you mean..."
+      "EN": "My family is of German origin, if that\u2019s what you mean...",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D27_Q4",
       "FR": "Le pire c\u2019est qu\u2019il n\u2019a vraiment pas l\u2019air de mentir...",
-      "EN": "The worst part is that he\u2019s not even lying..."
+      "EN": "The worst part is that he\u2019s not even lying...",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D28_Q1",
       "FR": "Votre fr\u00E8re Viktor est l\u2019Allemand.",
-      "EN": "Your brother Viktor is the German."
+      "EN": "Your brother Viktor is the German.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D28_Q2",
       "FR": "Qu\u2019est-ce que vous entendez par l\u00E0 ? Notre famille est en effet d\u2019origine allemande.",
-      "EN": "What do you mean by that ? Our family is indeed of German descent."
+      "EN": "What do you mean by that ? Our family is indeed of German descent.",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D28_Q3",
       "FR": "L\u2019Allemand est un grand chef de la mafia locale, le Syndicat du Crime.",
-      "EN": "The German is a big shot of the local mafia, the Syndicate of Crime."
+      "EN": "The German is a big shot of the local mafia, the Syndicate of Crime.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D28_Q4",
       "FR": "Il a commis et commandit\u00E9 de nombreux crimes horribles, notamment des meurtres.",
-      "EN": "He has ordered and perpetrated numerous horrible crimes, including murders."
+      "EN": "He has ordered and perpetrated numerous horrible crimes, including murders.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D28_Q5",
       "FR": "Quoi ? Mais c\u2019est ridicule ! Mon fr\u00E8re est homme d\u2019affaires et vit honn\u00EAtement !",
-      "EN": "What ? That\u2019s ridiculous ! My brother is a businessman, and he lives an honest life !"
+      "EN": "What ? That\u2019s ridiculous ! My brother is a businessman, and he lives an honest life !",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D28_Q6",
       "FR": "Il ne s\u2019abaisserait jamais au crime !",
-      "EN": "He would never stoop so low !"
+      "EN": "He would never stoop so low !",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D28_Q7",
       "FR": "J\u2019ai des raisons de penser que si. Mais je vois qu\u2019il a d\u00FB vous garder hors de ses affaires.",
-      "EN": "I have reasons to think he does. But I see he must\u2019ve kept you out of his business."
+      "EN": "I have reasons to think he does. But I see he must\u2019ve kept you out of his business.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D28_Q8",
       "FR": "Je perds patience ! Vos accusations m\u2019insupportent !",
-      "EN": "I\u2019m losing my patience ! Your accusations are getting on my nerves !"
+      "EN": "I\u2019m losing my patience ! Your accusations are getting on my nerves !",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D28_Q9",
       "FR": "Soit\u2026",
-      "EN": "All right\u2026"
+      "EN": "All right\u2026",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D29_Q1",
       "FR": "Kurt, je pense que vous avez tu\u00E9 Loraine.",
-      "EN": "Kurt, I think you perpetrated Loraine\u2019s murder."
+      "EN": "Kurt, I think you perpetrated Loraine\u2019s murder.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D29_Q2",
       "FR": "Mais non, vous faites erreur ! C\u2019est impensable !",
-      "EN": "No, You\u2019re wrong ! That\u2019s unthinkable !"
+      "EN": "No, You\u2019re wrong ! That\u2019s unthinkable !",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D29_Q3",
       "FR": "J\u2019aimais Loraine plus que tout, je n\u2019aurais fait \u00E7a pour rien au monde !",
-      "EN": "I loved Loraine more than anything in the world, I never would\u2019ve done that !"
+      "EN": "I loved Loraine more than anything in the world, I never would\u2019ve done that !",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D29_Q4",
       "FR": "J\u2019en ai assez de vos accusations, vous ne savez pas de quoi vous parlez !",
-      "EN": "I\u2019m fed up with your accusations, You have no idea what you\u2019re talking about !"
+      "EN": "I\u2019m fed up with your accusations, You have no idea what you\u2019re talking about !",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D29_Q5",
       "FR": "Je vois, je consid\u00E9rais \u00E7a comme une possibilit\u00E9, mais je vous crois.",
-      "EN": "I see, I considered it a possibility, but I believe you."
+      "EN": "I see, I considered it a possibility, but I believe you.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D30_Q1",
       "FR": "Kurt, je vous ai perc\u00E9 \u00E0 jour. Vous \u00EAtes l\u2019Allemand.",
-      "EN": "Kurt, I\u2019ve figured you out. You are the German."
+      "EN": "Kurt, I\u2019ve figured you out. You are the German.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D30_Q2",
       "FR": "Euh oui, ma famille est d\u2019origine allemande, comment vous le savez ?",
-      "EN": "Uuh yes, my family is of German descent, how do you know ?"
+      "EN": "Uuh yes, my family is of German descent, how do you know ?",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D30_Q3",
       "FR": "Et qu\u2019est-ce que \u00E7a a \u00E0 voir avec votre enqu\u00EAte ?",
-      "EN": "What does this have to do with your investigation ?"
+      "EN": "What does this have to do with your investigation ?",
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D30_Q4",
       "FR": "Non, rien, laissez tomber\u2026",
-      "EN": "No, nothing, forget it\u2026"
+      "EN": "No, nothing, forget it\u2026",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Kurt_D31_Q1",
@@ -4819,15 +5135,15 @@
       "Key": "Kurt_D31_Q2",
       "FR": "Oui, c'est \u00E0 ce moment que Loraine a perdu la raison et qu'elle a commenc\u00E9 \u00E0 vouloir partir.",
       "EN": "Yes, that's when Loraine lost it and started packing her stuff.",
-      "FRName": "Kurt",
-      "ENName": "Kurt"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D31_Q3",
       "FR": "Mon fr\u00E8re s'est aussi comport\u00E9 bizarrement, il s'est \u00E9nerv\u00E9 contre moi et m'a trait\u00E9 d'idiot, je ne sais pas pourquoi...",
       "EN": "My brother also acted weird, he got mad at me and called me an idiot, I don't know why...",
-      "FRName": "Kurt",
-      "ENName": "Kurt"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D31_Q4",
@@ -4847,8 +5163,8 @@
       "Key": "Kurt_D32_Q2",
       "FR": "Pourquoi vous dites \u00E7a, c'est \u00E0 propos des lettres qu'elle \u00E9changeait avec son ami ?",
       "EN": "Why ? Is it about the letters she sent her friend ?",
-      "FRName": "Kurt",
-      "ENName": "Kurt"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D32_Q3",
@@ -4861,8 +5177,8 @@
       "Key": "Kurt_D32_Q4",
       "FR": "Je m'y suis jamais vraiment int\u00E9ress\u00E9, apr\u00E8s tout elle a le droit d'avoir une vie priv\u00E9e.",
       "EN": "I never really paid any attention to those, but after all she's allowed to have a private life.",
-      "FRName": "Kurt",
-      "ENName": "Kurt"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D33_Q1",
@@ -4875,8 +5191,8 @@
       "Key": "Kurt_D33_Q2",
       "FR": "Oui, comme je vous ai dit, je pense que \u00E7a me ferait du bien de changer un peu d'air.",
       "EN": "Yeah, like I told you, I think it'd be good for me to have a change of scenery.",
-      "FRName": "Kurt",
-      "ENName": "Kurt"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D33_Q3",
@@ -4889,15 +5205,15 @@
       "Key": "Kurt_D33_Q4",
       "FR": "...",
       "EN": "...",
-      "FRName": "Kurt",
-      "ENName": "Kurt"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D33_Q5",
       "FR": "Pas encore.",
       "EN": "Not yet.",
-      "FRName": "Kurt",
-      "ENName": "Kurt"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D34_Q1",
@@ -4910,15 +5226,15 @@
       "Key": "Kurt_D34_Q2",
       "FR": "Hein ? Comment \u00E7a ?",
       "EN": "Huh ? What do you mean ?",
-      "FRName": "Kurt",
-      "ENName": "Kurt"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D34_Q3",
       "FR": "Elle n'a jamais ne serait-ce que rencontr\u00E9 mon fr\u00E8re, je vois pas ce qu'elle aurait \u00E0 faire avec lui.",
       "EN": "She never even met him, I don't see what she has to do with him.",
-      "FRName": "Kurt",
-      "ENName": "Kurt"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D34_Q4",
@@ -4938,22 +5254,22 @@
       "Key": "Kurt_D35_Q2",
       "FR": "Ah, donc finalement vous rejoignez la police et la presse...",
       "EN": "Oh, so you think the police and the press were right...",
-      "FRName": "Kurt",
-      "ENName": "Kurt"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D35_Q3",
       "FR": "Je dois avouer que \u00E7a a l'air de plus en plus plausible, mais j'ai toujours du mal \u00E0 l'accepter...",
       "EN": "I must say it looks more and more plausible, but I still have a hard time accepting it...",
-      "FRName": "Kurt",
-      "ENName": "Kurt"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D35_Q4",
       "FR": "C'\u00E9tait simplement pas son genre, je suis toujours convaincu qu'elle aurait jamais fait \u00E7a...",
       "EN": "It simply wasn't her type, I'm still sure she never would've done that...",
-      "FRName": "Kurt",
-      "ENName": "Kurt"
+      "FRName": "Kurt Becker",
+      "ENName": "Kurt Becker"
    },
    {
       "Key": "Kurt_D35_Q5",
@@ -4972,312 +5288,436 @@
    {
       "Key": "R\u00E9ceptionnisteH_D0_Q1",
       "FR": "Monsieur?",
-      "EN": "Sir?"
+      "EN": "Sir?",
+      "FRName": "R\u00E9ceptionniste_H",
+      "ENName": "Receptionist"
    },
    {
       "Key": "R\u00E9ceptionnisteH_D0_Q2",
       "FR": "Bonjour, j\u2019aimerais parler au Dr Lou Ellis. C\u2019est pour une enqu\u00EAte.",
-      "EN": "Good day, I would like to speak to Dr Lou Ellis. This is about an investigation."
+      "EN": "Good day, I would like to speak to Dr Lou Ellis. This is about an investigation.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "R\u00E9ceptionnisteH_D0_Q3",
       "FR": "Ah, vous \u00EAtes de la police ?",
-      "EN": "Ah, are you with the police ?"
+      "EN": "Ah, are you with the police ?",
+      "FRName": "R\u00E9ceptionniste_H",
+      "ENName": "Receptionist"
    },
    {
       "Key": "R\u00E9ceptionnisteH_D0_Q4",
       "FR": "Non, je suis d\u00E9tective priv\u00E9.",
-      "EN": "No, I\u2019m a private detective."
+      "EN": "No, I\u2019m a private detective.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "R\u00E9ceptionnisteH_D0_Q5",
       "FR": "Dans ce cas je vais avoir besoin d\u2019un laissez-passer d\u00E9livr\u00E9 par le commissaire. Je suis d\u00E9sol\u00E9e.",
-      "EN": "In that case I\u2019m going to need you to show me an entry permit from the police department. I\u2019m sorry."
+      "EN": "In that case I\u2019m going to need you to show me an entry permit from the police department. I\u2019m sorry.",
+      "FRName": "R\u00E9ceptionniste_H",
+      "ENName": "Receptionist"
    },
    {
       "Key": "R\u00E9ceptionnisteH_D0_Q6",
       "FR": "Tr\u00E8s bien, je repasserai.",
-      "EN": "Very well, I\u2019ll be coming back."
+      "EN": "Very well, I\u2019ll be coming back.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "R\u00E9ceptionnisteH_D1_Q1",
       "FR": "Je vais avoir besoin d\u2019un laissez-passer d\u00E9livr\u00E9 par le commissaire. Je suis d\u00E9sol\u00E9e.",
-      "EN": "I\u2019m going to need an entry permit delivered by the police department. I\u2019m sorry."
+      "EN": "I\u2019m going to need an entry permit delivered by the police department. I\u2019m sorry.",
+      "FRName": "R\u00E9ceptionniste_H",
+      "ENName": "Receptionist"
    },
    {
       "Key": "R\u00E9ceptionnisteH_D1_Q2",
       "FR": "Je repasserai.",
-      "EN": "I\u2019ll be coming back with it."
+      "EN": "I\u2019ll be coming back with it.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "R\u00E9ceptionnisteH_D2_Q1",
       "FR": "Monsieur?",
-      "EN": "Sir?"
+      "EN": "Sir?",
+      "FRName": "R\u00E9ceptionniste_H",
+      "ENName": "Receptionist"
    },
    {
       "Key": "R\u00E9ceptionnisteH_D2_Q2",
       "FR": "Bonjour, j\u2019aimerais parler au Dr Lou Ellis. C\u2019est pour une enqu\u00EAte.",
-      "EN": "Good day, I would like to speak to Dr Lou Ellis. This is about an investigation."
+      "EN": "Good day, I would like to speak to Dr Lou Ellis. This is about an investigation.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "R\u00E9ceptionnisteH_D2_Q3",
       "FR": "Ah, vous \u00EAtes de la police ?",
-      "EN": "Ah, are you with the police ?"
+      "EN": "Ah, are you with the police ?",
+      "FRName": "R\u00E9ceptionniste_H",
+      "ENName": "Receptionist"
    },
    {
       "Key": "R\u00E9ceptionnisteH_D2_Q4",
       "FR": "Non, je suis d\u00E9tective priv\u00E9.",
-      "EN": "No, I\u2019m a private detective."
+      "EN": "No, I\u2019m a private detective.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "R\u00E9ceptionnisteH_D2_Q5",
       "FR": "Dans ce cas je vais avoir besoin d\u2019un laissez-passer d\u00E9livr\u00E9 par le commissaire. Je suis d\u00E9sol\u00E9e.",
-      "EN": "In that case I\u2019m going to need you to show me an entry permit from the police department. I\u2019m sorry."
+      "EN": "In that case I\u2019m going to need you to show me an entry permit from the police department. I\u2019m sorry.",
+      "FRName": "R\u00E9ceptionniste_H",
+      "ENName": "Receptionist"
    },
    {
       "Key": "R\u00E9ceptionnisteH_D2_Q6",
       "FR": "Le voil\u00E0.",
-      "EN": "There you go."
+      "EN": "There you go.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "R\u00E9ceptionnisteH_D2_Q7",
       "FR": "Parfait. Prenez l\u2019ascenseur, \u00E9tage -1, c\u2019est l\u00E0 que vous trouverez le docteur",
-      "EN": "Perfect. Take the elevator, first basement, the doctor should be there."
+      "EN": "Perfect. Take the elevator, first basement, the doctor should be there.",
+      "FRName": "R\u00E9ceptionniste_H",
+      "ENName": "Receptionist"
    },
    {
       "Key": "R\u00E9ceptionnisteH_D3_Q1",
       "FR": "Prenez l\u2019ascenseur, \u00E9tage -1, c\u2019est l\u00E0 que vous trouverez le docteur.",
-      "EN": "Perfect. Take the elevator, first basement, the doctor should be there."
+      "EN": "Perfect. Take the elevator, first basement, the doctor should be there.",
+      "FRName": "R\u00E9ceptionniste_H",
+      "ENName": "Receptionist"
    },
    {
       "Key": "Lou_D0_Q1",
       "FR": "Mais que faites-vous ici ? C\u2019est une zone interdite au public.",
-      "EN": "What are you doing here ? This zone is strictly closed to the public."
+      "EN": "What are you doing here ? This zone is strictly closed to the public.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q2",
       "FR": "J\u2019ai un laissez-passer. Docteur Ellis, je dois vous parler \u00E0 propos de Loraine Grey.",
-      "EN": "I have an entry permit. Doctor Ellis, I must speak to you about Loraine Grey."
+      "EN": "I have an entry permit. Doctor Ellis, I must speak to you about Loraine Grey.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D0_Q3",
       "FR": "Oh, excusez-moi. Pour la plupart des gens c\u2019est mon p\u00E8re, le Docteur Ellis.",
-      "EN": "Oh excuse me. To most people, Doctor Ellis is my father."
+      "EN": "Oh excuse me. To most people, Doctor Ellis is my father.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q4",
       "FR": "Vous pouvez m\u2019appeler Lou.",
-      "EN": "You can call me Lou."
+      "EN": "You can call me Lou.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q5",
       "FR": "Comme vous voudrez.",
-      "EN": "As you wish."
+      "EN": "As you wish.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D0_Q6",
       "FR": "Je suis curieuse de voir ce que vous allez me demander.",
-      "EN": "I\u2019m curious what you\u2019re going to ask me."
+      "EN": "I\u2019m curious what you\u2019re going to ask me.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q7",
       "FR": "Finalement vous souhaitez \u00E9couter ce que j\u2019ai \u00E0 dire.",
-      "EN": "Looks like you want to listen to what I have to say after all."
+      "EN": "Looks like you want to listen to what I have to say after all.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q8",
       "FR": "Je ne fais pas partie de la police. Je suis priv\u00E9. Je viens de la part de Clara Grey.",
-      "EN": "I\u2019m not with the police. I\u2019m a private. I come on behalf of Clara Grey."
+      "EN": "I\u2019m not with the police. I\u2019m a private. I come on behalf of Clara Grey.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D0_Q9",
       "FR": "Ah oui ? Une femme charmante.",
-      "EN": "Oh really ? A charming lady."
+      "EN": "Oh really ? A charming lady.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q10",
       "FR": "Si on veut\u2026 Il parait que vous avez une th\u00E9orie sur la substance retrouv\u00E9e dans le sang de Loraine.",
-      "EN": "Right\u2026 I heard you have a theory about the substances found in Loraine\u2019s blood."
+      "EN": "Right\u2026 I heard you have a theory about the substances found in Loraine\u2019s blood.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D0_Q11",
       "FR": "C\u2019est plus qu\u2019une th\u00E9orie, Monsieur\u2026",
-      "EN": "It\u2019s more than a theory, Mister\u2026"
+      "EN": "It\u2019s more than a theory, Mister\u2026",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q12",
       "FR": "Quel est votre nom \u00E0 propos ?",
-      "EN": "What is your name, by the way ?"
+      "EN": "What is your name, by the way ?",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q13",
       "FR": "Kenneth.",
-      "EN": "Kenneth."
+      "EN": "Kenneth.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D0_Q14",
       "FR": "\u2026Kenneth. Ce sont des faits av\u00E9r\u00E9s.",
-      "EN": "\u2026Kenneth. These are hard facts."
+      "EN": "\u2026Kenneth. These are hard facts.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q15",
       "FR": "Voyez-vous, La victime a ing\u00E9r\u00E9 une puissante toxine qui aurait pu servir, en th\u00E9orie, \u00E0 provoquer une overdose.",
-      "EN": "You see, the victim has ingurgitated a powerful toxin that could\u2019ve, in theory, triggered an overdose."
+      "EN": "You see, the victim has ingurgitated a powerful toxin that could\u2019ve, in theory, triggered an overdose.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q16",
       "FR": "Ce n\u2019est pas le cas ?",
-      "EN": "Is that not the case ?"
+      "EN": "Is that not the case ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D0_Q17",
       "FR": "Non. La quantit\u00E9 de toxine ing\u00E9r\u00E9e lui aurait, dans le pire des cas, fait sauter le petit d\u00E9jeuner.",
-      "EN": "No. At best, the dose she took would\u2019ve made her sleep past breakfast."
+      "EN": "No. At best, the dose she took would\u2019ve made her sleep past breakfast.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q18",
       "FR": "Impossible de faire une overdose avec \u00E7a.",
-      "EN": "It would\u2019ve been impossible to overdose with that."
+      "EN": "It would\u2019ve been impossible to overdose with that.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q19",
       "FR": "Et quand bien m\u00EAme la dose aurait \u00E9t\u00E9 suffisante, pourquoi se pendre en plus ?",
-      "EN": "And even if the dose had been enough, why hang herself on top of that ?"
+      "EN": "And even if the dose had been enough, why hang herself on top of that ?",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q20",
       "FR": "\u00C7a semble \u00EAtre des souffrances superflues.",
-      "EN": "That seems like unnecessary suffering."
+      "EN": "That seems like unnecessary suffering.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q21",
       "FR": "Peut-\u00EAtre voulait-elle simplement se d\u00E9tendre avant de grimper sur le tabouret.",
-      "EN": "Maybe she just wanted to relax before hopping on the stool."
+      "EN": "Maybe she just wanted to relax before hopping on the stool.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D0_Q22",
       "FR": "Impossible.",
-      "EN": "Impossible."
+      "EN": "Impossible.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q23",
       "FR": "Etant donn\u00E9e la r\u00E9partition du produit dans l\u2019organisme, elle a d\u00FB le laisser circuler au moins 4h.",
-      "EN": "Seeing how the product spread in her organism, she must\u2019ve let it run through her blood for about four hours."
+      "EN": "Seeing how the product spread in her organism, she must\u2019ve let it run through her blood for about four hours.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q24",
       "FR": "Dans un corps vivant j\u2019entends.",
-      "EN": "If she was still alive, that is."
+      "EN": "If she was still alive, that is.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q25",
       "FR": "Or si elle avait attendu ne serait-ce que vingt minutes avant de se passer la corde au cou, elle se serait endormie lourdement.",
-      "EN": "Nonetheless, if she had waited even twenty minutes before hanging herself, she would\u2019ve fallen asleep and been unable to do anything."
+      "EN": "Nonetheless, if she had waited even twenty minutes before hanging herself, she would\u2019ve fallen asleep and been unable to do anything.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D0_Q26",
       "FR": "Effectivement c\u2019est \u00E9trange.",
-      "EN": "Strange indeed\u2026"
+      "EN": "Strange indeed\u2026",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D0_Q27",
       "FR": "Et concernant le reste du corps, vous avez remarqu\u00E9 quelque chose d\u2019anormal ?",
-      "EN": "And regarding the rest of the body, have you noticed anything abnormal ?"
+      "EN": "And regarding the rest of the body, have you noticed anything abnormal ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D0_Q28",
       "FR": "Eh bien, il y a les marques de la corde bien s\u00FBr, mais \u00E0 part \u00E7a aucune trace de violence, ni coups ni m\u00EAme bousculade.",
-      "EN": "Well, of course there are the rope marks, but apart from that, no signs of violence, no bruises or anything."
+      "EN": "Well, of course there are the rope marks, but apart from that, no signs of violence, no bruises or anything.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D1_Q1",
       "FR": "Bonjour, Kenneth, que puis-je faire pour vous ?",
-      "EN": "What can I do for you, Mr. Kenneth ?"
+      "EN": "What can I do for you, Mr. Kenneth ?",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D2_Q1",
       "FR": "Vous avez autre chose \u00E0 me montrer ?",
-      "EN": "Have you got anything else to show me ?"
+      "EN": "Have you got anything else to show me ?",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D3_Q1",
       "FR": "Je ne sais rien \u00E0 ce sujet.",
-      "EN": "I don\u2019t know anything about that."
+      "EN": "I don\u2019t know anything about that.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D4_Q1",
       "FR": "Docteur Lou Ellis, qui est-ce ?",
-      "EN": "Doctor Lou Ellis speaking, who is it ?"
+      "EN": "Doctor Lou Ellis speaking, who is it ?",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D5_Q1",
       "FR": "J\u2019aimerais en savoir plus sur vous.",
-      "EN": "I\u2019d like to know more about you."
+      "EN": "I\u2019d like to know more about you.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D5_Q2",
       "FR": "Docteur Lou Ellis, affect\u00E9e \u00E0 cet h\u00F4pital depuis 2 ans.",
-      "EN": "Doctor Lou Ellis, assigned to this hospital for the last two years."
+      "EN": "Doctor Lou Ellis, assigned to this hospital for the last two years.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D5_Q3",
       "FR": "Sortie major de promo de l\u2019Universit\u00E9 de m\u00E9decine de New York.",
-      "EN": "Majored my promotion at the New York University of Medicine."
+      "EN": "Majored my promotion at the New York University of Medicine.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D5_Q4",
       "FR": "Sp\u00E9cialis\u00E9e en h\u00E9matologie et m\u00E9decine l\u00E9gale.",
-      "EN": "Specialised in hematology and forensic medicine."
+      "EN": "Specialised in hematology and forensic medicine.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D5_Q5",
       "FR": "Sacr\u00E9 palmar\u00E8s.",
-      "EN": "Quite the record."
+      "EN": "Quite the record.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D5_Q6",
       "FR": "C\u2019est \u00E0 peine suffisant pour faire du caf\u00E9 ici.",
-      "EN": "That\u2019s barely enough to make coffee here."
+      "EN": "That\u2019s barely enough to make coffee here.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D5_Q7",
       "FR": "Vos coll\u00E8gues ne vous appr\u00E9cient pas \u00E0 votre juste valeur ?",
-      "EN": "Your peers don\u2019t value your work enough ?"
+      "EN": "Your peers don\u2019t value your work enough ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D5_Q8",
       "FR": "Je suis la premi\u00E8re femme m\u00E9decin de New York, je ne m\u2019attendais pas \u00E0 une sin\u00E9cure quand j\u2019ai rejoint le service.",
-      "EN": "I\u2019m the first female doctor in New York, I wasn\u2019t expecting an easy time when I joined this service."
+      "EN": "I\u2019m the first female doctor in New York, I wasn\u2019t expecting an easy time when I joined this service.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D5_Q9",
       "FR": "Mais je ne supporte plus de voir mon travail d\u00E9pr\u00E9ci\u00E9 par ces abrutis.",
-      "EN": "But I can\u2019t stand to see my work being devalued by these imbeciles."
+      "EN": "But I can\u2019t stand to see my work being devalued by these imbeciles.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D5_Q10",
       "FR": "Je sais ce que c\u2019est de se d\u00E9mener pour moins que rien de remerciement.",
-      "EN": "I know what it\u2019s like to work hard for almost no credit or thanks."
+      "EN": "I know what it\u2019s like to work hard for almost no credit or thanks.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D5_Q11",
       "FR": "On se dit \u00AB \u00E0 quoi bon faire tout \u00E7a ? Tout le monde s\u2019en fout. \u00BB. Et le pire, c\u2019est que c\u2019est vrai.",
-      "EN": "You wonder \u00AB why am I doing this ? Nobody cares. \u00BB. And the worst part is that it\u2019s true."
+      "EN": "You wonder \u00AB why am I doing this ? Nobody cares. \u00BB. And the worst part is that it\u2019s true.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D5_Q12",
       "FR": "Tout le monde s\u2019en fout.",
-      "EN": "Nobody cares."
+      "EN": "Nobody cares.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D5_Q13",
       "FR": "Mais si on ne fait pas ce qu\u2019on a \u00E0 faire au moment o\u00F9 on doit le faire, personne ne le fera \u00E0 notre place.",
-      "EN": "But if we don\u2019t do what we must do, and when we must do it, then nobody will do it for us."
+      "EN": "But if we don\u2019t do what we must do, and when we must do it, then nobody will do it for us.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D5_Q14",
       "FR": "Vous ne serez s\u00FBrement jamais reconnue pour votre travail.",
-      "EN": "You will probably never be recognised for your work."
+      "EN": "You will probably never be recognised for your work.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D5_Q15",
@@ -5289,392 +5729,548 @@
    {
       "Key": "Lou_D5_Q16",
       "FR": "Je ne m\u2019attendais pas \u00E0 de la philosophie de la part d\u2019un priv\u00E9.",
-      "EN": "I wasn\u2019t expecting a motivational speech from a private."
+      "EN": "I wasn\u2019t expecting a motivational speech from a private.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D5_Q17",
       "FR": "La guerre, \u00E7a rend philosophe.",
-      "EN": "War makes you a bit of a philosopher."
+      "EN": "War makes you a bit of a philosopher.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D5_Q18",
       "FR": "Tiens donc ?",
-      "EN": "Is that so ?"
+      "EN": "Is that so ?",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D5_Q19",
       "FR": "Laissez, je divague.",
-      "EN": "Forget it, I\u2019m just talking nonsense."
+      "EN": "Forget it, I\u2019m just talking nonsense.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D6_Q1",
       "FR": "Tenez, j\u2019ai trouv\u00E9 \u00E7a dans l\u2019appartement de Loraine. On dirait de la drogue.",
-      "EN": "Here, I found this in Loraine\u2019s apartment. Looks like drugs."
+      "EN": "Here, I found this in Loraine\u2019s apartment. Looks like drugs.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D6_Q2",
       "FR": "Faites voir\u2026",
-      "EN": "Let me see\u2026"
+      "EN": "Let me see\u2026",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D6_Q3",
       "FR": "\u00C7a pourrait correspondre avec ce qu\u2019on a trouv\u00E9 dans le sang de la victime.\nJe vais comparer avec les r\u00E9sultats du rapport.",
-      "EN": "It could match with what we found in her blood.\nI\u2019m going to compare it with the results in the autopsy report."
+      "EN": "It could match with what we found in her blood.\nI\u2019m going to compare it with the results in the autopsy report.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D6_Q4",
       "FR": "\u2026",
-      "EN": "\u2026"
+      "EN": "\u2026",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D6_Q5",
       "FR": "Oui, c\u2019est bien \u00E7a !",
-      "EN": "Yes, that\u2019s it !"
+      "EN": "Yes, that\u2019s it !",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D6_Q6",
       "FR": "C\u2019est cette drogue que Loraine a ing\u00E9r\u00E9 le soir de sa mort.",
-      "EN": "Those are the drugs Loraine had in her system the night she died."
+      "EN": "Those are the drugs Loraine had in her system the night she died.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D6_Q7",
       "FR": "Je m\u2019en doutais. Vous pensez qu\u2019elle en prenait fr\u00E9quemment ?",
-      "EN": "I thought so. Do you think she was a frequent consumer ?"
+      "EN": "I thought so. Do you think she was a frequent consumer ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D6_Q8",
       "FR": "Non, au contraire. Ce devait \u00EAtre la premi\u00E8re fois qu\u2019elle en prenait d\u2019apr\u00E8s les analyses sanguines.",
-      "EN": "No, on the contrary. According to the blood analysis, this should be the first time she took any."
+      "EN": "No, on the contrary. According to the blood analysis, this should be the first time she took any.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D6_Q9",
       "FR": "Int\u00E9ressant.",
-      "EN": "Interesting."
+      "EN": "Interesting.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D7_Q1",
       "FR": "Vous dites que de la drogue se trouvait dans le sang de Loraine ?",
-      "EN": "You said drugs were found in Loraine\u2019s blood ?"
+      "EN": "You said drugs were found in Loraine\u2019s blood ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D7_Q2",
       "FR": "En effet, il s\u2019agit d\u2019une puissante toxine. Une overdose aurait pu la tuer, mais il y en a juste assez pour l'assommer.",
-      "EN": "Indeed, it\u2019s a powerful toxine. An overdose could\u2019ve killed her, but there was just enough to knock her out."
+      "EN": "Indeed, it\u2019s a powerful toxine. An overdose could\u2019ve killed her, but there was just enough to knock her out.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D7_Q3",
       "FR": "La drogue semble avoir circul\u00E9 dans son sang pendant plusieurs heures avant sa mort.",
-      "EN": "The drug seems to have run in her system for several hours before her death."
+      "EN": "The drug seems to have run in her system for several hours before her death.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D7_Q4",
       "FR": "Or, elle a vraisemblablement d\u00FB s\u2019endormir 20 minutes apr\u00E8s avoir ing\u00E9r\u00E9 la drogue, elle n\u2019aurait alors pas pu se pendre.",
-      "EN": "However, such a dose would\u2019ve made her doze off merely 20 minutes after taking it, meaning she couldn\u2019t have hung herself."
+      "EN": "However, such a dose would\u2019ve made her doze off merely 20 minutes after taking it, meaning she couldn\u2019t have hung herself.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D7_Q5",
       "FR": "Je vois. C\u2019est tr\u00E8s int\u00E9ressant. Merci pour ces pr\u00E9cieuses informations.",
-      "EN": "I see. That\u2019s very interesting. Thank you for this precious information."
+      "EN": "I see. That\u2019s very interesting. Thank you for this precious information.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D8_Q1",
       "FR": "Vous pouvez m\u2019en dire plus sur ces marques de corde ?",
-      "EN": "Can you tell me more about these rope marks ?"
+      "EN": "Can you tell me more about these rope marks ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D8_Q2",
       "FR": "D\u2019apr\u00E8s l'\u00E9tat des h\u00E9matomes sur le cou, la victime \u00E9tait vivante lorsqu\u2019elle a \u00E9t\u00E9 pendue.",
-      "EN": "Judging by the state of the bruises on the neck, the victim was alive when she was hung."
+      "EN": "Judging by the state of the bruises on the neck, the victim was alive when she was hung.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D8_Q3",
       "FR": "C\u2019est donc bel et bien la corde qui est responsable de sa mort.",
-      "EN": "That confirms that the rope was the cause of death."
+      "EN": "That confirms that the rope was the cause of death.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D8_Q4",
       "FR": "Reste \u00E0 d\u00E9couvrir comment elle est arriv\u00E9e l\u00E0.",
-      "EN": "What\u2019s left to discover is how it got there."
+      "EN": "What\u2019s left to discover is how it got there.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D9_Q1",
       "FR": "Vous avez parl\u00E9 bri\u00E8vement avec Miss Grey il me semble. Vous pouvez me parler d\u2019elle ?",
-      "EN": "I heard you had a brief conversation with Miss Grey. What can you tell me about her ?"
+      "EN": "I heard you had a brief conversation with Miss Grey. What can you tell me about her ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D9_Q2",
       "FR": "Certainement. Je ne lui ai parl\u00E9 qu\u2019un instant, mais j\u2019avoue m'\u00EAtre un peu reconnue en elle.",
-      "EN": "I only spoke to her for an instant, but I do feel like she and I are alike."
+      "EN": "I only spoke to her for an instant, but I do feel like she and I are alike.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D9_Q3",
       "FR": "Si vous voulez mon avis, la vie n\u2019a pas \u00E9pargn\u00E9 cette pauvre femme.",
-      "EN": "If you ask me, life hasn\u2019t been as easy as it seems for that poor lady."
+      "EN": "If you ask me, life hasn\u2019t been as easy as it seems for that poor lady.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D9_Q4",
       "FR": "Je n\u2019en doute pas.",
-      "EN": "No doubt."
+      "EN": "No doubt.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D9_Q5",
       "FR": "Mais elle force le respect. Sa mani\u00E8re de parler, son \u00E9l\u00E9gance, et l\u2019amour qu\u2019elle portait \u00E0 sa soeur. Tout cela saute aux yeux.",
-      "EN": "She inspires respect. The way she speaks, her elegance, and the love she had for her sister. It\u2019s plain to see."
+      "EN": "She inspires respect. The way she speaks, her elegance, and the love she had for her sister. It\u2019s plain to see.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D10_Q1",
       "FR": "Dites-m\u2019en plus sur Loraine.",
-      "EN": "Tell me more about Loraine."
+      "EN": "Tell me more about Loraine.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D10_Q2",
       "FR": "Je crains de ne pas pouvoir vous aider plus que \u00E7a, je ne sais d\u2019elle que ce que l\u2019autopsie a r\u00E9v\u00E9l\u00E9.",
-      "EN": "I don\u2019t think I can help you any more, I only know what the autopsy showed us."
+      "EN": "I don\u2019t think I can help you any more, I only know what the autopsy showed us.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D11_Q1",
       "FR": "Connaissez-vous William White ?",
-      "EN": "Do you know William White ?"
+      "EN": "Do you know William White ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D11_Q2",
       "FR": "Le commissaire ? Oui, je l\u2019ai vu quelques fois pour des autopsies, mais je ne pense pas que \u00E7a ait grand chose \u00E0 voir avec votre enqu\u00EAte, monsieur Kenneth.",
-      "EN": "The commissioner ? Yes, I\u2019ve seen him a few times about the autopsy, but I don\u2019t think that has much to do with your case, Mister Kenneth."
+      "EN": "The commissioner ? Yes, I\u2019ve seen him a few times about the autopsy, but I don\u2019t think that has much to do with your case, Mister Kenneth.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D12_Q1",
       "FR": "Vous dites qu\u2019il n\u2019y avait aucune trace de violence sur le corps de la victime ?",
-      "EN": "You say there were no signs of violence or struggle on the corpse ?"
+      "EN": "You say there were no signs of violence or struggle on the corpse ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D12_Q2",
       "FR": "J\u2019ai horreur de me r\u00E9p\u00E9ter monsieur Kenneth.",
-      "EN": "I hate repeating myself, Mister Kenneth."
+      "EN": "I hate repeating myself, Mister Kenneth.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D12_Q3",
       "FR": "Je trouve simplement cela \u00E9trange.",
-      "EN": "I simply find it odd."
+      "EN": "I simply find it odd.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D12_Q4",
       "FR": "Pour un suicide, pas tant que \u00E7a. \u00C0 moins que vous n\u2019ayez une autre th\u00E9orie.",
-      "EN": "For a suicide, it isn\u2019t. Unless you have another theory."
+      "EN": "For a suicide, it isn\u2019t. Unless you have another theory.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D12_Q5",
       "FR": "Un meurtre.",
-      "EN": "A murder."
+      "EN": "A murder.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lou_D12_Q6",
       "FR": "J\u2019avoue que l\u2019id\u00E9e m\u2019a travers\u00E9 l\u2019esprit. Mais difficile d\u2019affirmer quoi que ce soit.",
-      "EN": "I admit the idea did not seem impossible to me. But it\u2019s difficult to confirm anything."
+      "EN": "I admit the idea did not seem impossible to me. But it\u2019s difficult to confirm anything.",
+      "FRName": "Dr. Lou Ellis",
+      "ENName": "Dr. Lou Ellis"
    },
    {
       "Key": "Lou_D12_Q7",
       "FR": "Pour l\u2019instant.",
-      "EN": "For now."
+      "EN": "For now.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Scott_D0_Q1",
       "FR": "Hey, je peux vous aider m\u2019sieur ?",
-      "EN": "Hey, can I help you Sir ?"
+      "EN": "Hey, can I help you Sir ?",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D0_Q2",
       "FR": "J\u2019ai entendu votre discussion avec le commissaire. Vous vous \u00EAtes pris une sacr\u00E9e rouste.",
-      "EN": "I overheard your conversation with Chief White. Sounded like you took quite the sermon."
+      "EN": "I overheard your conversation with Chief White. Sounded like you took quite the sermon.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Scott_D0_Q3",
       "FR": "Oh depuis le temps, je suis habitu\u00E9.",
-      "EN": "Oh, I got used to it over time."
+      "EN": "Oh, I got used to it over time.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D0_Q4",
       "FR": "Et puis ce bon vieux White aboie plus qu\u2019il ne mord.",
-      "EN": "Plus, good old White barks more than he bites."
+      "EN": "Plus, good old White barks more than he bites.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D0_Q5",
       "FR": "C\u2019est quand il partira \u00E0 la retraite que \u00E7a va vraiment chauffer pour moi.",
-      "EN": "The real trouble\u2019s gonna begin for me once he\u2019s retired."
+      "EN": "The real trouble\u2019s gonna begin for me once he\u2019s retired.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D0_Q6",
       "FR": "Pourquoi \u00E7a ?",
-      "EN": "Why is that ?"
+      "EN": "Why is that ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Scott_D0_Q7",
       "FR": "J\u2019ai mes petites combines depuis le temps.",
-      "EN": "I\u2019ve developed my own little tricks, you know."
+      "EN": "I\u2019ve developed my own little tricks, you know.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D0_Q8",
       "FR": "On n\u2019est pas trop cens\u00E9s le faire mais bon, tout le monde est au courant maintenant, et puis je vous connais un peu.",
-      "EN": "We\u2019re not really supposed to do it, but everyone seems to be in on it now, you probably already know."
+      "EN": "We\u2019re not really supposed to do it, but everyone seems to be in on it now, you probably already know.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D0_Q9",
       "FR": "Je vends des infos \u00E0 la presse.",
-      "EN": "I sell information to the press about our cases."
+      "EN": "I sell information to the press about our cases.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D0_Q10",
       "FR": "Vous avez le droit de faire \u00E7a ?",
-      "EN": "Are you allowed to do that ?"
+      "EN": "Are you allowed to do that ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Scott_D0_Q11",
       "FR": "Normalement non.",
-      "EN": "No, I normally wouldn\u2019t."
+      "EN": "No, I normally wouldn\u2019t.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D0_Q12",
       "FR": "Mais franchement quand on voit ce qu\u2019ils nous payent juste pour \u00EAtre les premiers sur le coup,",
-      "EN": "But frankly when you see the kind of money these guys are ready to dish out just to be the first ones on the case,"
+      "EN": "But frankly when you see the kind of money these guys are ready to dish out just to be the first ones on the case,",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D0_Q13",
       "FR": "des fois je me demande pourquoi on n'est pas plus nombreux \u00E0 vendre nos infos.",
-      "EN": "I sometimes wonder why more people don\u2019t sell them information."
+      "EN": "I sometimes wonder why more people don\u2019t sell them information.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D1_Q1",
       "FR": "Je peux vous aider ?",
-      "EN": "Can I help you ?"
+      "EN": "Can I help you ?",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D2_Q1",
       "FR": "Je peux vous aider autrement ?",
-      "EN": "Anything else I can do for you ?"
+      "EN": "Anything else I can do for you ?",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D3_Q1",
       "FR": "Hmm\u2026 \u00C7a ne me dit rien. Il faut croire que je ne suis pas au courant de tout haha !",
-      "EN": "Hmm\u2026 That doesn\u2019t ring any bells. Guess I\u2019m not in on everything after all."
+      "EN": "Hmm\u2026 That doesn\u2019t ring any bells. Guess I\u2019m not in on everything after all.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D4_Q1",
       "FR": "Officier Scott Nelson du d\u00E9partement de police de New-York \u00E0 l\u2019appareil. Comment puis-je vous aider ?",
-      "EN": "Officer Scott Nelson of the New York Police Department speaking, how may I help you ?"
+      "EN": "Officer Scott Nelson of the New York Police Department speaking, how may I help you ?",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D5_Q1",
       "FR": "Vous connaissez ce journal ?",
-      "EN": "Do you know this magazine ?"
+      "EN": "Do you know this magazine ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Scott_D5_Q2",
       "FR": "Bien s\u00FBr ! C\u2019est un de mes meilleurs clients.",
-      "EN": "Of course ! They\u2019re one of my best customers."
+      "EN": "Of course ! They\u2019re one of my best customers.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D5_Q3",
       "FR": "Ah vraiment ?",
-      "EN": "Oh really ?"
+      "EN": "Oh really ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Scott_D5_Q4",
       "FR": "J\u2019aimerais bien rencontrer l\u2019auteur de l\u2019article sur Loraine Grey, c\u2019est possible ?",
-      "EN": "I\u2019d like to meet the author of the article about Loraine Grey, is that possible ?"
+      "EN": "I\u2019d like to meet the author of the article about Loraine Grey, is that possible ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Scott_D5_Q5",
       "FR": "C\u2019est qu\u2019il n\u2019aime pas trop qu\u2019on le voit, par rapport \u00E0 son m\u00E9tier, tout \u00E7a.",
-      "EN": "Well, he doesn\u2019t like to be seen much, regarding his work and all that."
+      "EN": "Well, he doesn\u2019t like to be seen much, regarding his work and all that.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D5_Q6",
       "FR": "Mais bon je peux faire une exception parce que vous \u00EAtes pote avec le patron.",
-      "EN": "But oh well, I\u2019ll make an exception since you\u2019re friends with the boss."
+      "EN": "But oh well, I\u2019ll make an exception since you\u2019re friends with the boss.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D5_Q7",
       "FR": "C\u2019est aimable.",
-      "EN": "Thank you."
+      "EN": "Thank you.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Scott_D5_Q8",
       "FR": "On se rencontre en g\u00E9n\u00E9ral au Paddy\u2019s Irish Pub, \u00E0 c\u00F4t\u00E9 du commissariat.",
-      "EN": "We usually meet at Paddy\u2019s Irish Pub, next to the precinct."
+      "EN": "We usually meet at Paddy\u2019s Irish Pub, next to the precinct.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D5_Q9",
       "FR": "Il n\u2019y est pas tout le temps, mais si vous le demandez au barman il pourra s\u00FBrement vous renseigner.",
-      "EN": "He\u2019s not always there, but if you ask the bartender, he\u2019ll probably be able to help you."
+      "EN": "He\u2019s not always there, but if you ask the bartender, he\u2019ll probably be able to help you.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D5_Q10",
       "FR": "Demandez Marvin Meyer.",
-      "EN": "Ask for Marvin Meyer."
+      "EN": "Ask for Marvin Meyer.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D5_Q11",
       "FR": "Oh et dites-lui que vous venez de ma part !",
-      "EN": "Oh and tell him Scott sent you !"
+      "EN": "Oh and tell him Scott sent you !",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D5_Q12",
       "FR": "Entendu.",
-      "EN": "Very well."
+      "EN": "Very well.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Scott_D6_Q1",
       "FR": "Vous pouvez me parler du commissaire ?",
-      "EN": "Can you tell me about Chief White ?"
+      "EN": "Can you tell me about Chief White ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Scott_D6_Q2",
       "FR": "Je pense que vous en savez plus que moi monsieur, j\u2019ai cru comprendre que vous \u00E9tiez des amis de longue date.",
-      "EN": "I think you know more than I do, Sir. If I\u2019m not mistaken, you\u2019ve been friends for a long time."
+      "EN": "I think you know more than I do, Sir. If I\u2019m not mistaken, you\u2019ve been friends for a long time.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D7_Q1",
       "FR": "Parlez-moi de vous, Scott.",
-      "EN": "Tell me about yourself, Scott."
+      "EN": "Tell me about yourself, Scott.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Scott_D7_Q2",
       "FR": "Vous ne faites pas une enqu\u00EAte sur moi, j\u2019esp\u00E8re !",
-      "EN": "You\u2019re not investigating me, I hope !"
+      "EN": "You\u2019re not investigating me, I hope !",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D7_Q3",
       "FR": "Haha. Je plaisante. Je suis flic, pas un flic exemplaire, il n\u2019y a pas grand chose d\u2019autre \u00E0 dire.",
-      "EN": "Haha. Just kidding. I\u2019m a cop, although not an exemplary one, there\u2019s not much else to say."
+      "EN": "Haha. Just kidding. I\u2019m a cop, although not an exemplary one, there\u2019s not much else to say.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D8_Q1",
       "FR": "Vous pouvez m\u2019en dire plus sur le journaliste ?",
-      "EN": "What else can you tell me about the journalist ?"
+      "EN": "What else can you tell me about the journalist ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Scott_D8_Q2",
       "FR": "Je ne suis pas certain que ce soit une bonne id\u00E9e monsieur.",
-      "EN": "I don\u2019t think that\u2019s such a good idea, Sir."
+      "EN": "I don\u2019t think that\u2019s such a good idea, Sir.",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D8_Q3",
       "FR": "Il est plut\u00F4t du genre secret, je suis m\u00EAme pas s\u00FBr d\u2019avoir bien fait de vous parler de lui\u2026",
-      "EN": "He\u2019s a rather secretive type, I\u2019m not even sure I did well in speaking to you about him\u2026"
+      "EN": "He\u2019s a rather secretive type, I\u2019m not even sure I did well in speaking to you about him\u2026",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D9_Q1",
       "FR": "Que savez-vous de Loraine Grey ?",
-      "EN": "What do you know of Loraine Grey ?"
+      "EN": "What do you know of Loraine Grey ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Scott_D9_Q2",
       "FR": "La morte ? Rien, \u00E0 part que son histoire m\u2019a ramen\u00E9 pas mal de pognon parce que c\u2019est la soeur d\u2019une actrice !",
-      "EN": "The dead girl ? Nothing, only that her story\u2019s earned me some good money because her sister\u2019s an actress !"
+      "EN": "The dead girl ? Nothing, only that her story\u2019s earned me some good money because her sister\u2019s an actress !",
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D9_Q3",
       "FR": "C\u2019est tout ce qui vous int\u00E9resse, \u00E0 ce que je vois...",
-      "EN": "That\u2019s all you care about, I see..."
+      "EN": "That\u2019s all you care about, I see...",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Scott_D10_Q1",
@@ -5687,259 +6283,351 @@
       "Key": "Scott_D10_Q2",
       "FR": "La star ? Je l'aimais bien en tant qu'actrice, et elle est plut\u00F4t mignonne...",
       "EN": "The actress ? I liked her in the plays, and she's pretty cute...",
-      "FRName": "Scott",
-      "ENName": "Scott"
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D10_Q3",
       "FR": "Mais maintenant que c'est la soeur de la victime, je la vois bien diff\u00E9remment !",
       "EN": "But now that she's the victim's sister... Boy, do I see her differently !",
-      "FRName": "Scott",
-      "ENName": "Scott"
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D10_Q4",
       "FR": "Elle s'est montr\u00E9e vraiment insupportable, voire hyst\u00E9rique !",
       "EN": "She was truly insufferable, she acted hysterical !",
-      "FRName": "Scott",
-      "ENName": "Scott"
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Scott_D10_Q5",
       "FR": "Mais bon, j'imagine que c'est compr\u00E9hensible...",
       "EN": "Although I guess it's understandable...",
-      "FRName": "Scott",
-      "ENName": "Scott"
+      "FRName": "S. Nelson",
+      "ENName": "S. Nelson"
    },
    {
       "Key": "Seer_D0_Q1",
       "FR": "Ce sera quoi ?",
-      "EN": "What will it be for you ?"
+      "EN": "What will it be for you ?",
+      "FRName": "Barman",
+      "ENName": "Bartender"
    },
    {
       "Key": "Seer_D1_Q1",
       "FR": "Ce sera quoi ?",
-      "EN": "What will it be for you ?"
+      "EN": "What will it be for you ?",
+      "FRName": "Barman",
+      "ENName": "Bartender"
    },
    {
       "Key": "Seer_D2_Q1",
       "FR": "Vous vouliez autre chose ?",
-      "EN": "Did you need anything else ?"
+      "EN": "Did you need anything else ?",
+      "FRName": "Barman",
+      "ENName": "Bartender"
    },
    {
       "Key": "Seer_D3_Q1",
       "FR": "Aucune id\u00E9e...",
-      "EN": "No idea..."
+      "EN": "No idea...",
+      "FRName": "Barman",
+      "ENName": "Bartender"
    },
    {
       "Key": "Seer_D4_Q1",
       "FR": "Dites, vous connaissez un type du nom de Marvin Meyer ?",
-      "EN": "Say, do you know anyone by the name of Marvin Meyer ?"
+      "EN": "Say, do you know anyone by the name of Marvin Meyer ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Seer_D4_Q2",
       "FR": "Possible, vous lui voulez quoi ?",
-      "EN": "Possible, what\u2019s your business with him ?"
+      "EN": "Possible, what\u2019s your business with him ?",
+      "FRName": "Barman",
+      "ENName": "Bartender"
    },
    {
       "Key": "Seer_D4_Q3",
       "FR": "J\u2019ai un truc \u00E0 lui dire, c\u2019est de la part de Scott Nelson.",
-      "EN": "Got something to tell him, it\u2019s from Scott Nelson."
+      "EN": "Got something to tell him, it\u2019s from Scott Nelson.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Seer_D4_Q4",
       "FR": "Si vous voulez. Utilisez le t\u00E9l\u00E9phone l\u00E0-bas, je vais vous donner le num\u00E9ro.",
-      "EN": "If you want. Use the telephone over there, I\u2019ll give you the number."
+      "EN": "If you want. Use the telephone over there, I\u2019ll give you the number.",
+      "FRName": "Barman",
+      "ENName": "Bartender"
    },
    {
       "Key": "Seer_D5_Q1",
       "FR": "Vous pouvez me parler de Scott ?",
-      "EN": "Can you tell me about Scott ?"
+      "EN": "Can you tell me about Scott ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Seer_D5_Q2",
       "FR": "Le flic ? Bah c\u2019est un client comme les autres.",
-      "EN": "The cop ? Well he\u2019s a client like any other."
+      "EN": "The cop ? Well he\u2019s a client like any other.",
+      "FRName": "Barman",
+      "ENName": "Bartender"
    },
    {
       "Key": "Seer_D5_Q3",
       "FR": "\u00C0 part boire bien plus que de raison pendant son service, je n\u2019ai pas grand chose \u00E0 signaler.",
-      "EN": "Apart from the fact that he drinks way more than what\u2019s reasonable on duty, I don\u2019t have much to say."
+      "EN": "Apart from the fact that he drinks way more than what\u2019s reasonable on duty, I don\u2019t have much to say.",
+      "FRName": "Barman",
+      "ENName": "Bartender"
    },
    {
       "Key": "Seer_D6_Q1",
       "FR": "L\u2019Allemand, \u00E7a vous dit quelque chose ?",
-      "EN": "The German, does that sound familiar ?"
+      "EN": "The German, does that sound familiar ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Seer_D6_Q2",
       "FR": "Non, je regrette.",
-      "EN": "No, sorry."
+      "EN": "No, sorry.",
+      "FRName": "Barman",
+      "ENName": "Bartender"
    },
    {
       "Key": "Seer_D6_Q3",
       "FR": "Vous \u00EAtes s\u00FBr ? La moindre information peut m\u2019\u00EAtre\u2026",
-      "EN": "Are you sure ? The slightest bit of information could prove\u2026"
+      "EN": "Are you sure ? The slightest bit of information could prove\u2026",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Seer_D6_Q4",
       "FR": "\u00C9coutez, j\u2019en sais assez sur cet individu pour savoir qu\u2019il ne faut pas s\u2019en approcher.",
-      "EN": "Listen, I know enough about this individual to know I shouldn\u2019t meddle with any of his business."
+      "EN": "Listen, I know enough about this individual to know I shouldn\u2019t meddle with any of his business.",
+      "FRName": "Barman",
+      "ENName": "Bartender"
    },
    {
       "Key": "Seer_D6_Q5",
       "FR": "Je vous conseille d\u2019en faire autant.",
-      "EN": "I advise you to do the same."
+      "EN": "I advise you to do the same.",
+      "FRName": "Barman",
+      "ENName": "Bartender"
    },
    {
       "Key": "Seer_D6_Q6",
       "FR": "Je comprends, mais\u2026",
-      "EN": "I understand, nonetheless\u2026"
+      "EN": "I understand, nonetheless\u2026",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Seer_D6_Q7",
       "FR": "Vous voulez boire quelque chose ? Si non sortez, les si\u00E8ges sont pour les clients.",
-      "EN": "Are you gonna have anything to drink ? If not, get out, these seats are meant for customers."
+      "EN": "Are you gonna have anything to drink ? If not, get out, these seats are meant for customers.",
+      "FRName": "Barman",
+      "ENName": "Bartender"
    },
    {
       "Key": "Seer_D6_Q8",
       "FR": "Le bar est vide.",
-      "EN": "The pub is empty."
+      "EN": "The pub is empty.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Seer_D6_Q9",
       "FR": "...",
-      "EN": "..."
+      "EN": "...",
+      "FRName": "Barman",
+      "ENName": "Bartender"
    },
    {
       "Key": "Seer_D6_Q10",
       "FR": "Sortez, s\u2019il vous pla\u00EEt.",
-      "EN": "Get out, please."
+      "EN": "Get out, please.",
+      "FRName": "Barman",
+      "ENName": "Bartender"
    },
    {
       "Key": "Seer_D6_Q11",
       "FR": "Comme vous voudrez.",
-      "EN": "As you wish."
+      "EN": "As you wish.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D0_Q1",
       "FR": "All\u00F4.",
-      "EN": "Hello."
+      "EN": "Hello.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D0_Q2",
       "FR": "Marvin Meyer ?",
-      "EN": "Marvin Meyer ?"
+      "EN": "Marvin Meyer ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D0_Q3",
       "FR": "Qui est \u00E0 l\u2019appareil ?",
-      "EN": "Who is this ?"
+      "EN": "Who is this ?",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D0_Q4",
       "FR": "Je m\u2019appelle Kenneth, je suis un ami de Scott Nelson.",
-      "EN": "My name is Kenneth, I\u2019m a friend of Scott Nelson\u2019s."
+      "EN": "My name is Kenneth, I\u2019m a friend of Scott Nelson\u2019s.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D0_Q5",
       "FR": "J\u2019ai des questions \u00E0 vous poser.",
-      "EN": "I have a few questions to ask you."
+      "EN": "I have a few questions to ask you.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D0_Q6",
       "FR": "Je vous \u00E9coute. Mais si la conversation devient trop indiscr\u00E8te, je raccroche.",
-      "EN": "I\u2019m listening. But if the conversation becomes too indiscrete, I\u2019ll hang up."
+      "EN": "I\u2019m listening. But if the conversation becomes too indiscrete, I\u2019ll hang up.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D0_Q7",
       "FR": "Tr\u00E8s bien.",
-      "EN": "Very well."
+      "EN": "Very well.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D1_Q1",
       "FR": "Que voulez-vous savoir ?",
-      "EN": "What do you want to know ?"
+      "EN": "What do you want to know ?",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D2_Q1",
       "FR": "All\u00F4.",
-      "EN": "Hello."
+      "EN": "Hello.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D3_Q1",
       "FR": "Je ne sais rien de cela, Mr. Kenneth. Restons-en \u00E0 notre affaire.",
-      "EN": "I don\u2019t know anything about that. Let us stick to our case, yeah ?"
+      "EN": "I don\u2019t know anything about that. Let us stick to our case, yeah ?",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D4_Q1",
       "FR": "Marvin Meyer du Sassy New York, j\u2019\u00E9coute.",
-      "EN": "Marvin Meyer of Sassy New York, I\u2019m listening."
+      "EN": "Marvin Meyer of Sassy New York, I\u2019m listening.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D5_Q1",
       "FR": "J\u2019enqu\u00EAte sur l\u2019affaire Loraine Grey. Vous en avez parl\u00E9 dans Sassy New York.",
-      "EN": "I\u2019m investigating on the Loraine Grey case. You talked about it in Sassy New York."
+      "EN": "I\u2019m investigating on the Loraine Grey case. You talked about it in Sassy New York.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D5_Q2",
       "FR": "Laissez tomber, vous ne savez pas dans quoi vous mettez les pieds.",
-      "EN": "You should just give up, you don\u2019t know what you\u2019re getting into."
+      "EN": "You should just give up, you don\u2019t know what you\u2019re getting into.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D5_Q3",
       "FR": "Dites-m\u2019en plus.",
-      "EN": "Tell me more."
+      "EN": "Tell me more.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D5_Q4",
       "FR": "J\u2019imagine que si vous menez l\u2019enqu\u00EAte, c\u2019est que vous avez compris que ce n\u2019\u00E9tait pas un simple suicide.",
-      "EN": "I imagine that if you\u2019re investigating, then you have understood that it wasn\u2019t a simple suicide."
+      "EN": "I imagine that if you\u2019re investigating, then you have understood that it wasn\u2019t a simple suicide.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D5_Q5",
       "FR": "Quand mon contact m\u2019a appel\u00E9 pour m\u2019annoncer la nouvelle je me suis tout de suite rendu sur place.",
-      "EN": "When my informer called me to give me the news, I immediately went to the scene."
+      "EN": "When my informer called me to give me the news, I immediately went to the scene.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D5_Q6",
       "FR": "Le suicide d\u2019un proche de Clara Grey, \u00E7a allait forc\u00E9ment faire les gros titres.",
-      "EN": "The suicide of one of Clara Grey\u2019s family members, it was bound to be a big story."
+      "EN": "The suicide of one of Clara Grey\u2019s family members, it was bound to be a big story.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D5_Q7",
       "FR": "Et vous ne vous \u00EAtes pas g\u00EAn\u00E9 pour faire de l\u2019argent sur la mort de cette jeune femme.",
-      "EN": "And you jumped on the occasion to make money off of that poor woman\u2019s death."
+      "EN": "And you jumped on the occasion to make money off of that poor woman\u2019s death.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D5_Q8",
       "FR": "\u00C7a mon gars, c\u2019est mon m\u00E9tier.",
-      "EN": "That, my dude, is just my job."
+      "EN": "That, my dude, is just my job.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D5_Q9",
       "FR": "Bref, une fois l\u00E0-bas j\u2019interviewe le bonhomme de Loraine,",
-      "EN": "Anyway, once I\u2019m there, I start interviewing Loraine\u2019s dude,"
+      "EN": "Anyway, once I\u2019m there, I start interviewing Loraine\u2019s dude,",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D5_Q10",
       "FR": "je fais quelques photos, et je rentre chez moi r\u00E9diger mon article.",
-      "EN": "I take a few photos, and I go home to write my article."
+      "EN": "I take a few photos, and I go home to write my article.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D5_Q11",
       "FR": "Et sur le chemin, deux types me tombent dessus, genre gros bras.",
-      "EN": "On the way there, two thugs bump into me, bulky kind of guys."
+      "EN": "On the way there, two thugs bump into me, bulky kind of guys.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D5_Q12",
       "FR": "Ils \u00E9clatent mon appareil sur le sol - quatre cents dollars foutus en l\u2019air -,",
-      "EN": "They smash my camera on the ground - four hundred dollars gone -,"
+      "EN": "They smash my camera on the ground - four hundred dollars gone -,",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D5_Q13",
       "FR": "et me balancent comme \u00E7a : \u00AB Tu ne parles pas de Kurt Becker dans ton papier ou on t\u2019arrache les couilles \u00BB,",
-      "EN": "and just tell me : \u00AB You don\u2019t mention Kurt Becker in your paper or your balls are gone. \u00BB,"
+      "EN": "and just tell me : \u00AB You don\u2019t mention Kurt Becker in your paper or your balls are gone. \u00BB,",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D5_Q14",
@@ -5950,258 +6638,360 @@
    },
    {
       "Key": "Marvin_D5_Q15",
-      "FR": "Qu\u2019est ce que vous dites de \u00E7a ?",
-      "EN": "What do ya think of that ?"
+      "FR": "Qu\u2019est-ce que vous dites de \u00E7a ?",
+      "EN": "What do ya think of that ?",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D5_Q16",
       "FR": "C\u2019est tout ce qu\u2019ils voulaient ? Pourquoi ne pas vous dire de ne pas publier l\u2019article ?",
-      "EN": "Is that all they wanted ? Why didn\u2019t they just tell you not to publish the article ?"
+      "EN": "Is that all they wanted ? Why didn\u2019t they just tell you not to publish the article ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D5_Q17",
       "FR": "Je crois qu\u2019ils s'int\u00E9ressent seulement \u00E0 Kurt, et l\u2019affaire aurait fini dans les journaux de toute fa\u00E7on.",
-      "EN": "I think their only concern is Kurt, and the case would\u2019ve ended up in the papers anyway."
+      "EN": "I think their only concern is Kurt, and the case would\u2019ve ended up in the papers anyway.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D5_Q18",
       "FR": "En tout cas, moi je tiens \u00E0 mes couilles alors j\u2019ai fait ce qu\u2019ils ont dit.",
-      "EN": "At any rate, I\u2019ve taken a liking to my balls, so I wasn\u2019t risking it."
+      "EN": "At any rate, I\u2019ve taken a liking to my balls, so I wasn\u2019t risking it.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D6_Q1",
       "FR": "Vous avez une id\u00E9e de qui a pu envoyer ces hommes ?",
-      "EN": "You got any idea who could\u2019ve sent those thugs ?"
+      "EN": "You got any idea who could\u2019ve sent those thugs ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D6_Q2",
       "FR": "C\u2019est plus qu\u2019une id\u00E9e, je le sais.",
-      "EN": "Oh I got more than an idea, I know who it was."
+      "EN": "Oh I got more than an idea, I know who it was.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D6_Q3",
       "FR": "C\u2019est un type qui se fait appeler L\u2019Allemand.",
-      "EN": "A dude who goes by the name The German."
+      "EN": "A dude who goes by the name The German.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D6_Q4",
       "FR": "Jamais entendu parler.",
-      "EN": "Never heard of him."
+      "EN": "Never heard of him.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D6_Q5",
       "FR": "\u00C7a ne m\u2019\u00E9tonne pas.",
-      "EN": "Doesn\u2019t surprise me."
+      "EN": "Doesn\u2019t surprise me.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D6_Q6",
       "FR": "Il est connu seulement par la police et quelques fouilles-merdes comme moi.",
-      "EN": "He\u2019s only known by the police and some shit-stirrers like me."
+      "EN": "He\u2019s only known by the police and some shit-stirrers like me.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D6_Q7",
       "FR": "C\u2019est le plus gros baron de la p\u00E8gre du quartier.",
-      "EN": "He\u2019s the biggest shot in Manhattan\u2019s underworld."
+      "EN": "He\u2019s the biggest shot in Manhattan\u2019s underworld.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D6_Q8",
       "FR": "Mais personne ne l\u2019a jamais vu.",
-      "EN": "But no one has ever seen him."
+      "EN": "But no one has ever seen him.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D7_Q1",
       "FR": "Je veux en savoir plus sur l\u2019Allemand.",
-      "EN": "I need to know more about The German."
+      "EN": "I need to know more about The German.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D7_Q2",
       "FR": "Je ne peux pas vous en dire beaucoup.",
-      "EN": "I can\u2019t tell you much."
+      "EN": "I can\u2019t tell you much.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D7_Q3",
       "FR": "Il s\u2019est impos\u00E9 depuis quelque temps comme le ma\u00EEtre du quartier, apr\u00E8s la mort de DiMarco, l\u2019ancien parrain de Midtown.",
-      "EN": "He impose a while ago as the new boss of the district, after the passing of DiMarco, the former Godfather of Midtown."
+      "EN": "He impose a while ago as the new boss of the district, after the passing of DiMarco, the former Godfather of Midtown.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D7_Q4",
       "FR": "J\u2019avais couvert cette affaire \u00E0 l\u2019\u00E9poque.",
-      "EN": "I had discovered that case back then."
+      "EN": "I had discovered that case back then.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D7_Q5",
       "FR": "Un myst\u00E9rieux type arrive et s\u2019approprie une \u00E0 une les affaires de DiMarco.",
-      "EN": "Some mysterious guy arrives and takes over all of DiMarco\u2019s gigs, one by one."
+      "EN": "Some mysterious guy arrives and takes over all of DiMarco\u2019s gigs, one by one.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D7_Q6",
       "FR": "La police ne s\u2019en occupe pas trop.",
-      "EN": "The police doesn\u2019t go looking too deep into that."
+      "EN": "The police doesn\u2019t go looking too deep into that.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D7_Q7",
       "FR": "Elle se contente de ramasser les cadavres, mieux vaut laisser les truands s\u2019entretuer.",
-      "EN": "They just clean up the corpses, they might as well let the criminals kill each other."
+      "EN": "They just clean up the corpses, they might as well let the criminals kill each other.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D7_Q8",
       "FR": "Et l\u00E0 une guerre \u00E9clate, je suppose.",
-      "EN": "And then I supposed a war went off."
+      "EN": "And then I supposed a war went off.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D7_Q9",
       "FR": "Tout juste. DiMarco est compl\u00E8tement d\u00E9bord\u00E9.",
-      "EN": "You got that right. DiMarco got completely overwhelmed."
+      "EN": "You got that right. DiMarco got completely overwhelmed.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D7_Q10",
       "FR": "\u00C7a a dur\u00E9 quelques mois, jusqu\u2019\u00E0 ce qu\u2019on retrouve son corps avec une balle dans le cr\u00E2ne.",
-      "EN": "It lasted for a few months, until his body\u2019s found with a bullet in the head."
+      "EN": "It lasted for a few months, until his body\u2019s found with a bullet in the head.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D7_Q11",
       "FR": "Depuis ce jour, l\u2019Allemand r\u00E8gne sur Midtown.",
-      "EN": "Since that day, The German reigns over Midtown."
+      "EN": "Since that day, The German reigns over Midtown.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D7_Q12",
       "FR": "Alors personne ne le conna\u00EEt ? Ni son nom, ni son visage ?",
-      "EN": "So no one knows him ? Neither his name, nor his face ?"
+      "EN": "So no one knows him ? Neither his name, nor his face ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D7_Q13",
       "FR": "Apparemment pas.",
-      "EN": "Apparently not."
+      "EN": "Apparently not.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D7_Q14",
       "FR": "La police a bien essay\u00E9 de le coincer, mais sans preuves, c\u2019est une perte de temps.",
-      "EN": "The police did try to catch him, but without any proof, it\u2019s just a waste of time."
+      "EN": "The police did try to catch him, but without any proof, it\u2019s just a waste of time.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D7_Q15",
       "FR": "Tout ce qu\u2019on a retrouv\u00E9 c\u2019est des cadavres horriblement tortur\u00E9s.",
-      "EN": "All they found were tortured corpses."
+      "EN": "All they found were tortured corpses.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D7_Q16",
       "FR": "Vraiment ?",
-      "EN": "Really ?"
+      "EN": "Really ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D7_Q17",
       "FR": "Je vous ai pas dit, mais la sp\u00E9cialit\u00E9 de l\u2019Allemand c\u2019est la torture.",
-      "EN": "Oh I forgot to mention, The German\u2019s specialty is torture."
+      "EN": "Oh I forgot to mention, The German\u2019s specialty is torture.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D7_Q18",
       "FR": "Je vous raconte pas l\u2019\u00E9tat des cadavres qu\u2019on a retrouv\u00E9s. Mais \u00E7a, \u00E7a fait les gros titres !",
-      "EN": "I won\u2019t tell you in what state the bodies were found. But that made the headlines for sure !"
+      "EN": "I won\u2019t tell you in what state the bodies were found. But that made the headlines for sure !",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D7_Q19",
       "FR": "Mouais\u2026",
-      "EN": "M\u2019kay\u2026"
+      "EN": "M\u2019kay\u2026",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D8_Q1",
       "FR": "Vous pouvez me parler de votre discussion avec Kurt Becker ?",
-      "EN": "Can you tell me about your conversation with Kurt Becker ?"
+      "EN": "Can you tell me about your conversation with Kurt Becker ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D8_Q2",
       "FR": "Discussion, c\u2019est un bien grand mot, ce type \u00E9tait incapable d'aligner deux mots quand on s\u2019est parl\u00E9.",
-      "EN": "\u201CConversation\u201D is kind of a big word, this dude couldn\u2019t lign up two words when we spoke."
+      "EN": "\u201CConversation\u201D is kind of a big word, this dude couldn\u2019t lign up two words when we spoke.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D8_Q3",
       "FR": "Il avait sans doute bu.",
-      "EN": "He was certainly drunk."
+      "EN": "He was certainly drunk.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D8_Q4",
       "FR": "Non, je sais reconna\u00EEtre un Junkie quand j\u2019en vois un, ce type \u00E9tait compl\u00E8tement cram\u00E9.",
-      "EN": "No, I know a junkie when I see one, the guy was completely fucked up."
+      "EN": "No, I know a junkie when I see one, the guy was completely fucked up.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D8_Q5",
       "FR": "\u00C7a explique beaucoup de choses.",
-      "EN": "That would explain a lot of things."
+      "EN": "That would explain a lot of things.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D9_Q1",
       "FR": "Parlez moi de vous Marvin.",
-      "EN": "Tell me about yourself, Marvin."
+      "EN": "Tell me about yourself, Marvin.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D9_Q2",
       "FR": "Moins vous en savez sur moi, mieux c\u2019est.",
-      "EN": "The less you know, the better."
+      "EN": "The less you know, the better.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D10_Q1",
       "FR": "Alors comme \u00E7a vous bossez pour ce torchon de Sassy New York ?",
-      "EN": "So you work for that garbage magazine Sassy New York?"
+      "EN": "So you work for that garbage magazine Sassy New York?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D10_Q2",
       "FR": "Et ouais mon gars. Je suis de loin leur meilleur reporter !",
-      "EN": "Yup. I\u2019m their best reporter by far !"
+      "EN": "Yup. I\u2019m their best reporter by far !",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D10_Q3",
       "FR": "Si tu peux te rincer l\u2019oeil sur les miches de Marilyn Taylor ou Elizabeth Monroe, c\u2019est un peu gr\u00E2ce \u00E0 moi !",
-      "EN": "If you can enjoy the sight of the buns of Marilyn Taylor or Elizabeth Monroe, it\u2019s mostly thanks to me !"
+      "EN": "If you can enjoy the sight of the buns of Marilyn Taylor or Elizabeth Monroe, it\u2019s mostly thanks to me !",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D10_Q4",
       "FR": "Je vois\u2026 Vous \u00EAtes un vrai h\u00E9ros, Marvin\u2026",
-      "EN": "I see\u2026 You truly are a hero, Marvin\u2026"
+      "EN": "I see\u2026 You truly are a hero, Marvin\u2026",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D10_Q5",
       "FR": "Merci du compliment, mais je me vois plus comme un artiste.",
-      "EN": "Thanks for the compliment pal, but I see myself as more of an artist."
+      "EN": "Thanks for the compliment pal, but I see myself as more of an artist.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D11_Q1",
       "FR": "Parlez-moi de Scott.",
-      "EN": "Tell me about Scott."
+      "EN": "Tell me about Scott.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D11_Q2",
       "FR": "Je pr\u00E9f\u00E9rerais qu\u2019on s\u2019en tienne \u00E0 notre affaire.",
-      "EN": "I\u2019d rather we stick to our case."
+      "EN": "I\u2019d rather we stick to our case.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D12_Q1",
       "FR": "Vous dites que Kurt Becker \u00E9tait drogu\u00E9 quand vous lui avez parl\u00E9 ?",
-      "EN": "You say Kurt Becker was drugged up when you spoke to him?"
+      "EN": "You say Kurt Becker was drugged up when you spoke to him?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D12_Q2",
       "FR": "Pas qu\u2019un peu ouais ! Il ne tenait plus debout !",
-      "EN": "Yeah, not just a little either ! The dude could barely stand up !"
+      "EN": "Yeah, not just a little either ! The dude could barely stand up !",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D12_Q3",
       "FR": "Croyez-moi, j\u2019en ai suffisamment vu dans mon m\u00E9tier pour savoir les reconna\u00EEtre !",
-      "EN": "Trust me, I\u2019ve seen enough of it on the job to recognize it !"
+      "EN": "Trust me, I\u2019ve seen enough of it on the job to recognize it !",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D13_Q1",
       "FR": "Vous pensez que l\u2019Allemand prot\u00E8ge Kurt ?",
-      "EN": "Do you think the German is protecting Kurt ?"
+      "EN": "Do you think the German is protecting Kurt ?",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D13_Q2",
       "FR": "C\u2019est possible, mais \u00E7a pourrait \u00EAtre quelqu\u2019un d\u2019autre. Je ne vois pas quel lien ils pourraient avoir.",
-      "EN": "That\u2019s possible, but it could also be someone else. I don\u2019t see how they could be related."
+      "EN": "That\u2019s possible, but it could also be someone else. I don\u2019t see how they could be related.",
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D13_Q3",
       "FR": "Tr\u00E8s bien.",
-      "EN": "Very well."
+      "EN": "Very well.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Marvin_D14_Q1",
@@ -6214,8 +7004,8 @@
       "Key": "Marvin_D14_Q2",
       "FR": "Vraiment ? \u00C7a me semble peu probable... Il n'a pas l'air d'avoir les contacts ni l'argent pour ce genre de choses...",
       "EN": "Really ? It seems unlikely to me... He doesn't look like the type to have any contacts or money for that kind of thing...",
-      "FRName": "Marvin",
-      "ENName": "Marvin"
+      "FRName": "Marvin Meyer",
+      "ENName": "Marvin Meyer"
    },
    {
       "Key": "Marvin_D14_Q3",
@@ -6350,6 +7140,11 @@
       "EN": "Text speed"
    },
    {
+      "Key": "Menu_26",
+      "FR": "Noir et blanc",
+      "EN": "Black and white"
+   },
+   {
       "Key": "Book_01",
       "FR": "Enqu\u00EAte",
       "EN": "Investigation"
@@ -6372,7 +7167,7 @@
    {
       "Key": "Book_05",
       "FR": "Hypoth\u00E8ses",
-      "EN": "Hypotheses"
+      "EN": "Hypothesis"
    },
    {
       "Key": "Book_06",
@@ -6428,6 +7223,11 @@
       "Key": "Book_16",
       "FR": "Objectifs Accomplis",
       "EN": "Achieved Goals"
+   },
+   {
+      "Key": "Book_17",
+      "FR": "Effacer le lien d'une note sur le tableau",
+      "EN": "Clear a link from a note on the board"
    },
    {
       "Key": "Board_01",

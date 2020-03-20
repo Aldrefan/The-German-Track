@@ -12165,6 +12165,7 @@ GameObject:
   - component: {fileID: 408455950}
   - component: {fileID: 408455951}
   - component: {fileID: 408455952}
+  - component: {fileID: 408455953}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -12294,6 +12295,43 @@ MonoBehaviour:
       CanvasGO: {fileID: 919977222}
     - CanvasName: Fade_Panel
       CanvasGO: {fileID: 465617988}
+--- !u!114 &408455953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408455945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95b7e3d0634cf742a8c8da95a39f6dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charactersList:
+  - charName: Kenneth
+    charSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
+  - charName: Clara Grey
+    charSprite: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd, type: 3}
+  - charName: Kurt Becker
+    charSprite: {fileID: 21300000, guid: cc025ebf42fbd1643b3f7fc456003ad0, type: 3}
+  - charName: W. White
+    charSprite: {fileID: 21300000, guid: 3f7929d3d49b07b44b0846981efed979, type: 3}
+  - charName: Kurt Becker (?)
+    charSprite: {fileID: 21300000, guid: adc788b35daf0a742b493feed0076a07, type: 3}
+  - charName: S. Nelson
+    charSprite: {fileID: 21300000, guid: b04365d9f0f3ea041be1fe199247d897, type: 3}
+  - charName: Clara (?)
+    charSprite: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd, type: 3}
+  - charName: "T\xE9l\xE9phone"
+    charSprite: {fileID: 21300000, guid: d32b38448ae9b764eb90053d37e1d202, type: 3}
+  - charName: Barman
+    charSprite: {fileID: 21300000, guid: 9625550827e375945965895962ede1f2, type: 3}
+  - charName: "R\xE9ceptionniste_H"
+    charSprite: {fileID: 21300000, guid: f985fadf247290e408e74c492f712f39, type: 3}
+  - charName: "R\xE9ceptionniste_P"
+    charSprite: {fileID: 21300000, guid: 0bdc80c93ce89e54a90cc4d6c5d649ad, type: 3}
+  - charName: Dr. Lou Ellis
+    charSprite: {fileID: 21300000, guid: 7b6c5ad84d59d2b4c8505d88c02dbd58, type: 3}
 --- !u!1 &420666936
 GameObject:
   m_ObjectHideFlags: 0

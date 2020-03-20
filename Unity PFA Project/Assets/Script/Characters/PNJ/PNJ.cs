@@ -174,11 +174,13 @@ public class PNJ : MonoBehaviour
             {
                 leftPanel.SetActive(true);
                 rightPanel.SetActive(false);
-                leftPanel.transform.GetChild(2).GetComponent<Text>().text = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName;
+                string [] words = LanguageManager.Instance.GetNameOfTheSpeaker(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote).Split("_"[0]);
+                leftPanel.transform.GetChild(2).GetComponent<Text>().text = words[0];
                 show = ShowText(leftPanel);
                 StartCoroutine(show);
                 //leftPanel.transform.GetChild(0).GetComponent<Text>().text = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote;
-                if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName == PNJName)
+                leftPanel.transform.GetChild(4).GetComponent<Image>().sprite = LanguageManager.Instance.GetCharacterSprite(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
+                /*if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName == PNJName)
                 {
                     leftPanel.transform.GetChild(4).GetComponent<Image>().sprite = characterSprite;
                 }
@@ -186,17 +188,19 @@ public class PNJ : MonoBehaviour
                 if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName == "Kenneth")
                 {
                     leftPanel.transform.GetChild(4).GetComponent<Image>().sprite = ActiveCharacterScript.ActiveCharacter.GetCharacterSprite("Kenneth"); // KennethSprite;
-                }
+                }*/
             }
             else 
             {
                 rightPanel.SetActive(true);
                 leftPanel.SetActive(false);
-                rightPanel.transform.GetChild(2).GetComponent<Text>().text = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName;
+                string [] words = LanguageManager.Instance.GetNameOfTheSpeaker(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote).Split("_"[0]);
+                rightPanel.transform.GetChild(2).GetComponent<Text>().text = words[0];
                 show = ShowText(rightPanel);
                 StartCoroutine(show);
                 //rightPanel.transform.GetChild(0).GetComponent<Text>().text = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote;
-                if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName == PNJName)
+                rightPanel.transform.GetChild(4).GetComponent<Image>().sprite = LanguageManager.Instance.GetCharacterSprite(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
+                /*if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName == PNJName)
                 {
                     rightPanel.transform.GetChild(4).GetComponent<Image>().sprite = characterSprite;
                 }
@@ -204,7 +208,7 @@ public class PNJ : MonoBehaviour
                 if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName == "Kenneth")
                 {
                     rightPanel.transform.GetChild(4).GetComponent<Image>().sprite = ActiveCharacterScript.ActiveCharacter.GetCharacterSprite("Kenneth");
-                }
+                }*/
             }
         }
         else
