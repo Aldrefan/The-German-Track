@@ -176,8 +176,9 @@ public class PNJ : MonoBehaviour
                 rightPanel.SetActive(false);
                 string [] words = LanguageManager.Instance.GetNameOfTheSpeaker(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote).Split("_"[0]);
                 leftPanel.transform.GetChild(2).GetComponent<Text>().text = words[0];
-                show = ShowText(leftPanel);
-                StartCoroutine(show);
+                StartCoroutine(ShowText(leftPanel));
+                //show = ShowText(leftPanel);  // Works
+                //StartCoroutine(show);  // Works
                 //leftPanel.transform.GetChild(0).GetComponent<Text>().text = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote;
                 leftPanel.transform.GetChild(4).GetComponent<Image>().sprite = LanguageManager.Instance.GetCharacterSprite(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
                 /*if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName == PNJName)
@@ -196,8 +197,9 @@ public class PNJ : MonoBehaviour
                 leftPanel.SetActive(false);
                 string [] words = LanguageManager.Instance.GetNameOfTheSpeaker(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote).Split("_"[0]);
                 rightPanel.transform.GetChild(2).GetComponent<Text>().text = words[0];
-                show = ShowText(rightPanel);
-                StartCoroutine(show);
+                StartCoroutine(ShowText(rightPanel));
+                //show = ShowText(rightPanel);  // Works
+                //StartCoroutine(show);  // Works
                 //rightPanel.transform.GetChild(0).GetComponent<Text>().text = allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote;
                 rightPanel.transform.GetChild(4).GetComponent<Image>().sprite = LanguageManager.Instance.GetCharacterSprite(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
                 /*if(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].characterName == PNJName)
@@ -339,7 +341,8 @@ public class PNJ : MonoBehaviour
 
     public void FullQuote(GameObject panel)
     {
-        StopCoroutine(show);
+        StopAllCoroutines();
+        //StopCoroutine(show);
         quoteFinished = true;
         panel.transform.GetChild(1).GetComponent<Text>().text = LanguageManager.Instance.GetDialog(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
         DialogSecondPhase();
