@@ -142,7 +142,7 @@ MonoBehaviour:
     listOfDialogs:
     - dialog:
       - quote: Clara_D0_Q1
-        characterName: '?'
+        characterName: ?_Clara
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -156,7 +156,7 @@ MonoBehaviour:
         spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
           type: 3}
       - quote: Clara_D0_Q3
-        characterName: '?'
+        characterName: ?_Clara
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -1421,6 +1421,7 @@ MonoBehaviour:
   action: 0
   fromStart: 1
   triggerByContact: 0
+  hasToLoop: 0
 --- !u!95 &3970053386355174765
 Animator:
   serializedVersion: 3
