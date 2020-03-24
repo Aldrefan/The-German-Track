@@ -120,6 +120,7 @@ public class SaveFile : MonoBehaviour
             gameCam.transform.position = gameSave.camPosition;
             gameCam.InitRoomLimit();
             gameCam.YOffset = gameCam.actualRoom.GetComponent<SceneInformations>().YOffset;
+            StartCoroutine(ShowSceneNameAtLoad(gameCam.actualRoom));
             //gameCam.actualRoom.GetComponent<SceneInformations>().PlaceCamera();
         }
 
@@ -315,5 +316,10 @@ public class SaveFile : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         LoadSettings();
+    }
+    IEnumerator ShowSceneNameAtLoad(GameObject room)
+    {
+        yield return new WaitForSeconds(0.7f);
+        room.GetComponent<SceneInformations>().ShowZoneName();
     }
 }
