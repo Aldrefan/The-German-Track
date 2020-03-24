@@ -11,11 +11,16 @@ public class CarnetIndex : MonoBehaviour
     public int childNumber;
     public Vector2 stickerSize;
     public List<GameObject> pageList;
-    public Transform pageArchetype;
-    public GameObject pagePrefab;
-    public Vector3 newPagePosition;
-    public GameObject newFeedback;
-    public Vector3 newFeedbackSize;
+    [SerializeField]
+    private Transform pageArchetype;
+    [SerializeField]
+    private GameObject pagePrefab;
+    [SerializeField]
+    private Vector3 newPagePosition;
+    [SerializeField]
+    private  GameObject newFeedback;
+    [SerializeField]
+    private  Vector3 newFeedbackSize;
     List<int> stickersContained;
 
     void Awake()
@@ -25,6 +30,15 @@ public class CarnetIndex : MonoBehaviour
         transform.GetComponentInChildren<GridLayoutGroup>().constraintCount = columnsCount; */
         /*pageArchetype = transform.GetChild(0);*/
         //pageList.Add(pageArchetype.gameObject);
+    }
+
+    void OnEnable()
+    {
+        if(pageList.Count > 1)
+        {
+            CanvasManager.CManager.GetCanvas("ButtonsInCarnet").transform.GetChild(0).gameObject.SetActive(true);
+            CanvasManager.CManager.GetCanvas("ButtonsInCarnet").transform.GetChild(1).gameObject.SetActive(true);
+        }
     }
 
     public void CheckChildNumber(GameObject newChild)
