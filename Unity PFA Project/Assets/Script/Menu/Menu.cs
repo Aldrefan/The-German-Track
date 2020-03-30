@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.Rendering.PostProcessing;
 
 public class Menu : MonoBehaviour
 {
@@ -47,6 +48,8 @@ public class Menu : MonoBehaviour
     [Header("Quit")]
     public GameObject canvasQuit;
     public GameObject canvasConfirm;
+    [SerializeField]
+    PostProcessVolume postProcessVolume;
 
     void Update()
     {
@@ -79,8 +82,6 @@ public class Menu : MonoBehaviour
 
     void Start()
     {
-
-
         //active le menu à sa forme initiale
         ReturnMenu();
 
@@ -192,6 +193,27 @@ public class Menu : MonoBehaviour
         {
             LoadButtonActive();
         }
+    }
+
+
+    public void CheckAndSetBAWMode()
+    {
+        if(postProcessVolume != null)
+        {
+            ColorGrading colorGradingLayer;
+            postProcessVolume.profile.TryGetSettings(out colorGradingLayer);
+            if(colorGradingLayer != null)
+            {
+                if(colorGradingLayer.saturation.value != 0)
+                {colorGradingLayer.saturation.value = 0;}
+                else colorGradingLayer.saturation.value = -100;
+            }
+        }
+        /*if(colorGradingLayer.saturation.value != 0)
+        {
+            colorGradingLayer.saturation.value = -100;
+        }
+        else colorGradingLayer.saturation.value = 0;*/
     }
 
 
