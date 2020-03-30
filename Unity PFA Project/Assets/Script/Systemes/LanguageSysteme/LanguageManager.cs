@@ -16,6 +16,8 @@ public class LanguageManager : MonoBehaviour
         public string Key;
         public string FR;
         public string EN;
+        public string FRName;
+        public string ENName;
     }
     public string filePath;
 
@@ -76,6 +78,45 @@ public class LanguageManager : MonoBehaviour
                     {
                         return datas.mytexts[i].EN;
                     }
+                }
+            }
+            return null;
+        }
+        return null;
+    }
+
+    public string GetNameOfTheSpeaker(string key)
+    {
+        if(datas != null)
+        {
+            for(int i = 0; i < datas.mytexts.Length; i++)
+            {
+                if(datas.mytexts[i].Key == key)
+                {
+                    if(language == "french")
+                    {
+                        return datas.mytexts[i].FRName;
+                    }
+                    else 
+                    {
+                        return datas.mytexts[i].ENName;
+                    }
+                }
+            }
+            return null;
+        }
+        return null;
+    }
+
+    public Sprite GetCharacterSprite(string key)
+    {
+        if(datas != null)
+        {
+            for(int i = 0; i < datas.mytexts.Length; i++)
+            {
+                if(datas.mytexts[i].Key == key)
+                {
+                    return CharactersBank.CharBank.GetSprite(datas.mytexts[i].FRName);
                 }
             }
             return null;

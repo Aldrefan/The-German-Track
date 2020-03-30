@@ -35,7 +35,7 @@ public class NewStickerDisplay : MonoBehaviour
             backgroundColor = sticker.color;
             if (sticker.type == Sticker.Type.Profile)
             {
-                text.transform.localPosition = new Vector2(0, -30);
+                text.transform.localPosition = new Vector2(0, -28);
                 text.rectTransform.sizeDelta = new Vector2(75, 28);
 
             }
