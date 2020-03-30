@@ -20,7 +20,7 @@ public class Shortcut : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fadePanel =  GameObject.Find("Necessary_Floating_Canvas").transform.Find("FadePanel").gameObject;
+        fadePanel = CanvasManager.CManager.GetCanvas("Fade_Panel");
         player = GameObject.FindGameObjectWithTag("Player");
         directionalLight = GameObject.Find("Directional Light");
         StartFade();
@@ -121,8 +121,11 @@ public class Shortcut : MonoBehaviour
 
             if (!internTeleport)
             {
+                if(LanguageManager.Instance.GetDialog(linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneName) != null)
+                {
+                    linkedWith.transform.parent.parent.GetComponent<SceneInformations>().ShowZoneName();
+                }
                 transform.parent.parent.gameObject.SetActive(false);
-                linkedWith.transform.parent.parent.GetComponent<SceneInformations>().ShowZoneName();
             }
             //else 
             //{
@@ -132,10 +135,6 @@ public class Shortcut : MonoBehaviour
             save.lieu = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
             SaveGameManager.Save();*/
             //}
-
-
-
-
 
             if (!linkedWith.transform.parent.parent.GetComponent<SceneInformations>().fixedCamera)
             {
