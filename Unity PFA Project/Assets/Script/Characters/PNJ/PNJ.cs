@@ -174,8 +174,12 @@ public class PNJ : MonoBehaviour
             {
                 leftPanel.SetActive(true);
                 rightPanel.SetActive(false);
-                string [] words = LanguageManager.Instance.GetNameOfTheSpeaker(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote).Split("_"[0]);
-                leftPanel.transform.GetChild(2).GetComponent<Text>().text = words[0];
+                if(tag != "Item")
+                {
+                    string [] words = LanguageManager.Instance.GetNameOfTheSpeaker(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote).Split("_"[0]);
+                    leftPanel.transform.GetChild(2).GetComponent<Text>().text = words[0];
+                }
+                else leftPanel.transform.GetChild(2).GetComponent<Text>().text = ActiveCharacterScript.ActiveCharacter.actualCharacter.name;
                 StartCoroutine(ShowText(leftPanel));
                 //show = ShowText(leftPanel);  // Works
                 //StartCoroutine(show);  // Works
@@ -195,8 +199,12 @@ public class PNJ : MonoBehaviour
             {
                 rightPanel.SetActive(true);
                 leftPanel.SetActive(false);
-                string [] words = LanguageManager.Instance.GetNameOfTheSpeaker(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote).Split("_"[0]);
-                rightPanel.transform.GetChild(2).GetComponent<Text>().text = words[0];
+                if(tag != "Item")
+                {
+                    string [] words = LanguageManager.Instance.GetNameOfTheSpeaker(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote).Split("_"[0]);
+                    rightPanel.transform.GetChild(2).GetComponent<Text>().text = words[0];
+                }
+                else leftPanel.transform.GetChild(2).GetComponent<Text>().text = ActiveCharacterScript.ActiveCharacter.actualCharacter.name;
                 StartCoroutine(ShowText(rightPanel));
                 //show = ShowText(rightPanel);  // Works
                 //StartCoroutine(show);  // Works

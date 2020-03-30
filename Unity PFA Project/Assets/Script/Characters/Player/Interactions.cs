@@ -414,7 +414,7 @@ public class Interactions : MonoBehaviour
             break;
 
             case State.Pause :
-            GameObject.Find("Necessary_Floating_Canvas").transform.Find("PauseMenu").gameObject.SetActive(true);
+            CanvasManager.CManager.GetCanvas("Pause").SetActive(true);
             carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);
             carnetUI.GetComponent<Animator>().SetBool("InDialog", false);
             state = State.Pause;
