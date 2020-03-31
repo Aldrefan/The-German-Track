@@ -30,7 +30,7 @@ public class NewStickerDisplay : MonoBehaviour
             {
                 tooltipText.text = LanguageManager.Instance.GetDialog(sticker.tooltipText);
             }
-            backgroundSticker.rectTransform.sizeDelta = new Vector2(sticker.backgoundSize.x, sticker.backgoundSize.y);
+            backgroundSticker.rectTransform.sizeDelta = new Vector2(sticker.backgoundSize.x*1.1f, sticker.backgoundSize.y*1.1f);
             backgroundSticker.sprite = sticker.stickerBackground;
             backgroundColor = sticker.color;
             if (sticker.type == Sticker.Type.Profile)
