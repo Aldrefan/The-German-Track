@@ -19,6 +19,7 @@ public class SaveFile : MonoBehaviour
         //Debug.Log(GameSaveSystem.gameToLoad);
         LoadAtStart();
 
+        Debug.Log(GetMenuSettings());
     }
 
     private void Update()
@@ -262,6 +263,8 @@ public class SaveFile : MonoBehaviour
 
             Screen.fullScreen = settingsSave.fullscreenBool;
             Screen.SetResolution((int)settingsSave.screenResolution.x, (int)settingsSave.screenResolution.y, Screen.fullScreen);
+
+            GetMenuSettings().isBlackAndWhite = settingsSave.isBlAndWht;
         }
     }
 
@@ -307,7 +310,9 @@ public class SaveFile : MonoBehaviour
         GameSaveSystem.SettingsDataInput(
             Resources.Load<AudioMixer>("SoundMixer/MusicMixer"),
             Resources.Load<AudioMixer>("SoundMixer/FXMixer"),
-            FindObjectOfType<LanguageManager>());
+            FindObjectOfType<LanguageManager>(),
+            GetMenuSettings()
+            );
 
         //StartCoroutine(TimerLoad());
     }
@@ -321,5 +326,17 @@ public class SaveFile : MonoBehaviour
     {
         yield return new WaitForSeconds(0.7f);
         room.GetComponent<SceneInformations>().ShowZoneName();
+    }
+
+    Menu GetMenuSettings()
+    {
+        if (!FindObjectOfType<Menu>())
+        {
+            return FindObjectOfType<CanvasManager>().GetCanvas("Pause").GetComponent<Menu>();
+        }
+        else
+        {
+            return FindObjectOfType<Menu>();
+        }
     }
 }

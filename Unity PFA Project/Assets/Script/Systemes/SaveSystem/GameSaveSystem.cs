@@ -24,6 +24,7 @@ public static class GameSaveSystem
     static AudioMixer musicMixer;
     static AudioMixer effectMixer;
     static LanguageManager langManager;
+    static Menu menuSettings;
 
     public static void Init()
     {
@@ -64,7 +65,7 @@ public static class GameSaveSystem
         effectMixer.GetFloat("fxVolume", out effectVol);
 
 
-        SettingsData settingObject = new SettingsData(false, langManager.dialogSpeed, musicVol, effectVol, langManager.language, Screen.fullScreen, new Vector2(Screen.currentResolution.width, Screen.currentResolution.height));
+        SettingsData settingObject = new SettingsData(false, langManager.dialogSpeed, musicVol, effectVol, langManager.language, Screen.fullScreen, new Vector2(Screen.currentResolution.width, Screen.currentResolution.height), menuSettings.isBlackAndWhite);
         string json = JsonUtility.ToJson(settingObject);
 
         File.WriteAllText(SAVE_FOLDER + "/settingsSave.tgt", json);
@@ -110,11 +111,12 @@ public static class GameSaveSystem
         boardTransform = newBoardCanvas;
     }
 
-    public static void SettingsDataInput(AudioMixer newMusicMixer, AudioMixer newEffectMixer, LanguageManager newLangManager)
+    public static void SettingsDataInput(AudioMixer newMusicMixer, AudioMixer newEffectMixer, LanguageManager newLangManager, Menu newMenuSettings)
     {
         musicMixer = newMusicMixer;
         effectMixer = newEffectMixer;
         langManager = newLangManager;
+        menuSettings = newMenuSettings;
     }
 }
 

@@ -18,7 +18,7 @@ public class Menu : MonoBehaviour
     float fxValue = -20;
     bool returnTitle;
     bool isFullscreen;
-    bool isBlackAndWhite;
+    public bool isBlackAndWhite;
     int resolutionIndex;
     int speedIndex;
     float slowSpeed = 0.04f;
