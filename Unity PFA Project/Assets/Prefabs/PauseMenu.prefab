@@ -427,7 +427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5996323176850851252
 RectTransform:
   m_ObjectHideFlags: 0
@@ -491,7 +491,18 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4163619211731328925}
+        m_MethodName: BlackAndWhiteMode
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
@@ -8786,10 +8797,12 @@ MonoBehaviour:
   resolutionDropdown: {fileID: 4163619211588820778}
   speedDropdown: {fileID: 2965361859749206304}
   fullscreenCheckbox: {fileID: 4163619211002853834}
+  blackandwhiteCheckbox: {fileID: 2509302672453716447}
   englishArrow: {fileID: 4163619210757150904}
   frenchArrow: {fileID: 4163619211267465569}
   canvasQuit: {fileID: 4163619211160551882}
   canvasConfirm: {fileID: 4163619209756163538}
+  postProcessVolume: {fileID: 0}
 --- !u!114 &1995698771
 MonoBehaviour:
   m_ObjectHideFlags: 0

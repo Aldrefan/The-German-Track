@@ -38148,7 +38148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59dda0572c4e9f34e919df6aa7330d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadAtStart: 1
+  loadAtStart: 0
 --- !u!1 &1046037994
 GameObject:
   m_ObjectHideFlags: 0
@@ -60622,7 +60622,7 @@ PrefabInstance:
     - target: {fileID: 7380928826393864842, guid: 3651f4048b841834d9bbf51734ba01ae,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7380928826393864842, guid: 3651f4048b841834d9bbf51734ba01ae,
         type: 3}
@@ -60637,7 +60637,7 @@ PrefabInstance:
     - target: {fileID: 7380928826393864842, guid: 3651f4048b841834d9bbf51734ba01ae,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CheckAndSetBAWMode
+      value: BlackAndWhiteMode
       objectReference: {fileID: 0}
     - target: {fileID: 7380928826393864842, guid: 3651f4048b841834d9bbf51734ba01ae,
         type: 3}

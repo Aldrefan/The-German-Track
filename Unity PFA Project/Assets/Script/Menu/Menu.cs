@@ -18,6 +18,7 @@ public class Menu : MonoBehaviour
     float fxValue = -20;
     bool returnTitle;
     bool isFullscreen;
+    bool isBlackAndWhite;
     int resolutionIndex;
     int speedIndex;
     float slowSpeed = 0.04f;
@@ -42,6 +43,7 @@ public class Menu : MonoBehaviour
     public Dropdown speedDropdown;
     Resolution[] resolutions;
     public GameObject fullscreenCheckbox;
+    public GameObject blackandwhiteCheckbox;
     public GameObject englishArrow;
     public GameObject frenchArrow;
 
@@ -162,6 +164,9 @@ public class Menu : MonoBehaviour
         //resolution & fullscreen initialisation
         SetResolution(resolutionIndex);
         SetFullscreen(isFullscreen);
+
+        //black & white initialisation
+        BlackAndWhiteMode(isBlackAndWhite);
         
 
         //language initialisation
@@ -173,6 +178,10 @@ public class Menu : MonoBehaviour
         //fullscreen checkbox initialisation
         if (Screen.fullScreen) fullscreenCheckbox.GetComponent<Toggle>().isOn = true;
         else fullscreenCheckbox.GetComponent<Toggle>().isOn = false;
+
+        //black n white checkbox initialisation
+        if (isBlackAndWhite) blackandwhiteCheckbox.GetComponent<Toggle>().isOn = true;
+        else blackandwhiteCheckbox.GetComponent<Toggle>().isOn = false;
 
 
         //music initialisation
@@ -196,25 +205,7 @@ public class Menu : MonoBehaviour
     }
 
 
-    public void CheckAndSetBAWMode()
-    {
-        if(postProcessVolume != null)
-        {
-            ColorGrading colorGradingLayer;
-            postProcessVolume.profile.TryGetSettings(out colorGradingLayer);
-            if(colorGradingLayer != null)
-            {
-                if(colorGradingLayer.saturation.value != 0)
-                {colorGradingLayer.saturation.value = 0;}
-                else colorGradingLayer.saturation.value = -100;
-            }
-        }
-        /*if(colorGradingLayer.saturation.value != 0)
-        {
-            colorGradingLayer.saturation.value = -100;
-        }
-        else colorGradingLayer.saturation.value = 0;*/
-    }
+    
 
 
 
@@ -354,6 +345,8 @@ public class Menu : MonoBehaviour
     {
         isFullscreen = isFullscreenTemp;
         Screen.fullScreen = isFullscreenTemp;
+        //if (isFullscreenTemp) GameObject.Find("Fullscreen").GetComponent<Toggle>().isOn = true;
+        //else GameObject.Find("Fullscreen").GetComponent<Toggle>().isOn = false;
     }
     public void EnglishSelection()
     {
@@ -382,8 +375,37 @@ public class Menu : MonoBehaviour
     {
         GameObject.Find("TypeSound").transform.GetComponent<AudioSource>().Play(0);
     }
+public void BlackAndWhiteMode(bool isBlackAndWhiteTemp)
+    {
+        isBlackAndWhite = isBlackAndWhiteTemp;
 
-
+        if(postProcessVolume != null)
+        {
+            ColorGrading colorGradingLayer;
+            postProcessVolume.profile.TryGetSettings(out colorGradingLayer);
+            if(colorGradingLayer != null)
+            {
+                /*if(colorGradingLayer.saturation.value != 0)
+                {colorGradingLayer.saturation.value = 0;}
+                else colorGradingLayer.saturation.value = -100;*/
+                if(isBlackAndWhiteTemp)
+                {
+                    colorGradingLayer.saturation.value = -100;
+                    //GameObject.Find("B&W").GetComponent<Toggle>().isOn = true;
+                }
+                else
+                {
+                    colorGradingLayer.saturation.value = 0;
+                    //GameObject.Find("B&W").GetComponent<Toggle>().isOn = false;
+                }
+            }
+        }
+        /*if(colorGradingLayer.saturation.value != 0)
+        {
+            colorGradingLayer.saturation.value = -100;
+        }
+        else colorGradingLayer.saturation.value = 0;*/
+    }
 
 
 
