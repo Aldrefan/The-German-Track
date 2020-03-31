@@ -41497,6 +41497,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 177
       objectReference: {fileID: 0}
+    - target: {fileID: 7642289017320452943, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 59
+      objectReference: {fileID: 0}
+    - target: {fileID: 7642289017320452943, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 7407841355828449439, guid: 883065d35bf8001418b4f638f428c3ca,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -41630,6 +41640,42 @@ PrefabInstance:
     - target: {fileID: 1270447863, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
       propertyPath: m_Navigation.m_Mode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 376708378339817848, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000011444092
+      objectReference: {fileID: 0}
+    - target: {fileID: 376708378339817848, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 17.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 376708378339817848, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0000038146973
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768268793999303692, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b464a42b6fb0c3842bbc394a37b84c65,
+        type: 3}
+    - target: {fileID: 1710099698309924203, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710099698309924203, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710099698309924203, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
@@ -60498,6 +60544,11 @@ PrefabInstance:
       propertyPath: languageManager
       value: 
       objectReference: {fileID: 1192764751}
+    - target: {fileID: 4163619211731328925, guid: 3651f4048b841834d9bbf51734ba01ae,
+        type: 3}
+      propertyPath: postProcessVolume
+      value: 
+      objectReference: {fileID: 1430267882}
     - target: {fileID: 4163619209829524191, guid: 3651f4048b841834d9bbf51734ba01ae,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -60557,6 +60608,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_MaxValue
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2509302672453716447, guid: 3651f4048b841834d9bbf51734ba01ae,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380928826393864842, guid: 3651f4048b841834d9bbf51734ba01ae,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380928826393864842, guid: 3651f4048b841834d9bbf51734ba01ae,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380928826393864842, guid: 3651f4048b841834d9bbf51734ba01ae,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380928826393864842, guid: 3651f4048b841834d9bbf51734ba01ae,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1995698768}
+    - target: {fileID: 7380928826393864842, guid: 3651f4048b841834d9bbf51734ba01ae,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckAndSetBAWMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380928826393864842, guid: 3651f4048b841834d9bbf51734ba01ae,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3651f4048b841834d9bbf51734ba01ae, type: 3}
@@ -69790,6 +69876,26 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1156105002}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: profilesButton
+      value: 
+      objectReference: {fileID: 542954707}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: indicesButton
+      value: 
+      objectReference: {fileID: 997975828}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: faitsButton
+      value: 
+      objectReference: {fileID: 846076264}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: hypothesesButton
+      value: 
+      objectReference: {fileID: 354150989}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: pileHiderButton
+      value: 
+      objectReference: {fileID: 2105758323}
     - target: {fileID: 6555912083691328245, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -69961,26 +70067,6 @@ PrefabInstance:
       propertyPath: m_Parameters.numCapVertices
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: profilesButton
-      value: 
-      objectReference: {fileID: 542954707}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: indicesButton
-      value: 
-      objectReference: {fileID: 997975828}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: faitsButton
-      value: 
-      objectReference: {fileID: 846076264}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: hypothesesButton
-      value: 
-      objectReference: {fileID: 354150989}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: pileHiderButton
-      value: 
-      objectReference: {fileID: 2105758323}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
 --- !u!1 &1835262825
