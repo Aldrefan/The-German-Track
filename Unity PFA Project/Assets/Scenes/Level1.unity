@@ -960,15 +960,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.6478114
       objectReference: {fileID: 0}
-    - target: {fileID: 4634512970318730214, guid: 742fdecfd51680e40a942bfa7c673efb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
-      objectReference: {fileID: 0}
     - target: {fileID: 4634512970318730213, guid: 742fdecfd51680e40a942bfa7c673efb,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634512970318730214, guid: 742fdecfd51680e40a942bfa7c673efb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 742fdecfd51680e40a942bfa7c673efb, type: 3}
@@ -38148,7 +38148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59dda0572c4e9f34e919df6aa7330d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadAtStart: 0
+  loadAtStart: 1
 --- !u!1 &1046037994
 GameObject:
   m_ObjectHideFlags: 0
@@ -41507,6 +41507,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 7642289017320452943, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7407841355828449439, guid: 883065d35bf8001418b4f638f428c3ca,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -41660,7 +41665,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b464a42b6fb0c3842bbc394a37b84c65,
+      objectReference: {fileID: 21300000, guid: 86639b414dde5414387ea181023cf349,
         type: 3}
     - target: {fileID: 1710099698309924203, guid: 883065d35bf8001418b4f638f428c3ca,
         type: 3}
@@ -41676,6 +41681,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 532688116757574945, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
