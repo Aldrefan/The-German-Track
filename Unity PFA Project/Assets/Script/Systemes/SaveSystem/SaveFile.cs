@@ -18,8 +18,6 @@ public class SaveFile : MonoBehaviour
 
         //Debug.Log(GameSaveSystem.gameToLoad);
         LoadAtStart();
-
-        Debug.Log(GetMenuSettings());
     }
 
     private void Update()
@@ -265,6 +263,7 @@ public class SaveFile : MonoBehaviour
             Screen.SetResolution((int)settingsSave.screenResolution.x, (int)settingsSave.screenResolution.y, Screen.fullScreen);
 
             GetMenuSettings().isBlackAndWhite = settingsSave.isBlAndWht;
+            GetMenuSettings().BlackAndWhiteMode(settingsSave.isBlAndWht);
         }
     }
 
