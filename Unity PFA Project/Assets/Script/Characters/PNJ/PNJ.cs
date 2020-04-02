@@ -296,6 +296,7 @@ public class PNJ : MonoBehaviour
     public IEnumerator ShowText(GameObject panel)
     {
         quoteFinished = false;
+        panel.transform.GetChild(3).GetComponent<Image>().enabled = false;
         actualQuote = LanguageManager.Instance.GetDialog(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
         
         string [] words = actualQuote.Split(" "[0]);
@@ -344,6 +345,10 @@ public class PNJ : MonoBehaviour
             }
         }
         quoteFinished = true;
+        if(dialogIndex != 1)
+        {
+            panel.transform.GetChild(3).GetComponent<Image>().enabled = true;
+        }
         DialogSecondPhase();
     }
 
@@ -353,6 +358,10 @@ public class PNJ : MonoBehaviour
         //StopCoroutine(show);
         quoteFinished = true;
         panel.transform.GetChild(1).GetComponent<Text>().text = LanguageManager.Instance.GetDialog(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote);
+        if(dialogIndex != 1)
+        {
+            panel.transform.GetChild(3).GetComponent<Image>().enabled = true;
+        }
         DialogSecondPhase();
     }
 
