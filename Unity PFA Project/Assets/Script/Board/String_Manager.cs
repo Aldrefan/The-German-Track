@@ -268,8 +268,9 @@ public class String_Manager : MonoBehaviour
             }
         }
         hypotheseAffichage.text = hypothesesPossibles.Count.ToString();
-        if(hypothesesPossibles.Count > 0)
-        {CanvasManager.CManager.GetCanvas("PilesContainer").GetComponent<PileOrganiser>().StartCoroutine("ShowPartTimer");}
+        hypotheseAffichage.transform.parent.GetComponent<Animator>().Play("HypotheseCounterFeedback");
+        /*if(hypothesesPossibles.Count > 0)
+        {hypotheseAffichage.transform.parent.GetComponent<Animator>().Play("HypotheseCounterFeedback");}*/   //// Joue l'anim de l'affichage du nbre d'hypothèses faisables s'il est supérieur à 0
 
         foreach(GameObject stickerOnBoard in stickers)
         {
@@ -281,9 +282,41 @@ public class String_Manager : MonoBehaviour
                 }
             }
         }
+        StartCoroutine(ShowPartTimer(stickers));
 
         /*foreach(int index in hypothesesPossibles)
         {Debug.Log(index);}*/
+    }
+
+    IEnumerator ShowPartTimer(List<GameObject> list)
+    {
+        yield return new WaitForSeconds(0.01f);
+        bool stickersInPiles = false;
+        foreach(Transform sticker in GetComponent<Piles>().pileProfiles)
+        {
+            if(sticker.GetChild(0).GetComponent<Image>().material == GetComponent<GlowSprite>().material)
+            {stickersInPiles = true;}
+        }
+        foreach(Transform sticker in GetComponent<Piles>().pileFaits)
+        {
+            if(sticker.GetChild(0).GetComponent<Image>().material == GetComponent<GlowSprite>().material)
+            {stickersInPiles = true;}
+        }
+        foreach(Transform sticker in GetComponent<Piles>().pileIndices)
+        {
+            if(sticker.GetChild(0).GetComponent<Image>().material == GetComponent<GlowSprite>().material)
+            {stickersInPiles = true;}
+        }
+        foreach(Transform sticker in GetComponent<Piles>().pileHypothèses)
+        {
+            if(sticker.GetChild(0).GetComponent<Image>().material == GetComponent<GlowSprite>().material)
+            {stickersInPiles = true;}
+        }
+        if(stickersInPiles)
+        {
+            CanvasManager.CManager.GetCanvas("PilesContainer").GetComponent<Animator>().SetBool("MouseOver", true);
+        }
+        else CanvasManager.CManager.GetCanvas("PilesContainer").GetComponent<Animator>().SetBool("MouseOver", false);
     }
 
     bool CheckHypothesePresence()
