@@ -11,6 +11,18 @@ public class PileOrganiser : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    void OnEnable()
+    {
+        CanvasManager.CManager.GetCanvas("PilesButtons").SetActive(false);
+        CanvasManager.CManager.GetCanvas("HidePilesButton").SetActive(false);
+    }
+
+    public IEnumerator ShowPartTimer()
+    {
+        yield return new WaitForSeconds(0.3f);
+        GetComponent<Animator>().SetBool("MouseOver", true);
+    }
+
     void OnMouseOver()
     {
         animator.SetBool("MouseOver", true);

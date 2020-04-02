@@ -269,7 +269,7 @@ public class String_Manager : MonoBehaviour
         }
         hypotheseAffichage.text = hypothesesPossibles.Count.ToString();
         if(hypothesesPossibles.Count > 0)
-        {CanvasManager.CManager.GetCanvas("PilesContainer").GetComponent<Animator>().SetBool("MouseOver", true);}
+        {CanvasManager.CManager.GetCanvas("PilesContainer").GetComponent<PileOrganiser>().StartCoroutine("ShowPartTimer");}
 
         foreach(GameObject stickerOnBoard in stickers)
         {

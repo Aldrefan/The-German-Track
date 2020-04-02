@@ -126,7 +126,7 @@ public class Pin_System : MonoBehaviour
                 this.transform.SetSiblingIndex(this.transform.parent.childCount - 1);
             }
             screenPoint = Input.mousePosition;
-            screenPoint.z = transform.parent.position.z + 9;
+            screenPoint.z = transform.parent.position.z + 8;
             Camera camera = Camera.main;
             transform.position = camera.ScreenToWorldPoint(screenPoint);
             //transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
