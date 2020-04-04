@@ -36,9 +36,12 @@ public class PlayerMemory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        boardCanvas = CanvasManager.CManager.GetCanvas(boardCanvasName).transform;
-        carnet = CanvasManager.CManager.GetCanvas(carnetCanvasName).transform;
-        newSticker = CanvasManager.CManager.GetCanvas(newStickerName);
+        if (CanvasManager.CManager != null)
+        {
+            boardCanvas = CanvasManager.CManager.GetCanvas(boardCanvasName).transform;
+            carnet = CanvasManager.CManager.GetCanvas(carnetCanvasName).transform;
+            newSticker = CanvasManager.CManager.GetCanvas(newStickerName);
+        }
         //JsonSave save = SaveGameManager.GetCurrentSave();
         //for(int i = 0; i < save.memoryStickers.Count; i++)
         //{

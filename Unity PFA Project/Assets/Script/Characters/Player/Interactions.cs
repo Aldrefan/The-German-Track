@@ -59,8 +59,12 @@ public class Interactions : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        dialAndBookCanvas = CanvasManager.CManager.GetCanvas(dialogCanvasName);
-        boardCanvas = CanvasManager.CManager.GetCanvas(boardCanvasName);
+        if (CanvasManager.CManager != null)
+        {
+
+            dialAndBookCanvas = CanvasManager.CManager.GetCanvas(dialogCanvasName);
+            boardCanvas = CanvasManager.CManager.GetCanvas(boardCanvasName);
+        }
         //animator = GetComponent<Animator>();
     }
 
@@ -126,7 +130,7 @@ public class Interactions : MonoBehaviour
         }
     }
 
-        void OnTriggerStay2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {
         if(state == State.Normal && state != State.InCinematic && state != State.InDialog)
         {

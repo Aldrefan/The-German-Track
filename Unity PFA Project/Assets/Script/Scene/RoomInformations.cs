@@ -15,7 +15,8 @@ public class RoomInformations : MonoBehaviour
 
     public AudioClip roomTheme;
 
-    Transform CameraSpot;
+    [HideInInspector]
+    public Transform CameraSpot;
     GameObject player;
     GameObject fadePanel;
 
@@ -38,13 +39,18 @@ public class RoomInformations : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fadePanel = GameObject.Find("Necessary_Floating_Canvas").transform.GetChild(0).gameObject;
-        fadePanel.GetComponent<Animator>().SetTrigger("StartFade");
+
+        if (GameObject.Find("Necessary_Floating_Canvas"))
+        {
+            fadePanel = GameObject.Find("Necessary_Floating_Canvas").transform.Find("FadePanel").gameObject;
+            fadePanel.GetComponent<Animator>().SetTrigger("StartFade");
+
+        }
 
         player = GameObject.FindObjectOfType<EventsCheck>().gameObject;
         CameraSpot = this.transform.Find("Structure").Find("CameraSpot");
 
-        PlaceCamera();
+        //PlaceCamera();
         GetDoorFinalDest();
     }
 
@@ -62,7 +68,7 @@ public class RoomInformations : MonoBehaviour
         if (!inRespawn)
         {
 
-        StartCoroutine(Respawn(ReturnDoorDest(DoorName).transform, nextRoom));
+        StartCoroutine(Respawn(ReturnDoorDest(DoorName).transform, nextRoom, ReturnAccessDoor(DoorName).transform));
         }
         //
     }
@@ -81,15 +87,19 @@ public class RoomInformations : MonoBehaviour
 
     public void PlaceCamera()
     {
-        if (staticCamera)
+        if (Camera.main.GetComponent<CameraFollow>().actualRoom == this.gameObject)
         {
-            Camera.main.transform.position = CameraSpot.position;
-            Camera.main.GetComponent<CameraFollow>().isFollowing = false;
-        }
-        else
-        {
-            Camera.main.GetComponent<CameraFollow>().isFollowing = true;
-            Camera.main.transform.position = new Vector3( player.transform.position.x, 0, player.transform.position.z - distBtwPlAndCam);
+            Camera.main.transform.position = new Vector3(CameraSpot.position.x, CameraSpot.position.y, -distBtwPlAndCam);
+
+            if (staticCamera)
+            {
+                Camera.main.GetComponent<CameraFollow>().isFollowing = false;
+            }
+            else
+            {
+                //Camera.main.transform.position = new Vector3(CameraSpot.position.x, player.transform.position.y + YOffset, player.transform.position.z - distBtwPlAndCam);
+                Camera.main.GetComponent<CameraFollow>().isFollowing = true;
+            }
         }
     }
 
@@ -119,7 +129,7 @@ public class RoomInformations : MonoBehaviour
     }
 
 
-    IEnumerator Respawn(Transform FinalDestTrans, RoomInformations FinalDestRoom)
+    IEnumerator Respawn(Transform FinalDestTrans, RoomInformations FinalDestRoom, Transform AccessDoor)
     {
         if (!inRespawn)
         {
@@ -134,7 +144,7 @@ public class RoomInformations : MonoBehaviour
                 GameObject.Find("AudioManager").GetComponent<AudioSource>().Play();
             }
             FinalDestRoom.gameObject.SetActive(true);
-            player.transform.position = CalculateDestPos(FinalDestTrans);
+            player.transform.position = CalculateDestPos(FinalDestTrans, AccessDoor);
             player.GetComponent<MovementsPlayer>().canRun = FinalDestRoom.canRun;
 
             //if (!internTeleport)
@@ -167,7 +177,6 @@ public class RoomInformations : MonoBehaviour
 
     float CalculateDistBtwCamToDoor(string doorName)
     {
-
         Vector3 doorPos = ReturnAccessDoor(doorName).transform.position;
         Vector3 camPos = new Vector3(Camera.main.transform.position.x, doorPos.y, doorPos.z);
         float dist = Vector3.Distance(doorPos, camPos);
@@ -189,7 +198,6 @@ public class RoomInformations : MonoBehaviour
             {
                 return door.FinalDest.transform.parent.parent.GetComponent<RoomInformations>();
             }
-            return null;
         }
         return null;
     }
@@ -202,7 +210,6 @@ public class RoomInformations : MonoBehaviour
             {
                 return door.FinalDest;
             }
-            return null;
         }
         return null;
     }
@@ -215,27 +222,31 @@ public class RoomInformations : MonoBehaviour
             {
                 return door.AccessDoor;
             }
-            return null;
+
         }
         return null;
     }
 
-    Vector3 CalculateDestPos(Transform finalDestTrans)
+    Vector3 CalculateDestPos(Transform finalDestTrans,Transform accessDoor)
     {
-        float YDistBtwDoorAndDoor = Vector3.Distance(finalDestTrans.position, new Vector3(finalDestTrans.position.x, this.transform.position.y, player.transform.position.z));
+        float YDistBtwDoorAndPl = Vector3.Distance(accessDoor.position, new Vector3(accessDoor.position.x, this.transform.position.y, accessDoor.position.z));
 
         float distBtwDoorAndPl = default;
-        if (this.transform.position.y < finalDestTrans.position.y)
-        {
-            distBtwDoorAndPl = Vector3.Distance(finalDestTrans.position, new Vector3(finalDestTrans.position.x, player.transform.position.y + YDistBtwDoorAndDoor, player.transform.position.z));
+        distBtwDoorAndPl = Vector3.Distance(finalDestTrans.position, new Vector3(finalDestTrans.position.x, finalDestTrans.position.y - YDistBtwDoorAndPl, player.transform.position.z));
 
-        }
-        else
-        {
-            distBtwDoorAndPl = Vector3.Distance(finalDestTrans.position, new Vector3(finalDestTrans.position.x, player.transform.position.y - YDistBtwDoorAndDoor, player.transform.position.z));
 
-        }
-        Vector3 finalPos = new Vector3(finalDestTrans.position.x, finalDestTrans.position.y - distBtwDoorAndPl, finalDestTrans.position.z);
+        //if (this.transform.position.y < finalDestTrans.position.y)
+        //{
+        //    distBtwDoorAndPl = Vector3.Distance(finalDestTrans.position, new Vector3(finalDestTrans.position.x, player.transform.position.y + YDistBtwDoorAndDoor, player.transform.position.z));
+
+        //}
+        //else
+        //{
+        //    distBtwDoorAndPl = Vector3.Distance(finalDestTrans.position, new Vector3(finalDestTrans.position.x, player.transform.position.y - YDistBtwDoorAndDoor, player.transform.position.z));
+
+        //}
+        Vector3 finalPos = new Vector3(finalDestTrans.position.x, finalDestTrans.position.y - YDistBtwDoorAndPl, player.transform.position.z);
+        //new Vector3(finalDestTrans.position.x, finalDestTrans.position.y - distBtwDoorAndPl, finalDestTrans.position.z);
 
         return finalPos;
     }
