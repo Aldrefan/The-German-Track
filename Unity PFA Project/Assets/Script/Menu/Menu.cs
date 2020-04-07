@@ -192,11 +192,6 @@ public class Menu : MonoBehaviour
         fxSlider.value = fxValue;
         
         
-        //settings initialisation
-        saver.GetComponent<SaveFile>().LoadSettings();
-
-
-
         //check if save exist
         if(loadButton != null)
         {
