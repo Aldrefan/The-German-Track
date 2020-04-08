@@ -7,8 +7,6 @@ using UnityEditor;
 public class PNJ : MonoBehaviour
 {
     public string PNJName;
-    public Sprite characterSprite;
-    public Sprite kennethSprite;
     GameObject DialogCanvas;
     public int dialogLine = 0;
     GameObject leftPanel;
@@ -22,13 +20,14 @@ public class PNJ : MonoBehaviour
     public bool haveEvent;
 
     public List<int> stickerAlreadyGivenList;
-
+    
     public StickerRedirection stickerRedirection;
+
     [System.Serializable]
     public class StickerRedirection
     {
-        public List<int> stickerGivenList;
-        public List<int> redirectionList;
+        public List<int> stickerGivenList = new List<int>();
+        public List<int> redirectionList = new List<int>();
     }
 
     public EventRedirection eventRedirection;
@@ -43,6 +42,10 @@ public class PNJ : MonoBehaviour
     public class Quote
     {
         public List<DialogCapacity> listOfDialogs;
+        public Quote()
+        {
+            listOfDialogs = new List<DialogCapacity>();
+        }
     }
 
     [System.Serializable]
@@ -59,11 +62,9 @@ public class PNJ : MonoBehaviour
     public class ArrayOfQuotes
     {
         public string quote;
-        public string characterName;
         public bool isInLeftSide;
         public List<int> newStickerIndexList;
         public List<string> eventTrigger;
-        public Sprite spriteCharacter;
     }
     
     string currentLine = "";
@@ -174,12 +175,8 @@ public class PNJ : MonoBehaviour
             {
                 leftPanel.SetActive(true);
                 rightPanel.SetActive(false);
-                if(tag != "Item")
-                {
-                    string [] words = LanguageManager.Instance.GetNameOfTheSpeaker(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote).Split("_"[0]);
-                    leftPanel.transform.GetChild(2).GetComponent<Text>().text = words[0];
-                }
-                else leftPanel.transform.GetChild(2).GetComponent<Text>().text = ActiveCharacterScript.ActiveCharacter.actualCharacter.name;
+                string [] words = LanguageManager.Instance.GetNameOfTheSpeaker(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote).Split("_"[0]);
+                leftPanel.transform.GetChild(2).GetComponent<Text>().text = words[0];
                 StartCoroutine(ShowText(leftPanel));
                 //show = ShowText(leftPanel);  // Works
                 //StartCoroutine(show);  // Works
@@ -199,12 +196,8 @@ public class PNJ : MonoBehaviour
             {
                 rightPanel.SetActive(true);
                 leftPanel.SetActive(false);
-                if(tag != "Item")
-                {
-                    string [] words = LanguageManager.Instance.GetNameOfTheSpeaker(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote).Split("_"[0]);
-                    rightPanel.transform.GetChild(2).GetComponent<Text>().text = words[0];
-                }
-                else leftPanel.transform.GetChild(2).GetComponent<Text>().text = ActiveCharacterScript.ActiveCharacter.actualCharacter.name;
+                string [] words = LanguageManager.Instance.GetNameOfTheSpeaker(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote).Split("_"[0]);
+                rightPanel.transform.GetChild(2).GetComponent<Text>().text = words[0];
                 StartCoroutine(ShowText(rightPanel));
                 //show = ShowText(rightPanel);  // Works
                 //StartCoroutine(show);  // Works
