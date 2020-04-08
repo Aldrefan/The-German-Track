@@ -22,25 +22,11 @@ public class CameraFollow : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        if (actualRoom.name == "KennethBureau")
-        {
+        InitRoomLimit();
+        InitCam();
 
-            if (actualRoom.GetComponent<SceneInformations>())
-            {
-                transform.position = new Vector3(player.transform.position.x + 5, player.transform.position.y + YOffset, -actualRoom.GetComponent<SceneInformations>().distanceBetweenPlayerAndCamera);
-            }
-            else if (actualRoom.GetComponent<RoomInformations>())
-            {
-                transform.position = new Vector3(player.transform.position.x, player.transform.position.y + YOffset, actualRoom.GetComponent<RoomInformations>().distBtwPlAndCam);
-            }
-            else
-            {
-                transform.position = new Vector3(player.transform.position.x + 5, player.transform.position.y + YOffset, -8.5f);
-            }
-        }
         barrier = "none";
         //StartCoroutine("StartTimer");
-        InitRoomLimit();
 
     }
 
@@ -116,5 +102,50 @@ public class CameraFollow : MonoBehaviour
             Vector3 tempSmoothed = Vector3.Lerp(transform.position, temp, smoothSpeed);
             transform.position = tempSmoothed;
         }
+    }
+
+    void InitCam()
+    {
+        if (actualRoom.name == "KennethBureau")
+        {
+
+            if (actualRoom.GetComponent<SceneInformations>())
+            {
+                YOffset = actualRoom.GetComponent<SceneInformations>().YOffset;
+                transform.position = new Vector3(player.transform.position.x + 5, player.transform.position.y + YOffset, -actualRoom.GetComponent<SceneInformations>().distanceBetweenPlayerAndCamera);
+            }
+            else if (actualRoom.GetComponent<RoomInformations>())
+            {
+                YOffset = actualRoom.GetComponent<RoomInformations>().YOffset;
+                transform.position = new Vector3(player.transform.position.x, player.transform.position.y + YOffset, -actualRoom.GetComponent<RoomInformations>().distBtwPlAndCam);
+            }
+            else
+            {
+                transform.position = new Vector3(player.transform.position.x + 5, player.transform.position.y + YOffset, -8.5f);
+            }
+        }
+        else
+        {
+            if (actualRoom.GetComponent<SceneInformations>())
+            {
+                //this.transform.position = actualRoom.GetComponent<SceneInformations>().CameraSpot.position;
+                YOffset = actualRoom.GetComponent<SceneInformations>().YOffset;
+                actualRoom.GetComponent<SceneInformations>().PlaceCamera();
+                //transform.position = new Vector3(player.transform.position.x, player.transform.position.y + YOffset, -actualRoom.GetComponent<SceneInformations>().distanceBetweenPlayerAndCamera);
+            }
+            else if (actualRoom.GetComponent<RoomInformations>())
+            {
+                //this.transform.position = actualRoom.GetComponent<RoomInformations>().CameraSpot.position;
+                YOffset = actualRoom.GetComponent<RoomInformations>().YOffset;
+                actualRoom.GetComponent<RoomInformations>().PlaceCamera();
+
+                //transform.position = new Vector3(player.transform.position.x, player.transform.position.y + YOffset, -actualRoom.GetComponent<RoomInformations>().distBtwPlAndCam);
+            }
+            else
+            {
+                transform.position = new Vector3(player.transform.position.x, player.transform.position.y + YOffset, -8.5f);
+            }
+        }
+
     }
 }

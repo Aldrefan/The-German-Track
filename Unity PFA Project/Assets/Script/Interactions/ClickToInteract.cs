@@ -18,7 +18,15 @@ public class ClickToInteract : MonoBehaviour
             }
             else if(transform.parent.tag == "Shortcut" || transform.parent.parent.tag == "Shortcut")
             {
-                transform.parent.parent.GetComponent<Shortcut>().Teleport();
+                if (transform.parent.parent.GetComponent<Shortcut>())
+                {
+                    transform.parent.parent.GetComponent<Shortcut>().Teleport();
+                }
+                if (transform.parent.parent.GetComponent<RoomInformations>())
+                {
+                    transform.parent.parent.GetComponent<RoomInformations>().Teleport(GameObject.FindObjectOfType<Interactions>().PNJContact.name);
+
+                }
             }
         }
     }

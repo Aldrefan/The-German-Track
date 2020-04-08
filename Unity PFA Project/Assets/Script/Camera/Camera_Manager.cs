@@ -16,7 +16,10 @@ public class Camera_Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        boardCanvas = CanvasManager.CManager.GetCanvas("Board_FIX");
+        if (CanvasManager.CManager != null)
+        {
+            boardCanvas = CanvasManager.CManager.GetCanvas("Board_FIX");
+        }
         cameraBoard = GetComponent<Camera_BoardMovements>();
         cameraFollow = GetComponent<CameraFollow>();
         player = GameObject.FindGameObjectWithTag("Player");
