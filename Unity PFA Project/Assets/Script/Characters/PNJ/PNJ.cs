@@ -342,10 +342,11 @@ public class PNJ : MonoBehaviour
             }
         }
         quoteFinished = true;
-        if(dialogIndex != 1)
+        panel.transform.GetChild(3).GetComponent<Image>().enabled = true;
+        /*if(dialogIndex != 1)
         {
             panel.transform.GetChild(3).GetComponent<Image>().enabled = true;
-        }
+        }*/
         DialogSecondPhase();
     }
 

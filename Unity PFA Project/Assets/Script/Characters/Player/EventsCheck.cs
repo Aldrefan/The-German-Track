@@ -34,7 +34,7 @@ public class EventsCheck : MonoBehaviour
         {
             GetComponent<Interactions>().PNJContact.GetComponent<Clara_Cinematic>().ExecuteCommand();
         }*/
-        if(GetComponent<Interactions>().PNJContact && GetComponent<Interactions>().PNJContact.tag == "Interaction" && Input.GetButtonDown("Interaction") && GetComponent<Interactions>().state != Interactions.State.InCinematic && GetComponent<Interactions>().state != Interactions.State.OnCarnet)
+        if(GetComponent<Interactions>().PNJContact && GetComponent<Interactions>().PNJContact.tag == "Interaction" && Input.GetButtonDown("Interaction") && GetComponent<Interactions>().state != Interactions.State.InCinematic && GetComponent<Interactions>().state == Interactions.State.InDialog)
         {
             Debug.Log("Check Interaction");
             CheckInteraction();
@@ -336,6 +336,12 @@ public class EventsCheck : MonoBehaviour
 
             case "OuvrirPorteKurt":
                 break;
+
+            case "Fade":
+            GetComponent<Interactions>().enabled = false;
+            GameObject.FindObjectOfType<DialogInterface>().GetComponent<Collider2D>().enabled = false;
+            GetComponent<Clara_Cinematic>().ExecuteCommand();
+            break;
 
             default:
                 break;

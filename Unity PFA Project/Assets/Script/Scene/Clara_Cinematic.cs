@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Clara_Cinematic : MonoBehaviour
 {
     bool movements;
-    enum Command {Movement, StartDialog, Wait, ActiveDialogComponent, ChangeParent, PlaySound, DeactivateSelf, DeactivateOther, ActivateObject, FadePanel, SetDay, EndGame};
+    enum Command {Movement, StartDialog, Wait, ActiveDialogComponent, ChangeParent, PlaySound, DeactivateSelf, DeactivateOther, ActivateObject, FadePanel, SetDay, EndGame, LoadScene, SetAnimBool, ShowImage, PlayAnimation};
 
     [SerializeField]
     List<Command> commandList;
@@ -24,6 +26,16 @@ public class Clara_Cinematic : MonoBehaviour
         public Transform newPosition;
         public AudioClip clip;
         public AudioSource Origin;
+        public int newSceneName;
+        public BoolNameAndState boolNameAndState;
+        public Sprite image;
+    }
+
+    [System.Serializable]
+    public class BoolNameAndState
+    {
+        public string name;
+        public bool state;
     }
 
     public bool triggerByContact;
@@ -74,11 +86,12 @@ public class Clara_Cinematic : MonoBehaviour
     IEnumerator MovementTimer(float time)
     {
         movements = true;
+        float mass = 0;
         //GetComponent<BoxCollider2D>().enabled = false;
         //Debug.Log(GetComponent<BoxCollider2D>().enabled);
-        annexInformation[action].objectToMove.GetComponent<BoxCollider2D>().enabled = false;
         if(annexInformation[action].objectToMove.tag != "Player")
         {
+            annexInformation[action].objectToMove.GetComponent<BoxCollider2D>().enabled = false;
             if(annexInformation[action].direction < 0)
             {
                 annexInformation[action].objectToMove.GetComponent<SpriteRenderer>().flipX = true;
@@ -87,6 +100,8 @@ public class Clara_Cinematic : MonoBehaviour
         }
         else
         {
+            mass = annexInformation[action].objectToMove.GetComponent<Rigidbody2D>().mass;
+            annexInformation[action].objectToMove.GetComponent<Rigidbody2D>().mass = 0;
             annexInformation[action].objectToMove.GetComponent<MovementsPlayer>().CheckSensAndFlip(annexInformation[action].direction);
         }
         annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Talk", false);
@@ -96,6 +111,8 @@ public class Clara_Cinematic : MonoBehaviour
         //Debug.Log(GetComponent<BoxCollider2D>().enabled);
         annexInformation[action].objectToMove.GetComponent<BoxCollider2D>().enabled = true;
         annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Walk", false);
+        if(annexInformation[action].objectToMove.tag == "Player")
+        {annexInformation[action].objectToMove.GetComponent<Rigidbody2D>().mass = mass;}
         movements = false;
         CheckIndex();
     }
@@ -208,7 +225,55 @@ public class Clara_Cinematic : MonoBehaviour
             case Command.EndGame :
             EndGame();
             break;
+
+            case Command.LoadScene :
+            LoadScene();
+            break;
+
+            case Command.SetAnimBool :
+            SetAnimBool();
+            break;
+
+            case Command.ShowImage :
+            ShowImage();
+            break;
+
+            case Command.PlayAnimation :
+            PlayAnimation();
+            break;
         }
+    }
+
+    void PlayAnimation()
+    {
+        annexInformation[action].objectToMove.GetComponent<Animator>().Play(annexInformation[action].boolNameAndState.name);
+        CheckIndex();
+    }
+
+    void ShowImage()
+    {
+        GameObject canvas = Resources.Load("GameObject/CanvasShowImage") as GameObject;
+        canvas = Instantiate(canvas);
+        canvas.GetComponent<Canvas>().worldCamera = Camera.main;
+        canvas.transform.GetChild(0).GetComponent<Image>().sprite = annexInformation[action].image;
+        canvas.transform.GetChild(0).GetComponent<Animator>().Play("FadeImage");
+        CheckIndex();
+    }
+
+    void SetAnimBool()
+    {
+        if(annexInformation[action].objectToMove.name == "Kenneth" && annexInformation[action].boolNameAndState.state)
+        {annexInformation[action].objectToMove.GetComponent<MovementsPlayer>().enabled = false;}
+        else if(annexInformation[action].objectToMove.name == "Kenneth" && !annexInformation[action].boolNameAndState.state)
+        {annexInformation[action].objectToMove.GetComponent<MovementsPlayer>().enabled = true;}
+        annexInformation[action].objectToMove.GetComponent<Animator>().SetBool(annexInformation[action].boolNameAndState.name, annexInformation[action].boolNameAndState.state);
+        CheckIndex();
+    }
+
+    void LoadScene()
+    {
+        StopAllCoroutines();
+        SceneManager.LoadScene(annexInformation[action].newSceneName);
     }
 
     void EndGame()

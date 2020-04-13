@@ -156,7 +156,7 @@ public class LanguageManager : MonoBehaviour
         if (datas != null)
         {
             string[] actualKeyPart = key.Split("_"[0]);
-            //Debug.Log("key : " + key);
+            //Debug.Log("key : " + actualKeyPart[0]);
             //Debug.Log(datas.mytexts.Length);
             for (int i = 0; i < datas.mytexts.Length; i++)
             {
@@ -186,15 +186,18 @@ public class LanguageManager : MonoBehaviour
     {
         if (datas != null)
         {
+            int index = 0;
             string[] referenceKey = datas.mytexts[startIndex].Key.Split("_"[0]);
             for (int i = startIndex; i < datas.mytexts.Length; i++)
             {
                 string[] actualKey = datas.mytexts[i].Key.Split("_"[0]);
+                index = i;
                 if (actualKey[0] + "_" + actualKey[1] != referenceKey[0] + "_" + referenceKey[1])
                 {
                     return i - startIndex;
                 }
             }
+            return (index + 1) - startIndex;
         }
         return 0;
     }

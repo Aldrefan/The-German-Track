@@ -24,6 +24,8 @@ public class DialogMaker : MonoBehaviour
         public string dialogName;
         public int stickerIndexToGive;
         public List<CharactersInDialog> charactersInDialogs_frNames = new List<CharactersInDialog>();
+        public bool endDialog;
+        public bool canAskQuestions;
     }
 
     [System.Serializable]
@@ -99,7 +101,9 @@ public class DialogMaker : MonoBehaviour
         {
             //List<string> characterList = new List<string>();
             int chiasse = LanguageManager.Instance.GetDialogPosition(characterNameReference + "_" + dialogList[n].dialogName);
+            //Debug.Log(characterNameReference + "_" + dialogList[n].dialogName);
             int length = LanguageManager.Instance.DialogQuoteLength(chiasse);
+            Debug.Log(length);
             //characterList = LanguageManager.Instance.GetListOfCharacters(chiasse, length);
             List<PNJ.ArrayOfQuotes> dialog = new List<PNJ.ArrayOfQuotes>();
             for(int i = 0; i < length; i++)
@@ -115,9 +119,11 @@ public class DialogMaker : MonoBehaviour
                     for(int x = 0; x < NbrOfEventsToAdd(dialog[i].quote); x++)
                     {dialog[i].eventTrigger.Add(eventPositionsInDialog.Find(w=> (w.position == LanguageManager.Instance.GetDialogKeyfromIndex(chiasse + i))).eventsNames[x]);}
                 }
+                //Debug.Log("Quote n°" + i + " Character name : " + LanguageManager.Instance.GetNameOfTheSpeaker(dialog[i].quote) + " " + dialog[i].isInLeftSide);
+                //Debug.Log(n);
                 dialog[i].isInLeftSide = dialogList[n].charactersInDialogs_frNames.Find(w => (w.characterName == LanguageManager.Instance.GetNameOfTheSpeaker(dialog[i].quote))).left;
             }
-            cap.Add(new PNJ.DialogCapacity{dialog = dialog, canAskQuestions = false, hasChoices = false, endDialog = false, buttonsList = new List<TheGermanTrack.Button>()});
+            cap.Add(new PNJ.DialogCapacity{dialog = dialog, canAskQuestions = dialogList[n].canAskQuestions, hasChoices = false, endDialog = dialogList[n].endDialog, buttonsList = new List<TheGermanTrack.Button>()});
             //Debug.Log(cap.Count);
             quotelist.listOfDialogs.Add(cap[n]);
             //Debug.Log(cap[0].dialog.Count);

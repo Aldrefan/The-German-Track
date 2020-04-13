@@ -614,4 +614,11 @@ public class Interactions : MonoBehaviour
             ChangeState(State.Normal);
         }
     }
+
+    IEnumerator ChangeStateTimer(State newState)
+    {
+        state = State.Inactive;
+        yield return new WaitForSeconds(0.1f);
+        state = newState;
+    }
 }
