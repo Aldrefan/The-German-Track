@@ -51,9 +51,7 @@ public class PlayerMemory : MonoBehaviour
 
     public void AddToMemory(int stickerIndex)
     {
-        newSticker.GetComponent<NewStickerDisplay>().sticker = stickersScriptableList[stickerIndex];
-        newSticker.GetComponent<NewStickerDisplay>().Corou();
-        newSticker.GetComponent<Animator>().SetTrigger("NewSticker");
+        newSticker.GetComponent<NewStickerDisplay>().stickersToNotif.Add(stickersScriptableList[stickerIndex]);
         stickerIndexBoardList.Add(stickerIndex);
         stickerIndexCarnetList.Add(stickerIndex);
         allStickers.Add(stickerIndex);

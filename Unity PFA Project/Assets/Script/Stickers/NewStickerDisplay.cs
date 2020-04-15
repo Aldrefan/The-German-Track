@@ -5,16 +5,62 @@ using UnityEngine.UI;
 
 public class NewStickerDisplay : MonoBehaviour
 {
+    public List<Sticker> stickersToNotif = new List<Sticker>();
     public Sticker sticker;
     public Text text;
     public Text tooltipText;
     public Image backgroundSticker;
     public Color backgroundColor;
 
+    public bool display_Finished;
+
+    Vector3 startPosition;
+    Vector3 endPosition;
+    float timeToLerp;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        startPosition = this.transform.localPosition;
+        endPosition = this.transform.parent.Find("CarnetUI").localPosition;
+        endPosition = new Vector3(0, endPosition.y, endPosition.z);
+    }
 
+    private void Update()
+    {
+        if (stickersToNotif.Count != 0)
+        {
+            Debug.Log("1");
+            if(sticker != stickersToNotif[0])
+            {
+                Debug.Log("2");
+
+                sticker = stickersToNotif[0];
+                Corou();
+            }
+        }
+
+        if (display_Finished)
+        {
+            if (Vector3.Distance(this.transform.localPosition, endPosition) > 0.5f)
+            {
+                timeToLerp += Time.deltaTime/2;
+                timeToLerp = Mathf.Clamp01(timeToLerp);
+                this.transform.localPosition = Vector3.Lerp(startPosition, endPosition, timeToLerp);
+
+            }
+            else
+            {
+                Debug.Log("4");
+
+                this.GetComponent<Animator>().SetTrigger("AnimOff");
+                stickersToNotif.Remove(sticker);
+                display_Finished = false;
+                timeToLerp = 0;
+
+            }
+        }
     }
 
     public void SetInformations()
@@ -22,6 +68,8 @@ public class NewStickerDisplay : MonoBehaviour
 
         if (sticker != null)
         {
+            this.transform.localPosition = startPosition;
+
             if (text != null)
             {
                 text.text = LanguageManager.Instance.GetDialog(sticker.Text);
@@ -39,6 +87,8 @@ public class NewStickerDisplay : MonoBehaviour
                 text.rectTransform.sizeDelta = new Vector2(75, 28);
 
             }
+            this.GetComponent<Animator>().SetTrigger("NewSticker");
+
         }
 
 
