@@ -53,7 +53,6 @@ public class Shortcut : MonoBehaviour
 
     public void Teleport()
     {
-
         if (!GameObject.FindObjectOfType<MovementsPlayer>().inRespawn)
         {//GameObject.FindObjectOfType<Saver>().lieuFM = linkedWith.transform.parent.parent.GetComponent<SceneInformations>().zoneIndex;
             if(teleportSound != null)
@@ -97,6 +96,7 @@ public class Shortcut : MonoBehaviour
             Camera.main.GetComponent<CameraFollow>().isFollowing = false;
             Camera.main.GetComponent<BoxCollider2D>().enabled = false;
 
+            Debug.Log(fadePanel.name);
             if (!fadePanel.GetComponent<Animator>().GetBool("FadeIn"))
             {
                 fadePanel.GetComponent<Animator>().SetBool("FadeIn", true);

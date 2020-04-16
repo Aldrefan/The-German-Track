@@ -7,9 +7,6 @@ using System.Linq;
 public class DialogMaker : MonoBehaviour
 {
     [SerializeField]
-    private string destinationFolder;
-
-    [SerializeField]
     string characterNameReference;
 
     [SerializeField]

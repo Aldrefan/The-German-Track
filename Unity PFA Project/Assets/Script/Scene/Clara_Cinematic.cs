@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Clara_Cinematic : MonoBehaviour
 {
     bool movements;
-    enum Command {Movement, StartDialog, Wait, ActiveDialogComponent, ChangeParent, PlaySound, DeactivateSelf, DeactivateOther, ActivateObject, FadePanel, SetDay, EndGame, LoadScene, SetAnimBool, ShowImage, PlayAnimation};
+    enum Command {Movement, StartDialog, Wait, ActiveDialogComponent, ChangeParent, PlaySound, DeactivateSelf, DeactivateOther, ActivateObject, FadePanel, SetDay, EndGame, LoadScene, SetAnimBool, ShowImage, PlayAnimation, UseShortcut};
 
     [SerializeField]
     List<Command> commandList;
@@ -119,7 +119,7 @@ public class Clara_Cinematic : MonoBehaviour
 
     IEnumerator WaitTimer(float time)
     {
-        yield return new WaitForSecondsRealtime(time);
+        yield return new WaitForSeconds(time);
         CheckIndex();
     }
 
@@ -241,7 +241,17 @@ public class Clara_Cinematic : MonoBehaviour
             case Command.PlayAnimation :
             PlayAnimation();
             break;
+
+            case Command.UseShortcut :
+            UseShortcut();
+            break;
         }
+    }
+
+    void UseShortcut()
+    {
+        annexInformation[action].objectToMove.GetComponent<RoomInformations>().Teleport(annexInformation[action].boolNameAndState.name);
+        CheckIndex();
     }
 
     void PlayAnimation()
