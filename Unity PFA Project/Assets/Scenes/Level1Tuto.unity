@@ -1090,7 +1090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandList: 02000000010000000d000000000000000d000000020000000800000010000000020000000d000000000000000d00000002000000110000000400000002000000
+  commandList: 02000000010000000d000000000000000d000000020000000800000010000000020000000d000000000000000d0000000200000011000000040000000200000000000000
   annexInformation:
   - objectToMove: {fileID: 0}
     direction: 0
@@ -1284,6 +1284,18 @@ MonoBehaviour:
       name: Walk
       state: 0
     image: {fileID: 0}
+  - objectToMove: {fileID: 809024011}
+    direction: 0.07
+    time: 1
+    newParent: {fileID: 1647229378}
+    newPosition: {fileID: 1248334585}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+    image: {fileID: 0}
   action: 0
   fromStart: 0
   triggerByContact: 1
@@ -1464,6 +1476,7 @@ GameObject:
   - component: {fileID: 809024012}
   - component: {fileID: 809024013}
   - component: {fileID: 809024015}
+  - component: {fileID: 809024014}
   m_Layer: 0
   m_Name: White
   m_TagString: PNJinteractable
@@ -1533,6 +1546,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &809024014
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809024011}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &809024015
 BoxCollider2D:
   m_ObjectHideFlags: 0
