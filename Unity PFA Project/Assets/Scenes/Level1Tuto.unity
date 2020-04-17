@@ -265,6 +265,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1589111846}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &226014932 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8365423122775060024, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
+    type: 3}
+  m_PrefabInstance: {fileID: 1589111846}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &294384536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,6 +1056,7 @@ GameObject:
   - component: {fileID: 796046052}
   - component: {fileID: 796046053}
   - component: {fileID: 796046054}
+  - component: {fileID: 796046055}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1065,7 +1072,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796046051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.11, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1937314235}
@@ -1083,7 +1090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandList: 02000000010000000d000000000000000d000000020000000800000010000000
+  commandList: 02000000010000000d000000000000000d000000020000000800000010000000020000000d000000000000000d00000002000000110000000400000002000000
   annexInformation:
   - objectToMove: {fileID: 0}
     direction: 0
@@ -1181,9 +1188,105 @@ MonoBehaviour:
       name: Door_00_01
       state: 0
     image: {fileID: 0}
+  - objectToMove: {fileID: 1937314234}
+    direction: 0.1
+    time: 1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Door_00_01
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.07
+    time: 1.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.07
+    time: 1.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.07
+    time: 1.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.07
+    time: 0.3
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 809024011}
+    direction: 0.07
+    time: 0.3
+    newParent: {fileID: 1647229378}
+    newPosition: {fileID: 1248334585}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 809024011}
+    direction: 0.07
+    time: 0.3
+    newParent: {fileID: 1647229378}
+    newPosition: {fileID: 1248334585}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 809024011}
+    direction: 0.07
+    time: 0.3
+    newParent: {fileID: 1647229378}
+    newPosition: {fileID: 1248334585}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+    image: {fileID: 0}
   action: 0
-  fromStart: 1
-  triggerByContact: 0
+  fromStart: 0
+  triggerByContact: 1
   hasToLoop: 0
 --- !u!114 &796046054
 MonoBehaviour:
@@ -1312,6 +1415,32 @@ MonoBehaviour:
       buttonsList: []
   quoteFinished: 0
   stickersAlreadyGiven: 
+--- !u!61 &796046055
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796046051}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &807145101 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8891736063403011963, guid: 33ddad3a370b0824b848ab3b505bf613,
@@ -2350,6 +2479,36 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 302816800}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1248334584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1248334585}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1248334585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248334584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.66, y: -0.03, z: -0.296875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1267348955
 GameObject:
   m_ObjectHideFlags: 0
@@ -3260,6 +3419,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 6}
   m_EdgeRadius: 0
+--- !u!1 &1647229377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1647229378}
+  m_Layer: 0
+  m_Name: Characters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1647229378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647229377}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 226014932}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1650974339 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8365423123806211617, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,

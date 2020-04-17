@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Clara_Cinematic : MonoBehaviour
 {
     bool movements;
-    enum Command {Movement, StartDialog, Wait, ActiveDialogComponent, ChangeParent, PlaySound, DeactivateSelf, DeactivateOther, ActivateObject, FadePanel, SetDay, EndGame, LoadScene, SetAnimBool, ShowImage, PlayAnimation, UseShortcut};
+    enum Command {Movement, StartDialog, Wait, ActiveDialogComponent, ChangeParent, PlaySound, DeactivateSelf, DeactivateOther, ActivateObject, FadePanel, SetDay, EndGame, LoadScene, SetAnimBool, ShowImage, PlayAnimation, UseShortcut, Flip};
 
     [SerializeField]
     List<Command> commandList;
@@ -245,7 +245,17 @@ public class Clara_Cinematic : MonoBehaviour
             case Command.UseShortcut :
             UseShortcut();
             break;
+
+            case Command.Flip :
+            Flip();
+            break;
         }
+    }
+
+    void Flip()
+    {
+        annexInformation[action].objectToMove.GetComponent<SpriteRenderer>().flipX = !annexInformation[action].objectToMove.GetComponent<SpriteRenderer>().flipX;
+        CheckIndex();
     }
 
     void UseShortcut()
