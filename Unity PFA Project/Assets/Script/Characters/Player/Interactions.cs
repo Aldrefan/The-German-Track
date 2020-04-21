@@ -239,7 +239,7 @@ public class Interactions : MonoBehaviour
         GetComponent<PlayerMemory>().CheckStickersCarnet();
         ChangeState(State.OnCarnet);
     }
-    void QuitDialog()
+    public void QuitDialog()
     {
         if(Input.GetButtonDown("Cancel"))
         {
