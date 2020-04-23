@@ -20,6 +20,12 @@ public class DialogInterface : MonoBehaviour
     void OnEnable()
     {
         player = GameObject.Find("Kenneth");
+        transform.GetChild(6).gameObject.SetActive(false);
+    }
+
+    void OnDisable()
+    {
+        StopAllCoroutines();
     }
 
     // Update is called once per frame
@@ -42,5 +48,16 @@ public class DialogInterface : MonoBehaviour
                 player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().FullQuote(gameObject);
             }
         }
+    }
+
+    public void StartTimer()
+    {
+        StartCoroutine(TimerBeforeHelpShowing());
+    }
+
+    IEnumerator TimerBeforeHelpShowing()
+    {
+        yield return new WaitForSeconds(2);
+        transform.GetChild(6).gameObject.SetActive(true);
     }
 }

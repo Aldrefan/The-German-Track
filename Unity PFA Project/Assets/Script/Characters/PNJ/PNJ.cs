@@ -343,6 +343,7 @@ public class PNJ : MonoBehaviour
         }
         quoteFinished = true;
         panel.transform.GetChild(3).GetComponent<Image>().enabled = true;
+        panel.GetComponent<DialogInterface>().StartTimer();
         /*if(dialogIndex != 1)
         {
             panel.transform.GetChild(3).GetComponent<Image>().enabled = true;
@@ -359,6 +360,7 @@ public class PNJ : MonoBehaviour
         if(dialogIndex != 1)
         {
             panel.transform.GetChild(3).GetComponent<Image>().enabled = true;
+            panel.GetComponent<DialogInterface>().StartTimer();
         }
         DialogSecondPhase();
     }

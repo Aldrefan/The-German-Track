@@ -184,7 +184,7 @@ public class Interactions : MonoBehaviour
             ChangeLineOfDialog();
             break;
 
-            case State.Pause :
+            case State.Pause:
             QuitPauseMenu();
             break;
         }

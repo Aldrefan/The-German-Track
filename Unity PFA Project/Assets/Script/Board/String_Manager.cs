@@ -106,6 +106,11 @@ public class String_Manager : MonoBehaviour
         StartCoroutine(EnableTimer());
     }
 
+    void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
     IEnumerator EnableTimer()
     {
         yield return new WaitForSeconds(0.001f);
