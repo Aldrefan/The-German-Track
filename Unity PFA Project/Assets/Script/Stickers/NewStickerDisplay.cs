@@ -18,6 +18,8 @@ public class NewStickerDisplay : MonoBehaviour
     Vector3 endPosition;
     float timeToLerp;
 
+    Vector2 defaultSize;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,7 @@ public class NewStickerDisplay : MonoBehaviour
         startPosition = this.transform.localPosition;
         endPosition = this.transform.parent.Find("CarnetUI").localPosition;
         endPosition = new Vector3(0, endPosition.y, endPosition.z);
+        defaultSize = text.rectTransform.sizeDelta;
     }
 
     private void Update()
@@ -85,6 +88,12 @@ public class NewStickerDisplay : MonoBehaviour
             {
                 text.transform.localPosition = new Vector2(0, -28);
                 text.rectTransform.sizeDelta = new Vector2(75, 28);
+
+            }
+            else
+            {
+                text.transform.localPosition = Vector2.zero;
+                text.rectTransform.sizeDelta = defaultSize;
 
             }
             this.GetComponent<Animator>().SetTrigger("NewSticker");
