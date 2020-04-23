@@ -282,6 +282,7 @@ public class Interactions : MonoBehaviour
             if (PNJContact.GetComponent<Shortcut>() != null)
             {
                 PNJContact.GetComponent<Shortcut>().Teleport();
+                PNJContact.transform.GetChild(0).gameObject.SetActive(false);
             }
             else if(PNJContact.transform.parent.parent.GetComponent<RoomInformations>()!=null)
             {
