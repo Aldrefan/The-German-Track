@@ -248,7 +248,7 @@ public class Interactions : MonoBehaviour
                 PNJContact.GetComponent<PNJ>().EndDialog();
                 //Debug.Log("QuitDialog");
                 carnetUI.GetComponent<Animator>().SetBool("ClickOn", false);
-                dialAndBookCanvas.transform.GetChild(3).gameObject.SetActive(false);
+                dialAndBookCanvas.transform.GetChild(4).gameObject.SetActive(false);
                 //animator.SetBool("Talk", false);
                 ChangeState(State.Normal);
             }
@@ -564,7 +564,7 @@ public class Interactions : MonoBehaviour
     {
         if(state != State.InCinematic)
         {
-            dialAndBookCanvas.transform.GetChild(3).gameObject.SetActive(false);
+            dialAndBookCanvas.transform.GetChild(4).gameObject.SetActive(false);
             GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", false);
             carnetUI.GetComponent<Animator>().SetBool("InDialog", false);
             //ChangeState(State.Normal);

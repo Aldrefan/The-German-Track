@@ -7,7 +7,7 @@ using UnityEditor;
 public class PNJ : MonoBehaviour
 {
     public string PNJName;
-    GameObject DialogCanvas;
+    GameObject dialogCanvas;
     public int dialogLine = 0;
     GameObject leftPanel;
     GameObject rightPanel;
@@ -83,9 +83,9 @@ public class PNJ : MonoBehaviour
 
             carnet = CanvasManager.CManager.GetCanvas("CarnetUI").transform;
             //DialogCanvas = ActiveCharacterScript.ActiveCharacter.actualCharacter.GetComponent<Interactions>().dialAndBookCanvas;
-            DialogCanvas = CanvasManager.CManager.GetCanvas("Dialogue");
-            leftPanel = CanvasManager.CManager.GetCanvas("Dialogue").transform.GetChild(4).gameObject;
-            rightPanel = CanvasManager.CManager.GetCanvas("Dialogue").transform.GetChild(5).gameObject;
+            dialogCanvas = CanvasManager.CManager.GetCanvas("Dialogue");
+            leftPanel = CanvasManager.CManager.GetCanvas("Dialogue").transform.GetChild(5).gameObject;
+            rightPanel = CanvasManager.CManager.GetCanvas("Dialogue").transform.GetChild(6).gameObject;
         }
         /*if (GameObject.Find("Ken_Dial_Book_FlCanvas") != null)
         {
@@ -120,14 +120,14 @@ public class PNJ : MonoBehaviour
             {
                 carnet.GetComponent<Animator>().SetBool("InDialog", true);
                 //player.GetComponent<Interactions>().canOpenCarnet = true;// Initial
-                DialogCanvas.transform.GetChild(3).gameObject.SetActive(true);
+                dialogCanvas.transform.GetChild(4).gameObject.SetActive(true);
             }
             else 
             {
                 carnet.GetComponent<Animator>().SetBool("ClickOn", true);
                 carnet.GetComponent<Animator>().SetBool("InDialog", false);
                 //player.GetComponent<Interactions>().canOpenCarnet = false;// Initial
-                DialogCanvas.transform.GetChild(3).gameObject.SetActive(false);
+                dialogCanvas.transform.GetChild(4).gameObject.SetActive(false);
             }
         }
         

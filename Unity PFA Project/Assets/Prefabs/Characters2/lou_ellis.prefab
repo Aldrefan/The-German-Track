@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6373200947195682545
+--- !u!1 &4467229174331073945
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,77 +8,239 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6373200947195682544}
-  - component: {fileID: 6373200947195682547}
-  m_Layer: 0
-  m_Name: interaction E
+  - component: {fileID: 9149478826623193027}
+  - component: {fileID: 552284641690143157}
+  - component: {fileID: 3440799800726766684}
+  - component: {fileID: 2174960592943735987}
+  m_Layer: 13
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &9149478826623193027
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4467229174331073945}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.8, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2329598858274263312}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1, y: 0.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &552284641690143157
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4467229174331073945}
+  m_CullTransparentMesh: 0
+--- !u!114 &3440799800726766684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4467229174331073945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!114 &2174960592943735987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4467229174331073945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 3440799800726766684}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2993408914566927404}
+        m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1 &4819502319359461598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2329598858274263312}
+  - component: {fileID: 8132249712186960315}
+  - component: {fileID: 6076662608010010809}
+  - component: {fileID: 7373232940488913355}
+  - component: {fileID: 2993408914566927404}
+  m_Layer: 13
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!4 &6373200947195682544
-Transform:
+--- !u!224 &2329598858274263312
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6373200947195682545}
+  m_GameObject: {fileID: 4819502319359461598}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.471, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
-  m_Children: []
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.120037496, y: 0.120037496, z: 0.96029997}
+  m_Children:
+  - {fileID: 9149478826623193027}
   m_Father: {fileID: 6373200947820980918}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6373200947195682547
-SpriteRenderer:
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.4}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!223 &8132249712186960315
+Canvas:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6373200947195682545}
+  m_GameObject: {fileID: 4819502319359461598}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7580b9a4e8e5826458a86c4c41f93320, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.43, y: 0.25}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: -1720317733
+  m_SortingOrder: 20
+  m_TargetDisplay: 0
+--- !u!114 &6076662608010010809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819502319359461598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!114 &7373232940488913355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819502319359461598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &2993408914566927404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819502319359461598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa68f66bddbad204cb1721a0b15ec382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCinematic: 0
 --- !u!1 &6373200947820980919
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +271,7 @@ Transform:
   m_LocalPosition: {x: -210.7, y: -34.9, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children:
-  - {fileID: 6373200947195682544}
+  - {fileID: 2329598858274263312}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -200,8 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJName: Dr. Lou Ellis
-  characterSprite: {fileID: 21300000, guid: 7b6c5ad84d59d2b4c8505d88c02dbd58, type: 3}
-  kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
+  dialogLine: 0
   dialogIndex: 0
   transitionQuote: 5
   negativeQuote: 6
@@ -217,446 +378,328 @@ MonoBehaviour:
     listOfDialogs:
     - dialog:
       - quote: "Mais que faites-vous ici ? C\u2019est une zone interdite au public."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger:
         - HasSeenLou
-        spriteCharacter: {fileID: 0}
       - quote: "J\u2019ai un laisser-passer. Docteur Ellis, je dois vous parler \xE0
           propos de Loraine Grey."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Oh excusez-moi, pour la plupart des gens c\u2019est mon p\xE8re, le
           Docteur Ellis."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Vous pouvez m\u2019appeler Lou."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Comme vous voudrez.
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Je suis curieuse de voir ce que vous allez me demander.
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Finalement vous souhaitez \xE9couter ce que j\u2019ai \xE0 dire."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Je ne fais pas partie de la police. Je suis priv\xE9. Je viens de
           la part de Clara Grey."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Ah oui ? Une femme charmante.
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Si on veut\u2026 Il parait que vous avez une th\xE9orie sur la substance
           retrouv\xE9e dans le sang de Loraine."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "C\u2019est plus qu\u2019une th\xE9orie Monsieur\u2026"
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Quel est votre nom \xE0 propos ?"
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Kenneth.
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "\u2026Kenneth. Ce sont des faits av\xE9r\xE9s."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Voyez-vous, La victime a ing\xE9r\xE9 une puissante toxine qui lui
           aurait servie, en th\xE9orie, \xE0 provoquer une overdose."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Ce n\u2019est pas le cas ?"
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Non. La quantit\xE9 de toxique ing\xE9r\xE9e lui aurait, dans le pire
           des cas, fait sauter le petit d\xE9jeuner."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Impossible de faire une overdose avec \xE7a."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Et quand bien m\xEAme la dose aurait \xE9t\xE9 suffisante, pourquoi
           se pendre en plus ?"
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "\xC7a semble \xEAtre des souffrances superflues."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Peut-\xEAtre voulait-elle simplement se d\xE9tendre avant de grimper
           sur le tabouret."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Impossible.
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Etant donn\xE9e la r\xE9partition du produit dans l\u2019organisme,
           elle a d\xFB le laisser circuler au moins 4h."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Dans un corps vivant j\u2019entends."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Or si elle avait attendu ne serait-ce que vingt minutes avant de se
           passer la corde au cou, elle se serait endormie lourdement.
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Effectivement c\u2019est \xE9trange."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Et concernant le reste du corps, vous avez remarqu\xE9 quelque chose
           d\u2019anormal ?"
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Eh bien, il y a les marques de la corde bien s\xFBr, mais \xE0 part
           \xE7a aucune trace de violence, ni coups ni m\xEAme bousculade"
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 100000002c000000
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
+      hasChoices: 0
       endDialog: 1
+      buttonsList: []
     - dialog:
       - quote: Clara Grey est une femme charmante, j'aimerais l'aider.
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
+      hasChoices: 0
       endDialog: 1
+      buttonsList: []
     - dialog:
       - quote: "J\u2019aimerais en savoir plus sur vous."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Docteur Lou Ellis, affect\xE9e \xE0 cet h\xF4pital depuis 2 ans."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Sortie major de promo de l\u2019Universit\xE9 de m\xE9decine de New
           York."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Sp\xE9cialis\xE9e en h\xE9matologie et m\xE9decine l\xE9gale."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Sacr\xE9 palmar\xE8s."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "C\u2019est \xE0 peine suffisant pour faire du caf\xE9 ici."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Vos coll\xE8gues ne vous appr\xE9cient pas \xE0 votre juste valeur
           ?"
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Je suis la premi\xE8re femme m\xE9decin de New York, je ne m\u2019attendais
           pas \xE0 une sin\xE9cure quand j\u2019ai rejoint le service."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Mais je ne supporte plus de voir mon travail d\xE9pr\xE9ci\xE9 par
           ces abrutis."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Je sais ce que c\u2019est de se d\xE9mener pour moins que rien de
           remerciement."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "On se dit \xAB \xE0 quoi bon faire tout \xE7a ? Tout le monde s\u2019en
           fout. \xBB. Et le pire, c\u2019est que c\u2019est vrai."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Tout le monde s\u2019en fout."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Mais si on ne fait pas ce qu\u2019on a \xE0 faire au moment o\xF9
           on doit le faire, personne ne le fera \xE0 notre place."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Vous ne serez s\xFBrement jamais reconnue pour votre travail."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Des hommes moins comp\xE9tent s\u2019attribueront les m\xE9rites de
           vos efforts."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Mais \xE7a ne doit pas avoir d\u2019importance."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Je ne m\u2019attendais pas \xE0 de la philosophie de la part d\u2019un
           priv\xE9."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "La guerre \xE7a rend philosophe."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Tiens donc ?
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Laissez, je divague.
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
       - quote: "Tenez, j\u2019ai trouv\xE9 \xE7a dans l\u2019appartement de Loraine.
           On dirait de la drogue."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Faites voir\u2026"
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "\xC7a pourrait correspondre avec ce qu\u2019on a trouv\xE9 dans le
           sang de la victime."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Je vais comparer avec les r\xE9sultats du rapport."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "\u2026"
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Oui c\u2019est bien \xE7a !"
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "C\u2019est cette drogue que Loraine a ing\xE9r\xE9 le soir de sa mort."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 2f000000
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Je m\u2019en doutais."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Vous pensez qu\u2019elle en prenait fr\xE9quemment ?"
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Non, au contraire. Ce devait \xEAtre la premi\xE8re fois qu\u2019elle
           en prenait d\u2019apr\xE8s les analyses sanguines."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Int\xE9ressant."
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
       - quote: "Vous pouvez m\u2019en dire plus sur ces marques de corde ?"
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "D\u2019apr\xE8s l'\xE9tat des h\xE9matomes sur le cou, la victime
           \xE9tait vivante lorsqu\u2019elle a \xE9t\xE9 pendue."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "C\u2019est donc bel et bien la corde qui est responsable de sa mort."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: "Reste \xE0 d\xE9couvrir comment elle est arriv\xE9e l\xE0."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
       - quote: "Vous avez autre chose \xE0 me montrer ?"
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
     - dialog:
       - quote: "Je ne sais rien \xE0 ce sujet."
-        characterName: Dr. Lou Ellis
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
+      hasChoices: 0
       endDialog: 0
+      buttonsList: []
   quoteFinished: 0
   stickersAlreadyGiven: 

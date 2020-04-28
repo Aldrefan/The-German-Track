@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5966079576183552558
+--- !u!1 &1825434401467271182
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,77 +8,238 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5966079576183552559}
-  - component: {fileID: 5966079576183552552}
-  m_Layer: 0
-  m_Name: interaction E
+  - component: {fileID: 1908130663426573083}
+  - component: {fileID: 4179515061770423803}
+  - component: {fileID: 4347212088406859862}
+  - component: {fileID: 1913595487846626570}
+  - component: {fileID: 4583135878994035385}
+  m_Layer: 13
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!4 &5966079576183552559
-Transform:
+--- !u!224 &1908130663426573083
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5966079576183552558}
+  m_GameObject: {fileID: 1825434401467271182}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.471, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
-  m_Children: []
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.120037496, y: 0.120037496, z: 0.96029997}
+  m_Children:
+  - {fileID: 1226930688653949478}
   m_Father: {fileID: 5966079576536928784}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5966079576183552552
-SpriteRenderer:
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.4}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!223 &4179515061770423803
+Canvas:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5966079576183552558}
+  m_GameObject: {fileID: 1825434401467271182}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3, type: 3}
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: -1720317733
+  m_SortingOrder: 20
+  m_TargetDisplay: 0
+--- !u!114 &4347212088406859862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825434401467271182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!114 &1913595487846626570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825434401467271182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &4583135878994035385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825434401467271182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa68f66bddbad204cb1721a0b15ec382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4722414029035345047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1226930688653949478}
+  - component: {fileID: 9163087061140778492}
+  - component: {fileID: 7714969521365761001}
+  - component: {fileID: 6663574513980811785}
+  m_Layer: 13
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1226930688653949478
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4722414029035345047}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.8, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1908130663426573083}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1, y: 0.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &9163087061140778492
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4722414029035345047}
+  m_CullTransparentMesh: 0
+--- !u!114 &7714969521365761001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4722414029035345047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.43, y: 0.25}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!114 &6663574513980811785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4722414029035345047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 7714969521365761001}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4583135878994035385}
+        m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &5966079576536928791
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +273,7 @@ Transform:
   m_LocalPosition: {x: -154.6, y: -34.9, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children:
-  - {fileID: 5966079576183552559}
+  - {fileID: 1908130663426573083}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -203,8 +364,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJName: S. Nelson
-  characterSprite: {fileID: 21300000, guid: b04365d9f0f3ea041be1fe199247d897, type: 3}
-  kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
   dialogLine: 0
   dialogIndex: 0
   transitionQuote: 3
@@ -221,282 +380,204 @@ MonoBehaviour:
     listOfDialogs:
     - dialog:
       - quote: Scott_D0_Q1
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 06000000
         eventTrigger:
         - 
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D0_Q2
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D0_Q3
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D0_Q4
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D0_Q5
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D0_Q6
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D0_Q7
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D0_Q8
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D0_Q9
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D0_Q10
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D0_Q11
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D0_Q12
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D0_Q13
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 1
       buttonsList: []
     - dialog:
       - quote: Scott_D1_Q1
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Scott_D5_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D5_Q2
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D5_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D5_Q4
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D5_Q5
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D5_Q6
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D5_Q7
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D5_Q8
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D5_Q9
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D5_Q10
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 09000000
         eventTrigger:
         - TalkToTheBarman
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D5_Q11
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger:
         - getNumberMarvinMeyer
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D5_Q12
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Scott_D2_Q1
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Scott_D3_Q1
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Scott_D6_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D6_Q2
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Scott_D7_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D7_Q2
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D7_Q3
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Scott_D8_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D8_Q2
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D8_Q3
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Scott_D9_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D9_Q2
-        characterName: S. Nelson
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Scott_D9_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
@@ -543,6 +624,11 @@ MonoBehaviour:
     newPosition: {fileID: 0}
     clip: {fileID: 0}
     Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+    image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: 0
     time: 0.2
@@ -550,6 +636,11 @@ MonoBehaviour:
     newPosition: {fileID: 0}
     clip: {fileID: 0}
     Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+    image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: 0
     time: 0
@@ -557,6 +648,11 @@ MonoBehaviour:
     newPosition: {fileID: 0}
     clip: {fileID: 0}
     Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+    image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: 0
     time: 0
@@ -564,9 +660,15 @@ MonoBehaviour:
     newPosition: {fileID: 0}
     clip: {fileID: 0}
     Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+    image: {fileID: 0}
   action: 0
   fromStart: 0
   triggerByContact: 0
+  hasToLoop: 0
 --- !u!114 &978765921
 MonoBehaviour:
   m_ObjectHideFlags: 0
