@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChangeInteractionIcon : MonoBehaviour
 {
@@ -11,19 +12,19 @@ public class ChangeInteractionIcon : MonoBehaviour
 
     void OnEnable()
     {
-        actualIcon = GetComponent<SpriteRenderer>().sprite;
+        actualIcon = GetComponent<Image>().sprite;
         StartCoroutine(Timer());
     }
 
     void OnDisable()
     {
-        GetComponent<SpriteRenderer>().sprite = actualIcon;
+        GetComponent<Image>().sprite = actualIcon;
         StopAllCoroutines();
     }
 
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(2);
-        GetComponent<SpriteRenderer>().sprite = interactionIcon;
+        GetComponent<Image>().sprite = interactionIcon;
     }
 }

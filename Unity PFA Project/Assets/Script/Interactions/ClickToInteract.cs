@@ -15,6 +15,7 @@ public class ClickToInteract : MonoBehaviour
     {
         if(startCinematic)
         {
+            transform.parent.GetComponent<OutlineSystem>().HideOutline();
             transform.parent.GetComponent<Clara_Cinematic>().ExecuteCommand();
         }
         else
