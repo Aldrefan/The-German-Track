@@ -236,6 +236,10 @@ public class Interactions : MonoBehaviour
         //Camera.main.GetComponent<Camera_Manager>().OnCarnet();
         CanvasManager.CManager.GetCanvas("CarnetPanel").gameObject.SetActive(true);
         carnetUI.GetComponent<Animator>().SetBool("ClickOn", true);
+        if(PNJContact != null && PNJContact.GetComponent<Phone>())
+        {
+            CanvasManager.CManager.GetCanvas("Carnet").GetComponent<CarnetControls>().StickerType_Characters();
+        }
         GetComponent<PlayerMemory>().CheckStickersCarnet();
         ChangeState(State.OnCarnet);
     }

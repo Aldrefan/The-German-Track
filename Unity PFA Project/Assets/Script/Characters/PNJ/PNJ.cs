@@ -179,6 +179,7 @@ public class PNJ : MonoBehaviour
             {
                 leftPanel.SetActive(true);
                 rightPanel.SetActive(false);
+                leftPanel.GetComponent<DialogInterface>().HideHelp();
                 string [] words = LanguageManager.Instance.GetNameOfTheSpeaker(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote).Split("_"[0]);
                 leftPanel.transform.GetChild(2).GetComponent<Text>().text = words[0];
                 StartCoroutine(ShowText(leftPanel));
@@ -200,6 +201,7 @@ public class PNJ : MonoBehaviour
             {
                 rightPanel.SetActive(true);
                 leftPanel.SetActive(false);
+                rightPanel.GetComponent<DialogInterface>().HideHelp();
                 string [] words = LanguageManager.Instance.GetNameOfTheSpeaker(allDialogs.listOfDialogs[dialogIndex].dialog[dialogLine].quote).Split("_"[0]);
                 rightPanel.transform.GetChild(2).GetComponent<Text>().text = words[0];
                 StartCoroutine(ShowText(rightPanel));

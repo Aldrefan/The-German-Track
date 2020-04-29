@@ -28,6 +28,11 @@ public class DialogInterface : MonoBehaviour
         StopAllCoroutines();
     }
 
+    public void HideHelp()
+    {
+        transform.GetChild(6).gameObject.SetActive(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
