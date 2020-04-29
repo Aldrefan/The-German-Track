@@ -873,6 +873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa68f66bddbad204cb1721a0b15ec382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startCinematic: 0
 --- !u!212 &705527788
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1750,6 +1751,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 758156766}
+    - target: {fileID: 8891736062753409460, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
 --- !u!1 &971598372 stripped
@@ -2457,6 +2463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa68f66bddbad204cb1721a0b15ec382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startCinematic: 0
 --- !u!212 &1223917678
 SpriteRenderer:
   m_ObjectHideFlags: 0
