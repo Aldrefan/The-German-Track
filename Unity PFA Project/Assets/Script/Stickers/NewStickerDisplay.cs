@@ -34,11 +34,8 @@ public class NewStickerDisplay : MonoBehaviour
     {
         if (stickersToNotif.Count != 0)
         {
-            Debug.Log("1");
             if(sticker != stickersToNotif[0])
             {
-                Debug.Log("2");
-
                 sticker = stickersToNotif[0];
                 Corou();
             }
@@ -55,7 +52,6 @@ public class NewStickerDisplay : MonoBehaviour
             }
             else
             {
-                Debug.Log("4");
 
                 this.GetComponent<Animator>().SetTrigger("AnimOff");
                 stickersToNotif.Remove(sticker);
@@ -96,13 +92,6 @@ public class NewStickerDisplay : MonoBehaviour
                 text.rectTransform.sizeDelta = defaultSize;
 
             }
-
-
-            //if (stickersToNotif.Count != 0)
-            //{
-            //    return;
-            //}
-            Debug.Log("3");
 
             this.GetComponent<Animator>().SetTrigger("NewSticker");
 
