@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class TutorielV2_Part1 : MonoBehaviour
 {
+     public int MaxLetterPerSentence;
 
     int actualIndex;
     public List<TutoIndex> tutoList;
@@ -16,14 +17,17 @@ public class TutorielV2_Part1 : MonoBehaviour
     bool notifNeedToBeOpen;
     GameObject notif;
 
-    TextApparition notifName;
-    TextApparition notifDesc;
+    Text notifName;
+    Text notifDesc;
 
     Interactions playerInteractions;
 
     GameObject MoveIndicator;
     bool moveDone;
     bool moveStart;
+
+    List<string> TutoSentences = new List<string>();
+    string actualSentence;
 
 
     // Start is called before the first frame update
@@ -35,8 +39,8 @@ public class TutorielV2_Part1 : MonoBehaviour
 
         finalPos = new Vector3(-originalPos.x, originalPos.y);
 
-        notifName = this.transform.Find("Notif").Find("Content").Find("Name").GetComponent<TextApparition>();
-        notifDesc = this.transform.Find("Notif").Find("Content").Find("Desc").GetComponent<TextApparition>();
+        notifName = this.transform.Find("Notif").Find("Content").Find("Name").GetComponent<Text>();
+        notifDesc = this.transform.Find("Notif").Find("Content").Find("Desc").GetComponent<Text>();
 
         playerInteractions = GameObject.FindObjectOfType<Interactions>();
 
@@ -135,6 +139,25 @@ public class TutorielV2_Part1 : MonoBehaviour
             }
             lerpTime = 0;
 
+        }
+    }
+
+    void SentenceDecomposition()
+    {
+        string tempSentence;
+        if(tutoList[actualIndex].tutoDescKey.Length > MaxLetterPerSentence)
+        {
+            tempSentence = tutoList[actualIndex].tutoDescKey;
+            for (int i = 0; i < tempSentence.Length; i++)
+            {
+                //tempSentence.Substring(,);
+
+            }
+
+        }
+        else
+        {
+            actualSentence = tutoList[actualIndex].tutoDescKey;
         }
     }
 
