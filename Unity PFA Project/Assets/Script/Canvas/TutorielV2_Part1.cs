@@ -142,25 +142,6 @@ public class TutorielV2_Part1 : MonoBehaviour
         }
     }
 
-    void SentenceDecomposition()
-    {
-        string tempSentence;
-        if(tutoList[actualIndex].tutoDescKey.Length > MaxLetterPerSentence)
-        {
-            tempSentence = tutoList[actualIndex].tutoDescKey;
-            for (int i = 0; i < tempSentence.Length; i++)
-            {
-                //tempSentence.Substring(,);
-
-            }
-
-        }
-        else
-        {
-            actualSentence = tutoList[actualIndex].tutoDescKey;
-        }
-    }
-
     void MoveIndic()
     {
         if (!MoveIndicator.activeSelf)
