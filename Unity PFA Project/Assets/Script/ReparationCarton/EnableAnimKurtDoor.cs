@@ -17,7 +17,7 @@ public class EnableAnimKurtDoor : MonoBehaviour
     void Update()
     {
         GetKurtDoor();
-        if(kurtDoor == null && getKurt == true)
+        if(kurtDoor != null && getKurt == true)
         {
             this.GetComponent<BoxCollider2D>().enabled = true;
             Destroy(this);
