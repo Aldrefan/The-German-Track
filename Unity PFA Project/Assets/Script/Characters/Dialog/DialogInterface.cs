@@ -31,6 +31,7 @@ public class DialogInterface : MonoBehaviour
     public void HideHelp()
     {
         transform.GetChild(6).gameObject.SetActive(false);
+        StopAllCoroutines();
     }
 
     // Update is called once per frame

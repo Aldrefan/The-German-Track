@@ -85,7 +85,7 @@
    },
    {
       "Key": "WhiteTuto_D1_Q4",
-      "FR": "Je crois que Pierce a \u00E9t\u00E9 tu\u00E9 !",
+      "FR": "Pierce a \u00E9t\u00E9 tu\u00E9 !",
       "FRName": "Kenneth",
       "ENName": "Kenneth"
    },
@@ -97,15 +97,15 @@
    },
    {
       "Key": "WhiteTuto_D1_Q6",
-      "FR": "Il y a une \u00E9norme tache de sang dans une des chambres. Et l\u2019une des portes reste ferm\u00E9e \u00E0 cl\u00E9. L\u2019un de ces trois-l\u00E0 sait forc\u00E9ment ce qu\u2019il s\u2019est pass\u00E9.",
+      "FR": "Je l\u2019ai trouv\u00E9 la haut, il y avais une \u00E9norme trace de sang... On l\u2019as \u00E9gorg\u00E9 et l\u2019un de ces trois-l\u00E0 sait forc\u00E9ment ce qu\u2019il s\u2019est pass\u00E9.",
       "FRName": "Kenneth",
       "ENName": "Kenneth"
    },
    {
       "Key": "WhiteTuto_D1_Q7",
       "FR": "Je sugg\u00E8re que tout le monde garde son calme ! Comment pouvez-vous \u00EAtre s\u00FBr que ce soit l\u2019un d\u2019entre nous ?",
-      "FRName": "DrLefevre",
-      "ENName": "DrLefevre"
+      "FRName": "Dr.Lefevre",
+      "ENName": "Dr.Lefevre"
    },
    {
       "Key": "WhiteTuto_D1_Q8",
@@ -121,18 +121,24 @@
    },
    {
       "Key": "WhiteTuto_D1_Q10",
-      "FR": "Qu\u2019allez-vous allez faire ? Nous torturer ? Nous tuer ?",
+      "FR": "Qu\u2019est-ce que vous comptez nous faire ?",
       "FRName": "Louise",
       "ENName": "Louise"
    },
    {
       "Key": "WhiteTuto_D1_Q11",
-      "FR": "Tout doux, je vais vous interroger, dans le calme et vous allez me donner toutes les informations qui peuvent m\u2019\u00EAtre utiles. Il n\u2019y a aucune raison que la situation ne d\u00E9g\u00E9n\u00E8re.",
+      "FR": "Tout doux, je vais vous interroger, dans le calme et vous allez me donner toutes les informations qui peuvent m\u2019\u00EAtre utiles.",
       "FRName": "Kenneth",
       "ENName": "Kenneth"
    },
    {
       "Key": "WhiteTuto_D1_Q12",
+      "FR": "Il n\u2019y a aucune raison que la situation ne d\u00E9g\u00E9n\u00E8re.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
+   },
+   {
+      "Key": "WhiteTuto_D1_Q13",
       "FR": "Hmm...",
       "FRName": "Renard",
       "ENName": "Renard"
@@ -676,7 +682,55 @@
    },
    {
       "Key": "RenardTuto_D4_Q5",
-      "FR": "Esp\u00E8ce d\u2019enfoir\u00E9 ! C\u2019est \u00E7a tes preuves ? Tu ne m\u2019auras pas comme \u00E7a !",
+      "FR": "Quoi ? Mais vous d\u00E9lirez ? C\u2019est pas moi !",
+      "FRName": "Renard",
+      "ENName": "Renard"
+   },
+   {
+      "Key": "RenardTuto_D4_Q6",
+      "FR": "Calmez-vous, vous aurez droit \u00E0 un proc\u00E8s \u00E9quitable. On va vous amener au commandant et vous pourrez vous expliquer.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
+   },
+   {
+      "Key": "RenardTuto_D4_Q7",
+      "FR": "Je ne vais nulle part.",
+      "FRName": "Renard",
+      "ENName": "Renard"
+   },
+   {
+      "Key": "RenardTuto_D4_Q8",
+      "FR": "Bon william, viens m\u2019aider, on l\u2019emm\u00E8ne.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
+   },
+   {
+      "Key": "RenardTuto_D6_Q1",
+      "FR": "j\u2019ai dit que je n\u2019allais nulle part !",
+      "FRName": "Renard",
+      "ENName": "Renard"
+   },
+   {
+      "Key": "RenardTuto_D6_Q2",
+      "FR": "Wow ! Doucement, ne fait rien que tu puisses regretter.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
+   },
+   {
+      "Key": "RenardTuto_D6_Q3",
+      "FR": "Vous deux, vous allez sortir de ce bar, puis vous allez quitter ce village et ne plus jamais y revenir.",
+      "FRName": "Renard",
+      "ENName": "Renard"
+   },
+   {
+      "Key": "RenardTuto_D6_Q4",
+      "FR": "Si on s\u2019en va, on va revenir avec 3 fois plus d\u2019hommes et tu n\u2019auras fait que gagner un peu de temps. Rends-toi, \u00E7a vaut mieux.",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
+   },
+   {
+      "Key": "RenardTuto_D6_Q5",
+      "FR": "Plut\u00F4t crever !",
       "FRName": "Renard",
       "ENName": "Renard"
    },
@@ -738,8 +792,8 @@
    {
       "Key": "DocTuto_D0_Q2",
       "FR": "Laissez, je sais ce que vous allez me demander. Bon vous avez mal o\u00F9 ?",
-      "FRName": "DrLefevre",
-      "ENName": "DrLefevre"
+      "FRName": "Dr.Lefevre",
+      "ENName": "Dr.Lefevre"
    },
    {
       "Key": "DocTuto_D0_Q3",
@@ -750,8 +804,8 @@
    {
       "Key": "DocTuto_D0_Q4",
       "FR": "J\u2019esp\u00E8re que vous ne venez pas pour une blessure par balle, je suis \u00E0 court de bandage ! Enfin pas tout \u00E0 fait a court, mais je dois faire des \u00E9conomies !",
-      "FRName": "DrLefevre",
-      "ENName": "DrLefevre"
+      "FRName": "Dr.Lefevre",
+      "ENName": "Dr.Lefevre"
    },
    {
       "Key": "DocTuto_D0_Q5",
@@ -762,8 +816,8 @@
    {
       "Key": "DocTuto_D0_Q6",
       "FR": "Vraiment ? Dieu soit lou\u00E9. Que puis je pour vous dans ce cas ?",
-      "FRName": "DrLefevre",
-      "ENName": "DrLefevre"
+      "FRName": "Dr.Lefevre",
+      "ENName": "Dr.Lefevre"
    },
    {
       "Key": "DocTuto_D1_Q1",
@@ -774,8 +828,8 @@
    {
       "Key": "DocTuto_D1_Q2",
       "FR": "Allez-y, je vous dirais tout ce que vous voulez !",
-      "FRName": "DrLefevre",
-      "ENName": "DrLefevre"
+      "FRName": "Dr.Lefevre",
+      "ENName": "Dr.Lefevre"
    },
    {
       "Key": "DocTuto_D2_Q1",
@@ -786,8 +840,8 @@
    {
       "Key": "DocTuto_D2_Q2",
       "FR": "Vous parlez de ce soldat ivre mort qui as failli vomir sur mes chaussures ?",
-      "FRName": "DrLefevre",
-      "ENName": "DrLefevre"
+      "FRName": "Dr.Lefevre",
+      "ENName": "Dr.Lefevre"
    },
    {
       "Key": "DocTuto_D2_Q3",
@@ -798,8 +852,8 @@
    {
       "Key": "DocTuto_D2_Q4",
       "FR": "Je l\u2019ai vu boire comme un trou et monter les escaliers en titubant. J\u2019esp\u00E8re que vous n\u2019avez pas l\u2019intention de finir dans le m\u00EAme \u00E9tat.",
-      "FRName": "DrLefevre",
-      "ENName": "DrLefevre"
+      "FRName": "Dr.Lefevre",
+      "ENName": "Dr.Lefevre"
    },
    {
       "Key": "DocTuto_D2_Q5",
@@ -810,8 +864,8 @@
    {
       "Key": "DocTuto_D2_Q6",
       "FR": "C\u2019est ce qu\u2019il m\u2019a sembl\u00E9, mais je serais vous je ne me ferais pas d\u2019illusion, vous allez retrouver un macchab\u00E9e...",
-      "FRName": "DrLefevre",
-      "ENName": "DrLefevre"
+      "FRName": "Dr.Lefevre",
+      "ENName": "Dr.Lefevre"
    },
    {
       "Key": "DocTuto_D2_Q7",
@@ -822,8 +876,8 @@
    {
       "Key": "DocTuto_D2_Q8",
       "FR": "Moi ce que j\u2019en dis...",
-      "FRName": "DrLefevre",
-      "ENName": "DrLefevre"
+      "FRName": "Dr.Lefevre",
+      "ENName": "Dr.Lefevre"
    },
    {
       "Key": "DocTuto_D3_Q1",
@@ -834,8 +888,8 @@
    {
       "Key": "DocTuto_D3_Q2",
       "FR": "D\u2019ordinaire je vous aurais interdit de toucher \u00E0 mes affaires mais vu les circonstances, je pense que je peux faire une exception...",
-      "FRName": "DrLefevre",
-      "ENName": "DrLefevre"
+      "FRName": "Dr.Lefevre",
+      "ENName": "Dr.Lefevre"
    },
    {
       "Key": "DocTuto_D3_Q3",
@@ -846,8 +900,8 @@
    {
       "Key": "DocTuto_D3_Q4",
       "FR": "Vous permettez que je l\u2019examine ?",
-      "FRName": "DrLefevre",
-      "ENName": "DrLefevre"
+      "FRName": "Dr.Lefevre",
+      "ENName": "Dr.Lefevre"
    },
    {
       "Key": "DocTuto_D3_Q5",
@@ -858,8 +912,8 @@
    {
       "Key": "DocTuto_D3_Q6",
       "FR": "Hmm... C\u2019est bien ce qu\u2019il me semblait, mon scalpel a disparu !",
-      "FRName": "DrLefevre",
-      "ENName": "DrLefevre"
+      "FRName": "Dr.Lefevre",
+      "ENName": "Dr.Lefevre"
    },
    {
       "Key": "DocTuto_D3_Q7",
@@ -870,8 +924,8 @@
    {
       "Key": "DocTuto_D3_Q8",
       "FR": "Je fais tr\u00E8s attention a mes outils, j\u2019esp\u00E8re que ce n\u2019est pas vous qui l\u2019avez pris !",
-      "FRName": "DrLefevre",
-      "ENName": "DrLefevre"
+      "FRName": "Dr.Lefevre",
+      "ENName": "Dr.Lefevre"
    },
    {
       "Key": "DocTuto_D4_Q1",
@@ -882,8 +936,8 @@
    {
       "Key": "DocTuto_D4_Q2",
       "FR": "Vraiment ? Mais comment s\u2019est-elle faite \u00E7a ?",
-      "FRName": "DrLefevre",
-      "ENName": "DrLefevre"
+      "FRName": "Dr.Lefevre",
+      "ENName": "Dr.Lefevre"
    },
    {
       "Key": "DocTuto_D4_Q3",
@@ -894,8 +948,8 @@
    {
       "Key": "DocTuto_D4_Q4",
       "FR": "Je ne comprends pas, sa blessure est referm\u00E9e depuis des semaines !",
-      "FRName": "DrLefevre",
-      "ENName": "DrLefevre"
+      "FRName": "Dr.Lefevre",
+      "ENName": "Dr.Lefevre"
    },
    {
       "Key": "DocTuto_D4_Q5",
@@ -918,6 +972,12 @@
    {
       "Key": "PorteTuto_D0_Q3",
       "FR": "Hmm... Ferm\u00E9e. Eh merde ! Pierce est forc\u00E9ment l\u00E0-dedans, et peut \u00EAtre m\u00EAme mort !",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
+   },
+   {
+      "Key": "PlacardTuto_D0_Q1",
+      "FR": "Bordel !",
       "FRName": "Kenneth",
       "ENName": "Kenneth"
    },
@@ -952,7 +1012,9 @@
    {
       "Key": "Intro_D3_Q1",
       "FR": "Qu'est-ce que...",
-      "EN": "Qu'est-ce que\u2026"
+      "EN": "Qu'est-ce que\u2026",
+      "FRName": "Kenneth",
+      "ENName": "Kenneth"
    },
    {
       "Key": "Lamp_D0_Q1",
