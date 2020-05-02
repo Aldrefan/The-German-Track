@@ -34,28 +34,24 @@ public class NewStickerDisplay : MonoBehaviour
     {
         if (stickersToNotif.Count != 0)
         {
-            Debug.Log("1");
             if(sticker != stickersToNotif[0])
             {
-                Debug.Log("2");
-
                 sticker = stickersToNotif[0];
                 Corou();
             }
-        }
 
+        }
         if (display_Finished)
         {
             if (Vector3.Distance(this.transform.localPosition, endPosition) > 0.5f)
             {
-                timeToLerp += Time.deltaTime/2;
+                timeToLerp += Time.deltaTime / 2;
                 timeToLerp = Mathf.Clamp01(timeToLerp);
                 this.transform.localPosition = Vector3.Lerp(startPosition, endPosition, timeToLerp);
 
             }
             else
             {
-                Debug.Log("4");
 
                 this.GetComponent<Animator>().SetTrigger("AnimOff");
                 stickersToNotif.Remove(sticker);
@@ -69,7 +65,7 @@ public class NewStickerDisplay : MonoBehaviour
     public void SetInformations()
     {
 
-        if (sticker != null)
+        if (sticker != null && stickersToNotif.Count != 0)
         {
             this.transform.localPosition = startPosition;
 
@@ -96,6 +92,7 @@ public class NewStickerDisplay : MonoBehaviour
                 text.rectTransform.sizeDelta = defaultSize;
 
             }
+
             this.GetComponent<Animator>().SetTrigger("NewSticker");
 
         }
