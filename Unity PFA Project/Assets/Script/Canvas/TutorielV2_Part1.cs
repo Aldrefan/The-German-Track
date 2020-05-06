@@ -19,6 +19,8 @@ public class TutorielV2_Part1 : MonoBehaviour
 
     Text notifName;
     Text notifDesc;
+    Scrollbar notifScrollbar;
+
 
     Interactions playerInteractions;
 
@@ -40,7 +42,8 @@ public class TutorielV2_Part1 : MonoBehaviour
         finalPos = new Vector3(-originalPos.x, originalPos.y);
 
         notifName = this.transform.Find("Notif").Find("Content").Find("Name").GetComponent<Text>();
-        notifDesc = this.transform.Find("Notif").Find("Content").Find("Desc").GetComponent<Text>();
+        notifDesc = this.transform.Find("Notif").Find("Content").Find("ScrollArea").Find("DescContainer").Find("Desc").GetComponent<Text>();
+        notifScrollbar = this.transform.Find("Notif").Find("Content").Find("ScrollArea").Find("DescContainer").Find("Scrollbar").GetComponent<Scrollbar>();
 
         playerInteractions = GameObject.FindObjectOfType<Interactions>();
 
@@ -58,11 +61,8 @@ public class TutorielV2_Part1 : MonoBehaviour
     {
         if (tutoList.Count >= actualIndex + 1 && !tutoList[actualIndex].active)
         {
-            Debug.Log("0");
             if (tutoList[actualIndex].tutoCase == "dialog")
             {
-                Debug.Log("Dialog");
-
                 if (playerInteractions.state == Interactions.State.InCinematic)
                 {
                     if (!notifOpen)
@@ -118,6 +118,7 @@ public class TutorielV2_Part1 : MonoBehaviour
     {
         notifName.text = tutoList[actualIndex].tutoNameKey;
         notifDesc.text = tutoList[actualIndex].tutoDescKey;
+        notifScrollbar.value = 1;
 
         if (Vector3.Distance(notif.GetComponent<RectTransform>().anchoredPosition, destination) > 0.1f)
         {
