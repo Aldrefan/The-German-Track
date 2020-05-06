@@ -321,7 +321,7 @@ public class Clara_Cinematic : MonoBehaviour
     IEnumerator EndFade()
     {
         //Debug.Log("2");
-        yield return new WaitForSecondsRealtime(0.3f);
+        yield return new WaitForSecondsRealtime(0.001f);
         //Debug.Log("3");
 
         GameObject.Find("FadePanel").GetComponent<Animator>().SetBool("FadeIn", false);

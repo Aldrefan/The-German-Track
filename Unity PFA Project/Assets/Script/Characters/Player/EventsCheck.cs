@@ -262,10 +262,8 @@ public class EventsCheck : MonoBehaviour
                 break;*/
 
             case "pibPhoneUnlocked":
-                GameObject pibPhone = GameObject.Find("Phone");
-                pibPhone.transform.GetChild(0).gameObject.SetActive(false);
-                pibPhone.transform.GetChild(1).gameObject.SetActive(true);
-                pibPhone.transform.GetChild(2).gameObject.SetActive(true);
+                GameObject pibPhone = GameObject.Find("PIPPhone");
+                pibPhone.transform.tag = "Interaction";
                 break;
 
             case "getNumberMarvinMeyer":

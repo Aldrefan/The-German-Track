@@ -386,11 +386,13 @@ public void BlackAndWhiteMode(bool isBlackAndWhiteTemp)
                 if(isBlackAndWhiteTemp)
                 {
                     colorGradingLayer.saturation.value = -100;
+                    colorGradingLayer.contrast.value = 50;
                     //GameObject.Find("B&W").GetComponent<Toggle>().isOn = true;
                 }
                 else
                 {
                     colorGradingLayer.saturation.value = 0;
+                    colorGradingLayer.contrast.value = 20;
                     //GameObject.Find("B&W").GetComponent<Toggle>().isOn = false;
                 }
             }
