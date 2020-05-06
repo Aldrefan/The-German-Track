@@ -4009,7 +4009,6 @@ GameObject:
   - component: {fileID: 115646560}
   - component: {fileID: 115646559}
   - component: {fileID: 115646558}
-  - component: {fileID: 115646562}
   m_Layer: 14
   m_Name: porte kurt (3)
   m_TagString: Untagged
@@ -4136,18 +4135,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &115646562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115646556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbd484f8f0d7255489c5d23a7103bad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &115813071
 GameObject:
   m_ObjectHideFlags: 0
@@ -14256,7 +14243,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.09, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -14267,7 +14254,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.6, y: 1}
   m_EdgeRadius: 0
 --- !u!4 &407873876
 Transform:
@@ -14278,7 +14265,7 @@ Transform:
   m_GameObject: {fileID: 407873873}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.64, y: 3.09, z: 0}
-  m_LocalScale: {x: 0.73081857, y: 4.7046447, z: 0.73081857}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1898843282}
   m_Father: {fileID: 1529357095}
@@ -42691,7 +42678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59dda0572c4e9f34e919df6aa7330d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadAtStart: 0
+  loadAtStart: 1
 --- !u!1 &1047992692
 GameObject:
   m_ObjectHideFlags: 0
@@ -42708,7 +42695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1047992693
 Transform:
   m_ObjectHideFlags: 0
@@ -67415,7 +67402,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 0.3}
+  m_Size: {x: 1.24, y: 0.3}
   m_EdgeRadius: 0
 --- !u!95 &1672581721
 Animator:
@@ -71666,11 +71653,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: commandList.Array.size
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.size
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[0].objectToMove
@@ -71746,7 +71733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: commandList.Array.data[9]
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[8].objectToMove
@@ -71767,7 +71754,7 @@ PrefabInstance:
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[9].objectToMove
       value: 
-      objectReference: {fileID: 978765920}
+      objectReference: {fileID: 1329377127}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[9].time
       value: 0.5
@@ -71836,6 +71823,46 @@ PrefabInstance:
       propertyPath: annexInformation.Array.data[4].direction
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: commandList.Array.data[10]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[10].objectToMove
+      value: 
+      objectReference: {fileID: 1662419245}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[10].time
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[10].newParent
+      value: 
+      objectReference: {fileID: 327148842}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[10].newPosition
+      value: 
+      objectReference: {fileID: 1376588989}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: commandList.Array.data[11]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[11].objectToMove
+      value: 
+      objectReference: {fileID: 978765920}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[11].time
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[11].newParent
+      value: 
+      objectReference: {fileID: 327148842}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[11].newPosition
+      value: 
+      objectReference: {fileID: 1376588989}
     - target: {fileID: 6747615265874859620, guid: 471f45fa56e850a428f90def4e6c2923,
         type: 3}
       propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[0].newStickerIndexList.Array.size
