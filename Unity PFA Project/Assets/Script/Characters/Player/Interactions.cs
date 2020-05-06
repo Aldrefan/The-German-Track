@@ -156,15 +156,16 @@ public class Interactions : MonoBehaviour
 
     void Update()
     {
+        bool done = false;
         switch(state)
         {
             case State.Normal:
             OpenBook();
             TeleportPossibility();
-            OpenDialog();
+            OpenDialog(ref done);
             OpenBoard();
             OpenPhone();
-            OpenPauseMenu();
+            OpenPauseMenu(ref done);
             break;
 
             case State.InDialog:
@@ -294,8 +295,11 @@ public class Interactions : MonoBehaviour
             }
         }
     }
-    void OpenDialog()
+    void OpenDialog(ref bool done)
     {
+        if (done)
+            return;
+            
         if (dialAndBookCanvas != null)
         {
             if (Input.GetButtonDown("Interaction") && PNJContact != null && !CanvasManager.CManager.GetCanvas("CarnetPanel").gameObject.activeInHierarchy)
@@ -306,6 +310,7 @@ public class Interactions : MonoBehaviour
                     if (PNJContact.GetComponent<OutlineSystem>())
                     { PNJContact.GetComponent<OutlineSystem>().HideOutline(); }
                     StartDialog();
+                    done = true;
                 }
             }
         }
@@ -588,11 +593,15 @@ public class Interactions : MonoBehaviour
         }
     }
 
-    void OpenPauseMenu()
+    void OpenPauseMenu(ref bool done)
     {
+        if (done)
+            return;
+            
         if(Input.GetButtonDown("Cancel"))
         {
             ChangeState(State.Pause);
+            done = true;
         }
     }
 
