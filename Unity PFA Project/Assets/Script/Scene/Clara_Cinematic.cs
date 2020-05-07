@@ -285,6 +285,7 @@ public class Clara_Cinematic : MonoBehaviour
         GameObject canvas = Resources.Load("GameObject/CanvasShowImage") as GameObject;
         canvas = Instantiate(canvas);
         canvas.GetComponent<Canvas>().worldCamera = Camera.main;
+        canvas.GetComponent<Canvas>().sortingLayerName = "ForeGround";
         canvas.transform.GetChild(0).GetComponent<Image>().sprite = annexInformation[action].image;
         canvas.transform.GetChild(0).GetComponent<Animator>().Play("FadeImage");
         CheckIndex();

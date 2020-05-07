@@ -23,6 +23,7 @@ public class TutoTrigger : MonoBehaviour
         if(Input.GetButtonDown("Interaction") && casier)
         {
             GetComponent<Clara_Cinematic>().ExecuteCommand();
+            this.enabled = false;
         }
     }
 }
