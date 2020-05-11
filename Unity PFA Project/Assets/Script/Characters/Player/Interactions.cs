@@ -220,7 +220,7 @@ public class Interactions : MonoBehaviour
 
     void OpenBook()
     {
-        if(Input.GetButtonDown("MenuSpecial"))
+        if(Input.GetButtonDown("MenuSpecial") && canOpenCarnet)
         {
             if(!GameObject.Find("Carnet"))
             {

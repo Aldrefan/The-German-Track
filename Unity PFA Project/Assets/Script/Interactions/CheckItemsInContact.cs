@@ -13,7 +13,11 @@ public class CheckItemsInContact : MonoBehaviour
         {
             if(col.GetComponent<PlayerMemory>().allStickers.Contains(objectIndex))
             {
-                gameObject.SetActive(false);
+                GetComponent<Collider2D>().enabled = false;
+            }
+            if(transform.childCount > 1)
+            {
+                GetComponent<OutlineSystem>().HideOutline();
             }
         }
     }

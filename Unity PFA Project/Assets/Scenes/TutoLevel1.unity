@@ -1944,7 +1944,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: -0.000030517578}
+  m_AnchoredPosition: {x: -2, y: -0.000015258789}
   m_SizeDelta: {x: 260, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &555163143
@@ -4642,6 +4642,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 345647822}
+    - target: {fileID: 8891736062753409460, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9185088232496603786, guid: 33ddad3a370b0824b848ab3b505bf613,
         type: 3}
       propertyPath: player
@@ -13220,7 +13225,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8358043}
   m_HandleRect: {fileID: 8358042}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -15611,6 +15616,11 @@ PrefabInstance:
       propertyPath: dialAndBookCanvas
       value: 
       objectReference: {fileID: 705979845}
+    - target: {fileID: 1955605217293017400, guid: da130138f5003d14f970fac471a8b01f,
+        type: 3}
+      propertyPath: canOpenCarnet
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1156105011, guid: da130138f5003d14f970fac471a8b01f, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -16490,7 +16500,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1720317733
   m_SortingOrder: 200
   m_TargetDisplay: 0
 --- !u!224 &1943440211
