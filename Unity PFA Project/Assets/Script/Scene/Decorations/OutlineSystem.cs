@@ -24,6 +24,7 @@ public class OutlineSystem : MonoBehaviour
         if(col.tag == "Player" && GetComponent<SpriteRenderer>() && col.GetComponent<Interactions>().state == Interactions.State.Normal)
         {
             player = col.gameObject;
+            Debug.Log("Ta mère");
             ShowOutline();
         }
     }
@@ -44,7 +45,7 @@ public class OutlineSystem : MonoBehaviour
                 transform.GetChild(0).gameObject.SetActive(false);
             }
             if(player.GetComponent<Interactions>().PNJContact.GetComponent<OutlineSystem>())
-            {player.GetComponent<Interactions>().PNJContact.GetComponent<OutlineSystem>().HideOutline();}
+            {player.GetComponent<Interactions>().PNJContact.GetComponent<OutlineSystem>().HideOutline(); Debug.Log("STP " + player.GetComponent<Interactions>().PNJContact);}
         }
         if(transform.childCount > 0)
         {
@@ -76,6 +77,7 @@ public class OutlineSystem : MonoBehaviour
                 break;
             }
         }
+        Debug.Log("Outline Shown " + player.GetComponent<Interactions>().PNJContact);
     }
 
     public void HideOutline()
@@ -91,5 +93,6 @@ public class OutlineSystem : MonoBehaviour
                 Destroy(child.gameObject);
             }
         }
+        Debug.Log("Disparu " + player.GetComponent<Interactions>().PNJContact);
     }
 }

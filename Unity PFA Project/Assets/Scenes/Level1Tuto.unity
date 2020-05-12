@@ -695,6 +695,106 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: ListOfHypLists.list.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: hypotheseresponses.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: ListOfHypLists.list.Array.data[1].list.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: ListOfHypLists.list.Array.data[2].list.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: ListOfHypLists.list.Array.data[3].list.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: ListOfHypLists.list.Array.data[0].list.Array.data[0]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: ListOfHypLists.list.Array.data[0].list.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: hypotheseresponses.Array.data[0]
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: ListOfHypLists.list.Array.data[1].list.Array.data[2]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: ListOfHypLists.list.Array.data[1].list.Array.data[0]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: ListOfHypLists.list.Array.data[1].list.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: hypotheseresponses.Array.data[1]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: ListOfHypLists.list.Array.data[2].list.Array.data[2]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: ListOfHypLists.list.Array.data[2].list.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: ListOfHypLists.list.Array.data[2].list.Array.data[1]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: hypotheseresponses.Array.data[2]
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: hypotheseresponses.Array.data[3]
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: ListOfHypLists.list.Array.data[3].list.Array.data[2]
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: ListOfHypLists.list.Array.data[3].list.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: ListOfHypLists.list.Array.data[3].list.Array.data[1]
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6555912083691328245, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1698,7 +1798,7 @@ MonoBehaviour:
         eventTrigger: []
       - quote: WhiteTuto_D0_Q8
         isInLeftSide: 0
-        newStickerIndexList: 
+        newStickerIndexList: 01000000
         eventTrigger: []
       - quote: WhiteTuto_D0_Q9
         isInLeftSide: 1
@@ -2399,6 +2499,7 @@ GameObject:
   - component: {fileID: 1082112287}
   - component: {fileID: 1082112286}
   - component: {fileID: 1082112285}
+  - component: {fileID: 1082112288}
   m_Layer: 0
   m_Name: Louise
   m_TagString: PNJinteractable
@@ -2513,6 +2614,310 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1082112288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082112283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: Louise
+  dialogLine: 0
+  dialogIndex: 0
+  transitionQuote: 2
+  negativeQuote: 3
+  haveEvent: 0
+  stickerAlreadyGivenList: 
+  stickerRedirection:
+    stickerGivenList: 01000000
+    redirectionList: 02000000
+  eventRedirection:
+    eventGivenList: []
+    redirectionEventList: 
+  allDialogs:
+    listOfDialogs:
+    - dialog:
+      - quote: LouiseTuto_D0_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D0_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D1_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D1_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D1_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D1_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D1_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 1
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D2_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D2_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D2_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D2_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D2_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D2_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D2_Q7
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D2_Q8
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D2_Q9
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 1
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D3_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D3_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D3_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D3_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D3_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D3_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D4_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D4_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D4_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D4_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D4_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D4_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D5_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q6
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q7
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q8
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q9
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q10
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q11
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q12
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D6_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q5
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q7
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q8
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q9
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q10
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q11
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q12
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q13
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q14
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q15
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q16
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q17
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q18
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q19
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D6_Q20
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+  quoteFinished: 0
+  stickersAlreadyGiven: 
 --- !u!1001 &1102468673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3703,6 +4108,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
+      propertyPath: stickersScriptableList.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
       propertyPath: boardCanvasName
       value: Board_FIX
       objectReference: {fileID: 0}
@@ -3716,6 +4126,78 @@ PrefabInstance:
       propertyPath: carnetCanvasName
       value: Carnet
       objectReference: {fileID: 0}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickersScriptableList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 993903a4c5a0ba542a1a695c010dca21,
+        type: 2}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickersScriptableList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8d34e3e45e5a44e4a9c43d32aafd72aa,
+        type: 2}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickersScriptableList.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: cb0182a32ef535b4c9436bd0ab6e32d2,
+        type: 2}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickersScriptableList.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: c2c46fade12baec479c1d23cbd254257,
+        type: 2}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickersScriptableList.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 08b12ad180fa1c7479fdbf403368873e,
+        type: 2}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickersScriptableList.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 51a81914aefa74c44a3381fe7528409b,
+        type: 2}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickersScriptableList.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: da5c4461ed86e57448db41f486162c2e,
+        type: 2}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickersScriptableList.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: bd232c0d109624641b0be59d2913955b,
+        type: 2}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickersScriptableList.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 241c2de819c77f045983924bbda53d8c,
+        type: 2}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickersScriptableList.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e19c2765ee1b19419514cf29f95441a,
+        type: 2}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickersScriptableList.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: f7327bcc7714b164e92b22750a66867f,
+        type: 2}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickersScriptableList.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: dbf07ec77f412a04d9ec32ec9b316990,
+        type: 2}
     - target: {fileID: 559906432140023619, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
       propertyPath: PNJName
