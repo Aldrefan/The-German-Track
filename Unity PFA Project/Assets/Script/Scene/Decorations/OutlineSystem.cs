@@ -7,16 +7,26 @@ public class OutlineSystem : MonoBehaviour
 {
     float gap = 0.01f;
     GameObject player;
+
+
+    BoxCollider2D collider;
+
+
     // Start is called before the first frame update
     void Start()
     {
         //ShowOutline();
+        collider = this.GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (collider.enabled && this.transform.childCount <5 && player!=null)
+        {
+            ShowOutline();
+        }
+
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -33,25 +43,27 @@ public class OutlineSystem : MonoBehaviour
         if(col.tag == "Player" && GetComponent<SpriteRenderer>())
         {
             HideOutline();
+            player = null;
+
         }
     }
 
     public void ShowOutline()
     {
-        if(player.GetComponent<Interactions>().PNJContact != null)
-        {
-            if(transform.childCount > 0)
-            {
-                transform.GetChild(0).gameObject.SetActive(false);
-            }
-            if(player.GetComponent<Interactions>().PNJContact.GetComponent<OutlineSystem>())
-            {player.GetComponent<Interactions>().PNJContact.GetComponent<OutlineSystem>().HideOutline(); Debug.Log("STP " + player.GetComponent<Interactions>().PNJContact);}
-        }
-        if(transform.childCount > 0)
+        //if (player.GetComponent<Interactions>().PNJContact != null)
+        //{
+        //    if (transform.childCount > 0)
+        //    {
+        //        transform.GetChild(0).gameObject.SetActive(false);
+        //    }
+        //    if (player.GetComponent<Interactions>().PNJContact.GetComponent<OutlineSystem>())
+        //    { player.GetComponent<Interactions>().PNJContact.GetComponent<OutlineSystem>().HideOutline(); Debug.Log("STP " + player.GetComponent<Interactions>().PNJContact); }
+        //}
+        if (transform.childCount > 0)
         {
             transform.GetChild(0).gameObject.SetActive(true);
         }
-        for(int i = 0; i < 4; i++)
+        for (int i = 0; i < 4; i++)
         {
             GameObject sprite = new GameObject("OutlineComponent");
             sprite.transform.parent = transform;

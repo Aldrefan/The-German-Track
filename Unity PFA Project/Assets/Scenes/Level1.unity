@@ -21347,7 +21347,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.3}
+  m_Size: {x: 0.5, y: 0.3}
   m_EdgeRadius: 0
 --- !u!95 &639545950
 Animator:
@@ -45549,14 +45549,6 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 802095639
       objectReference: {fileID: 0}
-    - target: {fileID: 1456610458, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
-      propertyPath: m_BlockingMask.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1405921389, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -164.60005
-      objectReference: {fileID: 0}
     - target: {fileID: 7534403406999664860, guid: 883065d35bf8001418b4f638f428c3ca,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -45577,14 +45569,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1555739453}
-    - target: {fileID: 261090200, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 347536218}
-    - target: {fileID: 274629060, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 347536218}
     - target: {fileID: 354150990, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -45605,10 +45589,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 347536225}
+    - target: {fileID: 1405921389, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -164.60005
+      objectReference: {fileID: 0}
+    - target: {fileID: 261090200, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 347536218}
+    - target: {fileID: 274629060, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 347536218}
     - target: {fileID: 1370342329, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 347536218}
+    - target: {fileID: 1456610458, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1459802385, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -64217,6 +64217,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1156105012, guid: da130138f5003d14f970fac471a8b01f, type: 3}
+      propertyPath: EtiquetteLaissezPasser
+      value: 
+      objectReference: {fileID: 1714092047808702669}
+    - target: {fileID: 1156105012, guid: da130138f5003d14f970fac471a8b01f, type: 3}
+      propertyPath: appartmentKurtLocked.Array.data[0]
+      value: 
+      objectReference: {fileID: 1798857005}
+    - target: {fileID: 1156105012, guid: da130138f5003d14f970fac471a8b01f, type: 3}
+      propertyPath: appartmentKurtLocked.Array.data[1]
+      value: 
+      objectReference: {fileID: 1753499838}
     - target: {fileID: 1955605217293017406, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: run_speed
@@ -64522,18 +64534,6 @@ PrefabInstance:
       propertyPath: stickerIndexBoardList.Array.data[29]
       value: 25
       objectReference: {fileID: 0}
-    - target: {fileID: 1156105012, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: EtiquetteLaissezPasser
-      value: 
-      objectReference: {fileID: 1714092047808702669}
-    - target: {fileID: 1156105012, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: appartmentKurtLocked.Array.data[0]
-      value: 
-      objectReference: {fileID: 1798857005}
-    - target: {fileID: 1156105012, guid: da130138f5003d14f970fac471a8b01f, type: 3}
-      propertyPath: appartmentKurtLocked.Array.data[1]
-      value: 
-      objectReference: {fileID: 1753499838}
     - target: {fileID: 1156105013, guid: da130138f5003d14f970fac471a8b01f, type: 3}
       propertyPath: _scott
       value: 
@@ -75369,7 +75369,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798857005}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -77152,6 +77152,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: profilesButton
+      value: 
+      objectReference: {fileID: 542954707}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: indicesButton
+      value: 
+      objectReference: {fileID: 997975828}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: faitsButton
+      value: 
+      objectReference: {fileID: 846076264}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: hypothesesButton
+      value: 
+      objectReference: {fileID: 354150989}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: pileHiderButton
+      value: 
+      objectReference: {fileID: 2105758323}
     - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: hypotheseAffichage
@@ -77287,26 +77307,6 @@ PrefabInstance:
       propertyPath: m_Parameters.numCapVertices
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: profilesButton
-      value: 
-      objectReference: {fileID: 542954707}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: indicesButton
-      value: 
-      objectReference: {fileID: 997975828}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: faitsButton
-      value: 
-      objectReference: {fileID: 846076264}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: hypothesesButton
-      value: 
-      objectReference: {fileID: 354150989}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: pileHiderButton
-      value: 
-      objectReference: {fileID: 2105758323}
     - target: {fileID: 1392120362, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
