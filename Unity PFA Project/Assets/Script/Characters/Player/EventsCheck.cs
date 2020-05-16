@@ -342,6 +342,7 @@ public class EventsCheck : MonoBehaviour
             break;
 
             case "SpeakToPeople":
+                Debug.Log("SpeakToPeople");
                 carnetGoal.NewGoal(new GoalKeys("GoalName_01", "GoalDesc_01"));
                 break;
 

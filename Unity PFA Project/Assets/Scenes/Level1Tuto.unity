@@ -1793,7 +1793,8 @@ MonoBehaviour:
       - quote: WhiteTuto_D0_Q11
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: []
+        eventTrigger:
+        - SpeakToPeople
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 1
