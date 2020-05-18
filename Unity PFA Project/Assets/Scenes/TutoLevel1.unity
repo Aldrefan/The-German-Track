@@ -1944,7 +1944,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -2, y: 0}
+  m_AnchoredPosition: {x: -2, y: -0.000030517578}
   m_SizeDelta: {x: 260, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &555163143
@@ -2303,10 +2303,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1235555781, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1456610457, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2478,6 +2474,10 @@ PrefabInstance:
     - target: {fileID: 1270447863, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235555781, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1140186188, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
       propertyPath: m_IsActive
@@ -4526,11 +4526,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ken_Dial_Book_FlCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 2488211256309654760, guid: 33ddad3a370b0824b848ab3b505bf613,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8891736062753409463, guid: 33ddad3a370b0824b848ab3b505bf613,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4699,6 +4694,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488211256309654760, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6939456272973498312, guid: 33ddad3a370b0824b848ab3b505bf613,
         type: 3}
@@ -16822,8 +16822,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandList: 02000000010000000200000001000000
+  commandList: 0f000000020000000100000002000000010000000f000000
   annexInformation:
+  - objectToMove: {fileID: 1921905586}
+    direction: 0
+    time: 3
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Kenneth_Fouille
+      state: 0
+    image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: 0
     time: 3
@@ -16845,10 +16857,10 @@ MonoBehaviour:
     Origin: {fileID: 0}
     newSceneName: 0
     boolNameAndState:
-      name: 
-      state: 0
-    image: {fileID: 0}
-  - objectToMove: {fileID: 1921905586}
+      name: Walk
+      state: 1
+    image: {fileID: 21300000, guid: d518002eee4b11e4fbcb54691d0b6662, type: 3}
+  - objectToMove: {fileID: 0}
     direction: 0
     time: 1
     newParent: {fileID: 0}
@@ -16857,8 +16869,8 @@ MonoBehaviour:
     Origin: {fileID: 0}
     newSceneName: 0
     boolNameAndState:
-      name: Walk
-      state: 1
+      name: 
+      state: 0
     image: {fileID: 21300000, guid: d518002eee4b11e4fbcb54691d0b6662, type: 3}
   - objectToMove: {fileID: 0}
     direction: 0.07
@@ -16870,6 +16882,18 @@ MonoBehaviour:
     newSceneName: 0
     boolNameAndState:
       name: 
+      state: 0
+    image: {fileID: 21300000, guid: d518002eee4b11e4fbcb54691d0b6662, type: 3}
+  - objectToMove: {fileID: 1921905586}
+    direction: 0.07
+    time: 1.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Idle
       state: 0
     image: {fileID: 21300000, guid: d518002eee4b11e4fbcb54691d0b6662, type: 3}
   action: 0
@@ -16907,6 +16931,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: hypotheseAffichage
+      value: 
+      objectReference: {fileID: 1334982873}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1921905586}
     - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
       propertyPath: profilesButton
       value: 
@@ -16927,16 +16961,6 @@ PrefabInstance:
       propertyPath: pileHiderButton
       value: 
       objectReference: {fileID: 631408351}
-    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
-        type: 3}
-      propertyPath: hypotheseAffichage
-      value: 
-      objectReference: {fileID: 1334982873}
-    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1921905586}
     - target: {fileID: 6555912083691328245, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: m_LocalPosition.x

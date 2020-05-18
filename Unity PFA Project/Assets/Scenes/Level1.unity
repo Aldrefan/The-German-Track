@@ -2356,6 +2356,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &54138352 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9091783049863766144, guid: 33ddad3a370b0824b848ab3b505bf613,
+    type: 3}
+  m_PrefabInstance: {fileID: 1714092047808702667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &55625067
 GameObject:
   m_ObjectHideFlags: 0
@@ -3914,6 +3920,12 @@ Transform:
   m_Father: {fileID: 248501950}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &105388933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5948086779960346644, guid: 33ddad3a370b0824b848ab3b505bf613,
+    type: 3}
+  m_PrefabInstance: {fileID: 1714092047808702667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &105477637
 GameObject:
   m_ObjectHideFlags: 0
@@ -4907,9 +4919,29 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195792015, guid: 2d3912855de43b847a53a95028f41e11, type: 3}
+      propertyPath: commandList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1195792015, guid: 2d3912855de43b847a53a95028f41e11, type: 3}
+      propertyPath: annexInformation.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1195792015, guid: 2d3912855de43b847a53a95028f41e11, type: 3}
       propertyPath: annexInformation.Array.data[2].objectToMove
       value: 
       objectReference: {fileID: 1720242900}
+    - target: {fileID: 1195792015, guid: 2d3912855de43b847a53a95028f41e11, type: 3}
+      propertyPath: commandList.Array.data[4]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1195792015, guid: 2d3912855de43b847a53a95028f41e11, type: 3}
+      propertyPath: commandList.Array.data[3]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1195792015, guid: 2d3912855de43b847a53a95028f41e11, type: 3}
+      propertyPath: annexInformation.Array.data[3].objectToMove
+      value: 
+      objectReference: {fileID: 1069338372}
     - target: {fileID: 1195792019, guid: 2d3912855de43b847a53a95028f41e11, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
@@ -14399,6 +14431,14 @@ MonoBehaviour:
       CanvasGO: {fileID: 2136229461}
     - CanvasName: HidePilesButton
       CanvasGO: {fileID: 2105758322}
+    - CanvasName: DialogSpotOnBoard
+      CanvasGO: {fileID: 1239813402}
+    - CanvasName: carnet_mini
+      CanvasGO: {fileID: 54138352}
+    - CanvasName: BlackBands
+      CanvasGO: {fileID: 105388933}
+    - CanvasName: QuitNotif
+      CanvasGO: {fileID: 1821781018}
   - CharcterName: Global
     CanvasList:
     - CanvasName: Pause
@@ -43768,7 +43808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1069338373
 Transform:
   m_ObjectHideFlags: 0
@@ -43831,7 +43871,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.3}
+  m_Size: {x: 1, y: 0.3}
   m_EdgeRadius: 0
 --- !u!95 &1069338377
 Animator:
@@ -48626,6 +48666,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionIcon: {fileID: 21300000, guid: 7580b9a4e8e5826458a86c4c41f93320, type: 3}
+--- !u!1 &1239813402 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1405921388, guid: 883065d35bf8001418b4f638f428c3ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 1118538985}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1244582660
 GameObject:
   m_ObjectHideFlags: 0
@@ -50806,7 +50852,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1329377127}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -131.27, y: -30.88, z: 10}
+  m_LocalPosition: {x: -131.27, y: -30.88, z: 0}
   m_LocalScale: {x: 10, y: 8, z: 0.96029997}
   m_Children: []
   m_Father: {fileID: 1975389689}
@@ -53676,7 +53722,7 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: Kurt_D1_Q1
+      - quote: Kurt_D4_Q1
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -65882,7 +65928,7 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: Kurt_D1_Q1
+      - quote: Kurt_D4_Q1
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -67122,7 +67168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662419245}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -131.27, y: -30.88, z: 10}
+  m_LocalPosition: {x: -131.27, y: -30.88, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 0.96029997}
   m_Children: []
   m_Father: {fileID: 1975389689}
@@ -76689,6 +76735,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+--- !u!1 &1821781018 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4019564226954291519, guid: 33ddad3a370b0824b848ab3b505bf613,
+    type: 3}
+  m_PrefabInstance: {fileID: 1714092047808702667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1829174573
 GameObject:
   m_ObjectHideFlags: 0
@@ -77152,6 +77204,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: hypotheseAffichage
+      value: 
+      objectReference: {fileID: 292365910}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1156105002}
     - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
       propertyPath: profilesButton
       value: 
@@ -77172,16 +77234,6 @@ PrefabInstance:
       propertyPath: pileHiderButton
       value: 
       objectReference: {fileID: 2105758323}
-    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
-        type: 3}
-      propertyPath: hypotheseAffichage
-      value: 
-      objectReference: {fileID: 292365910}
-    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1156105002}
     - target: {fileID: 6555912083691328245, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -88457,6 +88509,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4165409269409925061}
+    - target: {fileID: 1149932899, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1156105002}
+    - target: {fileID: 3473827152370091052, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473827152370091052, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473827152370091052, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473827152370091052, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
 --- !u!1 &1714092047808702668 stripped

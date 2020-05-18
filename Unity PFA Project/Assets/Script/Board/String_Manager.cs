@@ -435,19 +435,20 @@ public class String_Manager : MonoBehaviour
 
     IEnumerator ActivateTime()
     {
-        GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).gameObject.SetActive(true);
+        CanvasManager.CManager.GetCanvas("DialogSpotOnBoard").SetActive(true);
+        //GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).gameObject.SetActive(true);
         if(thereIsAProfile)
         {
-            GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).GetChild(0).GetComponent<Text>().text = quoteList[quoteList.Count - 1];
+            CanvasManager.CManager.GetCanvas("DialogSpotOnBoard").transform.GetChild(0).GetComponent<Text>().text = quoteList[quoteList.Count - 1];
         }
-        else GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).GetChild(0).GetComponent<Text>().text = LanguageManager.Instance.GetDialog("Board_08");
+        else CanvasManager.CManager.GetCanvas("DialogSpotOnBoard").transform.GetChild(0).GetComponent<Text>().text = LanguageManager.Instance.GetDialog("Board_08");
         thereIsAProfile = false;
         quoteList.Clear();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         for(int i = 0; i > 0; i--)
         {
-            GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).GetComponent<Image>().color = new Vector4(0, 0, 0, i);
+            CanvasManager.CManager.GetCanvas("DialogSpotOnBoard").GetComponent<Image>().color = new Vector4(0, 0, 0, i);
         }
-        GameObject.Find("Ken_Board_FlCanvas").transform.GetChild(0).gameObject.SetActive(false);
+        CanvasManager.CManager.GetCanvas("DialogSpotOnBoard").gameObject.SetActive(false);
     }
 }

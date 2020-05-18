@@ -275,6 +275,9 @@ GameObject:
   m_Component:
   - component: {fileID: 153063417}
   - component: {fileID: 153063418}
+  - component: {fileID: 153063419}
+  - component: {fileID: 153063420}
+  - component: {fileID: 153063421}
   m_Layer: 0
   m_Name: armoire
   m_TagString: Untagged
@@ -344,6 +347,141 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &153063419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153063416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: Armoire
+  dialogLine: 0
+  dialogIndex: 0
+  transitionQuote: 2
+  negativeQuote: 3
+  haveEvent: 0
+  stickerAlreadyGivenList: 
+  stickerRedirection:
+    stickerGivenList: 
+    redirectionList: 
+  eventRedirection:
+    eventGivenList: []
+    redirectionEventList: 
+  allDialogs:
+    listOfDialogs:
+    - dialog:
+      - quote: PlacardTuto_D0_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 1
+      buttonsList: []
+  quoteFinished: 0
+  stickersAlreadyGiven: 
+--- !u!114 &153063420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153063416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandList: 020000000d000000000000000d00000010000000
+  annexInformation:
+  - objectToMove: {fileID: 2090050628}
+    direction: 0
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 1897290523}
+    direction: 0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Door_03_01
+      state: 0
+    image: {fileID: 0}
+  action: 0
+  fromStart: 0
+  triggerByContact: 0
+  hasToLoop: 0
+--- !u!95 &153063421
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153063416}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f6843943448557249b566eb8e068097b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &203196732
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,6 +1433,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &683410719 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8365423122775060024, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
+    type: 3}
+  m_PrefabInstance: {fileID: 1102468673}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &692445768 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5765427714366228704, guid: c215d4d3046bf0643a8f2e3034d8dd79,
@@ -1498,7 +1642,7 @@ GameObject:
   - component: {fileID: 796046054}
   - component: {fileID: 796046055}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: CinematicTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3070,6 +3214,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -7
       objectReference: {fileID: 0}
+    - target: {fileID: 8365423122878678018, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8365423124195330393, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3860,6 +4009,334 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2328780609122714855, guid: 5a8d97fb3a6c26d4399e584d0ef478c4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5a8d97fb3a6c26d4399e584d0ef478c4, type: 3}
+--- !u!1 &1459411779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1459411780}
+  - component: {fileID: 1459411783}
+  - component: {fileID: 1459411782}
+  - component: {fileID: 1459411781}
+  m_Layer: 0
+  m_Name: CinematicTriggerCrime
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1459411780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459411779}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.91, y: -0.87, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 683410719}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1459411781
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459411779}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1459411782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459411779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: Personne
+  dialogLine: 0
+  dialogIndex: 0
+  transitionQuote: 2
+  negativeQuote: 3
+  haveEvent: 0
+  stickerAlreadyGivenList: 
+  stickerRedirection:
+    stickerGivenList: 
+    redirectionList: 
+  eventRedirection:
+    eventGivenList: []
+    redirectionEventList: 
+  allDialogs:
+    listOfDialogs:
+    - dialog:
+      - quote: SangTuto_D0_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 1
+      buttonsList: []
+    - dialog:
+      - quote: TrousseTuto_D0_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 0e000000
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 1
+      buttonsList: []
+  quoteFinished: 0
+  stickersAlreadyGiven: 
+--- !u!114 &1459411783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459411779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandList: 0200000001000000020000000d00000000000000020000000d00000001000000020000000d000000000000000d0000000f000000020000000f0000000200000001000000
+  annexInformation:
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: -0.1
+    time: 2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: -0.1
+    time: 1.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: -0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: -0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: -0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: -0.1
+    time: 2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: -0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.1
+    time: 1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: -0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 1467259954}
+    direction: -0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: FadeToON
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 153063416}
+    direction: -0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Armoire_Opened
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 153063416}
+    direction: -0.1
+    time: 0.3
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Armoire_Opened
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 153063416}
+    direction: -0.1
+    time: 1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Armoire_Opened
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 153063416}
+    direction: -0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Armoire_Opened
+      state: 0
+    image: {fileID: 0}
+  action: 0
+  fromStart: 0
+  triggerByContact: 1
+  hasToLoop: 0
 --- !u!1 &1467259954 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5765427715168754896, guid: c215d4d3046bf0643a8f2e3034d8dd79,
@@ -4039,12 +4516,12 @@ PrefabInstance:
     - target: {fileID: 5683084735798226271, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -66.6
+      value: -3.2
       objectReference: {fileID: 0}
     - target: {fileID: 5683084735798226271, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.14
+      value: 33.3
       objectReference: {fileID: 0}
     - target: {fileID: 5683084735798226271, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
@@ -4109,7 +4586,7 @@ PrefabInstance:
     - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
       propertyPath: stickersScriptableList.Array.size
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
@@ -4197,6 +4674,18 @@ PrefabInstance:
       propertyPath: stickersScriptableList.Array.data[12]
       value: 
       objectReference: {fileID: 11400000, guid: dbf07ec77f412a04d9ec32ec9b316990,
+        type: 2}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickersScriptableList.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: 74639111aed8ff142ba101bf2079d80e,
+        type: 2}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickersScriptableList.Array.data[14]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8402e3b950514f0429ab1eec27ecd3ea,
         type: 2}
     - target: {fileID: 559906432140023619, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
@@ -4769,7 +5258,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: a6ff3f1bb361f824cb06a300fe7ab434, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2bae6705062c3364eb849dd02a6a7b65, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5253,6 +5742,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1897290523 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8365423122775060025, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
+    type: 3}
+  m_PrefabInstance: {fileID: 1102468673}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1900250184 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1140186188, guid: 883065d35bf8001418b4f638f428c3ca,

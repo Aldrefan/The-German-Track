@@ -11,18 +11,21 @@ public class OutlineSystem : MonoBehaviour
 
     BoxCollider2D collider;
 
+    int childCount;
+
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         //ShowOutline();
         collider = this.GetComponent<BoxCollider2D>();
+        childCount = transform.childCount;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (collider.enabled && this.transform.childCount <5 && player!=null)
+        if (collider.enabled && this.transform.childCount <= childCount && player!=null)
         {
             ShowOutline();
         }
@@ -34,8 +37,7 @@ public class OutlineSystem : MonoBehaviour
         if(col.tag == "Player" && GetComponent<SpriteRenderer>() && col.GetComponent<Interactions>().state == Interactions.State.Normal)
         {
             player = col.gameObject;
-            Debug.Log("Ta mère");
-            ShowOutline();
+            //ShowOutline();
         }
     }
     void OnTriggerExit2D(Collider2D col)
@@ -50,15 +52,15 @@ public class OutlineSystem : MonoBehaviour
 
     public void ShowOutline()
     {
-        //if (player.GetComponent<Interactions>().PNJContact != null)
-        //{
-        //    if (transform.childCount > 0)
-        //    {
-        //        transform.GetChild(0).gameObject.SetActive(false);
-        //    }
-        //    if (player.GetComponent<Interactions>().PNJContact.GetComponent<OutlineSystem>())
-        //    { player.GetComponent<Interactions>().PNJContact.GetComponent<OutlineSystem>().HideOutline(); Debug.Log("STP " + player.GetComponent<Interactions>().PNJContact); }
-        //}
+        if (player.GetComponent<Interactions>().PNJContact != null)
+        {
+            if (transform.childCount > 1)
+            {
+                transform.GetChild(0).gameObject.SetActive(false);
+            }
+            if (player.GetComponent<Interactions>().PNJContact.GetComponent<OutlineSystem>())
+            {player.GetComponent<Interactions>().PNJContact.GetComponent<OutlineSystem>().HideOutline(); /*Debug.Log("STP " + player.GetComponent<Interactions>().PNJContact);*/ }
+        }
         if (transform.childCount > 0)
         {
             transform.GetChild(0).gameObject.SetActive(true);
@@ -89,11 +91,12 @@ public class OutlineSystem : MonoBehaviour
                 break;
             }
         }
-        Debug.Log("Outline Shown " + player.GetComponent<Interactions>().PNJContact);
+        //Debug.Log("Outline Shown " + player.GetComponent<Interactions>().PNJContact);
     }
 
     public void HideOutline()
     {
+        player = null;
         if(transform.childCount > 0)
         {
             transform.GetChild(0).gameObject.SetActive(false);
@@ -105,6 +108,6 @@ public class OutlineSystem : MonoBehaviour
                 Destroy(child.gameObject);
             }
         }
-        Debug.Log("Disparu " + player.GetComponent<Interactions>().PNJContact);
+        //Debug.Log("Disparu " + player.GetComponent<Interactions>().PNJContact);
     }
 }

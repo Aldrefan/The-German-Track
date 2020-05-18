@@ -20,12 +20,18 @@ public class NewStickerDisplay : MonoBehaviour
 
     Vector2 defaultSize;
 
+    Vector2 startSize;
+    Vector2 endSize = new Vector2(0.2f, 0.2f);
+
+    GameObject carnetMini;
+    GameObject _carnetMini => carnetMini = carnetMini ?? this.transform.parent.Find("carnet_mini").gameObject;
+
 
     // Start is called before the first frame update
     void Start()
     {
         startPosition = this.transform.localPosition;
-        endPosition = this.transform.parent.Find("CarnetUI").localPosition;
+        endPosition = _carnetMini.transform.localPosition;
         endPosition = new Vector3(0, endPosition.y, endPosition.z);
         defaultSize = text.rectTransform.sizeDelta;
     }
@@ -45,29 +51,30 @@ public class NewStickerDisplay : MonoBehaviour
         {
             if (Vector3.Distance(this.transform.localPosition, endPosition) > 0.5f)
             {
-                timeToLerp += Time.deltaTime / 2;
+                _carnetMini.GetComponent<SpriteRenderer>().color = Color.white;
+                timeToLerp += Time.deltaTime*4;
                 timeToLerp = Mathf.Clamp01(timeToLerp);
                 this.transform.localPosition = Vector3.Lerp(startPosition, endPosition, timeToLerp);
-
+                this.transform.localScale = Vector2.Lerp(startSize, endSize, timeToLerp);
             }
             else
             {
-
                 this.GetComponent<Animator>().SetTrigger("AnimOff");
                 stickersToNotif.Remove(sticker);
                 display_Finished = false;
                 timeToLerp = 0;
-
+                _carnetMini.GetComponent<SpriteRenderer>().color = new Vector4(0,0,0,0);
             }
         }
     }
 
     public void SetInformations()
     {
-
         if (sticker != null && stickersToNotif.Count != 0)
         {
             this.transform.localPosition = startPosition;
+            this.transform.localScale = new Vector3(1,1,1);
+            startSize = new Vector2(1,1);
 
             if (text != null)
             {
@@ -80,6 +87,8 @@ public class NewStickerDisplay : MonoBehaviour
             backgroundSticker.rectTransform.sizeDelta = new Vector2(sticker.backgoundSize.x*1.1f, sticker.backgoundSize.y*1.1f);
             backgroundSticker.sprite = sticker.stickerBackground;
             backgroundColor = sticker.color;
+            //GetComponent<SpriteRenderer>().color = backgroundColor;
+            backgroundSticker.color = backgroundColor;
             if (sticker.type == Sticker.Type.Profile)
             {
                 text.transform.localPosition = new Vector2(0, -28);
@@ -119,5 +128,10 @@ public class NewStickerDisplay : MonoBehaviour
     {
         yield return new WaitForSeconds(0.0001f);
         SetInformations();
+    }
+
+    public void HideCarnetMini()
+    {
+        _carnetMini.GetComponent<SpriteRenderer>().color = new Vector4(0,0,0,0);
     }
 }
