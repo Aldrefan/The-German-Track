@@ -341,6 +341,16 @@ public class EventsCheck : MonoBehaviour
             GetComponent<Clara_Cinematic>().ExecuteCommand();
             break;
 
+            case "SpeakToPeople":
+                Debug.Log("SpeakToPeople");
+                carnetGoal.NewGoal(new GoalKeys("GoalName_01", "GoalDesc_01"));
+                break;
+
+            case "FindPierce":
+                carnetGoal.RemoveGoal(new GoalKeys("GoalName_01", "GoalDesc_01"));
+                carnetGoal.NewGoal(new GoalKeys("GoalName_02", "GoalDesc_02"));
+                break;
+
             default:
                 break;
         }
