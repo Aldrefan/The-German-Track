@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
-    [HideInInspector]
-
-    void Start()
+    public static RoomManager RM;
+    public RoomInformations[] roomList;
+    void Awake()
     {
-
+        roomList = GameObject.FindObjectsOfType<RoomInformations>();
+        RM = this;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
 }

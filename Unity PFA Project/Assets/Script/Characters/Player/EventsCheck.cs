@@ -349,7 +349,14 @@ public class EventsCheck : MonoBehaviour
             case "FindPierce":
                 carnetGoal.RemoveGoal(new GoalKeys("GoalName_01", "GoalDesc_01"));
                 carnetGoal.NewGoal(new GoalKeys("GoalName_02", "GoalDesc_02"));
+                GameObject.Find("Door_01_01").GetComponent<BoxCollider2D>().enabled = true;
                 break;
+
+            case "PierceFound":
+                GameObject.Find("Door_01_01").GetComponent<BoxCollider2D>().enabled = false;
+                RoomManager.RM.roomList[1].transform.GetChild(1).GetChild(0).GetComponent<BoxCollider2D>().enabled = false;
+                carnetGoal.RemoveGoal(new GoalKeys("GoalName_02", "GoalDesc_02"));
+            break;
 
             default:
                 break;

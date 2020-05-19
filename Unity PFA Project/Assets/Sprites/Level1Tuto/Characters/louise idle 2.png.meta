@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: 1e05c012f6088f2469f979004b75c7f8
+guid: 66b4b3e8d7a7ac3458e31053f50dddcb
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: louise idle 2_1
+    21300002: louise idle 2_2
+    21300004: louise idle 2_4
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -82,11 +85,71 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: louise idle 2_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 25
+        width: 65
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5befaa59cd2d54695fa59bf7d338ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: louise idle 2_2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 25
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e8da6cdcc95ff4a9c92ba8f62f758b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: louise idle 2_4
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 25
+        width: 65
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ca484edd377e64683bbb0352d16bbd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7209745061d96ae4abfbd4d8062910a8
+    spriteID: 6d610b5fd83a2694ca7d3679bb7d23b4
     vertices: []
     indices: 
     edges: []
