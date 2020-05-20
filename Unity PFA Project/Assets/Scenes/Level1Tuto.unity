@@ -3440,6 +3440,16 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 802095639
       objectReference: {fileID: 0}
+    - target: {fileID: 5765427714245102018, guid: c215d4d3046bf0643a8f2e3034d8dd79,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765427715632647898, guid: c215d4d3046bf0643a8f2e3034d8dd79,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c215d4d3046bf0643a8f2e3034d8dd79, type: 3}
 --- !u!1 &1039487057 stripped
@@ -3885,6 +3895,12 @@ MonoBehaviour:
       buttonsList: []
   quoteFinished: 0
   stickersAlreadyGiven: 
+--- !u!1 &1084706891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4019564226954291519, guid: 33ddad3a370b0824b848ab3b505bf613,
+    type: 3}
+  m_PrefabInstance: {fileID: 918401377}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1102468673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5051,6 +5067,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2328780609122714872, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
         type: 3}
+      propertyPath: charactersInterfaces.Array.data[0].CanvasList.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328780609122714872, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
+        type: 3}
       propertyPath: charactersInterfaces.Array.data[1].CanvasList.Array.data[0].CanvasGO
       value: 
       objectReference: {fileID: 738420603}
@@ -5129,6 +5150,16 @@ PrefabInstance:
       propertyPath: charactersInterfaces.Array.data[1].CanvasList.Array.data[3].CanvasGO
       value: 
       objectReference: {fileID: 692445768}
+    - target: {fileID: 2328780609122714872, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
+        type: 3}
+      propertyPath: charactersInterfaces.Array.data[0].CanvasList.Array.data[12].CanvasName
+      value: QuitNotif
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328780609122714872, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
+        type: 3}
+      propertyPath: charactersInterfaces.Array.data[0].CanvasList.Array.data[12].CanvasGO
+      value: 
+      objectReference: {fileID: 1084706891}
     - target: {fileID: 2328780609122714873, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
         type: 3}
       propertyPath: charactersList.Array.size
