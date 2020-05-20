@@ -1029,7 +1029,7 @@ SpriteRenderer:
   m_Size: {x: 2.73, y: 0.83}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &302816800
@@ -3944,12 +3944,6 @@ MonoBehaviour:
       buttonsList: []
   quoteFinished: 0
   stickersAlreadyGiven: 
---- !u!1 &1084706891 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4019564226954291519, guid: 33ddad3a370b0824b848ab3b505bf613,
-    type: 3}
-  m_PrefabInstance: {fileID: 918401377}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1102468673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4583,7 +4577,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1287354157
@@ -5121,6 +5115,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2328780609122714872, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
         type: 3}
+      propertyPath: charactersInterfaces.Array.data[0].CanvasList.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328780609122714872, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
+        type: 3}
       propertyPath: charactersInterfaces.Array.data[1].CanvasList.Array.data[0].CanvasGO
       value: 
       objectReference: {fileID: 738420603}
@@ -5207,6 +5206,16 @@ PrefabInstance:
     - target: {fileID: 2328780609122714872, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
         type: 3}
       propertyPath: charactersInterfaces.Array.data[1].CanvasList.Array.data[4].CanvasGO
+      value: 
+      objectReference: {fileID: 661768706}
+    - target: {fileID: 2328780609122714872, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
+        type: 3}
+      propertyPath: charactersInterfaces.Array.data[0].CanvasList.Array.data[12].CanvasName
+      value: QuitNotif
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328780609122714872, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
+        type: 3}
+      propertyPath: charactersInterfaces.Array.data[0].CanvasList.Array.data[12].CanvasGO
       value: 
       objectReference: {fileID: 661768706}
     - target: {fileID: 2328780609122714873, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
@@ -5694,7 +5703,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1551413601
@@ -6463,7 +6472,7 @@ SpriteRenderer:
   m_Size: {x: 0.5, y: 0.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!224 &1730731949 stripped
@@ -7214,7 +7223,7 @@ SpriteRenderer:
   m_Size: {x: 1.67, y: 0.43}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1886340151
