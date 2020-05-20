@@ -363,6 +363,12 @@ public class EventsCheck : MonoBehaviour
 
             case "WhiteAim":
                 GameObject.Find("White").GetComponent<Animator>().Play("White_Degaine", 0);
+                GameObject.Find("Louise").GetComponent<Animator>().Play("Louise_Wake", 0);
+            break;
+
+            case "Bar_Panic":
+                GameObject.Find("Louise").GetComponent<Animator>().Play("Louise_Crouch", 0);
+                GameObject.Find("Dr").GetComponent<Animator>().Play("Dr_Idle_Crouch", 0);
             break;
 
             default:

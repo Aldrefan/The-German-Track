@@ -161,11 +161,13 @@ public class PNJ : MonoBehaviour
             if(allDialogs.listOfDialogs[dialogIndex].canAskQuestions)
             {
                 carnet.GetComponent<Animator>().SetBool("InDialog", true);
+                CanvasManager.CManager.GetCanvas("QuitNotif").SetActive(true);
                 //player.GetComponent<Interactions>().canOpenCarnet = true;// Initial
             }
             else 
             {
                 carnet.GetComponent<Animator>().SetBool("InDialog", false);
+                CanvasManager.CManager.GetCanvas("QuitNotif").SetActive(false);
                 //player.GetComponent<Interactions>().canOpenCarnet = false;// Initial
             }
         }

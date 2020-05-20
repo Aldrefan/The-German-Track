@@ -1607,7 +1607,8 @@ GameObject:
   - component: {fileID: 489150088}
   - component: {fileID: 489150087}
   - component: {fileID: 489150086}
-  - component: {fileID: 489150089}
+  - component: {fileID: 489150090}
+  - component: {fileID: 489150091}
   m_Layer: 0
   m_Name: Dr
   m_TagString: PNJinteractable
@@ -1625,7 +1626,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 7.83, y: -0.24, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2125820785}
   m_Father: {fileID: 1647229378}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1710,7 +1712,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: c5d51a495d64bda48bab1d86b82060b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -1722,7 +1724,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &489150089
+--- !u!114 &489150090
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1731,65 +1733,147 @@ MonoBehaviour:
   m_GameObject: {fileID: 489150084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d9bd3fc228bf084fa6fbb3984f58658, type: 3}
+  m_Script: {fileID: 11500000, guid: cbd484f8f0d7255489c5d23a7103bad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterNameReference: DocTuto
-  realCharacterName: Dr.Lefevre
+--- !u!114 &489150091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489150084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: Dr.Lefevre
+  dialogLine: 0
+  dialogIndex: 0
+  transitionQuote: 2
+  negativeQuote: 3
   haveEvent: 0
-  dialogList:
-  - dialogName: D0
-    stickerIndexToGive: 0
-    charactersInDialogs_frNames:
-    - characterName: Kenneth
-      left: 1
-    - characterName: Dr.Lefevre
-      left: 0
-    endDialog: 0
-    canAskQuestions: 0
-  - dialogName: D1
-    stickerIndexToGive: 0
-    charactersInDialogs_frNames:
-    - characterName: Kenneth
-      left: 1
-    - characterName: Dr.Lefevre
-      left: 0
-    endDialog: 0
-    canAskQuestions: 0
-  - dialogName: D2
-    stickerIndexToGive: 0
-    charactersInDialogs_frNames:
-    - characterName: Kenneth
-      left: 1
-    - characterName: Dr.Lefevre
-      left: 0
-    endDialog: 0
-    canAskQuestions: 0
-  - dialogName: D3
-    stickerIndexToGive: 0
-    charactersInDialogs_frNames:
-    - characterName: Kenneth
-      left: 1
-    - characterName: Dr.Lefevre
-      left: 0
-    endDialog: 0
-    canAskQuestions: 0
-  - dialogName: D4
-    stickerIndexToGive: 0
-    charactersInDialogs_frNames:
-    - characterName: Kenneth
-      left: 1
-    - characterName: Dr.Lefevre
-      left: 0
-    endDialog: 0
-    canAskQuestions: 0
-  eventPositionsInDialog:
-  - position: DocTuto_D2_Q8
-    eventsNames:
-    - FindPierce
-  stickersPositionsInDialogs:
-  - position: DocTuto_D0_Q1
-    stickerIndexs: 03000000
+  stickerAlreadyGivenList: 
+  stickerRedirection:
+    stickerGivenList: 
+    redirectionList: 
+  eventRedirection:
+    eventGivenList: []
+    redirectionEventList: 
+  allDialogs:
+    listOfDialogs:
+    - dialog:
+      - quote: DocTuto_D0_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 03000000
+        eventTrigger: []
+      - quote: DocTuto_D0_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D0_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D0_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D0_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D0_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: DocTuto_D1_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 1
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: DocTuto_D7_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 1
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: DocTuto_D3_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D3_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D3_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D3_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D3_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D3_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D3_Q7
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D3_Q8
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: DocTuto_D4_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D4_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D4_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D4_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D4_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+  quoteFinished: 0
+  stickersAlreadyGiven: 
 --- !u!1 &507814980
 GameObject:
   m_ObjectHideFlags: 0
@@ -4653,7 +4737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandList: 0200000001000000
+  commandList: 020000000d000000000000000d00000001000000
   annexInformation:
   - objectToMove: {fileID: 0}
     direction: 0
@@ -4667,7 +4751,7 @@ MonoBehaviour:
       name: 
       state: 0
     image: {fileID: 0}
-  - objectToMove: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
     direction: 0
     time: 0
     newParent: {fileID: 0}
@@ -4676,7 +4760,43 @@ MonoBehaviour:
     Origin: {fileID: 0}
     newSceneName: 0
     boolNameAndState:
-      name: 
+      name: Walk
+      state: 1
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
       state: 0
     image: {fileID: 0}
   action: 0
@@ -5929,6 +6049,148 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 6}
   m_EdgeRadius: 0
+--- !u!1 &1633088060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1633088061}
+  - component: {fileID: 1633088065}
+  - component: {fileID: 1633088064}
+  - component: {fileID: 1633088063}
+  - component: {fileID: 1633088062}
+  m_Layer: 13
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1633088061
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633088060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.8, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2125820785}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1, y: 0.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1633088062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633088060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8977852694f8bc9469106f8e7c256594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionIcon: {fileID: 21300000, guid: 7580b9a4e8e5826458a86c4c41f93320, type: 3}
+--- !u!114 &1633088063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633088060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1633088064}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2125820786}
+        m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1633088064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633088060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1633088065
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633088060}
+  m_CullTransparentMesh: 0
 --- !u!1 &1640942360
 GameObject:
   m_ObjectHideFlags: 0
@@ -7365,3 +7627,116 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d6fdabd470b1f04d8f913e6cc0be723, type: 3}
+--- !u!1 &2125820784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2125820785}
+  - component: {fileID: 2125820789}
+  - component: {fileID: 2125820788}
+  - component: {fileID: 2125820787}
+  - component: {fileID: 2125820786}
+  m_Layer: 13
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2125820785
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125820784}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_Children:
+  - {fileID: 1633088061}
+  m_Father: {fileID: 489150085}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.36}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2125820786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125820784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa68f66bddbad204cb1721a0b15ec382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCinematic: 0
+--- !u!114 &2125820787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125820784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &2125820788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125820784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &2125820789
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125820784}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 758156766}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: -1720317733
+  m_SortingOrder: 20
+  m_TargetDisplay: 0
