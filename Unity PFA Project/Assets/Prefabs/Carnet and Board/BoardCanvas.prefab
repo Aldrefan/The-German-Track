@@ -482,6 +482,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1544457179}
   - component: {fileID: 1345703133}
+  - component: {fileID: 961263588}
+  - component: {fileID: 961263589}
   m_Layer: 5
   m_Name: Piles
   m_TagString: Untagged
@@ -510,7 +512,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -321, y: 0}
+  m_AnchoredPosition: {x: -521, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1345703133
@@ -532,6 +534,44 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &961263588
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544457178}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 90, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 60, y: 500}
+  m_EdgeRadius: 0
+--- !u!114 &961263589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544457178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4cae5f102ab68e45aaf9f6945dbf570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5670592617685141392
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +606,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -37.60785, y: 31.537762}
+  m_AnchoredPosition: {x: -82.8, y: 2.6}
   m_SizeDelta: {x: 400, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &165924044362449684
@@ -704,7 +744,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1720317733
   m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!114 &6555912083691328243
@@ -833,8 +873,8 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
-    numCapVertices: 0
+    numCornerVertices: 90
+    numCapVertices: 90
     alignment: 0
     textureMode: 0
     shadowBias: 0.5
@@ -925,6 +965,11 @@ MonoBehaviour:
   pileIndices: {fileID: 1121826059}
   pileFaits: {fileID: 209081086}
   "pileHypoth\xE8ses": {fileID: 1106152330}
+  profilesButton: {fileID: 0}
+  indicesButton: {fileID: 0}
+  faitsButton: {fileID: 0}
+  hypothesesButton: {fileID: 0}
+  pileHiderButton: {fileID: 0}
 --- !u!1 &6555912084367672830
 GameObject:
   m_ObjectHideFlags: 0

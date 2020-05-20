@@ -353,9 +353,16 @@ public class EventsCheck : MonoBehaviour
                 break;
 
             case "PierceFound":
+                //GameObject.Find("Door_01_01").GetComponent<BoxCollider2D>().enabled = false;
+                //RoomManager.RM.roomList[1].transform.GetChild(1).GetChild(0).GetComponent<BoxCollider2D>().enabled = false;
+                //RoomManager.RM.roomList[1].transform.GetChild(0).GetChild(4).gameObject.SetActive(true);
                 GameObject.Find("Door_01_01").GetComponent<BoxCollider2D>().enabled = false;
-                RoomManager.RM.roomList[1].transform.GetChild(1).GetChild(0).GetComponent<BoxCollider2D>().enabled = false;
+                GameObject.Find("CineTriggerBar").GetComponent<BoxCollider2D>().enabled = true;
                 carnetGoal.RemoveGoal(new GoalKeys("GoalName_02", "GoalDesc_02"));
+            break;
+
+            case "WhiteAim":
+                GameObject.Find("White").GetComponent<Animator>().Play("White_Degaine", 0);
             break;
 
             default:
