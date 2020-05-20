@@ -1029,7 +1029,7 @@ SpriteRenderer:
   m_Size: {x: 2.73, y: 0.83}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &302816800
@@ -1756,8 +1756,8 @@ MonoBehaviour:
   haveEvent: 0
   stickerAlreadyGivenList: 
   stickerRedirection:
-    stickerGivenList: 
-    redirectionList: 
+    stickerGivenList: 01000000
+    redirectionList: 05000000
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
@@ -1868,6 +1868,44 @@ MonoBehaviour:
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: DocTuto_D2_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D2_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D2_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D2_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D2_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D2_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D2_Q7
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D2_Q8
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger:
+        - FindPierce
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
@@ -2187,6 +2225,12 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &661768706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4019564226954291519, guid: 33ddad3a370b0824b848ab3b505bf613,
+    type: 3}
+  m_PrefabInstance: {fileID: 918401377}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &676928449
 GameObject:
   m_ObjectHideFlags: 0
@@ -3293,6 +3337,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079509042901775332, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_ChildAlignment
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
@@ -4534,7 +4583,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1287354157
@@ -5067,8 +5116,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2328780609122714872, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
         type: 3}
-      propertyPath: charactersInterfaces.Array.data[0].CanvasList.Array.size
-      value: 13
+      propertyPath: charactersInterfaces.Array.data[1].CanvasList.Array.size
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2328780609122714872, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
         type: 3}
@@ -5152,14 +5201,14 @@ PrefabInstance:
       objectReference: {fileID: 692445768}
     - target: {fileID: 2328780609122714872, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
         type: 3}
-      propertyPath: charactersInterfaces.Array.data[0].CanvasList.Array.data[12].CanvasName
+      propertyPath: charactersInterfaces.Array.data[1].CanvasList.Array.data[4].CanvasName
       value: QuitNotif
       objectReference: {fileID: 0}
     - target: {fileID: 2328780609122714872, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
         type: 3}
-      propertyPath: charactersInterfaces.Array.data[0].CanvasList.Array.data[12].CanvasGO
+      propertyPath: charactersInterfaces.Array.data[1].CanvasList.Array.data[4].CanvasGO
       value: 
-      objectReference: {fileID: 1084706891}
+      objectReference: {fileID: 661768706}
     - target: {fileID: 2328780609122714873, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
         type: 3}
       propertyPath: charactersList.Array.size
@@ -5645,7 +5694,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1551413601
@@ -6414,7 +6463,7 @@ SpriteRenderer:
   m_Size: {x: 0.5, y: 0.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!224 &1730731949 stripped
@@ -7165,7 +7214,7 @@ SpriteRenderer:
   m_Size: {x: 1.67, y: 0.43}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1886340151

@@ -248,7 +248,7 @@ public class Interactions : MonoBehaviour
     {
         if(Input.GetButtonDown("Cancel"))
         {
-            if(GameObject.Find("Tutorial").GetComponent<TutoKenneth>().canEsc && PNJContact.GetComponent<PNJ>().allDialogs.listOfDialogs[PNJContact.GetComponent<PNJ>().dialogIndex].canAskQuestions)
+            if(/*GameObject.Find("Tutorial").GetComponent<TutoKenneth>().canEsc &&*/ PNJContact.GetComponent<PNJ>().allDialogs.listOfDialogs[PNJContact.GetComponent<PNJ>().dialogIndex].canAskQuestions)
             {
                 PNJContact.GetComponent<PNJ>().EndDialog();
                 //Debug.Log("QuitDialog");

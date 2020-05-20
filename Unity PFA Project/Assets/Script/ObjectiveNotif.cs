@@ -54,28 +54,33 @@ public class ObjectiveNotif : MonoBehaviour
 
     void SetNotifVisible()
     {
+        CheckNullGoal();
+
         if(NotifQueue.Count !=0)
         {
 
-            if (notifText.text != NotifQueue[0].goalTitle)
+            if (!notifAtor.GetBool("Visible"))
             {
-
-                notifText.text = NotifQueue[0].goalTitle;
-                if (notifText.text != "")
+                if (notifText.text != NotifQueue[0].goalTitle || NotifQueue[0].goalAchieved != notifAtor.GetBool("ValidGoal"))
                 {
-                    if(notifAtor.GetBool("ValidGoal")!= NotifQueue[0].goalAchieved)
-                    {
-                        notifAtor.SetBool("ValidGoal", NotifQueue[0].goalAchieved);
-                        visibilityTime = 5;
-                    }
-                    else
-                    {
-                        visibilityTime = 3;
-                    }
-                    notifAtor.SetBool("Visible", true);
+                    notifText.text = NotifQueue[0].goalTitle;
 
+                    if (notifText.text != "")
+                    {
+                        if (notifAtor.GetBool("ValidGoal") != NotifQueue[0].goalAchieved)
+                        {
+                            notifAtor.SetBool("ValidGoal", NotifQueue[0].goalAchieved);
+                            visibilityTime = 5;
+                        }
+                        else
+                        {
+                            visibilityTime = 3;
+                        }
+                        notifAtor.SetBool("Visible", true);
+
+                        StartCoroutine(UnvisibleNotif());
+                    }
                 }
-                StartCoroutine(UnvisibleNotif());
             }
         }
     }
@@ -84,9 +89,12 @@ public class ObjectiveNotif : MonoBehaviour
 
     IEnumerator UnvisibleNotif()
     {
+        Debug.Log("6");
+
         yield return new WaitForSeconds(visibilityTime);
         if (notifAtor.GetBool("ValidGoal"))
         {
+
             notifAtor.SetBool("ValidGoal", false);
 
         }
@@ -94,7 +102,25 @@ public class ObjectiveNotif : MonoBehaviour
 
         if (NotifQueue.Count != 0)
         {
+            notifText.text = "";
             NotifQueue.RemoveAt(0);
+        }
+    }
+
+    void CheckNullGoal()
+    {
+        if (NotifQueue.Count != 0)
+        {
+
+            foreach (StringToNotif notif in NotifQueue)
+            {
+                Debug.Log(notif.goalTitle);
+                if (notif.goalTitle == null)
+                {
+                    NotifQueue.Remove(notif);
+                    return;
+                }
+            }
         }
     }
 }
