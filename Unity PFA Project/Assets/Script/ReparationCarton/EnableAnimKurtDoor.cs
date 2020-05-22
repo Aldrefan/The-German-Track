@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnableAnimKurtDoor : MonoBehaviour
 {
     GameObject kurtDoor;
+    GameObject KurtDoor => kurtDoor = kurtDoor ?? this.transform.parent.Find("doorKurt").gameObject;
     bool getKurt;
 
     void Start()
@@ -26,13 +27,10 @@ public class EnableAnimKurtDoor : MonoBehaviour
 
     void GetKurtDoor()
     {
-        if(!getKurt)
+        if(!getKurt && KurtDoor != null)
         {
-            if (this.transform.parent.Find("doorKurt"))
-            {
-                kurtDoor = this.transform.parent.Find("doorKurt").gameObject;
+
                 getKurt = true;
-            }
         }
     }
 

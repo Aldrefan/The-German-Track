@@ -342,12 +342,10 @@ public class EventsCheck : MonoBehaviour
             break;
 
             case "SpeakToPeople":
-                Debug.Log("SpeakToPeople");
                 carnetGoal.NewGoal(new GoalKeys("GoalName_01", "GoalDesc_01"));
                 break;
 
             case "FindPierce":
-                Debug.Log("FindPierce");
                 carnetGoal.RemoveGoal(new GoalKeys("GoalName_01", "GoalDesc_01"));
                 carnetGoal.NewGoal(new GoalKeys("GoalName_02", "GoalDesc_02"));
                 GameObject.Find("Door_01_01").GetComponent<BoxCollider2D>().enabled = true;
