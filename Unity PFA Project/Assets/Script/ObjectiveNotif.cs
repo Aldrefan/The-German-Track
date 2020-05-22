@@ -89,8 +89,6 @@ public class ObjectiveNotif : MonoBehaviour
 
     IEnumerator UnvisibleNotif()
     {
-        Debug.Log("6");
-
         yield return new WaitForSeconds(visibilityTime);
         if (notifAtor.GetBool("ValidGoal"))
         {
@@ -111,10 +109,8 @@ public class ObjectiveNotif : MonoBehaviour
     {
         if (NotifQueue.Count != 0)
         {
-
             foreach (StringToNotif notif in NotifQueue)
             {
-                Debug.Log(notif.goalTitle);
                 if (notif.goalTitle == null)
                 {
                     NotifQueue.Remove(notif);

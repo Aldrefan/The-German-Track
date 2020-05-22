@@ -43,7 +43,6 @@ public class CarnetGoal : MonoBehaviour
     {
         if (!goalList.Contains(goalkeys))
         {
-            Debug.Log(goalkeys.nameGoalKey);
             goalToDo++;
             goalList.Add(goalkeys);
             if(notif != null)
