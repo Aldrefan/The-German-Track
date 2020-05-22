@@ -62,6 +62,7 @@ public class ChangePNGTransition : MonoBehaviour
 
 }
 
+[System.Serializable]
 public class QuoteEvent
 {
     public int quoteIndex;
