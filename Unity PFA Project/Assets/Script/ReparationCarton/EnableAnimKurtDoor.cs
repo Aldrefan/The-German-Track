@@ -9,19 +9,19 @@ public class EnableAnimKurtDoor : MonoBehaviour
 
     void Start()
     {
-        this.GetComponent<BoxCollider2D>().enabled = false;
+        //this.GetComponent<BoxCollider2D>().enabled = false;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        GetKurtDoor();
+        /*GetKurtDoor();
         if(kurtDoor != null && getKurt == true)
         {
             this.GetComponent<BoxCollider2D>().enabled = true;
             Destroy(this);
-        }
+        }*/
     }
 
     void GetKurtDoor()
@@ -32,6 +32,24 @@ public class EnableAnimKurtDoor : MonoBehaviour
             {
                 kurtDoor = this.transform.parent.Find("doorKurt").gameObject;
                 getKurt = true;
+            }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.tag == "Player")
+        {
+            if(col.GetComponent<EventsCheck>().eventsList.Contains("OuvrirPorteKurt"))
+            {
+                if(GetComponent<DoorOpening>())
+                {
+                    GetComponent<DoorOpening>().enabled = true;
+                }
+                if(GetComponent<OutlineSystem>())
+                {
+                    GetComponent<OutlineSystem>().enabled = true;
+                }
             }
         }
     }

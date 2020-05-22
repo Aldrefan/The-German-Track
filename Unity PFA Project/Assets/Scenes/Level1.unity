@@ -14486,6 +14486,8 @@ MonoBehaviour:
     charSprite: {fileID: 21300000, guid: 0bdc80c93ce89e54a90cc4d6c5d649ad, type: 3}
   - charName: Dr. Lou Ellis
     charSprite: {fileID: 21300000, guid: 7b6c5ad84d59d2b4c8505d88c02dbd58, type: 3}
+  - charName: Marvin Meyer
+    charSprite: {fileID: 21300000, guid: d845f7e27312afc42a84ea461ff17a03, type: 3}
 --- !u!1 &415642687
 GameObject:
   m_ObjectHideFlags: 0
@@ -77250,6 +77252,26 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1156105002}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: profilesButton
+      value: 
+      objectReference: {fileID: 542954707}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: indicesButton
+      value: 
+      objectReference: {fileID: 997975828}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: faitsButton
+      value: 
+      objectReference: {fileID: 846076264}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: hypothesesButton
+      value: 
+      objectReference: {fileID: 354150989}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: pileHiderButton
+      value: 
+      objectReference: {fileID: 2105758323}
     - target: {fileID: 6555912083691328245, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -77360,26 +77382,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 741262399}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: profilesButton
-      value: 
-      objectReference: {fileID: 542954707}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: indicesButton
-      value: 
-      objectReference: {fileID: 997975828}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: faitsButton
-      value: 
-      objectReference: {fileID: 846076264}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: hypothesesButton
-      value: 
-      objectReference: {fileID: 354150989}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: pileHiderButton
-      value: 
-      objectReference: {fileID: 2105758323}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
 --- !u!1 &1836175599
@@ -79633,6 +79635,11 @@ PrefabInstance:
         type: 3}
       propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[1].newStickerIndexList.Array.data[0]
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123860177028353530, guid: db3d177d5cb9328429397b9f9245c057,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[26].isInLeftSide
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6415239986830347043, guid: db3d177d5cb9328429397b9f9245c057,
         type: 3}
