@@ -104,8 +104,8 @@ public class Clara_Cinematic : MonoBehaviour
             annexInformation[action].objectToMove.GetComponent<Rigidbody2D>().mass = 0;
             annexInformation[action].objectToMove.GetComponent<MovementsPlayer>().CheckSensAndFlip(annexInformation[action].direction);
         }
-        annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Talk", false);
-        annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Walk", true);
+        //annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Talk", false); // à voir
+        //annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Walk", true); // à voir
         yield return new WaitForSeconds(time);
         //GetComponent<BoxCollider2D>().enabled = true;
         //Debug.Log(GetComponent<BoxCollider2D>().enabled);
@@ -170,7 +170,7 @@ public class Clara_Cinematic : MonoBehaviour
     public void ExecuteCommand()
     {
         GameObject.Find("BlackBands").GetComponent<Animator>().SetBool("Cinematic", true);
-        if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.name == "Kenneth")
+        if(GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.name == "Kenneth" && GameObject.FindObjectOfType<ActiveCharacterScript>().actualCharacter.GetComponent<Interactions>().state != Interactions.State.InCinematic)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Interactions>().ChangeState(Interactions.State.InCinematic);
         }
@@ -293,10 +293,10 @@ public class Clara_Cinematic : MonoBehaviour
 
     void SetAnimBool()
     {
-        if(annexInformation[action].objectToMove.name == "Kenneth" && annexInformation[action].boolNameAndState.state)
-        {annexInformation[action].objectToMove.GetComponent<MovementsPlayer>().enabled = false;}
-        else if(annexInformation[action].objectToMove.name == "Kenneth" && !annexInformation[action].boolNameAndState.state)
-        {annexInformation[action].objectToMove.GetComponent<MovementsPlayer>().enabled = true;}
+        if(annexInformation[action].objectToMove.tag == "Player")
+        {
+            annexInformation[action].objectToMove.GetComponent<MovementsPlayer>().enabled = !annexInformation[action].boolNameAndState.state;
+        }
         annexInformation[action].objectToMove.GetComponent<Animator>().SetBool(annexInformation[action].boolNameAndState.name, annexInformation[action].boolNameAndState.state);
         CheckIndex();
     }

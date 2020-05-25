@@ -86,12 +86,19 @@ public class Tooltip : MonoBehaviour
 
     void showTooltip()
     {
-        if (!tutoObject.GetComponent<TutoKenneth>().isInHelp && !characKenneth.GetComponent<Interactions>().isOnTooltip)
+        if(tutoObject != null)
+        {
+            if (!tutoObject.GetComponent<TutoKenneth>().isInHelp && !characKenneth.GetComponent<Interactions>().isOnTooltip)
+            {
+                tooltip.SetActive(true);
+                characKenneth.GetComponent<Interactions>().isOnTooltip = true;
+            }
+        }
+        else if(!characKenneth.GetComponent<Interactions>().isOnTooltip)
         {
             tooltip.SetActive(true);
             characKenneth.GetComponent<Interactions>().isOnTooltip = true;
         }
-        //else do nothing
     }
 
     void hideTooltip()

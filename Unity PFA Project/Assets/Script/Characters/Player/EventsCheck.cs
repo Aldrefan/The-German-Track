@@ -139,6 +139,11 @@ public class EventsCheck : MonoBehaviour
             }
         }
 
+        if(col.name == "TestCollider")
+        {
+            CheckEvents("changelouisetest");
+        }
+
         /*if(col.name == "Lamp")
         {
             col.transform.GetChild(0).gameObject.SetActive(true);
@@ -368,6 +373,10 @@ public class EventsCheck : MonoBehaviour
             case "Bar_Panic":
                 GameObject.Find("Louise").GetComponent<Animator>().Play("Louise_Crouch", 0);
                 GameObject.Find("Dr").GetComponent<Animator>().Play("Dr_Idle_Crouch", 0);
+            break;
+
+            case "changelouisetest":
+                DialogueChanger.DialChangr.ChangeDialogueComponent("Louise2");
             break;
 
             default:

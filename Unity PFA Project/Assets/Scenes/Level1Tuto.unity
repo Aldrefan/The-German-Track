@@ -676,7 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandList: 020000000d000000000000000d00000010000000020000000d000000000000000d00000010000000
+  commandList: 020000000d000000000000000d000000100000000200000004000000110000000d000000000000000d00000010000000
   annexInformation:
   - objectToMove: {fileID: 2090050628}
     direction: 0
@@ -699,7 +699,7 @@ MonoBehaviour:
     Origin: {fileID: 0}
     newSceneName: 0
     boolNameAndState:
-      name: Walk
+      name: Run
       state: 1
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
@@ -715,15 +715,15 @@ MonoBehaviour:
       state: 1
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
-    direction: 0.1
-    time: 0.5
+    direction: 0.4
+    time: 0.1
     newParent: {fileID: 0}
     newPosition: {fileID: 0}
     clip: {fileID: 0}
     Origin: {fileID: 0}
     newSceneName: 0
     boolNameAndState:
-      name: Walk
+      name: Run
       state: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 1897290523}
@@ -750,8 +750,44 @@ MonoBehaviour:
       name: Door_03_01
       state: 0
     image: {fileID: 0}
-  - objectToMove: {fileID: 2090050628}
+  - objectToMove: {fileID: 809024011}
     direction: 0.1
+    time: 0.5
+    newParent: {fileID: 1647229378}
+    newPosition: {fileID: 883031067}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+    image: {fileID: 0}
+  - objectToMove: {fileID: 809024011}
+    direction: 0.15
+    time: 2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.15
+    time: 2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Run
+      state: 1
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.4
     time: 0.5
     newParent: {fileID: 0}
     newPosition: {fileID: 0}
@@ -760,7 +796,7 @@ MonoBehaviour:
     newSceneName: 0
     boolNameAndState:
       name: Walk
-      state: 1
+      state: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0.15
@@ -771,19 +807,7 @@ MonoBehaviour:
     Origin: {fileID: 0}
     newSceneName: 0
     boolNameAndState:
-      name: Walk
-      state: 1
-    image: {fileID: 0}
-  - objectToMove: {fileID: 2090050628}
-    direction: 0.15
-    time: 2
-    newParent: {fileID: 0}
-    newPosition: {fileID: 0}
-    clip: {fileID: 0}
-    Origin: {fileID: 0}
-    newSceneName: 0
-    boolNameAndState:
-      name: Walk
+      name: Run
       state: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 967617677}
@@ -1029,7 +1053,7 @@ SpriteRenderer:
   m_Size: {x: 2.73, y: 0.83}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &302816800
@@ -1366,6 +1390,26 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2090050628}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: profilesButton
+      value: 
+      objectReference: {fileID: 8626446}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: indicesButton
+      value: 
+      objectReference: {fileID: 1730731949}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: faitsButton
+      value: 
+      objectReference: {fileID: 262853174}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: hypothesesButton
+      value: 
+      objectReference: {fileID: 834632472}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: pileHiderButton
+      value: 
+      objectReference: {fileID: 1900250185}
     - target: {fileID: 6555912083691328245, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1476,26 +1520,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 758156766}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: profilesButton
-      value: 
-      objectReference: {fileID: 8626446}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: indicesButton
-      value: 
-      objectReference: {fileID: 1730731949}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: faitsButton
-      value: 
-      objectReference: {fileID: 262853174}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: hypothesesButton
-      value: 
-      objectReference: {fileID: 834632472}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: pileHiderButton
-      value: 
-      objectReference: {fileID: 1900250185}
     - target: {fileID: 6555912083281020971, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1737,6 +1761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42e2931e074924498f4d6e6e9928a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quoteToChange: []
 --- !u!114 &489150090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1769,8 +1794,8 @@ MonoBehaviour:
   haveEvent: 0
   stickerAlreadyGivenList: 
   stickerRedirection:
-    stickerGivenList: 01000000
-    redirectionList: 05000000
+    stickerGivenList: 010000000e000000
+    redirectionList: 0500000006000000
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
@@ -1923,6 +1948,44 @@ MonoBehaviour:
       hasChoices: 0
       endDialog: 0
       buttonsList: []
+    - dialog:
+      - quote: DocTuto_D3_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D3_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D3_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D3_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D3_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D3_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 09000000
+        eventTrigger: []
+      - quote: DocTuto_D3_Q7
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D3_Q8
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger:
+        - FindPierce
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
   quoteFinished: 0
   stickersAlreadyGiven: 
 --- !u!1 &507814980
@@ -2010,6 +2073,138 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507814980}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 758156766}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: -1720317733
+  m_SortingOrder: 20
+  m_TargetDisplay: 0
+--- !u!1 &516107640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 516107641}
+  - component: {fileID: 516107646}
+  - component: {fileID: 516107645}
+  - component: {fileID: 516107644}
+  - component: {fileID: 516107642}
+  - component: {fileID: 516107643}
+  m_Layer: 13
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &516107641
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516107640}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 1}
+  m_Children:
+  - {fileID: 685647752}
+  m_Father: {fileID: 904436868}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.3562498}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &516107642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516107640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa68f66bddbad204cb1721a0b15ec382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCinematic: 0
+--- !u!114 &516107643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516107640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9bd3fc228bf084fa6fbb3984f58658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterNameReference: RenardTuto
+  realCharacterName: Renard
+  haveEvent: 0
+  dialogList: []
+  eventPositionsInDialog: []
+  stickersPositionsInDialogs: []
+--- !u!114 &516107644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516107640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &516107645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516107640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &516107646
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516107640}
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
@@ -2238,6 +2433,148 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &651211367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 651211368}
+  - component: {fileID: 651211372}
+  - component: {fileID: 651211371}
+  - component: {fileID: 651211370}
+  - component: {fileID: 651211369}
+  m_Layer: 13
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &651211368
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651211367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.8, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1175842198}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1, y: 0.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &651211369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651211367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8977852694f8bc9469106f8e7c256594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionIcon: {fileID: 21300000, guid: 7580b9a4e8e5826458a86c4c41f93320, type: 3}
+--- !u!114 &651211370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651211367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 651211371}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1175842199}
+        m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &651211371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651211367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &651211372
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651211367}
+  m_CullTransparentMesh: 0
 --- !u!1 &661768706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4019564226954291519, guid: 33ddad3a370b0824b848ab3b505bf613,
@@ -2286,7 +2623,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &683410719 stripped
 Transform:
@@ -2294,6 +2631,148 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1102468673}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &685647751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 685647752}
+  - component: {fileID: 685647756}
+  - component: {fileID: 685647755}
+  - component: {fileID: 685647754}
+  - component: {fileID: 685647753}
+  m_Layer: 13
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &685647752
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685647751}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.8, z: 1}
+  m_Children: []
+  m_Father: {fileID: 516107641}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1, y: 0.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &685647753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685647751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8977852694f8bc9469106f8e7c256594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionIcon: {fileID: 21300000, guid: 7580b9a4e8e5826458a86c4c41f93320, type: 3}
+--- !u!114 &685647754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685647751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 685647755}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 516107642}
+        m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &685647755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685647751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &685647756
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685647751}
+  m_CullTransparentMesh: 0
 --- !u!1 &692445768 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5765427714366228704, guid: c215d4d3046bf0643a8f2e3034d8dd79,
@@ -2529,7 +3008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandList: 02000000010000000d000000000000000d000000020000000800000010000000020000000d000000000000000d000000020000001100000004000000020000000000000012000000
+  commandList: 02000000010000000d000000000000000d000000020000000800000010000000020000000d000000000000000d00000002000000
   annexInformation:
   - objectToMove: {fileID: 0}
     direction: 0
@@ -2680,66 +3159,6 @@ MonoBehaviour:
     time: 0.3
     newParent: {fileID: 0}
     newPosition: {fileID: 0}
-    clip: {fileID: 0}
-    Origin: {fileID: 0}
-    newSceneName: 0
-    boolNameAndState:
-      name: Walk
-      state: 0
-    image: {fileID: 0}
-  - objectToMove: {fileID: 809024011}
-    direction: 0.07
-    time: 0.3
-    newParent: {fileID: 1647229378}
-    newPosition: {fileID: 1248334585}
-    clip: {fileID: 0}
-    Origin: {fileID: 0}
-    newSceneName: 0
-    boolNameAndState:
-      name: Walk
-      state: 0
-    image: {fileID: 0}
-  - objectToMove: {fileID: 809024011}
-    direction: 0.07
-    time: 0.3
-    newParent: {fileID: 1647229378}
-    newPosition: {fileID: 1248334585}
-    clip: {fileID: 0}
-    Origin: {fileID: 0}
-    newSceneName: 0
-    boolNameAndState:
-      name: Walk
-      state: 0
-    image: {fileID: 0}
-  - objectToMove: {fileID: 809024011}
-    direction: 0.07
-    time: 0.3
-    newParent: {fileID: 1647229378}
-    newPosition: {fileID: 1248334585}
-    clip: {fileID: 0}
-    Origin: {fileID: 0}
-    newSceneName: 0
-    boolNameAndState:
-      name: Walk
-      state: 0
-    image: {fileID: 0}
-  - objectToMove: {fileID: 809024011}
-    direction: 0.07
-    time: 2
-    newParent: {fileID: 1647229378}
-    newPosition: {fileID: 1248334585}
-    clip: {fileID: 0}
-    Origin: {fileID: 0}
-    newSceneName: 0
-    boolNameAndState:
-      name: Walk
-      state: 0
-    image: {fileID: 0}
-  - objectToMove: {fileID: 1989209358}
-    direction: 0.07
-    time: 1
-    newParent: {fileID: 1647229378}
-    newPosition: {fileID: 1248334585}
     clip: {fileID: 0}
     Origin: {fileID: 0}
     newSceneName: 0
@@ -3049,6 +3468,36 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 302816800}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &883031066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 883031067}
+  m_Layer: 0
+  m_Name: WhiteTeleport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &883031067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883031066}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.451, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1589111848}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &904436867
 GameObject:
   m_ObjectHideFlags: 0
@@ -3061,6 +3510,8 @@ GameObject:
   - component: {fileID: 904436871}
   - component: {fileID: 904436870}
   - component: {fileID: 904436869}
+  - component: {fileID: 904436872}
+  - component: {fileID: 904436873}
   m_Layer: 0
   m_Name: Renard
   m_TagString: PNJinteractable
@@ -3078,7 +3529,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 11.64, y: -0.21, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 516107641}
   m_Father: {fileID: 1647229378}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3175,6 +3627,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &904436872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904436867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd484f8f0d7255489c5d23a7103bad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &904436873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904436867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9bd3fc228bf084fa6fbb3984f58658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterNameReference: RenardTuto
+  realCharacterName: Renard
+  haveEvent: 0
+  dialogList: []
+  eventPositionsInDialog: []
+  stickersPositionsInDialogs: []
 --- !u!1 &907583978
 GameObject:
   m_ObjectHideFlags: 0
@@ -3538,6 +4020,7 @@ GameObject:
   - component: {fileID: 1082112287}
   - component: {fileID: 1082112286}
   - component: {fileID: 1082112285}
+  - component: {fileID: 1082112289}
   - component: {fileID: 1082112288}
   m_Layer: 0
   m_Name: Louise
@@ -3556,7 +4039,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.7, y: -0.3, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1175842198}
   m_Father: {fileID: 1647229378}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3674,7 +4158,7 @@ MonoBehaviour:
   stickerAlreadyGivenList: 
   stickerRedirection:
     stickerGivenList: 01000000
-    redirectionList: 02000000
+    redirectionList: 04000000
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
@@ -3683,7 +4167,7 @@ MonoBehaviour:
     - dialog:
       - quote: LouiseTuto_D0_Q1
         isInLeftSide: 1
-        newStickerIndexList: 
+        newStickerIndexList: 02000000
         eventTrigger: []
       - quote: LouiseTuto_D0_Q2
         isInLeftSide: 0
@@ -3694,24 +4178,26 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: LouiseTuto_D1_Q1
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D1_Q2
+      - quote: LouiseTuto_D9_Q1
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-      - quote: LouiseTuto_D1_Q3
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D1_Q4
+      canAskQuestions: 1
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D7_Q1
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-      - quote: LouiseTuto_D1_Q5
-        isInLeftSide: 1
+      canAskQuestions: 1
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D8_Q1
+        isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
       canAskQuestions: 1
@@ -3755,208 +4241,81 @@ MonoBehaviour:
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-      canAskQuestions: 1
-      hasChoices: 0
-      endDialog: 0
-      buttonsList: []
-    - dialog:
-      - quote: LouiseTuto_D3_Q1
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D3_Q2
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D3_Q3
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D3_Q4
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D3_Q5
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D3_Q6
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
       canAskQuestions: 0
       hasChoices: 0
-      endDialog: 0
-      buttonsList: []
-    - dialog:
-      - quote: LouiseTuto_D4_Q1
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q2
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q3
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q4
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q5
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q6
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      canAskQuestions: 0
-      hasChoices: 0
-      endDialog: 0
-      buttonsList: []
-    - dialog:
-      - quote: LouiseTuto_D5_Q1
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q2
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q3
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q4
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q5
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q6
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q7
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q8
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q9
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q10
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q11
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q12
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      canAskQuestions: 0
-      hasChoices: 0
-      endDialog: 0
-      buttonsList: []
-    - dialog:
-      - quote: LouiseTuto_D6_Q1
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q2
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q3
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q4
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q5
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q6
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q7
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q8
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q9
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q10
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q11
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q12
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q13
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q14
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q15
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q16
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q17
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q18
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q19
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D6_Q20
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      canAskQuestions: 0
-      hasChoices: 0
-      endDialog: 0
+      endDialog: 1
       buttonsList: []
   quoteFinished: 0
   stickersAlreadyGiven: 
+--- !u!114 &1082112289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082112283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd484f8f0d7255489c5d23a7103bad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1102129294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1102129295}
+  - component: {fileID: 1102129296}
+  m_Layer: 0
+  m_Name: TestCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1102129295
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102129294}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1102129296
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102129294}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &1102468673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4012,7 +4371,7 @@ PrefabInstance:
     - target: {fileID: 8365423122775060024, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8365423122775060024, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
@@ -4244,7 +4603,7 @@ PrefabInstance:
     - target: {fileID: 8365423122775060024, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8365423122775060024, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
@@ -4426,6 +4785,119 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a7764dea8f5c1f48b1e59fd46cd0148, type: 3}
+--- !u!1 &1175842197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1175842198}
+  - component: {fileID: 1175842202}
+  - component: {fileID: 1175842201}
+  - component: {fileID: 1175842200}
+  - component: {fileID: 1175842199}
+  m_Layer: 13
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1175842198
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175842197}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 1}
+  m_Children:
+  - {fileID: 651211368}
+  m_Father: {fileID: 1082112284}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.36749983}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1175842199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175842197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa68f66bddbad204cb1721a0b15ec382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCinematic: 0
+--- !u!114 &1175842200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175842197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1175842201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175842197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1175842202
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175842197}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 758156766}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: -1720317733
+  m_SortingOrder: 20
+  m_TargetDisplay: 0
 --- !u!1 &1178867226
 GameObject:
   m_ObjectHideFlags: 0
@@ -4493,8 +4965,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1248334585}
+  - component: {fileID: 1248334587}
+  - component: {fileID: 1248334586}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: DialogChanger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4512,8 +4986,220 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1248334586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248334584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: Louise
+  dialogLine: 0
+  dialogIndex: 0
+  transitionQuote: 2
+  negativeQuote: 3
+  haveEvent: 0
+  stickerAlreadyGivenList: 
+  stickerRedirection:
+    stickerGivenList: 030000000f0000000d000000
+    redirectionList: 040000000500000006000000
+  eventRedirection:
+    eventGivenList: []
+    redirectionEventList: 
+  allDialogs:
+    listOfDialogs:
+    - dialog:
+      - quote: LouiseTuto_D0_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D0_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D1_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D1_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D1_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D1_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D1_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D11_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D10_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D3_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D3_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D3_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D3_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D3_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D3_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D4_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D4_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D4_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D4_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D4_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D4_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D5_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q6
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q7
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q8
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q9
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q10
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q11
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q12
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+  quoteFinished: 0
+  stickersAlreadyGiven: 
+--- !u!114 &1248334587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248334584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 876d8f1d4544b4340b2747670eccb6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - modificationName: Louise2
+    characterToModify: {fileID: 1082112283}
+    newComponent: {fileID: 1248334586}
 --- !u!1 &1267348955
 GameObject:
   m_ObjectHideFlags: 0
@@ -4590,7 +5276,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1287354157
@@ -5716,7 +6402,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1551413601
@@ -5978,7 +6664,7 @@ PrefabInstance:
     - target: {fileID: 8365423122775060024, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8365423122775060024, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
@@ -6038,7 +6724,7 @@ PrefabInstance:
     - target: {fileID: 8365423124195330392, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6476395100212477238, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
@@ -6485,7 +7171,7 @@ SpriteRenderer:
   m_Size: {x: 0.5, y: 0.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!224 &1730731949 stripped
@@ -6907,7 +7593,7 @@ PrefabInstance:
     - target: {fileID: 8365423122775060024, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8365423122775060024, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
@@ -7236,7 +7922,7 @@ SpriteRenderer:
   m_Size: {x: 1.67, y: 0.43}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1886340151
