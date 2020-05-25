@@ -17,10 +17,13 @@ public class ChangePNGTransition : MonoBehaviour
 
     private void Update()
     {
-        if (!eventListInCheck)
+        if (playerEventsCheck !=null && playerEventsCheck.eventsList.Count != 0)
         {
-            eventListInCheck = true;
-            StartCoroutine(CheckEventList());
+            if (!eventListInCheck)
+            {
+                eventListInCheck = true;
+                StartCoroutine(CheckEventList());
+            }
         }
 
         if(transitionIndex != 0)
