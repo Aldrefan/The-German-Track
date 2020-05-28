@@ -370,6 +370,7 @@ public class EventsCheck : MonoBehaviour
                 GameObject.Find("Louise").GetComponent<Animator>().Play("Louise_Wake", 0);
                 DialogueChanger.DialChangr.ChangeDialogueComponent("Louise2");
                 DialogueChanger.DialChangr.ChangeDialogueComponent("Renard2");
+                carnetGoal.NewGoal(new GoalKeys("GoalName_03", "GoalDesc_03"));
             break;
 
             case "Bar_Panic":
