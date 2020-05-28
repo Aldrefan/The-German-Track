@@ -9,7 +9,8 @@ public class EventsCheck : MonoBehaviour
     public GameObject EtiquetteLaissezPasser;
     public List<GameObject> appartmentKurtLocked;
 
-
+    PlayerMemory playerMemory;
+    PlayerMemory PlayerMemory => playerMemory = playerMemory ?? GameObject.FindObjectOfType<PlayerMemory>();
     CarnetGoal carnetGoal;
 
     // Start is called before the first frame update
@@ -24,6 +25,8 @@ public class EventsCheck : MonoBehaviour
         {
             UnlockKurtAppartment();
         }
+
+        
         
     }
 
@@ -216,6 +219,18 @@ public class EventsCheck : MonoBehaviour
         }
     }
 
+    void PierceFounded()
+    {
+        foreach (Transform childTransform in CanvasManager.CManager.GetCanvas("CarnetPanel").transform.Find("Carnet").Find("Characters").Find("Page(Clone)"))
+        {
+            if(childTransform.GetComponent<Sticker_Display>().sticker.index == 1)
+            {
+                childTransform.GetComponent<Sticker_Display>().sticker = PlayerMemory.stickersScriptableList[16];
+                childTransform.GetComponent<Sticker_Display>().SetInformations();
+            }
+        }
+    }
+
     void OnTriggerExit2D(Collider2D col)
     {
         if(col.name == "Fauteuil")
@@ -363,6 +378,7 @@ public class EventsCheck : MonoBehaviour
                 GameObject.Find("Door_01_01").GetComponent<BoxCollider2D>().enabled = false;
                 GameObject.Find("CineTriggerBar").GetComponent<BoxCollider2D>().enabled = true;
                 carnetGoal.RemoveGoal(new GoalKeys("GoalName_02", "GoalDesc_02"));
+                PierceFounded();
                 break;
 
             case "WhiteAim":

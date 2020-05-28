@@ -1871,6 +1871,11 @@ MonoBehaviour:
     tutoCase: Interroger
     tutoNameKey: TutoName_03
     tutoDescKey: TutoDesc_03
+  - active: 0
+    index: 1
+    tutoCase: SortirConv
+    tutoNameKey: TutoName_04
+    tutoDescKey: TutoDesc_04
 --- !u!1 &402667081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6555912083691328246, guid: 95356b6030096ed40b6d2763e348a71a,
@@ -3964,39 +3969,56 @@ PrefabInstance:
       propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7689664847967823719, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664847967823719, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664847967823719, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664847967823719, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664847967823719, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664847967823719, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664847967823719, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664847967823719, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7689664848417164065, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
---- !u!224 &834632472 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 354150989, guid: 883065d35bf8001418b4f638f428c3ca,
-    type: 3}
-  m_PrefabInstance: {fileID: 302816800}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &883031066
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 820012258}
-  - component: {fileID: 820012257}
-  m_Layer: 0
-  m_Name: Louise3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &820012257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820012256}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
@@ -4176,7 +4198,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820012256}
+  m_GameObject: {fileID: 1153687114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -10287,6 +10309,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a7764dea8f5c1f48b1e59fd46cd0148, type: 3}
+--- !u!1 &1153687114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 820012258}
+  m_Layer: 0
+  m_Name: Recovery GameObject (820012258)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1175842197
 GameObject:
   m_ObjectHideFlags: 0
