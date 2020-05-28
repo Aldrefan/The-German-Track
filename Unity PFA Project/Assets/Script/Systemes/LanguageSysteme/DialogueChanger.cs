@@ -34,5 +34,6 @@ public class DialogueChanger : MonoBehaviour
         oldComponent.haveEvent = DC.newComponent.haveEvent;
         oldComponent.stickerAlreadyGivenList = DC.newComponent.stickerAlreadyGivenList;
         oldComponent.stickersAlreadyGiven = DC.newComponent.stickersAlreadyGiven;
+        Debug.Log("changeDialog");
     }
 }

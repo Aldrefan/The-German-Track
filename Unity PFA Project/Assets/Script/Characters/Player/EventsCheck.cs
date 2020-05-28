@@ -139,10 +139,10 @@ public class EventsCheck : MonoBehaviour
             }
         }
 
-        if(col.name == "TestCollider")
+        /*if(col.name == "TestCollider")
         {
             CheckEvents("changelouisetest");
-        }
+        }*/
 
         /*if(col.name == "Lamp")
         {
@@ -368,15 +368,13 @@ public class EventsCheck : MonoBehaviour
             case "WhiteAim":
                 GameObject.Find("White").GetComponent<Animator>().Play("White_Degaine", 0);
                 GameObject.Find("Louise").GetComponent<Animator>().Play("Louise_Wake", 0);
+                DialogueChanger.DialChangr.ChangeDialogueComponent("Louise2");
+                DialogueChanger.DialChangr.ChangeDialogueComponent("Renard2");
             break;
 
             case "Bar_Panic":
                 GameObject.Find("Louise").GetComponent<Animator>().Play("Louise_Crouch", 0);
                 GameObject.Find("Dr").GetComponent<Animator>().Play("Dr_Idle_Crouch", 0);
-            break;
-
-            case "changelouisetest":
-                DialogueChanger.DialChangr.ChangeDialogueComponent("Louise2");
             break;
 
             default:
