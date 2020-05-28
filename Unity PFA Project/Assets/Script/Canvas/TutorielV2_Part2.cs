@@ -67,6 +67,7 @@ public class TutorielV2_Part2 : MonoBehaviour
                 {
                     if (!notifOpen)
                     {
+
                         notifNeedToBeOpen = true;
                         OpenCloseNotif(finalPos);
                     }
@@ -83,10 +84,6 @@ public class TutorielV2_Part2 : MonoBehaviour
                 OpenCloseNotif(originalPos);
             }
 
-        }
-
-        if (tutoList.Count >= actualIndex + 1 && !tutoList[actualIndex].active)
-        {
             if (tutoList[actualIndex].tutoCase == "SortirConv")
             {
                 if (playerInteractions.state == Interactions.State.InDialog && playerInteractions.PNJContact.GetComponent<PNJ>().dialogIndex == 2)
@@ -97,7 +94,7 @@ public class TutorielV2_Part2 : MonoBehaviour
                         OpenCloseNotif(finalPos);
                     }
                 }
-                else if (playerInteractions.state == Interactions.State.Normal && playerInteractions.PNJContact != null)
+                else if (playerInteractions.state == Interactions.State.Normal && playerInteractions.PNJContact ==null)
                 {
                     tutoList[actualIndex].active = true;
                     actualIndex++;
@@ -110,13 +107,20 @@ public class TutorielV2_Part2 : MonoBehaviour
             }
 
         }
+        else if (notifOpen && !notifNeedToBeOpen)
+        {
+            OpenCloseNotif(originalPos);
+        }
     }
 
     void OpenCloseNotif(Vector3 destination)
     {
-        notifName.text = tutoList[actualIndex].tutoNameKey;
-        notifDesc.text = tutoList[actualIndex].tutoDescKey;
-        notifScrollbar.value = 1;
+        if (tutoList.Count > actualIndex)
+        {
+            notifName.text = tutoList[actualIndex].tutoNameKey;
+            notifDesc.text = tutoList[actualIndex].tutoDescKey;
+            notifScrollbar.value = 1;
+        }
 
         if (Vector3.Distance(notif.GetComponent<RectTransform>().anchoredPosition, destination) > 0.1f)
         {
