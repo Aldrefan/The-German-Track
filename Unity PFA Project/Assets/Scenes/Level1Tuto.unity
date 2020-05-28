@@ -1251,7 +1251,7 @@ SpriteRenderer:
   m_Size: {x: 2.73, y: 0.83}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &302816800
@@ -3616,6 +3616,7 @@ GameObject:
   - component: {fileID: 809024013}
   - component: {fileID: 809024015}
   - component: {fileID: 809024014}
+  - component: {fileID: 809024016}
   m_Layer: 0
   m_Name: White
   m_TagString: PNJinteractable
@@ -3730,6 +3731,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.6}
   m_EdgeRadius: 0
+--- !u!114 &809024016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809024011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e83e6d523e418864eadccdfbd1a0b1c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boolList:
+  - boolName: Aim
+    state: 0
 --- !u!1001 &815192652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3897,9 +3913,19 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7689664849531536598, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7689664849014035018, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664849014035018, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7689664848496456132, guid: cfa18aeac2c400845a0170be6645f8fe,
@@ -3967,36 +3993,13 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7689664848417164065, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
---- !u!224 &834632472 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 354150989, guid: 883065d35bf8001418b4f638f428c3ca,
-    type: 3}
-  m_PrefabInstance: {fileID: 302816800}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &883031066
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 820012258}
-  - component: {fileID: 820012257}
-  m_Layer: 0
-  m_Name: Louise3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &820012257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820012256}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
@@ -4176,7 +4179,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820012256}
+  m_GameObject: {fileID: 1703261106}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -4214,7 +4217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883031066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.333, y: 0, z: 0}
+  m_LocalPosition: {x: 2.789, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1589111848}
@@ -4234,6 +4237,7 @@ GameObject:
   - component: {fileID: 904436869}
   - component: {fileID: 904436872}
   - component: {fileID: 904436873}
+  - component: {fileID: 904436874}
   m_Layer: 0
   m_Name: Renard
   m_TagString: PNJinteractable
@@ -4456,6 +4460,23 @@ MonoBehaviour:
       buttonsList: []
   quoteFinished: 0
   stickersAlreadyGiven: 
+--- !u!114 &904436874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904436867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e83e6d523e418864eadccdfbd1a0b1c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boolList:
+  - boolName: Aim
+    state: 0
+  - boolName: Hurt
+    state: 0
 --- !u!1 &907583978
 GameObject:
   m_ObjectHideFlags: 0
@@ -9524,6 +9545,7 @@ GameObject:
   - component: {fileID: 1082112285}
   - component: {fileID: 1082112289}
   - component: {fileID: 1082112288}
+  - component: {fileID: 1082112290}
   m_Layer: 0
   m_Name: Louise
   m_TagString: PNJinteractable
@@ -9761,6 +9783,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd484f8f0d7255489c5d23a7103bad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1082112290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082112283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e83e6d523e418864eadccdfbd1a0b1c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boolList:
+  - boolName: Wake
+    state: 0
+  - boolName: Crouch
+    state: 0
 --- !u!1 &1102129294
 GameObject:
   m_ObjectHideFlags: 0
@@ -10590,7 +10629,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1287354157
@@ -11736,7 +11775,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1551413601
@@ -11754,12 +11793,12 @@ PrefabInstance:
     - target: {fileID: 5683084735798226271, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -56
+      value: -5.2
       objectReference: {fileID: 0}
     - target: {fileID: 5683084735798226271, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: 33.1
       objectReference: {fileID: 0}
     - target: {fileID: 5683084735798226271, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
@@ -12704,6 +12743,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7190352826c191e4682d58c805a3f006, type: 3}
+--- !u!1 &1703261106
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 820012258}
+  m_Layer: 0
+  m_Name: Recovery GameObject (820012258)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1730295305
 GameObject:
   m_ObjectHideFlags: 0
@@ -12780,7 +12835,7 @@ SpriteRenderer:
   m_Size: {x: 0.5, y: 0.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!224 &1730731949 stripped
@@ -13632,7 +13687,7 @@ SpriteRenderer:
   m_Size: {x: 1.67, y: 0.43}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1886340151

@@ -366,8 +366,10 @@ public class EventsCheck : MonoBehaviour
                 break;
 
             case "WhiteAim":
-                GameObject.Find("White").GetComponent<Animator>().Play("White_Degaine", 0);
-                GameObject.Find("Louise").GetComponent<Animator>().Play("Louise_Wake", 0);
+                GameObject.Find("White").GetComponent<Animator>().SetBool("Aim", true);
+                GameObject.Find("White").GetComponent<PNJStates>().boolList.Find(x => x.boolName == "Aim").state = true;
+                GameObject.Find("Louise").GetComponent<Animator>().SetBool("Wake", true);
+                GameObject.Find("Louise").GetComponent<PNJStates>().boolList.Find(x => x.boolName == "Wake").state = true;
                 DialogueChanger.DialChangr.ChangeDialogueComponent("Louise2");
                 DialogueChanger.DialChangr.ChangeDialogueComponent("Renard2");
                 carnetGoal.NewGoal(new GoalKeys("GoalName_03", "GoalDesc_03"));
