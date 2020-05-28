@@ -363,7 +363,7 @@ public class EventsCheck : MonoBehaviour
                 GameObject.Find("Door_01_01").GetComponent<BoxCollider2D>().enabled = false;
                 GameObject.Find("CineTriggerBar").GetComponent<BoxCollider2D>().enabled = true;
                 carnetGoal.RemoveGoal(new GoalKeys("GoalName_02", "GoalDesc_02"));
-            break;
+                break;
 
             case "WhiteAim":
                 GameObject.Find("White").GetComponent<Animator>().Play("White_Degaine", 0);
