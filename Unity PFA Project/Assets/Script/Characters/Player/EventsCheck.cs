@@ -219,7 +219,7 @@ public class EventsCheck : MonoBehaviour
         }
     }
 
-    void PierceFounded()
+    void PierceFound()
     {
         foreach (Transform childTransform in CanvasManager.CManager.GetCanvas("CarnetPanel").transform.Find("Carnet").Find("Characters").Find("Page(Clone)"))
         {
@@ -378,7 +378,7 @@ public class EventsCheck : MonoBehaviour
                 GameObject.Find("Door_01_01").GetComponent<BoxCollider2D>().enabled = false;
                 GameObject.Find("CineTriggerBar").GetComponent<BoxCollider2D>().enabled = true;
                 carnetGoal.RemoveGoal(new GoalKeys("GoalName_02", "GoalDesc_02"));
-                PierceFounded();
+                PierceFound();
                 break;
 
             case "WhiteAim":
