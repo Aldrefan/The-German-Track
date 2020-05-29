@@ -2105,7 +2105,7 @@ MonoBehaviour:
       buttonsList: []
     - dialog:
       - quote: DocTuto_D1_Q1
-        isInLeftSide: 1
+        isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
       canAskQuestions: 1
@@ -3931,7 +3931,7 @@ PrefabInstance:
     - target: {fileID: 7689664849014035018, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.000076293945
       objectReference: {fileID: 0}
     - target: {fileID: 7689664848496456132, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
@@ -4035,189 +4035,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7689664848179463966, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 758156766}
     m_RemovedComponents:
     - {fileID: 7689664848417164065, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
---- !u!114 &820012257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PNJName: Louise
-  dialogLine: 0
-  dialogIndex: 0
-  transitionQuote: 2
-  negativeQuote: 3
-  haveEvent: 0
-  stickerAlreadyGivenList: 
-  stickerRedirection:
-    stickerGivenList: 030000000f0000000d000000
-    redirectionList: 040000000500000006000000
-  eventRedirection:
-    eventGivenList: []
-    redirectionEventList: 
-  allDialogs:
-    listOfDialogs:
-    - dialog:
-      - quote: LouiseTuto_D0_Q1
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D0_Q2
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      canAskQuestions: 0
-      hasChoices: 0
-      endDialog: 0
-      buttonsList: []
-    - dialog:
-      - quote: LouiseTuto_D13_Q1
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      canAskQuestions: 0
-      hasChoices: 0
-      endDialog: 0
-      buttonsList: []
-    - dialog:
-      - quote: LouiseTuto_D11_Q1
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      canAskQuestions: 0
-      hasChoices: 0
-      endDialog: 0
-      buttonsList: []
-    - dialog:
-      - quote: LouiseTuto_D10_Q1
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      canAskQuestions: 0
-      hasChoices: 0
-      endDialog: 0
-      buttonsList: []
-    - dialog:
-      - quote: LouiseTuto_D3_Q1
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D3_Q2
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D3_Q3
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D3_Q4
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D3_Q5
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D3_Q6
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      canAskQuestions: 0
-      hasChoices: 0
-      endDialog: 0
-      buttonsList: []
-    - dialog:
-      - quote: LouiseTuto_D4_Q1
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q2
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q3
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q4
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q5
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q6
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      canAskQuestions: 0
-      hasChoices: 0
-      endDialog: 0
-      buttonsList: []
-    - dialog:
-      - quote: LouiseTuto_D5_Q1
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q2
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q3
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q4
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q5
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q6
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q7
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q8
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q9
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q10
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q11
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D5_Q12
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      canAskQuestions: 0
-      hasChoices: 0
-      endDialog: 0
-      buttonsList: []
-  quoteFinished: 0
-  stickersAlreadyGiven: 
 --- !u!4 &820012258
 Transform:
   m_ObjectHideFlags: 0
@@ -4262,11 +4087,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883031066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.789, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 8.2, y: 0, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children: []
-  m_Father: {fileID: 1589111848}
-  m_RootOrder: 3
+  m_Father: {fileID: 1569536425}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &904436867
 GameObject:
@@ -10369,6 +10194,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6476395100212477238, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 758156766}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a7764dea8f5c1f48b1e59fd46cd0148, type: 3}
 --- !u!1 &1153687114
@@ -10380,13 +10210,32 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 820012258}
+  - component: {fileID: 1153687115}
   m_Layer: 0
-  m_Name: Recovery GameObject (820012258)
+  m_Name: Louise3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1153687115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153687114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9bd3fc228bf084fa6fbb3984f58658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterNameReference: LouiseTuto
+  realCharacterName: Louise
+  haveEvent: 0
+  dialogList: []
+  eventPositionsInDialog: []
+  stickersPositionsInDialogs: []
 --- !u!1 &1175842197
 GameObject:
   m_ObjectHideFlags: 0
@@ -10610,7 +10459,7 @@ MonoBehaviour:
     newComponent: {fileID: 1552297158}
   - modificationName: Louise3
     characterToModify: {fileID: 1082112283}
-    newComponent: {fileID: 820012257}
+    newComponent: {fileID: 0}
   - modificationName: Renard2
     characterToModify: {fileID: 904436867}
     newComponent: {fileID: 19048157}
@@ -11078,7 +10927,7 @@ PrefabInstance:
         type: 3}
       propertyPath: actualRoom
       value: 
-      objectReference: {fileID: 1569536424}
+      objectReference: {fileID: 1937314234}
     - target: {fileID: 6252624642967059760, guid: e7c94aa2610c9844293398dde8a0fbf7,
         type: 3}
       propertyPath: isFollowing
@@ -11854,12 +11703,12 @@ PrefabInstance:
     - target: {fileID: 5683084735798226271, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.2
+      value: -56.6
       objectReference: {fileID: 0}
     - target: {fileID: 5683084735798226271, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 33.1
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 5683084735798226271, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
@@ -12151,7 +12000,7 @@ MonoBehaviour:
         eventTrigger: []
       - quote: LouiseTuto_D0_Q2
         isInLeftSide: 0
-        newStickerIndexList: 
+        newStickerIndexList: 02000000
         eventTrigger: []
       canAskQuestions: 0
       hasChoices: 0
@@ -12311,9 +12160,9 @@ Transform:
   m_Father: {fileID: 1248334585}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1569536424 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8365423122775060025, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
+--- !u!4 &1569536425 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8365423122775060024, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
     type: 3}
   m_PrefabInstance: {fileID: 1589111846}
   m_PrefabAsset: {fileID: 0}
@@ -12804,22 +12653,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7190352826c191e4682d58c805a3f006, type: 3}
---- !u!1 &1703261106
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 820012258}
-  m_Layer: 0
-  m_Name: Recovery GameObject (820012258)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1730295305
 GameObject:
   m_ObjectHideFlags: 0
