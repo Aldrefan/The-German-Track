@@ -229,6 +229,9 @@ public class EventsCheck : MonoBehaviour
                 childTransform.GetComponent<Sticker_Display>().SetInformations();
             }
         }
+        PlayerMemory.stickerIndexBoardList.Remove(1);
+        PlayerMemory.stickerIndexBoardList.Add(16);
+
     }
 
     void OnTriggerExit2D(Collider2D col)
