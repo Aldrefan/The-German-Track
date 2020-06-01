@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
+using UnityEngine.Events;
 
 public class PNJ : MonoBehaviour
 {
@@ -66,6 +67,14 @@ public class PNJ : MonoBehaviour
         public List<int> newStickerIndexList;
         public List<string> eventTrigger;
     }
+
+    [System.Serializable]
+    public class EventsTriggeredByStickers
+    {
+        public int stickerIndex;
+        public UnityEvent actionToTrigger;
+    }
+    [SerializeField] List<EventsTriggeredByStickers> eventsActivationList = new List<EventsTriggeredByStickers>();
     
     string currentLine = "";
     float dialogDelay = 0.01f;
@@ -277,6 +286,14 @@ public class PNJ : MonoBehaviour
         if(!stickerAlreadyGivenList.Contains(stickerIndex))
         {
             stickerAlreadyGivenList.Add(stickerIndex);
+        }
+        if(eventsActivationList.Count > 0)
+        {
+            if(eventsActivationList.Exists(x => x.stickerIndex == stickerIndex))
+            {
+                eventsActivationList.Find(x => x.stickerIndex == stickerIndex).actionToTrigger.Invoke();
+                return;
+            }
         }
         for(int i = 0; i < stickerRedirection.stickerGivenList.Count; i++)
         {

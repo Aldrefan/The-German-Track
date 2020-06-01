@@ -385,9 +385,9 @@ public class EventsCheck : MonoBehaviour
                 break;
 
             case "WhiteAim":
-                GameObject.Find("White").GetComponent<Animator>().SetBool("Aim", true);
+                GameObject.Find("White").GetComponent<Animator>().Play("White_Degaine", 0);
                 GameObject.Find("White").GetComponent<PNJStates>().boolList.Find(x => x.boolName == "Aim").state = true;
-                GameObject.Find("Louise").GetComponent<Animator>().SetBool("Wake", true);
+                GameObject.Find("Louise").GetComponent<Animator>().Play("Louise_Wake", 0);
                 GameObject.Find("Louise").GetComponent<PNJStates>().boolList.Find(x => x.boolName == "Wake").state = true;
                 DialogueChanger.DialChangr.ChangeDialogueComponent("Louise2");
                 DialogueChanger.DialChangr.ChangeDialogueComponent("Renard2");
@@ -396,7 +396,19 @@ public class EventsCheck : MonoBehaviour
 
             case "Bar_Panic":
                 GameObject.Find("Louise").GetComponent<Animator>().Play("Louise_Crouch", 0);
+                GameObject.Find("Louise").GetComponent<PNJStates>().boolList.Find(x => x.boolName == "Crouch").state = true;
                 GameObject.Find("Dr").GetComponent<Animator>().Play("Dr_Idle_Crouch", 0);
+                GameObject.Find("Dr").GetComponent<PNJStates>().boolList.Find(x => x.boolName == "Crouch").state = true;
+            break;
+
+            case "SetInCinematic":
+                GetComponent<Interactions>().state = Interactions.State.InCinematic;
+                eventsList.RemoveAt(eventsList.Count - 1);
+            break;
+
+            case "RenardMort":
+                GameObject.Find("Renard").GetComponent<Collider2D>().enabled = false;
+                DialogueChanger.DialChangr.ChangeDialogueComponent("RenardMort");
             break;
 
             default:

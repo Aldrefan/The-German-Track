@@ -334,7 +334,7 @@
    },
    {
       "Key": "LouiseTuto_D3_Q6",
-      "FR": "Une balle perdue. C\u2019est presque gu\u00E9ri mais j\u2019ai encore besoin d\u2019antidouleurs.",
+      "FR": "Une balle perdue. C\u2019est presque gu\u00E9ri mais j\u2019ai encore besoin d\u2019antidouleurs et de bandages.",
       "EN": "Lost bullet. It's almost cured but I still need painkillers.",
       "FRName": "Louise",
       "ENName": "Louise"
@@ -936,35 +936,35 @@
       "ENName": "Renard"
    },
    {
-      "Key": "RenardTuto_D5_Q4",
+      "Key": "RenardTuto_D11_Q1",
       "FR": "H\u00E9h\u00E9\u2026 Ce couteau est tellement rouill\u00E9\u2026 Qu\u2019on ne peut m\u00EAme pas le d\u00E9gainer\u2026 Arg\u2026",
       "EN": "Haha... This dagger is so rusty... It can't even be drawn... Argh...",
       "FRName": "Renard",
       "ENName": "Renard"
    },
    {
-      "Key": "RenardTuto_D5_Q5",
+      "Key": "RenardTuto_D12_Q1",
       "FR": "Oh merde, Kenneth tu t\u2019es plant\u00E9 !",
       "EN": "Oh shit, Kenneth, you were wrong !",
       "FRName": "W.White",
       "ENName": "W.White"
    },
    {
-      "Key": "RenardTuto_D5_Q6",
+      "Key": "RenardTuto_D12_Q2",
       "FR": "Je\u2026 Merde ! C\u2019est toi qui l\u2019as but\u00E9 !",
       "EN": "I... Crap ! You're the one who shot him !",
       "FRName": "Kenneth",
       "ENName": "Kenneth"
    },
    {
-      "Key": "RenardTuto_D5_Q7",
+      "Key": "RenardTuto_D12_Q3",
       "FR": "Bordel ! Euh... Je pense qu'il faut tout de m\u00EAme trouver qui a tu\u00E9 Pierce. Finis ton enqu\u00EAte, c\u2019est forc\u00E9ment un de ces deux-l\u00E0 ! On en reparlera plus tard !",
       "EN": "Holy shit ! Uh... I still think we should find who did Pierce in. Finish your investigation, it's gotta be one of these two ! We'll sort talk about this later !",
       "FRName": "W.White",
       "ENName": "W.White"
    },
    {
-      "Key": "RenardTuto_D5_Q8",
+      "Key": "RenardTuto_D12_Q4",
       "FR": "\u2026",
       "EN": "\u2026",
       "FRName": "Kenneth",
@@ -1018,7 +1018,7 @@
    },
    {
       "Key": "DocTuto_D0_Q4",
-      "FR": "J\u2019esp\u00E8re que vous ne venez pas pour une blessure par balle, je suis \u00E0 court de bandage ! Enfin pas tout \u00E0 fait a court, mais je dois faire des \u00E9conomies !",
+      "FR": "J\u2019esp\u00E8re que vous ne venez pas pour une blessure par balle, je suis \u00E0 court de bandage ! Enfin pas tout \u00E0 fait \u00E0 court, mais je dois faire des \u00E9conomies !",
       "EN": "I hope you're not here about a bullet wound, I'm out of bandage ! Well not exactly out, but I have to save some.",
       "FRName": "Dr.Lefevre",
       "ENName": "Dr.Lefevre"
@@ -1040,9 +1040,8 @@
    {
       "Key": "DocTuto_D1_Q1",
       "FR": "Vous vouliez autre chose ?",
-      "EN": "I've got a few questions, Doc.",
-      "FRName": "Kenneth",
-      "ENName": "Kenneth"
+      "FRName": "Dr.Lefevre",
+      "ENName": "Dr.Lefevre"
    },
    {
       "Key": "DocTuto_D5_Q1",
@@ -1207,6 +1206,12 @@
    {
       "Key": "DocTuto_D7_Q1",
       "FR": "Il y a autre chose ?",
+      "FRName": "Dr.Lefevre",
+      "ENName": "Dr.Lefevre"
+   },
+   {
+      "Key": "DocTuto_D8_Q1",
+      "FR": "Je regrette, je n\u2019en sais rien.",
       "FRName": "Dr.Lefevre",
       "ENName": "Dr.Lefevre"
    },
@@ -1847,5 +1852,65 @@
       "FR": "Ce tableau devrait faire l\u2019affaire.",
       "FRName": "Kenneth",
       "ENName": "Kenneth"
+   },
+   {
+      "Key": "TutoName_01",
+      "FR": "Dialogue",
+      "EN": "Tuto Name 1"
+   },
+   {
+      "Key": "TutoDesc_01",
+      "FR": "Appuyer sur E ou cliquer sur la bo\u00EEte de dialogue pour passer au dialogue suivant.",
+      "EN": "Tuto Desc 1"
+   },
+   {
+      "Key": "TutoName_02",
+      "FR": "Interaction",
+      "EN": "Tuto Name 2"
+   },
+   {
+      "Key": "TutoDesc_02",
+      "FR": "Appuyer sur E quand un object est surlign\u00E9 afin d'interagir avec.",
+      "EN": "Tuto Desc 2"
+   },
+   {
+      "Key": "TutoName_03",
+      "FR": "Interroger",
+      "EN": "Tuto Name 3"
+   },
+   {
+      "Key": "TutoDesc_03",
+      "FR": "Lorsque le carnet apparait en haut de la bo\u00EEte de dialogue, cela signifie que le joueur est en phase de transition du dialogue.\n\n\u00C0 ce moment il est possible d'accorder un sujet de convertion gr\u00E2ce aux notes. Pour cela le joueur doit cliquer sur le carnet et choisir une note parmi les diff\u00E9rents onglets de celui ci.",
+      "EN": "Tuto Desc 3"
+   },
+   {
+      "Key": "TutoName_04",
+      "FR": "Sortir d'une conversation",
+      "EN": "Tuto Name 4"
+   },
+   {
+      "Key": "TutoDesc_04",
+      "FR": "Lorsque le carnet apparait en haut de la bo\u00EEte de dialogue, cela signifie que le joueur est en phase de transition du dialogue.\n\nC'est seulement pendant cette phase que le joueur peut quitter la conversation, en appuyant sur la touche \u00C9chap.",
+      "EN": "Tuto Desc 4"
+   },
+   {
+      "Key": "TutoName_05",
+      "FR": "Le Tableau",
+      "EN": "Tuto Name 5"
+   },
+   {
+      "Key": "TutoDesc_05",
+      "FR": "Desc Tuto 5",
+      "EN": "Tuto Desc 5"
+   },
+   {
+      "Key": "TutoName_06",
+      "FR": "Nom Tuto 6",
+      "EN": "Tuto Name 6"
+   },
+   {
+      "Key": "TutoDesc_06",
+      "FR": "Desc Tuto 6",
+      "EN": "Tuto Desc 6"
    }
 ]

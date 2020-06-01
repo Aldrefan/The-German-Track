@@ -37,12 +37,16 @@ public class EnableClaraCinematic : MonoBehaviour
 
             KD_IW.GetComponent<Clara_Cinematic>().annexInformation[0].objectToMove = Clara.gameObject.transform.GetChild(0).gameObject;
             KD_IW.GetComponent<Clara_Cinematic>().annexInformation[1].objectToMove = Clara;
-            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[1].direction = 0.05f;
-            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[1].time = 1;
+            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[2].objectToMove = Clara;
+            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[2].direction = 0.05f;
+            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[2].time = 1;
             KD_IW.GetComponent<Clara_Cinematic>().annexInformation[3].objectToMove = Clara;
-            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[3].direction = 0.05f;
-            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[3].time = 3.5f;
-            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[4].objectToMove = Clara;
+            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[5].objectToMove = Clara;
+            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[6].objectToMove = Clara;
+            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[6].direction = 0.05f;
+            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[6].time = 3.5f;
+            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[7].objectToMove = Clara;
+            KD_IW.GetComponent<Clara_Cinematic>().annexInformation[8].objectToMove = Clara;
 
 
         }

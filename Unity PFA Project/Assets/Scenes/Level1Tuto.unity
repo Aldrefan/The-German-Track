@@ -174,6 +174,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -848,6 +849,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -887,6 +889,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0.1
@@ -899,6 +902,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Run
       state: 1
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0.1
@@ -911,6 +915,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 1
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0.4
@@ -923,6 +928,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Run
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 1897290523}
     direction: 0.1
@@ -935,6 +941,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Door_03_01
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 1897290523}
     direction: 0.1
@@ -947,6 +954,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Door_03_01
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 809024011}
     direction: 0.1
@@ -959,6 +967,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 1
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 809024011}
     direction: 0.15
@@ -971,6 +980,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 1
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0.15
@@ -983,6 +993,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Run
       state: 1
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0.4
@@ -995,6 +1006,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0.15
@@ -1007,6 +1019,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Run
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 967617677}
     direction: 0.15
@@ -1019,6 +1032,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Door_02_02
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   action: 0
   fromStart: 0
@@ -1251,7 +1265,7 @@ SpriteRenderer:
   m_Size: {x: 2.73, y: 0.83}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &302816800
@@ -1453,6 +1467,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: HidePileHider
       objectReference: {fileID: 0}
+    - target: {fileID: 8960208535500947351, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 356561041}
+    - target: {fileID: 8960208535500947351, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckComponent
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728519200259631436, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1338374889}
+    - target: {fileID: 6728519200259631436, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckZoom
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
 --- !u!1 &350016531 stripped
@@ -1481,17 +1515,17 @@ PrefabInstance:
     - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: ListOfHypLists.list.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: hypotheseresponses.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: ListOfHypLists.list.Array.data[1].list.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
@@ -1601,7 +1635,7 @@ PrefabInstance:
     - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: ListOfHypLists.list.Array.data[4].list.Array.data[0]
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
@@ -1611,17 +1645,17 @@ PrefabInstance:
     - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: ListOfHypLists.list.Array.data[4].list.Array.data[2]
-      value: 6
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: ListOfHypLists.list.Array.data[4].list.Array.data[3]
-      value: 17
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: hypotheseresponses.Array.data[4]
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
@@ -1647,6 +1681,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ListOfHypLists.list.Array.data[5].list.Array.data[3]
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: ListOfHypLists.list.Array.data[1].list.Array.data[3]
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
       propertyPath: profilesButton
@@ -1920,6 +1959,7 @@ GameObject:
   - component: {fileID: 489150086}
   - component: {fileID: 489150090}
   - component: {fileID: 489150091}
+  - component: {fileID: 489150089}
   m_Layer: 0
   m_Name: Dr
   m_TagString: PNJinteractable
@@ -2035,6 +2075,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &489150089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489150084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e83e6d523e418864eadccdfbd1a0b1c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boolList:
+  - boolName: Crouch
+    state: 0
 --- !u!114 &489150090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2072,6 +2127,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -2122,35 +2178,7 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: DocTuto_D3_Q1
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: DocTuto_D3_Q2
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: DocTuto_D3_Q3
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: DocTuto_D3_Q4
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: DocTuto_D3_Q5
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: DocTuto_D3_Q6
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: DocTuto_D3_Q7
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: DocTuto_D3_Q8
+      - quote: DocTuto_D8_Q1
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -2854,6 +2882,55 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 918401377}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &671150231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 671150232}
+  - component: {fileID: 671150233}
+  m_Layer: 0
+  m_Name: Dr2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &671150232
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671150231}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1248334585}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &671150233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671150231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9bd3fc228bf084fa6fbb3984f58658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterNameReference: DocTuto
+  realCharacterName: Dr.Lefevre
+  haveEvent: 0
+  dialogList: []
+  eventPositionsInDialog: []
+  stickersPositionsInDialogs: []
 --- !u!1 &676928449
 GameObject:
   m_ObjectHideFlags: 0
@@ -3281,7 +3358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandList: 02000000010000000d000000000000000d000000020000000800000010000000020000000d000000000000000d00000002000000
+  commandList: 02000000010000000d000000000000000d000000020000000800000010000000020000000d000000000000000d0000000200000007000000
   annexInformation:
   - objectToMove: {fileID: 0}
     direction: 0
@@ -3294,6 +3371,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: 0
@@ -3306,6 +3384,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0.1
@@ -3318,10 +3397,11 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 1
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: -0.1
-    time: 4
+    time: 3.5
     newParent: {fileID: 0}
     newPosition: {fileID: 0}
     clip: {fileID: 0}
@@ -3330,6 +3410,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0.1
@@ -3342,6 +3423,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0.1
@@ -3354,6 +3436,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 1874345645}
     direction: 0.1
@@ -3366,6 +3449,7 @@ MonoBehaviour:
     boolNameAndState:
       name: FadeToON
       state: 1
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 1937314234}
     direction: 0.1
@@ -3378,6 +3462,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Door_00_01
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 1937314234}
     direction: 0.1
@@ -3390,6 +3475,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Door_00_01
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0.07
@@ -3402,6 +3488,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 1
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: -0.07
@@ -3414,6 +3501,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 1
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0.07
@@ -3426,6 +3514,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0.07
@@ -3438,6 +3527,20 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 1989209358}
+    direction: 0.07
+    time: 0.3
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   action: 0
   fromStart: 0
@@ -3468,6 +3571,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -3622,6 +3726,8 @@ GameObject:
   - component: {fileID: 809024015}
   - component: {fileID: 809024014}
   - component: {fileID: 809024016}
+  - component: {fileID: 809024017}
+  - component: {fileID: 809024018}
   m_Layer: 0
   m_Name: White
   m_TagString: PNJinteractable
@@ -3639,7 +3745,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.02, y: -0.03, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 869738497}
   m_Father: {fileID: 1965517847}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3751,6 +3858,66 @@ MonoBehaviour:
   boolList:
   - boolName: Aim
     state: 0
+--- !u!114 &809024017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809024011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd484f8f0d7255489c5d23a7103bad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &809024018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809024011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: W.White
+  dialogLine: 0
+  dialogIndex: 0
+  transitionQuote: 2
+  negativeQuote: 3
+  haveEvent: 0
+  stickerAlreadyGivenList: 
+  stickerRedirection:
+    stickerGivenList: 
+    redirectionList: 
+  eventRedirection:
+    eventGivenList: []
+    redirectionEventList: 
+  eventsActivationList: []
+  allDialogs:
+    listOfDialogs:
+    - dialog:
+      - quote: WhiteTuto_D2_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 1
+      buttonsList: []
+    - dialog:
+      - quote: WhiteTuto_D2_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 1
+      buttonsList: []
+  quoteFinished: 0
+  stickersAlreadyGiven: 
 --- !u!1001 &815192652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3931,7 +4098,7 @@ PrefabInstance:
     - target: {fileID: 7689664849014035018, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000015258789
+      value: -0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 7689664848496456132, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
@@ -4063,6 +4230,119 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 302816800}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &869738496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 869738497}
+  - component: {fileID: 869738501}
+  - component: {fileID: 869738500}
+  - component: {fileID: 869738499}
+  - component: {fileID: 869738498}
+  m_Layer: 13
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &869738497
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869738496}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 1}
+  m_Children:
+  - {fileID: 926937886}
+  m_Father: {fileID: 809024012}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.4}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &869738498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869738496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa68f66bddbad204cb1721a0b15ec382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCinematic: 0
+--- !u!114 &869738499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869738496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &869738500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869738496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &869738501
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869738496}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 758156766}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: -1720317733
+  m_SortingOrder: 20
+  m_TargetDisplay: 0
 --- !u!1 &883031066
 GameObject:
   m_ObjectHideFlags: 0
@@ -4108,6 +4388,7 @@ GameObject:
   - component: {fileID: 904436872}
   - component: {fileID: 904436873}
   - component: {fileID: 904436874}
+  - component: {fileID: 904436875}
   m_Layer: 0
   m_Name: Renard
   m_TagString: PNJinteractable
@@ -4163,12 +4444,12 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.09, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.16, y: 0.61}
-    newSize: {x: 0.16, y: 0.6}
+    newSize: {x: 0.63, y: 0.61}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -4218,7 +4499,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.6}
+  m_Size: {x: 0.63, y: 0.61}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4261,6 +4542,24 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList:
+  - stickerIndex: 10
+    actionToTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 904436875}
+          m_MethodName: ExecuteCommand
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -4270,7 +4569,7 @@ MonoBehaviour:
         eventTrigger: []
       - quote: RenardTuto_D0_Q2
         isInLeftSide: 0
-        newStickerIndexList: 
+        newStickerIndexList: 04000000
         eventTrigger: []
       canAskQuestions: 0
       hasChoices: 0
@@ -4347,6 +4646,89 @@ MonoBehaviour:
     state: 0
   - boolName: Hurt
     state: 0
+--- !u!114 &904436875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904436867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandList: 01000000020000000f0000000200000001000000
+  annexInformation:
+  - objectToMove: {fileID: 1827353387}
+    direction: 0
+    time: 0
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 1827353387}
+    direction: 0
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 904436867}
+    direction: 0
+    time: 0
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Renard_Degaine
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 1827353387}
+    direction: 0
+    time: 1.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 1827353387}
+    direction: 0
+    time: 0
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  action: 0
+  fromStart: 0
+  triggerByContact: 0
+  hasToLoop: 0
 --- !u!1 &907583978
 GameObject:
   m_ObjectHideFlags: 0
@@ -4530,6 +4912,148 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
+--- !u!1 &926937885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 926937886}
+  - component: {fileID: 926937890}
+  - component: {fileID: 926937889}
+  - component: {fileID: 926937888}
+  - component: {fileID: 926937887}
+  m_Layer: 13
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &926937886
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926937885}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.8, z: 1}
+  m_Children: []
+  m_Father: {fileID: 869738497}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1, y: 0.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &926937887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926937885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8977852694f8bc9469106f8e7c256594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionIcon: {fileID: 21300000, guid: 7580b9a4e8e5826458a86c4c41f93320, type: 3}
+--- !u!114 &926937888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926937885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 926937889}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 869738498}
+        m_MethodName: DoAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &926937889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926937885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &926937890
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926937885}
+  m_CullTransparentMesh: 0
 --- !u!1 &967617677 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8365423122775060025, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
@@ -9401,6 +9925,122 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 918401377}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1069304826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1069304827}
+  - component: {fileID: 1069304828}
+  - component: {fileID: 1069304829}
+  m_Layer: 0
+  m_Name: White2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1069304827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069304826}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1248334585}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1069304828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069304826}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9bd3fc228bf084fa6fbb3984f58658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterNameReference: WhiteTuto
+  realCharacterName: White
+  haveEvent: 0
+  dialogList:
+  - dialogName: D3
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 0
+    - characterName: W.White
+      left: 0
+    endDialog: 1
+    canAskQuestions: 0
+  - dialogName: D3
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 0
+    - characterName: W.White
+      left: 0
+    endDialog: 1
+    canAskQuestions: 0
+  eventPositionsInDialog: []
+  stickersPositionsInDialogs: []
+--- !u!114 &1069304829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069304826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: White
+  dialogLine: 0
+  dialogIndex: 0
+  transitionQuote: 2
+  negativeQuote: 3
+  haveEvent: 0
+  stickerAlreadyGivenList: 
+  stickerRedirection:
+    stickerGivenList: 
+    redirectionList: 
+  eventRedirection:
+    eventGivenList: []
+    redirectionEventList: 
+  eventsActivationList: []
+  allDialogs:
+    listOfDialogs:
+    - dialog:
+      - quote: WhiteTuto_D3_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 1
+      buttonsList: []
+    - dialog:
+      - quote: WhiteTuto_D3_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 1
+      buttonsList: []
+  quoteFinished: 0
+  stickersAlreadyGiven: 
 --- !u!1 &1082112283
 GameObject:
   m_ObjectHideFlags: 0
@@ -9556,6 +10196,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -9959,6 +10600,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a7764dea8f5c1f48b1e59fd46cd0148, type: 3}
+--- !u!1 &1104858472 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1405921388, guid: 883065d35bf8001418b4f638f428c3ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 302816800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1112661073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10211,6 +10858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 820012258}
   - component: {fileID: 1153687115}
+  - component: {fileID: 1153687116}
   m_Layer: 0
   m_Name: Louise3
   m_TagString: Untagged
@@ -10225,7 +10873,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153687114}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d9bd3fc228bf084fa6fbb3984f58658, type: 3}
   m_Name: 
@@ -10236,6 +10884,183 @@ MonoBehaviour:
   dialogList: []
   eventPositionsInDialog: []
   stickersPositionsInDialogs: []
+--- !u!114 &1153687116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153687114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: Louise
+  dialogLine: 0
+  dialogIndex: 0
+  transitionQuote: 2
+  negativeQuote: 3
+  haveEvent: 0
+  stickerAlreadyGivenList: 
+  stickerRedirection:
+    stickerGivenList: 030000000f0000000d000000
+    redirectionList: 040000000500000006000000
+  eventRedirection:
+    eventGivenList: []
+    redirectionEventList: 
+  eventsActivationList: []
+  allDialogs:
+    listOfDialogs:
+    - dialog:
+      - quote: LouiseTuto_D12_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 02000000
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D12_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D11_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 1
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D10_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D3_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D3_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D3_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D3_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D3_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D3_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 07000000
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D4_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D4_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D4_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D4_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D4_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D4_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D5_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q6
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q7
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q8
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q9
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q10
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q11
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D5_Q12
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+  quoteFinished: 0
+  stickersAlreadyGiven: 
 --- !u!1 &1175842197
 GameObject:
   m_ObjectHideFlags: 0
@@ -10438,6 +11263,9 @@ Transform:
   - {fileID: 1552297159}
   - {fileID: 820012258}
   - {fileID: 19048156}
+  - {fileID: 671150232}
+  - {fileID: 1640822780}
+  - {fileID: 1069304827}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10463,6 +11291,9 @@ MonoBehaviour:
   - modificationName: Renard2
     characterToModify: {fileID: 904436867}
     newComponent: {fileID: 19048157}
+  - modificationName: RenardMort
+    characterToModify: {fileID: 1665232647}
+    newComponent: {fileID: 1640822782}
 --- !u!1 &1267348955
 GameObject:
   m_ObjectHideFlags: 0
@@ -10539,7 +11370,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1287354157
@@ -10684,6 +11515,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -10772,6 +11604,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0
@@ -10784,6 +11617,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 1
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0.1
@@ -10796,6 +11630,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 1
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0.1
@@ -10808,6 +11643,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: 0.1
@@ -10820,6 +11656,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   action: 0
   fromStart: 0
@@ -10935,6 +11772,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7c94aa2610c9844293398dde8a0fbf7, type: 3}
+--- !u!114 &1338374889 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6252624642967059762, guid: e7c94aa2610c9844293398dde8a0fbf7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1338374888}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095039547}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de8e37845f3288499ec53d4c388ae08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1385663863
 GameObject:
   m_ObjectHideFlags: 0
@@ -11079,7 +11928,7 @@ PrefabInstance:
     - target: {fileID: 2328780609122714872, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
         type: 3}
       propertyPath: charactersInterfaces.Array.data[0].CanvasList.Array.size
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2328780609122714872, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
         type: 3}
@@ -11181,6 +12030,16 @@ PrefabInstance:
       propertyPath: charactersInterfaces.Array.data[0].CanvasList.Array.data[12].CanvasGO
       value: 
       objectReference: {fileID: 661768706}
+    - target: {fileID: 2328780609122714872, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
+        type: 3}
+      propertyPath: charactersInterfaces.Array.data[0].CanvasList.Array.data[13].CanvasName
+      value: DialogSpotOnBoard
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328780609122714872, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
+        type: 3}
+      propertyPath: charactersInterfaces.Array.data[0].CanvasList.Array.data[13].CanvasGO
+      value: 
+      objectReference: {fileID: 1104858472}
     - target: {fileID: 2328780609122714873, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
         type: 3}
       propertyPath: charactersList.Array.size
@@ -11340,6 +12199,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -11387,6 +12247,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: 0
@@ -11399,6 +12260,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: 0
@@ -11411,6 +12273,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: -0.1
@@ -11423,6 +12286,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 1
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: -0.1
@@ -11435,6 +12299,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: -0.1
@@ -11447,6 +12312,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: -0.1
@@ -11459,6 +12325,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: -0.1
@@ -11471,6 +12338,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: -0.1
@@ -11483,6 +12351,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: -0.1
@@ -11495,6 +12364,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 1
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0.1
@@ -11507,6 +12377,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 1
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: -0.1
@@ -11519,6 +12390,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 1467259954}
     direction: -0.1
@@ -11531,6 +12403,7 @@ MonoBehaviour:
     boolNameAndState:
       name: FadeToON
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 153063416}
     direction: -0.1
@@ -11543,6 +12416,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Armoire_Opened
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 153063416}
     direction: -0.1
@@ -11555,6 +12429,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Armoire_Opened
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 153063416}
     direction: -0.1
@@ -11567,6 +12442,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Armoire_Opened
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 153063416}
     direction: -0.1
@@ -11579,6 +12455,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Armoire_Opened
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   action: 0
   fromStart: 0
@@ -11685,7 +12562,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1551413601
@@ -11703,7 +12580,7 @@ PrefabInstance:
     - target: {fileID: 5683084735798226271, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -56.6
+      value: -55.3
       objectReference: {fileID: 0}
     - target: {fileID: 5683084735798226271, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
@@ -11788,6 +12665,11 @@ PrefabInstance:
     - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: allStickers.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
@@ -11904,12 +12786,12 @@ PrefabInstance:
     - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
       propertyPath: stickerIndexCarnetList.Array.data[0]
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
       propertyPath: stickerIndexBoardList.Array.data[0]
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
@@ -11917,6 +12799,56 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 1300c33534476b24a8a9fdf5c86008fe,
         type: 2}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickerIndexCarnetList.Array.data[1]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickerIndexBoardList.Array.data[1]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickerIndexCarnetList.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickerIndexBoardList.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickerIndexCarnetList.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: stickerIndexBoardList.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: allStickers.Array.data[0]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: allStickers.Array.data[1]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: allStickers.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663997790747312381, guid: 5454f30df5149c64fa75090488e1faa4,
+        type: 3}
+      propertyPath: allStickers.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 559906432140023619, guid: 5454f30df5149c64fa75090488e1faa4,
         type: 3}
       propertyPath: PNJName
@@ -11991,6 +12923,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -12008,7 +12941,7 @@ MonoBehaviour:
       buttonsList: []
     - dialog:
       - quote: LouiseTuto_D9_Q1
-        isInLeftSide: 1
+        isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
       canAskQuestions: 0
@@ -12056,7 +12989,7 @@ MonoBehaviour:
         eventTrigger: []
       - quote: LouiseTuto_D3_Q6
         isInLeftSide: 0
-        newStickerIndexList: 
+        newStickerIndexList: 07000000
         eventTrigger: []
       canAskQuestions: 0
       hasChoices: 0
@@ -12537,6 +13470,142 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633088060}
   m_CullTransparentMesh: 0
+--- !u!1 &1640822779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1640822780}
+  - component: {fileID: 1640822781}
+  - component: {fileID: 1640822782}
+  m_Layer: 0
+  m_Name: Accusation 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1640822780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640822779}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1248334585}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1640822781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640822779}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9bd3fc228bf084fa6fbb3984f58658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterNameReference: RenardTuto
+  realCharacterName: Accusation3
+  haveEvent: 0
+  dialogList:
+  - dialogName: D0
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 0
+    - characterName: W.White
+      left: 0
+    - characterName: Renard
+      left: 0
+    endDialog: 1
+    canAskQuestions: 0
+  - dialogName: D12
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 0
+    - characterName: W.White
+      left: 0
+    - characterName: Renard
+      left: 0
+    endDialog: 1
+    canAskQuestions: 0
+  eventPositionsInDialog: []
+  stickersPositionsInDialogs: []
+--- !u!114 &1640822782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640822779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: Accusation3
+  dialogLine: 0
+  dialogIndex: 0
+  transitionQuote: 2
+  negativeQuote: 3
+  haveEvent: 0
+  stickerAlreadyGivenList: 
+  stickerRedirection:
+    stickerGivenList: 
+    redirectionList: 
+  eventRedirection:
+    eventGivenList: []
+    redirectionEventList: 
+  eventsActivationList: []
+  allDialogs:
+    listOfDialogs:
+    - dialog:
+      - quote: RenardTuto_D0_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D0_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 1
+      buttonsList: []
+    - dialog:
+      - quote: RenardTuto_D12_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D12_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D12_Q3
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D12_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 1
+      buttonsList: []
+  quoteFinished: 0
+  stickersAlreadyGiven: 
 --- !u!1 &1640942360
 GameObject:
   m_ObjectHideFlags: 0
@@ -12579,6 +13648,216 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1102468673}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1665232647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1665232650}
+  - component: {fileID: 1665232649}
+  - component: {fileID: 1665232648}
+  m_Layer: 0
+  m_Name: Accusation 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1665232648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665232647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: CinematicAccusation2
+  dialogLine: 0
+  dialogIndex: 0
+  transitionQuote: 2
+  negativeQuote: 3
+  haveEvent: 0
+  stickerAlreadyGivenList: 
+  stickerRedirection:
+    stickerGivenList: 
+    redirectionList: 
+  eventRedirection:
+    eventGivenList: []
+    redirectionEventList: 
+  eventsActivationList: []
+  allDialogs:
+    listOfDialogs:
+    - dialog:
+      - quote: RenardTuto_D5_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D5_Q2
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D5_Q3
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 1
+      buttonsList: []
+    - dialog:
+      - quote: RenardTuto_D11_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 1
+      buttonsList: []
+  quoteFinished: 0
+  stickersAlreadyGiven: 
+--- !u!114 &1665232649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665232647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandList: 020000000f000000020000000100000014000000020000000f00000001000000
+  annexInformation:
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 0.1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 904436867}
+    direction: 0
+    time: 0.1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Renard_TakeKnife
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 904436867}
+    direction: 0
+    time: 2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: RenardMort
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 904436867}
+    direction: 0
+    time: 1.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Renard_Mort
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 904436867}
+    direction: 0
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Renard_Mort
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Renard_Mort
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  action: 0
+  fromStart: 0
+  triggerByContact: 0
+  hasToLoop: 0
+--- !u!4 &1665232650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665232647}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.2, y: 0, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1569536425}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1684865552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12729,7 +14008,7 @@ SpriteRenderer:
   m_Size: {x: 0.5, y: 0.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!224 &1730731949 stripped
@@ -12885,6 +14164,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -13145,6 +14425,344 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1827353387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1827353389}
+  - component: {fileID: 1827353388}
+  - component: {fileID: 1827353390}
+  m_Layer: 0
+  m_Name: AccusationRenardCinematic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1827353388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827353387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: RenardAccusationCinematic
+  dialogLine: 0
+  dialogIndex: 0
+  transitionQuote: 2
+  negativeQuote: 3
+  haveEvent: 0
+  stickerAlreadyGivenList: 
+  stickerRedirection:
+    stickerGivenList: 
+    redirectionList: 
+  eventRedirection:
+    eventGivenList: []
+    redirectionEventList: 
+  eventsActivationList: []
+  allDialogs:
+    listOfDialogs:
+    - dialog:
+      - quote: RenardTuto_D4_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D4_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D4_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D4_Q4
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D4_Q5
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D4_Q6
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D4_Q7
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D4_Q8
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger:
+        - SetInCinematic
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 1
+      buttonsList: []
+    - dialog:
+      - quote: RenardTuto_D6_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D6_Q2
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D6_Q3
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D6_Q4
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D6_Q5
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 1
+      buttonsList: []
+  quoteFinished: 0
+  stickersAlreadyGiven: 
+--- !u!4 &1827353389
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827353387}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.2, y: 0, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1569536425}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1827353390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827353387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandList: 020000000f000000020000000d000000130000000d00000000000000010000000f0000000f00000014000000020000000f0000000200000001000000
+  annexInformation:
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 904436867}
+    direction: 0
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Renard_Degaine
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 904436867}
+    direction: 0
+    time: 0.7
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Renard_Degaine
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.1
+    time: 1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+      reverseAnim: 1
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.1
+    time: 1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Renard_Degaine
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0
+    time: 1.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+      reverseAnim: 1
+    image: {fileID: 0}
+  - objectToMove: {fileID: 809024011}
+    direction: -0.1
+    time: 1.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Renard_Degaine
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 1827353387}
+    direction: 0
+    time: 1.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Renard_Degaine
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 904436867}
+    direction: 0
+    time: 1.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Renard_Tire
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 809024011}
+    direction: 0
+    time: 1.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: White_Shot
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 809024011}
+    direction: 0
+    time: 0.2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Bar_Panic
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 904436867}
+    direction: 0
+    time: 0.1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Renard_Hurt
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 904436867}
+    direction: 0
+    time: 1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Renard_Hurt
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 1665232647}
+    direction: 0
+    time: 2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Renard_Hurt
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 1665232647}
+    direction: 0
+    time: 1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Renard_Hurt
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  action: 0
+  fromStart: 0
+  triggerByContact: 0
+  hasToLoop: 0
 --- !u!1 &1834735836 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8891736062403971573, guid: 33ddad3a370b0824b848ab3b505bf613,
@@ -13342,12 +14960,12 @@ PrefabInstance:
     - target: {fileID: 8365423124195330393, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.39
+      value: -14.8
       objectReference: {fileID: 0}
     - target: {fileID: 8365423124195330393, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.96
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 3679842588927007036, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
@@ -13581,7 +15199,7 @@ SpriteRenderer:
   m_Size: {x: 1.67, y: 0.43}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1886340151

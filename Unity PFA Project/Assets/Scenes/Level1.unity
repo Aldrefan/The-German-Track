@@ -42669,7 +42669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59dda0572c4e9f34e919df6aa7330d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadAtStart: 1
+  loadAtStart: 0
 --- !u!1 &1047992692
 GameObject:
   m_ObjectHideFlags: 0
@@ -76546,11 +76546,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: commandList.Array.size
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.size
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[0].objectToMove
@@ -76622,16 +76622,16 @@ PrefabInstance:
       objectReference: {fileID: 1376588989}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: commandList.Array.data[8]
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: commandList.Array.data[9]
-      value: 8
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[8].objectToMove
       value: 
-      objectReference: {fileID: 1107775074}
+      objectReference: {fileID: 978765920}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[8].time
       value: 0.5
@@ -76647,7 +76647,7 @@ PrefabInstance:
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[9].objectToMove
       value: 
-      objectReference: {fileID: 1329377127}
+      objectReference: {fileID: 978765920}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[9].time
       value: 0.5
@@ -76662,19 +76662,19 @@ PrefabInstance:
       objectReference: {fileID: 1376588989}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: commandList.Array.data[7]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
-      propertyPath: commandList.Array.data[6]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
-      propertyPath: commandList.Array.data[5]
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
-      propertyPath: commandList.Array.data[4]
+      propertyPath: commandList.Array.data[6]
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: commandList.Array.data[5]
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: commandList.Array.data[4]
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: commandList.Array.data[2]
@@ -76723,7 +76723,7 @@ PrefabInstance:
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[10].objectToMove
       value: 
-      objectReference: {fileID: 1662419245}
+      objectReference: {fileID: 1107775074}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[10].time
       value: 0.5
@@ -76738,12 +76738,12 @@ PrefabInstance:
       objectReference: {fileID: 1376588989}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: commandList.Array.data[11]
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[11].objectToMove
       value: 
-      objectReference: {fileID: 978765920}
+      objectReference: {fileID: 1329377127}
     - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
       propertyPath: annexInformation.Array.data[11].time
       value: 0.5
@@ -76756,6 +76756,66 @@ PrefabInstance:
       propertyPath: annexInformation.Array.data[11].newPosition
       value: 
       objectReference: {fileID: 1376588989}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: commandList.Array.data[12]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: commandList.Array.data[13]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[12].objectToMove
+      value: 
+      objectReference: {fileID: 1662419245}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[12].time
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[12].newParent
+      value: 
+      objectReference: {fileID: 327148842}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[12].newPosition
+      value: 
+      objectReference: {fileID: 1376588989}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[13].objectToMove
+      value: 
+      objectReference: {fileID: 978765920}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[13].time
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[13].newParent
+      value: 
+      objectReference: {fileID: 327148842}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[13].newPosition
+      value: 
+      objectReference: {fileID: 1376588989}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[6].boolNameAndState.name
+      value: Walk
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[4].boolNameAndState.name
+      value: Walk
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[4].boolNameAndState.state
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[5].direction
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018872111, guid: 471f45fa56e850a428f90def4e6c2923, type: 3}
+      propertyPath: annexInformation.Array.data[5].time
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6747615265874859620, guid: 471f45fa56e850a428f90def4e6c2923,
         type: 3}
       propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[0].newStickerIndexList.Array.size

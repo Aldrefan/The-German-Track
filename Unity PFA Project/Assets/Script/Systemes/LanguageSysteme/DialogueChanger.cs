@@ -27,6 +27,7 @@ public class DialogueChanger : MonoBehaviour
         //PNJ pnjComponent = DC.newComponent;
         PNJ oldComponent = DC.characterToModify.GetComponent<PNJ>();
         oldComponent.transitionQuote = DC.newComponent.transitionQuote;
+        oldComponent.PNJName = DC.newComponent.PNJName;
         oldComponent.negativeQuote = DC.newComponent.negativeQuote;
         oldComponent.allDialogs = DC.newComponent.allDialogs;
         oldComponent.stickerRedirection = DC.newComponent.stickerRedirection;
@@ -34,6 +35,5 @@ public class DialogueChanger : MonoBehaviour
         oldComponent.haveEvent = DC.newComponent.haveEvent;
         oldComponent.stickerAlreadyGivenList = DC.newComponent.stickerAlreadyGivenList;
         oldComponent.stickersAlreadyGiven = DC.newComponent.stickersAlreadyGiven;
-        Debug.Log("changeDialog");
     }
 }

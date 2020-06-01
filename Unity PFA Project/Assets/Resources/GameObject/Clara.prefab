@@ -124,8 +124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PNJName: Clara Grey
-  characterSprite: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd, type: 3}
-  kennethSprite: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3, type: 3}
   dialogLine: 0
   dialogIndex: 0
   transitionQuote: 6
@@ -142,154 +140,94 @@ MonoBehaviour:
     listOfDialogs:
     - dialog:
       - quote: Clara_D0_Q1
-        characterName: ?_Clara
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
       - quote: Clara_D0_Q2
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D0_Q3
-        characterName: ?_Clara
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
       - quote: Clara_D0_Q4
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 02000000
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D0_Q5
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D0_Q6
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D0_Q7
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
       - quote: Clara_D0_Q8
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D0_Q9
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
       - quote: Clara_D0_Q10
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D0_Q11
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
       - quote: Clara_D0_Q12
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 01000000
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
       - quote: Clara_D0_Q13
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
       - quote: Clara_D0_Q14
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
       - quote: Clara_D0_Q15
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D0_Q16
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
       - quote: Clara_D0_Q17
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
       - quote: Clara_D0_Q18
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D0_Q19
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D0_Q20
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D1_Q1
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 1
       hasChoices: 0
       endDialog: 0
@@ -297,1093 +235,761 @@ MonoBehaviour:
       - {fileID: 11400000, guid: 4f476e55573c6314985740a9dc9a928c, type: 2}
     - dialog:
       - quote: Clara_D2_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D2_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D2_Q3
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D2_Q4
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D2_Q5
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D2_Q6
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D2_Q7
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D2_Q8
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D2_Q9
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D2_Q10
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 04000000
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D2_Q11
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D2_Q12
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D2_Q13
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D2_Q14
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D2_Q15
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D2_Q16
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D2_Q17
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D2_Q18
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D2_Q19
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D2_Q20
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D2_Q21
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D2_Q22
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D2_Q23
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 08000000
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D5_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D5_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D5_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D5_Q4
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D5_Q5
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D14_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D14_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D14_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D4_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D4_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D4_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D4_Q4
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D4_Q5
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D4_Q6
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D4_Q7
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D4_Q8
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D4_Q9
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D4_Q10
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D4_Q11
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D4_Q12
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       - quote: Clara_D4_Q13
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 5a4d6cdeeb352c34593dc08fbd7b8ac3,
-          type: 3}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D6_Q1
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
       canAskQuestions: 1
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D3_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D3_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
       - quote: Clara_D3_Q3
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D3_Q4
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
       - quote: Clara_D3_Q5
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 21300000, guid: 7a95c22094cfa764f9a4d040e8bfc5bd,
-          type: 3}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D7_Q1
-        characterName: Kenneth
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D7_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D7_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D7_Q4
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D8_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D8_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D8_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D8_Q4
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D8_Q5
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D8_Q6
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D9_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D9_Q2
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D9_Q3
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D9_Q4
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D9_Q5
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D9_Q6
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D9_Q7
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D9_Q8
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D9_Q9
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger:
         - LettreADecoder
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D10_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D10_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D10_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D10_Q4
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D10_Q5
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D10_Q6
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D11_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D11_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D11_Q3
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D11_Q4
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D12_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D12_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D12_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D12_Q4
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D13_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D13_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D13_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D13_Q4
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D13_Q5
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D13_Q6
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D13_Q7
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D21_Q1
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D17_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D17_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D17_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D18_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D18_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D18_Q3
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D18_Q4
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D19_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D19_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D19_Q3
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D20_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D20_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D20_Q3
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D20_Q4
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D22_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D22_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D22_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D23_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D23_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D23_Q3
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D24_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D24_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D24_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D24_Q4
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D24_Q5
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D24_Q6
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D24_Q7
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D24_Q8
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D24_Q9
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D24_Q10
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D24_Q11
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D25_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D25_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D25_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D26_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D26_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D26_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D26_Q4
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D26_Q5
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D27_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D27_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D27_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D27_Q4
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D28_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D28_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D28_Q3
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D28_Q4
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D28_Q5
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D28_Q6
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D29_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D29_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D29_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D29_Q4
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D29_Q5
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D30_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D30_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D30_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D30_Q4
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D30_Q5
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
     - dialog:
       - quote: Clara_D31_Q1
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D31_Q2
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D31_Q3
-        characterName: Kenneth
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D31_Q4
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       - quote: Clara_D31_Q5
-        characterName: Clara Grey
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-        spriteCharacter: {fileID: 0}
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
@@ -1402,7 +1008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandList: 0000000001000000
+  commandList: 0d000000000000000d00000001000000
   annexInformation:
   - objectToMove: {fileID: 3970053386355174762}
     direction: -0.05
@@ -1411,6 +1017,35 @@ MonoBehaviour:
     newPosition: {fileID: 0}
     clip: {fileID: 0}
     Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+    image: {fileID: 0}
+  - objectToMove: {fileID: 3970053386355174762}
+    direction: -0.05
+    time: 5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 3970053386355174762}
+    direction: 0
+    time: 0
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+    image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: 0
     time: 0
@@ -1418,6 +1053,11 @@ MonoBehaviour:
     newPosition: {fileID: 0}
     clip: {fileID: 0}
     Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+    image: {fileID: 0}
   action: 0
   fromStart: 1
   triggerByContact: 0
@@ -1546,6 +1186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa68f66bddbad204cb1721a0b15ec382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startCinematic: 0
 --- !u!61 &6251319836665479415
 BoxCollider2D:
   m_ObjectHideFlags: 0

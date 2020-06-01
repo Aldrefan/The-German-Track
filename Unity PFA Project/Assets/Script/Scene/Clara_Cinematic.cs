@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Clara_Cinematic : MonoBehaviour
 {
     bool movements;
-    enum Command {Movement, StartDialog, Wait, ActiveDialogComponent, ChangeParent, PlaySound, DeactivateSelf, DeactivateOther, ActivateObject, FadePanel, SetDay, EndGame, LoadScene, SetAnimBool, ShowImage, PlayAnimation, UseShortcut, Flip, DisableObject};
+    enum Command {Movement, StartDialog, Wait, ActiveDialogComponent, ChangeParent, PlaySound, DeactivateSelf, DeactivateOther, ActivateObject, FadePanel, SetDay, EndGame, LoadScene, SetAnimBool, ShowImage, PlayAnimation, UseShortcut, Flip, DisableObject, Reculer, Event};
 
     [SerializeField]
     List<Command> commandList;
@@ -36,6 +36,7 @@ public class Clara_Cinematic : MonoBehaviour
     {
         public string name;
         public bool state;
+        public bool reverseAnim;
     }
 
     public bool triggerByContact;
@@ -109,6 +110,36 @@ public class Clara_Cinematic : MonoBehaviour
         yield return new WaitForSeconds(time);
         //GetComponent<BoxCollider2D>().enabled = true;
         //Debug.Log(GetComponent<BoxCollider2D>().enabled);
+        annexInformation[action].objectToMove.GetComponent<BoxCollider2D>().enabled = true;
+        annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Walk", false);
+        if(annexInformation[action].objectToMove.tag == "Player")
+        {annexInformation[action].objectToMove.GetComponent<Rigidbody2D>().mass = mass;}
+        movements = false;
+        CheckIndex();
+    }
+
+    IEnumerator ReculeTimer(float time)
+    {
+        movements = true;
+        float mass = 0;
+        if(annexInformation[action].objectToMove.tag != "Player")
+        {
+            annexInformation[action].objectToMove.GetComponent<BoxCollider2D>().enabled = false;
+            if(annexInformation[action].direction < 0)
+            {
+                annexInformation[action].objectToMove.GetComponent<SpriteRenderer>().flipX = false;
+            }
+            else annexInformation[action].objectToMove.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else
+        {
+            mass = annexInformation[action].objectToMove.GetComponent<Rigidbody2D>().mass;
+            annexInformation[action].objectToMove.GetComponent<Rigidbody2D>().mass = 0;
+            annexInformation[action].objectToMove.GetComponent<MovementsPlayer>().CheckSensAndFlip(-annexInformation[action].direction);
+        }
+
+        yield return new WaitForSeconds(time);
+
         annexInformation[action].objectToMove.GetComponent<BoxCollider2D>().enabled = true;
         annexInformation[action].objectToMove.GetComponent<Animator>().SetBool("Walk", false);
         if(annexInformation[action].objectToMove.tag == "Player")
@@ -253,7 +284,21 @@ public class Clara_Cinematic : MonoBehaviour
             case Command.DisableObject :
             DisableObject();
             break;
+
+            case Command.Reculer :
+            StartCoroutine(ReculeTimer(annexInformation[action].time));
+            break;
+
+            case Command.Event :
+            Event();
+            break;
         }
+    }
+
+    void Event()
+    {
+        GameObject.FindObjectOfType<EventsCheck>().CheckEvents(annexInformation[action].boolNameAndState.name);
+        CheckIndex();
     }
 
     void DisableObject()
@@ -297,6 +342,8 @@ public class Clara_Cinematic : MonoBehaviour
         {
             annexInformation[action].objectToMove.GetComponent<MovementsPlayer>().enabled = !annexInformation[action].boolNameAndState.state;
         }
+        if(annexInformation[action].boolNameAndState.reverseAnim)
+        {annexInformation[action].objectToMove.GetComponent<Animator>().SetFloat(annexInformation[action].boolNameAndState.name + "Speed", annexInformation[action].objectToMove.GetComponent<Animator>().GetFloat(annexInformation[action].boolNameAndState.name + "Speed") * -1);}
         annexInformation[action].objectToMove.GetComponent<Animator>().SetBool(annexInformation[action].boolNameAndState.name, annexInformation[action].boolNameAndState.state);
         CheckIndex();
     }
