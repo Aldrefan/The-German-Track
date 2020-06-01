@@ -16122,5 +16122,25 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 345647822}
+    - target: {fileID: 7689664848417164065, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: tutoList.Array.data[0].tutoNameKey
+      value: TutoName_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664848417164065, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: tutoList.Array.data[0].tutoDescKey
+      value: TutoDesc_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664848417164065, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: tutoList.Array.data[2].tutoNameKey
+      value: TutoName_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664848417164065, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: tutoList.Array.data[2].tutoDescKey
+      value: TutoDesc_02
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}

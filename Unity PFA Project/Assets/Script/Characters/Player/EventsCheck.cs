@@ -381,6 +381,7 @@ public class EventsCheck : MonoBehaviour
                 GameObject.Find("Door_01_01").GetComponent<BoxCollider2D>().enabled = false;
                 GameObject.Find("CineTriggerBar").GetComponent<BoxCollider2D>().enabled = true;
                 carnetGoal.RemoveGoal(new GoalKeys("GoalName_02", "GoalDesc_02"));
+                carnetGoal.NewGoal(new GoalKeys("GoalName_03", "GoalDesc_03"));
                 PierceFound();
                 break;
 
@@ -391,7 +392,7 @@ public class EventsCheck : MonoBehaviour
                 GameObject.Find("Louise").GetComponent<PNJStates>().boolList.Find(x => x.boolName == "Wake").state = true;
                 DialogueChanger.DialChangr.ChangeDialogueComponent("Louise2");
                 DialogueChanger.DialChangr.ChangeDialogueComponent("Renard2");
-                carnetGoal.NewGoal(new GoalKeys("GoalName_03", "GoalDesc_03"));
+                //carnetGoal.NewGoal(new GoalKeys("GoalName_03", "GoalDesc_03"));
             break;
 
             case "Bar_Panic":
