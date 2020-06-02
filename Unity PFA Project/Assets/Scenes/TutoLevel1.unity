@@ -477,6 +477,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -572,6 +573,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -2014,6 +2016,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8960208535500947351, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728519200259631436, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1235555781, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2040,17 +2052,7 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 8960208535500947351, guid: 883065d35bf8001418b4f638f428c3ca,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6704163484707268912, guid: 883065d35bf8001418b4f638f428c3ca,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6728519200259631436, guid: 883065d35bf8001418b4f638f428c3ca,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2757,6 +2759,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -4379,6 +4382,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -4589,6 +4593,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -5049,6 +5054,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -5382,6 +5388,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -5941,6 +5948,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -6727,6 +6735,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -12197,6 +12206,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -13125,6 +13135,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -14775,6 +14786,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -14844,6 +14856,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: 0
@@ -14856,6 +14869,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 21300000, guid: d518002eee4b11e4fbcb54691d0b6662, type: 3}
   - objectToMove: {fileID: 1921905586}
     direction: 0
@@ -14868,6 +14882,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 1
+      reverseAnim: 0
     image: {fileID: 21300000, guid: d518002eee4b11e4fbcb54691d0b6662, type: 3}
   - objectToMove: {fileID: 0}
     direction: 0.07
@@ -14880,6 +14895,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 21300000, guid: d518002eee4b11e4fbcb54691d0b6662, type: 3}
   action: 0
   fromStart: 0
@@ -15122,7 +15138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   commandList: 0f000000020000000c000000
   annexInformation:
-  - objectToMove: {fileID: 0}
+  - objectToMove: {fileID: 915231602}
     direction: 0
     time: 0
     newParent: {fileID: 0}
@@ -15133,6 +15149,7 @@ MonoBehaviour:
     boolNameAndState:
       name: SlowFade
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: 0
@@ -15145,6 +15162,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: 0
@@ -15157,6 +15175,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   action: 0
   fromStart: 0
@@ -15344,6 +15363,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -15391,6 +15411,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Kenneth_Fouille
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: 0
@@ -15403,6 +15424,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: 0
@@ -15415,6 +15437,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Walk
       state: 1
+      reverseAnim: 0
     image: {fileID: 21300000, guid: d518002eee4b11e4fbcb54691d0b6662, type: 3}
   - objectToMove: {fileID: 0}
     direction: 0
@@ -15427,6 +15450,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 21300000, guid: d518002eee4b11e4fbcb54691d0b6662, type: 3}
   - objectToMove: {fileID: 0}
     direction: 0.07
@@ -15439,6 +15463,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 21300000, guid: d518002eee4b11e4fbcb54691d0b6662, type: 3}
   - objectToMove: {fileID: 1921905586}
     direction: 0.07
@@ -15451,6 +15476,7 @@ MonoBehaviour:
     boolNameAndState:
       name: Idle
       state: 0
+      reverseAnim: 0
     image: {fileID: 21300000, guid: d518002eee4b11e4fbcb54691d0b6662, type: 3}
   action: 0
   fromStart: 1

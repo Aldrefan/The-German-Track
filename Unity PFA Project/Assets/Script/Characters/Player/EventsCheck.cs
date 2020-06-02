@@ -410,6 +410,7 @@ public class EventsCheck : MonoBehaviour
             case "RenardMort":
                 GameObject.Find("Renard").GetComponent<Collider2D>().enabled = false;
                 DialogueChanger.DialChangr.ChangeDialogueComponent("RenardMort");
+                DialogueChanger.DialChangr.ChangeDialogueComponent("Louise3");
             break;
 
             default:

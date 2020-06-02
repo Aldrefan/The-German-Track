@@ -74,7 +74,7 @@ public class PNJ : MonoBehaviour
         public int stickerIndex;
         public UnityEvent actionToTrigger;
     }
-    [SerializeField] List<EventsTriggeredByStickers> eventsActivationList = new List<EventsTriggeredByStickers>();
+    public List<EventsTriggeredByStickers> eventsActivationList = new List<EventsTriggeredByStickers>();
     
     string currentLine = "";
     float dialogDelay = 0.01f;

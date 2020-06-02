@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogueChanger : MonoBehaviour
 {
@@ -28,6 +29,12 @@ public class DialogueChanger : MonoBehaviour
         PNJ oldComponent = DC.characterToModify.GetComponent<PNJ>();
         oldComponent.transitionQuote = DC.newComponent.transitionQuote;
         oldComponent.PNJName = DC.newComponent.PNJName;
+        oldComponent.eventsActivationList = DC.newComponent.eventsActivationList;
+        /*if(DC.newComponent.eventsActivationList.Count > 0)
+        {
+            for(int i = 0; i < DC.newComponent.eventsActivationList.Count; i++)
+            {oldComponent.eventsActivationList.Add(new PNJ.EventsTriggeredByStickers{DC.newComponent.eventsActivationList.})}
+        }*/
         oldComponent.negativeQuote = DC.newComponent.negativeQuote;
         oldComponent.allDialogs = DC.newComponent.allDialogs;
         oldComponent.stickerRedirection = DC.newComponent.stickerRedirection;
