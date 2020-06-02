@@ -163,7 +163,7 @@ public class Menu : MonoBehaviour
 
         //resolution & fullscreen initialisation
         SetResolution(resolutionIndex);
-        SetFullscreen(isFullscreen);
+        SetFullscreen(Screen.fullScreen);
 
         //black & white initialisation
         BlackAndWhiteMode(isBlackAndWhite);
@@ -339,7 +339,10 @@ public class Menu : MonoBehaviour
     public void SetFullscreen(bool isFullscreenTemp)
     {
         isFullscreen = isFullscreenTemp;
-        Screen.fullScreen = isFullscreenTemp;
+        if (Screen.fullScreen != isFullscreen)
+        {
+            Screen.fullScreen = isFullscreen;
+        }
         //if (isFullscreenTemp) GameObject.Find("Fullscreen").GetComponent<Toggle>().isOn = true;
         //else GameObject.Find("Fullscreen").GetComponent<Toggle>().isOn = false;
     }
