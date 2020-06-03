@@ -22,6 +22,8 @@ public class TutorielV2_Part2 : MonoBehaviour
 
     Interactions playerInteractions;
     EventsCheck playerEventsCheck;
+    PlayerMemory playerMemory;
+    NewStickerDisplay stickerDisplay;
 
     GameObject MoveIndicator;
     bool moveDone;
@@ -29,6 +31,8 @@ public class TutorielV2_Part2 : MonoBehaviour
 
     List<string> TutoSentences = new List<string>();
     string actualSentence;
+
+    int convIndex;
 
 
     // Start is called before the first frame update
@@ -46,6 +50,8 @@ public class TutorielV2_Part2 : MonoBehaviour
 
         playerInteractions = GameObject.FindObjectOfType<Interactions>();
         playerEventsCheck = playerInteractions.GetComponent<EventsCheck>();
+        playerMemory = playerInteractions.GetComponent<PlayerMemory>();
+        stickerDisplay = CanvasManager.CManager.GetCanvas("Dialogue").transform.Find("Nouvelle Etiquette").GetComponent<NewStickerDisplay>();
 
         MoveIndicator = this.transform.Find("MoveIndic").gameObject;
     }
@@ -61,6 +67,30 @@ public class TutorielV2_Part2 : MonoBehaviour
     {
         if (tutoList.Count >= actualIndex + 1 && !tutoList[actualIndex].active)
         {
+            if (tutoList[actualIndex].tutoCase == "GetNote")
+            {
+                
+                if (stickerDisplay.stickersToNotif.Count != 0)
+                {
+                    if (!notifOpen)
+                    {
+
+                        notifNeedToBeOpen = true;
+                        OpenCloseNotif(finalPos);
+                    }
+                }
+                else if (playerInteractions.state == Interactions.State.InDialog && playerInteractions.PNJContact.GetComponent<PNJ>().dialogIndex > 2)
+                {
+                    tutoList[actualIndex].active = true;
+                    actualIndex++;
+                    notifNeedToBeOpen = false;
+                }
+            }
+            else if (notifOpen && !notifNeedToBeOpen)
+            {
+                OpenCloseNotif(originalPos);
+            }
+
             if (tutoList[actualIndex].tutoCase == "Interroger")
             {
                 if (playerInteractions.state == Interactions.State.InDialog && playerInteractions.PNJContact.GetComponent<PNJ>().dialogIndex == 2 )
