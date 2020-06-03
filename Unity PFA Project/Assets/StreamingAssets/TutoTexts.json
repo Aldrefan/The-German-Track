@@ -608,24 +608,28 @@
    {
       "Key": "LouiseTuto_D8_Q1",
       "FR": "Je n'en sais rien.",
+      "EN": "I have no idea.",
       "FRName": "Louise",
       "ENName": "Louise"
    },
    {
       "Key": "LouiseTuto_D7_Q1",
       "FR": "Vous vouliez quelque chose ?",
+      "EN": "Did you need anything ?",
       "FRName": "Louise",
       "ENName": "Louise"
    },
    {
       "Key": "LouiseTuto_D9_Q1",
       "FR": "Ouf\u2026 Il va me falloir un autre verre.",
+      "EN": "Oof... I'm gonna need another drink.",
       "FRName": "Louise",
       "ENName": "Louise"
    },
    {
       "Key": "LouiseTuto_D10_Q1",
       "FR": "Je\u2026 je ne sais pas\u2026",
+      "EN": "I... I don't know...",
       "FRName": "Louise",
       "ENName": "Louise"
    },
@@ -639,12 +643,14 @@
    {
       "Key": "LouiseTuto_D12_Q1",
       "FR": "Vous l\u2019avez tu\u00E9\u2026",
+      "EN": "You killed him...",
       "FRName": "Louise",
       "ENName": "Louise"
    },
    {
       "Key": "LouiseTuto_D13_Q1",
       "FR": "J\u2019ai besoin d\u2019air, faites vite je vous en prie !",
+      "EN": "I need some fresh air, be quick please !",
       "FRName": "Louise",
       "ENName": "Louise"
    },
@@ -980,18 +986,21 @@
    {
       "Key": "RenardTuto_D8_Q1",
       "FR": "D\u00E9gagez.",
+      "EN": "Get lost.",
       "FRName": "Renard",
       "ENName": "Renard"
    },
    {
       "Key": "RenardTuto_D9_Q1",
       "FR": "Si vous croyez me faire peur avec vos flingues\u2026",
+      "EN": "If you think you can scare me with your guns...",
       "FRName": "Renard",
       "ENName": "Renard"
    },
    {
       "Key": "RenardTuto_D10_Q1",
       "FR": "Qu\u2019est ce que vous voulez que \u00E7a me fasse?",
+      "EN": "What's it to me ?",
       "FRName": "Renard",
       "ENName": "Renard"
    },
@@ -1200,18 +1209,21 @@
    {
       "Key": "DocTuto_D6_Q1",
       "FR": "S\u2019il vous plait\u2026 Laissez-nous partir\u2026",
+      "EN": "Please... Let us go...",
       "FRName": "Dr.Lefevre",
       "ENName": "Dr.Lefevre"
    },
    {
       "Key": "DocTuto_D7_Q1",
       "FR": "Il y a autre chose ?",
+      "EN": "Is there something else ?",
       "FRName": "Dr.Lefevre",
       "ENName": "Dr.Lefevre"
    },
    {
       "Key": "DocTuto_D8_Q1",
       "FR": "Je regrette, je n\u2019en sais rien.",
+      "EN": "I'm sorry, I don't know anything about that.",
       "FRName": "Dr.Lefevre",
       "ENName": "Dr.Lefevre"
    },
@@ -1782,32 +1794,32 @@
    },
    {
       "Key": "GoalName_03",
-      "FR": 3,
+      "FR": "Enqu\u00EAter sur ce qui est arriv\u00E9 \u00E0 Pierce",
       "EN": 3
    },
    {
       "Key": "GoalDesc_03",
-      "FR": 3,
+      "FR": "J'ai trouv\u00E9 le cadavre de Pierce dans une chambre \u00E0 l'\u00E9tage, l'assassin doit s\u00FBrement encore \u00EAtre dans le b\u00E2timent, il faut que je trouve le coupable.",
       "EN": 3
    },
    {
       "Key": "GoalName_04",
-      "FR": 4,
+      "FR": "Trouver un support pour lier vos notes",
       "EN": 4
    },
    {
       "Key": "GoalDesc_04",
-      "FR": 4,
+      "FR": "Les infos que j'ai trouv\u00E9 ont peut \u00EAtre des liens qui pourrait me mener au coupable. Il faut que je trouve un support comme un tableau pour faire \u00E7a correctement.",
       "EN": 4
    },
    {
       "Key": "GoalName_05",
-      "FR": 5,
+      "FR": "Interroger les suspects \u00E0 propos de la sc\u00E8ne de crime",
       "EN": 5
    },
    {
       "Key": "GoalDesc_05",
-      "FR": 5,
+      "FR": "Avec les \u00E9l\u00E9ments que j'ai trouv\u00E9 dans la chambre, quelqu'un doit forc\u00E9ment pouvoir m'apprendre quelquechose qui pourrait m'aider \u00E0 d\u00E9masquer le meurtrier",
       "EN": 5
    },
    {
@@ -1838,79 +1850,132 @@
    {
       "Key": "Board_D1_Q1",
       "FR": "Un tableau, certainement l\u00E0 pour tenir les comptes.",
+      "EN": "A board, certainly here to keep track of the accounts.",
       "FRName": "Kenneth",
       "ENName": "Kenneth"
    },
    {
       "Key": "Board_D2_Q1",
       "FR": "J\u2019aurais besoin de quelque chose pour croiser les diff\u00E9rentes informations\u2026",
+      "EN": "I need some kind of platform to link together all of the information...",
       "FRName": "Kenneth",
       "ENName": "Kenneth"
    },
    {
       "Key": "Board_D2_Q2",
       "FR": "Ce tableau devrait faire l\u2019affaire.",
+      "EN": "This board should do the trick.",
       "FRName": "Kenneth",
       "ENName": "Kenneth"
    },
    {
-      "Key": "TutoName_01",
-      "FR": "Dialogue",
-      "EN": "Tuto Name 1"
+      "Key": "Tuto_Dialogs_Title",
+      "FR": "Les dialogues",
+      "EN": "The dialogs"
    },
    {
-      "Key": "TutoDesc_01",
-      "FR": "Appuyer sur E ou cliquer sur la bo\u00EEte de dialogue pour passer au dialogue suivant.",
-      "EN": "Tuto Desc 1"
+      "Key": "Tuto_Dialogs_Text",
+      "FR": "Afin d'en apprendre plus sur l'histoire, vous devrez discuter avec les personnages. Pour passer \u00E0 la suite du dialogue, appuyez sur <b> E </b> ou <b> clic gauche </b> sur la boite de dialogue.",
+      "EN": "In order to learn more about the story, you will need to speak with the different characters. To get to the following line of the dialogue, press <b> E </b> or <b> left-click </b> on the dialogue box."
    },
    {
-      "Key": "TutoName_02",
-      "FR": "Interaction",
-      "EN": "Tuto Name 2"
+      "Key": "Tuto_NewSticker_Title",
+      "FR": "Les notes",
+      "EN": "The notes"
    },
    {
-      "Key": "TutoDesc_02",
-      "FR": "Appuyer sur E quand un object est surlign\u00E9 afin d'interagir avec.",
-      "EN": "Tuto Desc 2"
+      "Key": "Tuto_NewSticker_Text",
+      "FR": "Au fil de l'histoire vous trouverez diff\u00E9rentes notes qui sont des r\u00E9pr\u00E9sentations \u00E9crites des informations que vous trouvez pour l'enqu\u00EAte. Vous \u00EAtes pr\u00E9venu lorsque vous en obtenez une, et vous pouvez retrouver toutes vos notes dans votre carnet ou sur votre tableau.\nLes notes peuvent \u00EAtre utilis\u00E9es dans le tableau afin de cr\u00E9er des hypoth\u00E8ses qui vous permettront de poursuivre votre enqu\u00EAte !",
+      "EN": "Along the story you will find different notes which are written representations of the information you will gather regarding the case. When you get one, you will be notified and you can find all the notes in your notebook or on the board in your office.\nNotes can be used on the board to create new hypotheses which will help you go on with your investigation !"
    },
    {
-      "Key": "TutoName_03",
-      "FR": "Interroger",
-      "EN": "Tuto Name 3"
+      "Key": "Tuto_Questions_Title",
+      "FR": "Poser une question",
+      "EN": "Ask a question"
    },
    {
-      "Key": "TutoDesc_03",
-      "FR": "Lorsque le carnet apparait en haut de la bo\u00EEte de dialogue, cela signifie que le joueur est en phase de transition du dialogue.\n\n\u00C0 ce moment il est possible d'accorder un sujet de convertion gr\u00E2ce aux notes. Pour cela le joueur doit cliquer sur le carnet et choisir une note parmi les diff\u00E9rents onglets de celui ci.",
-      "EN": "Tuto Desc 3"
+      "Key": "Tuto_Questions_Text",
+      "FR": "Pour poser une question, il vous suffit d'\u00EAtre en dialogue avec un personnage, ou d'\u00EAtre pr\u00E8s de lui, puis <b> d'ouvrir le carnet, et de cliquer sur la note sur laquelle vous souhaitez l'interroger. </b>",
+      "EN": "To ask a question, you simply need to be in a dialogue with someone, or stand close to them, <b> click on the notebook to open it, then click the note you want to question them about. </b>"
    },
    {
-      "Key": "TutoName_04",
-      "FR": "Sortir d'une conversation",
-      "EN": "Tuto Name 4"
+      "Key": "Tuto_QuitDialog_Title",
+      "FR": "Les dialogues",
+      "EN": "The dialogs"
    },
    {
-      "Key": "TutoDesc_04",
-      "FR": "Lorsque le carnet apparait en haut de la bo\u00EEte de dialogue, cela signifie que le joueur est en phase de transition du dialogue.\n\nC'est seulement pendant cette phase que le joueur peut quitter la conversation, en appuyant sur la touche \u00C9chap.",
-      "EN": "Tuto Desc 4"
+      "Key": "Tuto_QuitDialog_Text",
+      "FR": "Pour quitter un dialogue (s'il le permet), ou toute autre fen\u00EAtre, appuyez sur <b> ECHAP. </b>",
+      "EN": "To quit a dialogue sequence (if possible), or any other window, press the <b> ESC key. </b>"
    },
    {
-      "Key": "TutoName_05",
-      "FR": "Le Tableau",
-      "EN": "Tuto Name 5"
+      "Key": "Tuto_Move_Title",
+      "FR": "Se d\u00E9placer",
+      "EN": "Move"
    },
    {
-      "Key": "TutoDesc_05",
-      "FR": "Desc Tuto 5",
-      "EN": "Tuto Desc 5"
+      "Key": "Tuto_Move_Text",
+      "FR": "Pour vous d\u00E9placer dans le jeu, utilisez les touches <b> Q et D. </b>",
+      "EN": "To move around, use the <b> A and D keys. </b>"
    },
    {
-      "Key": "TutoName_06",
-      "FR": "Nom Tuto 6",
-      "EN": "Tuto Name 6"
+      "Key": "Tuto_Interaction_Title",
+      "FR": "Int\u00E9ragir",
+      "EN": "Interact"
    },
    {
-      "Key": "TutoDesc_06",
-      "FR": "Desc Tuto 6",
-      "EN": "Tuto Desc 6"
+      "Key": "Tuto_Interaction_Text",
+      "FR": "Vous pouvez int\u00E9ragir avec un objet, un personnage, une porte... Avec la touche <b> E </b> \u00E0 chaque fois que le jeu vous l'indiquera. Vous pouvez \u00E9galement <b> cliquer sur l'ic\u00F4ne de l'objet en question. </b>",
+      "EN": "You can interact with an object, a character, a door, etc. with the <b> E key </b> any time the game indicates it. You can also <b> click the object's icon in question. </b>"
+   },
+   {
+      "Key": "Tuto_OpenBook_Title",
+      "FR": "Le carnet",
+      "EN": "The notebook"
+   },
+   {
+      "Key": "Tuto_OpenBook_Text",
+      "FR": "Vous pouvez ouvrir votre carnet \u00E0 tout moment en utilisant le clic gauche dessus, ou en utilisant les touches <b> I ou TAB. </b>",
+      "EN": "You can open your notebook at any moment by clicking it, or with the <b> I or TAB keys. </b>"
+   },
+   {
+      "Key": "Tuto_NavigateBook_Title",
+      "FR": "Le carnet",
+      "EN": "The notebook"
+   },
+   {
+      "Key": "Tuto_NavigateBook_Text",
+      "FR": "\u00C0 l'int\u00E9rieur du carnet, vous pouvez utiliser le clic gauche pour naviguer entre les diff\u00E9rents onglets du carnet, et quitter avec <b> ECHAP, I, ou TAB. </b>",
+      "EN": "While in the notebook, you can navigate its tabs by clicking on them, and quit by pressing <b> ESC, I, or TAB. </b>"
+   },
+   {
+      "Key": "Tuto_Menu_Title",
+      "FR": "Le menu",
+      "EN": "The menu"
+   },
+   {
+      "Key": "Tuto_Menu_Text",
+      "FR": "\u00C0 tout moment vous pouvez utiliser <b> ECHAP </b> pour acc\u00E9der au menu du jeu.",
+      "EN": "You can access the game's main menu at any time by pressing <b> ESC. </b>"
+   },
+   {
+      "Key": "Tuto_Sprint_Title",
+      "FR": "Se d\u00E9placer",
+      "EN": "Move"
+   },
+   {
+      "Key": "Tuto_Sprint_Text",
+      "FR": "Quand le lieu vous le permet, vous pouvez maintenir <b> SHIFT </b> en vous d\u00E9placant pour courir.",
+      "EN": "When the place allows it, you can hold <b> SHIFT </b> while moving to run."
+   },
+   {
+      "Key": "Tuto_Board_Title",
+      "FR": "Le tableau",
+      "EN": "The board"
+   },
+   {
+      "Key": "Tuto_Board_Text",
+      "FR": "Il vous sert \u00E0 \u00E9tablir des liens entre les \u00E9l\u00E9ments de l'enqu\u00EAte (notes) afin d'\u00E9mettre des hypoth\u00E8ses.\nD\u00E9placez les notes avec la souris et reliez-les avec le clic gauche. Cliquez sur <b> \"V\u00C9RIFIER\" </b> pour \u00E9tablir une hypoth\u00E8se \u00E0 partir des notes reli\u00E9es s'il y en a une.\nFormer une hypoth\u00E8se requiert de relier entre 2 et 5 notes dont le profil d'une personne. Appuyez sur <b> E </b> pour zoomer et d\u00E9-zoomer dans le tableau.\nCliquez sur <b> \"EFFACER\" </b> pour annuler les liens entre vos notes. Cliquez sur <b> la croix </b> pour fermer l'interface \u00E0 tout moment.",
+      "EN": "It allows you to link different elements of the investigation (notes) in order to create hypotheses.\nMove notes by clicking and dragging them across the board. Click on the notes to link them together. Click <b> \"VERIFY\" </b> to create a hypothesis from the linked notes if there is one.\nYou must link 2 to 5 notes in order to form a hypothesis, including a person's profile. Press <b> E </b> to zoom and unzoom into the board.\nClick <b> \"CLEAR\" </b> to unlink the notes. Click the <b> \"X\" </b> to close the board."
    }
 ]
