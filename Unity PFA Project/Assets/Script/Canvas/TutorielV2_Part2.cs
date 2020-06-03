@@ -24,6 +24,7 @@ public class TutorielV2_Part2 : MonoBehaviour
     EventsCheck playerEventsCheck;
     PlayerMemory playerMemory;
     NewStickerDisplay stickerDisplay;
+    Rigidbody2D playerRigidBody;
 
     GameObject MoveIndicator;
     bool moveDone;
@@ -32,7 +33,8 @@ public class TutorielV2_Part2 : MonoBehaviour
     List<string> TutoSentences = new List<string>();
     string actualSentence;
 
-    int convIndex;
+    bool NotifReset;
+    bool CoroutineBreaker;
 
 
     // Start is called before the first frame update
@@ -40,7 +42,7 @@ public class TutorielV2_Part2 : MonoBehaviour
     {
         notif = this.transform.Find("Notif").gameObject;
         originalPos = notif.GetComponent<RectTransform>().anchoredPosition;
-        Debug.Log(notif + ""+notif.GetComponent<RectTransform>().anchoredPosition);
+        //Debug.Log(notif + ""+notif.GetComponent<RectTransform>().anchoredPosition);
 
         finalPos = new Vector3(-originalPos.x, originalPos.y);
 
@@ -52,6 +54,7 @@ public class TutorielV2_Part2 : MonoBehaviour
         playerEventsCheck = playerInteractions.GetComponent<EventsCheck>();
         playerMemory = playerInteractions.GetComponent<PlayerMemory>();
         stickerDisplay = CanvasManager.CManager.GetCanvas("Dialogue").transform.Find("Nouvelle Etiquette").GetComponent<NewStickerDisplay>();
+        playerRigidBody = playerInteractions.GetComponent<Rigidbody2D>();
 
         MoveIndicator = this.transform.Find("MoveIndic").gameObject;
     }
@@ -69,7 +72,7 @@ public class TutorielV2_Part2 : MonoBehaviour
         {
             if (tutoList[actualIndex].tutoCase == "GetNote")
             {
-                
+
                 if (stickerDisplay.stickersToNotif.Count != 0)
                 {
                     if (!notifOpen)
@@ -79,7 +82,7 @@ public class TutorielV2_Part2 : MonoBehaviour
                         OpenCloseNotif(finalPos);
                     }
                 }
-                else if (playerInteractions.state == Interactions.State.InDialog && playerInteractions.PNJContact.GetComponent<PNJ>().dialogIndex > 2)
+                else if (playerInteractions.state == Interactions.State.InCinematic && playerRigidBody.velocity.magnitude !=0)
                 {
                     tutoList[actualIndex].active = true;
                     actualIndex++;
@@ -130,6 +133,64 @@ public class TutorielV2_Part2 : MonoBehaviour
                     actualIndex++;
                     notifNeedToBeOpen = false;
                 }
+            }
+            else if (notifOpen && !notifNeedToBeOpen)
+            {
+                OpenCloseNotif(originalPos);
+            }
+
+            if (tutoList[actualIndex].tutoCase == "OuvrirCarnet")
+            {
+                if (!notifOpen)
+                {
+                    if (playerInteractions.state == Interactions.State.Normal)
+                    {
+                        notifNeedToBeOpen = true;
+                        OpenCloseNotif(finalPos);
+                        StartCoroutine(CloseTutoNotif(5));
+                    }
+                }
+                else
+                {
+                    if (NotifReset || playerInteractions.state == Interactions.State.OnCarnet)
+                    {
+                        tutoList[actualIndex].active = true;
+                        actualIndex++;
+                        notifNeedToBeOpen = false;
+                        NotifReset = false;
+                        CoroutineBreaker = true;
+
+                    }
+                }
+            }
+            else if (notifOpen && !notifNeedToBeOpen)
+            {
+                OpenCloseNotif(originalPos);
+            }
+
+            if (tutoList[actualIndex].tutoCase == "NavCarnet")
+            {
+                if (!notifOpen)
+                {
+                    if (playerInteractions.state == Interactions.State.OnCarnet)
+                    {
+                        notifNeedToBeOpen = true;
+                        OpenCloseNotif(finalPos);
+                    }
+                }
+                else
+                {
+                    if (notifNeedToBeOpen && playerInteractions.state == Interactions.State.Normal)
+                    {
+                        tutoList[actualIndex].active = true;
+                        actualIndex++;
+                        notifNeedToBeOpen = false;
+                        NotifReset = false;
+                        CoroutineBreaker = true;
+
+                    }
+                }
+                
             }
             else if (notifOpen && !notifNeedToBeOpen)
             {
@@ -225,6 +286,21 @@ public class TutorielV2_Part2 : MonoBehaviour
         }
 
     } 
+
+    IEnumerator CloseTutoNotif(float timeToClose)
+    {
+        yield return new WaitForSeconds(timeToClose);
+        if (!CoroutineBreaker)
+        {
+            NotifReset = true;
+
+        }
+        else
+        {
+            CoroutineBreaker = false;
+            yield return null;
+        }
+    }
 }
 
 

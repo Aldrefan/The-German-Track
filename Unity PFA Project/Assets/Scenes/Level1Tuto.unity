@@ -1672,7 +1672,7 @@ SpriteRenderer:
   m_Size: {x: 2.73, y: 0.83}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &302816800
@@ -2314,14 +2314,29 @@ MonoBehaviour:
   tutoList:
   - active: 0
     index: 0
-    tutoCase: Interroger
-    tutoNameKey: TutoName_03
-    tutoDescKey: TutoDesc_03
+    tutoCase: GetNote
+    tutoNameKey: Tuto_NewSticker_Title
+    tutoDescKey: Tuto_NewSticker_Text
   - active: 0
     index: 1
+    tutoCase: Interroger
+    tutoNameKey: Tuto_Questions_Title
+    tutoDescKey: Tuto_Questions_Text
+  - active: 0
+    index: 2
     tutoCase: SortirConv
-    tutoNameKey: TutoName_04
-    tutoDescKey: TutoDesc_04
+    tutoNameKey: Tuto_QuitDialog_Title
+    tutoDescKey: Tuto_QuitDialog_Text
+  - active: 0
+    index: 3
+    tutoCase: OuvrirCarnet
+    tutoNameKey: Tuto_OpenBook_Title
+    tutoDescKey: Tuto_OpenBook_Text
+  - active: 0
+    index: 4
+    tutoCase: NavCarnet
+    tutoNameKey: Tuto_NavigateBook_Title
+    tutoDescKey: Tuto_NavigateBook_Text
 --- !u!1 &402667081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6555912083691328246, guid: 95356b6030096ed40b6d2763e348a71a,
@@ -4505,7 +4520,7 @@ PrefabInstance:
     - target: {fileID: 7689664849014035018, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000045776367
+      value: 0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 7689664848496456132, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
@@ -12189,7 +12204,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1287354157
@@ -13381,7 +13396,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1551413601
@@ -14513,6 +14528,11 @@ PrefabInstance:
       propertyPath: staticCamera
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8365423122775060027, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
+        type: 3}
+      propertyPath: canRun
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8365423124055191512, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -15398,7 +15418,7 @@ SpriteRenderer:
   m_Size: {x: 0.5, y: 0.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!224 &1730731949 stripped
@@ -16615,7 +16635,7 @@ SpriteRenderer:
   m_Size: {x: 1.67, y: 0.43}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1886340151
