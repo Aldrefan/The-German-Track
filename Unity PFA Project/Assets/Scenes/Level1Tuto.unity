@@ -15594,7 +15594,8 @@ MonoBehaviour:
       - quote: Board_D2_Q2
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger: []
+        eventTrigger:
+        - FindBoard
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 1

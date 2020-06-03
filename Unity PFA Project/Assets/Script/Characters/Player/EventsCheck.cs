@@ -311,6 +311,7 @@ public class EventsCheck : MonoBehaviour
                 break;*/
 
             case "GoToSleep":
+                carnetGoal.NewGoal(new GoalKeys("Goal_07", "DescGoal_07"));
                 carnetGoal.NewGoal(new GoalKeys("Goal_03", "DescGoal_03"));
                 break;
 
@@ -392,7 +393,13 @@ public class EventsCheck : MonoBehaviour
                 GameObject.Find("Louise").GetComponent<PNJStates>().boolList.Find(x => x.boolName == "Wake").state = true;
                 DialogueChanger.DialChangr.ChangeDialogueComponent("Louise2");
                 DialogueChanger.DialChangr.ChangeDialogueComponent("Renard2");
-                //carnetGoal.NewGoal(new GoalKeys("GoalName_03", "GoalDesc_03"));
+                carnetGoal.NewGoal(new GoalKeys("GoalName_04", "GoalDesc_04"));
+                carnetGoal.NewGoal(new GoalKeys("GoalName_05", "GoalDesc_05"));
+                break;
+
+            case "FindBoard":
+                GetComponent<Interactions>().state = Interactions.State.InCinematic;
+                eventsList.RemoveAt(eventsList.Count - 1);
             break;
 
             case "Bar_Panic":
