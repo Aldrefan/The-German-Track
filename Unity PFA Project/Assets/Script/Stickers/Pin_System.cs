@@ -139,14 +139,14 @@ public class Pin_System : MonoBehaviour
         Destroy(transform.GetChild(2));
     }
 
-    public void PointerEnter()
+    /*public void PointerEnter()
     {
         mouseOn = true;
     }
     public void PointerExit()
     {
         mouseOn = false;
-    }
+    }*/
 
     /*public void PointerDown()
     {
@@ -265,7 +265,7 @@ public class Pin_System : MonoBehaviour
         }
     }
 
-    public void Drag()
+    /*public void Drag()
     {
         if(Input.GetKey(KeyCode.Mouse0))
         {
@@ -276,5 +276,5 @@ public class Pin_System : MonoBehaviour
             //transform.position = Camera.main.ScreenToWorldPoint(screenPoint);//
             //transform.position = Input.mousePosition;
         }
-    }
+    }*/
 }

@@ -16,7 +16,6 @@ public class StickerManager : MonoBehaviour
     public void OnCarnet()
     {
         Destroy(GetComponent<Pin_System>());
-        Destroy(GetComponent<EventTrigger>());
         GetComponent<CarnetSticker>().enabled = true;
         GetComponent<StickerManager>().enabled = false;
     }

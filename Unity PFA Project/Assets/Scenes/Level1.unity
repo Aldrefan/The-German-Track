@@ -4431,6 +4431,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -5822,6 +5823,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -7366,6 +7368,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -8053,6 +8056,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -11508,6 +11512,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -15178,6 +15183,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -15810,6 +15816,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -19322,6 +19329,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -20080,6 +20088,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -20593,6 +20602,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -26542,6 +26552,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -26694,6 +26705,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -27220,6 +27232,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -29583,6 +29596,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -30856,6 +30870,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -32858,6 +32873,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -35196,6 +35212,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -36463,6 +36480,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -36760,6 +36778,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -38026,6 +38045,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -40324,6 +40344,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -42149,6 +42170,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -42669,7 +42691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59dda0572c4e9f34e919df6aa7330d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadAtStart: 0
+  loadAtStart: 1
 --- !u!1 &1047992692
 GameObject:
   m_ObjectHideFlags: 0
@@ -45589,6 +45611,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 347536225}
+    - target: {fileID: 8960208535500947351, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 347536218}
+    - target: {fileID: 6728519200259631436, guid: 883065d35bf8001418b4f638f428c3ca,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1555739453}
     - target: {fileID: 1405921389, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -164.60005
@@ -45602,21 +45634,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4165409269409925061}
-    - target: {fileID: 8960208535500947351, guid: 883065d35bf8001418b4f638f428c3ca,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 347536218}
     - target: {fileID: 6704163484707268912, guid: 883065d35bf8001418b4f638f428c3ca,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 347536218}
-    - target: {fileID: 6728519200259631436, guid: 883065d35bf8001418b4f638f428c3ca,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1555739453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 883065d35bf8001418b4f638f428c3ca, type: 3}
 --- !u!1 &1120278281 stripped
@@ -46689,6 +46711,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -50308,6 +50331,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -50546,6 +50570,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -51230,6 +51255,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -52762,6 +52788,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -52814,6 +52841,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: 0
@@ -52826,6 +52854,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 1572701799}
     direction: 0
@@ -52838,6 +52867,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 1572701799}
     direction: 0
@@ -52850,6 +52880,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 750224575}
     direction: 0
@@ -52862,6 +52893,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 1572701799}
     direction: 0
@@ -52874,6 +52906,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 1572701799}
     direction: 0
@@ -52886,6 +52919,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   action: 0
   fromStart: 0
@@ -53557,6 +53591,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -55010,6 +55045,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -61185,6 +61221,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -61761,6 +61798,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -61920,6 +61958,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -62953,6 +62992,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -65763,6 +65803,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -74868,6 +74909,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -75438,6 +75480,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -76901,6 +76944,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -76951,6 +76995,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 1156105002}
     direction: 0
@@ -76963,6 +77008,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: 0
@@ -76975,6 +77021,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 0}
     direction: 0
@@ -76987,6 +77034,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   action: 0
   fromStart: 0
@@ -77112,6 +77160,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -80282,6 +80331,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -81247,6 +81297,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 225433062}
     direction: 0
@@ -81259,6 +81310,7 @@ MonoBehaviour:
     boolNameAndState:
       name: 
       state: 0
+      reverseAnim: 0
     image: {fileID: 0}
   action: 0
   fromStart: 0
@@ -83690,6 +83742,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -83933,6 +83986,7 @@ MonoBehaviour:
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
