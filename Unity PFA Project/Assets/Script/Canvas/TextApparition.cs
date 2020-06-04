@@ -6,9 +6,16 @@ using UnityEngine.UI;
 public class TextApparition : MonoBehaviour
 {
     public string text;
+
+    private string realText;
+
+    LanguageManager langManager;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        langManager = GameObject.FindObjectOfType<LanguageManager>();
         TransfersTrad();
     }
 
@@ -20,15 +27,23 @@ public class TextApparition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(realText != langManager.GetDialog(text))
+        {
+            TransfersTrad();
+        }
     }
 
     void TransfersTrad()
     {
-        LanguageManager langManager = GameObject.FindObjectOfType<LanguageManager>();
         if(langManager!= null)
         {
-            this.GetComponent<Text>().text = langManager.GetDialog(text);
+            realText = langManager.GetDialog(text);
+
+        }
+
+        if(realText != this.GetComponent<Text>().text)
+        {
+            this.GetComponent<Text>().text = realText;
 
         }
     }

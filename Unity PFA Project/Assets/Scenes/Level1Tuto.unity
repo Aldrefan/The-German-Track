@@ -1675,7 +1675,7 @@ SpriteRenderer:
   m_Size: {x: 2.73, y: 0.83}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &302816800
@@ -2346,6 +2346,11 @@ MonoBehaviour:
     tutoCase: NavCarnet
     tutoNameKey: Tuto_NavigateBook_Title
     tutoDescKey: Tuto_NavigateBook_Text
+  - active: 0
+    index: 5
+    tutoCase: Board
+    tutoNameKey: Tuto_Board_Title
+    tutoDescKey: Tuto_Board_Text
 --- !u!1 &402667081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6555912083691328246, guid: 95356b6030096ed40b6d2763e348a71a,
@@ -4565,6 +4570,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7689664849583981883, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 7689664848923983233, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -4584,6 +4594,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664848923983233, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7689664849531536598, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
@@ -4608,7 +4623,7 @@ PrefabInstance:
     - target: {fileID: 7689664849014035018, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000015258789
+      value: -0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 7689664848496456132, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
@@ -4629,6 +4644,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664848496456132, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7689664848725713497, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
@@ -4685,7 +4705,7 @@ PrefabInstance:
     - target: {fileID: 7689664847967823719, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 340
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7689664847967823719, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
@@ -4717,6 +4737,56 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 758156766}
+    - target: {fileID: 7689664848779096429, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.000091552734
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664848779096429, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664848779096429, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664848779096429, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664848779096429, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664848779096429, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664848337099132, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 280
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664848337099132, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 280
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664848337099132, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664848779096430, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 45
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7689664848417164065, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
@@ -12292,7 +12362,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1287354157
@@ -13484,7 +13554,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1551413601
@@ -15516,7 +15586,7 @@ SpriteRenderer:
   m_Size: {x: 0.5, y: 0.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!224 &1730731949 stripped
@@ -16733,7 +16803,7 @@ SpriteRenderer:
   m_Size: {x: 1.67, y: 0.43}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1886340151

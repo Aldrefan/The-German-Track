@@ -313,6 +313,8 @@ public class EventsCheck : MonoBehaviour
             case "GoToSleep":
                 carnetGoal.NewGoal(new GoalKeys("Goal_07", "DescGoal_07"));
                 carnetGoal.NewGoal(new GoalKeys("Goal_03", "DescGoal_03"));
+                carnetGoal.NewGoal(new GoalKeys("Goal_08", "DescGoal_08"));
+
                 break;
 
             case "HasSlep":
@@ -345,7 +347,9 @@ public class EventsCheck : MonoBehaviour
                 break;
 
             case "TalkToKurt":
+                carnetGoal.RemoveGoal(new GoalKeys("Goal_08", "DescGoal_08"));
                 UnlockKurtAppartment();
+
                 break;
 
             case "LettreADecoder":
@@ -357,6 +361,11 @@ public class EventsCheck : MonoBehaviour
                 break;
 
             case "OuvrirPorteKurt":
+                break;
+
+            case "FindVictor":
+                carnetGoal.RemoveGoal(new GoalKeys("Goal_07", "DescGoal_07"));
+
                 break;
 
             case "Fade":
@@ -394,13 +403,12 @@ public class EventsCheck : MonoBehaviour
                 DialogueChanger.DialChangr.ChangeDialogueComponent("Louise2");
                 DialogueChanger.DialChangr.ChangeDialogueComponent("Renard2");
                 carnetGoal.NewGoal(new GoalKeys("GoalName_04", "GoalDesc_04"));
-                carnetGoal.NewGoal(new GoalKeys("GoalName_05", "GoalDesc_05"));
                 break;
 
             case "FindBoard":
-                GetComponent<Interactions>().state = Interactions.State.InCinematic;
-                eventsList.RemoveAt(eventsList.Count - 1);
-            break;
+                carnetGoal.RemoveGoal(new GoalKeys("GoalName_04", "GoalDesc_04"));
+
+                break;
 
             case "Bar_Panic":
                 GameObject.Find("Louise").GetComponent<Animator>().Play("Louise_Crouch", 0);
