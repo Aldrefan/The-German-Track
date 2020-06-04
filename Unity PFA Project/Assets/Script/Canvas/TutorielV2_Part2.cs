@@ -197,6 +197,35 @@ public class TutorielV2_Part2 : MonoBehaviour
                 OpenCloseNotif(originalPos);
             }
 
+            if (tutoList[actualIndex].tutoCase == "Board")
+            {
+                if (!notifOpen)
+                {
+                    if (playerInteractions.state == Interactions.State.OnBoard)
+                    {
+                        notifNeedToBeOpen = true;
+                        OpenCloseNotif(finalPos);
+                    }
+                }
+                else
+                {
+                    if (notifNeedToBeOpen && playerInteractions.state == Interactions.State.Normal)
+                    {
+                        tutoList[actualIndex].active = true;
+                        actualIndex++;
+                        notifNeedToBeOpen = false;
+                        NotifReset = false;
+                        CoroutineBreaker = true;
+
+                    }
+                }
+
+            }
+            else if (notifOpen && !notifNeedToBeOpen)
+            {
+                OpenCloseNotif(originalPos);
+            }
+
         }
         else if (notifOpen && !notifNeedToBeOpen)
         {
@@ -208,6 +237,7 @@ public class TutorielV2_Part2 : MonoBehaviour
     {
         if (tutoList.Count > actualIndex)
         {
+            Debug.Log("1");
             notifName.text = tutoList[actualIndex].tutoNameKey;
             notifDesc.text = tutoList[actualIndex].tutoDescKey;
             notifScrollbar.value = 1;
