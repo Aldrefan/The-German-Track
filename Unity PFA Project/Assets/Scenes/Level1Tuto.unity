@@ -2270,6 +2270,12 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 6555912084367672828, guid: 95356b6030096ed40b6d2763e348a71a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e6a2e49d1d405c04fb1f5567e131f6c1,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
 --- !u!114 &356561041 stripped
@@ -3905,7 +3911,7 @@ MonoBehaviour:
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: -0.1
-    time: 3.5
+    time: 2.5
     newParent: {fileID: 0}
     newPosition: {fileID: 0}
     clip: {fileID: 0}
@@ -14694,7 +14700,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 49d7c4a086c2e494ba685b3406d0d632,
+      objectReference: {fileID: 21300000, guid: c2c22cb3debd24e429651a24fa3af17d,
         type: 3}
     - target: {fileID: 8365423124055191513, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
@@ -14705,6 +14711,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365423124055191513, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365423124055191513, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 8365423124337180483, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
@@ -15676,8 +15692,7 @@ MonoBehaviour:
       - quote: Board_D2_Q2
         isInLeftSide: 1
         newStickerIndexList: 
-        eventTrigger:
-        - FindBoard
+        eventTrigger: []
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 1
