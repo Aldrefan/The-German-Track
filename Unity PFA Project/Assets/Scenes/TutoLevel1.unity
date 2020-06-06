@@ -14475,6 +14475,12 @@ PrefabInstance:
       propertyPath: allStickers.Array.data[12]
       value: 52
       objectReference: {fileID: 0}
+    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
+        type: 3}
+      propertyPath: stickersScriptableList.Array.data[38]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3cfb418ab90df944490341654bd3c76d,
+        type: 2}
     - target: {fileID: 1156105012, guid: da130138f5003d14f970fac471a8b01f, type: 3}
       propertyPath: eventsList.Array.size
       value: 1
@@ -15171,7 +15177,7 @@ MonoBehaviour:
     newPosition: {fileID: 0}
     clip: {fileID: 0}
     Origin: {fileID: 0}
-    newSceneName: 2
+    newSceneName: 5
     boolNameAndState:
       name: 
       state: 0
@@ -16122,6 +16128,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664849014035018, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 7689664848496456132, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
