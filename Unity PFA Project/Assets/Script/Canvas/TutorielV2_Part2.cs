@@ -119,19 +119,24 @@ public class TutorielV2_Part2 : MonoBehaviour
 
             if (tutoList[actualIndex].tutoCase == "SortirConv")
             {
-                if (playerInteractions.state == Interactions.State.InDialog && playerInteractions.PNJContact.GetComponent<PNJ>().dialogIndex == 2)
+
+                if (!notifOpen)
                 {
-                    if (!notifOpen)
+                    if (playerInteractions.state == Interactions.State.InDialog && playerInteractions.PNJContact.GetComponent<PNJ>().dialogIndex == 2)
                     {
+
                         notifNeedToBeOpen = true;
                         OpenCloseNotif(finalPos);
                     }
                 }
-                else if (playerInteractions.state == Interactions.State.Normal && playerInteractions.PNJContact ==null)
+                else
                 {
-                    tutoList[actualIndex].active = true;
-                    actualIndex++;
-                    notifNeedToBeOpen = false;
+                    if (playerInteractions.state == Interactions.State.Normal && playerInteractions.PNJContact == null)
+                    {
+                        tutoList[actualIndex].active = true;
+                        actualIndex++;
+                        notifNeedToBeOpen = false;
+                    }
                 }
             }
             else if (notifOpen && !notifNeedToBeOpen)
