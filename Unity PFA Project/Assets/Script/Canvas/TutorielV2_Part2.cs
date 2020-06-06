@@ -73,20 +73,23 @@ public class TutorielV2_Part2 : MonoBehaviour
             if (tutoList[actualIndex].tutoCase == "GetNote")
             {
 
-                if (stickerDisplay.stickersToNotif.Count != 0)
+                if (!notifOpen)
                 {
-                    if (!notifOpen)
+                    if (stickerDisplay.stickersToNotif.Count != 0)
                     {
 
                         notifNeedToBeOpen = true;
                         OpenCloseNotif(finalPos);
                     }
                 }
-                else if (playerInteractions.state == Interactions.State.InCinematic && playerRigidBody.velocity.magnitude !=0)
+                else
                 {
-                    tutoList[actualIndex].active = true;
-                    actualIndex++;
-                    notifNeedToBeOpen = false;
+                    if (playerInteractions.state == Interactions.State.InCinematic && playerRigidBody.velocity.magnitude != 0)
+                    {
+                        tutoList[actualIndex].active = true;
+                        actualIndex++;
+                        notifNeedToBeOpen = false;
+                    }
                 }
             }
             else if (notifOpen && !notifNeedToBeOpen)
@@ -96,20 +99,23 @@ public class TutorielV2_Part2 : MonoBehaviour
 
             if (tutoList[actualIndex].tutoCase == "Interroger")
             {
-                if (playerInteractions.state == Interactions.State.InDialog && playerInteractions.PNJContact.GetComponent<PNJ>().dialogIndex == 2 )
+                if (!notifOpen)
                 {
-                    if (!notifOpen)
+                    if (playerInteractions.state == Interactions.State.InDialog && playerInteractions.PNJContact.GetComponent<PNJ>().dialogIndex == 2)
                     {
 
                         notifNeedToBeOpen = true;
                         OpenCloseNotif(finalPos);
                     }
                 }
-                else if(playerInteractions.state == Interactions.State.InDialog && playerInteractions.PNJContact.GetComponent<PNJ>().dialogIndex >2)
+                else
                 {
-                    tutoList[actualIndex].active = true;
-                    actualIndex++;
-                    notifNeedToBeOpen = false;
+                    if (playerInteractions.state == Interactions.State.InDialog && playerInteractions.PNJContact.GetComponent<PNJ>().dialogIndex > 2)
+                    {
+                        tutoList[actualIndex].active = true;
+                        actualIndex++;
+                        notifNeedToBeOpen = false;
+                    }
                 }
             }
             else if (notifOpen && !notifNeedToBeOpen)
