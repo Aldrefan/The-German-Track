@@ -35561,7 +35561,7 @@ MonoBehaviour:
   canRun: 1
   YOffset: 1.7
   player: {fileID: 0}
-  theme: {fileID: 0}
+  theme: {fileID: 8300000, guid: a9c95e45eb01b4c43a1ca6f4cb694a47, type: 3}
 --- !u!1 &861093583
 GameObject:
   m_ObjectHideFlags: 0
@@ -50743,7 +50743,7 @@ MonoBehaviour:
   canRun: 1
   YOffset: 0
   player: {fileID: 0}
-  theme: {fileID: 0}
+  theme: {fileID: 8300000, guid: 022d5a739f26ecf40a8f5b66c8f64c26, type: 3}
 --- !u!1 &1317332575
 GameObject:
   m_ObjectHideFlags: 0
@@ -52687,7 +52687,7 @@ MonoBehaviour:
   canRun: 0
   YOffset: 1.7
   player: {fileID: 0}
-  theme: {fileID: 0}
+  theme: {fileID: 8300000, guid: a9c95e45eb01b4c43a1ca6f4cb694a47, type: 3}
 --- !u!1 &1387442356
 GameObject:
   m_ObjectHideFlags: 0
@@ -62329,7 +62329,7 @@ MonoBehaviour:
   canRun: 0
   YOffset: 2.1
   player: {fileID: 0}
-  theme: {fileID: 0}
+  theme: {fileID: 8300000, guid: 022d5a739f26ecf40a8f5b66c8f64c26, type: 3}
 --- !u!4 &1528585352
 Transform:
   m_ObjectHideFlags: 0
@@ -64572,6 +64572,12 @@ PrefabInstance:
       propertyPath: stickerIndexBoardList.Array.data[29]
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 1955605217293017397, guid: da130138f5003d14f970fac471a8b01f,
+        type: 3}
+      propertyPath: stickersScriptableList.Array.data[38]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3cfb418ab90df944490341654bd3c76d,
+        type: 2}
     - target: {fileID: 1156105012, guid: da130138f5003d14f970fac471a8b01f, type: 3}
       propertyPath: EtiquetteLaissezPasser
       value: 
@@ -81741,6 +81747,716 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: fdb38c265541d8d4b8180808d40a45a3,
         type: 3}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[0].eventTrigger.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[3].newStickerIndexList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[14].newStickerIndexList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[2].newStickerIndexList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[3].newStickerIndexList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[12].dialog.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[13].dialog.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: transitionQuote
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: negativeQuote
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[1]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[2]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[3]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[0].quote
+      value: Marvin_D0_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[1].quote
+      value: Marvin_D0_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[2].quote
+      value: Marvin_D0_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[3].quote
+      value: Marvin_D0_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[4].quote
+      value: Marvin_D0_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[5].quote
+      value: Marvin_D0_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[6].quote
+      value: Marvin_D0_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[1].dialog.Array.data[0].quote
+      value: Marvin_D2_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[0].quote
+      value: Marvin_D1_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[2].dialog.Array.data[0].isInLeftSide
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[0].quote
+      value: Marvin_D3_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[3].dialog.Array.data[0].isInLeftSide
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.data[0].quote
+      value: Marvin_D4_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[4].dialog.Array.data[0].isInLeftSide
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[0].quote
+      value: Marvin_D5_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[1].quote
+      value: Marvin_D5_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[2].quote
+      value: Marvin_D5_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[3].quote
+      value: Marvin_D5_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[4].quote
+      value: Marvin_D5_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[0].quote
+      value: Marvin_D6_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].canAskQuestions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.data[4]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.data[5]
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.data[6]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.data[7]
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: stickerRedirection.stickerGivenList.Array.data[8]
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[4]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[5]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[6]
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[7]
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: stickerRedirection.redirectionList.Array.data[8]
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[0].dialog.Array.data[0].eventTrigger.Array.data[0]
+      value: HasContactedMarvin
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[5].quote
+      value: Marvin_D5_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[6].quote
+      value: Marvin_D5_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[6].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[7].quote
+      value: Marvin_D5_Q8
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[8].quote
+      value: Marvin_D5_Q9
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[9].quote
+      value: Marvin_D5_Q10
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[10].quote
+      value: Marvin_D5_Q11
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[11].quote
+      value: Marvin_D5_Q12
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[12].quote
+      value: Marvin_D5_Q13
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[13].quote
+      value: Marvin_D5_Q14
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[14].quote
+      value: Marvin_D5_Q15
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[14].newStickerIndexList.Array.data[0]
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[14].newStickerIndexList.Array.data[1]
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[15].quote
+      value: Marvin_D5_Q16
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[15].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[16].quote
+      value: Marvin_D5_Q17
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[5].dialog.Array.data[17].quote
+      value: Marvin_D5_Q18
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[1].quote
+      value: Marvin_D6_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[2].quote
+      value: Marvin_D6_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[2].newStickerIndexList.Array.data[0]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[3].quote
+      value: Marvin_D6_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[3].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[4].quote
+      value: Marvin_D6_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[5].quote
+      value: Marvin_D6_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[6].quote
+      value: Marvin_D6_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[7].quote
+      value: Marvin_D6_Q8
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[0].quote
+      value: Marvin_D7_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[1].quote
+      value: Marvin_D7_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[2].quote
+      value: Marvin_D7_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[3].quote
+      value: Marvin_D7_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[4].quote
+      value: Marvin_D7_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[5].quote
+      value: Marvin_D7_Q6
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[6].quote
+      value: Marvin_D7_Q7
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[7].quote
+      value: Marvin_D7_Q8
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[7].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[8].quote
+      value: Marvin_D7_Q9
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[9].quote
+      value: Marvin_D7_Q10
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[10].quote
+      value: Marvin_D7_Q11
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[11].quote
+      value: Marvin_D7_Q12
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[11].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[12].quote
+      value: Marvin_D7_Q13
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[13].quote
+      value: Marvin_D7_Q14
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[14].quote
+      value: Marvin_D7_Q15
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[15].quote
+      value: Marvin_D7_Q16
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[15].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[16].quote
+      value: Marvin_D7_Q17
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[17].quote
+      value: Marvin_D7_Q18
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[18].quote
+      value: Marvin_D7_Q19
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[7].dialog.Array.data[18].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[0].quote
+      value: Marvin_D8_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[1].quote
+      value: Marvin_D8_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[2].quote
+      value: Marvin_D8_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[2].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[3].quote
+      value: Marvin_D8_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[3].newStickerIndexList.Array.data[0]
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[4].quote
+      value: Marvin_D8_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[8].dialog.Array.data[4].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[0].quote
+      value: Marvin_D9_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[9].dialog.Array.data[1].quote
+      value: Marvin_D9_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[0].quote
+      value: Marvin_D10_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[1].quote
+      value: Marvin_D10_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[2].quote
+      value: Marvin_D10_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[3].quote
+      value: Marvin_D10_Q4
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[3].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[10].dialog.Array.data[4].quote
+      value: Marvin_D10_Q5
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[0].quote
+      value: Marvin_D11_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[11].dialog.Array.data[1].quote
+      value: Marvin_D11_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[12].dialog.Array.data[0].quote
+      value: Marvin_D12_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[12].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[12].dialog.Array.data[1].quote
+      value: Marvin_D12_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[12].dialog.Array.data[2].quote
+      value: Marvin_D12_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[13].dialog.Array.data[0].quote
+      value: Marvin_D13_Q1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[13].dialog.Array.data[0].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[13].dialog.Array.data[1].quote
+      value: Marvin_D13_Q2
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[13].dialog.Array.data[2].quote
+      value: Marvin_D13_Q3
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[13].dialog.Array.data[2].isInLeftSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547858897815374307, guid: 76d8a5bb8d43b044a9b80c9cb10500a6,
+        type: 3}
+      propertyPath: allDialogs.listOfDialogs.Array.data[6].dialog.Array.data[2].newStickerIndexList.Array.data[1]
+      value: 38
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76d8a5bb8d43b044a9b80c9cb10500a6, type: 3}
 --- !u!1 &1952688196
@@ -86373,7 +87089,7 @@ MonoBehaviour:
   canRun: 1
   YOffset: 3
   player: {fileID: 0}
-  theme: {fileID: 0}
+  theme: {fileID: 8300000, guid: 022d5a739f26ecf40a8f5b66c8f64c26, type: 3}
 --- !u!1 &2081256769
 GameObject:
   m_ObjectHideFlags: 0
