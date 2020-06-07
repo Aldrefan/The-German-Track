@@ -36,7 +36,6 @@ public class TutorielV2_Part1 : MonoBehaviour
     {
         notif = this.transform.Find("Notif").gameObject;
         originalPos = notif.GetComponent<RectTransform>().anchoredPosition;
-        Debug.Log(notif + ""+notif.GetComponent<RectTransform>().anchoredPosition);
 
         finalPos = new Vector3(-originalPos.x, originalPos.y);
 
@@ -84,8 +83,6 @@ public class TutorielV2_Part1 : MonoBehaviour
 
             if (tutoList[actualIndex].tutoCase == "movement")
             {
-                Debug.Log("Movement");
-
                 MoveIndic();
             }
 

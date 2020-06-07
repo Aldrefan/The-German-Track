@@ -151,7 +151,7 @@ public class Camera_BoardMovements : MonoBehaviour
 
     void Movements()
     {
-        Debug.Log("Movements Enabled");
+        //Debug.Log("Movements Enabled");
         axisY = Input.GetAxis("Vertical");
         axisX = Input.GetAxis("Horizontal");
         rb2d.velocity = new Vector2(axisX * speed, axisY * speed);

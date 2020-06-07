@@ -121,16 +121,16 @@ public class InGameMenu : MonoBehaviour
         isFrench = false;
         englishArrow.SetActive(true);
         frenchArrow.SetActive(false);
-        Debug.Log(isFrench);
+        //Debug.Log(isFrench);
     }
 
-        public void FrenchSelection()
+    public void FrenchSelection()
     {
         LanguageManager.Instance.language = "french";
         isFrench = true;
         frenchArrow.SetActive(true);
         englishArrow.SetActive(false);
-        Debug.Log(isFrench);
+        //Debug.Log(isFrench);
     }
 
     public void MouseEnter(Transform button)

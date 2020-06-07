@@ -39,7 +39,7 @@ public class EventsCheck : MonoBehaviour
         }*/
         if(GetComponent<Interactions>().PNJContact && GetComponent<Interactions>().PNJContact.tag == "Interaction" && Input.GetButtonDown("Interaction") && GetComponent<Interactions>().state != Interactions.State.InCinematic && GetComponent<Interactions>().state == Interactions.State.InDialog)
         {
-            Debug.Log("Check Interaction");
+            //Debug.Log("Check Interaction");
             CheckInteraction();
         }
     }

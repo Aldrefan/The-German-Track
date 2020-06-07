@@ -42,7 +42,7 @@ public class GO_Apparition_W_CursorNear : MonoBehaviour
                 child.GetComponent<SpriteRenderer>().color = new Vector4(1, 1, 1, opacity);
             }
         }
-        Debug.Log(distance);
+        //Debug.Log(distance);
     }
 
     void OnMouseExit()

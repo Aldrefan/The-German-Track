@@ -100,7 +100,7 @@ public class DialogMaker : MonoBehaviour
             int chiasse = LanguageManager.Instance.GetDialogPosition(characterNameReference + "_" + dialogList[n].dialogName);
             //Debug.Log(characterNameReference + "_" + dialogList[n].dialogName);
             int length = LanguageManager.Instance.DialogQuoteLength(chiasse);
-            Debug.Log(length);
+            //Debug.Log(length);
             //characterList = LanguageManager.Instance.GetListOfCharacters(chiasse, length);
             List<PNJ.ArrayOfQuotes> dialog = new List<PNJ.ArrayOfQuotes>();
             for(int i = 0; i < length; i++)

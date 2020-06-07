@@ -20,7 +20,7 @@ public class FadeImage : MonoBehaviour
         while(image.color.a < 255)
         {
             float opacity = Mathf.Lerp(0, 255, (Time.realtimeSinceStartup - time) * 0.0015f);
-            Debug.Log(opacity);
+            //Debug.Log(opacity);
             Vector4 vec = new Vector4(255,255,255,opacity);
             image.color = vec;
         }
@@ -41,7 +41,6 @@ public class FadeImage : MonoBehaviour
             Vector4 vec = new Vector4(255,255,255,opacity);
             image.color = vec;
         }*/
-        Debug.Log("Ta mère");
     }
 
     // Update is called once per frame

@@ -230,7 +230,7 @@ public class SaveFile : MonoBehaviour
                     {
                         if (sticker.stickerIndex == stickerInChild.GetComponent<Sticker_Display>().sticker.index)
                         {
-                            Debug.Log("StickerLoad");
+                            //Debug.Log("StickerLoad");
                             stickerInChild.SetParent(boardCanvasTranform);
                             stickerInChild.localPosition = sticker.stickerPosition;
                         }

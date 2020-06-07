@@ -82,7 +82,6 @@ public class TutorielV2_Part3 : MonoBehaviour
 
                 if (!notifOpen)
                 {
-                    Debug.Log(gameCam.actualRoom.GetComponent<SceneInformations>().canRun);
                     if (gameCam.actualRoom.GetComponent<SceneInformations>().canRun)
                     {
 
@@ -144,7 +143,6 @@ public class TutorielV2_Part3 : MonoBehaviour
     {
         if (tutoList.Count > actualIndex)
         {
-            Debug.Log("1");
             notifName.text = tutoList[actualIndex].tutoNameKey;
             notifDesc.text = tutoList[actualIndex].tutoDescKey;
             notifScrollbar.value = 1;

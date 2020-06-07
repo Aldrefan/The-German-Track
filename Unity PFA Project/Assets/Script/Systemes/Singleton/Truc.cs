@@ -14,6 +14,6 @@ public class Truc : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(MainCamera.name);
+    //    Debug.Log(MainCamera.name);
     }
 }

@@ -36,11 +36,9 @@ public class UnlockKurtAppartment : MonoBehaviour
         {
             if (eventManager != null)
             {
-                Debug.Log("3");
 
                 if (eventManager.eventsList.Contains("TalkToKurt"))
                 {
-                    Debug.Log("4");
 
                     doorSalon.GetComponent<BoxCollider2D>().enabled = true;
                     firePlace.GetComponent<BoxCollider2D>().enabled = true;
