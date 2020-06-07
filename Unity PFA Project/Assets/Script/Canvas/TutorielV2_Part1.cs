@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class TutorielV2_Part1 : MonoBehaviour
 {
-     public int MaxLetterPerSentence;
 
     int actualIndex;
     public List<TutoIndex> tutoList;

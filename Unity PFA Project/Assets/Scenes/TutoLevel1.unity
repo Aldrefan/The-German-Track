@@ -16164,6 +16164,46 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 345647822}
+    - target: {fileID: 377507337, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
+      propertyPath: tutoList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 377507337, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
+      propertyPath: tutoList.Array.data[0].tutoCase
+      value: dialog
+      objectReference: {fileID: 0}
+    - target: {fileID: 377507337, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
+      propertyPath: tutoList.Array.data[1].tutoCase
+      value: movement
+      objectReference: {fileID: 0}
+    - target: {fileID: 377507337, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
+      propertyPath: tutoList.Array.data[2].tutoCase
+      value: interaction
+      objectReference: {fileID: 0}
+    - target: {fileID: 377507337, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
+      propertyPath: tutoList.Array.data[0].tutoNameKey
+      value: Tuto_Dialogs_Title
+      objectReference: {fileID: 0}
+    - target: {fileID: 377507337, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
+      propertyPath: tutoList.Array.data[0].tutoDescKey
+      value: Tuto_Dialogs_Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 377507337, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
+      propertyPath: tutoList.Array.data[1].tutoNameKey
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 377507337, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
+      propertyPath: tutoList.Array.data[1].tutoDescKey
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 377507337, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
+      propertyPath: tutoList.Array.data[2].tutoNameKey
+      value: Tuto_Interaction_Title
+      objectReference: {fileID: 0}
+    - target: {fileID: 377507337, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
+      propertyPath: tutoList.Array.data[2].tutoDescKey
+      value: Tuto_Interaction_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 7689664848417164065, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
       propertyPath: tutoList.Array.data[0].tutoNameKey
@@ -16184,5 +16224,40 @@ PrefabInstance:
       propertyPath: tutoList.Array.data[2].tutoDescKey
       value: Tuto_Interaction_Text
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 377507337, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}
+--- !u!1 &7689664849535372365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7689664848417164071, guid: cfa18aeac2c400845a0170be6645f8fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 7689664849535372364}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7689664849535372366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7689664849535372365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ea9c898d9da9f458aeeee8b7f4c8b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutoList:
+  - active: 0
+    index: 0
+    tutoCase: dialog
+    tutoNameKey: Tuto_Dialogs_Title
+    tutoDescKey: Tuto_Dialogs_Text
+  - active: 0
+    index: 1
+    tutoCase: movement
+    tutoNameKey: 
+    tutoDescKey: 
+  - active: 0
+    index: 2
+    tutoCase: interaction
+    tutoNameKey: Tuto_Interaction_Title
+    tutoDescKey: Tuto_Interaction_Text
