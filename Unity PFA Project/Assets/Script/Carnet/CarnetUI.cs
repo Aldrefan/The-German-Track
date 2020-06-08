@@ -25,7 +25,7 @@ public class CarnetUI : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(GameObject.Find("Kenneth").GetComponent<Interactions>().state == Interactions.State.Normal || GameObject.Find("Kenneth").GetComponent<Interactions>().state == Interactions.State.InDialog)
+        if(GameObject.Find("Kenneth").GetComponent<Interactions>().state == Interactions.State.Normal || GameObject.Find("Kenneth").GetComponent<Interactions>().state == Interactions.State.InDialog && GameObject.Find("Kenneth").GetComponent<Interactions>().canOpenCarnet)
         {
             GameObject.Find("Kenneth").GetComponent<Interactions>().OpenBookExe();
         }
@@ -38,11 +38,17 @@ public class CarnetUI : MonoBehaviour
 
     void OnMouseOver()
     {
-        animator.SetBool("CursorOver", true);
+        if(GameObject.Find("Kenneth").GetComponent<Interactions>().canOpenCarnet)
+        {
+            animator.SetBool("CursorOver", true);
+        }
     }
 
     void OnMouseExit()
-    {
-        animator.SetBool("CursorOver", false);
+    {   
+        if(GameObject.Find("Kenneth").GetComponent<Interactions>().canOpenCarnet)
+        {
+            animator.SetBool("CursorOver", false);
+        }
     }
 }

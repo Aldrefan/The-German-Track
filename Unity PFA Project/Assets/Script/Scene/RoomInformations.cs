@@ -34,6 +34,7 @@ public class RoomInformations : MonoBehaviour
         public GameObject AccessDoor;
         public string destinationName;
         public GameObject FinalDest;
+        public AudioClip teleportSound;
     }
 
     // Start is called before the first frame update
@@ -64,13 +65,14 @@ public class RoomInformations : MonoBehaviour
     {
         RoomInformations nextRoom = ReturnRoomDest(DoorName);
         distanceOfTheCamera = CalculateDistBtwCamToDoor(DoorName);
-
         if (!inRespawn)
         {
-
-        StartCoroutine(Respawn(ReturnDoorDest(DoorName).transform, nextRoom, ReturnAccessDoor(DoorName).transform));
+            StartCoroutine(Respawn(ReturnDoorDest(DoorName).transform, nextRoom, ReturnAccessDoor(DoorName).transform));
+            if(DoorList.Find(x => x.AccessDoor.name == DoorName).teleportSound != null)
+            {
+                AudioManager.Instance.PlaySound(DoorList.Find(x => x.AccessDoor.name == DoorName).teleportSound);
+            }
         }
-        //
     }
 
     void CheckCanRun()

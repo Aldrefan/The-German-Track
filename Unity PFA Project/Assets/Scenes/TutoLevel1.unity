@@ -267,7 +267,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: -1720317733
-  m_SortingOrder: 20
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &189711079 stripped
 GameObject:
@@ -4042,7 +4042,7 @@ PrefabInstance:
     - target: {fileID: 8891736062753409460, guid: 33ddad3a370b0824b848ab3b505bf613,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 9185088232496603786, guid: 33ddad3a370b0824b848ab3b505bf613,
         type: 3}
@@ -4261,7 +4261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1016060583
 Transform:
   m_ObjectHideFlags: 0
@@ -12665,6 +12665,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3219580511357384863, guid: ad6f8b1eedbf4d3469d7b7999d33cddb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3219580511357384863, guid: ad6f8b1eedbf4d3469d7b7999d33cddb,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 345647822}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad6f8b1eedbf4d3469d7b7999d33cddb, type: 3}
 --- !u!4 &1412420106 stripped
@@ -14519,7 +14529,7 @@ PrefabInstance:
     - target: {fileID: 1955605217293017400, guid: da130138f5003d14f970fac471a8b01f,
         type: 3}
       propertyPath: canOpenCarnet
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1156105011, guid: da130138f5003d14f970fac471a8b01f, type: 3}
       propertyPath: m_Enabled
@@ -15030,7 +15040,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: -1720317733
-  m_SortingOrder: 20
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &1914614259
 GameObject:

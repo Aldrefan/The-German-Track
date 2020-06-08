@@ -54,8 +54,8 @@
    },
    {
       "Key": "L1_Name_Zone11",
-      "FR": "Salon de Kurt",
-      "EN": "Kurt's living room"
+      "FR": "Chez Kurt",
+      "EN": "Kurt's apartment"
    },
    {
       "Key": "L1_Name_Zone12"
@@ -1915,7 +1915,7 @@
    },
    {
       "Key": "Clara_D32_Q1",
-      "FR": "Allo ?",
+      "FR": "All\u00F4 ?",
       "EN": "Yes ?",
       "FRName": "Clara Grey",
       "ENName": "Clara Grey"
@@ -6470,7 +6470,7 @@
    },
    {
       "Key": "Marvin_D0_Q1",
-      "FR": "All\u00F4.",
+      "FR": "All\u00F4 ?",
       "EN": "Hello.",
       "FRName": "Marvin Meyer",
       "ENName": "Marvin Meyer"
@@ -7282,6 +7282,11 @@
       "EN": "Possible hypoteses :"
    },
    {
+      "Key": "Board_10",
+      "FR": "Ca ne donne rien.",
+      "EN": "This doesn't lead anywhere."
+   },
+   {
       "Key": "Credits_01",
       "FR": "Viktor a tu\u00E9 Loraine.",
       "EN": "Viktor killed Loraine."
@@ -7863,13 +7868,18 @@
    },
    {
       "Key": "Goal_06",
-      "FR": "- D\u00E9chiffrer la lettre cod\u00E9e",
+      "FR": "- D\u00E9chiffrer la lettre cod\u00E9e.",
       "EN": "- Decypher the coded letter."
    },
    {
       "Key": "Goal_07",
-      "FR": "- Trouver un suspect au meurtre de Loraine",
+      "FR": "- Trouver un suspect au meurtre de Loraine.",
       "EN": "- Identify a suspect for Loraine's murder."
+   },
+   {
+      "Key": "Goal_08",
+      "FR": "- Interroger Kurt.",
+      "EN": "- Interrogate Kurt."
    },
    {
       "Key": "DescGoal_01",
@@ -7902,6 +7912,15 @@
       "EN": "The letter I found at Kurt's apartment is written in some sort of coded language. Clara told me about a way to decypher letters with a lamp that she used with Loraine. I should try that with my desk lamp."
    },
    {
+      "Key": "DescGoal_07",
+      "FR": "La c\u00E9l\u00E8bre actrice Clara Grey suspecte que la mort de sa soeur Loraine, officiellement consid\u00E9r\u00E9 comme suicid\u00E9e, soit un meurtre cammoufl\u00E9. J'ai donc \u00E9t\u00E9 charg\u00E9 de trouv\u00E9 un potentiel coupable.",
+      "EN": "The famous actress Clara Grey suspects her sister's death, ruled as a suicide, could be a disguised murder. I've been hired to find a potential culprit."
+   },
+   {
+      "Key": "DescGoal_08",
+      "FR": "J'ai appris le corps de Loraine a \u00E9t\u00E9 retrouv\u00E9 chez son copain, je ferai bien d'aller le trouver chez lui pour l'interroger."
+   },
+   {
       "Key": "Speed1",
       "FR": "Lent",
       "EN": "Slow"
@@ -7919,36 +7938,26 @@
    {
       "Key": "Item_BL",
       "FR": "Tiens, on dirait qu'il y a une sorte de lettre br\u00FBl\u00E9e dans la chemin\u00E9e.",
-      "EN": "Oh, it looks like there is some sort of burnt letter in the fireplace.",
-      "FRName": "Kenneth",
-      "ENName": "Kenneth"
+      "EN": "Oh, it looks like there is some sort of burnt letter in the fireplace."
    },
    {
       "Key": "Item_SNY",
       "FR": "Un exemplaire du magazine \"Sassy New York\", \u00E7a peut \u00EAtre utile.",
-      "EN": "A copy of this week's \"Sassy New York\", might come in handy.",
-      "FRName": "Kenneth",
-      "ENName": "Kenneth"
+      "EN": "A copy of this week's \"Sassy New York\", might come in handy."
    },
    {
       "Key": "Item_Valise",
       "FR": "C'est \u00E9trange, que fait cette valise ici ?",
-      "EN": "That's weird, what's this luggage doing here ?",
-      "FRName": "Kenneth",
-      "ENName": "Kenneth"
+      "EN": "That's weird, what's this luggage doing here ?"
    },
    {
       "Key": "Item_Letter",
       "FR": "Hmm... Cette lettre semble \u00E9trange...",
-      "EN": "Hmm... This letter seems strange...",
-      "FRName": "Kenneth",
-      "ENName": "Kenneth"
+      "EN": "Hmm... This letter seems strange..."
    },
    {
       "Key": "Item_Drogue",
       "FR": "De la drogue...",
-      "EN": "Drugs...",
-      "FRName": "Kenneth",
-      "ENName": "Kenneth"
+      "EN": "Drugs..."
    }
 ]
