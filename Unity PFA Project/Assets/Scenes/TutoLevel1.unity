@@ -15187,7 +15187,7 @@ MonoBehaviour:
     newPosition: {fileID: 0}
     clip: {fileID: 0}
     Origin: {fileID: 0}
-    newSceneName: 5
+    newSceneName: 4
     boolNameAndState:
       name: 
       state: 0
@@ -16233,6 +16233,11 @@ PrefabInstance:
         type: 3}
       propertyPath: tutoList.Array.data[2].tutoDescKey
       value: Tuto_Interaction_Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689664849311358811, guid: cfa18aeac2c400845a0170be6645f8fe,
+        type: 3}
+      propertyPath: m_ScrollSensitivity
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 377507337, guid: cfa18aeac2c400845a0170be6645f8fe, type: 3}

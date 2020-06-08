@@ -1675,7 +1675,7 @@ SpriteRenderer:
   m_Size: {x: 2.73, y: 0.83}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &302816800
@@ -1922,6 +1922,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: profilesButton
+      value: 
+      objectReference: {fileID: 8626446}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: indicesButton
+      value: 
+      objectReference: {fileID: 1730731949}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: faitsButton
+      value: 
+      objectReference: {fileID: 262853174}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: hypothesesButton
+      value: 
+      objectReference: {fileID: 834632472}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: pileHiderButton
+      value: 
+      objectReference: {fileID: 1900250185}
     - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: ListOfHypLists.list.Array.size
@@ -2097,26 +2117,6 @@ PrefabInstance:
       propertyPath: ListOfHypLists.list.Array.data[1].list.Array.data[3]
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: profilesButton
-      value: 
-      objectReference: {fileID: 8626446}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: indicesButton
-      value: 
-      objectReference: {fileID: 1730731949}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: faitsButton
-      value: 
-      objectReference: {fileID: 262853174}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: hypothesesButton
-      value: 
-      objectReference: {fileID: 834632472}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: pileHiderButton
-      value: 
-      objectReference: {fileID: 1900250185}
     - target: {fileID: 6555912083691328245, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2227,6 +2227,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 758156766}
+    - target: {fileID: 1544457179, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 42
+      objectReference: {fileID: 0}
     - target: {fileID: 6555912083281020971, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2246,10 +2250,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1544457179, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 6555912084367672829, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
@@ -4623,7 +4623,7 @@ PrefabInstance:
     - target: {fileID: 7689664849014035018, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000030517578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7689664848496456132, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
@@ -12348,7 +12348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1267348956
 Transform:
   m_ObjectHideFlags: 0
@@ -12408,7 +12408,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1287354157
@@ -13613,7 +13613,7 @@ SpriteRenderer:
   m_Size: {x: 0.35, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1551413601
@@ -14815,11 +14815,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6476395100212477238, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 758156766}
     - target: {fileID: 8365423124055191513, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
       propertyPath: m_Enabled
@@ -14851,11 +14846,6 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.27
       objectReference: {fileID: 0}
-    - target: {fileID: 8365423124337180483, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8365423122633891190, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
       propertyPath: m_Enabled
@@ -14865,6 +14855,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476395100212477238, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 758156766}
+    - target: {fileID: 8365423124337180483, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a7764dea8f5c1f48b1e59fd46cd0148, type: 3}
@@ -15645,7 +15645,7 @@ SpriteRenderer:
   m_Size: {x: 0.5, y: 0.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!224 &1730731949 stripped
@@ -16703,6 +16703,26 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8365423124055191513, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365423124055191513, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365423122633891190, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365423123322108408, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6476395100212477238, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
       propertyPath: m_Camera
@@ -16731,26 +16751,6 @@ PrefabInstance:
     - target: {fileID: 8365423122443969001, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8365423124055191513, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8365423124055191513, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8365423122633891190, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8365423123322108408, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,
-        type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1647229378, guid: 4a7764dea8f5c1f48b1e59fd46cd0148, type: 3}
@@ -16882,7 +16882,7 @@ SpriteRenderer:
   m_Size: {x: 1.67, y: 0.43}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1886340151
