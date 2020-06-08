@@ -210,16 +210,16 @@ public class LanguageManager : MonoBehaviour
         for (int i = 0; i < datas.mytexts.Length; i++)
         {
             string[] keyParts = datas.mytexts[i].Key.Split("_"[0]);
-            Debug.Log(keyParts[0]);
+            //Debug.Log(keyParts[0]);
             if (keyParts[0] == actualKeyPart[0])
             {
-                Debug.Log(actualKeyPart[0]);
+                //Debug.Log(actualKeyPart[0]);
                 for (int x = i; x < datas.mytexts.Length; x++)
                 {
                     if (keyParts[1] == actualKeyPart[1])
                     {
                         list2trucs.Add(datas.mytexts[x].Key);
-                        Debug.Log(list2trucs.Count);
+                        //Debug.Log(list2trucs.Count);
                     }
                     else return list2trucs;
                 }

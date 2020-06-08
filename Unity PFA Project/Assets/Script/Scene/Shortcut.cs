@@ -96,7 +96,7 @@ public class Shortcut : MonoBehaviour
             Camera.main.GetComponent<CameraFollow>().isFollowing = false;
             Camera.main.GetComponent<BoxCollider2D>().enabled = false;
 
-            Debug.Log(fadePanel.name);
+            //Debug.Log(fadePanel.name);
             if (!fadePanel.GetComponent<Animator>().GetBool("FadeIn"))
             {
                 fadePanel.GetComponent<Animator>().SetBool("FadeIn", true);

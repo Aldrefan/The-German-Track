@@ -30,7 +30,7 @@ public class LoadSaveButton : MonoBehaviour
     {
         GameSaveSystem.gameToLoad = true;
         string levelName = "InterScene" + GameSaveSystem.ReturnLevelName();
-        Debug.Log(GameSaveSystem.ReturnLevelName());
+        //Debug.Log(GameSaveSystem.ReturnLevelName());
         SceneManager.LoadScene(levelName);
     }
 }

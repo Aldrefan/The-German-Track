@@ -300,7 +300,7 @@ public class Menu : MonoBehaviour
     {
         GameSaveSystem.gameToLoad = true;
         string levelName = "InterScene" + GameSaveSystem.ReturnLevelName();
-        Debug.Log(GameSaveSystem.ReturnLevelName());
+        //Debug.Log(GameSaveSystem.ReturnLevelName());
         SceneManager.LoadScene(levelName);
     }
 
@@ -442,6 +442,6 @@ public void BlackAndWhiteMode(bool isBlackAndWhiteTemp)
     public void FullyQuitGame()
     {
         Application.Quit();
-        Debug.Log("QUIT!");
+        //Debug.Log("QUIT!");
     }
 }
