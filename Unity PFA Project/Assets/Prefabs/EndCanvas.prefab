@@ -4733,7 +4733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030518, y: -3652}
+  m_AnchoredPosition: {x: -0.000030518, y: -3730}
   m_SizeDelta: {x: 800, y: 60.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5519806991539160211
@@ -4806,7 +4806,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2296014133512851940
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4987,14 +4987,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "PRODUCER\nAna\xEFs Gasparotto\n\n\n\n\nCREATIVE DIRECTOR\nMartin Michaud\n\n\n\n\nGAME
-    DESIGNER\nDylan Brousse\nAna\xEFs Gasparotto\nBenjamin Lapujade\nLucas Merazi
-    Lopez\nMartin Michaud\n\n\n\n\nLEAD NARRATIVE\nMartin Michaud\n\n\n\n\nSUPPORT
-    NARRATIVE\nAna\xEFs Gasparotto\nLucas Merazi Lopez\n\n\n\n\nTRANSLATION\nLucas
-    Merazi Lopez\n\n\n\n\nLEAD PROGRAMMER\nDylan Brousse\n\n\n\n\nPROGRAMMER\nBenjamin
-    Lapujade\n\n\n\n\nSUPPORT PROGRAMMER\nAna\xEFs Gasparotto\n\n\n\n\nLEAD ARTIST\nMartin
-    Michaud\n\n\n\n\nARTIST\nMartin Michaud\n\n\n\n\nUI ARTIST\nLucas Merazi Lopez\n\n\n\n\nANIMATOR\nCamille
-    Marceau\nMartin Michaud\n\n\n\n\nSOUND DESIGNER\nJerome Yven"
+  m_Text: "PRODUCER\r\nAna\xEFs Gasparotto\r\n\r\n\r\n\r\n\r\nCREATIVE DIRECTOR\r\nMartin
+    Michaud\r\n\r\n\r\n\r\n\r\nGAME DESIGNER\r\nDylan Brousse\r\nAna\xEFs Gasparotto\r\nBenjamin
+    Lapujade\r\nLucas Merazi Lopez\r\nMartin Michaud\r\n\r\n\r\n\r\n\r\nLEAD NARRATIVE\r\nMartin
+    Michaud\r\n\r\n\r\n\r\n\r\nSUPPORT NARRATIVE\r\nAna\xEFs Gasparotto\r\nLucas Merazi
+    Lopez\r\n\r\n\r\n\r\n\r\nTRANSLATOR\r\nLucas Merazi Lopez\r\n\r\n\r\n\r\n\r\nLEAD
+    PROGRAMMER\r\nDylan Brousse\r\n\r\n\r\n\r\n\r\nPROGRAMMER\r\nBenjamin Lapujade\r\n\r\n\r\n\r\n\r\nSUPPORT
+    PROGRAMMER\r\nAna\xEFs Gasparotto\r\n\r\n\r\n\r\n\r\nLEAD ARTIST\r\nMartin Michaud\r\n\r\n\r\n\r\n\r\nUI
+    ARTIST\r\nLucas Merazi Lopez\r\n\r\n\r\n\r\n\r\nANIMATOR\r\nCamille Marceau\r\nMartin
+    Michaud\r\n\r\n\r\n\r\n\r\nSOUND DESIGNER\r\nJerome Yven\r\n\r\n\r\n\r\n\r\nQA
+    TESTER\r\nAna\xEFs Blineau\r\nJordan Gay\r\nWilliam Pied\r\nAntoine Ramirez\r\nLogan
+    Turcot\r\n"
 --- !u!1 &2296014133895096442
 GameObject:
   m_ObjectHideFlags: 0
@@ -5424,7 +5427,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030518, y: -3887}
+  m_AnchoredPosition: {x: -0.000030518, y: -3965}
   m_SizeDelta: {x: 800, y: 60.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2296014134332979042
@@ -5519,7 +5522,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 258, y: -4049}
+  m_AnchoredPosition: {x: 258, y: -4127}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2296014134390320233
@@ -5577,7 +5580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -5715,7 +5718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -221, y: -4049}
+  m_AnchoredPosition: {x: -221, y: -4127}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2296014134508919194
@@ -5773,7 +5776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
