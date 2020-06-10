@@ -159,7 +159,7 @@ public class Menu : MonoBehaviour
 
         speedDropdown.RefreshShownValue();
         
-
+        
 
         //resolution & fullscreen initialisation
         SetResolution(resolutionIndex);
