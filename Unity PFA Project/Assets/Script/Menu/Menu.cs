@@ -76,6 +76,12 @@ public class Menu : MonoBehaviour
         CanvasOptionsOut();
     }
 
+    void Awake()
+    {
+        SettingsData settingsData = GameSaveSystem.LoadSettingsData();
+        isBlackAndWhite = settingsData.isBlAndWht;
+    }
+
     void OnEnable()
     {
         //active le menu à sa forme initiale
@@ -99,7 +105,6 @@ public class Menu : MonoBehaviour
         {
             languageManager = GameObject.FindObjectOfType<LanguageManager>().gameObject;
         }
-
 
         //resolution dropdown
         resolutions = Screen.resolutions;
