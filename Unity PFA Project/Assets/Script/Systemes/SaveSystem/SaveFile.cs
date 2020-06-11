@@ -16,6 +16,7 @@ public class SaveFile : MonoBehaviour
         InitGameData();
         BuildRoomList();
 
+        LoadSettings();
         //Debug.Log(GameSaveSystem.gameToLoad);
         LoadAtStart();
     }
@@ -57,7 +58,7 @@ public class SaveFile : MonoBehaviour
 
     void LoadAtStart()
     {
-        LoadSettings();
+        
         if (SceneManager.GetActiveScene().name != "MainMenu" && (GameSaveSystem.gameToLoad || loadAtStart))
         {
 

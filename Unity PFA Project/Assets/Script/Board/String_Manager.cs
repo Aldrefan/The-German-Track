@@ -393,6 +393,7 @@ public class String_Manager : MonoBehaviour
                                 Camera.main.GetComponent<Camera_Manager>().NotOnBoard();
                                 //player.GetComponent<Interactions>().state = Interactions.State.Pause;
                                 GameObject.Find("EndDialog").GetComponent<Clara_Cinematic>().ExecuteCommand();
+                                return;
                             }
                         }
                     }

@@ -47,7 +47,7 @@ public class EndScreen : MonoBehaviour
         //LIGNE DE COMMANDE DE SUPPRIME GAME
         //GameObject.Find("Saver").GetComponent<Saver>().MakeASave();
         //Debug.Log("ReturnTitle");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(0);
     }
 
     public void QuitGame()

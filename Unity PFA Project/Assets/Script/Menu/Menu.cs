@@ -245,11 +245,11 @@ public class Menu : MonoBehaviour
     }
     void CanvasOptionsOut()
     {
-        if(!changeOptions && canvasOptions.gameObject.activeSelf)
+        if(!changeOptions && (canvasOptions.gameObject.activeInHierarchy || canvasOptions.gameObject.activeSelf))
         {
             changeOptions = true;
         }
-        if (changeOptions && !canvasOptions.gameObject.activeSelf)
+        if(changeOptions && (!canvasOptions.gameObject.activeInHierarchy || !canvasOptions.gameObject.activeSelf))
         {
             FindObjectOfType<SaveFile>().SaveSettings();
             changeOptions = false;

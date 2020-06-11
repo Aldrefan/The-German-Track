@@ -127,6 +127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 19048156}
+  - component: {fileID: 19048158}
   - component: {fileID: 19048157}
   m_Layer: 0
   m_Name: Renard2
@@ -147,7 +148,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1248334585}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &19048157
 MonoBehaviour:
@@ -169,8 +170,8 @@ MonoBehaviour:
   haveEvent: 0
   stickerAlreadyGivenList: 
   stickerRedirection:
-    stickerGivenList: 0f0000000a000000
-    redirectionList: 0400000005000000
+    stickerGivenList: 0a0000000200000003000000040000000e000000060000000f000000
+    redirectionList: 0400000005000000060000000700000008000000090000000a000000
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
@@ -197,11 +198,11 @@ MonoBehaviour:
     - dialog:
       - quote: RenardTuto_D0_Q1
         isInLeftSide: 1
-        newStickerIndexList: 04000000
+        newStickerIndexList: 
         eventTrigger: []
       - quote: RenardTuto_D0_Q2
         isInLeftSide: 0
-        newStickerIndexList: 
+        newStickerIndexList: 04000000
         eventTrigger: []
       canAskQuestions: 0
       hasChoices: 0
@@ -227,6 +228,196 @@ MonoBehaviour:
       buttonsList: []
     - dialog:
       - quote: RenardTuto_D10_Q1
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 1
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: RenardTuto_D4_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D4_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D4_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D4_Q4
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D4_Q5
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D4_Q6
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D4_Q7
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D4_Q8
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: RenardTuto_D16_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D16_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D16_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D16_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D16_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D16_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D16_Q7
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: RenardTuto_D17_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D17_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D17_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D17_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D17_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D17_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D17_Q7
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D17_Q8
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D17_Q9
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: RenardTuto_D13_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D13_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D13_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D13_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D13_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: RenardTuto_D14_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D14_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D14_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: RenardTuto_D15_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D15_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D15_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D15_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D15_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D15_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D15_Q7
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D15_Q8
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -295,45 +486,153 @@ MonoBehaviour:
       hasChoices: 0
       endDialog: 0
       buttonsList: []
-    - dialog:
-      - quote: RenardTuto_D4_Q1
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: RenardTuto_D4_Q2
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: RenardTuto_D4_Q3
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: RenardTuto_D4_Q4
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: RenardTuto_D4_Q5
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: RenardTuto_D4_Q6
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: RenardTuto_D4_Q7
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: RenardTuto_D4_Q8
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      canAskQuestions: 0
-      hasChoices: 0
-      endDialog: 0
-      buttonsList: []
   quoteFinished: 0
   stickersAlreadyGiven: 
+--- !u!114 &19048158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19048155}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9bd3fc228bf084fa6fbb3984f58658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterNameReference: RenardTuto
+  realCharacterName: Renard
+  haveEvent: 0
+  dialogList:
+  - dialogName: D0
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D9
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D7
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 1
+  - dialogName: D10
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 1
+  - dialogName: D4
+    stickerIndexToGive: 10
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D16
+    stickerIndexToGive: 2
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D17
+    stickerIndexToGive: 3
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D13
+    stickerIndexToGive: 4
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D14
+    stickerIndexToGive: 14
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D15
+    stickerIndexToGive: 6
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D3
+    stickerIndexToGive: 15
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  eventPositionsInDialog: []
+  stickersPositionsInDialogs:
+  - position: RenardTuto_D0_Q2
+    stickerIndexs: 04000000
+  - position: RenardTuto_D3_Q10
+    stickerIndexs: 11000000
+  - position: RenardTuto_D3_Q12
+    stickerIndexs: 06000000
 --- !u!1 &21497727
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,7 +825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandList: 010000000f00000002000000010000000d000000000000000d0000000f000000020000000c000000
+  commandList: 010000000f00000013000000010000000d000000000000000d0000000f000000020000000c000000
   annexInformation:
   - objectToMove: {fileID: 0}
     direction: 0
@@ -555,8 +854,8 @@ MonoBehaviour:
       reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 1082112283}
-    direction: 0
-    time: 2
+    direction: 0.1
+    time: 0.2
     newParent: {fileID: 0}
     newPosition: {fileID: 0}
     clip: {fileID: 0}
@@ -568,47 +867,47 @@ MonoBehaviour:
       reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 0}
-    direction: 0
-    time: 2
-    newParent: {fileID: 0}
-    newPosition: {fileID: 0}
-    clip: {fileID: 0}
-    Origin: {fileID: 0}
-    newSceneName: 0
-    boolNameAndState:
-      name: Louise_Uncrouch
-      state: 0
-      reverseAnim: 0
-    image: {fileID: 0}
-  - objectToMove: {fileID: 2090050628}
-    direction: 0
-    time: 2
-    newParent: {fileID: 0}
-    newPosition: {fileID: 0}
-    clip: {fileID: 0}
-    Origin: {fileID: 0}
-    newSceneName: 0
-    boolNameAndState:
-      name: Walk
-      state: 1
-      reverseAnim: 0
-    image: {fileID: 0}
-  - objectToMove: {fileID: 2090050628}
-    direction: 0.1
-    time: 2
-    newParent: {fileID: 0}
-    newPosition: {fileID: 0}
-    clip: {fileID: 0}
-    Origin: {fileID: 0}
-    newSceneName: 0
-    boolNameAndState:
-      name: Walk
-      state: 1
-      reverseAnim: 0
-    image: {fileID: 0}
-  - objectToMove: {fileID: 2090050628}
-    direction: 0.1
+    direction: -0.1
     time: 1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+      reverseAnim: 1
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: -0.1
+    time: 1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.1
+    time: 2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+      reverseAnim: 1
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.1
+    time: 2
     newParent: {fileID: 0}
     newPosition: {fileID: 0}
     clip: {fileID: 0}
@@ -632,7 +931,7 @@ MonoBehaviour:
       state: 0
       reverseAnim: 0
     image: {fileID: 0}
-  - objectToMove: {fileID: 1467259954}
+  - objectToMove: {fileID: 2090050628}
     direction: 0.1
     time: 0.4
     newParent: {fileID: 0}
@@ -641,20 +940,20 @@ MonoBehaviour:
     Origin: {fileID: 0}
     newSceneName: 0
     boolNameAndState:
-      name: FadeToON
+      name: Walk
       state: 0
       reverseAnim: 0
     image: {fileID: 0}
-  - objectToMove: {fileID: 1467259954}
+  - objectToMove: {fileID: 2090050628}
     direction: 0.1
-    time: 0.5
+    time: 0.4
     newParent: {fileID: 0}
     newPosition: {fileID: 0}
     clip: {fileID: 0}
     Origin: {fileID: 0}
-    newSceneName: 3
+    newSceneName: 5
     boolNameAndState:
-      name: FadeToON
+      name: Walk
       state: 0
       reverseAnim: 0
     image: {fileID: 0}
@@ -1607,6 +1906,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: profilesButton
+      value: 
+      objectReference: {fileID: 8626446}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: indicesButton
+      value: 
+      objectReference: {fileID: 1730731949}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: faitsButton
+      value: 
+      objectReference: {fileID: 262853174}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: hypothesesButton
+      value: 
+      objectReference: {fileID: 834632472}
+    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: pileHiderButton
+      value: 
+      objectReference: {fileID: 1900250185}
     - target: {fileID: 6555912083691328241, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: ListOfHypLists.list.Array.size
@@ -1782,26 +2101,6 @@ PrefabInstance:
       propertyPath: ListOfHypLists.list.Array.data[1].list.Array.data[3]
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: profilesButton
-      value: 
-      objectReference: {fileID: 8626446}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: indicesButton
-      value: 
-      objectReference: {fileID: 1730731949}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: faitsButton
-      value: 
-      objectReference: {fileID: 262853174}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: hypothesesButton
-      value: 
-      objectReference: {fileID: 834632472}
-    - target: {fileID: 347536225, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: pileHiderButton
-      value: 
-      objectReference: {fileID: 1900250185}
     - target: {fileID: 6555912083691328245, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1912,6 +2211,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 758156766}
+    - target: {fileID: 1544457179, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 42
+      objectReference: {fileID: 0}
     - target: {fileID: 6555912083281020971, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1931,10 +2234,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1544457179, guid: 95356b6030096ed40b6d2763e348a71a, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 6555912084367672829, guid: 95356b6030096ed40b6d2763e348a71a,
         type: 3}
@@ -1987,55 +2286,6 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &377507335 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7689664848417164071, guid: cfa18aeac2c400845a0170be6645f8fe,
-    type: 3}
-  m_PrefabInstance: {fileID: 815192652}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &377507337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377507335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da719d3d5580df4f8756ecbe79f5e2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tutoList:
-  - active: 0
-    index: 0
-    tutoCase: GetNote
-    tutoNameKey: Tuto_NewSticker_Title
-    tutoDescKey: Tuto_NewSticker_Text
-  - active: 0
-    index: 1
-    tutoCase: Interroger
-    tutoNameKey: Tuto_Questions_Title
-    tutoDescKey: Tuto_Questions_Text
-  - active: 0
-    index: 2
-    tutoCase: SortirConv
-    tutoNameKey: Tuto_QuitDialog_Title
-    tutoDescKey: Tuto_QuitDialog_Text
-  - active: 0
-    index: 3
-    tutoCase: OuvrirCarnet
-    tutoNameKey: Tuto_OpenBook_Title
-    tutoDescKey: Tuto_OpenBook_Text
-  - active: 0
-    index: 4
-    tutoCase: NavCarnet
-    tutoNameKey: Tuto_NavigateBook_Title
-    tutoDescKey: Tuto_NavigateBook_Text
-  - active: 0
-    index: 5
-    tutoCase: Board
-    tutoNameKey: Tuto_Board_Title
-    tutoDescKey: Tuto_Board_Text
 --- !u!114 &380083394 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5286777657024079622, guid: 2d6fdabd470b1f04d8f913e6cc0be723,
@@ -2334,8 +2584,8 @@ MonoBehaviour:
   haveEvent: 0
   stickerAlreadyGivenList: 
   stickerRedirection:
-    stickerGivenList: 010000000e000000
-    redirectionList: 0500000006000000
+    stickerGivenList: 010000000e0000000200000003000000040000000f0000000700000006000000
+    redirectionList: 05000000060000000700000008000000090000000a0000000b0000000c000000
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
@@ -2495,6 +2745,172 @@ MonoBehaviour:
         newStickerIndexList: 
         eventTrigger:
         - FindPierce
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: DocTuto_D9_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D9_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D9_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D9_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D9_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D9_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D9_Q7
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D9_Q8
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: DocTuto_D10_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D10_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D10_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D10_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D10_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D10_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D10_Q7
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D10_Q8
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: DocTuto_D11_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D11_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D11_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D11_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D11_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D11_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D11_Q7
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: DocTuto_D12_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D12_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D12_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D12_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: DocTuto_D13_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D13_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D13_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D13_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D13_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: DocTuto_D14_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: DocTuto_D14_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
       canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
@@ -3202,7 +3618,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1248334585}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &671150233
 MonoBehaviour:
@@ -3211,7 +3627,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671150231}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d9bd3fc228bf084fa6fbb3984f58658, type: 3}
   m_Name: 
@@ -4330,6 +4746,289 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ba67d34b8304a4cb5da7a5693cc5cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &809733987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809733989}
+  - component: {fileID: 809733988}
+  m_Layer: 0
+  m_Name: Cinematic crime old ver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &809733988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809733987}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandList: 0200000001000000020000000d00000000000000020000000d0000000100000007000000020000000d000000000000000d0000000f000000020000000f0000000200000001000000
+  annexInformation:
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: 0
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: -0.1
+    time: 2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: -0.1
+    time: 1.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: -0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: -0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: -0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2008592696}
+    direction: -0.1
+    time: 2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: 
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: -0.1
+    time: 2
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.1
+    time: 1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.1
+    time: 1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: -0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 1467259954}
+    direction: -0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: FadeToON
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: -0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Armoire_Opened
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 1891772190}
+    direction: -0.1
+    time: 0.3
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Armoire_Opened
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 0}
+    direction: -0.1
+    time: 1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Armoire_Opened
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 1891772190}
+    direction: -0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Armoire_Opened
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  action: 0
+  fromStart: 0
+  triggerByContact: 1
+  hasToLoop: 0
+--- !u!4 &809733989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809733987}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 66.48725, y: 31.704037, z: 0.04548844}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &815192652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4520,7 +5219,7 @@ PrefabInstance:
     - target: {fileID: 7689664849014035018, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 7689664848496456132, guid: cfa18aeac2c400845a0170be6645f8fe,
         type: 3}
@@ -4863,10 +5562,11 @@ GameObject:
   - component: {fileID: 904436870}
   - component: {fileID: 904436869}
   - component: {fileID: 904436872}
-  - component: {fileID: 904436873}
   - component: {fileID: 904436874}
   - component: {fileID: 904436875}
   - component: {fileID: 904436876}
+  - component: {fileID: 904436877}
+  - component: {fileID: 904436873}
   m_Layer: 0
   m_Name: Renard
   m_TagString: PNJinteractable
@@ -5015,29 +5715,12 @@ MonoBehaviour:
   haveEvent: 0
   stickerAlreadyGivenList: 
   stickerRedirection:
-    stickerGivenList: 01000000
-    redirectionList: 04000000
+    stickerGivenList: 010000000200000003000000040000000e00000006000000
+    redirectionList: 040000000500000006000000070000000800000009000000
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
-  eventsActivationList:
-  - stickerIndex: 10
-    actionToTrigger:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 904436875}
-          m_MethodName: ExecuteCommand
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+  eventsActivationList: []
   allDialogs:
     listOfDialogs:
     - dialog:
@@ -5076,7 +5759,7 @@ MonoBehaviour:
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-      canAskQuestions: 0
+      canAskQuestions: 1
       hasChoices: 0
       endDialog: 0
       buttonsList: []
@@ -5105,6 +5788,159 @@ MonoBehaviour:
       hasChoices: 0
       endDialog: 0
       buttonsList: []
+    - dialog:
+      - quote: RenardTuto_D16_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D16_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D16_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D16_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D16_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D16_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D16_Q7
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: RenardTuto_D17_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D17_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D17_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D17_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D17_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D17_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D17_Q7
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D17_Q8
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D17_Q9
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: RenardTuto_D13_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D13_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D13_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D13_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D13_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: RenardTuto_D14_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D14_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D14_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: RenardTuto_D15_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D15_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D15_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D15_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D15_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D15_Q6
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D15_Q7
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: RenardTuto_D15_Q8
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
   quoteFinished: 0
   stickersAlreadyGiven: 
 --- !u!114 &904436874
@@ -5123,6 +5959,8 @@ MonoBehaviour:
   - boolName: Aim
     state: 0
   - boolName: Hurt
+    state: 0
+  - boolName: Dead
     state: 0
 --- !u!114 &904436875
 MonoBehaviour:
@@ -5219,6 +6057,136 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ba67d34b8304a4cb5da7a5693cc5cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &904436877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904436867}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9bd3fc228bf084fa6fbb3984f58658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterNameReference: RenardTuto
+  realCharacterName: Renard
+  haveEvent: 0
+  dialogList:
+  - dialogName: D0
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D8
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D7
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D10
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D2
+    stickerIndexToGive: 1
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D16
+    stickerIndexToGive: 2
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D17
+    stickerIndexToGive: 3
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D13
+    stickerIndexToGive: 4
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D14
+    stickerIndexToGive: 14
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D15
+    stickerIndexToGive: 6
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Renard
+      left: 0
+    - characterName: W. White
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  eventPositionsInDialog: []
+  stickersPositionsInDialogs:
+  - position: RenardTuto_D0_Q2
+    stickerIndexs: 04000000
 --- !u!1 &907583978
 GameObject:
   m_ObjectHideFlags: 0
@@ -5399,6 +6367,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ChildAlignment
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708201855482067679, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 802095639
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708201855482067679, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708201855482067679, guid: 33ddad3a370b0824b848ab3b505bf613,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33ddad3a370b0824b848ab3b505bf613, type: 3}
@@ -5616,12 +6599,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 953758186}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.08, y: -1.78, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.885, y: -0.2225, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_Father: {fileID: 1178867227}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &967617677 stripped
 GameObject:
@@ -5772,6 +6755,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 7623130072312330400, guid: c215d4d3046bf0643a8f2e3034d8dd79,
+        type: 3}
+      propertyPath: postProcessVolume
+      value: 
+      objectReference: {fileID: 380083394}
     - target: {fileID: 5765427715168754899, guid: c215d4d3046bf0643a8f2e3034d8dd79,
         type: 3}
       propertyPath: m_RaycastTarget
@@ -5787,11 +6775,6 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7623130072312330400, guid: c215d4d3046bf0643a8f2e3034d8dd79,
-        type: 3}
-      propertyPath: postProcessVolume
-      value: 
-      objectReference: {fileID: 380083394}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c215d4d3046bf0643a8f2e3034d8dd79, type: 3}
 --- !u!1 &1039487057 stripped
@@ -10752,7 +11735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandList: 010000000f00000002000000010000000d000000000000000d0000000f000000020000000c000000
+  commandList: 010000000f00000013000000010000000d000000000000000d0000000f000000020000000c000000
   annexInformation:
   - objectToMove: {fileID: 0}
     direction: 0
@@ -10781,8 +11764,8 @@ MonoBehaviour:
       reverseAnim: 0
     image: {fileID: 0}
   - objectToMove: {fileID: 1082112283}
-    direction: 0
-    time: 2
+    direction: 0.1
+    time: 0.2
     newParent: {fileID: 0}
     newPosition: {fileID: 0}
     clip: {fileID: 0}
@@ -10878,7 +11861,7 @@ MonoBehaviour:
     newPosition: {fileID: 0}
     clip: {fileID: 0}
     Origin: {fileID: 0}
-    newSceneName: 3
+    newSceneName: 5
     boolNameAndState:
       name: FadeToON
       state: 0
@@ -11023,8 +12006,9 @@ GameObject:
   - component: {fileID: 1082112286}
   - component: {fileID: 1082112285}
   - component: {fileID: 1082112289}
-  - component: {fileID: 1082112288}
   - component: {fileID: 1082112290}
+  - component: {fileID: 1082112288}
+  - component: {fileID: 1082112291}
   m_Layer: 0
   m_Name: Louise
   m_TagString: PNJinteractable
@@ -11147,6 +12131,118 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082112283}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9bd3fc228bf084fa6fbb3984f58658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterNameReference: LouiseTuto
+  realCharacterName: Louise
+  haveEvent: 0
+  dialogList:
+  - dialogName: D0
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D9
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D7
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 1
+  - dialogName: D8
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 1
+  - dialogName: D2
+    stickerIndexToGive: 1
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D14
+    stickerIndexToGive: 2
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D15
+    stickerIndexToGive: 4
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  eventPositionsInDialog: []
+  stickersPositionsInDialogs:
+  - position: LouiseTuto_D0_Q2
+    stickerIndexs: 02000000
+--- !u!114 &1082112289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082112283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd484f8f0d7255489c5d23a7103bad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1082112290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082112283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e83e6d523e418864eadccdfbd1a0b1c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boolList:
+  - boolName: Wake
+    state: 0
+  - boolName: Crouch
+    state: 0
+--- !u!114 &1082112291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082112283}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da0600b722111204dba0b7a1e797af80, type: 3}
@@ -11160,8 +12256,8 @@ MonoBehaviour:
   haveEvent: 0
   stickerAlreadyGivenList: 
   stickerRedirection:
-    stickerGivenList: 01000000
-    redirectionList: 04000000
+    stickerGivenList: 010000000200000004000000
+    redirectionList: 040000000500000006000000
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
@@ -11171,11 +12267,11 @@ MonoBehaviour:
     - dialog:
       - quote: LouiseTuto_D0_Q1
         isInLeftSide: 1
-        newStickerIndexList: 02000000
+        newStickerIndexList: 
         eventTrigger: []
       - quote: LouiseTuto_D0_Q2
         isInLeftSide: 0
-        newStickerIndexList: 
+        newStickerIndexList: 02000000
         eventTrigger: []
       canAskQuestions: 0
       hasChoices: 0
@@ -11186,7 +12282,7 @@ MonoBehaviour:
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-      canAskQuestions: 1
+      canAskQuestions: 0
       hasChoices: 0
       endDialog: 0
       buttonsList: []
@@ -11247,39 +12343,56 @@ MonoBehaviour:
         eventTrigger: []
       canAskQuestions: 0
       hasChoices: 0
-      endDialog: 1
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D14_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D14_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D14_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D14_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D15_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D15_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D15_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D15_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D15_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
       buttonsList: []
   quoteFinished: 0
   stickersAlreadyGiven: 
---- !u!114 &1082112289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082112283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbd484f8f0d7255489c5d23a7103bad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1082112290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082112283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e83e6d523e418864eadccdfbd1a0b1c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolList:
-  - boolName: Wake
-    state: 0
-  - boolName: Crouch
-    state: 0
 --- !u!1 &1102129294
 GameObject:
   m_ObjectHideFlags: 0
@@ -11952,9 +13065,134 @@ MonoBehaviour:
   characterNameReference: LouiseTuto
   realCharacterName: Louise
   haveEvent: 0
-  dialogList: []
+  dialogList:
+  - dialogName: D12
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D12
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D11
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 1
+  - dialogName: D10
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 1
+  - dialogName: D3
+    stickerIndexToGive: 3
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D5
+    stickerIndexToGive: 13
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D14
+    stickerIndexToGive: 2
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D15
+    stickerIndexToGive: 4
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D16
+    stickerIndexToGive: 14
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D17
+    stickerIndexToGive: 1
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D18
+    stickerIndexToGive: 7
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
   eventPositionsInDialog: []
-  stickersPositionsInDialogs: []
+  stickersPositionsInDialogs:
+  - position: D12_Q2
+    stickerIndexs: 02000000
+  - position: D3_Q6
+    stickerIndexs: 07000000
 --- !u!114 &1153687116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11975,8 +13213,8 @@ MonoBehaviour:
   haveEvent: 0
   stickerAlreadyGivenList: 
   stickerRedirection:
-    stickerGivenList: 030000000d000000
-    redirectionList: 0400000006000000
+    stickerGivenList: 030000000d00000002000000040000000e0000000100000007000000
+    redirectionList: 0400000005000000060000000700000008000000090000000a000000
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
@@ -12002,8 +13240,8 @@ MonoBehaviour:
     listOfDialogs:
     - dialog:
       - quote: LouiseTuto_D12_Q1
-        isInLeftSide: 1
-        newStickerIndexList: 02000000
+        isInLeftSide: 0
+        newStickerIndexList: 
         eventTrigger: []
       canAskQuestions: 0
       hasChoices: 0
@@ -12032,7 +13270,7 @@ MonoBehaviour:
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-      canAskQuestions: 0
+      canAskQuestions: 1
       hasChoices: 0
       endDialog: 0
       buttonsList: []
@@ -12051,42 +13289,13 @@ MonoBehaviour:
         eventTrigger: []
       - quote: LouiseTuto_D3_Q4
         isInLeftSide: 0
-        newStickerIndexList: 07000000
+        newStickerIndexList: 
         eventTrigger: []
       - quote: LouiseTuto_D3_Q5
         isInLeftSide: 1
         newStickerIndexList: 
         eventTrigger: []
       - quote: LouiseTuto_D3_Q6
-        isInLeftSide: 0
-        newStickerIndexList: 07000000
-        eventTrigger: []
-      canAskQuestions: 0
-      hasChoices: 0
-      endDialog: 0
-      buttonsList: []
-    - dialog:
-      - quote: LouiseTuto_D4_Q1
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q2
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q3
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q4
-        isInLeftSide: 0
-        newStickerIndexList: 07000000
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q5
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q6
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -12140,6 +13349,123 @@ MonoBehaviour:
         newStickerIndexList: 
         eventTrigger: []
       - quote: LouiseTuto_D5_Q12
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D14_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D14_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D14_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D14_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D15_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D15_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D15_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D15_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D15_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D16_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D16_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D16_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D16_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D16_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D17_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D17_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D17_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D17_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D17_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D18_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D18_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D18_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D18_Q4
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -12292,6 +13618,7 @@ Transform:
   - {fileID: 1884587738}
   - {fileID: 1508026953}
   - {fileID: 1734202151}
+  - {fileID: 953758188}
   m_Father: {fileID: 1589111848}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12350,8 +13677,8 @@ Transform:
   m_Children:
   - {fileID: 1552297159}
   - {fileID: 820012258}
-  - {fileID: 19048156}
   - {fileID: 671150232}
+  - {fileID: 19048156}
   - {fileID: 1640822780}
   - {fileID: 1069304827}
   m_Father: {fileID: 0}
@@ -13192,7 +14519,7 @@ PrefabInstance:
     - target: {fileID: 2328780609122714873, guid: 5a8d97fb3a6c26d4399e584d0ef478c4,
         type: 3}
       propertyPath: charactersList.Array.data[3].charName
-      value: W.White
+      value: W. White
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2328780609122714855, guid: 5a8d97fb3a6c26d4399e584d0ef478c4, type: 3}
@@ -13322,7 +14649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad17e3b0480677b4ba6fa6553d7a0f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandList: 0200000001000000020000000d00000000000000020000000d0000000100000007000000020000000d000000000000000d0000000f000000020000000f0000000200000001000000
+  commandList: 0200000001000000020000000d00000000000000020000000d0000000100000007000000020000000f000000020000000f000000020000000d000000000000000d0000000200000001000000
   annexInformation:
   - objectToMove: {fileID: 0}
     direction: 0
@@ -13454,6 +14781,58 @@ MonoBehaviour:
       state: 1
       reverseAnim: 0
     image: {fileID: 0}
+  - objectToMove: {fileID: 1467259954}
+    direction: 0.1
+    time: 1
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: FadeToON
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: 0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 1891772190}
+    direction: -0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Armoire_Opened
+      state: 0
+      reverseAnim: 0
+    image: {fileID: 0}
+  - objectToMove: {fileID: 2090050628}
+    direction: -0.1
+    time: 0.5
+    newParent: {fileID: 0}
+    newPosition: {fileID: 0}
+    clip: {fileID: 0}
+    Origin: {fileID: 0}
+    newSceneName: 0
+    boolNameAndState:
+      name: Walk
+      state: 1
+      reverseAnim: 0
+    image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: 0.1
     time: 1
@@ -13482,7 +14861,7 @@ MonoBehaviour:
     image: {fileID: 0}
   - objectToMove: {fileID: 2090050628}
     direction: -0.1
-    time: 0.5
+    time: 1
     newParent: {fileID: 0}
     newPosition: {fileID: 0}
     clip: {fileID: 0}
@@ -13493,46 +14872,7 @@ MonoBehaviour:
       state: 0
       reverseAnim: 0
     image: {fileID: 0}
-  - objectToMove: {fileID: 1467259954}
-    direction: -0.1
-    time: 0.5
-    newParent: {fileID: 0}
-    newPosition: {fileID: 0}
-    clip: {fileID: 0}
-    Origin: {fileID: 0}
-    newSceneName: 0
-    boolNameAndState:
-      name: FadeToON
-      state: 0
-      reverseAnim: 0
-    image: {fileID: 0}
-  - objectToMove: {fileID: 0}
-    direction: -0.1
-    time: 0.5
-    newParent: {fileID: 0}
-    newPosition: {fileID: 0}
-    clip: {fileID: 0}
-    Origin: {fileID: 0}
-    newSceneName: 0
-    boolNameAndState:
-      name: Armoire_Opened
-      state: 0
-      reverseAnim: 0
-    image: {fileID: 0}
   - objectToMove: {fileID: 1891772190}
-    direction: -0.1
-    time: 0.3
-    newParent: {fileID: 0}
-    newPosition: {fileID: 0}
-    clip: {fileID: 0}
-    Origin: {fileID: 0}
-    newSceneName: 0
-    boolNameAndState:
-      name: Armoire_Opened
-      state: 0
-      reverseAnim: 0
-    image: {fileID: 0}
-  - objectToMove: {fileID: 0}
     direction: -0.1
     time: 1
     newParent: {fileID: 0}
@@ -13568,25 +14908,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1001890199}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1470375854 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7689664849014035017, guid: cfa18aeac2c400845a0170be6645f8fe,
-    type: 3}
-  m_PrefabInstance: {fileID: 815192652}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1470375856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470375854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52b014d817dfdb244b5d529838d9a313, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: 
 --- !u!1 &1508026952
 GameObject:
   m_ObjectHideFlags: 0
@@ -14471,6 +15792,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1552297159}
+  - component: {fileID: 1552297160}
   - component: {fileID: 1552297158}
   m_Layer: 0
   m_Name: Louise2
@@ -14499,8 +15821,8 @@ MonoBehaviour:
   haveEvent: 0
   stickerAlreadyGivenList: 
   stickerRedirection:
-    stickerGivenList: 030000000d000000
-    redirectionList: 0400000006000000
+    stickerGivenList: 030000000d00000002000000040000000e0000000100000007000000
+    redirectionList: 0400000005000000060000000700000008000000090000000a000000
   eventRedirection:
     eventGivenList: []
     redirectionEventList: 
@@ -14538,7 +15860,7 @@ MonoBehaviour:
       endDialog: 0
       buttonsList: []
     - dialog:
-      - quote: LouiseTuto_D9_Q1
+      - quote: LouiseTuto_D13_Q1
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
@@ -14560,7 +15882,7 @@ MonoBehaviour:
         isInLeftSide: 0
         newStickerIndexList: 
         eventTrigger: []
-      canAskQuestions: 0
+      canAskQuestions: 1
       hasChoices: 0
       endDialog: 0
       buttonsList: []
@@ -14579,7 +15901,7 @@ MonoBehaviour:
         eventTrigger: []
       - quote: LouiseTuto_D3_Q4
         isInLeftSide: 0
-        newStickerIndexList: 07000000
+        newStickerIndexList: 
         eventTrigger: []
       - quote: LouiseTuto_D3_Q5
         isInLeftSide: 1
@@ -14588,35 +15910,6 @@ MonoBehaviour:
       - quote: LouiseTuto_D3_Q6
         isInLeftSide: 0
         newStickerIndexList: 07000000
-        eventTrigger: []
-      canAskQuestions: 0
-      hasChoices: 0
-      endDialog: 0
-      buttonsList: []
-    - dialog:
-      - quote: LouiseTuto_D4_Q1
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q2
-        isInLeftSide: 0
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q3
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q4
-        isInLeftSide: 0
-        newStickerIndexList: 07000000
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q5
-        isInLeftSide: 1
-        newStickerIndexList: 
-        eventTrigger: []
-      - quote: LouiseTuto_D4_Q6
-        isInLeftSide: 0
-        newStickerIndexList: 
         eventTrigger: []
       canAskQuestions: 0
       hasChoices: 0
@@ -14675,6 +15968,123 @@ MonoBehaviour:
       hasChoices: 0
       endDialog: 0
       buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D14_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D14_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D14_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D14_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D15_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D15_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D15_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D15_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D15_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D16_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D16_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D16_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D16_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D16_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D17_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D17_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D17_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D17_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D17_Q5
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
+    - dialog:
+      - quote: LouiseTuto_D18_Q1
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D18_Q2
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D18_Q3
+        isInLeftSide: 1
+        newStickerIndexList: 
+        eventTrigger: []
+      - quote: LouiseTuto_D18_Q4
+        isInLeftSide: 0
+        newStickerIndexList: 
+        eventTrigger: []
+      canAskQuestions: 0
+      hasChoices: 0
+      endDialog: 0
+      buttonsList: []
   quoteFinished: 0
   stickersAlreadyGiven: 
 --- !u!4 &1552297159
@@ -14691,6 +16101,149 @@ Transform:
   m_Father: {fileID: 1248334585}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1552297160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552297157}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9bd3fc228bf084fa6fbb3984f58658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterNameReference: LouiseTuto
+  realCharacterName: Louise
+  haveEvent: 0
+  dialogList:
+  - dialogName: D0
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D13
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D11
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 1
+  - dialogName: D10
+    stickerIndexToGive: 0
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 1
+  - dialogName: D3
+    stickerIndexToGive: 3
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D5
+    stickerIndexToGive: 13
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D14
+    stickerIndexToGive: 2
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D15
+    stickerIndexToGive: 4
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D16
+    stickerIndexToGive: 14
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D17
+    stickerIndexToGive: 1
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  - dialogName: D18
+    stickerIndexToGive: 7
+    charactersInDialogs_frNames:
+    - characterName: Kenneth
+      left: 1
+    - characterName: W. White
+      left: 0
+    - characterName: Louise
+      left: 0
+    endDialog: 0
+    canAskQuestions: 0
+  eventPositionsInDialog: []
+  stickersPositionsInDialogs:
+  - position: LouiseTuto_D0_Q2
+    stickerIndexs: 02000000
+  - position: LouiseTuto_D3_Q6
+    stickerIndexs: 07000000
 --- !u!4 &1569536425 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8365423122775060024, guid: 4a7764dea8f5c1f48b1e59fd46cd0148,

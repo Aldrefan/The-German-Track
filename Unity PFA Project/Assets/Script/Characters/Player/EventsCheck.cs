@@ -424,6 +424,7 @@ public class EventsCheck : MonoBehaviour
 
             case "RenardMort":
                 GameObject.Find("Renard").GetComponent<Collider2D>().enabled = false;
+                GameObject.Find("Renard").GetComponent<PNJStates>().boolList.Find(x => x.boolName == "Dead").state = true;
                 DialogueChanger.DialChangr.ChangeDialogueComponent("RenardMort");
                 DialogueChanger.DialChangr.ChangeDialogueComponent("Louise3");
             break;

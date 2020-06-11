@@ -2372,6 +2372,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 7623130072312330400, guid: c215d4d3046bf0643a8f2e3034d8dd79,
+        type: 3}
+      propertyPath: postProcessVolume
+      value: 
+      objectReference: {fileID: 1098947868}
     - target: {fileID: 5765427714366228706, guid: c215d4d3046bf0643a8f2e3034d8dd79,
         type: 3}
       propertyPath: m_RootOrder
@@ -2392,11 +2397,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 7623130072312330400, guid: c215d4d3046bf0643a8f2e3034d8dd79,
-        type: 3}
-      propertyPath: postProcessVolume
-      value: 
-      objectReference: {fileID: 1098947868}
     - target: {fileID: 161442287145652608, guid: c215d4d3046bf0643a8f2e3034d8dd79,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -2680,7 +2680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &819234475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12660,16 +12660,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9176138489572967692, guid: ad6f8b1eedbf4d3469d7b7999d33cddb,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9176138489572967692, guid: ad6f8b1eedbf4d3469d7b7999d33cddb,
-        type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 3219580511357384863, guid: ad6f8b1eedbf4d3469d7b7999d33cddb,
         type: 3}
       propertyPath: m_SortingOrder
@@ -12680,6 +12670,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 345647822}
+    - target: {fileID: 9176138489572967692, guid: ad6f8b1eedbf4d3469d7b7999d33cddb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176138489572967692, guid: ad6f8b1eedbf4d3469d7b7999d33cddb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad6f8b1eedbf4d3469d7b7999d33cddb, type: 3}
 --- !u!4 &1412420106 stripped

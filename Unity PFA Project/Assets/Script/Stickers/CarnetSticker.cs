@@ -69,7 +69,7 @@ public class CarnetSticker : MonoBehaviour
     void OnMouseDown()
     {
         if(player.GetComponent<Interactions>().PNJContact != null && (player.GetComponent<Interactions>().PNJContact.tag == "PNJinteractable"
-                || (player.GetComponent<Interactions>().PNJContact.tag == "Interaction" && player.GetComponent<Interactions>().PNJContact.name == "Lamp")))
+                || (player.GetComponent<Interactions>().PNJContact.tag == "Interaction" && player.GetComponent<Interactions>().PNJContact.name == "Lamp")) && (GameObject.FindObjectOfType<DialogInterface>()))
         {
             player.GetComponent<Interactions>().PNJContact.GetComponent<PNJ>().Response(GetComponent<Sticker_Display>().sticker.index);
             player.GetComponent<Interactions>().ChangeState(Interactions.State.InDialog);
